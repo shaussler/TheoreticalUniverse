@@ -20,6 +20,7 @@ jobs:
         if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
         with:
           publish_branch: main
-          deploy_key: ${{ secrets.DEPLOY_PRIVATE_KEY }}
+          #deploy_key: ${{ secrets.DEPLOY_PRIVATE_KEY }}
+          deploy_key: ${{ secrets.deploy_key2 }}
           publish_dir: ./doc/_build/html
           force_orphan: true
