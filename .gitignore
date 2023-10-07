@@ -158,3 +158,30 @@ cython_debug/
 #  and can be added to the global gitignore or merged into this file.  For a more nuclear
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
+
+# Sphinx build directory
+_build/
+# Sphinx source directory
+docs/_build/
+
+# Sphinx generated files
+.doctrees/
+.buildinfo
+*.doctrees
+*.html
+*.txt
+*.pdf
+*.epub
+*.mobi
+*.png
+*.svg
+*.gif
+*.css
+*.js
+
+# Sphinx configuration files
+#conf.py
+#Makefile
+#make.bat
+# Sphinx documentation themes
+*.theme
