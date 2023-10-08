@@ -1,6 +1,8 @@
 Deriving the Faraday-Maxwell Tensor from the 1865 Maxwell Equations
 ===================================================================
 
+.. warning:: Under construction
+
 In this article, I present a simple and elegant derivation of the
 Faraday-Maxwell tensor. This derivation is very much inspired by Minkowski's
 1908 paper: `The Fundamental Equations for Electromagnetic Processes in Moving
@@ -52,7 +54,22 @@ conventions. So by doing that we obtain:
 
    \partial_x E^x + \partial_y E^y + \partial_z E^z = \rho / \epsilon_0
 
+.. image:: _static/maxwell_1865.jpg
+   :alt: Maxwell equations
 
-Taking inspiration from Mr. Minkowski, I reoder these equations in a manner which may suddenly
-strike as extremely obvious. Note how the terms that do not appear are so much highlighted by
-the term that do appear
+Taking inspiration from Mr. Minkowski, I reoder these equations in a manner
+which may suddenly strike as extremely obvious. Note how the terms that are not
+there are now as important as the terms which are there.
+
+.. image:: _static/reordered_maxwell_equations.jpg
+   :alt: Reordered Maxwell equations
+
+
+**Inhomogenous equations**
+(Gauss's law and Maxwell-Faraday equation)
+
+**Homogenous equations**
+(Gauss's law and Maxwel-Ampere equation)
+
+And from there, to anyone familiar with matrix computation, the Farady-Maxwell
+tensor as well as its hodge dual should appear.
