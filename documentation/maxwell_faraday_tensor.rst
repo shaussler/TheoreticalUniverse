@@ -20,3 +20,39 @@ Mr. Maxwell published in 1865 `A Dynamical Theory of the Electromagnetic Field
 The original formulation uses differential expressions, as opposed to the
 modern vector formulation proposed by Mr. Heaviside. We had no concept of
 vectors in 1865!
+
+Heaviside field equations
+-------------------------
+
+Mr. Heaviside formulated the Maxwell equations in vector form is the most known
+formulation and I thus start from there and go back to the original maxwell
+equations from there. The well known fomulations of:
+
+* Gauss's law
+* Gauss's law for magnetism
+* Faraday-Maxwell's equation
+* Ampere-Maxwell's equation
+
+.. math::
+
+   \begin{alignat*}{2}
+   \overrightarrow{\nabla} \cdot \overrightarrow{E} &= \rho / \epsilon_0 \\
+   \overrightarrow{\nabla} \cdot \overrightarrow{B} &= 0 \\
+   \overrightarrow{\nabla} \times \overrightarrow{E} &= \partial_t \overrightarrow{B} \\
+   \overrightarrow{\nabla} \times \overrightarrow{B} &= \mu_0 \overrightarrow{J} + \frac{1}{c^2} \partial_t \overrightarrow{E}
+   \end{alignat*}
+
+This formulation can be unpacked in a form I argue is *calculable*. This form
+corresponds to the 1865 Maxwell formulation, albeit with modern notation and
+conventions. So by doing that we obtain:
+
+**Gauss's law**
+
+.. math::
+
+   \partial_x E^x + \partial_y E^y + \partial_z E^z = \rho / \epsilon_0
+
+
+Taking inspiration from Mr. Minkowski, I reoder these equations in a manner which may suddenly
+strike as extremely obvious. Note how the terms that do not appear are so much highlighted by
+the term that do appear
