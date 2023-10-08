@@ -19,6 +19,6 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
         with:
-          publish_branch: main
+          publish_branch: main2
           deploy_key: ${{ secrets.deploy_key2 }}
           publish_dir: doc/
