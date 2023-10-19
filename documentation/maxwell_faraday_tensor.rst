@@ -37,12 +37,12 @@ equations from there. The well known fomulations of:
 
 .. math::
 
-   \begin{alignat*}{2}
+   \begin{align}
    \overrightarrow{\nabla} \cdot \overrightarrow{E} &= \rho / \epsilon_0 \\
    \overrightarrow{\nabla} \cdot \overrightarrow{B} &= 0 \\
    \overrightarrow{\nabla} \times \overrightarrow{E} &= \partial_t \overrightarrow{B} \\
    \overrightarrow{\nabla} \times \overrightarrow{B} &= \mu_0 \overrightarrow{J} + \frac{1}{c^2} \partial_t \overrightarrow{E}
-   \end{alignat*}
+   \end{align}
 
 This formulation can be unpacked in a form I argue is *calculable*. This form
 corresponds to the 1865 Maxwell formulation, albeit with modern notation and
@@ -53,6 +53,27 @@ conventions. So by doing that we obtain:
 .. math::
 
    \partial_x E^x + \partial_y E^y + \partial_z E^z = \rho / \epsilon_0
+
+**Gauss's law for magnetism**
+
+.. math::
+
+   \partial_x B^x + \partial_y B^y + \partial_z B^z = 0
+
+**Faraday-Maxwell equations**
+
+.. math::
+
+   \begin{align}
+   \partial_y E^z - \partial_z E^y &= - \partial_t B^x \\
+   \partial_z E^x - \partial_x E^z &= - \partial_t B^y \\
+   \partial_x E^y - \partial_y E^x &= - \partial_t B^z \\
+   \end{align}
+
+**Ampere-Maxwell equations**
+
+
+
 
 .. image:: _static/maxwell_1865.jpg
    :alt: Maxwell equations
