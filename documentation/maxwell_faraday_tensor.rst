@@ -37,16 +37,21 @@ equations from there. The well known fomulations of:
 
 .. math::
 
-   \begin{alignat*}{2}
+   \begin{align}
    \overrightarrow{\nabla} \cdot \overrightarrow{E} &= \rho / \epsilon_0 \\
    \overrightarrow{\nabla} \cdot \overrightarrow{B} &= 0 \\
    \overrightarrow{\nabla} \times \overrightarrow{E} &= \partial_t \overrightarrow{B} \\
    \overrightarrow{\nabla} \times \overrightarrow{B} &= \mu_0 \overrightarrow{J} + \frac{1}{c^2} \partial_t \overrightarrow{E}
-   \end{alignat*}
+   \end{align}
 
 This formulation can be unpacked in a form I argue is *calculable*. This form
 corresponds to the 1865 Maxwell formulation, albeit with modern notation and
 conventions. So by doing that we obtain:
+
+.. todo::
+  
+   Here I would like to use :math:`\partial_t = \frac{1}{c} \frac{\partial}{\partial_t}` and :math:`\tilde{E^i}=\frac{E^i}{c}`
+
 
 **Gauss's law**
 
@@ -54,12 +59,38 @@ conventions. So by doing that we obtain:
 
    \partial_x E^x + \partial_y E^y + \partial_z E^z = \rho / \epsilon_0
 
-.. image:: _static/maxwell_1865.jpg
-   :alt: Maxwell equations
+**Gauss's law for magnetism**
 
-Taking inspiration from Mr. Minkowski, I reoder these equations in a manner
+.. math::
+
+   \partial_x B^x + \partial_y B^y + \partial_z B^z = 0
+
+**Faraday-Maxwell equations**
+
+.. math::
+
+   \begin{align}
+   \partial_y E^z - \partial_z E^y &= - \partial_t B^x \\
+   \partial_z E^x - \partial_x E^z &= - \partial_t B^y \\
+   \partial_x E^y - \partial_y E^x &= - \partial_t B^z \\
+   \end{align}
+
+**Ampere-Maxwell equations**
+
+.. math::
+
+   \begin{align}
+   \partial_y B^z - \partial_z B^y &= \mu_0 J^x + \frac{1}{c^2} \partial_t E^x \\
+   \partial_z B^x - \partial_x B^z &= \mu_0 J^y + \frac{1}{c^2} \partial_t E^y \\
+   \partial_x B^y - \partial_y B^x &= \mu_0 J^z + \frac{1}{c^2} \partial_t E^z \\
+   \end{align}
+
+
+Taking inspiration from Mr. Minkowski, I reorder these equations in a manner
 which may suddenly strike as extremely obvious. Note how the terms that are not
 there are now as important as the terms which are there.
+
+
 
 .. image:: _static/reordered_maxwell_equations.jpg
    :alt: Reordered Maxwell equations
@@ -68,8 +99,45 @@ there are now as important as the terms which are there.
 **Inhomogenous equations**
 (Gauss's law and Maxwell-Faraday equation)
 
+.. math::
+
+   \begin{matrix}
+                            & +\partial_x \tilde{E^x} & +\partial_y \tilde{E^y} & +\partial_y \tilde{E^y} & = &   \mu_0 c \rho  \\
+    +\partial_t \tilde{E^x} &                         & +\partial_y        B^z  & -\partial_z        B^y  & = & - \mu_0 J^x     \\
+    0 &  0 & -1 &  0 \\
+    0 &  0 &  0 & -1
+   \end{matrix}
+
+
+.. todo::
+  
+   Just have a quick recal that :math:`\partial_{\mu} \eta^{\mu \nu}=\partial^{\nu}` and that we end up with:
+
+   .. math::
+
+      \begin{bmatrix}
+      \partial_t & \partial_x & \partial_y & \partial_z
+      \end{bmatrix}
+      \begin{bmatrix}
+       1 &  0 &  0 &  0 \\
+       0 & -1 &  0 &  0 \\
+       0 &  0 & -1 &  0 \\
+       0 &  0 &  0 & -1
+      \end{bmatrix}
+      = 
+      \begin{bmatrix}
+        \partial_t \\
+      - \partial_x \\
+      - \partial_y \\
+      - \partial_z \\
+      \end{bmatrix}
+
 **Homogenous equations**
 (Gauss's law and Maxwel-Ampere equation)
 
 And from there, to anyone familiar with matrix computation, the Farady-Maxwell
 tensor as well as its hodge dual should appear.
+
+.. note::
+
+   This is a note
