@@ -4,16 +4,16 @@ Deriving the Faraday-Maxwell Tensor from the 1865 Maxwell Equations
 .. warning:: Under construction
 
 In this article, I present a simple and elegant derivation of the
-Faraday-Maxwell tensor. This derivation is very much inspired by Minkowski's
+Faraday-Maxwell tensor. This derivation is strongly inspired by Minkowski's
 1908 paper: `The Fundamental Equations for Electromagnetic Processes in Moving
 Bodies
 <https://en.wikisource.org/wiki/Translation:The_Fundamental_Equations_for_Electromagnetic_Processes_in_Moving_Bodies>`_.
 
-I find it quite interesting that despite the obviousness of this derivation, I
+You may find the derivation obvious, but I do not think it is well known as I
 could not find it anywhere. If I am mistaken and you know of a textbook,
 youtube video, or some place in the internet, please let me know and I will add
-a reference in this article. You can open an issue or directly correct and send
-a merge request on my `github repository
+a reference. You can open an issue or directly correct and send a merge request
+on my `github repository
 <https://github.com/shaussler/electromagnetism/actions/runs/6444649784>`_.
 
 Mr. Maxwell published in 1865 `A Dynamical Theory of the Electromagnetic Field
@@ -23,17 +23,18 @@ The original formulation uses differential expressions, as opposed to the
 modern vector formulation proposed by Mr. Heaviside. We had no concept of
 vectors in 1865!
 
-Heaviside field equations
--------------------------
+Equations of Mr. Heaviside
+--------------------------
 
 Mr. Heaviside formulated the Maxwell equations in vector form is the most known
-formulation and I thus start from there and go back to the original maxwell
-equations from there. The well known fomulations of:
+formulation. I thus start from there and unpack the euations to the original
+maxwell equation. The well known equations in the form first laid down by Mr.
+Heaviside is:
 
-* Gauss's law
+* Gauss's law: 
 * Gauss's law for magnetism
 * Faraday-Maxwell's equation
-* Ampere-Maxwell's equation
+* Amp\'ere-Maxwell's equation
 
 .. math::
 
@@ -44,14 +45,12 @@ equations from there. The well known fomulations of:
    \overrightarrow{\nabla} \times \overrightarrow{B} &= \mu_0 \overrightarrow{J} + \frac{1}{c^2} \partial_t \overrightarrow{E}
    \end{align}
 
-This formulation can be unpacked in a form I argue is *calculable*. This form
-corresponds to the 1865 Maxwell formulation, albeit with modern notation and
-conventions. So by doing that we obtain:
+This form corresponds to the 1865 Maxwell formulation, albeit with modern
+notation and conventions. So by doing that we obtain:
 
 .. todo::
   
    Here I would like to use :math:`\partial_t = \frac{1}{c} \frac{\partial}{\partial_t}` and :math:`\tilde{E^i}=\frac{E^i}{c}`
-
 
 **Gauss's law**
 
@@ -91,21 +90,41 @@ which may suddenly strike as extremely obvious. Note how the terms that are not
 there are now as important as the terms which are there.
 
 
+.. warning::
 
-.. image:: _static/reordered_maxwell_equations.jpg
-   :alt: Reordered Maxwell equations
+   to be deleted
+
+   .. image:: _static/reordered_maxwell_equations.jpg
+      :alt: Reordered Maxwell equations
+      :scale: 50
 
 
-**Inhomogenous equations**
-(Gauss's law and Maxwell-Faraday equation)
+Inhomogenous equations
+----------------------
+
+Gauss's law and Maxwell-Faraday equation
 
 .. math::
 
    \begin{matrix}
-                            & +\partial_x \tilde{E^x} & +\partial_y \tilde{E^y} & +\partial_y \tilde{E^y} & = &   \mu_0 c \rho  \\
+                            & +\partial_x \tilde{E^x} & +\partial_y \tilde{E^y} & +\partial_y \tilde{E^z} & = & + \mu_0 c \rho  \\
     +\partial_t \tilde{E^x} &                         & +\partial_y        B^z  & -\partial_z        B^y  & = & - \mu_0 J^x     \\
-    0 &  0 & -1 &  0 \\
-    0 &  0 &  0 & -1
+    +\partial_t \tilde{E^y} & +\partial_x        B^z  &                         & -\partial_z        B^x  & = & - \mu_0 J^y     \\
+    +\partial_t \tilde{E^z} & -\partial_x \      B^y  & +\partial_y        B^x  &                         & = & - \mu_0 J^z     \\
+   \end{matrix}
+
+Homogenous equations
+--------------------
+
+Gauss law for magnetism and Ampere equations
+
+.. math::
+
+   \begin{matrix}
+                            & +                  B^x  & +                  B^y  & +                  B^z  & = & 0 \\
+    +\partial_t        B^x  &                         & +\partial_y \tilde{E^z} & -\partial_z \tilde{E^y} & = & 0 \\
+    +\partial_t        B^y  & -\partial_x \tilde{E^z} &                         & +\partial_z \tilde{E^x} & = & 0 \\
+    +\partial_t        B^z  & +\partial_x \tilde{E^y} & -\partial_y \tilde{E^x} &                         & = & 0 \\
    \end{matrix}
 
 
