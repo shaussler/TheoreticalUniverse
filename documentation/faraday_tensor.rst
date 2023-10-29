@@ -20,8 +20,8 @@ Mr. Maxwell published in 1865 `A Dynamical Theory of the Electromagnetic Field
 <https://en.m.wikipedia.org/wiki/A_Dynamical_Theory_of_the_Electromagnetic_Field>`_
 (`pdf <https://www.jstor.org/stable/108892>`_).
 The original formulation uses differential expressions, as opposed to the
-modern vector formulation proposed by Mr. Heaviside. We had no concept of
-vectors in 1865!
+modern vector formulation proposed by Mr. Heaviside. There was no concept of
+vectors in 1865.
 
 Equations of Mr. Heaviside
 --------------------------
@@ -56,22 +56,26 @@ notation and conventions. So by doing that we obtain:
 
 .. math::
 
-   \partial_x E^x + \partial_y E^y + \partial_z E^z = \rho / \epsilon_0
+   \begin{align}
+   \frac{\partial}{\partial_x} E^x + \frac{\partial}{\partial_y} E^y + \frac{\partial}{\partial_z} E^z &= \rho / \epsilon_0
+   \end{align}
 
 **Gauss's law for magnetism**
 
 .. math::
 
-   \partial_x B^x + \partial_y B^y + \partial_z B^z = 0
+   \begin{align}
+   \frac{\partial}{\partial_x} B^x + \frac{\partial}{\partial_y} B^y + \frac{\partial}{\partial_z} B^z &= 0
+   \end{align}
 
 **Faraday-Maxwell equations**
 
 .. math::
 
    \begin{align}
-   \partial_y E^z - \partial_z E^y &= - \partial_t B^x \\
-   \partial_z E^x - \partial_x E^z &= - \partial_t B^y \\
-   \partial_x E^y - \partial_y E^x &= - \partial_t B^z \\
+   \frac{\partial}{\partial_y} E^z - \frac{\partial}{\partial_z} E^y &= - \frac{\partial}{\partial_t} B^x \\
+   \frac{\partial}{\partial_z} E^x - \frac{\partial}{\partial_x} E^z &= - \frac{\partial}{\partial_t} B^y \\
+   \frac{\partial}{\partial_x} E^y - \frac{\partial}{\partial_y} E^x &= - \frac{\partial}{\partial_t} B^z \\
    \end{align}
 
 **Ampere-Maxwell equations**
@@ -79,25 +83,10 @@ notation and conventions. So by doing that we obtain:
 .. math::
 
    \begin{align}
-   \partial_y B^z - \partial_z B^y &= \mu_0 J^x + \frac{1}{c^2} \partial_t E^x \\
-   \partial_z B^x - \partial_x B^z &= \mu_0 J^y + \frac{1}{c^2} \partial_t E^y \\
-   \partial_x B^y - \partial_y B^x &= \mu_0 J^z + \frac{1}{c^2} \partial_t E^z \\
+   \frac{\partial}{\partial_y} B^z - \frac{\partial}{\partial_z} B^y &= \mu_0 J^x + \frac{1}{c^2} \frac{\partial}{\partial_t} E^x \\
+   \frac{\partial}{\partial_z} B^x - \frac{\partial}{\partial_x} B^z &= \mu_0 J^y + \frac{1}{c^2} \frac{\partial}{\partial_t} E^y \\
+   \frac{\partial}{\partial_x} B^y - \frac{\partial}{\partial_y} B^x &= \mu_0 J^z + \frac{1}{c^2} \frac{\partial}{\partial_t} E^z \\
    \end{align}
-
-
-Taking inspiration from Mr. Minkowski, I reorder these equations in a manner
-which may suddenly strike as extremely obvious. Note how the terms that are not
-there are now as important as the terms which are there.
-
-
-.. warning::
-
-   to be deleted
-
-   .. image:: _static/reordered_maxwell_equations.jpg
-      :alt: Reordered Maxwell equations
-      :scale: 50
-
 
 Inhomogenous equations
 ----------------------
@@ -110,7 +99,7 @@ Gauss's law and Maxwell-Faraday equation
                             & +\partial_x \tilde{E^x} & +\partial_y \tilde{E^y} & +\partial_y \tilde{E^z} & = & + \mu_0 c \rho  \\
     +\partial_t \tilde{E^x} &                         & +\partial_y        B^z  & -\partial_z        B^y  & = & - \mu_0 J^x     \\
     +\partial_t \tilde{E^y} & +\partial_x        B^z  &                         & -\partial_z        B^x  & = & - \mu_0 J^y     \\
-    +\partial_t \tilde{E^z} & -\partial_x \      B^y  & +\partial_y        B^x  &                         & = & - \mu_0 J^z     \\
+    +\partial_t \tilde{E^z} & -\partial_x        B^y  & +\partial_y        B^x  &                         & = & - \mu_0 J^z     \\
    \end{matrix}
 
 Homogenous equations
@@ -127,10 +116,59 @@ Gauss law for magnetism and Ampere equations
     +\partial_t        B^z  & +\partial_x \tilde{E^y} & -\partial_y \tilde{E^x} &                         & = & 0 \\
    \end{matrix}
 
+Now the structure of the equations is obvious and we obtain in Matrix form:
 
-.. todo::
-  
-   Just have a quick recal that :math:`\partial_{\mu} \eta^{\mu \nu}=\partial^{\nu}` and that we end up with:
+.. math::
+
+   \begin{bmatrix}
+   \partial_t & \partial_x & \partial_y & \partial_z
+   \end{bmatrix}
+   \begin{bmatrix}
+                 & +\tilde{E^x} & +\tilde{E^y} & + \tilde{E^z} \\
+    +\tilde{E^x} &              & +       B^z  & -        B^y  \\
+    +\tilde{E^y} & +       B^z  &              & -        B^x  \\
+    +\tilde{E^z} & -       B^y  & +       B^x  &               \\
+   \end{bmatrix}
+   =
+   \begin{bmatrix}
+   + \mu_0 c \rho \\
+   - \mu_0 J^x    \\
+   - \mu_0 J^y    \\
+   - \mu_0 J^z    \\
+   \end{bmatrix}
+
+.. math::
+
+   \begin{bmatrix}
+   \partial_t & \partial_x & \partial_y & \partial_z
+   \end{bmatrix}
+   \begin{bmatrix}
+                 & +       B^x  & +       B^y  & +       B^z  \\
+    +       B^x  &              & +\tilde{E^z} & -\tilde{E^y} \\
+    +       B^y  & -\tilde{E^z} &              & +\tilde{E^x} \\
+    +       B^z  & +\tilde{E^y} & -\tilde{E^x} &              \\
+   \end{bmatrix}
+   =
+   \begin{bmatrix}
+   0 \\
+   0 \\
+   0 \\
+   0 \\
+   \end{bmatrix}
+
+Where the tensor form is also revealed:
+
+.. math::
+
+   \begin{matrix}
+   \partial_{\mu} F^{\mu \nu} & = & J^{\nu} \\
+   \partial_{\mu} G^{\mu \nu} & = & 0       \\
+   \end{matrix}
+
+.. note::
+
+   Recall that :math:`\partial_{\mu} \eta^{\mu \nu}=\partial^{\nu}`. In matrix
+   form, this is:
 
    .. math::
 
@@ -145,7 +183,7 @@ Gauss law for magnetism and Ampere equations
       \end{bmatrix}
       = 
       \begin{bmatrix}
-        \partial_t \\
+      + \partial_t \\
       - \partial_x \\
       - \partial_y \\
       - \partial_z \\
@@ -154,9 +192,6 @@ Gauss law for magnetism and Ampere equations
 **Homogenous equations**
 (Gauss's law and Maxwel-Ampere equation)
 
-And from there, to anyone familiar with matrix computation, the Farady-Maxwell
-tensor as well as its hodge dual should appear.
+In subsequent article, we show how the two tensors obtained in that manner are
+related as one being the Hodge dual of the other.
 
-.. note::
-
-   This is a note

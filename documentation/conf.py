@@ -29,3 +29,6 @@ html_theme = 'alabaster'
 html_static_path = ['_static']
 
 todo_include_todos = True
+
+mathjax3_config = {'chtml': {'displayAlign': 'left',
+                             'displayIndent': '2em'}}

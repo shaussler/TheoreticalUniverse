@@ -10,7 +10,8 @@ Electromagnetism
    :maxdepth: 2
    :caption: Contents:
 
-   maxwell_faraday_tensor.rst
+   faraday_tensor.rst
+   hodge_dual_faraday_tensor.rst
 
 Indices and tables
 ==================
