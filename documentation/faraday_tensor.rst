@@ -1,19 +1,18 @@
-Deriving the Faraday-Maxwell Tensor from the 1865 Maxwell Equations
-===================================================================
-
-.. warning:: Under construction
+Deriving the Faraday Tensor from the 1865 Maxwell Equations
+===========================================================
 
 In this article, I present a simple and elegant derivation of the
-Faraday-Maxwell tensor. This derivation is strongly inspired by Minkowski's
-1908 paper: `The Fundamental Equations for Electromagnetic Processes in Moving
+Faraday tensor. This derivation is strongly inspired by Minkowski's
+1908 paper:
+`The Fundamental Equations for Electromagnetic Processes in Moving
 Bodies
 <https://en.wikisource.org/wiki/Translation:The_Fundamental_Equations_for_Electromagnetic_Processes_in_Moving_Bodies>`_.
 
-You may find the derivation obvious, but I do not think it is well known as I
-could not find it anywhere. If I am mistaken and you know of a textbook,
-youtube video, or some place in the internet, please let me know and I will add
-a reference. You can open an issue or directly correct and send a merge request
-on my `github repository
+You may find the derivation obvious, but I do not think it is well known and I
+have not seen it anywhere. If I am mistaken and you know of a textbook, youtube
+video, article, or some place in the internet, please let me know and I will
+add a reference. You can open an issue or directly correct and send a merge
+request on my `github repository
 <https://github.com/shaussler/electromagnetism/actions/runs/6444649784>`_.
 
 Mr. Maxwell published in 1865 `A Dynamical Theory of the Electromagnetic Field
@@ -23,75 +22,149 @@ The original formulation uses differential expressions, as opposed to the
 modern vector formulation proposed by Mr. Heaviside. There was no concept of
 vectors in 1865.
 
-Equations of Mr. Heaviside
---------------------------
+The Vector Formulation of Mr. Heaviside
+---------------------------------------
 
-Mr. Heaviside formulated the Maxwell equations in vector form is the most known
-formulation. I thus start from there and unpack the euations to the original
-maxwell equation. The well known equations in the form first laid down by Mr.
-Heaviside is:
-
-* Gauss's law: 
-* Gauss's law for magnetism
-* Faraday-Maxwell's equation
-* Amp\'ere-Maxwell's equation
+Mr. Heaviside proposed the vector form of the Maxwell equations which is the
+most widespread formulation today. I therefore start from there and unpack into
+a form closer in spirit to the 1865 maxwell equation. The equations consist of
+two inhomogenous vector equations (Gauss's law and Ampere's circuital law with
+Maxwell addition):
 
 .. math::
 
    \begin{align}
    \overrightarrow{\nabla} \cdot \overrightarrow{E} &= \rho / \epsilon_0 \\
+   \overrightarrow{\nabla} \times \overrightarrow{B} &= \mu_0 \overrightarrow{J} + \frac{1}{c^2} \frac{\partial}{\partial t} \overrightarrow{E} \\
+   \end{align}
+
+As well as two homogenous equations (Gauss's law for magnetism and Faraday's law of induction):
+
+.. math::
+
+   \begin{align}
    \overrightarrow{\nabla} \cdot \overrightarrow{B} &= 0 \\
-   \overrightarrow{\nabla} \times \overrightarrow{E} &= \partial_t \overrightarrow{B} \\
-   \overrightarrow{\nabla} \times \overrightarrow{B} &= \mu_0 \overrightarrow{J} + \frac{1}{c^2} \partial_t \overrightarrow{E}
+   \overrightarrow{\nabla} \times \overrightarrow{E} &= \frac{\partial}{\partial t} \overrightarrow{B} \\
    \end{align}
 
-This form corresponds to the 1865 Maxwell formulation, albeit with modern
-notation and conventions. So by doing that we obtain:
+Unpacking the vector equations into their component form, we obtain in spirit
+the 1865 Maxwell formulation, albeit with modern notation and conventions:
 
-.. todo::
-  
-   Here I would like to use :math:`\partial_t = \frac{1}{c} \frac{\partial}{\partial_t}` and :math:`\tilde{E^i}=\frac{E^i}{c}`
+.. note::
 
-**Gauss's law**
+   With the electric field
+   :math:`\overrightarrow{E}=\begin{bmatrix} E^x \\ E^y \\ E^z \end{bmatrix}`,
+   magnetic field
+   :math:`\overrightarrow{B}=\begin{bmatrix} B^x \\ B^y \\ B^z \end{bmatrix}`, and operator
+   :math:`\overrightarrow{\nabla}=\begin{bmatrix} \frac{\partial}{\partial x} \\ \frac{\partial}{\partial y} \\ \frac{\partial}{\partial z} \end{bmatrix}`
+
+The Equations of Mr. Maxwell
+----------------------------
+
+**Inhomogenous equations**
+
+Gauss's law
 
 .. math::
 
    \begin{align}
-   \frac{\partial}{\partial_x} E^x + \frac{\partial}{\partial_y} E^y + \frac{\partial}{\partial_z} E^z &= \rho / \epsilon_0
+   \frac{\partial}{\partial x} E^x + \frac{\partial}{\partial y} E^y + \frac{\partial}{\partial z} E^z &= \rho / \epsilon_0
    \end{align}
 
-**Gauss's law for magnetism**
+Ampere's circuital law
 
 .. math::
 
    \begin{align}
-   \frac{\partial}{\partial_x} B^x + \frac{\partial}{\partial_y} B^y + \frac{\partial}{\partial_z} B^z &= 0
+   \frac{\partial}{\partial y} B^z - \frac{\partial}{\partial z} B^y &= \mu_0 J^x + \frac{1}{c^2} \frac{\partial}{\partial t} E^x \\
+   \frac{\partial}{\partial z} B^x - \frac{\partial}{\partial x} B^z &= \mu_0 J^y + \frac{1}{c^2} \frac{\partial}{\partial t} E^y \\
+   \frac{\partial}{\partial x} B^y - \frac{\partial}{\partial y} B^x &= \mu_0 J^z + \frac{1}{c^2} \frac{\partial}{\partial t} E^z \\
    \end{align}
 
-**Faraday-Maxwell equations**
+**Homogenous equations**
+
+Gauss's law for magnetism
 
 .. math::
 
    \begin{align}
-   \frac{\partial}{\partial_y} E^z - \frac{\partial}{\partial_z} E^y &= - \frac{\partial}{\partial_t} B^x \\
-   \frac{\partial}{\partial_z} E^x - \frac{\partial}{\partial_x} E^z &= - \frac{\partial}{\partial_t} B^y \\
-   \frac{\partial}{\partial_x} E^y - \frac{\partial}{\partial_y} E^x &= - \frac{\partial}{\partial_t} B^z \\
+   \frac{\partial}{\partial x} B^x + \frac{\partial}{\partial y} B^y + \frac{\partial}{\partial z} B^z &= 0
    \end{align}
 
-**Ampere-Maxwell equations**
+Faraday's law of induction
 
 .. math::
 
    \begin{align}
-   \frac{\partial}{\partial_y} B^z - \frac{\partial}{\partial_z} B^y &= \mu_0 J^x + \frac{1}{c^2} \frac{\partial}{\partial_t} E^x \\
-   \frac{\partial}{\partial_z} B^x - \frac{\partial}{\partial_x} B^z &= \mu_0 J^y + \frac{1}{c^2} \frac{\partial}{\partial_t} E^y \\
-   \frac{\partial}{\partial_x} B^y - \frac{\partial}{\partial_y} B^x &= \mu_0 J^z + \frac{1}{c^2} \frac{\partial}{\partial_t} E^z \\
+   \frac{\partial}{\partial y} E^z - \frac{\partial}{\partial z} E^y &= - \frac{\partial}{\partial t} B^x \\
+   \frac{\partial}{\partial z} E^x - \frac{\partial}{\partial x} E^z &= - \frac{\partial}{\partial t} B^y \\
+   \frac{\partial}{\partial x} E^y - \frac{\partial}{\partial y} E^x &= - \frac{\partial}{\partial t} B^z \\
    \end{align}
 
-Inhomogenous equations
-----------------------
+The underlying structure of the equations
+-----------------------------------------
 
-Gauss's law and Maxwell-Faraday equation
+Reordering the terms, a clear structures appear:
+
+**Inhomogenous equations**
+
+.. math::
+
+   \begin{matrix}
+                                                    & + \frac{\partial E^x}{\partial x} & + \frac{\partial E^y}{\partial_y} & + \frac{\partial E^z}{\partial z} & = & + \rho/\epsilon_0 \\
+    + \frac{1}{c^2} \frac{\partial E^x}{\partial t} &                                   & - \frac{\partial B^z}{\partial_y} & + \frac{\partial B^y}{\partial z} & = & - \mu_0 J^x       \\
+    + \frac{1}{c^2} \frac{\partial E^y}{\partial t} & + \frac{\partial B^z}{\partial x} &                                   & - \frac{\partial B^x}{\partial z} & = & - \mu_0 J^y       \\
+    + \frac{1}{c^2} \frac{\partial E^z}{\partial t} & - \frac{\partial B^y}{\partial x} & + \frac{\partial B^x}{\partial y} &                                   & = & - \mu_0 J^z       \\
+   \end{matrix}
+
+**Homogenous equations**
+
+.. math::
+
+   \begin{matrix}
+                                      & + \frac{\partial B^x}{\partial x} & + \frac{\partial B^y}{\partial_y} & + \frac{\partial B^z}{\partial z} & = & 0 \\
+    + \frac{\partial B^x}{\partial t} &                                   & + \frac{\partial E^z}{\partial_y} & - \frac{\partial E^y}{\partial z} & = & 0 \\
+    + \frac{\partial B^y}{\partial t} & - \frac{\partial E^z}{\partial x} &                                   & + \frac{\partial E^x}{\partial z} & = & 0 \\
+    + \frac{\partial B^z}{\partial t} & + \frac{\partial E^y}{\partial x} & - \frac{\partial E^x}{\partial y} &                                   & = & 0 \\
+   \end{matrix}
+
+Reordered form
+--------------
+
+To take advantage of the structure, we see after a bit of struggle that the form is very nice when taking:
+
+.. math::
+
+   \begin{cases}
+   \partial_t  &=& \frac{\partial}{\partial(ct)} \\
+   \partial_x  &=& \frac{\partial}{\partial x}   \\
+   \partial_y  &=& \frac{\partial}{\partial y}   \\
+   \partial_z  &=& \frac{\partial}{\partial z}   \\
+   \end{cases}
+
+As well as:
+
+.. math::
+
+   \begin{cases}
+   \tilde{E^x} &=& \frac{E^x}{c} \\
+   \tilde{E^y} &=& \frac{E^y}{c} \\
+   \tilde{E^z} &=& \frac{E^z}{c} \\
+   \end{cases}
+
+.. note::
+
+   I also use :math:`c=\frac{1}{\sqrt{\epsilon_0 \mu_0}}` to get the constants right.
+
+.. note::
+
+   :math:`\frac{1}{c}\frac{\partial}{\partial t} =\frac{\partial}{\partial(ct)}`
+   has the units of an inverse distance, exactly
+   like the partial derivative with respect to the spatial dimensions
+   :math:`\frac{\partial}{\partial x}, :math:`\frac{\partial}{\partial y}, and
+   :math:`\frac{\partial}{\partial z}.
+
+**Inhomogenous equations**
 
 .. math::
 
@@ -102,15 +175,12 @@ Gauss's law and Maxwell-Faraday equation
     +\partial_t \tilde{E^z} & -\partial_x        B^y  & +\partial_y        B^x  &                         & = & - \mu_0 J^z     \\
    \end{matrix}
 
-Homogenous equations
---------------------
-
-Gauss law for magnetism and Ampere equations
+**Homogenous equations**
 
 .. math::
 
    \begin{matrix}
-                            & +                  B^x  & +                  B^y  & +                  B^z  & = & 0 \\
+                            & +\partial_x        B^x  & +\partial_y        B^y  & +\partial_z        B^z  & = & 0 \\
     +\partial_t        B^x  &                         & +\partial_y \tilde{E^z} & -\partial_z \tilde{E^y} & = & 0 \\
     +\partial_t        B^y  & -\partial_x \tilde{E^z} &                         & +\partial_z \tilde{E^x} & = & 0 \\
     +\partial_t        B^z  & +\partial_x \tilde{E^y} & -\partial_y \tilde{E^x} &                         & = & 0 \\
@@ -189,9 +259,6 @@ Where the tensor form is also revealed:
       - \partial_z \\
       \end{bmatrix}
 
-**Homogenous equations**
-(Gauss's law and Maxwel-Ampere equation)
-
-In subsequent article, we show how the two tensors obtained in that manner are
+In a next article, I show how the two tensors obtained in that manner are
 related as one being the Hodge dual of the other.
 
