@@ -34,7 +34,7 @@ Maxwell addition):
 .. math::
 
    \begin{align}
-   \overrightarrow{\nabla} \cdot \overrightarrow{E} &= \rho / \epsilon_0 \\
+   \overrightarrow{\nabla} \cdot \overrightarrow{E}  &= \rho / \epsilon_0 \\
    \overrightarrow{\nabla} \times \overrightarrow{B} &= \mu_0 \overrightarrow{J} + \frac{1}{c^2} \frac{\partial}{\partial t} \overrightarrow{E} \\
    \end{align}
 
@@ -43,7 +43,7 @@ As well as two homogenous equations (Gauss's law for magnetism and Faraday's law
 .. math::
 
    \begin{align}
-   \overrightarrow{\nabla} \cdot \overrightarrow{B} &= 0 \\
+   \overrightarrow{\nabla} \cdot \overrightarrow{B}  &= 0 \\
    \overrightarrow{\nabla} \times \overrightarrow{E} &= \frac{\partial}{\partial t} \overrightarrow{B} \\
    \end{align}
 
@@ -161,8 +161,8 @@ As well as:
    :math:`\frac{1}{c}\frac{\partial}{\partial t} =\frac{\partial}{\partial(ct)}`
    has the units of an inverse distance, exactly
    like the partial derivative with respect to the spatial dimensions
-   :math:`\frac{\partial}{\partial x}, :math:`\frac{\partial}{\partial y}, and
-   :math:`\frac{\partial}{\partial z}.
+   :math:`\frac{\partial}{\partial x}`, :math:`\frac{\partial}{\partial y}`, and
+   :math:`\frac{\partial}{\partial z}`.
 
 **Inhomogenous equations**
 
