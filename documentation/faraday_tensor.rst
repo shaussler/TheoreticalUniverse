@@ -1,29 +1,40 @@
 Deriving the Faraday Tensor from the 1865 Maxwell Equations
 ===========================================================
 
-In this article, I present a simple and elegant derivation of the
-Faraday tensor. This derivation is strongly inspired by Minkowski's
-1908 paper:
-`The Fundamental Equations for Electromagnetic Processes in Moving
-Bodies
+.. note::
+
+   This article was proofread using ChatGPT GPT-3.5 architecture. The content
+   is original.
+
+In this article, I present a straightforward and elegant derivation of the
+Faraday tensor. This derivation draws strong inspiration from Minkowski's 1908
+paper, 
+`The Fundamental Equations for Electromagnetic Processes in Moving Bodies
 <https://en.wikisource.org/wiki/Translation:The_Fundamental_Equations_for_Electromagnetic_Processes_in_Moving_Bodies>`_.
+What sets this derivation apart is that it avoids the often-seen backward proof
+that the tensor formulation is equivalent to the Maxwell equations. Notably, it
+doesn't rely on the widespread vector formulation introduced by Mr. Heaviside,
+but rather adheres to the original 1865 formulation by Mr. Maxwell, albeit
+presented with modern notation and the benefit of hindsight.
 
-You may find the derivation obvious, but I do not think it is well known and I
-have not seen it anywhere. If I am mistaken and you know of a textbook, youtube
-video, article, or some place in the internet, please let me know and I will
-add a reference. You can open an issue or directly correct and send a merge
-request on my `github repository
+While the derivation may seem quite obvious, it might not be widely known. If I
+am mistaken, and you are aware of a textbook, YouTube video, article, or any
+other online resource covering this topic, please don't hesitate to inform me.
+You can either open an issue or directly provide corrections by sending a merge
+request to my
+`Github repository
 <https://github.com/shaussler/electromagnetism/actions/runs/6444649784>`_.
-
-Mr. Maxwell published in 1865 `A Dynamical Theory of the Electromagnetic Field
-<https://en.m.wikipedia.org/wiki/A_Dynamical_Theory_of_the_Electromagnetic_Field>`_
-(`pdf <https://www.jstor.org/stable/108892>`_).
-The original formulation uses differential expressions, as opposed to the
-modern vector formulation proposed by Mr. Heaviside. There was no concept of
-vectors in 1865.
 
 The Vector Formulation of Mr. Heaviside
 ---------------------------------------
+
+Mr. Maxwell's groundbreaking work in 1865,
+`A Dynamical Theory of the Electromagnetic Field
+<https://en.m.wikipedia.org/wiki/A_Dynamical_Theory_of_the_Electromagnetic_Field>`_
+(`pdf <https://www.jstor.org/stable/108892>`_).
+, utilized differential expressions rather than the modern vector formulation
+proposed by Mr. Heaviside. It's essential to note that in 1865, the concept of
+vectors had not yet been introduced.
 
 Mr. Heaviside proposed the vector form of the Maxwell equations which is the
 most widespread formulation today. I therefore start from there and unpack into
