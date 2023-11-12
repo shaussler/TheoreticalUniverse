@@ -3,8 +3,7 @@ Deriving the Faraday Tensor from the 1865 Maxwell Equations
 
 .. note::
 
-   This article was proofread using ChatGPT GPT-3.5 architecture. The content
-   is original.
+   This article was proofread using AI. The content is original.
 
 In this article, I present a straightforward and elegant derivation of the
 Faraday tensor. This derivation draws strong inspiration from Minkowski's 1908
@@ -31,7 +30,7 @@ The Vector Formulation of Mr. Heaviside
 Mr. Maxwell's groundbreaking work in 1865,
 `A Dynamical Theory of the Electromagnetic Field
 <https://en.m.wikipedia.org/wiki/A_Dynamical_Theory_of_the_Electromagnetic_Field>`_
-(`pdf <https://www.jstor.org/stable/108892>`_).
+(`pdf <https://www.jstor.org/stable/108892>`_)
 , utilized differential expressions rather than the modern vector formulation
 proposed by Mr. Heaviside. It's essential to note that in 1865, the concept of
 vectors had not yet been introduced.
@@ -39,7 +38,7 @@ vectors had not yet been introduced.
 Mr. Heaviside proposed the vector form of the Maxwell equations which is the
 most widespread formulation today. I therefore start from there and unpack into
 a form closer in spirit to the 1865 maxwell equation. The equations consist of
-two inhomogenous vector equations (Gauss's law and Ampere's circuital law with
+two inhomogenous vector equations (Gauss's law and Ampère's circuital law with
 Maxwell addition):
 
 .. math::
@@ -58,9 +57,6 @@ As well as two homogenous equations (Gauss's law for magnetism and Faraday's law
    \overrightarrow{\nabla} \times \overrightarrow{E} &= \frac{\partial}{\partial t} \overrightarrow{B} \\
    \end{align}
 
-Unpacking the vector equations into their component form, we obtain in spirit
-the 1865 Maxwell formulation, albeit with modern notation and conventions:
-
 .. note::
 
    With the electric field
@@ -72,6 +68,9 @@ the 1865 Maxwell formulation, albeit with modern notation and conventions:
 The Equations of Mr. Maxwell
 ----------------------------
 
+Unpacking the vector equations into their component form, we obtain in spirit
+the 1865 Maxwell formulation, albeit with modern notation and conventions:
+
 **Inhomogenous equations**
 
 Gauss's law
@@ -82,7 +81,7 @@ Gauss's law
    \frac{\partial}{\partial x} E^x + \frac{\partial}{\partial y} E^y + \frac{\partial}{\partial z} E^z &= \rho / \epsilon_0
    \end{align}
 
-Ampere's circuital law
+Ampère's circuital law
 
 .. math::
 
@@ -122,8 +121,8 @@ Reordering the terms, a clear structures appear:
 .. math::
 
    \begin{matrix}
-                                                    & + \frac{\partial E^x}{\partial x} & + \frac{\partial E^y}{\partial_y} & + \frac{\partial E^z}{\partial z} & = & + \rho/\epsilon_0 \\
-    + \frac{1}{c^2} \frac{\partial E^x}{\partial t} &                                   & - \frac{\partial B^z}{\partial_y} & + \frac{\partial B^y}{\partial z} & = & - \mu_0 J^x       \\
+                                                    & + \frac{\partial E^x}{\partial x} & + \frac{\partial E^y}{\partial y} & + \frac{\partial E^z}{\partial z} & = & + \rho/\epsilon_0 \\
+    + \frac{1}{c^2} \frac{\partial E^x}{\partial t} &                                   & - \frac{\partial B^z}{\partial y} & + \frac{\partial B^y}{\partial z} & = & - \mu_0 J^x       \\
     + \frac{1}{c^2} \frac{\partial E^y}{\partial t} & + \frac{\partial B^z}{\partial x} &                                   & - \frac{\partial B^x}{\partial z} & = & - \mu_0 J^y       \\
     + \frac{1}{c^2} \frac{\partial E^z}{\partial t} & - \frac{\partial B^y}{\partial x} & + \frac{\partial B^x}{\partial y} &                                   & = & - \mu_0 J^z       \\
    \end{matrix}
@@ -133,14 +132,14 @@ Reordering the terms, a clear structures appear:
 .. math::
 
    \begin{matrix}
-                                      & + \frac{\partial B^x}{\partial x} & + \frac{\partial B^y}{\partial_y} & + \frac{\partial B^z}{\partial z} & = & 0 \\
-    + \frac{\partial B^x}{\partial t} &                                   & + \frac{\partial E^z}{\partial_y} & - \frac{\partial E^y}{\partial z} & = & 0 \\
+                                      & + \frac{\partial B^x}{\partial x} & + \frac{\partial B^y}{\partial y} & + \frac{\partial B^z}{\partial z} & = & 0 \\
+    + \frac{\partial B^x}{\partial t} &                                   & + \frac{\partial E^z}{\partial y} & - \frac{\partial E^y}{\partial z} & = & 0 \\
     + \frac{\partial B^y}{\partial t} & - \frac{\partial E^z}{\partial x} &                                   & + \frac{\partial E^x}{\partial z} & = & 0 \\
     + \frac{\partial B^z}{\partial t} & + \frac{\partial E^y}{\partial x} & - \frac{\partial E^x}{\partial y} &                                   & = & 0 \\
    \end{matrix}
 
-Reordered form
---------------
+The reordered equations
+-----------------------
 
 To take advantage of the structure, we see after a bit of struggle that the form is very nice when taking:
 
@@ -181,10 +180,45 @@ As well as:
 
    \begin{matrix}
                             & +\partial_x \tilde{E^x} & +\partial_y \tilde{E^y} & +\partial_y \tilde{E^z} & = & + \mu_0 c \rho  \\
-    +\partial_t \tilde{E^x} &                         & +\partial_y        B^z  & -\partial_z        B^y  & = & - \mu_0 J^x     \\
+    +\partial_t \tilde{E^x} &                         & -\partial_y        B^z  & +\partial_z        B^y  & = & - \mu_0 J^x     \\
     +\partial_t \tilde{E^y} & +\partial_x        B^z  &                         & -\partial_z        B^x  & = & - \mu_0 J^y     \\
     +\partial_t \tilde{E^z} & -\partial_x        B^y  & +\partial_y        B^x  &                         & = & - \mu_0 J^z     \\
    \end{matrix}
+
+.. note::
+
+
+   Need to sort out the signs, what is covariant, what is contravariant and
+   flatten and sharpen both the four-gradient and the four-current
+
+   .. math::
+   
+      \begin{matrix}
+                               & +\partial_x \tilde{E^x} & +\partial_y \tilde{E^y} & +\partial_y \tilde{E^z} & = & + \mu_0 c \rho  \\
+       -\partial_t \tilde{E^x} &                         & +\partial_y        B^z  & -\partial_z        B^y  & = & + \mu_0 J^x     \\
+       -\partial_t \tilde{E^y} & -\partial_x        B^z  &                         & +\partial_z        B^x  & = & + \mu_0 J^y     \\
+       -\partial_t \tilde{E^z} & +\partial_x        B^y  & -\partial_y        B^x  &                         & = & + \mu_0 J^z     \\
+      \end{matrix}
+
+   .. math::
+    
+       \begin{bmatrix}
+       \partial_t & \partial_x & \partial_y & \partial_z
+       \end{bmatrix}
+       \begin{bmatrix}
+                     & +\tilde{E^x} & +\tilde{E^y} & + \tilde{E^z} \\
+        -\tilde{E^x} &              & +       B^z  & -        B^y  \\
+        -\tilde{E^y} & -       B^z  &              & +        B^x  \\
+        -\tilde{E^z} & +       B^y  & -       B^x  &               \\
+       \end{bmatrix}
+       =
+       \begin{bmatrix}
+       + \mu_0 c \rho \\
+       + \mu_0 J^x    \\
+       + \mu_0 J^y    \\
+       + \mu_0 J^z    \\
+       \end{bmatrix}
+
 
 **Homogenous equations**
 
@@ -197,7 +231,12 @@ As well as:
     +\partial_t        B^z  & +\partial_x \tilde{E^y} & -\partial_y \tilde{E^x} &                         & = & 0 \\
    \end{matrix}
 
+The electromagnetic tensor
+--------------------------
+
 Now the structure of the equations is obvious and we obtain in Matrix form:
+
+**Inhomogenous equations**
 
 .. math::
 
@@ -206,7 +245,7 @@ Now the structure of the equations is obvious and we obtain in Matrix form:
    \end{bmatrix}
    \begin{bmatrix}
                  & +\tilde{E^x} & +\tilde{E^y} & + \tilde{E^z} \\
-    +\tilde{E^x} &              & +       B^z  & -        B^y  \\
+    +\tilde{E^x} &              & -       B^z  & +        B^y  \\
     +\tilde{E^y} & +       B^z  &              & -        B^x  \\
     +\tilde{E^z} & -       B^y  & +       B^x  &               \\
    \end{bmatrix}
@@ -217,6 +256,8 @@ Now the structure of the equations is obvious and we obtain in Matrix form:
    - \mu_0 J^y    \\
    - \mu_0 J^z    \\
    \end{bmatrix}
+
+**Homogenous equations**
 
 .. math::
 
@@ -237,13 +278,45 @@ Now the structure of the equations is obvious and we obtain in Matrix form:
    0 \\
    \end{bmatrix}
 
-Where the tensor form is also revealed:
+The derivatives are flat and therefore represent a covector with lower indices
+in tensor notation :math:`\partial_\mu` While the left-hand side is sharp and
+therefore represent a vector with high indices :math:`J^\nu`. The tensors in
+the expressions above are necessarily one time contravariant and one time
+covariant :math:`F^{\mu\nu}`
+
+.. math::
+
+   \begin{bmatrix}
+   F^\mu{}_\nu
+   \end{bmatrix}
+   =
+   \begin{bmatrix}
+                 & +\tilde{E^x} & +\tilde{E^y} & + \tilde{E^z} \\
+    +\tilde{E^x} &              & -       B^z  & +        B^y  \\
+    +\tilde{E^y} & +       B^z  &              & -        B^x  \\
+    +\tilde{E^z} & -       B^y  & +       B^x  &               \\
+   \end{bmatrix}
+
+.. math::
+
+   \begin{bmatrix}
+   G^\mu{}_\nu
+   \end{bmatrix}
+   =
+   \begin{bmatrix}
+                 & +       B^x  & +       B^y  & +       B^z  \\
+    +       B^x  &              & +\tilde{E^z} & -\tilde{E^y} \\
+    +       B^y  & -\tilde{E^z} &              & +\tilde{E^x} \\
+    +       B^z  & +\tilde{E^y} & -\tilde{E^x} &              \\
+   \end{bmatrix}
+
+Where we use the row major convention.
 
 .. math::
 
    \begin{matrix}
-   \partial_{\mu} F^{\mu \nu} & = & J^{\nu} \\
-   \partial_{\mu} G^{\mu \nu} & = & 0       \\
+   \partial_{\mu} F^\mu{}_\nu & = & J^{\nu} \\
+   \partial_{\mu} G^\mu{}_\nu & = & 0       \\
    \end{matrix}
 
 .. note::

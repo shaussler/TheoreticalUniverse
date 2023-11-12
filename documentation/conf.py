@@ -7,8 +7,8 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = 'Electromagnetism'
-copyright = '2023, Stephane Haussler'
-author = 'Stephane Haussler'
+copyright = '2023, Stéphane Haussler'
+author = 'Stéphane Haussler'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
