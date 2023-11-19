@@ -267,20 +267,20 @@ where musical notation is used for compactness.
            \end{bmatrix}
            \begin{bmatrix}
            +\tilde{E^x} \\
-           +       B^z  \\
                         \\
-           -       B^x  \\
+           +       B^z  \\
+           -       B^y  \\
            \end{bmatrix}
            \begin{bmatrix}
            +\tilde{E^y} \\
+                   B_z  \\
                         \\
-           -       B^z  \\
-           +       B^y  \\
+           +       B^x  \\
            \end{bmatrix}
            \begin{bmatrix}
            +\tilde{E^z} \\
-           -       B^y  \\
-           +       B^x  \\
+           +       B^y  \\
+           -       B^x  \\
                         \\
            \end{bmatrix}
        \end{bmatrix}
@@ -303,35 +303,35 @@ All Faraday Tensors
     +\tilde{E^x} &              & -       B^z  & +        B^y  \\
     +\tilde{E^y} & +       B^z  &              & -        B^x  \\
     +\tilde{E^z} & -       B^y  & +       B^x  &               \\
-   \end{bmatrix}
+   \end{bmatrix}^{\sharp\flat}
    }
 
 .. math::
  
-   {\small
+   {\scriptsize
    F^{\sharp\sharp}
    =
-   F^{\sharp\flat} \eta
+   F^{\sharp\flat} \eta^{\sharp\sharp}
    =
    \begin{bmatrix}
                  & +\tilde{E^x} & +\tilde{E^y} & + \tilde{E^z} \\
     +\tilde{E^x} &              & +       B^z  & -        B^y  \\
     +\tilde{E^y} & -       B^z  &              & +        B^x  \\
     +\tilde{E^z} & +       B^y  & -       B^x  &               \\
-   \end{bmatrix}
+   \end{bmatrix}^{\sharp\flat}
    \begin{bmatrix}
     1 &  0 &  0 &  0 \\
     0 & -1 &  0 &  0 \\
     0 &  0 & -1 &  0 \\
     0 &  0 &  0 & -1
-   \end{bmatrix}
+   \end{bmatrix}^{\sharp\sharp}
    =
    \begin{bmatrix}
                  & -\tilde{E^x} & -\tilde{E^y} & - \tilde{E^z} \\
     +\tilde{E^x} &              & -       B^z  & +        B^y  \\
     +\tilde{E^y} & +       B^z  &              & -        B^x  \\
     +\tilde{E^z} & -       B^y  & +       B^x  &               \\
-   \end{bmatrix}
+   \end{bmatrix}^{\sharp\sharp}
    }
 
 .. math::
@@ -339,7 +339,7 @@ All Faraday Tensors
    {\small
    F^{\flat\flat}
    =
-   \eta F^{\sharp\flat}
+   \eta{\flat\flat} F^{\sharp\flat}
    =
    \begin{bmatrix}
     1 &  0 &  0 &  0 \\

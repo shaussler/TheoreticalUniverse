@@ -10,6 +10,7 @@ Electromagnetism
    :maxdepth: 2
    :caption: Contents:
 
+   minkowski_metric.rst
    faraday_tensor.rst
    hodge_dual_faraday_tensor.rst
 
