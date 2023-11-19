@@ -1,10 +1,6 @@
 Deriving the Faraday Tensor from the 1865 Maxwell Equations
 ===========================================================
 
-.. note::
-
-   This article was proofread using AI. The content is original.
-
 In this article, I present a straightforward and elegant derivation of the
 Faraday tensor. This derivation draws strong inspiration from Minkowski's 1908
 paper, 
@@ -185,41 +181,6 @@ As well as:
     +\partial_t \tilde{E^z} & -\partial_x        B^y  & +\partial_y        B^x  &                         & = & - \mu_0 J^z     \\
    \end{matrix}
 
-.. note::
-
-
-   Need to sort out the signs, what is covariant, what is contravariant and
-   flatten and sharpen both the four-gradient and the four-current
-
-   .. math::
-   
-      \begin{matrix}
-                               & +\partial_x \tilde{E^x} & +\partial_y \tilde{E^y} & +\partial_y \tilde{E^z} & = & + \mu_0 c \rho  \\
-       -\partial_t \tilde{E^x} &                         & +\partial_y        B^z  & -\partial_z        B^y  & = & + \mu_0 J^x     \\
-       -\partial_t \tilde{E^y} & -\partial_x        B^z  &                         & +\partial_z        B^x  & = & + \mu_0 J^y     \\
-       -\partial_t \tilde{E^z} & +\partial_x        B^y  & -\partial_y        B^x  &                         & = & + \mu_0 J^z     \\
-      \end{matrix}
-
-   .. math::
-    
-       \begin{bmatrix}
-       \partial_t & \partial_x & \partial_y & \partial_z
-       \end{bmatrix}
-       \begin{bmatrix}
-                     & +\tilde{E^x} & +\tilde{E^y} & + \tilde{E^z} \\
-        -\tilde{E^x} &              & +       B^z  & -        B^y  \\
-        -\tilde{E^y} & -       B^z  &              & +        B^x  \\
-        -\tilde{E^z} & +       B^y  & -       B^x  &               \\
-       \end{bmatrix}
-       =
-       \begin{bmatrix}
-       + \mu_0 c \rho \\
-       + \mu_0 J^x    \\
-       + \mu_0 J^y    \\
-       + \mu_0 J^z    \\
-       \end{bmatrix}
-
-
 **Homogenous equations**
 
 .. math::
@@ -234,58 +195,315 @@ As well as:
 The electromagnetic tensor
 --------------------------
 
-Now the structure of the equations is obvious and we obtain in Matrix form:
+Now the structure of the equations is obvious and we obtain in Matrix form
+where musical notation is used for compactness.
 
 **Inhomogenous equations**
 
 .. math::
 
    \begin{bmatrix}
-   \partial_t & \partial_x & \partial_y & \partial_z
-   \end{bmatrix}
+   \partial_t \\
+   \partial_x \\
+   \partial_y \\
+   \partial_z \\
+   \end{bmatrix}^{\flat} &
    \begin{bmatrix}
-                 & +\tilde{E^x} & +\tilde{E^y} & + \tilde{E^z} \\
-    +\tilde{E^x} &              & -       B^z  & +        B^y  \\
-    +\tilde{E^y} & +       B^z  &              & -        B^x  \\
-    +\tilde{E^z} & -       B^y  & +       B^x  &               \\
-   \end{bmatrix}
+                  & +\tilde{E^x} & +\tilde{E^y} & + \tilde{E^z} \\
+    +\tilde{E^x}  &              & +       B^z  & -        B^y  \\
+    +\tilde{E^y}  & -       B^z  &              & +        B^x  \\
+    +\tilde{E^z}  & +       B^y  & -       B^x  &               \\
+   \end{bmatrix}^{\sharp\flat}
    =
    \begin{bmatrix}
    + \mu_0 c \rho \\
    - \mu_0 J^x    \\
    - \mu_0 J^y    \\
    - \mu_0 J^z    \\
-   \end{bmatrix}
+   \end{bmatrix}^{\flat}
+
 
 **Homogenous equations**
 
 .. math::
 
    \begin{bmatrix}
-   \partial_t & \partial_x & \partial_y & \partial_z
-   \end{bmatrix}
+   \partial_t \\
+   \partial_x \\
+   \partial_y \\
+   \partial_z
+   \end{bmatrix}^{\flat}
    \begin{bmatrix}
                  & +       B^x  & +       B^y  & +       B^z  \\
-    +       B^x  &              & +\tilde{E^z} & -\tilde{E^y} \\
-    +       B^y  & -\tilde{E^z} &              & +\tilde{E^x} \\
-    +       B^z  & +\tilde{E^y} & -\tilde{E^x} &              \\
-   \end{bmatrix}
+    +       B^x  &              & -\tilde{E^z} & +\tilde{E^y} \\
+    +       B^y  & +\tilde{E^z} &              & -\tilde{E^x} \\
+    +       B^z  & -\tilde{E^y} & +\tilde{E^x} &              \\
+   \end{bmatrix}^{\sharp \flat}
    =
    \begin{bmatrix}
    0 \\
    0 \\
    0 \\
    0 \\
+   \end{bmatrix}^{\flat}
+
+.. note::
+    
+   An alternative to the musical notation is to explicitely sharpen
+   :math:`\sharp` or flatten :math:`\flat` the vectors.
+
+    .. math::
+    
+       {\small
+       \begin{bmatrix}
+       \partial_t     & \partial_x   & \partial_y   & \partial_z    \\
+       \end{bmatrix}
+       \begin{bmatrix}
+           \begin{bmatrix}
+                        \\
+           +\tilde{E^x} \\
+           +\tilde{E^y} \\
+           +\tilde{E^z} \\
+           \end{bmatrix}
+           \begin{bmatrix}
+           +\tilde{E^x} \\
+           +       B^z  \\
+                        \\
+           -       B^x  \\
+           \end{bmatrix}
+           \begin{bmatrix}
+           +\tilde{E^y} \\
+                        \\
+           -       B^z  \\
+           +       B^y  \\
+           \end{bmatrix}
+           \begin{bmatrix}
+           +\tilde{E^z} \\
+           -       B^y  \\
+           +       B^x  \\
+                        \\
+           \end{bmatrix}
+       \end{bmatrix}
+       =
+       \begin{bmatrix}
+       + \mu_0 c \rho & - \mu_0 J^x  & - \mu_0 J^y  & - \mu_0 J^z   \\
+       \end{bmatrix}
+       }
+
+All Faraday Tensors
+-------------------
+
+.. math::
+
+   {\small
+   F^{\sharp\flat}
+   =
+   \begin{bmatrix}
+                 & +\tilde{E^x} & +\tilde{E^y} & + \tilde{E^z} \\
+    +\tilde{E^x} &              & -       B^z  & +        B^y  \\
+    +\tilde{E^y} & +       B^z  &              & -        B^x  \\
+    +\tilde{E^z} & -       B^y  & +       B^x  &               \\
    \end{bmatrix}
+   }
+
+.. math::
+ 
+   {\small
+   F^{\sharp\sharp}
+   =
+   F^{\sharp\flat} \eta
+   =
+   \begin{bmatrix}
+                 & +\tilde{E^x} & +\tilde{E^y} & + \tilde{E^z} \\
+    +\tilde{E^x} &              & +       B^z  & -        B^y  \\
+    +\tilde{E^y} & -       B^z  &              & +        B^x  \\
+    +\tilde{E^z} & +       B^y  & -       B^x  &               \\
+   \end{bmatrix}
+   \begin{bmatrix}
+    1 &  0 &  0 &  0 \\
+    0 & -1 &  0 &  0 \\
+    0 &  0 & -1 &  0 \\
+    0 &  0 &  0 & -1
+   \end{bmatrix}
+   =
+   \begin{bmatrix}
+                 & -\tilde{E^x} & -\tilde{E^y} & - \tilde{E^z} \\
+    +\tilde{E^x} &              & -       B^z  & +        B^y  \\
+    +\tilde{E^y} & +       B^z  &              & -        B^x  \\
+    +\tilde{E^z} & -       B^y  & +       B^x  &               \\
+   \end{bmatrix}
+   }
+
+.. math::
+ 
+   {\small
+   F^{\flat\flat}
+   =
+   \eta F^{\sharp\flat}
+   =
+   \begin{bmatrix}
+    1 &  0 &  0 &  0 \\
+    0 & -1 &  0 &  0 \\
+    0 &  0 & -1 &  0 \\
+    0 &  0 &  0 & -1
+   \end{bmatrix}
+   \begin{bmatrix}
+                 & +\tilde{E^x} & +\tilde{E^y} & + \tilde{E^z} \\
+    +\tilde{E^x} &              & +       B^z  & -        B^y  \\
+    +\tilde{E^y} & -       B^z  &              & +        B^x  \\
+    +\tilde{E^z} & +       B^y  & -       B^x  &               \\
+   \end{bmatrix}
+   =
+   \begin{bmatrix}
+                 & +\tilde{E^x} & +\tilde{E^y} & + \tilde{E^z} \\
+    -\tilde{E^x} &              & -       B^z  & +        B^y  \\
+    -\tilde{E^y} & +       B^z  &              & -        B^x  \\
+    -\tilde{E^z} & -       B^y  & +       B^x  &               \\
+   \end{bmatrix}
+   }
+
+.. math::
+ 
+   {\small
+   F^{\flat\sharp}
+   =
+   F^{\flat\flat} \eta
+   =
+   \begin{bmatrix}
+                 & +\tilde{E^x} & +\tilde{E^y} & + \tilde{E^z} \\
+    -\tilde{E^x} &              & -       B^z  & +        B^y  \\
+    -\tilde{E^y} & +       B^z  &              & -        B^x  \\
+    -\tilde{E^z} & -       B^y  & +       B^x  &               \\
+   \end{bmatrix}
+   \begin{bmatrix}
+    1 &  0 &  0 &  0 \\
+    0 & -1 &  0 &  0 \\
+    0 &  0 & -1 &  0 \\
+    0 &  0 &  0 & -1
+   \end{bmatrix}
+   =
+   \begin{bmatrix}
+                 & -\tilde{E^x} & -\tilde{E^y} & - \tilde{E^z} \\
+    -\tilde{E^x} &              & +       B^z  & -        B^y  \\
+    -\tilde{E^y} & -       B^z  &              & +        B^x  \\
+    -\tilde{E^z} & +       B^y  & -       B^x  &               \\
+   \end{bmatrix}
+   }
+
+All Dual Faraday Tensors
+------------------------
+
+.. math::
+
+   {\small
+   G^{\sharp\flat}
+   =
+   \begin{bmatrix}
+                 & +       B^x  & +       B^y  & +       B^z  \\
+    +       B^x  &              & -\tilde{E^z} & +\tilde{E^y} \\
+    +       B^y  & +\tilde{E^z} &              & -\tilde{E^x} \\
+    +       B^z  & -\tilde{E^y} & +\tilde{E^x} &              \\
+   \end{bmatrix}^{\sharp\flat}
+   }
+
+.. math::
+
+   {\small
+   G^{\sharp\sharp}
+   =
+   G^{\sharp\flat} \eta
+   =
+   \begin{bmatrix}
+                 & +       B^x  & +       B^y  & +       B^z  \\
+    +       B^x  &              & -\tilde{E^z} & +\tilde{E^y} \\
+    +       B^y  & +\tilde{E^z} &              & -\tilde{E^x} \\
+    +       B^z  & -\tilde{E^y} & +\tilde{E^x} &              \\
+   \end{bmatrix}
+   \begin{bmatrix}
+    1 &  0 &  0 &  0 \\
+    0 & -1 &  0 &  0 \\
+    0 &  0 & -1 &  0 \\
+    0 &  0 &  0 & -1
+   \end{bmatrix}
+   =
+   \begin{bmatrix}
+                 & -       B^x  & -       B^y  & -       B^z  \\
+    +       B^x  &              & +\tilde{E^z} & -\tilde{E^y} \\
+    +       B^y  & -\tilde{E^z} &              & +\tilde{E^x} \\
+    +       B^z  & +\tilde{E^y} & -\tilde{E^x} &              \\
+   \end{bmatrix}
+   }
+
+.. math::
+
+   {\small
+   G^{\flat\flat}
+   =
+   \eta G^{\sharp\flat}
+   =
+   \begin{bmatrix}
+    1 &  0 &  0 &  0 \\
+    0 & -1 &  0 &  0 \\
+    0 &  0 & -1 &  0 \\
+    0 &  0 &  0 & -1
+   \end{bmatrix}
+   \begin{bmatrix}
+                 & +       B^x  & +       B^y  & +       B^z  \\
+    +       B^x  &              & -\tilde{E^z} & +\tilde{E^y} \\
+    +       B^y  & +\tilde{E^z} &              & -\tilde{E^x} \\
+    +       B^z  & -\tilde{E^y} & +\tilde{E^x} &              \\
+   \end{bmatrix}
+   =
+   \begin{bmatrix}
+                 & +       B^x  & +       B^y  & +       B^z  \\
+    -       B^x  &              & +\tilde{E^z} & -\tilde{E^y} \\
+    -       B^y  & -\tilde{E^z} &              & +\tilde{E^x} \\
+    -       B^z  & +\tilde{E^y} & -\tilde{E^x} &              \\
+   \end{bmatrix}
+   }
+
+.. math::
+
+   {\small
+   G^{\flat\sharp}
+   =
+   \eta G^{\flat\flat}
+   =
+   \begin{bmatrix}
+    1 &  0 &  0 &  0 \\
+    0 & -1 &  0 &  0 \\
+    0 &  0 & -1 &  0 \\
+    0 &  0 &  0 & -1
+   \end{bmatrix}
+   \begin{bmatrix}
+                 & +       B^x  & +       B^y  & +       B^z  \\
+    -       B^x  &              & +\tilde{E^z} & -\tilde{E^y} \\
+    -       B^y  & -\tilde{E^z} &              & +\tilde{E^x} \\
+    -       B^z  & +\tilde{E^y} & -\tilde{E^x} &              \\
+   \end{bmatrix}
+   =
+   \begin{bmatrix}
+                 & +       B^x  & +       B^y  & +       B^z  \\
+    +       B^x  &              & -\tilde{E^z} & +\tilde{E^y} \\
+    +       B^y  & +\tilde{E^z} &              & -\tilde{E^x} \\
+    +       B^z  & -\tilde{E^y} & +\tilde{E^x} &              \\
+   \end{bmatrix}
+   }
+
+
+Summary
+-------
 
 The derivatives are flat and therefore represent a covector with lower indices
 in tensor notation :math:`\partial_\mu` While the left-hand side is sharp and
 therefore represent a vector with high indices :math:`J^\nu`. The tensors in
 the expressions above are necessarily one time contravariant and one time
-covariant :math:`F^{\mu\nu}`
+covariant :math:`F^{\mu\nu}`.
 
 .. math::
 
+   F^{\sharp\flat}
+   =
    \begin{bmatrix}
    F^\mu{}_\nu
    \end{bmatrix}
@@ -299,24 +517,31 @@ covariant :math:`F^{\mu\nu}`
 
 .. math::
 
+   G^{\sharp\flat}
+   =
    \begin{bmatrix}
    G^\mu{}_\nu
    \end{bmatrix}
    =
    \begin{bmatrix}
                  & +       B^x  & +       B^y  & +       B^z  \\
-    +       B^x  &              & +\tilde{E^z} & -\tilde{E^y} \\
-    +       B^y  & -\tilde{E^z} &              & +\tilde{E^x} \\
-    +       B^z  & +\tilde{E^y} & -\tilde{E^x} &              \\
+    +       B^x  &              & -\tilde{E^z} & +\tilde{E^y} \\
+    +       B^y  & +\tilde{E^z} &              & -\tilde{E^x} \\
+    +       B^z  & -\tilde{E^y} & +\tilde{E^x} &              \\
    \end{bmatrix}
-
-Where we use the row major convention.
 
 .. math::
 
    \begin{matrix}
-   \partial_{\mu} F^\mu{}_\nu & = & J^{\nu} \\
+   \partial_{\mu} F^\mu{}_\nu & = & J_{\nu} \\
    \partial_{\mu} G^\mu{}_\nu & = & 0       \\
+   \end{matrix}
+
+.. math::
+
+   \begin{matrix}
+   \partial^{\flat} F^{\sharp\flat} & = & J^{\flat} \\
+   \partial^{\flat} G^{\sharp\flat} & = & 0^{\flat} \\
    \end{matrix}
 
 .. note::
