@@ -1,5 +1,5 @@
-Deriving the Faraday Tensor from the 1865 Maxwell Equations
-===========================================================
+Deriving the Faraday Tensors from the 1865 Maxwell Equations
+============================================================
 
 In this article, I present a straightforward and elegant derivation of the
 Faraday tensor. This derivation draws strong inspiration from Minkowski's 1908
@@ -34,24 +34,43 @@ vectors had not yet been introduced.
 Mr. Heaviside proposed the vector form of the Maxwell equations which is the
 most widespread formulation today. I therefore start from there and unpack into
 a form closer in spirit to the 1865 maxwell equation. The equations consist of
-two inhomogenous vector equations (Gauss's law and Ampère's circuital law with
-Maxwell addition):
+two inhomogenous and two homogenous vector equations:
+
+Inhomogenous equations
+''''''''''''''''''''''
+
+**Gauss's law**
 
 .. math::
 
-   \begin{align}
    \overrightarrow{\nabla} \cdot \overrightarrow{E}  &= \rho / \epsilon_0 \\
-   \overrightarrow{\nabla} \times \overrightarrow{B} &= \mu_0 \overrightarrow{J} + \frac{1}{c^2} \frac{\partial}{\partial t} \overrightarrow{E} \\
-   \end{align}
 
-As well as two homogenous equations (Gauss's law for magnetism and Faraday's law of induction):
+**Ampère's circuital law with Maxwell addition**
 
 .. math::
 
-   \begin{align}
+   \overrightarrow{\nabla} \times \overrightarrow{B} &= \mu_0 \overrightarrow{J} + \frac{1}{c^2} \frac{\partial}{\partial t} \overrightarrow{E} \\
+
+Homogenous equations
+''''''''''''''''''''
+
+As well as two homogenous equations:
+
+**Gauss's law for magnetism**
+
+.. math::
+
    \overrightarrow{\nabla} \cdot \overrightarrow{B}  &= 0 \\
+
+**Faraday's law of induction**
+
+.. math::
+
    \overrightarrow{\nabla} \times \overrightarrow{E} &= \frac{\partial}{\partial t} \overrightarrow{B} \\
-   \end{align}
+
+From there, the equations often are unpacked. In the following, I will argue
+that in lots of sense, the original Maxwell equations from 1865 result in a
+more *computable* representation.
 
 .. note::
 
@@ -65,11 +84,12 @@ The Equations of Mr. Maxwell
 ----------------------------
 
 Unpacking the vector equations into their component form, we obtain in spirit
-the 1865 Maxwell formulation, albeit with modern notation and conventions:
+the 1865 Maxwell formulation, albeit with modern notation and conventions.
 
-**Inhomogenous equations**
+Inhomogenous equations
+''''''''''''''''''''''
 
-Gauss's law
+**Gauss's law**
 
 .. math::
 
@@ -77,7 +97,7 @@ Gauss's law
    \frac{\partial}{\partial x} E^x + \frac{\partial}{\partial y} E^y + \frac{\partial}{\partial z} E^z &= \rho / \epsilon_0
    \end{align}
 
-Ampère's circuital law
+**Ampère's circuital law**
 
 .. math::
 
@@ -87,9 +107,10 @@ Ampère's circuital law
    \frac{\partial}{\partial x} B^y - \frac{\partial}{\partial y} B^x &= \mu_0 J^z + \frac{1}{c^2} \frac{\partial}{\partial t} E^z \\
    \end{align}
 
-**Homogenous equations**
+Homogenous equations
+''''''''''''''''''''
 
-Gauss's law for magnetism
+**Gauss's law for magnetism**
 
 .. math::
 
@@ -97,7 +118,7 @@ Gauss's law for magnetism
    \frac{\partial}{\partial x} B^x + \frac{\partial}{\partial y} B^y + \frac{\partial}{\partial z} B^z &= 0
    \end{align}
 
-Faraday's law of induction
+**Faraday's law of induction**
 
 .. math::
 
@@ -107,12 +128,13 @@ Faraday's law of induction
    \frac{\partial}{\partial x} E^y - \frac{\partial}{\partial y} E^x &= - \frac{\partial}{\partial t} B^z \\
    \end{align}
 
-The underlying structure of the equations
------------------------------------------
+The underlying structure
+------------------------
 
 Reordering the terms, a clear structures appear:
 
-**Inhomogenous equations**
+Inhomogenous equations
+''''''''''''''''''''''
 
 .. math::
 
@@ -123,7 +145,8 @@ Reordering the terms, a clear structures appear:
     + \frac{1}{c^2} \frac{\partial E^z}{\partial t} & - \frac{\partial B^y}{\partial x} & + \frac{\partial B^x}{\partial y} &                                   & = & - \mu_0 J^z       \\
    \end{matrix}
 
-**Homogenous equations**
+Homogenous equations
+''''''''''''''''''''
 
 .. math::
 
@@ -134,33 +157,35 @@ Reordering the terms, a clear structures appear:
     + \frac{\partial B^z}{\partial t} & + \frac{\partial E^y}{\partial x} & - \frac{\partial E^x}{\partial y} &                                   & = & 0 \\
    \end{matrix}
 
-The reordered equations
------------------------
+The ordered equations
+---------------------
 
-To take advantage of the structure, we see after a bit of struggle that the form is very nice when taking:
+To take advantage of the structure, we can use what at first sight may be
+considered sytaxing sugar (and to some extent is). We define
+:math:`\partial_t`, :math:`\partial_x`, :math:`\partial_y`:math:`\partial_z`:
 
 .. math::
 
-   \begin{cases}
+   {\small
+   \begin{matrix}
    \partial_t  &=& \frac{\partial}{\partial(ct)} \\
    \partial_x  &=& \frac{\partial}{\partial x}   \\
    \partial_y  &=& \frac{\partial}{\partial y}   \\
    \partial_z  &=& \frac{\partial}{\partial z}   \\
-   \end{cases}
+   \end{matrix}
+   }
 
-As well as:
+To avoid taking with us a :math:`\frac{1}{c}`, we also define:
 
 .. math::
 
-   \begin{cases}
-   \tilde{E^x} &=& \frac{E^x}{c} \\
-   \tilde{E^y} &=& \frac{E^y}{c} \\
-   \tilde{E^z} &=& \frac{E^z}{c} \\
-   \end{cases}
-
-.. note::
-
-   I also use :math:`c=\frac{1}{\sqrt{\epsilon_0 \mu_0}}` to get the constants right.
+   {\small
+   \begin{matrix}
+   \tilde{E^x} &= \frac{E^x}{c} \\
+   \tilde{E^y} &= \frac{E^y}{c} \\
+   \tilde{E^z} &= \frac{E^z}{c} \\
+   \end{matrix}
+   }
 
 .. note::
 
@@ -170,7 +195,22 @@ As well as:
    :math:`\frac{\partial}{\partial x}`, :math:`\frac{\partial}{\partial y}`, and
    :math:`\frac{\partial}{\partial z}`.
 
-**Inhomogenous equations**
+.. note::
+
+   The experimental relation between the speed of light :math:`c`, the
+   permittivity of free space :math:`\epsilon_0`, and and the permeability of
+   free space :math:`\mu_0` is used:
+
+   .. math::
+
+      c=\frac{1}{\sqrt{\epsilon_0 \mu_0}}
+
+But really there is nothing involved at that step. The goal is to write the
+Maxwell equations in the most pleasant form possible. And pleasant in the form
+the equations are.
+
+Inhomogenous equations
+''''''''''''''''''''''
 
 .. math::
 
@@ -181,7 +221,8 @@ As well as:
     +\partial_t \tilde{E^z} & -\partial_x        B^y  & +\partial_y        B^x  &                         & = & - \mu_0 J^z     \\
    \end{matrix}
 
-**Homogenous equations**
+Homogenous equations
+''''''''''''''''''''
 
 .. math::
 
@@ -192,13 +233,20 @@ As well as:
     +\partial_t        B^z  & +\partial_x \tilde{E^y} & -\partial_y \tilde{E^x} &                         & = & 0 \\
    \end{matrix}
 
+It should be already clear to readers already familiar with the tensor
+formulation of electromagnetism that the Faraday tensor as well as its dual are
+already fully apparent. For any reader familiar with Matrix multiplications
+rules, it should also be clear at this stage that we are dealing here with the
+application of covectors to matrices.
+
 The electromagnetic tensor
 --------------------------
 
 Now the structure of the equations is obvious and we obtain in Matrix form
 where musical notation is used for compactness.
 
-**Inhomogenous equations**
+Inhomogenous equations
+''''''''''''''''''''''
 
 .. math::
 
@@ -223,7 +271,8 @@ where musical notation is used for compactness.
    \end{bmatrix}^{\flat}
 
 
-**Homogenous equations**
+Homogenous equations
+''''''''''''''''''''
 
 .. math::
 
@@ -248,50 +297,119 @@ where musical notation is used for compactness.
    \end{bmatrix}^{\flat}
 
 .. note::
+
+   The musical notation here is to explicitely declare whether we are dealing
+   with a sharp :math:`\sharp` vector or a :math:`\flat` covector
+
+   .. math::
+
+        \begin{matrix}
+            v^{\sharp}=
+            \begin{bmatrix}
+            a \\
+            b
+            \end{bmatrix}
+        ,&
+            v^{\flat}=
+            \begin{bmatrix}
+            a & b
+            \end{bmatrix}
+        \end{matrix}
+
+   For all practical purposes, a covector is merely the
+   transpose of a vector :math:`\begin{bmatrix} a & b
+   \end{bmatrix}=\begin{bmatrix} a \\ b \end{bmatrix}^T`.
+
+   For the matrices, it permits to explicitely define if we are dealing with
+   rows of columns, columns of rows, rows of rows, or columns of columns. 
+
+.. note::
     
    An alternative to the musical notation is to explicitely sharpen
-   :math:`\sharp` or flatten :math:`\flat` the vectors.
+   :math:`\sharp` or flatten :math:`\flat` the vectors. The equations then take
+   this form which is strictly equivalent.
 
-    .. math::
+   .. math::
     
-       {\small
-       \begin{bmatrix}
-       \partial_t     & \partial_x   & \partial_y   & \partial_z    \\
-       \end{bmatrix}
-       \begin{bmatrix}
-           \begin{bmatrix}
-                        \\
-           +\tilde{E^x} \\
-           +\tilde{E^y} \\
-           +\tilde{E^z} \\
-           \end{bmatrix}
-           \begin{bmatrix}
-           +\tilde{E^x} \\
-                        \\
-           +       B^z  \\
-           -       B^y  \\
-           \end{bmatrix}
-           \begin{bmatrix}
-           +\tilde{E^y} \\
-                   B_z  \\
-                        \\
-           +       B^x  \\
-           \end{bmatrix}
-           \begin{bmatrix}
-           +\tilde{E^z} \\
-           +       B^y  \\
-           -       B^x  \\
-                        \\
-           \end{bmatrix}
-       \end{bmatrix}
-       =
-       \begin{bmatrix}
-       + \mu_0 c \rho & - \mu_0 J^x  & - \mu_0 J^y  & - \mu_0 J^z   \\
-       \end{bmatrix}
-       }
+      {\small
+      \begin{bmatrix}
+      \partial_t     & \partial_x   & \partial_y   & \partial_z    \\
+      \end{bmatrix}
+      \begin{bmatrix}
+          \begin{bmatrix}
+                       \\
+          +\tilde{E^x} \\
+          +\tilde{E^y} \\
+          +\tilde{E^z} \\
+          \end{bmatrix}
+          \begin{bmatrix}
+          +\tilde{E^x} \\
+                       \\
+          -       B^z  \\
+          +       B^y  \\
+          \end{bmatrix}
+          \begin{bmatrix}
+          +\tilde{E^y} \\
+          +       B_z  \\
+                       \\
+          -       B^x  \\
+          \end{bmatrix}
+          \begin{bmatrix}
+          +\tilde{E^z} \\
+          -       B^y  \\
+          +       B^x  \\
+                       \\
+          \end{bmatrix}
+      \end{bmatrix}
+      =
+      \begin{bmatrix}
+      + \mu_0 c \rho & - \mu_0 J^x  & - \mu_0 J^y  & - \mu_0 J^z   \\
+      \end{bmatrix}
+      }
 
-All Faraday Tensors
+   .. math::
+    
+      {\small
+      \begin{bmatrix}
+      \partial_t     & \partial_x   & \partial_y   & \partial_z    \\
+      \end{bmatrix}
+      \begin{bmatrix}
+          \begin{bmatrix}
+                       \\
+          +\tilde{B^x} \\
+          +\tilde{B^y} \\
+          +\tilde{B^z} \\
+          \end{bmatrix}
+          \begin{bmatrix}
+          +\tilde{B^x} \\
+                       \\
+          +       E^z  \\
+          -       E^y  \\
+          \end{bmatrix}
+          \begin{bmatrix}
+          +\tilde{B^y} \\
+          -       E_z  \\
+                       \\
+          +       E^x  \\
+          \end{bmatrix}
+          \begin{bmatrix}
+          +\tilde{B^z} \\
+          +       E^y  \\
+          -       E^x  \\
+                       \\
+          \end{bmatrix}
+      \end{bmatrix}
+      =
+      \begin{bmatrix}
+      0 & 0 & 0 & 0 \\
+      \end{bmatrix}
+      }
+
+The Faraday Tensors
 -------------------
+
+Inhomogenous equations
+''''''''''''''''''''''
 
 .. math::
 
@@ -305,6 +423,9 @@ All Faraday Tensors
     +\tilde{E^z} & -       B^y  & +       B^x  &               \\
    \end{bmatrix}^{\sharp\flat}
    }
+
+From there, we can obtain all other forms of the Faraday tensors by applying
+the Minkowski metric:
 
 .. math::
  
@@ -336,7 +457,7 @@ All Faraday Tensors
 
 .. math::
  
-   {\small
+   {\scriptsize
    F^{\flat\flat}
    =
    \eta{\flat\flat} F^{\sharp\flat}
@@ -364,7 +485,7 @@ All Faraday Tensors
 
 .. math::
  
-   {\small
+   {\scriptsize
    F^{\flat\sharp}
    =
    F^{\flat\flat} \eta
@@ -390,8 +511,8 @@ All Faraday Tensors
    \end{bmatrix}
    }
 
-All Dual Faraday Tensors
-------------------------
+Homogenous equations
+''''''''''''''''''''
 
 .. math::
 
@@ -490,6 +611,54 @@ All Dual Faraday Tensors
    \end{bmatrix}
    }
 
+The Tensor Formulations
+-----------------------
+
+With that, we have obtained all tensor formulations of the Maxwell equations.
+
+Inhomogenous equations
+''''''''''''''''''''''
+
+The homogenous equations can take one of four equivalent form. The full and
+explicit matrix representation in musical notation can be found above. One can
+go from one representation to the other by applying the metric tensor.
+
+.. math::
+
+   \partial_{\mu} F^\mu{}_\nu = J_{\nu}
+
+.. math::
+
+   \partial_{\mu} F^{\mu\nu} = J^{\nu}
+
+.. math::
+
+   \partial^{\mu} F_{\mu\nu} = J_{\nu}
+
+.. math::
+
+   \partial^{\mu} F_\mu{}^\nu = J^{\nu}
+
+Homogenous equations
+''''''''''''''''''''
+
+The exact same can be done
+
+.. math::
+
+   \partial_{\mu} G^\mu{}_\nu = 0
+
+.. math::
+
+   \partial_{\mu} G^{\mu\nu} = 0
+
+.. math::
+
+   \partial^{\mu} G_{\mu\nu} = 0
+
+.. math::
+
+   \partial^{\mu} G_\mu{}^\nu = 0
 
 Summary
 -------
