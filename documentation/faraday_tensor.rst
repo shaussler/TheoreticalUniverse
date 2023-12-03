@@ -20,8 +20,28 @@ request to my
 `Github repository
 <https://github.com/shaussler/electromagnetism/actions/runs/6444649784>`_.
 
+.. note::
+
+   Refer to this alternative derivation of the Faraday tensor.
+   https://www.wikihow.life/Derive-the-Faraday-Tensor
+
+.. warning::
+
+   Too long. I think musical notation should be split in a separate article
+
+To be added:
+
+* Proposed musical notation to explicitely write the tensor form of Maxwell
+  equations.
+* The musical notation permit to represent tensors and perform tensor
+  operations by following the rules of matrix multiplication
+* Since calculations are easier following muscial notation, all equivalent
+  tensor formulations of Maxwell equations are explicitely given.
+
 The Vector Formulation of Mr. Heaviside
 ---------------------------------------
+
+.. {{{
 
 Mr. Maxwell's groundbreaking work in 1865,
 `A Dynamical Theory of the Electromagnetic Field
@@ -80,8 +100,12 @@ more *computable* representation.
    :math:`\overrightarrow{B}=\begin{bmatrix} B^x \\ B^y \\ B^z \end{bmatrix}`, and operator
    :math:`\overrightarrow{\nabla}=\begin{bmatrix} \frac{\partial}{\partial x} \\ \frac{\partial}{\partial y} \\ \frac{\partial}{\partial z} \end{bmatrix}`
 
+.. }}}
+
 The Equations of Mr. Maxwell
 ----------------------------
+
+.. {{{
 
 Unpacking the vector equations into their component form, we obtain in spirit
 the 1865 Maxwell formulation, albeit with modern notation and conventions.
@@ -128,8 +152,12 @@ Homogenous equations
    \frac{\partial}{\partial x} E^y - \frac{\partial}{\partial y} E^x &= - \frac{\partial}{\partial t} B^z \\
    \end{align}
 
+.. }}}
+
 The underlying structure
 ------------------------
+
+.. {{{
 
 Reordering the terms, a clear structures appear:
 
@@ -157,8 +185,12 @@ Homogenous equations
     + \frac{\partial B^z}{\partial t} & + \frac{\partial E^y}{\partial x} & - \frac{\partial E^x}{\partial y} &                                   & = & 0 \\
    \end{matrix}
 
+.. }}}
+
 The ordered equations
 ---------------------
+
+.. {{{
 
 To take advantage of the structure, we can use what at first sight may be
 considered sytaxing sugar (and to some extent is). We define
@@ -239,8 +271,12 @@ already fully apparent. For any reader familiar with Matrix multiplications
 rules, it should also be clear at this stage that we are dealing here with the
 application of covectors to matrices.
 
+.. }}}
+
 The electromagnetic tensor
 --------------------------
+
+.. {{{
 
 Now the structure of the equations is obvious and we obtain in Matrix form
 where musical notation is used for compactness.
@@ -269,7 +305,6 @@ Inhomogenous equations
    - \mu_0 J^y    \\
    - \mu_0 J^z    \\
    \end{bmatrix}^{\flat}
-
 
 Homogenous equations
 ''''''''''''''''''''
@@ -324,13 +359,13 @@ Homogenous equations
    rows of columns, columns of rows, rows of rows, or columns of columns. 
 
 .. note::
-    
+
    An alternative to the musical notation is to explicitely sharpen
    :math:`\sharp` or flatten :math:`\flat` the vectors. The equations then take
-   this form which is strictly equivalent.
+   this form which is equivalent.
 
    .. math::
-    
+
       {\small
       \begin{bmatrix}
       \partial_t     & \partial_x   & \partial_y   & \partial_z    \\
@@ -368,7 +403,7 @@ Homogenous equations
       }
 
    .. math::
-    
+
       {\small
       \begin{bmatrix}
       \partial_t     & \partial_x   & \partial_y   & \partial_z    \\
@@ -405,11 +440,20 @@ Homogenous equations
       \end{bmatrix}
       }
 
+.. }}}
+
 The Faraday Tensors
 -------------------
 
+.. {{{
+
 Inhomogenous equations
 ''''''''''''''''''''''
+
+Contravariant-covariant
+~~~~~~~~~~~~~~~~~~~~~~~
+
+.. {{{
 
 .. math::
 
@@ -418,17 +462,24 @@ Inhomogenous equations
    =
    \begin{bmatrix}
                  & +\tilde{E^x} & +\tilde{E^y} & + \tilde{E^z} \\
-    +\tilde{E^x} &              & -       B^z  & +        B^y  \\
-    +\tilde{E^y} & +       B^z  &              & -        B^x  \\
-    +\tilde{E^z} & -       B^y  & +       B^x  &               \\
+    +\tilde{E^x} &              & +       B^z  & -        B^y  \\
+    +\tilde{E^y} & -       B^z  &              & +        B^x  \\
+    +\tilde{E^z} & +       B^y  & -       B^x  &               \\
    \end{bmatrix}^{\sharp\flat}
    }
 
 From there, we can obtain all other forms of the Faraday tensors by applying
-the Minkowski metric:
+the Minkowski metric.
+
+.. }}}
+
+Contravariant-contravariant
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. {{{
 
 .. math::
- 
+
    {\scriptsize
    F^{\sharp\sharp}
    =
@@ -455,6 +506,87 @@ the Minkowski metric:
    \end{bmatrix}^{\sharp\sharp}
    }
 
+.. note::
+
+   An alternative to the musical notation is to explicitely sharpen
+   :math:`\sharp` or flatten :math:`\flat` the vectors. The equations then take
+   this form which is equivalent.
+
+   .. math::
+
+      {\small
+      F^{\sharp\sharp}
+      =
+      F^{\sharp\flat} \eta^{\sharp\sharp}
+      =
+      \begin{bmatrix}
+                    & +\tilde{E^x} & +\tilde{E^y} & + \tilde{E^z} \\
+       +\tilde{E^x} &              & +       B^z  & -        B^y  \\
+       +\tilde{E^y} & -       B^z  &              & +        B^x  \\
+       +\tilde{E^z} & +       B^y  & -       B^x  &               \\
+      \end{bmatrix}^{\sharp\flat}
+      \begin{bmatrix}
+          \begin{bmatrix}
+          \phantom{+} 1 \\
+          \phantom{+} 0 \\
+          \phantom{+} 0 \\
+          \phantom{+} 0 \\
+          \end{bmatrix} \\
+          \begin{bmatrix}
+          \phantom{+} 0 \\
+          -1 \\
+          \phantom{+} 0 \\
+          \phantom{+} 0 \\
+          \end{bmatrix} \\
+          \begin{bmatrix}
+          \phantom{+} 0 \\
+          \phantom{+} 0 \\
+          -1 \\
+          \phantom{+} 0 \\
+          \end{bmatrix} \\
+          \begin{bmatrix}
+          \phantom{+} 0 \\
+          \phantom{+} 0 \\
+          \phantom{+} 0 \\
+          -1 \\
+          \end{bmatrix}
+      \end{bmatrix}
+      =
+      \begin{bmatrix}
+          \begin{bmatrix}
+                       \\
+          +\tilde{E^x} \\
+          +\tilde{E^y} \\
+          +\tilde{E^z} \\
+          \end{bmatrix} \\
+          \begin{bmatrix}
+          -\tilde{E^x} \\
+                       \\
+          +       B^z  \\
+          -       B^y  \\
+          \end{bmatrix} \\
+          \begin{bmatrix}
+          -\tilde{E^y} \\
+          -       B^z  \\
+                       \\
+          +       B^x  \\
+          \end{bmatrix} \\
+          \begin{bmatrix}
+          -\tilde{E^z} \\
+          +       B^y  \\
+          -       B^x  \\
+                       \\
+          \end{bmatrix}
+      \end{bmatrix}
+      }
+
+.. }}}
+
+Covariant-covariant
+~~~~~~~~~~~~~~~~~~~
+
+.. {{{
+
 .. math::
  
    {\scriptsize
@@ -467,52 +599,87 @@ the Minkowski metric:
     0 & -1 &  0 &  0 \\
     0 &  0 & -1 &  0 \\
     0 &  0 &  0 & -1
-   \end{bmatrix}
+   \end{bmatrix}^{\flat\flat}
    \begin{bmatrix}
                  & +\tilde{E^x} & +\tilde{E^y} & + \tilde{E^z} \\
     +\tilde{E^x} &              & +       B^z  & -        B^y  \\
     +\tilde{E^y} & -       B^z  &              & +        B^x  \\
     +\tilde{E^z} & +       B^y  & -       B^x  &               \\
-   \end{bmatrix}
+   \end{bmatrix}^{\sharp\flat}
    =
    \begin{bmatrix}
                  & +\tilde{E^x} & +\tilde{E^y} & + \tilde{E^z} \\
     -\tilde{E^x} &              & -       B^z  & +        B^y  \\
     -\tilde{E^y} & +       B^z  &              & -        B^x  \\
     -\tilde{E^z} & -       B^y  & +       B^x  &               \\
-   \end{bmatrix}
+   \end{bmatrix}^{\flat\flat}
    }
+
+.. }}}
+
+Covariant-contravariant
+~~~~~~~~~~~~~~~~~~~~~~~
+
+.. {{{
 
 .. math::
  
    {\scriptsize
    F^{\flat\sharp}
    =
-   F^{\flat\flat} \eta
+   F^{\flat\flat} \eta^{\sharp\sharp}
    =
    \begin{bmatrix}
                  & +\tilde{E^x} & +\tilde{E^y} & + \tilde{E^z} \\
     -\tilde{E^x} &              & -       B^z  & +        B^y  \\
     -\tilde{E^y} & +       B^z  &              & -        B^x  \\
     -\tilde{E^z} & -       B^y  & +       B^x  &               \\
-   \end{bmatrix}
+   \end{bmatrix}^{\flat\flat}
    \begin{bmatrix}
     1 &  0 &  0 &  0 \\
     0 & -1 &  0 &  0 \\
     0 &  0 & -1 &  0 \\
     0 &  0 &  0 & -1
-   \end{bmatrix}
+   \end{bmatrix}^{\sharp\sharp}
    =
    \begin{bmatrix}
-                 & -\tilde{E^x} & -\tilde{E^y} & - \tilde{E^z} \\
-    -\tilde{E^x} &              & +       B^z  & -        B^y  \\
-    -\tilde{E^y} & -       B^z  &              & +        B^x  \\
-    -\tilde{E^z} & +       B^y  & -       B^x  &               \\
-   \end{bmatrix}
+                 & +\tilde{E^x} & +\tilde{E^y} & +\tilde{E^z} \\
+    +\tilde{E^x} &              & +       B^z  & -       B^y  \\
+    +\tilde{E^y} & -       B^z  &              & +       B^x  \\
+    +\tilde{E^z} & +       B^y  & -       B^x  &              \\
+   \end{bmatrix}^{\flat\sharp}
    }
+
+.. note::
+
+   Without musical notation, the expression can be explicitely sharpened
+   :math:`\sharp` (respectivelty flattened :math:`\flat`) like so:
+
+   .. math::
+
+      \begin{bmatrix}
+                    & +\tilde{E^x} & +\tilde{E^y} & +\tilde{E^z} \\
+       +\tilde{E^x} &              & +       B^z  & -       B^y  \\
+       +\tilde{E^y} & -       B^z  &              & +       B^x  \\
+       +\tilde{E^z} & +       B^y  & -       B^x  &               \\
+      \end{bmatrix}^{\flat\sharp}
+      =
+      \begin{bmatrix}
+        \begin{bmatrix} \phantom{+X^x} & +\tilde{E^x}   & +\tilde{E^y}   & +\tilde{E^z}   \end{bmatrix} \\
+        \begin{bmatrix} +\tilde{E^x}   & \phantom{+X^x} & +       B^z    & -       B^y    \end{bmatrix} \\
+        \begin{bmatrix} +\tilde{E^y}   & -       B^z    & \phantom{+X^x} & +       B^x    \end{bmatrix} \\
+        \begin{bmatrix} +\tilde{E^z}   & +       B^y    & -       B^x    & \phantom{+X^x} \end{bmatrix} \\
+      \end{bmatrix}
+
+.. }}}
 
 Homogenous equations
 ''''''''''''''''''''
+
+Contravariant-covariant
+~~~~~~~~~~~~~~~~~~~~~~~
+
+.. {{{
 
 .. math::
 
@@ -527,101 +694,136 @@ Homogenous equations
    \end{bmatrix}^{\sharp\flat}
    }
 
+.. }}}
+
+Contravariant-contravariant
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. {{{
+
 .. math::
 
-   {\small
+   {\scriptsize
    G^{\sharp\sharp}
    =
-   G^{\sharp\flat} \eta
+   G^{\sharp\flat} \eta^{\sharp\sharp}
    =
    \begin{bmatrix}
                  & +       B^x  & +       B^y  & +       B^z  \\
     +       B^x  &              & -\tilde{E^z} & +\tilde{E^y} \\
     +       B^y  & +\tilde{E^z} &              & -\tilde{E^x} \\
     +       B^z  & -\tilde{E^y} & +\tilde{E^x} &              \\
-   \end{bmatrix}
+   \end{bmatrix}^{\sharp\flat}
    \begin{bmatrix}
     1 &  0 &  0 &  0 \\
     0 & -1 &  0 &  0 \\
     0 &  0 & -1 &  0 \\
     0 &  0 &  0 & -1
-   \end{bmatrix}
+   \end{bmatrix}^{\sharp\sharp}
    =
    \begin{bmatrix}
                  & -       B^x  & -       B^y  & -       B^z  \\
     +       B^x  &              & +\tilde{E^z} & -\tilde{E^y} \\
     +       B^y  & -\tilde{E^z} &              & +\tilde{E^x} \\
     +       B^z  & +\tilde{E^y} & -\tilde{E^x} &              \\
-   \end{bmatrix}
+   \end{bmatrix}^{\sharp\sharp}
    }
+
+.. }}}
+
+Covariant-covariant
+~~~~~~~~~~~~~~~~~~~
+
+.. {{{
+
+.. warning::
+
+   I have not doubled check that one.
 
 .. math::
 
-   {\small
+   {\scriptsize
    G^{\flat\flat}
    =
-   \eta G^{\sharp\flat}
+   \eta^{\flat\flat} G^{\sharp\flat}
    =
    \begin{bmatrix}
     1 &  0 &  0 &  0 \\
     0 & -1 &  0 &  0 \\
     0 &  0 & -1 &  0 \\
     0 &  0 &  0 & -1
-   \end{bmatrix}
+   \end{bmatrix}^{\flat\flat}
    \begin{bmatrix}
                  & +       B^x  & +       B^y  & +       B^z  \\
     +       B^x  &              & -\tilde{E^z} & +\tilde{E^y} \\
     +       B^y  & +\tilde{E^z} &              & -\tilde{E^x} \\
     +       B^z  & -\tilde{E^y} & +\tilde{E^x} &              \\
-   \end{bmatrix}
+   \end{bmatrix}^{\sharp\flat}
    =
    \begin{bmatrix}
                  & +       B^x  & +       B^y  & +       B^z  \\
     -       B^x  &              & +\tilde{E^z} & -\tilde{E^y} \\
     -       B^y  & -\tilde{E^z} &              & +\tilde{E^x} \\
     -       B^z  & +\tilde{E^y} & -\tilde{E^x} &              \\
-   \end{bmatrix}
+   \end{bmatrix}^{\flat\flat}
    }
+
+.. }}}
+
+Covariant-contravariant
+~~~~~~~~~~~~~~~~~~~~~~~
+
+.. {{{
+
+.. warning::
+
+   I have not checked that one.
 
 .. math::
 
-   {\small
+   {\scriptsize
    G^{\flat\sharp}
    =
-   \eta G^{\flat\flat}
+   G^{\flat\flat} \eta^{\sharp\sharp}
    =
-   \begin{bmatrix}
-    1 &  0 &  0 &  0 \\
-    0 & -1 &  0 &  0 \\
-    0 &  0 & -1 &  0 \\
-    0 &  0 &  0 & -1
-   \end{bmatrix}
    \begin{bmatrix}
                  & +       B^x  & +       B^y  & +       B^z  \\
     -       B^x  &              & +\tilde{E^z} & -\tilde{E^y} \\
     -       B^y  & -\tilde{E^z} &              & +\tilde{E^x} \\
     -       B^z  & +\tilde{E^y} & -\tilde{E^x} &              \\
-   \end{bmatrix}
+   \end{bmatrix}^{\flat\flat}
+   \begin{bmatrix}
+    1 &  0 &  0 &  0 \\
+    0 & -1 &  0 &  0 \\
+    0 &  0 & -1 &  0 \\
+    0 &  0 &  0 & -1
+   \end{bmatrix}^{\sharp\sharp}
    =
    \begin{bmatrix}
                  & +       B^x  & +       B^y  & +       B^z  \\
     +       B^x  &              & -\tilde{E^z} & +\tilde{E^y} \\
     +       B^y  & +\tilde{E^z} &              & -\tilde{E^x} \\
     +       B^z  & -\tilde{E^y} & +\tilde{E^x} &              \\
-   \end{bmatrix}
+   \end{bmatrix}^{\flat\sharp}
    }
+
+.. }}}
+
+.. }}}
 
 The Tensor Formulations
 -----------------------
 
-With that, we have obtained all tensor formulations of the Maxwell equations.
+.. {{{
 
-Inhomogenous equations
-''''''''''''''''''''''
+With that, we have obtained all tensor formulations of the Maxwell equations.
 
 The homogenous equations can take one of four equivalent form. The full and
 explicit matrix representation in musical notation can be found above. One can
 go from one representation to the other by applying the metric tensor.
+
+Contravariant-covariant
+'''''''''''''''''''''''
 
 .. math::
 
@@ -629,7 +831,21 @@ go from one representation to the other by applying the metric tensor.
 
 .. math::
 
+   \partial_{\mu} G^\mu{}_\nu = 0
+
+Contravariant-contravariant
+'''''''''''''''''''''''''''
+
+.. math::
+
    \partial_{\mu} F^{\mu\nu} = J^{\nu}
+
+.. math::
+
+   \partial_{\mu} G^{\mu\nu} = 0
+
+Covariant-covariant
+'''''''''''''''''''
 
 .. math::
 
@@ -637,31 +853,132 @@ go from one representation to the other by applying the metric tensor.
 
 .. math::
 
-   \partial^{\mu} F_\mu{}^\nu = J^{\nu}
-
-Homogenous equations
-''''''''''''''''''''
-
-The exact same can be done
-
-.. math::
-
-   \partial_{\mu} G^\mu{}_\nu = 0
-
-.. math::
-
-   \partial_{\mu} G^{\mu\nu} = 0
-
-.. math::
-
    \partial^{\mu} G_{\mu\nu} = 0
+
+Covariant-contravariant
+'''''''''''''''''''''''
+
+.. math::
+
+   \partial^{\mu} F_\mu{}^\nu = J^{\nu}
 
 .. math::
 
    \partial^{\mu} G_\mu{}^\nu = 0
 
+.. }}}
+
+Explicit formulation of Maxwell equations
+-----------------------------------------
+
+.. {{{
+
+Contravariant-covariant
+'''''''''''''''''''''''
+
+.. math::
+
+   \begin{bmatrix}
+   \partial_t \\
+   \partial_x \\
+   \partial_y \\
+   \partial_z \\
+   \end{bmatrix}^{\flat} &
+   \begin{bmatrix}
+                  & +\tilde{E^x} & +\tilde{E^y} & + \tilde{E^z} \\
+    +\tilde{E^x}  &              & +       B^z  & -        B^y  \\
+    +\tilde{E^y}  & -       B^z  &              & +        B^x  \\
+    +\tilde{E^z}  & +       B^y  & -       B^x  &               \\
+   \end{bmatrix}^{\sharp\flat}
+   =
+   \begin{bmatrix}
+   + \mu_0 c \rho \\
+   - \mu_0 J^x    \\
+   - \mu_0 J^y    \\
+   - \mu_0 J^z    \\
+   \end{bmatrix}^{\flat}
+
+.. math::
+
+   \begin{bmatrix}
+   \partial_t \\
+   \partial_x \\
+   \partial_y \\
+   \partial_z
+   \end{bmatrix}^{\flat}
+   \begin{bmatrix}
+                 & +       B^x  & +       B^y  & +       B^z  \\
+    +       B^x  &              & -\tilde{E^z} & +\tilde{E^y} \\
+    +       B^y  & +\tilde{E^z} &              & -\tilde{E^x} \\
+    +       B^z  & -\tilde{E^y} & +\tilde{E^x} &              \\
+   \end{bmatrix}^{\sharp \flat}
+   =
+   \begin{bmatrix}
+   0 \\
+   0 \\
+   0 \\
+   0 \\
+   \end{bmatrix}^{\flat}
+
+Contravariant-contravariant
+'''''''''''''''''''''''''''
+
+.. math::
+
+   \begin{bmatrix}
+   \partial_t \\
+   \partial_x \\
+   \partial_y \\
+   \partial_z \\
+   \end{bmatrix}^{\flat} &
+   \begin{bmatrix}
+                 & -\tilde{E^x} & -\tilde{E^y} & - \tilde{E^z} \\
+    +\tilde{E^x} &              & -       B^z  & +        B^y  \\
+    +\tilde{E^y} & +       B^z  &              & -        B^x  \\
+    +\tilde{E^z} & -       B^y  & +       B^x  &               \\
+   \end{bmatrix}^{\sharp\sharp}
+   =
+   \begin{bmatrix}
+   \mu_0 c \rho \\
+   \mu_0 J^x    \\
+   \mu_0 J^y    \\
+   \mu_0 J^z    \\
+   \end{bmatrix}^{\sharp}
+
+.. math::
+
+   \begin{bmatrix}
+   \partial_t \\
+   \partial_x \\
+   \partial_y \\
+   \partial_z \\
+   \end{bmatrix}^{\flat}
+   \begin{bmatrix}
+                 & -       B^x  & -       B^y  & -       B^z  \\
+    +       B^x  &              & +\tilde{E^z} & -\tilde{E^y} \\
+    +       B^y  & -\tilde{E^z} &              & +\tilde{E^x} \\
+    +       B^z  & +\tilde{E^y} & -\tilde{E^x} &              \\
+   \end{bmatrix}^{\sharp\sharp}
+   =
+   \begin{bmatrix}
+   0 \\
+   0 \\
+   0 \\
+   0 \\
+   \end{bmatrix}^{\sharp}
+
+Covariant-covariant
+'''''''''''''''''''
+
+Covariant-contravariant
+'''''''''''''''''''''''
+
+.. }}}
+
 Summary
 -------
+
+.. {{{
 
 The derivatives are flat and therefore represent a covector with lower indices
 in tensor notation :math:`\partial_\mu` While the left-hand side is sharp and
@@ -740,3 +1057,4 @@ covariant :math:`F^{\mu\nu}`.
 In a next article, I show how the two tensors obtained in that manner are
 related as one being the Hodge dual of the other.
 
+.. }}}
