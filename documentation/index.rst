@@ -6,6 +6,13 @@
 Electromagnetism
 ================
 
+============= ==============================================
+Purpose       Link
+============= ==============================================
+Documentation https://shaussler.github.io/electromagnetism
+Repository    https://github.com/shaussler/electromagnetism
+============= ==============================================
+
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
