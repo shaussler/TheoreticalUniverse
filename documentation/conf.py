@@ -32,3 +32,9 @@ todo_include_todos = True
 
 mathjax3_config = {'chtml': {'displayAlign': 'left',
                              'displayIndent': '2em'}}
+
+# Google analytics
+# ----------------
+
+googleanalytics_id=""418592421
+googleanalytics_enabled=True
