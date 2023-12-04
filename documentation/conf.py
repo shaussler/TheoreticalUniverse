@@ -36,5 +36,5 @@ mathjax3_config = {'chtml': {'displayAlign': 'left',
 # Google analytics
 # ----------------
 
-googleanalytics_id=""418592421
+googleanalytics_id="G-9HQ1J8VKRB"
 googleanalytics_enabled=True
