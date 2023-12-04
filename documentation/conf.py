@@ -14,7 +14,8 @@ author = 'Stéphane Haussler'
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
 extensions = [
-    'sphinx.ext.todo'
+    'sphinx.ext.todo',
+    'sphinxcontrib.googleanalytics'
 ]
 
 templates_path = ['_templates']
