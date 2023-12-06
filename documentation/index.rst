@@ -18,7 +18,8 @@ Repository    https://github.com/shaussler/electromagnetism
    :caption: Contents:
 
    minkowski_metric.rst
-   faraday_tensor.rst
+   faraday_tensor_derivation.rst
+   all_faraday_tensors.rst
    hodge_dual_faraday_tensor.rst
 
 Indices and tables
