@@ -1,9 +1,18 @@
 Deriving the Faraday Tensors from the 1865 Maxwell Equations
 ============================================================
 
-In this article, I present a straightforward and elegant derivation of the
-Faraday tensor. This derivation draws strong inspiration from Minkowski's 1908
-paper, 
+.. rst-class:: custom-author
+ 
+   by Stéphane Haussler
+
+I would expect the reader to have a solid understanding of vector calculus,
+know the vector dot product, the cross product, as well a matrix
+multiplication. Interestingly, neither understanding of Maxwell equations nor
+knowledge of tensor calculus is readlly needed to follow the derivation.
+
+In this article, I present a straightforward, natural and elegant derivation of
+the Faraday tensor. This derivation draws strong inspiration from Minkowski's
+1908 paper, 
 `The Fundamental Equations for Electromagnetic Processes in Moving Bodies
 <https://en.wikisource.org/wiki/Translation:The_Fundamental_Equations_for_Electromagnetic_Processes_in_Moving_Bodies>`_.
 What sets this derivation apart is that it avoids the often-seen backward proof
@@ -12,31 +21,11 @@ doesn't rely on the widespread vector formulation introduced by Mr. Heaviside,
 but rather adheres to the original 1865 formulation by Mr. Maxwell, albeit
 presented with modern notation and the benefit of hindsight.
 
-While the derivation may seem quite obvious, it might not be widely known. If I
-am mistaken, and you are aware of a textbook, YouTube video, article, or any
-other online resource covering this topic, please don't hesitate to inform me.
-You can either open an issue or directly provide corrections by sending a merge
-request to my
+This derivation might not be widely known. If I am mistaken and you are aware
+of freely available resources covering this topic, don't hesitate to open an
+issue or directly provide corrections by sending a merge request to my
 `Github repository
-<https://github.com/shaussler/electromagnetism/actions/runs/6444649784>`_.
-
-.. note::
-
-   Refer to this alternative derivation of the Faraday tensor.
-   https://www.wikihow.life/Derive-the-Faraday-Tensor
-
-.. warning::
-
-   Too long. I think musical notation should be split in a separate article
-
-To be added:
-
-* Proposed musical notation to explicitely write the tensor form of Maxwell
-  equations.
-* The musical notation permit to represent tensors and perform tensor
-  operations by following the rules of matrix multiplication
-* Since calculations are easier following muscial notation, all equivalent
-  tensor formulations of Maxwell equations are explicitely given.
+<https://github.com/shaussler/electromagnetism/>`_.
 
 The Vector Formulation of Mr. Heaviside
 ---------------------------------------
@@ -54,43 +43,26 @@ vectors had not yet been introduced.
 Mr. Heaviside proposed the vector form of the Maxwell equations which is the
 most widespread formulation today. I therefore start from there and unpack into
 a form closer in spirit to the 1865 maxwell equation. The equations consist of
-two inhomogenous and two homogenous vector equations:
+two inhomogenous (Gauss's law and Ampère'circuital law) and two homogenous
+vector equations (Gauss's law for magnetism and Faraday's law of induction),
+which is how I organize the equations.
 
-Inhomogenous equations
-''''''''''''''''''''''
+These equations certainly are fascinating but there is not need for
+understanding and I merely write them down as a starting point of the
+derivation. With the exception of Maxwell's addition to Ampère's circuital law,
+these equation are the mathematical formulation of experimental facts. Hence
+these equations can be taken as experimental facts.
 
-**Gauss's law**
+.. rubric:: Inhomogenous equations
 
-.. math::
-
-   \overrightarrow{\nabla} \cdot \overrightarrow{E}  &= \rho / \epsilon_0 \\
-
-**Ampère's circuital law with Maxwell addition**
-
-.. math::
-
-   \overrightarrow{\nabla} \times \overrightarrow{B} &= \mu_0 \overrightarrow{J} + \frac{1}{c^2} \frac{\partial}{\partial t} \overrightarrow{E} \\
-
-Homogenous equations
-''''''''''''''''''''
-
-As well as two homogenous equations:
-
-**Gauss's law for magnetism**
-
-.. math::
-
-   \overrightarrow{\nabla} \cdot \overrightarrow{B}  &= 0 \\
-
-**Faraday's law of induction**
-
-.. math::
-
-   \overrightarrow{\nabla} \times \overrightarrow{E} &= \frac{\partial}{\partial t} \overrightarrow{B} \\
-
-From there, the equations often are unpacked. In the following, I will argue
-that in lots of sense, the original Maxwell equations from 1865 result in a
-more *computable* representation.
+=========================== =================================================================================
+Law                         Equation
+=========================== =================================================================================
+Gauss's law                 :math:`\overrightarrow{\nabla} \cdot \overrightarrow{E}  = \rho / \epsilon_0`
+Ampère's circuital          :math:`\overrightarrow{\nabla} \times \overrightarrow{B} = \mu_0 \overrightarrow{J} + \frac{1}{c^2} \frac{\partial}{\partial t} \overrightarrow{E}`
+Gauss's law for magnetism   :math:`\overrightarrow{\nabla} \cdot \overrightarrow{B} = 0`
+Faraday's law of induction  :math:`\overrightarrow{\nabla} \times \overrightarrow{E} = \frac{\partial}{\partial t} \overrightarrow{B}`
+=========================== =================================================================================
 
 .. note::
 
@@ -110,47 +82,39 @@ The Equations of Mr. Maxwell
 Unpacking the vector equations into their component form, we obtain in spirit
 the 1865 Maxwell formulation, albeit with modern notation and conventions.
 
-Inhomogenous equations
-''''''''''''''''''''''
-
-**Gauss's law**
-
-.. math::
-
-   \begin{align}
-   \frac{\partial}{\partial x} E^x + \frac{\partial}{\partial y} E^y + \frac{\partial}{\partial z} E^z &= \rho / \epsilon_0
-   \end{align}
-
-**Ampère's circuital law**
-
-.. math::
-
-   \begin{align}
-   \frac{\partial}{\partial y} B^z - \frac{\partial}{\partial z} B^y &= \mu_0 J^x + \frac{1}{c^2} \frac{\partial}{\partial t} E^x \\
-   \frac{\partial}{\partial z} B^x - \frac{\partial}{\partial x} B^z &= \mu_0 J^y + \frac{1}{c^2} \frac{\partial}{\partial t} E^y \\
-   \frac{\partial}{\partial x} B^y - \frac{\partial}{\partial y} B^x &= \mu_0 J^z + \frac{1}{c^2} \frac{\partial}{\partial t} E^z \\
-   \end{align}
-
-Homogenous equations
-''''''''''''''''''''
-
-**Gauss's law for magnetism**
-
-.. math::
-
-   \begin{align}
-   \frac{\partial}{\partial x} B^x + \frac{\partial}{\partial y} B^y + \frac{\partial}{\partial z} B^z &= 0
-   \end{align}
-
-**Faraday's law of induction**
-
-.. math::
-
-   \begin{align}
-   \frac{\partial}{\partial y} E^z - \frac{\partial}{\partial z} E^y &= - \frac{\partial}{\partial t} B^x \\
-   \frac{\partial}{\partial z} E^x - \frac{\partial}{\partial x} E^z &= - \frac{\partial}{\partial t} B^y \\
-   \frac{\partial}{\partial x} E^y - \frac{\partial}{\partial y} E^x &= - \frac{\partial}{\partial t} B^z \\
-   \end{align}
++---------------------+---------------------------------------------------------------------------------------------------------------------------------------+
+|                     |                                                                                                                                       |
++=====================+=======================================================================================================================================+
+| **Gauss's law**     |  .. math::                                                                                                                            |
+|                     |                                                                                                                                       |
+|                     |     \begin{align}                                                                                                                     |
+|                     |     \frac{\partial}{\partial x} E^x + \frac{\partial}{\partial y} E^y + \frac{\partial}{\partial z} E^z &= \rho / \epsilon_0          |
+|                     |     \end{align}                                                                                                                       |
++---------------------+---------------------------------------------------------------------------------------------------------------------------------------+
+| **Ampère's          | .. math::                                                                                                                             |
+| circuital law**     |                                                                                                                                       |
+|                     |    \begin{align}                                                                                                                      |
+|                     |    \frac{\partial}{\partial y} B^z - \frac{\partial}{\partial z} B^y &= \mu_0 J^x + \frac{1}{c^2} \frac{\partial}{\partial t} E^x \\  |
+|                     |    \frac{\partial}{\partial z} B^x - \frac{\partial}{\partial x} B^z &= \mu_0 J^y + \frac{1}{c^2} \frac{\partial}{\partial t} E^y \\  |
+|                     |    \frac{\partial}{\partial x} B^y - \frac{\partial}{\partial y} B^x &= \mu_0 J^z + \frac{1}{c^2} \frac{\partial}{\partial t} E^z \\  |
+|                     |    \end{align}                                                                                                                        |
+|                     |    \phantom{Adding space to the table}                                                                                                |
++---------------------+---------------------------------------------------------------------------------------------------------------------------------------+
+| **Gauss's law for   |  .. math::                                                                                                                            |
+| magnetism**         |                                                                                                                                       |
+|                     |     \begin{align}                                                                                                                     |
+|                     |     \frac{\partial}{\partial x} B^x + \frac{\partial}{\partial y} B^y + \frac{\partial}{\partial z} B^z &= 0                          |
+|                     |     \end{align}                                                                                                                       |
++---------------------+---------------------------------------------------------------------------------------------------------------------------------------+
+| **Faraday's law of  | .. math::                                                                                                                             |
+| induction**         |                                                                                                                                       |
+|                     |    \begin{align}                                                                                                                      |
+|                     |    \frac{\partial}{\partial y} E^z - \frac{\partial}{\partial z} E^y &= - \frac{\partial}{\partial t} B^x \\                          |
+|                     |    \frac{\partial}{\partial z} E^x - \frac{\partial}{\partial x} E^z &= - \frac{\partial}{\partial t} B^y \\                          |
+|                     |    \frac{\partial}{\partial x} E^y - \frac{\partial}{\partial y} E^x &= - \frac{\partial}{\partial t} B^z \\                          |
+|                     |    \end{align}                                                                                                                        |
+|                     |    \phantom{Adding space to the table more }                                                                                          |
++---------------------+---------------------------------------------------------------------------------------------------------------------------------------+
 
 .. }}}
 
@@ -159,10 +123,9 @@ The underlying structure
 
 .. {{{
 
-Reordering the terms, a clear structures appear:
+Gathering and reordering the terms, a clear structures becomes apparent:
 
-Inhomogenous equations
-''''''''''''''''''''''
+.. rubric:: Inhomogenous equations
 
 .. math::
 
@@ -173,8 +136,7 @@ Inhomogenous equations
     + \frac{1}{c^2} \frac{\partial E^z}{\partial t} & - \frac{\partial B^y}{\partial x} & + \frac{\partial B^x}{\partial y} &                                   & = & - \mu_0 J^z       \\
    \end{matrix}
 
-Homogenous equations
-''''''''''''''''''''
+.. rubric:: Homogenous equations
 
 .. math::
 
