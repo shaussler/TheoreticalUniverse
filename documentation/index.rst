@@ -1,7 +1,4 @@
-.. Electromagnetism documentation master file, created by
-   sphinx-quickstart on Sat Oct  7 12:15:53 2023.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
+.. created by sphinx-quickstart on Sat Oct  7 12:15:53 2023.
 
 Electromagnetism
 ================
@@ -17,8 +14,8 @@ Repository    https://github.com/shaussler/electromagnetism
    :maxdepth: 2
    :caption: Contents:
 
-   minkowski_metric.rst
    faraday_tensor_derivation.rst
+   minkowski_metric.rst
    all_faraday_tensors.rst
    hodge_dual_faraday_tensor.rst
 

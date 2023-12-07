@@ -1,6 +1,10 @@
 The Minkowski Metric
 ====================
 
+.. warning:
+
+   Under construction
+
 Flat metric tensor:
 
 .. math::

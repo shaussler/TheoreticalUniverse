@@ -7,6 +7,7 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = 'Electromagnetism'
+html_title = 'Electromagnetism'
 copyright = '2023, Stéphane Haussler'
 author = 'Stéphane Haussler'
 

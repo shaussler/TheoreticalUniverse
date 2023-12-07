@@ -126,7 +126,7 @@ the 1865 Maxwell formulation, albeit with modern notation and conventions.
 
 .. }}}
 
-The underlying structure
+The Underlying Structure
 ------------------------
 
 .. {{{
@@ -157,7 +157,7 @@ Gathering and reordering the terms, a clear structures becomes apparent:
 
 .. }}}
 
-The ordered equations
+The Ordered Equations
 ---------------------
 
 .. {{{
@@ -224,8 +224,8 @@ matrices.
 
 .. }}}
 
-The electromagnetic tensor
---------------------------
+The Tensor of Mr. Faraday
+-------------------------
 
 .. {{{
 
@@ -356,6 +356,22 @@ sharpen :math:`\sharp` or flatten :math:`\flat` vectors.
    0 \\
    \end{bmatrix}^{\flat}
 
+We have obtained the tensor of Mr. Faraday and usually noted
+:math:`F^\mu{}_\nu`
+
+.. math::
+
+   \begin{bmatrix}
+   F^\mu{}_\nu
+   \end{bmatrix}
+   =
+   \begin{bmatrix}
+                  & +\tilde{E^x} & +\tilde{E^y} & + \tilde{E^z} \\
+    +\tilde{E^x}  &              & +       B^z  & -        B^y  \\
+    +\tilde{E^y}  & -       B^z  &              & +        B^x  \\
+    +\tilde{E^z}  & +       B^y  & -       B^x  &               \\
+   \end{bmatrix}
+
 .. note::
 
    The musical notation permits to generalize the rules of matrix
@@ -463,10 +479,12 @@ sharpen :math:`\sharp` or flatten :math:`\flat` vectors.
 
 .. }}}
 
-Musical equations
+Musical Equations
 -----------------
 
 .. {{{
+
+With musical notation, the Faraday tensor and its dual are expressed as:
 
 .. math::
 
@@ -490,6 +508,8 @@ Musical equations
     +       B^z  & -\tilde{E^y} & +\tilde{E^x} &              \\
    \end{bmatrix}^{\sharp\flat}
 
+An the Maxwell equations are:
+
 .. math::
 
    \begin{matrix}
@@ -497,9 +517,12 @@ Musical equations
    \partial^{\flat} G^{\sharp\flat} & = & 0^{\flat} \\
    \end{matrix}
 
+The equations really are the same as the tensor equations. The advantage is
+that the matrices can be expanded and matrix multiplication rules applied.
+
 .. }}}
 
-Tensor equations
+Tensor Equations
 ----------------
 
 .. {{{
@@ -535,6 +558,8 @@ covariant :math:`F^\mu{}_\nu`.
     +       B^y  & +\tilde{E^z} &              & -\tilde{E^x} \\
     +       B^z  & -\tilde{E^y} & +\tilde{E^x} &              \\
    \end{bmatrix}
+
+The Maxwell equations are expressed as:
 
 .. math::
 
