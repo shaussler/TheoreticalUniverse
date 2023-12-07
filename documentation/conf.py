@@ -16,7 +16,8 @@ author = 'Stéphane Haussler'
 
 extensions = [
     'sphinx.ext.todo',
-    'sphinxcontrib.googleanalytics'
+    'sphinxcontrib.googleanalytics',
+    'sphinx_sitemap'
 ]
 
 templates_path = ['_templates']
@@ -30,6 +31,7 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 html_theme = 'furo'
 html_static_path = ['_static']
 html_css_files = ['custom.css']
+html_baseurl = 'https://shaussler.github.io/electromagnetism'
 
 todo_include_todos = True
 
