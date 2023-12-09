@@ -24,6 +24,7 @@ Collection of papers about math and physics.
    minkowski_metric.rst
    all_faraday_tensors.rst
    hodge_dual_faraday_tensor.rst
+   de_guas_theorem.rst
 
 Indices and tables
 ==================
