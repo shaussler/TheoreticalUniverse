@@ -30,7 +30,9 @@ html_theme = 'furo'
 html_static_path = ['_static']
 html_css_files = ['custom.css']
 html_baseurl = 'https://shaussler.github.io/TheoreticalUniverse/'
+
 sitemap_locales = []
+sitemap_url_scheme = "{link}"
 
 todo_include_todos = True
 
