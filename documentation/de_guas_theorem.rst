@@ -5,10 +5,11 @@ Proving De Gua's Theorem with Clifford Algebra
 
    by Stéphane Haussler
 
-I just watched yet another great `video by Michael Penn
-<https://youtu.be/vcnQ0GR4IPI?si=Y-_ToX5qQQ7Vs4MZ>`_. Since I learned about
-Clifford Algebra and the Hodge dual recently, I decided I would have a go at
-it that way.
+I just watched yet another `great video by Michael Penn about De Gua's theorem
+<https://youtu.be/vcnQ0GR4IPI?si=Y-_ToX5qQQ7Vs4MZ>`_.
+Since I had never heard of it adn recently learned about Clifford Algebra and
+the Hodge dual, I decided I would have a go at it that way since it felt a
+proof should work out nicely.
 
 If anyone is reading this, don't hesitate to `open an issue on my repository
 <https://github.com/shaussler/TheoreticalUniverse/issues>`_ if something is not
