@@ -3,13 +3,18 @@
 Theoretical Universe
 ====================
 
-============= =======================================================
-                  
-============= =======================================================
-Documentation https://shaussler.github.io/TheoreticalUniverse
-Repository    https://github.com/shaussler/TheoreticalUniverse
-Issues        https://github.com/shaussler/TheoreticalUniverse/issues
-============= =======================================================
+Collection of papers about math and physics.
+
+.. table::
+   :align: left
+
+   ============= =======================================================
+                     
+   ============= =======================================================
+   Documentation https://shaussler.github.io/TheoreticalUniverse
+   Repository    https://github.com/shaussler/TheoreticalUniverse
+   Issues        https://github.com/shaussler/TheoreticalUniverse/issues
+   ============= =======================================================
 
 .. toctree::
    :maxdepth: 2
