@@ -6,15 +6,15 @@ Proving De Gua's Theorem with Clifford Algebra
    by Stéphane Haussler
 
 I just watched yet another `great video by Michael Penn about De Gua's theorem
-<https://youtu.be/vcnQ0GR4IPI?si=Y-_ToX5qQQ7Vs4MZ>`_.
-Since I had never heard of it adn recently learned about Clifford Algebra and
-the Hodge dual, I decided I would have a go at it that way since it felt a
-proof should work out nicely.
+<https://youtu.be/vcnQ0GR4IPI?si=Y-_ToX5qQQ7Vs4MZ>`_. Since I had never heard
+of it and recently learned about Clifford Algebra as well as the Hodge dual, I
+decided I would have a go at it that way. It felt a proof should work out
+nicely, and it does!
 
 If anyone is reading this, don't hesitate to `open an issue on my repository
 <https://github.com/shaussler/TheoreticalUniverse/issues>`_ if something is not
-as it should. If you correct directly, I will definitely consider merging your
-changes.
+as it should. You can also correct directly and I will definitely consider
+merging your changes.
 
 Taking the Clifford Product
 ---------------------------
@@ -40,19 +40,23 @@ Expanding both sides into dot and wedge products:
      & \mathbf{OA} \cdot  \mathbf{OB} + \mathbf{OA} \wedge \mathbf{OB} + \\
    \end{align}
 
-Since :math:`\mathbf{CO}` is aligned with itself, its wedge product is zero but
-not its dot product. Since we make the hypothesis of a right corner in
+Since :math:`\mathbf{CO}` is aligned with itself, its wedge product is zero (but
+not its dot product). Since we make the hypothesis of a right corner in
 :math:`O`, all other dot products are zero.
 
 .. math::
 
-   \mathbf{CA} \cdot \mathbf{CB} + \mathbf{CA} \wedge \mathbf{CB} =
-   \mathbf{CO} \cdot  \mathbf{CO} + \mathbf{CO} \wedge \mathbf{OB} + \mathbf{OA} \wedge \mathbf{CO} + \mathbf{OA} \wedge \mathbf{OB}
+   \begin{align}
+   \mathbf{CA} \cdot \mathbf{CB} + \mathbf{CA} \wedge \mathbf{CB} = & + \mathbf{CO} \cdot  \mathbf{CO} \\
+                                                                    & + \mathbf{CO} \wedge \mathbf{OB} \\
+                                                                    & + \mathbf{OA} \wedge \mathbf{CO} \\
+                                                                    & + \mathbf{OA} \wedge \mathbf{OB} \\
+   \end{align}
 
 Identifying the Bivector Part
 -----------------------------
 
-And now we isolate the bivector part:
+We isolate the bivector part:
 
 .. math::
 
@@ -66,7 +70,7 @@ Now with reference to the picture below, we use the Area :math:`A` and basis vec
                                     - A_{OAC} \; \mathbf{e_x} \wedge \mathbf{e_z}
                                     + A_{OAB} \; \mathbf{e_x} \wedge \mathbf{e_y}
 
-And reordering
+And reorder
 
 .. math::
 
@@ -101,7 +105,15 @@ Taking a unit vector :math:`\mathbf{n}` normal to the :math:`CAB` surface.
                            + A_{OAC} \; \mathbf{e_y}
                            + A_{OAB} \; \mathbf{e_z}
 
-We can now take the dot product and we obtain:
+Take the dot product:
+
+.. math::
+
+   A^{2}_{ABC} \; \mathbf{n} \cdot \mathbf{n} = + A^{2}_{OCB} \; \mathbf{e_x} \cdot \mathbf{e_x}
+                                                + A^{2}_{OAC} \; \mathbf{e_y} \cdot \mathbf{e_y}
+                                                + A^{2}_{OAB} \; \mathbf{e_z} \cdot \mathbf{e_z}
+
+And we have proven:
 
 .. math::
 
