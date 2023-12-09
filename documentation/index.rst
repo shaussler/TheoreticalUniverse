@@ -1,14 +1,15 @@
 .. created by sphinx-quickstart on Sat Oct  7 12:15:53 2023.
 
-Electromagnetism
-================
+Theoretical Universe
+====================
 
-============= ==============================================
-Purpose       Link
-============= ==============================================
-Documentation https://shaussler.github.io/electromagnetism
-Repository    https://github.com/shaussler/electromagnetism
-============= ==============================================
+============= =======================================================
+                  
+============= =======================================================
+Documentation https://shaussler.github.io/TheoreticalUniverse
+Repository    https://github.com/shaussler/TheoreticalUniverse
+Issues        https://github.com/shaussler/TheoreticalUniverse/issues
+============= =======================================================
 
 .. toctree::
    :maxdepth: 2

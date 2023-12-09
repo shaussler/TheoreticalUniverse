@@ -22,7 +22,7 @@ of freely available resources covering this derivation, open an issue and I
 will include a reference. Also if you find mistakes don't hesitate to open an
 issue or directly provide corrections by sending a merge request to my
 `Github repository
-<https://github.com/shaussler/electromagnetism/>`_.
+<https://github.com/shaussler/TheoreticalUniverse/>`_.
 
 I assume the reader possesses a strong grasp of vector calculus, including
 familiarity with the vector dot and cross products, as well as matrix

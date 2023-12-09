@@ -6,8 +6,8 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'Electromagnetism'
-html_title = 'Electromagnetism'
+project = 'TheoreticalUniverse'
+html_title = 'Theoretical Universe'
 copyright = '2023, Stéphane Haussler'
 author = 'Stéphane Haussler'
 
@@ -23,15 +23,14 @@ extensions = [
 templates_path = ['_templates']
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
-
-
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
 html_theme = 'furo'
 html_static_path = ['_static']
 html_css_files = ['custom.css']
-html_baseurl = 'https://shaussler.github.io/electromagnetism'
+html_baseurl = 'https://shaussler.github.io/TheoreticalUniverse/'
+sitemap_locales = []
 
 todo_include_todos = True
 
