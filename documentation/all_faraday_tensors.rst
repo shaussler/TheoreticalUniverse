@@ -1,11 +1,24 @@
 All Faraday Tensors
 ===================
 
+.. rst-class:: custom-author
+
+   by Stéphane Haussler
+
+.. warning::
+
+   Under construction
+
+In a :ref:`former post <faraday_tensor_derivation:Deriving the Faraday Tensor
+from the 1865 Maxwell Equations>`, I derived the Faraday tensor and its Hodge
+dual from the 1865 Maxwell equations. I also introdue a musical notation to
+facilitate calculations. In this post, I derive all possible variants of the
+Faraday together with more details and example of the musical notation.
+
 Inhomogenous equations
 ----------------------
 
-Contravariant-covariant
-'''''''''''''''''''''''
+.. rubric:: Contravariant-covariant
 
 .. {{{
 
@@ -27,8 +40,7 @@ the Minkowski metric.
 
 .. }}}
 
-Contravariant-contravariant
-'''''''''''''''''''''''''''
+.. rubric:: Contravariant-contravariant
 
 .. {{{
 
@@ -136,8 +148,7 @@ Contravariant-contravariant
 
 .. }}}
 
-Covariant-covariant
-'''''''''''''''''''
+.. rubric:: Covariant-covariant
 
 .. {{{
 
@@ -171,8 +182,7 @@ Covariant-covariant
 
 .. }}}
 
-Covariant-contravariant
-'''''''''''''''''''''''
+..rubric:: Covariant-contravariant
 
 .. {{{
 
@@ -230,8 +240,7 @@ Covariant-contravariant
 Homogenous equations
 --------------------
 
-Contravariant-covariant
-'''''''''''''''''''''''
+..rubric:: Contravariant-covariant
 
 .. {{{
 
@@ -250,8 +259,7 @@ Contravariant-covariant
 
 .. }}}
 
-Contravariant-contravariant
-'''''''''''''''''''''''''''
+.. rubric:: Contravariant-contravariant
 
 .. {{{
 
@@ -285,8 +293,7 @@ Contravariant-contravariant
 
 .. }}}
 
-Covariant-covariant
-'''''''''''''''''''
+.. rubric:: Covariant-covariant
 
 .. {{{
 
@@ -324,8 +331,7 @@ Covariant-covariant
 
 .. }}}
 
-Covariant-contravariant
-'''''''''''''''''''''''
+..rubric:: Covariant-contravariant
 
 .. {{{
 

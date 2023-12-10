@@ -1,6 +1,12 @@
 Hodge Dual of the Faraday Tensor
 ================================
 
-In this article, I present the Hodge dual of the Faraday tensor.
+.. rst-class:: custom-author
 
-Begin
+   by Stéphane Haussler
+
+.. warning::
+
+   Under construction
+
+In this article, I present the Hodge dual of the Faraday tensor.

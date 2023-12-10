@@ -1,7 +1,7 @@
-Electromagnetism
-================
+Theoretical Universe
+====================
 
-This repository contains article about electromagnetism.
+This repository contains personal articles about math and physics.
 
 ============= ================================================
 Purpose       Link

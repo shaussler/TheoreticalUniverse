@@ -1,7 +1,11 @@
 The Minkowski Metric
 ====================
 
-.. warning:
+.. rst-class:: custom-author
+
+   by Stéphane Haussler
+
+.. warning::
 
    Under construction
 

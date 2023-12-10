@@ -1,10 +1,9 @@
-Deriving the Faraday Tensors from the 1865 Maxwell Equations
-============================================================
+Deriving the Faraday Tensor from the 1865 Maxwell Equations
+===========================================================
 
 .. rst-class:: custom-author
  
    by Stéphane Haussler
-
 
 In this article, I present a straightforward, natural and elegant derivation of
 the Faraday tensor. This derivation draws strong inspiration from Minkowski's
@@ -308,8 +307,24 @@ equivalent to:
    \end{bmatrix}
    }
 
-For compactness, I propose to can an alternative musical notation where we
-sharpen :math:`\sharp` or flatten :math:`\flat` vectors.
+We have thus obtained the Faraday tensor (inhomogenous equations) and its dual
+(homogenous equations).
+
+.. }}}
+
+The Musical Equations
+---------------------
+
+.. {{{
+
+For compactness, I propose an alternative musical notation where we sharpen
+:math:`\sharp` or flatten :math:`\flat` vectors. In the post
+:ref:`all_faraday_tensors:All Faraday Tensors`, I employ musical notation to
+systematically derive all forms of the Farday tensor and its dual.
+
+.. include:: ./summary_musical_notation.rst
+
+With musical notation, the Maxwell equations are expressed as:
 
 .. math::
 
@@ -355,122 +370,7 @@ sharpen :math:`\sharp` or flatten :math:`\flat` vectors.
    0 \\
    \end{bmatrix}^{\flat}
 
-We have thus obtained the Faraday tensor (inhomogenous equations) and its dual
-(homogenous equations).
-
-.. note::
-
-   The musical notation permits to generalize the rules of matrix
-   multiplications and permits to explicitely declare whether we are dealing
-   with a sharp :math:`\sharp` vector or a :math:`\flat` covector.
-   
-   .. math::
-   
-        \begin{matrix}
-            v^{\sharp}=
-            \begin{bmatrix}
-            a \\
-            b
-            \end{bmatrix}
-        ,&
-            v^{\flat}=
-            \begin{bmatrix}
-            a & b
-            \end{bmatrix}
-        \end{matrix}
-   
-   For all practical purposes, a covector is merely the transpose of a vector
-   :math:`\begin{bmatrix} a & b \end{bmatrix}=\begin{bmatrix} a \\ b
-   \end{bmatrix}^T`.
-
-   The notation permits to explicitely and compactly let us know the type of
-   object.
-
-   .. rubric:: covector of vector, rows of columns, covariant/contravariant tensor of rank2
-   
-   .. math::
-
-      A^{\sharp\flat}
-      =
-      \begin{bmatrix}
-          a & c \\
-          b & d \\
-      \end{bmatrix}^{\sharp\flat}
-      =
-      \begin{bmatrix}
-          \begin{bmatrix}
-          a \\
-          b \\
-          \end{bmatrix}
-          \begin{bmatrix}
-          c \\
-          d \\
-          \end{bmatrix}
-      \end{bmatrix}
-   
-   .. rubric:: vector of covectors, columns of rows, contravariant/convariant tensor of rank2
-   
-   .. math::
-
-      A^{\flat\sharp}
-      =
-      \begin{bmatrix}
-          a & c \\
-          b & d \\
-      \end{bmatrix}^{\flat\sharp}
-      =
-      \begin{bmatrix}
-          \begin{bmatrix} a & b \end{bmatrix} \\
-          \begin{bmatrix} c & d \end{bmatrix} \\
-      \end{bmatrix}
-   
-   .. rubric:: covectors of covectors, rows of rows, covariant/convariant tensor of rank 2
-   
-   .. math::
-
-      A^{\flat\flat}
-      =
-      \begin{bmatrix}
-          a & c \\
-          b & d \\
-      \end{bmatrix}^{\flat\flat}
-      =
-      \begin{bmatrix}
-          \begin{bmatrix} a & b \end{bmatrix} &
-          \begin{bmatrix} c & d \end{bmatrix} 
-      \end{bmatrix}
-   
-   .. rubric:: vectors of vectors, columns of columns, contravariant/contravariant tensor of rank 2
-   
-   .. math::
-
-      A^{\sharp\sharp}
-      =
-      \begin{bmatrix}
-          a & c \\
-          b & d \\
-      \end{bmatrix}^{\sharp\sharp}
-      =
-      \begin{bmatrix}
-          \begin{bmatrix}
-              a \\
-              b \\
-          \end{bmatrix} \\
-          \begin{bmatrix}
-              c \\
-              d \\
-          \end{bmatrix} \\
-      \end{bmatrix}
-
-
-.. }}}
-
-The Musical Equations
----------------------
-
-.. {{{
-
-With musical notation, the Faraday tensor and its dual are expressed as:
+Where the the Faraday tensor is noted :math:`F` and its dual :math:`G`:
 
 .. math::
 
@@ -494,7 +394,7 @@ With musical notation, the Faraday tensor and its dual are expressed as:
     +       B^z  & -\tilde{E^y} & +\tilde{E^x} &              \\
    \end{bmatrix}^{\sharp\flat}
 
-The Maxwell equations are:
+The musical Maxwell equations can also be summarized with:
 
 .. math::
 
@@ -514,13 +414,13 @@ The Tensor Equations
 
 .. {{{
 
-The derivatives are flat and therefore represent a covector with lower indices.
-In tensor notation, we write :math:`\partial_\mu`. The right hand side is also
-flat and therefore represent a covector with lower indices :math:`J_\nu`. The
-rank 2 tensors in the expressions are therefore necessarily one time
-contravariant and one time covariant. We then write in tensor notation
-:math:`F^\mu{}_\nu` for the Faraday tensor, and :math:`G^\mu{}_\nu` for its
-dual.
+The tensor equations are derived from the musical form. The derivatives are
+flat and therefore represent a covector with lower indices. In tensor notation,
+we write :math:`\partial_\mu`. The right hand side is also flat and therefore
+represent a covector with lower indices :math:`J_\nu`. The rank 2 tensors in
+the expressions are therefore necessarily one time contravariant and one time
+covariant. We then write in tensor notation :math:`F^\mu{}_\nu` for the Faraday
+tensor, and :math:`G^\mu{}_\nu` for its dual.
 
 .. math::
 

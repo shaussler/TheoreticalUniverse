@@ -17,8 +17,11 @@ author = 'Stéphane Haussler'
 extensions = [
     'sphinx.ext.todo',
     'sphinxcontrib.googleanalytics',
-    'sphinx_sitemap'
+    'sphinx_sitemap',
+    'sphinx.ext.autosectionlabel'
 ]
+
+autosectionlabel_prefix_document = True
 
 templates_path = ['_templates']
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
