@@ -11,9 +11,20 @@ of it and recently learned about Clifford Algebra as well as the Hodge dual, I
 decided I would have a go at it that way. It felt a proof should work out
 nicely, and it does!
 
-If anyone is reading this, don't hesitate to `open an issue on my repository
+.. image:: _static/de_guas_theorem/illustration.svg
+   :align: center
+   :width: 40%
+
+The theorem states that with an orthogonal corner :math:`O` and triangles set
+up like in the illustration, then the areas follow the following rule:
+
+.. math::
+
+   A^2_{ABC} = A^2_{OBC} + A^2_{OAC} + A^2_{OAB}
+
+Don't hesitate to `open an issue on my repository
 <https://github.com/shaussler/TheoreticalUniverse/issues>`_ if something is not
-as it should. You can also correct directly and I will definitely consider
+as it should. You can also correct directly and I will definitely conside
 merging your changes.
 
 Taking the Clifford Product
@@ -62,7 +73,7 @@ We isolate the bivector part:
 
    \mathbf{CA} \wedge \mathbf{CB} = \mathbf{CO} \wedge \mathbf{OB} + \mathbf{OA} \wedge \mathbf{CO} + \mathbf{OA} \wedge \mathbf{OB} \\
 
-Now with reference to the picture below, we use the Area :math:`A` and basis vectors :math:`\mathbf{e_i}`
+With reference to the illustration, we use the area :math:`A` and basis vectors :math:`\mathbf{e_i}`
 
 .. math::
 
@@ -97,7 +108,7 @@ Which results in:
                                     + A_{OAC} \; \mathbf{e_y}
                                     + A_{OAB} \; \mathbf{e_z}
 
-Taking a unit vector :math:`\mathbf{n}` normal to the :math:`CAB` surface.
+Taking a unit vector :math:`\mathbf{n}` normal to the :math:`ABC` surface.
 
 .. math::
 
@@ -105,23 +116,10 @@ Taking a unit vector :math:`\mathbf{n}` normal to the :math:`CAB` surface.
                            + A_{OAC} \; \mathbf{e_y}
                            + A_{OAB} \; \mathbf{e_z}
 
-Take the dot product:
+Taking the squared norm, we have proven:
 
 .. math::
 
-   A^{2}_{ABC} \; \mathbf{n} \cdot \mathbf{n} = + A^{2}_{OCB} \; \mathbf{e_x} \cdot \mathbf{e_x}
-                                                + A^{2}_{OAC} \; \mathbf{e_y} \cdot \mathbf{e_y}
-                                                + A^{2}_{OAB} \; \mathbf{e_z} \cdot \mathbf{e_z}
+   A^2_{ABC} = A^2_{OBC} + A^2_{OAC} + A^2_{OAB}
 
-And we have proven:
-
-.. math::
-
-   A^2_{ABC} = A^2_{OCB} + A^2_{OAC} + A^2_{OAB}
-
-Illustration
-------------
-
-.. image:: _static/de_guas_theorem/illustration.svg
-   :align: center
 

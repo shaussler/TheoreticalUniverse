@@ -3,7 +3,17 @@
 Theoretical Universe
 ====================
 
-Collection of papers about math and physics.
+A personal collection of papers about math and physics.
+
+.. toctree::
+   :maxdepth: 1
+   :caption: Contents:
+
+   faraday_tensor_derivation.rst
+   de_guas_theorem.rst
+   upcoming.rst
+
+LINKS:
 
 .. table::
    :align: left
@@ -16,19 +26,9 @@ Collection of papers about math and physics.
    Issues        https://github.com/shaussler/TheoreticalUniverse/issues
    ============= =======================================================
 
-.. toctree::
-   :maxdepth: 2
-   :caption: Contents:
-
-   faraday_tensor_derivation.rst
-   minkowski_metric.rst
-   all_faraday_tensors.rst
-   hodge_dual_faraday_tensor.rst
-   de_guas_theorem.rst
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+.. Indices and tables
+.. ==================
+.. 
+.. * :ref:`genindex`
+.. * :ref:`modindex`
+.. * :ref:`search`

@@ -45,14 +45,14 @@ vectors had not yet been introduced.
 
 Mr. Heaviside proposed the vector form of the Maxwell equations which is the
 most widespread formulation today. I therefore start from there and unpack into
-a form closer in spirit to the 1865 maxwell equation. The equations consist of
-two inhomogenous (Gauss's law and Ampère'circuital law) and two homogenous
-vector equations (Gauss's law for magnetism and Faraday's law of induction),
-which is how I organize the equations.
+a form closer in spirit to the 1865 equation. The equations consist of two
+inhomogenous (Gauss's law and Ampère'circuital law) and two homogenous vector
+equations (Gauss's law for magnetism and Faraday's law of induction), which is
+how I organize the equations.
 
 While these equations are undoubtedly intriguing, within the context of this
-derivation, a deep comprehension of the physics behind them is unnecessary.
-I've simply presented them as the initial basis for this derivation. With the
+derivation, a deep comprehension of the physics behind them is unnecessary. I
+simply present them as the initial basis for this derivation. With the
 exception of Maxwell's modification to Ampère's circuital law, these equations
 represent the mathematical expression of empirical observations. Therefore,
 they can be regarded as established experimental facts.
@@ -162,19 +162,17 @@ The Ordered Equations
 
 .. {{{
 
-Recognizing the emerging structure, we can rephrase the terms for optimization.
-To eliminate the factor :math:`\frac{1}{c}`, we introduce :math:`\tilde{E^i} =
-\frac{E^i}{c}`, where :math:`i=x,y,z`.
+Recognizing the emerging structure, we slightly modify the expressions. These
+modifications are not intricate. The objective is merely to present a compact
+and symmetrical form, where all terms are aligned.
 
-Additionally, on a more nuanced level, although beyond our current discussion's
-scope, we define:
-
-* :math:`\partial_t = \frac{\partial}{\partial(ct)}`, and
-* :math:`\partial_i = \frac{\partial}{\partial x}` with :math:`i=x,y,z`.
-
-However, this step isn't overly intricate. The objective is to present the
-Maxwell equations in their most elegant form, aligning with the inherent beauty
-of the equations themselves:
+To eliminate the factor :math:`1/c`, we introduce :math:`\tilde{E^x} = E^x /
+c`, :math:`\tilde{E^y} = E^y / c`, and :math:`\tilde{E^z} = E^z / c`.
+Additionally, we define for the time dimension :math:`\partial_t =
+\frac{\partial}{\partial(ct)}`, and for the spatial dimensions
+:math:`\partial_x = \frac{\partial}{\partial x}`, :math:`\partial_y =
+\frac{\partial}{\partial y}`, as well as :math:`\partial_z =
+\frac{\partial}{\partial z}`. The equations are now:
 
 .. rubric:: Inhomogenous equations
 
@@ -200,17 +198,18 @@ of the equations themselves:
 
 For readers well-versed in the tensor formulation of electromagnetism, the
 presence and nature of the Faraday tensor and its dual are likely evident.
-Moreover, for those acquainted with matrix multiplication principles, it chould
-be apparent that we are presently employing covectors in operations with
-matrices.
+Moreover, for those acquainted with matrix multiplication principles, it should
+be apparent that we can employ matrices operations.
 
 .. note::
 
-   :math:`\frac{1}{c}\frac{\partial}{\partial t} =\frac{\partial}{\partial(ct)}`
-   has the units of an inverse distance, exactly
-   like the partial derivative with respect to the spatial dimensions
-   :math:`\frac{\partial}{\partial x}`, :math:`\frac{\partial}{\partial y}`, and
-   :math:`\frac{\partial}{\partial z}`.
+   Although beyond our current discussion's scope, defining
+   :math:`\partial_\mu` unifies all dimensions to a unit of inverse distance.
+   :math:`\frac{1}{c}\frac{\partial}{\partial t}
+   =\frac{\partial}{\partial(ct)}` has the units of an inverse distance,
+   exactly like the partial derivative with respect to the spatial dimensions
+   :math:`\frac{\partial}{\partial x}`, :math:`\frac{\partial}{\partial y}`,
+   and :math:`\frac{\partial}{\partial z}`.
 
 .. note::
 
@@ -309,7 +308,7 @@ equivalent to:
    \end{bmatrix}
    }
 
-For compactness, we can use as an alternative the musical notation where we
+For compactness, I propose to can an alternative musical notation where we
 sharpen :math:`\sharp` or flatten :math:`\flat` vectors.
 
 .. math::
@@ -356,21 +355,8 @@ sharpen :math:`\sharp` or flatten :math:`\flat` vectors.
    0 \\
    \end{bmatrix}^{\flat}
 
-We have obtained the tensor of Mr. Faraday and usually noted
-:math:`F^\mu{}_\nu`
-
-.. math::
-
-   \begin{bmatrix}
-   F^\mu{}_\nu
-   \end{bmatrix}
-   =
-   \begin{bmatrix}
-                  & +\tilde{E^x} & +\tilde{E^y} & + \tilde{E^z} \\
-    +\tilde{E^x}  &              & +       B^z  & -        B^y  \\
-    +\tilde{E^y}  & -       B^z  &              & +        B^x  \\
-    +\tilde{E^z}  & +       B^y  & -       B^x  &               \\
-   \end{bmatrix}
+We have thus obtained the Faraday tensor (inhomogenous equations) and its dual
+(homogenous equations).
 
 .. note::
 
@@ -479,8 +465,8 @@ We have obtained the tensor of Mr. Faraday and usually noted
 
 .. }}}
 
-Musical Equations
------------------
+The Musical Equations
+---------------------
 
 .. {{{
 
@@ -508,7 +494,7 @@ With musical notation, the Faraday tensor and its dual are expressed as:
     +       B^z  & -\tilde{E^y} & +\tilde{E^x} &              \\
    \end{bmatrix}^{\sharp\flat}
 
-An the Maxwell equations are:
+The Maxwell equations are:
 
 .. math::
 
@@ -517,21 +503,24 @@ An the Maxwell equations are:
    \partial^{\flat} G^{\sharp\flat} & = & 0^{\flat} \\
    \end{matrix}
 
-The equations really are the same as the tensor equations. The advantage is
-that the matrices can be expanded and matrix multiplication rules applied.
+These really are the same as the tensor equations. The advantage lies when
+tensors are fully expanded and matrices multiplication rules explicitely
+applied.
 
 .. }}}
 
-Tensor Equations
-----------------
+The Tensor Equations
+--------------------
 
 .. {{{
 
-The derivatives are flat and therefore represent a covector with lower indices
-in tensor notation :math:`\partial_\mu` While the left-hand side is sharp and
-therefore represent a vector with high indices :math:`J_\nu`. The tensors in
-the expressions above are necessarily one time contravariant and one time
-covariant :math:`F^\mu{}_\nu`.
+The derivatives are flat and therefore represent a covector with lower indices.
+In tensor notation, we write :math:`\partial_\mu`. The right hand side is also
+flat and therefore represent a covector with lower indices :math:`J_\nu`. The
+rank 2 tensors in the expressions are therefore necessarily one time
+contravariant and one time covariant. We then write in tensor notation
+:math:`F^\mu{}_\nu` for the Faraday tensor, and :math:`G^\mu{}_\nu` for its
+dual.
 
 .. math::
 
@@ -559,7 +548,7 @@ covariant :math:`F^\mu{}_\nu`.
     +       B^z  & -\tilde{E^y} & +\tilde{E^x} &              \\
    \end{bmatrix}
 
-The Maxwell equations are expressed as:
+The Maxwell equations are:
 
 .. math::
 
