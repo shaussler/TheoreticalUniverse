@@ -7,13 +7,14 @@ All Faraday Tensors
 
 .. warning::
 
-   Under construction
+   Under construction. I still need to proofread and calculations may need
+   correcting. Of course the sign always get flipped...
 
-In a :ref:`former post <faraday_tensor_derivation:Deriving the Faraday Tensor
-from the 1865 Maxwell Equations>`, I derived the Faraday tensor and its Hodge
+In a :ref:`previous post <faraday_tensor_derivation:Deriving the Faraday Tensor
+from the 1865 Maxwell Equations>`, I derive the Faraday tensor and its Hodge
 dual from the 1865 Maxwell equations. I also introdue a musical notation to
-facilitate calculations. In this post, I derive all possible variants of the
-Faraday together with more details and example of the musical notation.
+facilitate calculations. In this post, I systematically derive all variations
+of the electromagnetic field tensor.
 
 Inhomogenous equations
 ----------------------
@@ -21,6 +22,11 @@ Inhomogenous equations
 .. rubric:: Contravariant-covariant
 
 .. {{{
+
+The starting point is the :ref:`contravariant/covariant form
+<faraday_tensor_derivation:The Tensor of Mr. Faraday>`. From there, I
+systematically apply the :ref:`Minkowski metric <minkowski_metric:The Minkowski
+Metric>` to obtain other forms. The electromagnetic field tensor is:
 
 .. math::
 
@@ -35,12 +41,15 @@ Inhomogenous equations
    \end{bmatrix}^{\sharp\flat}
    }
 
-From there, we can obtain all other forms of the Faraday tensors by applying
-the Minkowski metric.
 
 .. }}}
 
 .. rubric:: Contravariant-contravariant
+
+.. warning::
+
+   The sign is wrong I think. But since matrix is antisymmetric, shouldnt it be
+   the same to just take the transpose and flip the sign?
 
 .. {{{
 
@@ -72,25 +81,22 @@ the Minkowski metric.
    \end{bmatrix}^{\sharp\sharp}
    }
 
-.. note::
+.. admonition:: All calculation steps
+   :class: dropdown
 
-   An alternative to the musical notation is to explicitely sharpen
+   The expanded calculation in musical notation explicitely sharpens
    :math:`\sharp` or flatten :math:`\flat` the vectors. The equations then take
-   this form which is equivalent.
+   the folowing equivalent form where matrix multiplication rules are applied:
 
    .. math::
 
       {\small
-      F^{\sharp\sharp}
-      =
-      F^{\sharp\flat} \eta^{\sharp\sharp}
-      =
       \begin{bmatrix}
                     & +\tilde{E^x} & +\tilde{E^y} & + \tilde{E^z} \\
        +\tilde{E^x} &              & +       B^z  & -        B^y  \\
        +\tilde{E^y} & -       B^z  &              & +        B^x  \\
        +\tilde{E^z} & +       B^y  & -       B^x  &               \\
-      \end{bmatrix}^{\sharp\flat}
+      \end{bmatrix}
       \begin{bmatrix}
           \begin{bmatrix}
           \phantom{+} 1 \\
@@ -121,29 +127,36 @@ the Minkowski metric.
       \begin{bmatrix}
           \begin{bmatrix}
                        \\
-          +\tilde{E^x} \\
-          +\tilde{E^y} \\
-          +\tilde{E^z} \\
-          \end{bmatrix} \\
-          \begin{bmatrix}
           -\tilde{E^x} \\
-                       \\
-          +       B^z  \\
-          -       B^y  \\
-          \end{bmatrix} \\
-          \begin{bmatrix}
           -\tilde{E^y} \\
-          -       B^z  \\
-                       \\
-          +       B^x  \\
+          -\tilde{E^z} \\
           \end{bmatrix} \\
           \begin{bmatrix}
-          -\tilde{E^z} \\
+          +\tilde{E^x} \\
+                       \\
+          -       B^z  \\
           +       B^y  \\
+          \end{bmatrix} \\
+          \begin{bmatrix}
+          +\tilde{E^y} \\
+          +       B^z  \\
+                       \\
           -       B^x  \\
+          \end{bmatrix} \\
+          \begin{bmatrix}
+          +\tilde{E^z} \\
+          -       B^y  \\
+          +       B^x  \\
                        \\
           \end{bmatrix}
       \end{bmatrix}
+      = - 
+      \begin{bmatrix}
+                    & -\tilde{E^x} & -\tilde{E^y} & - \tilde{E^z} \\
+       +\tilde{E^x} &              & -       B^z  & +        B^y  \\
+       +\tilde{E^y} & +       B^z  &              & -        B^x  \\
+       +\tilde{E^z} & -       B^y  & +       B^x  &               \\
+      \end{bmatrix}^{\sharp\sharp}
       }
 
 .. }}}
@@ -180,9 +193,87 @@ the Minkowski metric.
    \end{bmatrix}^{\flat\flat}
    }
 
+.. admonition:: All calculation steps
+   :class: dropdown
+
+   The expanded calculation in musical notation explicitely sharpens
+   :math:`\sharp` or flatten :math:`\flat` the vectors. The equations then take
+   the folowing equivalent form where matrix multiplication rules are applied:
+
+   .. math::
+
+      {\small
+       F^{\flat\flat}=
+       \begin{bmatrix}
+       \begin{bmatrix}
+        1  &
+        0  &
+        0  &
+        0
+       \end{bmatrix} &
+       \begin{bmatrix}
+        0 &
+       -1 &
+        0 &
+        0
+       \end{bmatrix} &
+       \begin{bmatrix}
+        0 &
+        0 &
+       -1 &
+        0
+       \end{bmatrix} &
+       \begin{bmatrix}
+        0 &
+        0 &
+       -1 &
+        0
+       \end{bmatrix}
+       \end{bmatrix}
+       \begin{bmatrix}
+                     & +\tilde{E^x} & +\tilde{E^y} & + \tilde{E^z} \\
+        +\tilde{E^x} &              & +       B^z  & -        B^y  \\
+        +\tilde{E^y} & -       B^z  &              & +        B^x  \\
+        +\tilde{E^z} & +       B^y  & -       B^x  &               \\
+       \end{bmatrix}
+      }
+
+   .. math::
+
+      {\small
+      F^{\flat\flat}=
+      \begin{bmatrix}
+      \begin{bmatrix}
+      0           & -\tilde{E^x} & -\tilde{E^y} & -\tilde{E^z}
+      \end{bmatrix} &
+      \begin{bmatrix}
+      \tilde{E^x} &         0    &        +B^z  &        -B^y
+      \end{bmatrix} &
+      \begin{bmatrix}
+      \tilde{E^y} &        -B^z  &         0    &        +B^x
+      \end{bmatrix} &
+      \begin{bmatrix}
+      \tilde{E^z} &        +B^y  &        -B^x  &         0  
+      \end{bmatrix}
+      \end{bmatrix}
+      }
+
+   .. math::
+
+      {\small
+      F^{\flat\flat}=
+      \begin{bmatrix}
+                    & +\tilde{E^x} & +\tilde{E^y} & + \tilde{E^z} \\
+       -\tilde{E^x} &              & -       B^z  & +        B^y  \\
+       -\tilde{E^y} & +       B^z  &              & -        B^x  \\
+       -\tilde{E^z} & -       B^y  & +       B^x  &               \\
+      \end{bmatrix}^{\flat\flat}
+      }
+
+
 .. }}}
 
-..rubric:: Covariant-contravariant
+.. rubric:: Covariant-contravariant
 
 .. {{{
 
@@ -216,7 +307,7 @@ the Minkowski metric.
 
 .. note::
 
-   Without musical notation, the expression can be explicitely sharpened
+   With musical notation, the expression can be explicitely sharpened
    :math:`\sharp` (respectivelty flattened :math:`\flat`) like so:
 
    .. math::
@@ -240,7 +331,7 @@ the Minkowski metric.
 Homogenous equations
 --------------------
 
-..rubric:: Contravariant-covariant
+.. rubric:: Contravariant-covariant
 
 .. {{{
 
@@ -331,7 +422,7 @@ Homogenous equations
 
 .. }}}
 
-..rubric:: Covariant-contravariant
+.. rubric:: Covariant-contravariant
 
 .. {{{
 

@@ -71,6 +71,47 @@ The rules of matrix multiplication and the metric tensor:
    \end{bmatrix}^{\sharp\sharp}
 
 
+.. math::
+
+   \begin{align}
+   \eta^{\flat\flat}
+   &=
+       \begin{bmatrix}
+       \begin{bmatrix}
+        1  &
+        0  &
+        0  &
+        0
+       \end{bmatrix} &
+       \begin{bmatrix}
+        0 &
+       -1 &
+        0 &
+        0 
+       \end{bmatrix} &
+       \begin{bmatrix}
+        0 &
+        0 &
+       -1 &
+        0
+       \end{bmatrix} &
+       \begin{bmatrix}
+        0 &
+        0 &
+       -1 &
+        0
+       \end{bmatrix}
+       \end{bmatrix} \\
+   &=
+       \begin{bmatrix}
+        1 &  0 &  0 &  0 \\
+        0 & -1 &  0 &  0 \\
+        0 &  0 & -1 &  0 \\
+        0 &  0 &  0 & -1 \\
+       \end{bmatrix}^{\sharp\sharp}
+   \end{align}
+
+
 https://vixra.org/abs/1710.0196
 
 .. I love the paper. I was/am reviewing electromagnetism, the Faraday tensor and

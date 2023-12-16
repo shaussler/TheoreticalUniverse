@@ -18,7 +18,8 @@ extensions = [
     'sphinx.ext.todo',
     'sphinxcontrib.googleanalytics',
     'sphinx_sitemap',
-    'sphinx.ext.autosectionlabel'
+    'sphinx.ext.autosectionlabel',
+    'sphinx_togglebutton'
 ]
 
 autosectionlabel_prefix_document = True
