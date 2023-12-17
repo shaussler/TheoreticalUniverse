@@ -61,14 +61,14 @@ they can be regarded as established experimental facts.
 .. table::
    :width: 90%
 
-   =============================== =================================================================================
+   =============================== ===================================================================================================================================================
                                               
-   =============================== =================================================================================
+   =============================== ===================================================================================================================================================
    **Gauss's law**                 :math:`\overrightarrow{\nabla} \cdot \overrightarrow{E}  = \rho / \epsilon_0`
    **Ampère's circuital**          :math:`\overrightarrow{\nabla} \times \overrightarrow{B} = \mu_0 \overrightarrow{J} + \frac{1}{c^2} \frac{\partial}{\partial t} \overrightarrow{E}`
    **Gauss's law for magnetism**   :math:`\overrightarrow{\nabla} \cdot \overrightarrow{B} = 0`
    **Faraday's law of induction**  :math:`\overrightarrow{\nabla} \times \overrightarrow{E} = \frac{\partial}{\partial t} \overrightarrow{B}`
-   =============================== =================================================================================
+   =============================== ===================================================================================================================================================
 
 .. note::
 
@@ -91,37 +91,37 @@ the 1865 Maxwell formulation, albeit with modern notation and conventions.
 .. table::
    :width: 90%
 
-   +---------------------+---------------------------------------------------------------------------------------------------------------------------------------+
-   |                     |                                                                                                                                       |
-   +=====================+=======================================================================================================================================+
-   | **Gauss's law**     |  .. math::                                                                                                                            |
-   |                     |                                                                                                                                       |
-   |                     |     \begin{align}                                                                                                                     |
-   |                     |     \frac{\partial}{\partial x} E^x + \frac{\partial}{\partial y} E^y + \frac{\partial}{\partial z} E^z &= \rho / \epsilon_0          |
-   |                     |     \end{align}                                                                                                                       |
-   +---------------------+---------------------------------------------------------------------------------------------------------------------------------------+
-   | **Ampère's          | .. math::                                                                                                                             |
-   | circuital law**     |                                                                                                                                       |
-   |                     |    \begin{align}                                                                                                                      |
-   |                     |    \frac{\partial}{\partial y} B^z - \frac{\partial}{\partial z} B^y &= \mu_0 J^x + \frac{1}{c^2} \frac{\partial}{\partial t} E^x \\  |
-   |                     |    \frac{\partial}{\partial z} B^x - \frac{\partial}{\partial x} B^z &= \mu_0 J^y + \frac{1}{c^2} \frac{\partial}{\partial t} E^y \\  |
-   |                     |    \frac{\partial}{\partial x} B^y - \frac{\partial}{\partial y} B^x &= \mu_0 J^z + \frac{1}{c^2} \frac{\partial}{\partial t} E^z \\  |
-   |                     |    \end{align}                                                                                                                        |
-   +---------------------+---------------------------------------------------------------------------------------------------------------------------------------+
-   | **Gauss's law for   |  .. math::                                                                                                                            |
-   | magnetism**         |                                                                                                                                       |
-   |                     |     \begin{align}                                                                                                                     |
-   |                     |     \frac{\partial}{\partial x} B^x + \frac{\partial}{\partial y} B^y + \frac{\partial}{\partial z} B^z &= 0                          |
-   |                     |     \end{align}                                                                                                                       |
-   +---------------------+---------------------------------------------------------------------------------------------------------------------------------------+
-   | **Faraday's law of  | .. math::                                                                                                                             |
-   | induction**         |                                                                                                                                       |
-   |                     |    \begin{align}                                                                                                                      |
-   |                     |    \frac{\partial}{\partial y} E^z - \frac{\partial}{\partial z} E^y &= - \frac{\partial}{\partial t} B^x \\                          |
-   |                     |    \frac{\partial}{\partial z} E^x - \frac{\partial}{\partial x} E^z &= - \frac{\partial}{\partial t} B^y \\                          |
-   |                     |    \frac{\partial}{\partial x} E^y - \frac{\partial}{\partial y} E^x &= - \frac{\partial}{\partial t} B^z \\                          |
-   |                     |    \end{align}                                                                                                                        |
-   +---------------------+---------------------------------------------------------------------------------------------------------------------------------------+
+   +---------------------+--------------------------------------------------------------------------------------------------------------------------------------+
+   |                     |                                                                                                                                      |
+   +=====================+======================================================================================================================================+
+   | **Gauss's law**     |  .. math::                                                                                                                           |
+   |                     |                                                                                                                                      |
+   |                     |     \begin{align}                                                                                                                    |
+   |                     |     \frac{\partial}{\partial x} E^x + \frac{\partial}{\partial y} E^y + \frac{\partial}{\partial z} E^z &= \rho / \epsilon_0         |
+   |                     |     \end{align}                                                                                                                      |
+   +---------------------+--------------------------------------------------------------------------------------------------------------------------------------+
+   | **Ampère's          | .. math::                                                                                                                            |
+   | circuital law**     |                                                                                                                                      |
+   |                     |    \begin{align}                                                                                                                     |
+   |                     |    \frac{\partial}{\partial y} B^z - \frac{\partial}{\partial z} B^y &= \mu_0 J^x + \frac{1}{c^2} \frac{\partial}{\partial t} E^x \\ |
+   |                     |    \frac{\partial}{\partial z} B^x - \frac{\partial}{\partial x} B^z &= \mu_0 J^y + \frac{1}{c^2} \frac{\partial}{\partial t} E^y \\ |
+   |                     |    \frac{\partial}{\partial x} B^y - \frac{\partial}{\partial y} B^x &= \mu_0 J^z + \frac{1}{c^2} \frac{\partial}{\partial t} E^z \\ |
+   |                     |    \end{align}                                                                                                                       |
+   +---------------------+--------------------------------------------------------------------------------------------------------------------------------------+
+   | **Gauss's law for   |  .. math::                                                                                                                           |
+   | magnetism**         |                                                                                                                                      |
+   |                     |     \begin{align}                                                                                                                    |
+   |                     |     \frac{\partial}{\partial x} B^x + \frac{\partial}{\partial y} B^y + \frac{\partial}{\partial z} B^z &= 0                         |
+   |                     |     \end{align}                                                                                                                      |
+   +---------------------+--------------------------------------------------------------------------------------------------------------------------------------+
+   | **Faraday's law of  | .. math::                                                                                                                            |
+   | induction**         |                                                                                                                                      |
+   |                     |    \begin{align}                                                                                                                     |
+   |                     |    \frac{\partial}{\partial y} E^z - \frac{\partial}{\partial z} E^y &= - \frac{\partial}{\partial t} B^x \\                         |
+   |                     |    \frac{\partial}{\partial z} E^x - \frac{\partial}{\partial x} E^z &= - \frac{\partial}{\partial t} B^y \\                         |
+   |                     |    \frac{\partial}{\partial x} E^y - \frac{\partial}{\partial y} E^x &= - \frac{\partial}{\partial t} B^z \\                         |
+   |                     |    \end{align}                                                                                                                       |
+   +---------------------+--------------------------------------------------------------------------------------------------------------------------------------+
 
 .. }}}
 
@@ -238,30 +238,10 @@ equivalent to:
    \partial_t     & \partial_x   & \partial_y   & \partial_z    \\
    \end{bmatrix}
    \begin{bmatrix}
-       \begin{bmatrix}
-                    \\
-       +\tilde{E^x} \\
-       +\tilde{E^y} \\
-       +\tilde{E^z} \\
-       \end{bmatrix}
-       \begin{bmatrix}
-       +\tilde{E^x} \\
-                    \\
-       -       B^z  \\
-       +       B^y  \\
-       \end{bmatrix}
-       \begin{bmatrix}
-       +\tilde{E^y} \\
-       +       B_z  \\
-                    \\
-       -       B^x  \\
-       \end{bmatrix}
-       \begin{bmatrix}
-       +\tilde{E^z} \\
-       -       B^y  \\
-       +       B^x  \\
-                    \\
-       \end{bmatrix}
+                  & +\tilde{E^x} & +\tilde{E^y} & + \tilde{E^z} \\
+    +\tilde{E^x}  &              & +       B^z  & -        B^y  \\
+    +\tilde{E^y}  & -       B^z  &              & +        B^x  \\
+    +\tilde{E^z}  & +       B^y  & -       B^x  &               \\
    \end{bmatrix}
    =
    \begin{bmatrix}
@@ -276,30 +256,10 @@ equivalent to:
    \partial_t     & \partial_x   & \partial_y   & \partial_z    \\
    \end{bmatrix}
    \begin{bmatrix}
-       \begin{bmatrix}
-                    \\
-       +\tilde{B^x} \\
-       +\tilde{B^y} \\
-       +\tilde{B^z} \\
-       \end{bmatrix}
-       \begin{bmatrix}
-       +\tilde{B^x} \\
-                    \\
-       +       E^z  \\
-       -       E^y  \\
-       \end{bmatrix}
-       \begin{bmatrix}
-       +\tilde{B^y} \\
-       -       E_z  \\
-                    \\
-       +       E^x  \\
-       \end{bmatrix}
-       \begin{bmatrix}
-       +\tilde{B^z} \\
-       +       E^y  \\
-       -       E^x  \\
-                    \\
-       \end{bmatrix}
+                 & +       B^x  & +       B^y  & +       B^z  \\
+    +       B^x  &              & -\tilde{E^z} & +\tilde{E^y} \\
+    +       B^y  & +\tilde{E^z} &              & -\tilde{E^x} \\
+    +       B^z  & -\tilde{E^y} & +\tilde{E^x} &              \\
    \end{bmatrix}
    =
    \begin{bmatrix}
@@ -317,10 +277,10 @@ The Musical Equations
 
 .. {{{
 
-For compactness, I propose an alternative musical notation where we sharpen
-:math:`\sharp` or flatten :math:`\flat` vectors. In the post
-:ref:`all_faraday_tensors:All Faraday Tensors`, I employ musical notation to
-systematically derive all forms of the Farday tensor and its dual.
+In the article :ref:`musical_notation:The Musical Tensor Notation`, I propose
+an alternative notation to facilitate calculations. In the post
+:ref:`all_faraday_tensors:All Faraday Tensors`, I employ this musical notation
+to systematically derive all forms of the Farday tensor.
 
 .. include:: ./summary_musical_notation.rst
 
@@ -351,61 +311,37 @@ With musical notation, the Maxwell equations are expressed as:
 .. math::
 
    \begin{bmatrix}
-   \partial_t \\
-   \partial_x \\
-   \partial_y \\
-   \partial_z
+       \partial_t \\
+       \partial_x \\
+       \partial_y \\
+       \partial_z
    \end{bmatrix}^{\flat}
    \begin{bmatrix}
-                 & +       B^x  & +       B^y  & +       B^z  \\
-    +       B^x  &              & -\tilde{E^z} & +\tilde{E^y} \\
-    +       B^y  & +\tilde{E^z} &              & -\tilde{E^x} \\
-    +       B^z  & -\tilde{E^y} & +\tilde{E^x} &              \\
+                    & +       B^x  & +       B^y  & +       B^z  \\
+       +       B^x  &              & -\tilde{E^z} & +\tilde{E^y} \\
+       +       B^y  & +\tilde{E^z} &              & -\tilde{E^x} \\
+       +       B^z  & -\tilde{E^y} & +\tilde{E^x} &              \\
    \end{bmatrix}^{\sharp \flat}
    =
    \begin{bmatrix}
-   0 \\
-   0 \\
-   0 \\
-   0 \\
+       0 \\
+       0 \\
+       0 \\
+       0 \\
    \end{bmatrix}^{\flat}
 
-Where the the Faraday tensor is noted :math:`F` and its dual :math:`G`:
+With the Faraday tensor noted :math:`F` and its dual :math:`G`, the musical
+Maxwell equations can also be summarized with:
 
 .. math::
 
-   F^{\sharp\flat}
-   =
-   \begin{bmatrix}
-                 & +\tilde{E^x} & +\tilde{E^y} & + \tilde{E^z} \\
-    +\tilde{E^x} &              & -       B^z  & +        B^y  \\
-    +\tilde{E^y} & +       B^z  &              & -        B^x  \\
-    +\tilde{E^z} & -       B^y  & +       B^x  &               \\
-   \end{bmatrix}^{\sharp\flat}
-
-.. math::
-
-   G^{\sharp\flat}
-   =
-   \begin{bmatrix}
-                 & +       B^x  & +       B^y  & +       B^z  \\
-    +       B^x  &              & -\tilde{E^z} & +\tilde{E^y} \\
-    +       B^y  & +\tilde{E^z} &              & -\tilde{E^x} \\
-    +       B^z  & -\tilde{E^y} & +\tilde{E^x} &              \\
-   \end{bmatrix}^{\sharp\flat}
-
-The musical Maxwell equations can also be summarized with:
-
-.. math::
-
-   \begin{matrix}
-   \partial^{\flat} F^{\sharp\flat} & = & J^{\flat} \\
-   \partial^{\flat} G^{\sharp\flat} & = & 0^{\flat} \\
-   \end{matrix}
+   \begin{align}
+       \partial^{\flat} F^{\sharp\flat} &= J^{\flat} \\
+       \partial^{\flat} G^{\sharp\flat} &= 0^{\flat} \\
+   \end{align}
 
 These really are the same as the tensor equations. The advantage lies when
-tensors are fully expanded and matrices multiplication rules explicitely
-applied.
+tensors are fully expanded and matrix multiplication rules explicitely applied.
 
 .. }}}
 
@@ -414,47 +350,48 @@ The Tensor Equations
 
 .. {{{
 
-The tensor equations are derived from the musical form. The derivatives are
-flat and therefore represent a covector with lower indices. In tensor notation,
-we write :math:`\partial_\mu`. The right hand side is also flat and therefore
-represent a covector with lower indices :math:`J_\nu`. The rank 2 tensors in
-the expressions are therefore necessarily one time contravariant and one time
-covariant. We then write in tensor notation :math:`F^\mu{}_\nu` for the Faraday
-tensor, and :math:`G^\mu{}_\nu` for its dual.
+
+The left hand side is flat and therefore represent a covector with lower
+indices. In tensor notation, we write :math:`\partial_\mu`. The right hand side
+is also flat and therefore represent a covector with lower indices
+:math:`J_\nu`. The rank 2 tensors in the expressions are therefore necessarily
+one time contravariant and one time covariant. We then write in tensor notation
+:math:`F^\mu{}_\nu` for the Faraday tensor, and :math:`G^\mu{}_\nu` for its
+dual.
 
 .. math::
 
    \begin{bmatrix}
-   F^\mu{}_\nu
+       F^\mu{}_\nu
    \end{bmatrix}
    =
    \begin{bmatrix}
-                 & +\tilde{E^x} & +\tilde{E^y} & + \tilde{E^z} \\
-    +\tilde{E^x} &              & -       B^z  & +        B^y  \\
-    +\tilde{E^y} & +       B^z  &              & -        B^x  \\
-    +\tilde{E^z} & -       B^y  & +       B^x  &               \\
+                    & +\tilde{E^x} & +\tilde{E^y} & + \tilde{E^z} \\
+       +\tilde{E^x} &              & -       B^z  & +        B^y  \\
+       +\tilde{E^y} & +       B^z  &              & -        B^x  \\
+       +\tilde{E^z} & -       B^y  & +       B^x  &               \\
    \end{bmatrix}
 
 .. math::
 
    \begin{bmatrix}
-   G^\mu{}_\nu
+       G^\mu{}_\nu
    \end{bmatrix}
    =
    \begin{bmatrix}
-                 & +       B^x  & +       B^y  & +       B^z  \\
-    +       B^x  &              & -\tilde{E^z} & +\tilde{E^y} \\
-    +       B^y  & +\tilde{E^z} &              & -\tilde{E^x} \\
-    +       B^z  & -\tilde{E^y} & +\tilde{E^x} &              \\
+                    & +       B^x  & +       B^y  & +       B^z  \\
+       +       B^x  &              & -\tilde{E^z} & +\tilde{E^y} \\
+       +       B^y  & +\tilde{E^z} &              & -\tilde{E^x} \\
+       +       B^z  & -\tilde{E^y} & +\tilde{E^x} &              \\
    \end{bmatrix}
 
 The Maxwell equations are:
 
 .. math::
 
-   \begin{matrix}
-   \partial_{\mu} F^\mu{}_\nu & = & J_{\nu} \\
-   \partial_{\mu} G^\mu{}_\nu & = & 0       \\
-   \end{matrix}
+   \begin{align}
+       \partial_{\mu} F^\mu{}_\nu & = J_{\nu} \\
+       \partial_{\mu} G^\mu{}_\nu & = 0       \\
+   \end{align}
 
 .. }}}

@@ -1,12 +1,8 @@
-Musical notation extends the use of matrix multiplication, providing a compact
-representation while distinctly differentiating between a sharp
-(:math:`\sharp`) vector and a flat (:math:`\flat`) covector. This notation
-serves dual purposes:
-
-* explicitly and compactly represent tensor components, making symmetries
-  evident and readily comprehensible
-* streamline calculations by adhering to matrix multiplication rules, offering
-  a familiar framework for computations.
+The musical notation provides a compact and excplicit representation by
+differentiating between sharp (:math:`\sharp`) vectors and a flat
+(:math:`\flat`) covectors, rendering symmetries evident and comprehensible. At
+the same time, calculations are streamlined by adhering to matrix
+multiplication rules, offering a familiar framework for computations.
 
 .. rubric:: Vectors and covectors
 

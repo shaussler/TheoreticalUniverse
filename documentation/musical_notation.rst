@@ -22,8 +22,10 @@ Representation of Multilinear Forms
 
 .. include:: ./summary_musical_notation.rst
 
-Metric Tensor
--------------
+Raising and Lowering Indices
+----------------------------
+
+.. rubric:: An Exemplary and Simplified Flat Minkowski Metric
 
 For the purpose of of this article, I will be using a metric tensor akin to the
 flat Minkowski metric, with one time dimension but only one spatial dimension
@@ -36,8 +38,7 @@ for simplicity.
         0 & -1
    \end{bmatrix}^{\sharp\sharp}
 
-Raising the Indice
-------------------
+.. rubric:: Raising the Indice of a Rank 2 Tensor
 
 Consider the following vanilla matrix multiplication:
 
@@ -138,10 +139,7 @@ The tensor formulation is certainly compact and elegant. However it does not
 allow for explicit calculations and does not explicitely show underlying
 symmetries.
 
-Lowering the Indice
--------------------
-
-.. rubric:: For a Vector
+.. rubric:: Lowering the Indice of a Vector
 
 .. math::
 
@@ -161,7 +159,7 @@ Lowering the Indice
    \end{bmatrix}^{\flat}
    \end{align}
 
-.. admonition:: Every Step in Excrutiating Details
+.. admonition:: Every Steps
    :class: dropdown
 
    .. math::
@@ -201,7 +199,7 @@ Lowering the Indice
       \end{bmatrix}^{\flat}
       \end{align}
 
-.. rubric:: For a Rank 2 Tensor
+.. rubric:: Lowering the Indice of a Rank 2 Tensor
 
 The goal here is to lower a contravariant/convariant tensor
 :math:`[T^\mu{}_\nu]`, or in musical notation :math:`T^{\sharp\sharp}`
@@ -252,28 +250,28 @@ we obtain:
 .. math::
 
    \begin{align}
-   \begin{bmatrix}
-       \begin{bmatrix} +1 &  0 \end{bmatrix}, & \begin{bmatrix}  0 & -1 \end{bmatrix}
-   \end{bmatrix}
-   \begin{bmatrix}
-       a & c \\
-       b & d \\
-   \end{bmatrix}
+       \begin{bmatrix}
+           \begin{bmatrix} +1 &  0 \end{bmatrix}, & \begin{bmatrix}  0 & -1 \end{bmatrix}
+       \end{bmatrix}
+       \begin{bmatrix}
+           a & c \\
+           b & d \\
+       \end{bmatrix}
    &=
-   \begin{bmatrix}
-       \begin{bmatrix}+1, 0\end{bmatrix} \; a + \begin{bmatrix}0, -1\end{bmatrix} \; b,&
-       \begin{bmatrix}+1, 0\end{bmatrix} \; c + \begin{bmatrix}0, -1\end{bmatrix} \; d 
-   \end{bmatrix} \\
-   &= 
-   \begin{bmatrix}
-       \begin{bmatrix}+a, 0\end{bmatrix} + \begin{bmatrix}0, -b\end{bmatrix},&
-       \begin{bmatrix}+c, 0\end{bmatrix} + \begin{bmatrix}0, -d\end{bmatrix}
-   \end{bmatrix} \\
-   &= 
-   \begin{bmatrix}
-       \begin{bmatrix}+a, -b\end{bmatrix}, &
-       \begin{bmatrix}+c, -d\end{bmatrix}
-   \end{bmatrix} \\
+       \begin{bmatrix}
+           \begin{bmatrix}+1, 0\end{bmatrix} \; a + \begin{bmatrix}0, -1\end{bmatrix} \; b,&
+           \begin{bmatrix}+1, 0\end{bmatrix} \; c + \begin{bmatrix}0, -1\end{bmatrix} \; d 
+       \end{bmatrix} \\
+   &=
+       \begin{bmatrix}
+           \begin{bmatrix}+a, 0\end{bmatrix} + \begin{bmatrix}0, -b\end{bmatrix},&
+           \begin{bmatrix}+c, 0\end{bmatrix} + \begin{bmatrix}0, -d\end{bmatrix}
+       \end{bmatrix} \\
+   &=
+       \begin{bmatrix}
+           \begin{bmatrix}+a, -b\end{bmatrix}, &
+           \begin{bmatrix}+c, -d\end{bmatrix}
+       \end{bmatrix} \\
    \end{align}
 
 More generally, we can follow matrix multiplication rules to lower the indice.
@@ -400,4 +398,29 @@ Part of the operations can be done by head. With all possible steps, this is:
        -b & -d \\
    \end{bmatrix}^{\flat\flat}
    \end{align}
+
+Notable Differences
+-------------------
+
+In the litterature, the doubly contravariant electromagnetic tensor is mostly
+written as a row/column matrix. This notation is very unfortunate and a row/row
+matrix much more appropriate, as it permits to apply the rules of matrix
+multiplication. The relation between row/column and row/row representations is
+a transpose operation.
+
+.. math::
+
+   \begin{bmatrix}
+                    & -\tilde{E^x} & -\tilde{E^y} & - \tilde{E^z} \\
+       +\tilde{E^x} &              & -       B^z  & +        B^y  \\
+       +\tilde{E^y} & +       B^z  &              & -        B^x  \\
+       +\tilde{E^z} & -       B^y  & +       B^x  &               \\
+   \end{bmatrix}^{T}
+   =
+   \begin{bmatrix}
+                    & +\tilde{E^x} & +\tilde{E^y} & + \tilde{E^z} \\
+       -\tilde{E^x} &              & +       B^z  & -        B^y  \\
+       -\tilde{E^y} & -       B^z  &              & +        B^x  \\
+       -\tilde{E^z} & +       B^y  & -       B^x  &               \\
+   \end{bmatrix}
 

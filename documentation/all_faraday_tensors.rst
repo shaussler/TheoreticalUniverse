@@ -9,16 +9,12 @@ All Faraday Tensors
 
    Under construction.
 
-In a :ref:`previous post <faraday_tensor_derivation:Deriving the Faraday Tensor
-from the 1865 Maxwell Equations>`, I derive the Faraday tensor and its Hodge
-dual from the 1865 Maxwell equations. I also introdue a musical notation to
-facilitate calculations. In this post, I systematically derive all variations
-of the electromagnetic field tensor.
-
-.. admonition:: References
-
-   An alternative derivation:
-   https://www.wikihow.life/Derive-the-Faraday-Tensor
+In a :ref:`previous article <faraday_tensor_derivation:Deriving the Faraday
+Tensor from the 1865 Maxwell Equations>`, I derive the Faraday tensor and its
+Hodge dual from the 1865 Maxwell equations. I also introduce a :ref:`musical
+notation <musical_notation:The Musical Tensor Notation>` to facilitate
+calculations. In this article, I systematically derive all variations of the
+electromagnetic field tensor.
 
 Inhomogenous equations
 ----------------------
@@ -30,11 +26,10 @@ Inhomogenous equations
 The starting point is the :ref:`contravariant/covariant form
 <faraday_tensor_derivation:The Tensor of Mr. Faraday>`. From there, I
 systematically apply the :ref:`Minkowski metric <minkowski_metric:The Minkowski
-Metric>` to obtain other forms. The electromagnetic field tensor is:
+Metric>` to obtain the other forms. The electromagnetic field tensor is:
 
 .. math::
 
-   {\small
    F^{\sharp\flat}
    =
    \begin{bmatrix}
@@ -43,8 +38,6 @@ Metric>` to obtain other forms. The electromagnetic field tensor is:
     +\tilde{E^y} & -       B^z  &              & +        B^x  \\
     +\tilde{E^z} & +       B^y  & -       B^x  &               \\
    \end{bmatrix}^{\sharp\flat}
-   }
-
 
 .. }}}
 
@@ -54,62 +47,34 @@ Metric>` to obtain other forms. The electromagnetic field tensor is:
 
 .. math::
 
-   {\scriptsize
+   {\small
    F^{\sharp\sharp}
    =
    F^{\sharp\flat} \eta^{\sharp\sharp}
    =
    \begin{bmatrix}
-                 & +\tilde{E^x} & +\tilde{E^y} & + \tilde{E^z} \\
-    +\tilde{E^x} &              & +       B^z  & -        B^y  \\
-    +\tilde{E^y} & -       B^z  &              & +        B^x  \\
-    +\tilde{E^z} & +       B^y  & -       B^x  &               \\
+                    & +\tilde{E^x} & +\tilde{E^y} & + \tilde{E^z} \\
+       +\tilde{E^x} &              & +       B^z  & -        B^y  \\
+       +\tilde{E^y} & -       B^z  &              & +        B^x  \\
+       +\tilde{E^z} & +       B^y  & -       B^x  &               \\
    \end{bmatrix}^{\sharp\flat}
    \begin{bmatrix}
-   1 &  0 &  0 &  0 \\
-   0 & -1 &  0 &  0 \\
-   0 &  0 & -1 &  0 \\
-   0 &  0 &  0 & -1
+       1 &  0 &  0 &  0 \\
+       0 & -1 &  0 &  0 \\
+       0 &  0 & -1 &  0 \\
+       0 &  0 &  0 & -1
    \end{bmatrix}^{\sharp\sharp}
    =
    \begin{bmatrix}
-                 & +\tilde{E^x} & +\tilde{E^y} & + \tilde{E^z} \\
-    -\tilde{E^x} &              & +       B^z  & -        B^y  \\
-    -\tilde{E^y} & -       B^z  &              & +        B^x  \\
-    -\tilde{E^z} & +       B^y  & -       B^x  &               \\
-   \end{bmatrix}^{\sharp\sharp}
-   }
-
-.. note::
-
-   The doubly covariant electromagnetic tensor is mostly written as a
-   row/column matrix. This notation is very unfortunate and a row/row matrix
-   much more appropriate, as it permits to apply the rules of matrix
-   multiplication. The relation between row/column and row/row representations
-   is a transpose operation.
-
-   .. math::
-
-      \begin{bmatrix}
-                   & -\tilde{E^x} & -\tilde{E^y} & - \tilde{E^z} \\
-      +\tilde{E^x} &              & -       B^z  & +        B^y  \\
-      +\tilde{E^y} & +       B^z  &              & -        B^x  \\
-      +\tilde{E^z} & -       B^y  & +       B^x  &               \\
-      \end{bmatrix}^{T}
-      =
-      \begin{bmatrix}
                     & +\tilde{E^x} & +\tilde{E^y} & + \tilde{E^z} \\
        -\tilde{E^x} &              & +       B^z  & -        B^y  \\
        -\tilde{E^y} & -       B^z  &              & +        B^x  \\
        -\tilde{E^z} & +       B^y  & -       B^x  &               \\
-      \end{bmatrix}
+   \end{bmatrix}^{\sharp\sharp}
+   }
 
 .. admonition:: All calculation steps
    :class: dropdown
-
-   The expanded calculation in musical notation explicitely sharpens
-   :math:`\sharp` or flatten :math:`\flat` the vectors. The equations then take
-   the folowing equivalent form where matrix multiplication rules are applied:
 
    .. math::
 
@@ -182,6 +147,30 @@ Metric>` to obtain other forms. The electromagnetic field tensor is:
       \end{bmatrix}^{\sharp\sharp}
       }
 
+.. note::
+
+   In the litteratude, the doubly contravariant electromagnetic tensor is
+   mostly written as a row/column matrix. This notation is very unfortunate as
+   a row/row matrix much more appropriate, as it permits to apply the rules of
+   matrix multiplication. The relation between row/column and row/row
+   representations is a transpose operation.
+
+   .. math::
+
+      \begin{bmatrix}
+                       & -\tilde{E^x} & -\tilde{E^y} & - \tilde{E^z} \\
+          +\tilde{E^x} &              & -       B^z  & +        B^y  \\
+          +\tilde{E^y} & +       B^z  &              & -        B^x  \\
+          +\tilde{E^z} & -       B^y  & +       B^x  &               \\
+      \end{bmatrix}^{T}
+      =
+      \begin{bmatrix}
+                       & +\tilde{E^x} & +\tilde{E^y} & + \tilde{E^z} \\
+          -\tilde{E^x} &              & +       B^z  & -        B^y  \\
+          -\tilde{E^y} & -       B^z  &              & +        B^x  \\
+          -\tilde{E^z} & +       B^y  & -       B^x  &               \\
+      \end{bmatrix}
+
 .. }}}
 
 .. rubric:: Covariant-covariant
@@ -190,7 +179,7 @@ Metric>` to obtain other forms. The electromagnetic field tensor is:
 
 .. math::
  
-   {\scriptsize
+   {\small
    F^{\flat\flat}
    =
    \eta{\flat\flat} F^{\sharp\flat}
@@ -219,13 +208,9 @@ Metric>` to obtain other forms. The electromagnetic field tensor is:
 .. admonition:: All calculation steps
    :class: dropdown
 
-   The expanded calculation in musical notation explicitely sharpens
-   :math:`\sharp` or flatten :math:`\flat` the vectors. The equations then take
-   the folowing equivalent form where matrix multiplication rules are applied:
-
    .. math::
 
-      {\small
+      {\scriptsize
        F^{\flat\flat}=
        \begin{bmatrix}
        \begin{bmatrix}
@@ -263,7 +248,7 @@ Metric>` to obtain other forms. The electromagnetic field tensor is:
 
    .. math::
 
-      {\small
+      {\scriptsize
       F^{\flat\flat}=
       \begin{bmatrix}
       \begin{bmatrix}
@@ -283,16 +268,15 @@ Metric>` to obtain other forms. The electromagnetic field tensor is:
 
    .. math::
 
-      {\small
+      {\scriptsize
       F^{\flat\flat}=
       \begin{bmatrix}
-                    & +\tilde{E^x} & +\tilde{E^y} & + \tilde{E^z} \\
-       -\tilde{E^x} &              & -       B^z  & +        B^y  \\
-       -\tilde{E^y} & +       B^z  &              & -        B^x  \\
-       -\tilde{E^z} & -       B^y  & +       B^x  &               \\
+                       & +\tilde{E^x} & +\tilde{E^y} & + \tilde{E^z} \\
+          -\tilde{E^x} &              & -       B^z  & +        B^y  \\
+          -\tilde{E^y} & +       B^z  &              & -        B^x  \\
+          -\tilde{E^z} & -       B^y  & +       B^x  &               \\
       \end{bmatrix}^{\flat\flat}
       }
-
 
 .. }}}
 
