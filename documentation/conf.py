@@ -19,8 +19,11 @@ extensions = [
     'sphinxcontrib.googleanalytics',
     'sphinx_sitemap',
     'sphinx.ext.autosectionlabel',
-    'sphinx_togglebutton'
+    'sphinx_togglebutton',
 ]
+
+# Automated labels labels
+# -----------------------
 
 autosectionlabel_prefix_document = True
 
@@ -35,13 +38,97 @@ html_static_path = ['_static']
 html_css_files = ['custom.css']
 html_baseurl = 'https://shaussler.github.io/TheoreticalUniverse/'
 
+# Build a sitemap
+# ---------------
+
 sitemap_locales = []
 sitemap_url_scheme = "{link}"
 
 todo_include_todos = True
 
-mathjax3_config = {'chtml': {'displayAlign': 'left',
-                             'displayIndent': '2em'}}
+etasharpsharp_string = r'''
+\begin{bmatrix}
+\begin{bmatrix}
+           +1 \\
+\phantom{+} 0 \\
+\phantom{+} 0 \\
+\phantom{+} 0 \\
+\end{bmatrix} \\
+\begin{bmatrix}
+\phantom{+} 0 \\
+           -1 \\
+\phantom{+} 0 \\
+\phantom{+} 0 \\
+\end{bmatrix} \\
+\begin{bmatrix}
+\phantom{+} 0 \\
+\phantom{+} 0 \\
+           -1 \\
+\phantom{+} 0 \\
+\end{bmatrix} \\
+\begin{bmatrix}
+\phantom{+} 0 \\
+\phantom{+} 0 \\
+\phantom{+} 0 \\
+           -1 \\
+\end{bmatrix}
+\end{bmatrix}
+'''
+
+etatsharp_string = r'''
+\begin{bmatrix}
+           +1 \\
+\phantom{-} 0 \\
+\phantom{-} 0 \\
+\phantom{-} 0
+\end{bmatrix}
+'''
+
+etaxsharp_string = r'''
+\begin{bmatrix}
+\phantom{+} 0 \\
+           -1 \\
+\phantom{-} 0 \\
+\phantom{-} 0
+\end{bmatrix}
+'''
+
+etaysharp_string = r'''
+\begin{bmatrix}
+\phantom{+} 0 \\
+\phantom{-} 0 \\
+           -1 \\
+\phantom{-} 0
+\end{bmatrix}
+'''
+
+etazsharp_string = r'''
+\begin{bmatrix}
+\phantom{+} 0 \\
+\phantom{-} 0 \\
+\phantom{-} 0 \\
+           -1
+\end{bmatrix}
+'''
+
+mathjax3_config = {
+    'chtml': {
+        'displayAlign': 'left',
+         'displayIndent': '2em'
+    },
+    'tex': {
+       'packages': {'[+]': ['ams']},
+       'macros': {
+            'etasharpsharp': etasharpsharp_string,
+            'etatsharp': etatsharp_string,
+            'etaxsharp': etaxsharp_string,
+            'etaysharp': etaysharp_string,
+            'etazsharp': etazsharp_string,
+        }
+    }
+}
+
+html_static_path = ['_static']
 
 # Google analytics
 # ----------------

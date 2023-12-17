@@ -280,7 +280,7 @@ The Musical Equations
 In the article :ref:`musical_notation:The Musical Tensor Notation`, I propose
 an alternative notation to facilitate calculations. In the post
 :ref:`all_faraday_tensors:All Faraday Tensors`, I employ this musical notation
-to systematically derive all forms of the Farday tensor.
+to systematically derive all forms of the Faraday tensor.
 
 .. include:: ./summary_musical_notation.rst
 

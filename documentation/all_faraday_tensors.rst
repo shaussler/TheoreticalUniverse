@@ -73,69 +73,54 @@ Metric>` to obtain the other forms. The electromagnetic field tensor is:
    \end{bmatrix}^{\sharp\sharp}
    }
 
-.. admonition:: All calculation steps
+.. admonition:: Step by step
    :class: dropdown
 
    .. math::
 
-      {\small
+      {\scriptsize
+      \begin{align}
+      F^{\sharp\sharp}
+      &=
       \begin{bmatrix}
                     & +\tilde{E^x} & +\tilde{E^y} & + \tilde{E^z} \\
        +\tilde{E^x} &              & +       B^z  & -        B^y  \\
        +\tilde{E^y} & -       B^z  &              & +        B^x  \\
        +\tilde{E^z} & +       B^y  & -       B^x  &               \\
       \end{bmatrix}
-      \begin{bmatrix}
-          \begin{bmatrix}
-          \phantom{+} 1 \\
-          \phantom{+} 0 \\
-          \phantom{+} 0 \\
-          \phantom{+} 0 \\
-          \end{bmatrix} \\
-          \begin{bmatrix}
-          \phantom{+} 0 \\
-          -1 \\
-          \phantom{+} 0 \\
-          \phantom{+} 0 \\
-          \end{bmatrix} \\
-          \begin{bmatrix}
-          \phantom{+} 0 \\
-          \phantom{+} 0 \\
-          -1 \\
-          \phantom{+} 0 \\
-          \end{bmatrix} \\
-          \begin{bmatrix}
-          \phantom{+} 0 \\
-          \phantom{+} 0 \\
-          \phantom{+} 0 \\
-          -1 \\
-          \end{bmatrix}
-      \end{bmatrix}
+      \etasharpsharp
       =
       \begin{bmatrix}
+         \phantom{+E^x} & \etatsharp & +\tilde{E^x} & \etaxsharp & +\tilde{E^y} & \etaysharp  & + \tilde{E^z} & \etazsharp  \\
+           +\tilde{E^x} & \etatsharp &              & \etaxsharp & +       B^z  & \etaysharp  & -        B^y  & \etazsharp  \\
+           +\tilde{E^y} & \etatsharp & -       B^z  & \etaxsharp &              & \etaysharp  & +        B^x  & \etazsharp  \\
+           +\tilde{E^z} & \etatsharp & +       B^y  & \etaxsharp & -       B^x  & \etaysharp  &               & \etazsharp  \\
+      \end{bmatrix} \\
+      &=
+      \begin{bmatrix}
           \begin{bmatrix}
-                       \\
-          -\tilde{E^x} \\
-          -\tilde{E^y} \\
-          -\tilde{E^z} \\
+                           \\
+              -\tilde{E^x} \\
+              -\tilde{E^y} \\
+              -\tilde{E^z} \\
           \end{bmatrix} \\
           \begin{bmatrix}
-          +\tilde{E^x} \\
-                       \\
-          -       B^z  \\
-          +       B^y  \\
+              +\tilde{E^x} \\
+                           \\
+              -       B^z  \\
+              +       B^y  \\
           \end{bmatrix} \\
           \begin{bmatrix}
-          +\tilde{E^y} \\
-          +       B^z  \\
-                       \\
-          -       B^x  \\
+              +\tilde{E^y} \\
+              +       B^z  \\
+                           \\
+              -       B^x  \\
           \end{bmatrix} \\
           \begin{bmatrix}
-          +\tilde{E^z} \\
-          -       B^y  \\
-          +       B^x  \\
-                       \\
+              +\tilde{E^z} \\
+              -       B^y  \\
+              +       B^x  \\
+                           \\
           \end{bmatrix}
       \end{bmatrix}
       = 
@@ -145,15 +130,18 @@ Metric>` to obtain the other forms. The electromagnetic field tensor is:
        -\tilde{E^y} & -       B^z  &              & +        B^x  \\
        -\tilde{E^z} & +       B^y  & -       B^x  &               \\
       \end{bmatrix}^{\sharp\sharp}
+      \end{align}
       }
+
 
 .. note::
 
-   In the litteratude, the doubly contravariant electromagnetic tensor is
+   In the litterature, the doubly contravariant electromagnetic tensor is
    mostly written as a row/column matrix. This notation is very unfortunate as
-   a row/row matrix much more appropriate, as it permits to apply the rules of
-   matrix multiplication. The relation between row/column and row/row
-   representations is a transpose operation.
+   a row/row matrix is much more appropriate since it permits to apply the
+   rules of matrix multiplication. The relation between row/column and row/row
+   representations of the doubly contravariant electromagnetic tensor is the
+   transpose operation.
 
    .. math::
 
