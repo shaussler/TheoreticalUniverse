@@ -7,14 +7,18 @@ All Faraday Tensors
 
 .. warning::
 
-   Under construction. I still need to proofread and calculations may need
-   correcting. Of course the sign always get flipped...
+   Under construction.
 
 In a :ref:`previous post <faraday_tensor_derivation:Deriving the Faraday Tensor
 from the 1865 Maxwell Equations>`, I derive the Faraday tensor and its Hodge
 dual from the 1865 Maxwell equations. I also introdue a musical notation to
 facilitate calculations. In this post, I systematically derive all variations
 of the electromagnetic field tensor.
+
+.. admonition:: References
+
+   An alternative derivation:
+   https://www.wikihow.life/Derive-the-Faraday-Tensor
 
 Inhomogenous equations
 ----------------------
@@ -46,11 +50,6 @@ Metric>` to obtain other forms. The electromagnetic field tensor is:
 
 .. rubric:: Contravariant-contravariant
 
-.. warning::
-
-   The sign is wrong I think. But since matrix is antisymmetric, shouldnt it be
-   the same to just take the transpose and flip the sign?
-
 .. {{{
 
 .. math::
@@ -67,19 +66,43 @@ Metric>` to obtain other forms. The electromagnetic field tensor is:
     +\tilde{E^z} & +       B^y  & -       B^x  &               \\
    \end{bmatrix}^{\sharp\flat}
    \begin{bmatrix}
-    1 &  0 &  0 &  0 \\
-    0 & -1 &  0 &  0 \\
-    0 &  0 & -1 &  0 \\
-    0 &  0 &  0 & -1
+   1 &  0 &  0 &  0 \\
+   0 & -1 &  0 &  0 \\
+   0 &  0 & -1 &  0 \\
+   0 &  0 &  0 & -1
    \end{bmatrix}^{\sharp\sharp}
    =
    \begin{bmatrix}
-                 & -\tilde{E^x} & -\tilde{E^y} & - \tilde{E^z} \\
-    +\tilde{E^x} &              & -       B^z  & +        B^y  \\
-    +\tilde{E^y} & +       B^z  &              & -        B^x  \\
-    +\tilde{E^z} & -       B^y  & +       B^x  &               \\
+                 & +\tilde{E^x} & +\tilde{E^y} & + \tilde{E^z} \\
+    -\tilde{E^x} &              & +       B^z  & -        B^y  \\
+    -\tilde{E^y} & -       B^z  &              & +        B^x  \\
+    -\tilde{E^z} & +       B^y  & -       B^x  &               \\
    \end{bmatrix}^{\sharp\sharp}
    }
+
+.. note::
+
+   The doubly covariant electromagnetic tensor is mostly written as a
+   row/column matrix. This notation is very unfortunate and a row/row matrix
+   much more appropriate, as it permits to apply the rules of matrix
+   multiplication. The relation between row/column and row/row representations
+   is a transpose operation.
+
+   .. math::
+
+      \begin{bmatrix}
+                   & -\tilde{E^x} & -\tilde{E^y} & - \tilde{E^z} \\
+      +\tilde{E^x} &              & -       B^z  & +        B^y  \\
+      +\tilde{E^y} & +       B^z  &              & -        B^x  \\
+      +\tilde{E^z} & -       B^y  & +       B^x  &               \\
+      \end{bmatrix}^{T}
+      =
+      \begin{bmatrix}
+                    & +\tilde{E^x} & +\tilde{E^y} & + \tilde{E^z} \\
+       -\tilde{E^x} &              & +       B^z  & -        B^y  \\
+       -\tilde{E^y} & -       B^z  &              & +        B^x  \\
+       -\tilde{E^z} & +       B^y  & -       B^x  &               \\
+      \end{bmatrix}
 
 .. admonition:: All calculation steps
    :class: dropdown
@@ -150,12 +173,12 @@ Metric>` to obtain other forms. The electromagnetic field tensor is:
                        \\
           \end{bmatrix}
       \end{bmatrix}
-      = - 
+      = 
       \begin{bmatrix}
-                    & -\tilde{E^x} & -\tilde{E^y} & - \tilde{E^z} \\
-       +\tilde{E^x} &              & -       B^z  & +        B^y  \\
-       +\tilde{E^y} & +       B^z  &              & -        B^x  \\
-       +\tilde{E^z} & -       B^y  & +       B^x  &               \\
+                    & +\tilde{E^x} & +\tilde{E^y} & + \tilde{E^z} \\
+       -\tilde{E^x} &              & +       B^z  & -        B^y  \\
+       -\tilde{E^y} & -       B^z  &              & +        B^x  \\
+       -\tilde{E^z} & +       B^y  & -       B^x  &               \\
       \end{bmatrix}^{\sharp\sharp}
       }
 

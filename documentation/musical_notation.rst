@@ -17,7 +17,7 @@ The Musical Tensor Notation
    but have not found other sources where the idea is clearly laid out. Of
    course, I will not even try access resources behind paywalls.
 
-Representation of multilinear forms
+Representation of Multilinear Forms
 -----------------------------------
 
 .. include:: ./summary_musical_notation.rst
@@ -33,10 +33,10 @@ for simplicity.
 
    \begin{bmatrix}
        +1 &  0 \\
-        0 & -1\\
+        0 & -1
    \end{bmatrix}^{\sharp\sharp}
 
-Raising the indice
+Raising the Indice
 ------------------
 
 Consider the following vanilla matrix multiplication:
