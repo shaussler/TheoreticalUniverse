@@ -73,15 +73,14 @@ Metric>` to obtain the other forms. The electromagnetic field tensor is:
    \end{bmatrix}^{\sharp\sharp}
    }
 
-.. admonition:: Step by step
+.. admonition:: Step by step without musical notation
    :class: dropdown
 
    .. math::
 
       {\scriptsize
-      \begin{align}
       F^{\sharp\sharp}
-      &=
+      =
       \begin{bmatrix}
                     & +\tilde{E^x} & +\tilde{E^y} & + \tilde{E^z} \\
        +\tilde{E^x} &              & +       B^z  & -        B^y  \\
@@ -95,8 +94,14 @@ Metric>` to obtain the other forms. The electromagnetic field tensor is:
            +\tilde{E^x} & \etatsharp &              & \etaxsharp & +       B^z  & \etaysharp  & -        B^y  & \etazsharp  \\
            +\tilde{E^y} & \etatsharp & -       B^z  & \etaxsharp &              & \etaysharp  & +        B^x  & \etazsharp  \\
            +\tilde{E^z} & \etatsharp & +       B^y  & \etaxsharp & -       B^x  & \etaysharp  &               & \etazsharp  \\
-      \end{bmatrix} \\
-      &=
+      \end{bmatrix}
+      }
+
+   .. math::
+
+      {\scriptsize
+      F^{\sharp\sharp}
+      =
       \begin{bmatrix}
           \begin{bmatrix}
                            \\
@@ -123,25 +128,22 @@ Metric>` to obtain the other forms. The electromagnetic field tensor is:
                            \\
           \end{bmatrix}
       \end{bmatrix}
-      = 
+      =
       \begin{bmatrix}
                     & +\tilde{E^x} & +\tilde{E^y} & + \tilde{E^z} \\
        -\tilde{E^x} &              & +       B^z  & -        B^y  \\
        -\tilde{E^y} & -       B^z  &              & +        B^x  \\
        -\tilde{E^z} & +       B^y  & -       B^x  &               \\
       \end{bmatrix}^{\sharp\sharp}
-      \end{align}
       }
-
 
 .. note::
 
-   In the litterature, the doubly contravariant electromagnetic tensor is
-   mostly written as a row/column matrix. This notation is very unfortunate as
-   a row/row matrix is much more appropriate since it permits to apply the
-   rules of matrix multiplication. The relation between row/column and row/row
-   representations of the doubly contravariant electromagnetic tensor is the
-   transpose operation.
+   Commonly (e.g. `wikipedia article about the electromagnetic tensor
+   <https://en.m.wikipedia.org/wiki/Electromagnetic_tensor>`_), the doubly
+   contravariant electromagnetic tensor is written as a row/column matrix. The
+   relation between row/column and row/row representations of the doubly
+   contravariant electromagnetic tensor is the transpose operation.
 
    .. math::
 
@@ -150,14 +152,14 @@ Metric>` to obtain the other forms. The electromagnetic field tensor is:
           +\tilde{E^x} &              & -       B^z  & +        B^y  \\
           +\tilde{E^y} & +       B^z  &              & -        B^x  \\
           +\tilde{E^z} & -       B^y  & +       B^x  &               \\
-      \end{bmatrix}^{T}
+      \end{bmatrix}^{wikipedia}
       =
       \begin{bmatrix}
                        & +\tilde{E^x} & +\tilde{E^y} & + \tilde{E^z} \\
           -\tilde{E^x} &              & +       B^z  & -        B^y  \\
           -\tilde{E^y} & -       B^z  &              & +        B^x  \\
           -\tilde{E^z} & +       B^y  & -       B^x  &               \\
-      \end{bmatrix}
+      \end{bmatrix}^{\sharp\sharp\;T}
 
 .. }}}
 
@@ -193,44 +195,31 @@ Metric>` to obtain the other forms. The electromagnetic field tensor is:
    \end{bmatrix}^{\flat\flat}
    }
 
-.. admonition:: All calculation steps
+.. admonition:: Step by step without musical notation
    :class: dropdown
 
    .. math::
 
       {\scriptsize
        F^{\flat\flat}=
-       \begin{bmatrix}
-       \begin{bmatrix}
-        1  &
-        0  &
-        0  &
-        0
-       \end{bmatrix} &
-       \begin{bmatrix}
-        0 &
-       -1 &
-        0 &
-        0
-       \end{bmatrix} &
-       \begin{bmatrix}
-        0 &
-        0 &
-       -1 &
-        0
-       \end{bmatrix} &
-       \begin{bmatrix}
-        0 &
-        0 &
-       -1 &
-        0
-       \end{bmatrix}
-       \end{bmatrix}
+       \etaflatflat
        \begin{bmatrix}
                      & +\tilde{E^x} & +\tilde{E^y} & + \tilde{E^z} \\
         +\tilde{E^x} &              & +       B^z  & -        B^y  \\
         +\tilde{E^y} & -       B^z  &              & +        B^x  \\
         +\tilde{E^z} & +       B^y  & -       B^x  &               \\
+       \end{bmatrix}
+      }
+
+   .. math::
+
+      {\scriptsize
+       F^{\flat\flat}=
+       \begin{bmatrix}
+                   0    \etatflat &   +\tilde{E^x} \etaxflat &   +\tilde{E^y} \etayflat &   +\tilde{E^z} \etazflat, &
+           +\tilde{E^x} \etatflat & \phantom{+X^x} \etaxflat &   -       B^z  \etayflat &   +       B^y  \etazflat, & 
+           +\tilde{E^y} \etatflat &   +       B^z  \etaxflat & \phantom{+X^x} \etayflat &   -       B^x  \etazflat, &
+           +\tilde{E^z} \etatflat &   -       B^y  \etaxflat &   +       B^x  \etayflat & \phantom{+X^x} \etazflat
        \end{bmatrix}
       }
 

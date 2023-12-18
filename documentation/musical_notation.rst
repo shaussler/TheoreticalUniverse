@@ -275,7 +275,8 @@ we obtain:
    \end{align}
 
 More generally, we can follow matrix multiplication rules to lower the indice.
-Part of the operations can be done by head. With all possible steps, this is:
+Part of the operations can be done by head. With all possible steps and without
+musical notation, this is:
 
 .. math::
 
@@ -324,12 +325,14 @@ Part of the operations can be done by head. With all possible steps, this is:
    \end{bmatrix}^{\flat\flat}
    \end{align}
 
+The musical notation permits to compress:
+
 .. math::
 
    \begin{align}
    \begin{bmatrix}
        +1 &  0 \\
-        0 & -1\\
+        0 & -1 
    \end{bmatrix}^{\flat\flat}
    \begin{bmatrix}
        a & c \\
@@ -340,7 +343,7 @@ Part of the operations can be done by head. With all possible steps, this is:
        \begin{bmatrix}
            +1 \\
             0
-       \end{bmatrix}^{\flat} &
+       \end{bmatrix}^{\flat}
        \begin{bmatrix}
             0 \\
            -1
@@ -356,7 +359,7 @@ Part of the operations can be done by head. With all possible steps, this is:
            \begin{bmatrix}
                +1 \\
                 0 
-           \end{bmatrix}^{\flat} &
+           \end{bmatrix}^{\flat}
            \begin{bmatrix}
                 0 \\
                -1
@@ -370,7 +373,7 @@ Part of the operations can be done by head. With all possible steps, this is:
            \begin{bmatrix}
                +1 \\
                 0
-           \end{bmatrix}^{\sharp} &
+           \end{bmatrix}^{\sharp}
            \begin{bmatrix}
                 0 \\
                -1
@@ -386,15 +389,15 @@ Part of the operations can be done by head. With all possible steps, this is:
        \begin{bmatrix}
            +a \\
            -b
-        \end{bmatrix}^{\flat} &
+        \end{bmatrix}^{\flat}
         \begin{bmatrix}
-            c \\
+           +c \\
            -d
         \end{bmatrix}^{\flat} \\
    \end{bmatrix} \\
    & =
    \begin{bmatrix}
-        a &  c \\
+       +a & +c \\
        -b & -d \\
    \end{bmatrix}^{\flat\flat}
    \end{align}

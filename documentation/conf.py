@@ -34,17 +34,31 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
 html_theme = 'sphinx_book_theme'
-html_static_path = ['_static']
 html_css_files = ['custom.css']
 html_baseurl = 'https://shaussler.github.io/TheoreticalUniverse/'
+html_static_path = ['_static']
 
-# Build a sitemap
-# ---------------
+# Google analytics
+# ----------------
+
+googleanalytics_id="G-9HQ1J8VKRB"
+googleanalytics_enabled=True
+
+# Sitemap
+# -------
 
 sitemap_locales = []
 sitemap_url_scheme = "{link}"
 
 todo_include_todos = True
+
+# Math
+# ----
+
+# minkowski sharp sharp
+# '''''''''''''''''''''
+
+# {{{
 
 etasharpsharp_string = r'''
 \begin{bmatrix}
@@ -111,6 +125,80 @@ etazsharp_string = r'''
 \end{bmatrix}
 '''
 
+# }}}
+
+# Minkowski flat flat
+# '''''''''''''''''''
+
+# {{{
+
+etaflatflat_string = r'''
+\begin{bmatrix}
+\begin{bmatrix}
+           +1 &
+            0 &
+            0 &
+            0 &
+\end{bmatrix} 
+\begin{bmatrix}
+            0 &
+           -1 &
+            0 &
+            0 &
+\end{bmatrix} 
+\begin{bmatrix}
+            0 &
+            0 &
+           -1 &
+            0 &
+\end{bmatrix} 
+\begin{bmatrix}
+            0 &
+            0 &
+            0 &
+           -1 &
+\end{bmatrix}
+\end{bmatrix}
+'''
+
+etatflat_string = r'''
+\begin{bmatrix}
+           +1 & 
+            0 &
+            0 &
+            0 
+\end{bmatrix}
+'''
+
+etaxflat_string = r'''
+\begin{bmatrix}
+            0 &
+           -1 &
+            0 &
+            0
+\end{bmatrix}
+'''
+
+etayflat_string = r'''
+\begin{bmatrix}
+            0 &
+            0 &
+           -1 &
+            0
+\end{bmatrix}
+'''
+
+etazflat_string = r'''
+\begin{bmatrix}
+            0 &
+            0 &
+            0 &
+           -1
+\end{bmatrix}
+'''
+
+# }}}
+
 mathjax3_config = {
     'chtml': {
         'displayAlign': 'left',
@@ -124,14 +212,13 @@ mathjax3_config = {
             'etaxsharp': etaxsharp_string,
             'etaysharp': etaysharp_string,
             'etazsharp': etazsharp_string,
+            'etaflatflat': etaflatflat_string,
+            'etatflat': etatflat_string,
+            'etaxflat': etaxflat_string,
+            'etayflat': etayflat_string,
+            'etazflat': etazflat_string,
         }
     }
 }
 
-html_static_path = ['_static']
 
-# Google analytics
-# ----------------
-
-googleanalytics_id="G-9HQ1J8VKRB"
-googleanalytics_enabled=True
