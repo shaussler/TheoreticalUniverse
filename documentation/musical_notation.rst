@@ -101,10 +101,10 @@ Using :math:`\alpha=\begin{bmatrix}+1 \\ 0\end{bmatrix}` and
        b
    \end{bmatrix}
    \begin{bmatrix}
-       \begin{bmatrix} +1 \\  0 \end{bmatrix}, & \begin{bmatrix}  0 \\ -1 \end{bmatrix}
+   \begin{bmatrix} +1 \\  0 \end{bmatrix}, & \begin{bmatrix}  0 \\ -1 \end{bmatrix}
    \end{bmatrix}
    =
-   a \, \begin{bmatrix}+1 \\ 0\end{bmatrix} + b \, \begin{bmatrix}0 \\ -1\end{bmatrix}
+   a \, \begin{bmatrix}+1 \\ 0 \end{bmatrix} + b \, \begin{bmatrix}0 \\ -1\end{bmatrix}
    =
    \begin{bmatrix}+a \\ -b\end{bmatrix}
 
@@ -149,8 +149,8 @@ In tensor notation, this corresponds to:
 
    A_\mu \eta^{\mu\nu} = A^\nu
 
-Raising the Indice of a Rank 2 Tensor
-'''''''''''''''''''''''''''''''''''''
+Raising the Indice of a Rank 2 Contravariant Covariant Tensor
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 Consider the following vanilla matrix multiplication:
 
@@ -170,8 +170,7 @@ Consider the following vanilla matrix multiplication:
        b \alpha + d \beta
    \end{bmatrix}
 
-Using :math:`\alpha=\begin{bmatrix}+1 \\ 0\end{bmatrix}` and
-:math:`\beta=\begin{bmatrix}0 \\ -1\end{bmatrix}`, we obtain:
+With :math:`\alpha = \BM +1 \\ 0 \EM` and :math:`\beta = \BM 0 \\ -1 \EM`:
 
 .. math::
 
@@ -182,60 +181,32 @@ Using :math:`\alpha=\begin{bmatrix}+1 \\ 0\end{bmatrix}` and
    \end{bmatrix}^{\sharp\flat}
    \begin{bmatrix}
        +1 &  0 \\
-        0 & -1\\
+        0 & -1 \\
    \end{bmatrix}^{\sharp\sharp}
    =
    \begin{bmatrix}
-       a & c \\
-       b & d \\
+   a & c \\
+   b & d \\
    \end{bmatrix}
    \begin{bmatrix}
-       \begin{bmatrix}
-       +1 \\
-        0 \\
-       \end{bmatrix} \\
-       \begin{bmatrix}
-        0 \\
-       -1 \\
-       \end{bmatrix} \\
+       \begin{bmatrix} +1 \\  0 \\ \end{bmatrix} \\
+       \begin{bmatrix}  0 \\ -1 \\ \end{bmatrix} \\
    \end{bmatrix}
    =
    \begin{bmatrix}
-       a 
-       \begin{bmatrix}
-       +1 \\
-        0 \\
-       \end{bmatrix} +
-       c
-       \begin{bmatrix}
-         0 \\
-        -1
-       \end{bmatrix} \\
-       b
-       \begin{bmatrix}
-       +1 \\
-        0 \\
-       \end{bmatrix} +
-       d
-       \begin{bmatrix}
-         0 \\
-        -1
-       \end{bmatrix} \\
+       a \begin{bmatrix} +1 \\  0 \\ \end{bmatrix} +
+       c \begin{bmatrix}  0 \\ -1    \end{bmatrix} \\
+       b \begin{bmatrix} +1 \\  0 \\ \end{bmatrix} +
+       d \begin{bmatrix}  0 \\ -1    \end{bmatrix} \\
    \end{bmatrix}
    =
    \begin{bmatrix}
-       \begin{bmatrix}
-       +a \\
-       -c \\
-       \end{bmatrix} \\
-       \begin{bmatrix}
-        b \\
-       -d \\
-       \end{bmatrix} \\
+       \begin{bmatrix} +a \\ -c \\ \end{bmatrix} \\
+       \begin{bmatrix}  b \\ -d \\ \end{bmatrix} \\
    \end{bmatrix}
    =
    \begin{bmatrix}
-        a &  b \\
+       +a & +b \\
        -c & -d \\
    \end{bmatrix}^{\sharp\sharp}
    }
@@ -244,7 +215,64 @@ In tensor notation, this correspond to:
 
 .. math::
 
-   A^{\mu}{}_{\nu} \; \eta^{\mu\nu} = A^{\mu\nu}
+   A^{\mu}{}_{\eta} \; \eta^{\eta\nu} = A^{\mu\nu}
+
+Raising the Indice of a Rank 2 Covariant Covariant Tensor
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+Consider the following vanilla matrix multiplication:
+
+.. math::
+
+   \BM
+       \BM a & c \EM & \BM b & d \EM
+   \EM
+   \BM \alpha \\ \beta \EM
+   =
+   \BM a & c \EM \; \alpha + \BM b & d \EM \; \beta
+   =
+   \BM
+   a \alpha + b \beta \; , & c \alpha + d \beta
+   \EM
+
+With :math:`\alpha = \BM +1 \\ 0 \EM` and :math:`\beta = \BM 0 \\ -1 \EM`:
+
+.. math::
+
+   \begin{align}
+   \BM
+   a & c \\
+   b & d \\
+   \EM^{\flat\flat}
+   \BM
+   +1 &  0 \\
+    0 & -1 \\
+   \EM^{\sharp\sharp}
+   & = 
+   \BM \BM  a &  c    \EM &  \BM b &   d    \EM    \EM
+   \BM \BM +1 \\ 0 \\ \EM \\ \BM 0 \\ -1 \\ \EM \\ \EM
+   \\ & =
+   \BM
+   a \BM +1 \\ 0 \EM + b \BM  0 \\ -1 \EM \; , &
+   c \BM +1 \\ 0 \EM + d \BM  0 \\ -1 \EM
+   \EM
+   \\ & =
+   \BM
+   \BM +a \\ -b \EM, &
+   \BM +c \\ -d \EM
+   \EM
+   =
+   \BM
+   +a & +c \\
+   -b & -d
+   \EM^{\sharp\flat}
+   \end{align}
+   
+In tensor notation, this correspond to:
+
+.. math::
+
+   A_{\eta\nu} \; \eta^{\eta\nu} = A^{\mu}{}_{\nu}
 
 Flattening a Vector to a Covector
 '''''''''''''''''''''''''''''''''
@@ -360,49 +388,30 @@ With musical notation:
       \end{bmatrix}^{\flat}
       \end{align}
 
-Lowering the Indice of a Rank 2 Tensor
-''''''''''''''''''''''''''''''''''''''
+Lowering the Indice of a Rank 2 Contravariant/Covariant Tensor
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
-The goal here is to lower a contravariant/convariant tensor
+The goal here is to lower a contravariant/covariant tensor
 :math:`[T^\mu{}_\nu]`, or in musical notation :math:`T^{\sharp\sharp}`
 
 Following matrix multiplication rules, we get:
 
 .. math::
 
-   \begin{bmatrix}
-       \alpha &
-       \beta
-   \end{bmatrix}
+   \begin{bmatrix} \alpha & \beta \end{bmatrix}
    \begin{bmatrix}
        a & c \\
        b & d \\
    \end{bmatrix}
    =
    \begin{bmatrix}
-       \begin{bmatrix}
-           \alpha &
-           \beta
-       \end{bmatrix}
-       \begin{bmatrix}
-           a \\
-           b \\
-       \end{bmatrix}, \;
-       \begin{bmatrix}
-           \alpha &
-           \beta
-       \end{bmatrix}
-       \begin{bmatrix}
-           c \\
-           d \\
-       \end{bmatrix}
+       \begin{bmatrix} \alpha &  \beta \end{bmatrix}
+       \begin{bmatrix}  a     \\  b    \end{bmatrix}, \;
+       \begin{bmatrix} \alpha &  \beta \end{bmatrix}
+       \begin{bmatrix}  c     \\  d \\ \end{bmatrix}
    \end{bmatrix}
    =
-   \begin{bmatrix}
-       \alpha a + \beta b
-       , \;
-       \alpha c + \beta d
-   \end{bmatrix}
+   \begin{bmatrix} \alpha a + \beta b, \; \alpha c + \beta d \end{bmatrix}
 
 Using :math:`\alpha=\begin{bmatrix}+1, 0\end{bmatrix}` and
 :math:`\beta=\begin{bmatrix}0, -1\end{bmatrix}`, we obtain:
@@ -443,37 +452,37 @@ Using :math:`\alpha=\begin{bmatrix}+1, 0\end{bmatrix}` and
               b & d \\
           \end{bmatrix}
       & =
-         \begin{bmatrix}
-             \begin{bmatrix}
-                 \begin{bmatrix} +1 &  0 \end{bmatrix}, & \begin{bmatrix}  0 & -1 \end{bmatrix}
-             \end{bmatrix}
-             \begin{bmatrix}
-                 a \\
-                 b \\
-             \end{bmatrix}, &
-             \begin{bmatrix}
-                 \begin{bmatrix} +1 &  0 \end{bmatrix}, & \begin{bmatrix}  0 & -1 \end{bmatrix}
-             \end{bmatrix}
-             \begin{bmatrix}
-                 c \\
-                 d \\
-             \end{bmatrix}
-         \end{bmatrix} \\
-      &=
+      \begin{bmatrix}
           \begin{bmatrix}
-              \begin{bmatrix}+1, 0\end{bmatrix} \; a + \begin{bmatrix}0, -1\end{bmatrix} \; b,&
-              \begin{bmatrix}+1, 0\end{bmatrix} \; c + \begin{bmatrix}0, -1\end{bmatrix} \; d 
-          \end{bmatrix} \\
-      &=
+              \begin{bmatrix} +1 &  0 \end{bmatrix}, & \begin{bmatrix}  0 & -1 \end{bmatrix}
+          \end{bmatrix}
           \begin{bmatrix}
-              \begin{bmatrix}+a, 0\end{bmatrix} + \begin{bmatrix}0, -b\end{bmatrix},&
-              \begin{bmatrix}+c, 0\end{bmatrix} + \begin{bmatrix}0, -d\end{bmatrix}
-          \end{bmatrix} \\
-      &=
+              a \\
+              b \\
+          \end{bmatrix}, &
           \begin{bmatrix}
-              \begin{bmatrix}+a, -b\end{bmatrix}, &
-              \begin{bmatrix}+c, -d\end{bmatrix}
-          \end{bmatrix} \\
+              \begin{bmatrix} +1 &  0 \end{bmatrix}, & \begin{bmatrix}  0 & -1 \end{bmatrix}
+          \end{bmatrix}
+          \begin{bmatrix}
+              c \\
+              d \\
+          \end{bmatrix}
+      \end{bmatrix} \\
+      &=
+      \begin{bmatrix}
+          \begin{bmatrix}+1, 0\end{bmatrix} \; a + \begin{bmatrix}0, -1\end{bmatrix} \; b,&
+          \begin{bmatrix}+1, 0\end{bmatrix} \; c + \begin{bmatrix}0, -1\end{bmatrix} \; d 
+      \end{bmatrix} \\
+      &=
+      \begin{bmatrix}
+          \begin{bmatrix}+a, 0\end{bmatrix} + \begin{bmatrix}0, -b\end{bmatrix}, &
+          \begin{bmatrix}+c, 0\end{bmatrix} + \begin{bmatrix}0, -d\end{bmatrix}
+      \end{bmatrix} \\
+      &=
+      \begin{bmatrix}
+          \begin{bmatrix}+a, -b\end{bmatrix}, &
+          \begin{bmatrix}+c, -d\end{bmatrix}
+      \end{bmatrix} \\
       \end{align}
 
 The musical notation efficiently condenses larger matrices, simplifying their
@@ -517,7 +526,7 @@ the method.
                +c \\
                -d
             \end{bmatrix}^{\flat} \\
-       \end{bmatrix} \\
+       \end{bmatrix}^{\flat} \\
    & =
        \begin{bmatrix}
            +a & +c \\

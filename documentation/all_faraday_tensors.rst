@@ -5,10 +5,6 @@ All Faraday Tensors
 
    by Stéphane Haussler
 
-.. warning::
-
-   Under construction.
-
 In a :ref:`previous article <faraday_tensor_derivation:Deriving the Faraday
 Tensor from the 1865 Maxwell Equations>`, I derive the Faraday tensor and its
 Hodge dual from the 1865 Maxwell equations. I also introduce a :ref:`musical
@@ -139,11 +135,11 @@ Metric>` to obtain the other forms. The electromagnetic field tensor is:
 
 .. note::
 
-   Commonly (e.g. `wikipedia article about the electromagnetic tensor
-   <https://en.m.wikipedia.org/wiki/Electromagnetic_tensor>`_), the doubly
-   contravariant electromagnetic tensor is written as a row/column matrix. The
-   relation between row/column and row/row representations of the doubly
-   contravariant electromagnetic tensor is the transpose operation.
+   Commonly the doubly contravariant electromagnetic tensor is written as a
+   row/column matrix. (e.g. `wikipedia article about the electromagnetic tensor
+   <https://en.m.wikipedia.org/wiki/Electromagnetic_tensor>`_). The relation
+   between row/column and row/row representations of the doubly contravariant
+   electromagnetic tensor is the transpose operation.
 
    .. math::
 
@@ -152,7 +148,7 @@ Metric>` to obtain the other forms. The electromagnetic field tensor is:
           +\tilde{E^x} &              & -       B^z  & +        B^y  \\
           +\tilde{E^y} & +       B^z  &              & -        B^x  \\
           +\tilde{E^z} & -       B^y  & +       B^x  &               \\
-      \end{bmatrix}^{wikipedia}
+      \end{bmatrix}
       =
       \begin{bmatrix}
                        & +\tilde{E^x} & +\tilde{E^y} & + \tilde{E^z} \\
@@ -263,7 +259,7 @@ Metric>` to obtain the other forms. The electromagnetic field tensor is:
 
 .. math::
  
-   {\scriptsize
+   {\small
    F^{\flat\sharp}
    =
    F^{\flat\flat} \eta^{\sharp\sharp}
@@ -288,6 +284,26 @@ Metric>` to obtain the other forms. The electromagnetic field tensor is:
     +\tilde{E^z} & +       B^y  & -       B^x  &              \\
    \end{bmatrix}^{\flat\sharp}
    }
+
+
+.. admonition:: Step by step
+   :class: dropdown, toggle-shown
+
+   .. math::
+
+      {\scriptsize
+      =
+      \begin{bmatrix}
+      \begin{bmatrix}      \\ -\Ex \\ -\Ey \\ -\Ez \\ \end{bmatrix}^{\flat} &
+      \begin{bmatrix} +\Ex \\      \\ +\Bz \\ -\By \\ \end{bmatrix}^{\flat} &
+      \begin{bmatrix} +\Ey \\ -\Bz \\      \\ +\Bx \\ \end{bmatrix}^{\flat} &
+      \begin{bmatrix} +\Ez \\ +\By \\ -Bx  \\      \\ \end{bmatrix}^{\flat}
+      \end{bmatrix}^{\flat}
+      \begin{bmatrix}
+      \etatsharp^{\sharp} & \etaxsharp^{\sharp} & \etaysharp^{\sharp} & \etazsharp^{\sharp}
+      \end{bmatrix}^{\sharp} \\
+      =a
+      }
 
 .. note::
 

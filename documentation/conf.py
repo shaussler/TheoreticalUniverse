@@ -208,6 +208,14 @@ mathjax3_config = {
     'tex': {
        'packages': {'[+]': ['ams']},
        'macros': {
+            'Et': r'\tilde{E^{t}}',
+            'Ex': r'\tilde{E^{x}}',
+            'Ey': r'\tilde{E^{y}}',
+            'Ez': r'\tilde{E^{z}}',
+            'Bt': r'B^{t}',
+            'Bx': r'B^{x}',
+            'By': r'B^{y}',
+            'Bz': r'B^{z}',
             'etasharpsharp': etasharpsharp_string,
             'etatsharp': etatsharp_string,
             'etaxsharp': etaxsharp_string,
@@ -218,6 +226,8 @@ mathjax3_config = {
             'etaxflat': etaxflat_string,
             'etayflat': etayflat_string,
             'etazflat': etazflat_string,
+            'BM': r'\begin{bmatrix}',
+            'EM': r'\end{bmatrix}',
         }
     }
 }
