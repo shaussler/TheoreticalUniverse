@@ -4,7 +4,7 @@ Upcoming
 The following articles are under construction.
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 3
    :caption: Contents:
 
    musical_notation.rst

@@ -83,7 +83,7 @@ Metric>` to obtain the other forms. The electromagnetic field tensor is:
        +\tilde{E^y} & -       B^z  &              & +        B^x  \\
        +\tilde{E^z} & +       B^y  & -       B^x  &               \\
       \end{bmatrix}
-      \etasharpsharp
+      \BM \etatsharp \\ \etaxsharp \\ \etaysharp \\ \etazsharp \EM
       =
       \begin{bmatrix}
          \phantom{+E^x} & \etatsharp & +\tilde{E^x} & \etaxsharp & +\tilde{E^y} & \etaysharp  & + \tilde{E^z} & \etazsharp  \\
@@ -198,7 +198,7 @@ Metric>` to obtain the other forms. The electromagnetic field tensor is:
 
       {\scriptsize
        F^{\flat\flat}=
-       \etaflatflat
+       \BM \etatflat & \etaxflat & \etayflat & \etazflat \EM
        \begin{bmatrix}
                      & +\tilde{E^x} & +\tilde{E^y} & + \tilde{E^z} \\
         +\tilde{E^x} &              & +       B^z  & -        B^y  \\

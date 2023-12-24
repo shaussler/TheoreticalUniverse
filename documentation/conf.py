@@ -90,114 +90,6 @@ etasharpsharp_string = r'''
 \end{bmatrix}
 '''
 
-etatsharp_string = r'''
-\begin{bmatrix}
-           +1 \\
-\phantom{-} 0 \\
-\phantom{-} 0 \\
-\phantom{-} 0
-\end{bmatrix}
-'''
-
-etaxsharp_string = r'''
-\begin{bmatrix}
-\phantom{+} 0 \\
-           -1 \\
-\phantom{-} 0 \\
-\phantom{-} 0
-\end{bmatrix}
-'''
-
-etaysharp_string = r'''
-\begin{bmatrix}
-\phantom{+} 0 \\
-\phantom{-} 0 \\
-           -1 \\
-\phantom{-} 0
-\end{bmatrix}
-'''
-
-etazsharp_string = r'''
-\begin{bmatrix}
-\phantom{+} 0 \\
-\phantom{-} 0 \\
-\phantom{-} 0 \\
-           -1
-\end{bmatrix}
-'''
-
-# }}}
-
-# Minkowski flat flat
-# '''''''''''''''''''
-
-# {{{
-
-etaflatflat_string = r'''
-\begin{bmatrix}
-\begin{bmatrix}
-           +1 &
-            0 &
-            0 &
-            0 &
-\end{bmatrix} 
-\begin{bmatrix}
-            0 &
-           -1 &
-            0 &
-            0 &
-\end{bmatrix} 
-\begin{bmatrix}
-            0 &
-            0 &
-           -1 &
-            0 &
-\end{bmatrix} 
-\begin{bmatrix}
-            0 &
-            0 &
-            0 &
-           -1 &
-\end{bmatrix}
-\end{bmatrix}
-'''
-
-etatflat_string = r'''
-\begin{bmatrix}
-           +1 & 
-            0 &
-            0 &
-            0 
-\end{bmatrix}
-'''
-
-etaxflat_string = r'''
-\begin{bmatrix}
-            0 &
-           -1 &
-            0 &
-            0
-\end{bmatrix}
-'''
-
-etayflat_string = r'''
-\begin{bmatrix}
-            0 &
-            0 &
-           -1 &
-            0
-\end{bmatrix}
-'''
-
-etazflat_string = r'''
-\begin{bmatrix}
-            0 &
-            0 &
-            0 &
-           -1
-\end{bmatrix}
-'''
-
 # }}}
 
 mathjax3_config = {
@@ -216,18 +108,16 @@ mathjax3_config = {
             'Bx': r'B^{x}',
             'By': r'B^{y}',
             'Bz': r'B^{z}',
-            'etasharpsharp': etasharpsharp_string,
-            'etatsharp': etatsharp_string,
-            'etaxsharp': etaxsharp_string,
-            'etaysharp': etaysharp_string,
-            'etazsharp': etazsharp_string,
-            'etaflatflat': etaflatflat_string,
-            'etatflat': etatflat_string,
-            'etaxflat': etaxflat_string,
-            'etayflat': etayflat_string,
-            'etazflat': etazflat_string,
             'BM': r'\begin{bmatrix}',
             'EM': r'\end{bmatrix}',
+            'etatsharp': r'\BM  1 \\  0 \\  0 \\  0 \EM',
+            'etaxsharp': r'\BM  0 \\ -1 \\ -1 \\  0 \EM',
+            'etaysharp': r'\BM  0 \\  0 \\ -1 \\  0 \EM',
+            'etazsharp': r'\BM  0 \\  0 \\  0 \\ -1 \EM',
+            'etatflat': r'\BM  1 &  0 &  0 &  0 \EM',
+            'etaxflat': r'\BM  0 & -1 & -1 &  0 \EM',
+            'etayflat': r'\BM  0 &  0 & -1 &  0 \EM',
+            'etazflat': r'\BM  0 &  0 &  0 & -1 \EM',
         }
     }
 }

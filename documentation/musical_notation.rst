@@ -22,11 +22,8 @@ Representation of Multilinear Forms
 
 .. include:: ./summary_musical_notation.rst
 
-Raising and Lowering Indices
-----------------------------
-
-Exemplary and Simplified Flat Minkowski Metric
-''''''''''''''''''''''''''''''''''''''''''''''
+Representation of the Metric Tensor
+-----------------------------------
 
 For the purpose of of this article, I will be using a metric tensor akin to the
 flat Minkowski metric, with one time dimension but only one spatial dimension
@@ -72,9 +69,13 @@ for simplicity.
        \end{bmatrix}
    \end{bmatrix}
 
+Raising and Lowering Indices
+----------------------------
 
-Sharpening a Covector to a Vector
-'''''''''''''''''''''''''''''''''
+Rank :math:`(0,1)` to :math:`(1,0)`
+'''''''''''''''''''''''''''''''''''
+
+Covector to Vector
 
 Following matrix multiplication rules, we have:
 
@@ -104,7 +105,7 @@ Using :math:`\alpha=\begin{bmatrix}+1 \\ 0\end{bmatrix}` and
    \begin{bmatrix} +1 \\  0 \end{bmatrix}, & \begin{bmatrix}  0 \\ -1 \end{bmatrix}
    \end{bmatrix}
    =
-   a \, \begin{bmatrix}+1 \\ 0 \end{bmatrix} + b \, \begin{bmatrix}0 \\ -1\end{bmatrix}
+   a \, \begin{bmatrix} +1 \\ 0 \end{bmatrix} + b \, \begin{bmatrix}0 \\ -1\end{bmatrix}
    =
    \begin{bmatrix}+a \\ -b\end{bmatrix}
 
@@ -149,10 +150,10 @@ In tensor notation, this corresponds to:
 
    A_\mu \eta^{\mu\nu} = A^\nu
 
-Raising the Indice of a Rank 2 Contravariant Covariant Tensor
-'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+Rank :math:`(1,1)` to :math:`(2,0)`
+'''''''''''''''''''''''''''''''''''
 
-Consider the following vanilla matrix multiplication:
+Take the following vanilla matrix multiplication:
 
 .. math::
 
@@ -185,15 +186,6 @@ With :math:`\alpha = \BM +1 \\ 0 \EM` and :math:`\beta = \BM 0 \\ -1 \EM`:
    \end{bmatrix}^{\sharp\sharp}
    =
    \begin{bmatrix}
-   a & c \\
-   b & d \\
-   \end{bmatrix}
-   \begin{bmatrix}
-       \begin{bmatrix} +1 \\  0 \\ \end{bmatrix} \\
-       \begin{bmatrix}  0 \\ -1 \\ \end{bmatrix} \\
-   \end{bmatrix}
-   =
-   \begin{bmatrix}
        a \begin{bmatrix} +1 \\  0 \\ \end{bmatrix} +
        c \begin{bmatrix}  0 \\ -1    \end{bmatrix} \\
        b \begin{bmatrix} +1 \\  0 \\ \end{bmatrix} +
@@ -217,10 +209,12 @@ In tensor notation, this correspond to:
 
    A^{\mu}{}_{\eta} \; \eta^{\eta\nu} = A^{\mu\nu}
 
-Raising the Indice of a Rank 2 Covariant Covariant Tensor
-'''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+Rank :math:`(0,2)` to :math:`(1,1)`
+'''''''''''''''''''''''''''''''''''
 
-Consider the following vanilla matrix multiplication:
+To raise the indice of a rank :math:`(0,2)` covariant/covariant tensor to a
+rank :math:`(1,1)` contravariant/covariant tensor, consider the following
+vanilla matrix multiplication:
 
 .. math::
 
@@ -239,7 +233,6 @@ With :math:`\alpha = \BM +1 \\ 0 \EM` and :math:`\beta = \BM 0 \\ -1 \EM`:
 
 .. math::
 
-   \begin{align}
    \BM
    a & c \\
    b & d \\
@@ -248,25 +241,16 @@ With :math:`\alpha = \BM +1 \\ 0 \EM` and :math:`\beta = \BM 0 \\ -1 \EM`:
    +1 &  0 \\
     0 & -1 \\
    \EM^{\sharp\sharp}
-   & = 
-   \BM \BM  a &  c    \EM &  \BM b &   d    \EM    \EM
-   \BM \BM +1 \\ 0 \\ \EM \\ \BM 0 \\ -1 \\ \EM \\ \EM
-   \\ & =
+   = 
    \BM
    a \BM +1 \\ 0 \EM + b \BM  0 \\ -1 \EM \; , &
    c \BM +1 \\ 0 \EM + d \BM  0 \\ -1 \EM
-   \EM
-   \\ & =
-   \BM
-   \BM +a \\ -b \EM, &
-   \BM +c \\ -d \EM
    \EM
    =
    \BM
    +a & +c \\
    -b & -d
    \EM^{\sharp\flat}
-   \end{align}
    
 In tensor notation, this correspond to:
 
