@@ -53,45 +53,6 @@ sitemap_url_scheme = "{link}"
 
 todo_include_todos = True
 
-# Math
-# ----
-
-# minkowski sharp sharp
-# '''''''''''''''''''''
-
-# {{{
-
-etasharpsharp_string = r'''
-\begin{bmatrix}
-\begin{bmatrix}
-           +1 \\
-\phantom{+} 0 \\
-\phantom{+} 0 \\
-\phantom{+} 0 \\
-\end{bmatrix} \\
-\begin{bmatrix}
-\phantom{+} 0 \\
-           -1 \\
-\phantom{+} 0 \\
-\phantom{+} 0 \\
-\end{bmatrix} \\
-\begin{bmatrix}
-\phantom{+} 0 \\
-\phantom{+} 0 \\
-           -1 \\
-\phantom{+} 0 \\
-\end{bmatrix} \\
-\begin{bmatrix}
-\phantom{+} 0 \\
-\phantom{+} 0 \\
-\phantom{+} 0 \\
-           -1 \\
-\end{bmatrix}
-\end{bmatrix}
-'''
-
-# }}}
-
 mathjax3_config = {
     'chtml': {
         'displayAlign': 'left',
@@ -110,6 +71,8 @@ mathjax3_config = {
             'Bz': r'B^{z}',
             'BM': r'\begin{bmatrix}',
             'EM': r'\end{bmatrix}',
+            '{': r'\begin{bmatrix}',
+            '}': r'\end{bmatrix}',
             'etatsharp': r'\BM  1 \\  0 \\  0 \\  0 \EM',
             'etaxsharp': r'\BM  0 \\ -1 \\ -1 \\  0 \EM',
             'etaysharp': r'\BM  0 \\  0 \\ -1 \\  0 \EM',

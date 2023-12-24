@@ -32,348 +32,165 @@ for simplicity.
 .. math::
 
    \eta^{\sharp\sharp}
-   =
-   \begin{bmatrix}
-       +1 &  0 \\
-        0 & -1
-   \end{bmatrix}^{\sharp\sharp}
-   =
-   \begin{bmatrix}
-       \begin{bmatrix}
-       +1 \\
-        0 
-       \end{bmatrix} \\
-       \begin{bmatrix}
-        0 \\
-       -1
-       \end{bmatrix}
-   \end{bmatrix}
+   = \{ +1 &  0 \\ 0 & -1 \}^{\sharp\sharp}
+   = \{ \{ +1 \\ 0 \} \\ \{ 0 \\ -1 \} \}
 
 .. math::
 
    \eta^{\flat\flat}
-   =
-   \begin{bmatrix}
-       +1 &  0 \\
-        0 & -1
-   \end{bmatrix}^{\flat\flat}
-   =
-   \begin{bmatrix}
-       \begin{bmatrix}
-       +1 &
-        0 
-       \end{bmatrix} &
-       \begin{bmatrix}
-        0 &
-       -1
-       \end{bmatrix}
-   \end{bmatrix}
+   = \{ +1 & 0 \\ 0 & -1 \}^{\flat\flat}
+   = \{ \{ +1 &  0 \} & \{ 0 & -1 \} \}
 
 Raising and Lowering Indices
 ----------------------------
 
-Rank :math:`(0,1)` to :math:`(1,0)`
-'''''''''''''''''''''''''''''''''''
+.. rubric:: Rank (0,1) to (1,0)
 
-Covector to Vector
-
-Following matrix multiplication rules, we have:
-
-.. math::
-
-   \begin{bmatrix}
-       a &
-       b
-   \end{bmatrix}
-   \begin{bmatrix}
-       \alpha \\
-       \beta \\
-   \end{bmatrix}
-   =
-   a \alpha + b \beta
-
-Using :math:`\alpha=\begin{bmatrix}+1 \\ 0\end{bmatrix}` and
-:math:`\beta=\begin{bmatrix}0 \\ -1\end{bmatrix}`, we obtain:
+Sharpening a covector to a vector is expressed with :math:`A_\mu \eta^{\mu\nu}
+= A^\nu` in tensor notation. Following vanilla matrix multiplication rules for
+:math:`\alpha = \{ +1 & 0 \}^\sharp` and :math:`\beta=\{ 0 & -1 \}^\sharp`, we
+obtain:
 
 .. math::
 
-   \begin{bmatrix}
-       a &
-       b
-   \end{bmatrix}
-   \begin{bmatrix}
-   \begin{bmatrix} +1 \\  0 \end{bmatrix}, & \begin{bmatrix}  0 \\ -1 \end{bmatrix}
-   \end{bmatrix}
-   =
-   a \, \begin{bmatrix} +1 \\ 0 \end{bmatrix} + b \, \begin{bmatrix}0 \\ -1\end{bmatrix}
-   =
-   \begin{bmatrix}+a \\ -b\end{bmatrix}
+   \{ a \\ b\}^\flat \{ \alpha \\ \beta \}^\sharp
+   = \{ a & b \} \{ \alpha \\ \beta \}
+   = a \alpha + b \beta
 
-With musical notation:
 
 .. math::
 
-   \begin{align}
-   \begin{bmatrix}
-       a \\
-       b \\
-   \end{bmatrix}^{\flat}
-   \begin{bmatrix}
-       +1 &  0 \\
-        0 & -1\\
-   \end{bmatrix}^{\sharp\sharp}
-   =
-   \begin{bmatrix}
-       a \\
-       b \\
-   \end{bmatrix}^{\flat}
-   \begin{bmatrix}
-       \begin{bmatrix}
-           +1 \\
-            0
-       \end{bmatrix}^{\sharp}
-       \begin{bmatrix}
-            0 \\
-           -1
-       \end{bmatrix}^{\sharp}
-   \end{bmatrix}^{\sharp}
-   =
-   \begin{bmatrix}
-        a \\
-       -b \\
-   \end{bmatrix}^{\sharp}
-   \end{align}
+   \{ a \\ b \}^{\flat}
+   \{ +1 & 0 \\ 0 & -1 \\ \}^{\sharp\sharp}
+   = \{ a & b \} \{ \{ +1 \\ 0 \} \\ \{ 0 \\ -1 \} \}
+   = a \, \{ +1 \\ 0 \} + b \, \{ 0 \\ -1 \}
+   = \{ +a \\ -b \}
 
-In tensor notation, this corresponds to:
+.. rubric:: Rank (1,0) to (0,1)
+
+Flattening a vector to a covector is expressed with :math:`A^\mu \eta_{\mu\nu}
+= A_\nu` in tensor notation. Following vanilla matrix multiplication rules for
+:math:`\alpha = \{ +1 & 0 \}^\flat` and :math:`\beta=\{ 0 & -1 \}^\flat`, we
+obtain:
 
 .. math::
 
-   A_\mu \eta^{\mu\nu} = A^\nu
-
-Rank :math:`(1,1)` to :math:`(2,0)`
-'''''''''''''''''''''''''''''''''''
-
-Take the following vanilla matrix multiplication:
+   \{ \alpha \\ \beta \}^\flat \{ a \\ b \}^\sharp
+   = \{ \alpha & \beta \} \{ a \\ b \}
+   = \alpha a + \beta b
 
 .. math::
 
-   \begin{bmatrix}
+   \{ +1 & 0 \\ 0 & -1 \}^{\flat\flat}
+   \{ a \\ b \}^\sharp
+   = \{ \{ +1 &  0 \}, & \{ 0 & -1 \} \} \{ a \\ b \}
+   = \{ +1,  0 \} \; a + \{ 0, -1 \} \; b
+   = \{ +a, -b \}
+   = \{ +a \\ -b \}^\flat
+
+.. rubric:: Rank (0,2) to (1,1)
+
+Raising the index of a covariant/covariant tensor is expressed with
+:math:`A_{\eta\nu} \; \eta^{\eta\nu} = A^{\mu}{}_{\nu}` in tensor notation.
+Following vanilla matrix multiplication rules for :math:`\alpha = \{ +1 & 0
+\}^\sharp` and :math:`\beta=\{ 0 & -1 \}^\sharp`, we obtain:
+
+.. math::
+
+   \{
        a & c \\
        b & d \\
-   \end{bmatrix}
-   \begin{bmatrix}
-       \alpha \\
-       \beta
-   \end{bmatrix}
-   =
-   \begin{bmatrix}
-       a \alpha + c \beta \\
-       b \alpha + d \beta
-   \end{bmatrix}
-
-With :math:`\alpha = \BM +1 \\ 0 \EM` and :math:`\beta = \BM 0 \\ -1 \EM`:
-
-.. math::
-
-   {\small
-   \begin{bmatrix}
-       a & c \\
-       b & d \\
-   \end{bmatrix}^{\sharp\flat}
-   \begin{bmatrix}
+   \}^{\flat\flat}
+   \{
        +1 &  0 \\
         0 & -1 \\
-   \end{bmatrix}^{\sharp\sharp}
+   \}^{\sharp\sharp}
+   = 
+   \{
+       \{ a & c \} & \{ b & d \}
+   \}
+   \{ \alpha \\ \beta \}
+   = \{ a & c \} \; \alpha + \{ b & d \} \; \beta
+   = \{ a \alpha + b \beta \; , & c \alpha + d \beta \}
+
+.. math::
+
+   \{
+       a & c \\
+       b & d \\
+   \}^{\flat\flat}
+   \{
+       +1 &  0 \\
+        0 & -1 \\
+   \}^{\sharp\sharp}
+   = 
+   \{
+       a \{ +1 \\ 0 \} + b \{  0 \\ -1 \} \; , &
+       c \{ +1 \\ 0 \} + d \{  0 \\ -1 \}
+   \}
+   =
+   \{
+       +a & +c \\
+       -b & -d
+   \}^{\sharp\flat}
+
+.. rubric:: Rank (2,0) to (1,1)
+
+.. rubric:: Rank (1,1) to (2,0)
+
+Raising the index of a contravariant/covariant tensor in tensor notation is
+expressed with :math:`A^{\mu}{}_{\eta} \; \eta^{\eta\nu} = A^{\mu\nu}`.
+Following vanilla matrix multiplication rules for :math:`\alpha = \{ +1 & 0
+\}^\sharp` and :math:`\beta=\{ 0 & -1 \}^\sharp`, we obtain:
+
+.. math::
+
+   \{
+       a & c \\
+       b & d \\
+   \}^{\sharp\flat}
+   \{ \alpha \\ \beta \}^\sharp
+   =
+   \{
+       a & c \\
+       b & d \\
+   \}
+   \{ \alpha \\ \beta \}
+   =
+   \{
+       a \alpha + c \beta \\
+       b \alpha + d \beta
+   \}
+
+.. math::
+
+   \{
+       a & c \\
+       b & d \\
+   \}^{\sharp\flat}
+   \{
+       +1 &  0 \\
+        0 & -1 \\
+   \}^{\sharp\sharp}
    =
    \begin{bmatrix}
-       a \begin{bmatrix} +1 \\  0 \\ \end{bmatrix} +
-       c \begin{bmatrix}  0 \\ -1    \end{bmatrix} \\
-       b \begin{bmatrix} +1 \\  0 \\ \end{bmatrix} +
-       d \begin{bmatrix}  0 \\ -1    \end{bmatrix} \\
+       a \{ +1 \\  0 \} + c \{  0 \\ -1 \} \\
+       b \{ +1 \\  0 \} + d \{  0 \\ -1 \} \\
    \end{bmatrix}
    =
-   \begin{bmatrix}
-       \begin{bmatrix} +a \\ -c \\ \end{bmatrix} \\
-       \begin{bmatrix}  b \\ -d \\ \end{bmatrix} \\
-   \end{bmatrix}
+   \{
+       \{ +a \\ -c \\ \} \\
+       \{  b \\ -d \\ \} \\
+   \}
    =
-   \begin{bmatrix}
+   \{
        +a & +b \\
        -c & -d \\
-   \end{bmatrix}^{\sharp\sharp}
-   }
+   \}^{\sharp\sharp}
 
-In tensor notation, this correspond to:
-
-.. math::
-
-   A^{\mu}{}_{\eta} \; \eta^{\eta\nu} = A^{\mu\nu}
-
-Rank :math:`(0,2)` to :math:`(1,1)`
-'''''''''''''''''''''''''''''''''''
-
-To raise the indice of a rank :math:`(0,2)` covariant/covariant tensor to a
-rank :math:`(1,1)` contravariant/covariant tensor, consider the following
-vanilla matrix multiplication:
-
-.. math::
-
-   \BM
-       \BM a & c \EM & \BM b & d \EM
-   \EM
-   \BM \alpha \\ \beta \EM
-   =
-   \BM a & c \EM \; \alpha + \BM b & d \EM \; \beta
-   =
-   \BM
-   a \alpha + b \beta \; , & c \alpha + d \beta
-   \EM
-
-With :math:`\alpha = \BM +1 \\ 0 \EM` and :math:`\beta = \BM 0 \\ -1 \EM`:
-
-.. math::
-
-   \BM
-   a & c \\
-   b & d \\
-   \EM^{\flat\flat}
-   \BM
-   +1 &  0 \\
-    0 & -1 \\
-   \EM^{\sharp\sharp}
-   = 
-   \BM
-   a \BM +1 \\ 0 \EM + b \BM  0 \\ -1 \EM \; , &
-   c \BM +1 \\ 0 \EM + d \BM  0 \\ -1 \EM
-   \EM
-   =
-   \BM
-   +a & +c \\
-   -b & -d
-   \EM^{\sharp\flat}
-   
-In tensor notation, this correspond to:
-
-.. math::
-
-   A_{\eta\nu} \; \eta^{\eta\nu} = A^{\mu}{}_{\nu}
-
-Flattening a Vector to a Covector
-'''''''''''''''''''''''''''''''''
-
-The goal here is to flatten a vector to a covector
-
-Following matrix multiplication rules, we get:
-
-.. math::
-
-   \begin{bmatrix}
-       \alpha &
-       \beta
-   \end{bmatrix}
-   \begin{bmatrix}
-       a \\
-       b \\
-   \end{bmatrix}
-   =
-   \alpha a + \beta b
-
-Using :math:`\alpha=\begin{bmatrix}+1, 0\end{bmatrix}` and
-:math:`\beta=\begin{bmatrix}0, -1\end{bmatrix}`, we obtain:
-
-.. math::
-
-   \begin{align}
-       \begin{bmatrix}
-           \begin{bmatrix} +1 &  0 \end{bmatrix}, & \begin{bmatrix}  0 & -1 \end{bmatrix}
-       \end{bmatrix}
-       \begin{bmatrix}
-           a \\
-           b \\
-       \end{bmatrix}
-   &=
-       \begin{bmatrix}+1, 0\end{bmatrix} \; a + \begin{bmatrix}0, -1\end{bmatrix} \; b \\
-   &=
-       \begin{bmatrix}+a, -b\end{bmatrix}
-   \end{align}
-
-With musical notation:
-
-.. math::
-
-   \begin{align}
-   \begin{bmatrix}
-       +1 &  0 \\
-        0 & -1\\
-   \end{bmatrix}^{\flat\flat}
-   \begin{bmatrix}
-       a \\
-       b \\
-   \end{bmatrix}^{\sharp}
-   =
-   \begin{bmatrix}
-       \begin{bmatrix}
-           +1 \\
-            0
-       \end{bmatrix}^{\flat}
-       \begin{bmatrix}
-            0 \\
-           -1
-       \end{bmatrix}^{\flat}
-   \end{bmatrix}^{\flat}
-   \begin{bmatrix}
-       a \\
-       b \\
-   \end{bmatrix}^{\sharp}
-   =
-   \begin{bmatrix}
-        a \\
-       -b \\
-   \end{bmatrix}^{\flat}
-   \end{align}
-
-.. admonition:: Same calculation with too many details
-   :class: dropdown
-
-   .. math::
-   
-      \begin{align}
-      \begin{bmatrix}
-          +1 &  0 \\
-           0 & -1\\
-      \end{bmatrix}^{\flat\flat}
-      \begin{bmatrix}
-          a \\
-          b \\
-      \end{bmatrix}^{\sharp}
-      & =
-      \begin{bmatrix}
-          \begin{bmatrix} +1 &  0 \end{bmatrix}, &
-          \begin{bmatrix}  0 & -1 \end{bmatrix}
-      \end{bmatrix}
-      \begin{bmatrix}
-          a \\
-          b \\
-      \end{bmatrix} \\
-      & =
-      \begin{bmatrix} +1 &  0 \end{bmatrix} \; a +
-      \begin{bmatrix}  0 & -1 \end{bmatrix} \; b \\
-      & =
-      \begin{bmatrix} +a &  0 \end{bmatrix} +
-      \begin{bmatrix}  0 & -b \end{bmatrix} \\
-      & =
-      \begin{bmatrix}
-          +a & -b \\
-      \end{bmatrix} \\
-      & =
-      \begin{bmatrix}
-           a \\
-          -b \\
-      \end{bmatrix}^{\flat}
-      \end{align}
+.. rubric:: Rank (1,1) to (0,2)
 
 Lowering the Indice of a Rank 2 Contravariant/Covariant Tensor
-''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 The goal here is to lower a contravariant/covariant tensor
 :math:`[T^\mu{}_\nu]`, or in musical notation :math:`T^{\sharp\sharp}`
