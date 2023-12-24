@@ -15,7 +15,7 @@ author = 'Stéphane Haussler'
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
 extensions = [
-    'sphinxcontrib.tikz',
+    #'sphinxcontrib.tikz',
     'sphinx.ext.todo',
     'sphinxcontrib.googleanalytics',
     'sphinx_sitemap',
