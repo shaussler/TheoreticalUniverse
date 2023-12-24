@@ -8,6 +8,7 @@ The following articles are under construction.
    :caption: Contents:
 
    musical_notation.rst
-   minkowski_metric.rst
    all_faraday_tensors.rst
    hodge_dual_faraday_tensor.rst
+   musical_field_equations.rst
+   minkowski_metric.rst
