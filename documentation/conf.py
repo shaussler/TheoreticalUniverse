@@ -111,13 +111,33 @@ mathjax3_config = {
             'EtayFlat': r'\{ 0 &  0 & -1 &  0 \}',
             'EtazFlat': r'\{ 0 &  0 &  0 & -1 \}',
 
+            'EtatCol': r'\{+1 \\  0 \\  0 \\  0 \}',
+            'EtaxCol': r'\{ 0 \\ -1 \\  0 \\  0 \}',
+            'EtayCol': r'\{ 0 \\  0 \\ -1 \\  0 \}',
+            'EtazCol': r'\{ 0 \\  0 \\  0 \\ -1 \}',
+
+            'EtatRow': r'\{+1 &  0 &  0 &  0 \}',
+            'EtaxRow': r'\{ 0 & -1 & -1 &  0 \}',
+            'EtayRow': r'\{ 0 &  0 & -1 &  0 \}',
+            'EtazRow': r'\{ 0 &  0 &  0 & -1 \}',
+
             'EtaSharpSharp': r'''
                 \begin{bmatrix}
                     +1 &  0 &  0 &  0 \\
                      0 & -1 &  0 &  0 \\
                      0 &  0 & -1 &  0 \\
                      0 &  0 &  0 & -1 \\
-                \end{bmatrix}^{\sharp\flat}''',
+                \end{bmatrix}^{\sharp\sharp}
+            ''',
+
+            'EtaFlatFlat': r'''
+                \begin{bmatrix}
+                    +1 &  0 &  0 &  0 \\
+                     0 & -1 &  0 &  0 \\
+                     0 &  0 & -1 &  0 \\
+                     0 &  0 &  0 & -1 \\
+                \end{bmatrix}^{\flat\flat}
+            ''',
 
             # Define Faraday Tensors
             # ----------------------
@@ -131,14 +151,32 @@ mathjax3_config = {
                 \end{bmatrix}^{\sharp\flat}
             ''',
 
+            'FaradayFlatSharp': r'''
+                \begin{bmatrix}
+                         & +\Ex & +\Ey & +\Ez \\
+                    ?\Ex &      & +\Bz & -\By \\
+                    ?\Ey & -\Bz &      & +\Bx \\
+                    ?\Ez & +\By & -\Bx &      \\
+                \end{bmatrix}^{\flat\sharp}
+            ''',
+
             'FaradaySharpSharp': r'''
                 \begin{bmatrix}
                          & +\Ex & +\Ey & +\Ez \\
                     -\Ex &      & +\Bz & -\By \\
                     -\Ey & -\Bz &      & +\Bx \\
                     -\Ez & +\By & -\Bx &      \\
-                \end{bmatrix}^{\sharp\flat}
-            '''
+                \end{bmatrix}^{\sharp\sharp}
+            ''',
+
+            'FaradayFlatFlat': r'''
+                \begin{bmatrix}
+                         & +\Ex & +\Ey & +\Ez \\
+                    -\Ex &      & -\Bz & +\By \\
+                    -\Ey & +\Bz &      & -\Bx \\
+                    -\Ez & -\By & +\Bx &      \\
+                \end{bmatrix}^{\flat\flat}
+            ''',
 
             'FaradayDualSharpFlat': r'''
                 \begin{bmatrix}

@@ -12,6 +12,23 @@ notation <musical_notation:The Musical Tensor Notation>` to facilitate
 calculations. In this article, I systematically derive all variations of the
 electromagnetic field tensor.
 
+.. The musical tensor representation aims at compact expressions while following
+.. matrix multiplication rules. Recall that:
+.. 
+.. .. math::
+.. 
+..    \{ \{ a & b \} & \{ c & d \}\}
+..    = \{ \{a \\ b\}^\flat & \{c \\ d\}^\flat\}^\flat
+..    = \{ \{a \\ b\}^\flat \\ \{c \\ d\}^\flat\}^\flat
+..    = \{ \{ a & b \}^\flat \{ c & d \}^\flat \}^\flat
+.. 
+.. .. math::
+.. 
+..    \{ \{ a \\ b \} \\ \{ c \\ d \}\}
+..    = \{ \{a \\ b\}^\sharp & \{c \\ d\}^\sharp\}^\sharp
+..    = \{ \{a \\ b\}^\sharp \\ \{c \\ d\}^\sharp\}^\sharp
+..    = \{ \{ a & b \}^\sharp \{ c & d \}^\sharp \}^\sharp
+
 Inhomogenous equations
 ----------------------
 
@@ -43,7 +60,7 @@ Metric>` to obtain the other forms. The electromagnetic field tensor is:
    }
 
 .. admonition:: Step by step
-   :class: dropdown, toggle-shown
+   :class: dropdown
 
    .. math::
 
@@ -91,57 +108,22 @@ Metric>` to obtain the other forms. The electromagnetic field tensor is:
 .. math::
  
    {\small
-   F^{\flat\flat}
-   =
-   \eta{\flat\flat} F^{\sharp\flat}
-   =
-   \begin{bmatrix}
-    1 &  0 &  0 &  0 \\
-    0 & -1 &  0 &  0 \\
-    0 &  0 & -1 &  0 \\
-    0 &  0 &  0 & -1
-   \end{bmatrix}^{\flat\flat}
-   \begin{bmatrix}
-                 & +\tilde{E^x} & +\tilde{E^y} & + \tilde{E^z} \\
-    +\tilde{E^x} &              & +       B^z  & -        B^y  \\
-    +\tilde{E^y} & -       B^z  &              & +        B^x  \\
-    +\tilde{E^z} & +       B^y  & -       B^x  &               \\
-   \end{bmatrix}^{\sharp\flat}
-   =
-   \begin{bmatrix}
-                 & +\tilde{E^x} & +\tilde{E^y} & + \tilde{E^z} \\
-    -\tilde{E^x} &              & -       B^z  & +        B^y  \\
-    -\tilde{E^y} & +       B^z  &              & -        B^x  \\
-    -\tilde{E^z} & -       B^y  & +       B^x  &               \\
-   \end{bmatrix}^{\flat\flat}
+       F^{\flat\flat}
+       = \eta{\flat\flat} F^{\sharp\flat}
+       = \EtaFlatFlat \FaradaySharpFlat
+       = \FaradayFlatFlat
    }
 
-.. admonition:: Step by step without musical notation
-   :class: dropdown
+.. admonition:: Step by step
+   :class: dropdown, toggle-shown
 
    .. math::
 
       {\scriptsize
-       F^{\flat\flat}=
-       \{ \EtatFlat & \EtaxFlat & \EtayFlat & \EtazFlat \}
-       \begin{bmatrix}
-                     & +\tilde{E^x} & +\tilde{E^y} & + \tilde{E^z} \\
-        +\tilde{E^x} &              & +       B^z  & -        B^y  \\
-        +\tilde{E^y} & -       B^z  &              & +        B^x  \\
-        +\tilde{E^z} & +       B^y  & -       B^x  &               \\
-       \end{bmatrix}
-      }
-
-   .. math::
-
-      {\scriptsize
-       F^{\flat\flat}=
-       \begin{bmatrix}
-                   0    \EtatFlat &   +\tilde{E^x} \EtaxFlat &   +\tilde{E^y} \EtayFlat &   +\tilde{E^z} \EtazFlat, &
-           +\tilde{E^x} \EtatFlat & \phantom{+X^x} \EtaxFlat &   -       B^z  \EtayFlat &   +       B^y  \EtazFlat, & 
-           +\tilde{E^y} \EtatFlat &   +       B^z  \EtaxFlat & \phantom{+X^x} \EtayFlat &   -       B^x  \EtazFlat, &
-           +\tilde{E^z} \EtatFlat &   -       B^y  \EtaxFlat &   +       B^x  \EtayFlat & \phantom{+X^x} \EtazFlat
-       \end{bmatrix}
+      F^{\flat\flat}
+      =
+      \{ \EtatCol^\flat & \EtaxCol^\flat & \EtayCol^\flat & \EtazCol^\flat \}^\flat
+      \FaradaySharpFlat
       }
 
    .. math::
@@ -149,31 +131,21 @@ Metric>` to obtain the other forms. The electromagnetic field tensor is:
       {\scriptsize
       F^{\flat\flat}=
       \begin{bmatrix}
+          \begin{alignat}{1}
+          + 0  & \EtatCol^\flat & +\Ex & \EtaxCol^\flat & +\Ey & \EtayCol^\flat & +\Ez & \EtazCol^\flat \\
+          +\Ex & \EtatCol^\flat & + 0  & \EtaxCol^\flat & -\Bz & \EtayCol^\flat & +\By & \EtazCol^\flat \\
+          +\Ey & \EtatCol^\flat & +\Bz & \EtaxCol^\flat & + 0  & \EtayCol^\flat & -\Bx & \EtazCol^\flat \\
+          +\Ez & \EtatCol^\flat & -\By & \EtaxCol^\flat & +\Bx & \EtayCol^\flat & + 0  & \EtazCol^\flat \\
+          \end{alignat}
+      \end{bmatrix}^\flat
+      =
       \begin{bmatrix}
-      0           & -\tilde{E^x} & -\tilde{E^y} & -\tilde{E^z}
-      \end{bmatrix} &
-      \begin{bmatrix}
-      \tilde{E^x} &         0    &        +B^z  &        -B^y
-      \end{bmatrix} &
-      \begin{bmatrix}
-      \tilde{E^y} &        -B^z  &         0    &        +B^x
-      \end{bmatrix} &
-      \begin{bmatrix}
-      \tilde{E^z} &        +B^y  &        -B^x  &         0  
-      \end{bmatrix}
-      \end{bmatrix}
-      }
-
-   .. math::
-
-      {\scriptsize
-      F^{\flat\flat}=
-      \begin{bmatrix}
-                       & +\tilde{E^x} & +\tilde{E^y} & + \tilde{E^z} \\
-          -\tilde{E^x} &              & -       B^z  & +        B^y  \\
-          -\tilde{E^y} & +       B^z  &              & -        B^x  \\
-          -\tilde{E^z} & -       B^y  & +       B^x  &               \\
-      \end{bmatrix}^{\flat\flat}
+          \{      \\ -\Ex \\ -\Ey \\ -\Ez \}^\flat \\
+          \{ +\Ex \\      \\ +\Bz \\ -\By \}^\flat \\
+          \{ +\Ey \\ -\Bz \\      \\ +\Bx \}^\flat \\
+          \{ +\Ez \\ +\By \\ -\Bx \\ + 0  \}^\flat \\
+      \end{bmatrix}^\flat
+      = \FaradayFlatFlat
       }
 
 .. }}}
@@ -185,31 +157,11 @@ Metric>` to obtain the other forms. The electromagnetic field tensor is:
 .. math::
  
    {\small
-   F^{\flat\sharp}
-   =
-   F^{\flat\flat} \eta^{\sharp\sharp}
-   =
-   \begin{bmatrix}
-                 & +\tilde{E^x} & +\tilde{E^y} & + \tilde{E^z} \\
-    -\tilde{E^x} &              & -       B^z  & +        B^y  \\
-    -\tilde{E^y} & +       B^z  &              & -        B^x  \\
-    -\tilde{E^z} & -       B^y  & +       B^x  &               \\
-   \end{bmatrix}^{\flat\flat}
-   \begin{bmatrix}
-    1 &  0 &  0 &  0 \\
-    0 & -1 &  0 &  0 \\
-    0 &  0 & -1 &  0 \\
-    0 &  0 &  0 & -1
-   \end{bmatrix}^{\sharp\sharp}
-   =
-   \begin{bmatrix}
-                 & +\tilde{E^x} & +\tilde{E^y} & +\tilde{E^z} \\
-    +\tilde{E^x} &              & +       B^z  & -       B^y  \\
-    +\tilde{E^y} & -       B^z  &              & +       B^x  \\
-    +\tilde{E^z} & +       B^y  & -       B^x  &              \\
-   \end{bmatrix}^{\flat\sharp}
+       F^{\flat\sharp}
+       = F^{\flat\flat} \eta^{\sharp\sharp}
+       = \FaradayFlatFlat \EtaSharpSharp
+       = \FaradayFlatSharp
    }
-
 
 .. admonition:: Step by step
    :class: dropdown, toggle-shown
@@ -217,39 +169,37 @@ Metric>` to obtain the other forms. The electromagnetic field tensor is:
    .. math::
 
       {\scriptsize
+      F^{\flat\sharp}
+      = F^{\flat\flat} \eta^{\sharp\sharp}
       =
       \begin{bmatrix}
-      \begin{bmatrix}      \\ -\Ex \\ -\Ey \\ -\Ez \\ \end{bmatrix}^{\flat} &
-      \begin{bmatrix} +\Ex \\      \\ +\Bz \\ -\By \\ \end{bmatrix}^{\flat} &
-      \begin{bmatrix} +\Ey \\ -\Bz \\      \\ +\Bx \\ \end{bmatrix}^{\flat} &
-      \begin{bmatrix} +\Ez \\ +\By \\ -Bx  \\      \\ \end{bmatrix}^{\flat}
+          \{      \\ -\Ex \\ -\Ey \\ -\Ez \\ \}^{\flat} &
+          \{ +\Ex \\      \\ +\Bz \\ -\By \\ \}^{\flat} &
+          \{ +\Ey \\ -\Bz \\      \\ +\Bx \\ \}^{\flat} &
+          \{ +\Ez \\ +\By \\ -Bx  \\      \\ \}^{\flat}
       \end{bmatrix}^{\flat}
       \begin{bmatrix}
-      \EtatSharp^{\sharp} & \EtaxSharp^{\sharp} & \EtaySharp^{\sharp} & \EtazSharp^{\sharp}
+          \EtatSharp^{\sharp} \\
+          \EtaxSharp^{\sharp} \\
+          \EtaySharp^{\sharp} \\
+          \EtazSharp^{\sharp} \\
       \end{bmatrix}^{\sharp} \\
-      =a
       }
-
-.. note::
-
-   With musical notation, the expression can be explicitely sharpened
-   :math:`\sharp` (respectivelty flattened :math:`\flat`) like so:
 
    .. math::
 
-      \begin{bmatrix}
-                    & +\tilde{E^x} & +\tilde{E^y} & +\tilde{E^z} \\
-       +\tilde{E^x} &              & +       B^z  & -       B^y  \\
-       +\tilde{E^y} & -       B^z  &              & +       B^x  \\
-       +\tilde{E^z} & +       B^y  & -       B^x  &               \\
-      \end{bmatrix}^{\flat\sharp}
+      {\scriptsize
+      F^{\flat\sharp}
       =
       \begin{bmatrix}
-        \begin{bmatrix} \phantom{+X^x} & +\tilde{E^x}   & +\tilde{E^y}   & +\tilde{E^z}   \end{bmatrix} \\
-        \begin{bmatrix} +\tilde{E^x}   & \phantom{+X^x} & +       B^z    & -       B^y    \end{bmatrix} \\
-        \begin{bmatrix} +\tilde{E^y}   & -       B^z    & \phantom{+X^x} & +       B^x    \end{bmatrix} \\
-        \begin{bmatrix} +\tilde{E^z}   & +       B^y    & -       B^x    & \phantom{+X^x} \end{bmatrix} \\
-      \end{bmatrix}
+          \begin{alignat}{1}
+            0  & \EtatCol^\sharp & +\Ex & \EtaxCol^\sharp & +\Ey & \EtayCol^\sharp & +\Ez & \EtazCol^\sharp \\
+          -\Ex & \EtatCol^\sharp & + 0  & \EtaxCol^\sharp & -\Bz & \EtayCol^\sharp & +\By & \EtazCol^\sharp \\
+          -\Ey & \EtatCol^\sharp & +\Bz & \EtaxCol^\sharp & + 0  & \EtayCol^\sharp & -\Bx & \EtazCol^\sharp \\
+          -\Ez & \EtatCol^\sharp & -\By & \EtaxCol^\sharp & +\Bx & \EtayCol^\sharp & + 0  & \EtazCol^\sharp \\
+          \end{alignat}
+      \end{bmatrix}^\flat
+      }
 
 .. }}}
 
@@ -458,12 +408,7 @@ Contravariant-covariant
    \partial_y \\
    \partial_z \\
    \end{bmatrix}^{\flat} &
-   \begin{bmatrix}
-                  & +\tilde{E^x} & +\tilde{E^y} & + \tilde{E^z} \\
-    +\tilde{E^x}  &              & +       B^z  & -        B^y  \\
-    +\tilde{E^y}  & -       B^z  &              & +        B^x  \\
-    +\tilde{E^z}  & +       B^y  & -       B^x  &               \\
-   \end{bmatrix}^{\sharp\flat}
+   \FaradaySharpFlat
    =
    \begin{bmatrix}
    + \mu_0 c \rho \\
@@ -504,13 +449,8 @@ Contravariant-contravariant
    \partial_x \\
    \partial_y \\
    \partial_z \\
-   \end{bmatrix}^{\flat} &
-   \begin{bmatrix}
-                 & -\tilde{E^x} & -\tilde{E^y} & - \tilde{E^z} \\
-    +\tilde{E^x} &              & -       B^z  & +        B^y  \\
-    +\tilde{E^y} & +       B^z  &              & -        B^x  \\
-    +\tilde{E^z} & -       B^y  & +       B^x  &               \\
-   \end{bmatrix}^{\sharp\sharp}
+   \end{bmatrix}^{\flat}
+   \FaradaySharpSharp
    =
    \begin{bmatrix}
    \mu_0 c \rho \\
@@ -543,6 +483,23 @@ Contravariant-contravariant
 
 Covariant-covariant
 '''''''''''''''''''
+
+.. math::
+
+   \begin{bmatrix}
+   \partial_t \\
+   \partial_x \\
+   \partial_y \\
+   \partial_z \\
+   \end{bmatrix}^{\sharp}
+   \FaradayFlatFlat
+   =
+   \begin{bmatrix}
+   + \mu_0 c \rho \\
+   - \mu_0 J^x    \\
+   - \mu_0 J^y    \\
+   - \mu_0 J^z    \\
+   \end{bmatrix}^{\flat}
 
 Covariant-contravariant
 '''''''''''''''''''''''
