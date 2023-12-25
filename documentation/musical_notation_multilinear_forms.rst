@@ -1,8 +1,8 @@
 The musical notation provides a compact and excplicit representation by
 differentiating between sharp (:math:`\sharp`) vectors and a flat
-(:math:`\flat`) covectors, rendering symmetries evident and comprehensible. At
-the same time, calculations are streamlined by adhering to matrix
-multiplication rules, offering a familiar framework for computations.
+(:math:`\flat`) covectors, rendering symmetries evident. At the same time,
+calculations are streamlined by adhering to matrix multiplication rules,
+offering a familiar framework for computations.
 
 .. rubric:: Vectors and covectors
 
@@ -21,7 +21,8 @@ multiplication rules, offering a familiar framework for computations.
          \end{bmatrix}
      \end{matrix}
 
-.. rubric:: Covector of vector, rows of columns, contravariant/covariant tensor of rank 2
+.. rubric:: Covector of vector, rows of columns, contravariant/covariant tensor
+   of rank (1,1)
 
 .. math::
 
@@ -43,13 +44,16 @@ multiplication rules, offering a familiar framework for computations.
        \end{bmatrix}
    \end{bmatrix}
 
-.. rubric:: Vector of covectors, columns of rows, covariant/contravariant tensor of rank 2
+.. rubric:: Vector of covectors, columns of rows, covariant/contravariant
+   tensor of rank (1,1)
 
 .. math::
 
    A^{\flat\sharp}
-   =                                                                                                                                                                                       \begin{bmatrix}
-       a & c \\                                                                                                                                                                                b & d \\
+   =
+   \begin{bmatrix}
+       a & c \\
+       b & d \\
    \end{bmatrix}^{\flat\sharp}
    =
    \begin{bmatrix}
@@ -57,7 +61,8 @@ multiplication rules, offering a familiar framework for computations.
        \begin{bmatrix} c & d \end{bmatrix} \\
    \end{bmatrix}
 
-.. rubric:: Covectors of covectors, rows of rows, covariant/convariant tensor of rank 2
+.. rubric:: Covectors of covectors, rows of rows, covariant/convariant tensor
+   of rank (0,2)
 
 .. math::
 
@@ -73,7 +78,8 @@ multiplication rules, offering a familiar framework for computations.
        \begin{bmatrix} c & d \end{bmatrix}
    \end{bmatrix}
 
-.. rubric:: Vectors of vectors, columns of columns, contravariant/contravariant tensor of rank 2
+.. rubric:: Vectors of vectors, columns of columns, contravariant/contravariant
+   tensor of rank (2,0)
 
 .. math::
 

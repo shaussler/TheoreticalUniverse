@@ -26,14 +26,7 @@ Metric>` to obtain the other forms. The electromagnetic field tensor is:
 
 .. math::
 
-   F^{\sharp\flat}
-   =
-   \begin{bmatrix}
-                 & +\tilde{E^x} & +\tilde{E^y} & + \tilde{E^z} \\
-    +\tilde{E^x} &              & +       B^z  & -        B^y  \\
-    +\tilde{E^y} & -       B^z  &              & +        B^x  \\
-    +\tilde{E^z} & +       B^y  & -       B^x  &               \\
-   \end{bmatrix}^{\sharp\flat}
+   F^{\sharp\flat} = \FaradaySharpFlat
 
 .. }}}
 
@@ -44,53 +37,30 @@ Metric>` to obtain the other forms. The electromagnetic field tensor is:
 .. math::
 
    {\small
-   F^{\sharp\sharp}
-   =
-   F^{\sharp\flat} \eta^{\sharp\sharp}
-   =
-   \begin{bmatrix}
-                    & +\tilde{E^x} & +\tilde{E^y} & + \tilde{E^z} \\
-       +\tilde{E^x} &              & +       B^z  & -        B^y  \\
-       +\tilde{E^y} & -       B^z  &              & +        B^x  \\
-       +\tilde{E^z} & +       B^y  & -       B^x  &               \\
-   \end{bmatrix}^{\sharp\flat}
-   \begin{bmatrix}
-       1 &  0 &  0 &  0 \\
-       0 & -1 &  0 &  0 \\
-       0 &  0 & -1 &  0 \\
-       0 &  0 &  0 & -1
-   \end{bmatrix}^{\sharp\sharp}
-   =
-   \begin{bmatrix}
-                    & +\tilde{E^x} & +\tilde{E^y} & + \tilde{E^z} \\
-       -\tilde{E^x} &              & +       B^z  & -        B^y  \\
-       -\tilde{E^y} & -       B^z  &              & +        B^x  \\
-       -\tilde{E^z} & +       B^y  & -       B^x  &               \\
-   \end{bmatrix}^{\sharp\sharp}
+       F^{\sharp\sharp} = F^{\sharp\flat} \eta^{\sharp\sharp}
+                        = \FaradaySharpFlat \EtaSharpSharp
+                        = \FaradaySharpSharp
    }
 
-.. admonition:: Step by step without musical notation
-   :class: dropdown
+.. admonition:: Step by step
+   :class: dropdown, toggle-shown
 
    .. math::
 
       {\scriptsize
-      F^{\sharp\sharp}
-      =
-      \begin{bmatrix}
-                    & +\tilde{E^x} & +\tilde{E^y} & + \tilde{E^z} \\
-       +\tilde{E^x} &              & +       B^z  & -        B^y  \\
-       +\tilde{E^y} & -       B^z  &              & +        B^x  \\
-       +\tilde{E^z} & +       B^y  & -       B^x  &               \\
-      \end{bmatrix}
-      \BM \etatsharp \\ \etaxsharp \\ \etaysharp \\ \etazsharp \EM
-      =
-      \begin{bmatrix}
-         \phantom{+E^x} & \etatsharp & +\tilde{E^x} & \etaxsharp & +\tilde{E^y} & \etaysharp  & + \tilde{E^z} & \etazsharp  \\
-           +\tilde{E^x} & \etatsharp &              & \etaxsharp & +       B^z  & \etaysharp  & -        B^y  & \etazsharp  \\
-           +\tilde{E^y} & \etatsharp & -       B^z  & \etaxsharp &              & \etaysharp  & +        B^x  & \etazsharp  \\
-           +\tilde{E^z} & \etatsharp & +       B^y  & \etaxsharp & -       B^x  & \etaysharp  &               & \etazsharp  \\
-      \end{bmatrix}
+          F^{\sharp\sharp}
+          =
+          \FaradaySharpSharp
+          \{ \EtatSharp \\ \EtaxSharp \\ \EtaySharp \\ \EtazSharp \}
+          =
+          \begin{bmatrix}
+              \begin{alignat}{1}
+                0  & \EtatSharp &+\Ex & \EtaxSharp & +Ey & \EtaySharp &+\Ez & \EtazSharp \\
+              +\Ex & \EtatSharp &  0  & \EtaxSharp & +Bz & \EtaySharp &-\By & \EtazSharp \\
+              +\Ey & \EtatSharp &-\Bz & \EtaxSharp &  0  & \EtaySharp &+\Bx & \EtazSharp \\
+              +\Ez & \EtatSharp &+\By & \EtaxSharp & -Bx & \EtaySharp &  0  & \EtazSharp
+              \end{alignat}
+          \end{bmatrix}
       }
 
    .. math::
@@ -99,63 +69,18 @@ Metric>` to obtain the other forms. The electromagnetic field tensor is:
       F^{\sharp\sharp}
       =
       \begin{bmatrix}
-          \begin{bmatrix}
-                           \\
-              -\tilde{E^x} \\
-              -\tilde{E^y} \\
-              -\tilde{E^z} \\
-          \end{bmatrix} \\
-          \begin{bmatrix}
-              +\tilde{E^x} \\
-                           \\
-              -       B^z  \\
-              +       B^y  \\
-          \end{bmatrix} \\
-          \begin{bmatrix}
-              +\tilde{E^y} \\
-              +       B^z  \\
-                           \\
-              -       B^x  \\
-          \end{bmatrix} \\
-          \begin{bmatrix}
-              +\tilde{E^z} \\
-              -       B^y  \\
-              +       B^x  \\
-                           \\
-          \end{bmatrix}
+          \{      \\ -\Ex \\ -\Ey \\ -\Ez \\ \} \\
+          \{ +\Ex \\      \\ -\Bz \\ +\By \\ \} \\
+          \{ +\Ey \\ +\Bz \\      \\ -\Bx \\ \} \\
+          \{ +\Ez \\ -\By \\ +\Bx \\      \\ \}
       \end{bmatrix}
       =
-      \begin{bmatrix}
-                    & +\tilde{E^x} & +\tilde{E^y} & + \tilde{E^z} \\
-       -\tilde{E^x} &              & +       B^z  & -        B^y  \\
-       -\tilde{E^y} & -       B^z  &              & +        B^x  \\
-       -\tilde{E^z} & +       B^y  & -       B^x  &               \\
-      \end{bmatrix}^{\sharp\sharp}
+      \FaradaySharpSharp
       }
 
 .. note::
 
-   Commonly the doubly contravariant electromagnetic tensor is written as a
-   row/column matrix. (e.g. `wikipedia article about the electromagnetic tensor
-   <https://en.m.wikipedia.org/wiki/Electromagnetic_tensor>`_). The relation
-   between row/column and row/row representations of the doubly contravariant
-   electromagnetic tensor is the transpose operation.
-
-   .. math::
-
-      \begin{bmatrix}
-                       & -\tilde{E^x} & -\tilde{E^y} & - \tilde{E^z} \\
-          +\tilde{E^x} &              & -       B^z  & +        B^y  \\
-          +\tilde{E^y} & +       B^z  &              & -        B^x  \\
-          +\tilde{E^z} & -       B^y  & +       B^x  &               \\
-      \end{bmatrix}
-      =
-      \begin{bmatrix}
-                       & +\tilde{E^x} & +\tilde{E^y} & + \tilde{E^z} \\
-          -\tilde{E^x} &              & +       B^z  & -        B^y  \\
-          -\tilde{E^y} & -       B^z  &              & +        B^x  \\
-          -\tilde{E^z} & +       B^y  & -       B^x  &               \\
-      \end{bmatrix}^{\sharp\sharp\;T}
+   .. include:: ./musical_notation_notable_difference.rst
 
 .. }}}
 
@@ -198,7 +123,7 @@ Metric>` to obtain the other forms. The electromagnetic field tensor is:
 
       {\scriptsize
        F^{\flat\flat}=
-       \BM \etatflat & \etaxflat & \etayflat & \etazflat \EM
+       \{ \EtatFlat & \EtaxFlat & \EtayFlat & \EtazFlat \}
        \begin{bmatrix}
                      & +\tilde{E^x} & +\tilde{E^y} & + \tilde{E^z} \\
         +\tilde{E^x} &              & +       B^z  & -        B^y  \\
@@ -212,10 +137,10 @@ Metric>` to obtain the other forms. The electromagnetic field tensor is:
       {\scriptsize
        F^{\flat\flat}=
        \begin{bmatrix}
-                   0    \etatflat &   +\tilde{E^x} \etaxflat &   +\tilde{E^y} \etayflat &   +\tilde{E^z} \etazflat, &
-           +\tilde{E^x} \etatflat & \phantom{+X^x} \etaxflat &   -       B^z  \etayflat &   +       B^y  \etazflat, & 
-           +\tilde{E^y} \etatflat &   +       B^z  \etaxflat & \phantom{+X^x} \etayflat &   -       B^x  \etazflat, &
-           +\tilde{E^z} \etatflat &   -       B^y  \etaxflat &   +       B^x  \etayflat & \phantom{+X^x} \etazflat
+                   0    \EtatFlat &   +\tilde{E^x} \EtaxFlat &   +\tilde{E^y} \EtayFlat &   +\tilde{E^z} \EtazFlat, &
+           +\tilde{E^x} \EtatFlat & \phantom{+X^x} \EtaxFlat &   -       B^z  \EtayFlat &   +       B^y  \EtazFlat, & 
+           +\tilde{E^y} \EtatFlat &   +       B^z  \EtaxFlat & \phantom{+X^x} \EtayFlat &   -       B^x  \EtazFlat, &
+           +\tilde{E^z} \EtatFlat &   -       B^y  \EtaxFlat &   +       B^x  \EtayFlat & \phantom{+X^x} \EtazFlat
        \end{bmatrix}
       }
 
@@ -300,7 +225,7 @@ Metric>` to obtain the other forms. The electromagnetic field tensor is:
       \begin{bmatrix} +\Ez \\ +\By \\ -Bx  \\      \\ \end{bmatrix}^{\flat}
       \end{bmatrix}^{\flat}
       \begin{bmatrix}
-      \etatsharp^{\sharp} & \etaxsharp^{\sharp} & \etaysharp^{\sharp} & \etazsharp^{\sharp}
+      \EtatSharp^{\sharp} & \EtaxSharp^{\sharp} & \EtaySharp^{\sharp} & \EtazSharp^{\sharp}
       \end{bmatrix}^{\sharp} \\
       =a
       }

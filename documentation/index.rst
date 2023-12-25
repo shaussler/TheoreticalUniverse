@@ -10,6 +10,7 @@ A personal collection of papers about math and physics.
    :caption: Contents:
 
    faraday_tensor_derivation.rst
+   musical_notation.rst
    de_guas_theorem.rst
    upcoming.rst
 

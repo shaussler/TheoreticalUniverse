@@ -69,18 +69,48 @@ mathjax3_config = {
             'Bx': r'B^{x}',
             'By': r'B^{y}',
             'Bz': r'B^{z}',
-            'BM': r'\begin{bmatrix}',
-            'EM': r'\end{bmatrix}',
+            #'BM': r'\begin{bmatrix}',
+            #'EM': r'\end{bmatrix}',
             '{': r'\begin{bmatrix}',
             '}': r'\end{bmatrix}',
-            'etatsharp': r'\BM  1 \\  0 \\  0 \\  0 \EM',
-            'etaxsharp': r'\BM  0 \\ -1 \\ -1 \\  0 \EM',
-            'etaysharp': r'\BM  0 \\  0 \\ -1 \\  0 \EM',
-            'etazsharp': r'\BM  0 \\  0 \\  0 \\ -1 \EM',
-            'etatflat': r'\BM  1 &  0 &  0 &  0 \EM',
-            'etaxflat': r'\BM  0 & -1 & -1 &  0 \EM',
-            'etayflat': r'\BM  0 &  0 & -1 &  0 \EM',
-            'etazflat': r'\BM  0 &  0 &  0 & -1 \EM',
+            'ph': r'\phantom',
+            #'etatsharp': r'\BM  1 \\  0 \\  0 \\  0 \EM',
+            #'etaxsharp': r'\BM  0 \\ -1 \\ -1 \\  0 \EM',
+            #'etaysharp': r'\BM  0 \\  0 \\ -1 \\  0 \EM',
+            #'etazsharp': r'\BM  0 \\  0 \\  0 \\ -1 \EM',
+            #'etatflat': r'\BM  1 &  0 &  0 &  0 \EM',
+            #'etaxflat': r'\BM  0 & -1 & -1 &  0 \EM',
+            #'etayflat': r'\BM  0 &  0 & -1 &  0 \EM',
+            #'etazflat': r'\BM  0 &  0 &  0 & -1 \EM',
+            'EtatSharp': r'\{+1 \\  0 \\  0 \\  0 \}',
+            'EtaxSharp': r'\{ 0 \\ -1 \\  0 \\  0 \}',
+            'EtaySharp': r'\{ 0 \\  0 \\ -1 \\  0 \}',
+            'EtazSharp': r'\{ 0 \\  0 \\  0 \\ -1 \}',
+            'EtatFlat': r'\{+1 &  0 &  0 &  0 \}',
+            'EtaxFlat': r'\{ 0 & -1 & -1 &  0 \}',
+            'EtayFlat': r'\{ 0 &  0 & -1 &  0 \}',
+            'EtazFlat': r'\{ 0 &  0 &  0 & -1 \}',
+            'EtaSharpSharp': r'''
+                \begin{bmatrix}
+                    +1 &  0 &  0 &  0 \\
+                     0 & -1 &  0 &  0 \\
+                     0 &  0 & -1 &  0 \\
+                     0 &  0 &  0 & -1 \\
+                \end{bmatrix}^{\sharp\flat}''',
+            'FaradaySharpFlat': r'''
+                \begin{bmatrix}
+                         & +\Ex & +\Ey & +\Ez \\
+                    +\Ex &      & +\Bz & -\By \\
+                    +\Ey & -\Bz &      & +\Bx \\
+                    +\Ez & +\By & -\Bx &      \\
+                \end{bmatrix}^{\sharp\flat}''',
+            'FaradaySharpSharp': r'''
+                \begin{bmatrix}
+                         & +\Ex & +\Ey & +\Ez \\
+                    -\Ex &      & +\Bz & -\By \\
+                    -\Ey & -\Bz &      & +\Bx \\
+                    -\Ez & +\By & -\Bx &      \\
+                \end{bmatrix}^{\sharp\flat}'''
         }
     }
 }

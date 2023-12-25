@@ -361,29 +361,28 @@ dual.
 
 .. math::
 
-   \begin{bmatrix}
-       F^\mu{}_\nu
-   \end{bmatrix}
+   F^\mu{}_\nu
    =
    \begin{bmatrix}
-                    & +\tilde{E^x} & +\tilde{E^y} & + \tilde{E^z} \\
-       +\tilde{E^x} &              & -       B^z  & +        B^y  \\
-       +\tilde{E^y} & +       B^z  &              & -        B^x  \\
-       +\tilde{E^z} & -       B^y  & +       B^x  &               \\
+            & +\Ex & +\Ey & +\Ez \\
+       +\Ex &      & +\Bz & -\By \\
+       +\Ey & -\Bz &      & +\Bx \\
+       +\Ez & +\By & -\Bx &      \\
    \end{bmatrix}
 
 .. math::
 
-   \begin{bmatrix}
-       G^\mu{}_\nu
-   \end{bmatrix}
+   G^\mu{}_\nu
    =
    \begin{bmatrix}
-                    & +       B^x  & +       B^y  & +       B^z  \\
-       +       B^x  &              & -\tilde{E^z} & +\tilde{E^y} \\
-       +       B^y  & +\tilde{E^z} &              & -\tilde{E^x} \\
-       +       B^z  & -\tilde{E^y} & +\tilde{E^x} &              \\
+             & +\Bx & +\By & +\Bz \\
+       +\Bx  &      & -\Ez & +\Ey \\
+       +\By  & +\Ez &      & -\Ex \\
+       +\Bz  & -\Ey & +\Ex &      \\
    \end{bmatrix}
+
+You can find this form in an alternative derivation `here
+<https://www.wikihow.life/Derive-the-Faraday-Tensor>`_.
 
 The Maxwell equations are:
 

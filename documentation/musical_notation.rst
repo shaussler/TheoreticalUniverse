@@ -5,18 +5,16 @@ The Musical Tensor Notation
 
    by Stéphane Haussler
 
-.. note::
-
-   While exploring the idea of musical notation, I found that Mr. Hongbing
-   Zhang had already developed very similar ideas in his paper
-   `Matrix-Representations of Tensors <https://vixra.org/abs/1710.0196>`_.
-   Although I suspect the idea is not novel, I have not found other sources. I
-   have no access to resources behind paywalls.
+While exploring the idea of the musical notation for tensors, I found that Mr.
+Hongbing Zhang has developed very similar ideas in his paper
+`Matrix-Representations of Tensors <https://vixra.org/abs/1710.0196>`_.
+Although I suspect the idea is not novel, I have not found other sources. I
+have no access to resources behind paywalls.
 
 Representation of Multilinear Forms
 -----------------------------------
 
-.. include:: ./summary_musical_notation.rst
+.. include:: ./musical_notation_multilinear_forms.rst
 
 Representation of the Metric Tensor
 -----------------------------------
@@ -118,6 +116,54 @@ Following vanilla matrix multiplication rules for :math:`\alpha = \{ +1 & 0
 
 .. rubric:: Rank (2,0) to (1,1)
 
+Lowering the index of a contravariant/contravariant tensor is expressed with
+:math:`A^{\eta\nu} \; \eta_{\eta\nu} = A_{\mu}{}^{\nu}` in tensor notation.
+Following vanilla matrix multiplication rules for :math:`\alpha = \{ +1 & 0
+\}^\sharp` and :math:`\beta=\{ 0 & -1 \}^\sharp`, we obtain:
+
+.. math::
+
+   \{ \alpha \\ \beta \}^\flat
+   \{
+      a & c \\
+      b & d
+   \}^{\sharp\sharp}
+   =
+   \{ \alpha & \beta \} \{ \{ a \\ b \} \\ \{ c \\ d\}\}
+   =\alpha \; \{ a \\b \} + & \beta \; \{ c \\ d\}
+   =\{
+       \alpha a + \beta c \\
+       \alpha b + \beta d
+    \}
+
+.. math::
+
+   \{
+       +1 &  0 \\
+        0 & -1 \\
+   \}^{\flat\flat}
+   \{
+      a & c \\
+      b & d
+   \}^{\sharp\sharp}
+   =
+   \{
+       \{ +1 & 0 \} \; a + \{ 0 & -1 \} \; c \\
+       \{ +1 & 0 \} \; b + \{ 0 & -1 \} \; d
+   \}
+   =
+   \{
+       \{ +a & -c \} \\
+       \{ +b & -d \}
+   \}
+   =
+   \{
+       +a & +b \\
+       -c & -d
+   \}^{\flat\sharp}
+
+
+
 .. rubric:: Rank (1,1) to (2,0)
 
 Raising the index of a contravariant/covariant tensor is expressed with
@@ -155,10 +201,10 @@ Following vanilla matrix multiplication rules for :math:`\alpha = \{ +1 & 0
         0 & -1 \\
    \}^{\sharp\sharp}
    =
-   \begin{bmatrix}
+   \{
        a \{ +1 \\  0 \} + c \{  0 \\ -1 \} \\
        b \{ +1 \\  0 \} + d \{  0 \\ -1 \} \\
-   \end{bmatrix}
+   \}
    =
    \{
        \{ +a \\ -c \\ \} \\
@@ -215,24 +261,4 @@ Following vanilla matrix multiplication rules for :math:`\alpha = \{ +1 & 0
 Notable Difference
 ------------------
 
-The doubly contravariant electromagnetic tensor is generally written as a
-row/column matrix.  The relation between row/column and row/row representations
-is a transpose. Taking the doubly contravariant electromagnetic tensor as an
-example:
-
-.. math::
-
-   \begin{bmatrix}
-                    & -\tilde{E^x} & -\tilde{E^y} & - \tilde{E^z} \\
-       +\tilde{E^x} &              & -       B^z  & +        B^y  \\
-       +\tilde{E^y} & +       B^z  &              & -        B^x  \\
-       +\tilde{E^z} & -       B^y  & +       B^x  &               \\
-   \end{bmatrix}^{T}
-   =
-   \begin{bmatrix}
-                    & +\tilde{E^x} & +\tilde{E^y} & + \tilde{E^z} \\
-       -\tilde{E^x} &              & +       B^z  & -        B^y  \\
-       -\tilde{E^y} & -       B^z  &              & +        B^x  \\
-       -\tilde{E^z} & +       B^y  & -       B^x  &               \\
-   \end{bmatrix}^{\sharp\sharp}
-
+.. include:: ./musical_notation_notable_difference.rst
