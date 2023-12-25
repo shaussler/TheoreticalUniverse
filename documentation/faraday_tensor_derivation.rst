@@ -284,7 +284,7 @@ equivalent to:
 .. math::
 
    \begin{bmatrix}
-       \partial_t     & \partial_x   & \partial_y   & \partial_z    \\
+       \partial_t & \partial_x & \partial_y & \partial_z \\
    \end{bmatrix}
    \begin{bmatrix}
             & +\Ex & +\Ey & +\Ez \\
@@ -294,13 +294,13 @@ equivalent to:
    \end{bmatrix}
    =
    \begin{bmatrix}
-   + \mu_0 c \rho & - \mu_0 J^x  & - \mu_0 J^y  & - \mu_0 J^z   \\
+       + \mu_0 c \rho & - \mu_0 J^x  & - \mu_0 J^y  & - \mu_0 J^z \\
    \end{bmatrix}
 
 .. math::
 
    \begin{bmatrix}
-       \partial_t    & \partial_x   & \partial_y   & \partial_z    \\
+       \partial_t & \partial_x & \partial_y & \partial_z \\
    \end{bmatrix}
    \begin{bmatrix}
             & +\Bx & +\By & +\Bz \\
@@ -334,12 +334,7 @@ With musical notation, the Maxwell equations are expressed as:
 
 .. math::
 
-   \begin{bmatrix}
-   \partial_t \\
-   \partial_x \\
-   \partial_y \\
-   \partial_z \\
-   \end{bmatrix}^{\flat} &
+   \{ \partial_t \\ \partial_x \\ \partial_y \\ \partial_z \\ \}^{\flat} &
    \FaradaySharpFlat
    =
    \begin{bmatrix}
@@ -351,35 +346,17 @@ With musical notation, the Maxwell equations are expressed as:
 
 .. math::
 
-   \begin{bmatrix}
-       \partial_t \\
-       \partial_x \\
-       \partial_y \\
-       \partial_z
-   \end{bmatrix}^{\flat}
-   \begin{bmatrix}
-                    & +       B^x  & +       B^y  & +       B^z  \\
-       +       B^x  &              & -\tilde{E^z} & +\tilde{E^y} \\
-       +       B^y  & +\tilde{E^z} &              & -\tilde{E^x} \\
-       +       B^z  & -\tilde{E^y} & +\tilde{E^x} &              \\
-   \end{bmatrix}^{\sharp \flat}
-   =
-   \begin{bmatrix}
-       0 \\
-       0 \\
-       0 \\
-       0 \\
-   \end{bmatrix}^{\flat}
+   \{ \partial_t \\ \partial_x \\ \partial_y \\ \partial_z \}^{\flat}
+   \FaradayDualSharpFlat
+   =\{ 0 \\ 0 \\ 0 \\ 0 \\ \}^{\flat}
 
 With the Faraday tensor noted :math:`F` and its dual :math:`G`, the musical
 Maxwell equations can also be summarized with:
 
 .. math::
 
-   \begin{align}
-       \partial^{\flat} F^{\sharp\flat} &= J^{\flat} \\
-       \partial^{\flat} G^{\sharp\flat} &= 0^{\flat} \\
-   \end{align}
+   \partial^{\flat} F^{\sharp\flat} = J^{\flat} \\
+   \partial^{\flat} G^{\sharp\flat} = 0^{\flat}
 
 These really are the same as the tensor equations. The advantage lies when
 tensors are fully expanded and matrix multiplication rules explicitely applied.
@@ -429,9 +406,7 @@ The Maxwell equations are:
 
 .. math::
 
-   \begin{align}
-       \partial_{\mu} F^\mu{}_\nu & = J_{\nu} \\
-       \partial_{\mu} G^\mu{}_\nu & = 0       \\
-   \end{align}
+   \partial_{\mu} F^\mu{}_\nu & = J_{\nu} \\
+   \partial_{\mu} G^\mu{}_\nu & = 0
 
 .. }}}

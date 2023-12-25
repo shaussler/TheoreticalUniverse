@@ -140,6 +140,15 @@ mathjax3_config = {
                 \end{bmatrix}^{\sharp\flat}
             '''
 
+            'FaradayDualSharpFlat': r'''
+                \begin{bmatrix}
+                         & +\Bx & +\By & +\Bz \\
+                    +\Bx &      & -\Ez & +\Ey \\
+                    +\By & +\Ez &      & -\Ex \\
+                    +\Bz & -\Ey & +\Ex &      \\
+                \end{bmatrix}^{\sharp\flat}
+            ''',
+
         }
     }
 }
