@@ -2,7 +2,7 @@ Deriving the Faraday Tensor from the 1865 Maxwell Equations
 ===========================================================
 
 .. rst-class:: custom-author
- 
+
    by Stéphane Haussler
 
 In this article, I present a straightforward, natural and elegant derivation of
@@ -56,27 +56,36 @@ exception of Maxwell's modification to Ampère's circuital law, these equations
 represent the mathematical expression of empirical observations. Therefore,
 they can be regarded as established experimental facts.
 
-.. rubric:: Inhomogenous equations
+.. rubric:: Gauss's law
 
-.. table::
-   :width: 90%
+.. math::
 
-   =============================== ===================================================================================================================================================
-                                              
-   =============================== ===================================================================================================================================================
-   **Gauss's law**                 :math:`\overrightarrow{\nabla} \cdot \overrightarrow{E}  = \rho / \epsilon_0`
-   **Ampère's circuital**          :math:`\overrightarrow{\nabla} \times \overrightarrow{B} = \mu_0 \overrightarrow{J} + \frac{1}{c^2} \frac{\partial}{\partial t} \overrightarrow{E}`
-   **Gauss's law for magnetism**   :math:`\overrightarrow{\nabla} \cdot \overrightarrow{B} = 0`
-   **Faraday's law of induction**  :math:`\overrightarrow{\nabla} \times \overrightarrow{E} = \frac{\partial}{\partial t} \overrightarrow{B}`
-   =============================== ===================================================================================================================================================
+   \vect{\nabla} \cdot \vect{E}  = \rho / \epsilon_0
 
-.. note::
 
-   With the electric field
-   :math:`\overrightarrow{E}=\begin{bmatrix} E^x \\ E^y \\ E^z \end{bmatrix}`,
-   magnetic field
-   :math:`\overrightarrow{B}=\begin{bmatrix} B^x \\ B^y \\ B^z \end{bmatrix}`, and operator
-   :math:`\overrightarrow{\nabla}=\begin{bmatrix} \frac{\partial}{\partial x} \\ \frac{\partial}{\partial y} \\ \frac{\partial}{\partial z} \end{bmatrix}`
+.. rubric:: Ampère's circuital
+
+.. math::
+
+   \vect{\nabla} \times \vect{B}
+   = \mu_0 \vect{J} + \frac{1}{c^2} \frac{\partial}{\partial t} \vect{E}
+
+.. rubric:: Gauss's law for magnetism
+
+.. math::
+
+   \vect{\nabla} \cdot \vect{B} = 0
+
+.. rubric:: Faraday's law of induction
+
+.. math::
+
+   \vect{\nabla} \times \vect{E} = \frac{\partial}{\partial t} \vect{B}
+
+With the electric field :math:`\vect{E}=\{ E^x \\ E^y \\ E^z \}`, magnetic
+field :math:`\vect{B}=\{ B^x \\ B^y \\ B^z \}`, and operator
+:math:`\vect{\nabla}=\{ \frac{\partial}{\partial x} \\ \frac{\partial}{\partial
+y} \\ \frac{\partial}{\partial z} \}`
 
 .. }}}
 
@@ -88,40 +97,49 @@ The Equations of Mr. Maxwell
 Unpacking the vector equations into their component form, we obtain in spirit
 the 1865 Maxwell formulation, albeit with modern notation and conventions.
 
-.. table::
-   :width: 90%
+.. rubric:: Gauss's law
 
-   +---------------------+--------------------------------------------------------------------------------------------------------------------------------------+
-   |                     |                                                                                                                                      |
-   +=====================+======================================================================================================================================+
-   | **Gauss's law**     |  .. math::                                                                                                                           |
-   |                     |                                                                                                                                      |
-   |                     |     \begin{align}                                                                                                                    |
-   |                     |     \frac{\partial}{\partial x} E^x + \frac{\partial}{\partial y} E^y + \frac{\partial}{\partial z} E^z &= \rho / \epsilon_0         |
-   |                     |     \end{align}                                                                                                                      |
-   +---------------------+--------------------------------------------------------------------------------------------------------------------------------------+
-   | **Ampère's          | .. math::                                                                                                                            |
-   | circuital law**     |                                                                                                                                      |
-   |                     |    \begin{align}                                                                                                                     |
-   |                     |    \frac{\partial}{\partial y} B^z - \frac{\partial}{\partial z} B^y &= \mu_0 J^x + \frac{1}{c^2} \frac{\partial}{\partial t} E^x \\ |
-   |                     |    \frac{\partial}{\partial z} B^x - \frac{\partial}{\partial x} B^z &= \mu_0 J^y + \frac{1}{c^2} \frac{\partial}{\partial t} E^y \\ |
-   |                     |    \frac{\partial}{\partial x} B^y - \frac{\partial}{\partial y} B^x &= \mu_0 J^z + \frac{1}{c^2} \frac{\partial}{\partial t} E^z \\ |
-   |                     |    \end{align}                                                                                                                       |
-   +---------------------+--------------------------------------------------------------------------------------------------------------------------------------+
-   | **Gauss's law for   |  .. math::                                                                                                                           |
-   | magnetism**         |                                                                                                                                      |
-   |                     |     \begin{align}                                                                                                                    |
-   |                     |     \frac{\partial}{\partial x} B^x + \frac{\partial}{\partial y} B^y + \frac{\partial}{\partial z} B^z &= 0                         |
-   |                     |     \end{align}                                                                                                                      |
-   +---------------------+--------------------------------------------------------------------------------------------------------------------------------------+
-   | **Faraday's law of  | .. math::                                                                                                                            |
-   | induction**         |                                                                                                                                      |
-   |                     |    \begin{align}                                                                                                                     |
-   |                     |    \frac{\partial}{\partial y} E^z - \frac{\partial}{\partial z} E^y &= - \frac{\partial}{\partial t} B^x \\                         |
-   |                     |    \frac{\partial}{\partial z} E^x - \frac{\partial}{\partial x} E^z &= - \frac{\partial}{\partial t} B^y \\                         |
-   |                     |    \frac{\partial}{\partial x} E^y - \frac{\partial}{\partial y} E^x &= - \frac{\partial}{\partial t} B^z \\                         |
-   |                     |    \end{align}                                                                                                                       |
-   +---------------------+--------------------------------------------------------------------------------------------------------------------------------------+
+.. math::
+
+   \frac{\partial}{\partial x} E^x +
+   \frac{\partial}{\partial y} E^y +
+   \frac{\partial}{\partial z} E^z
+   = \rho / \epsilon_0
+
+.. rubric:: Ampère's circuital law
+
+.. math::
+
+    \frac{\partial}{\partial y} B^z - \frac{\partial}{\partial z} B^y
+    = \mu_0 J^x + \frac{1}{c^2} \frac{\partial}{\partial t} E^x \\
+
+    \frac{\partial}{\partial z} B^x - \frac{\partial}{\partial x} B^z
+    = \mu_0 J^y + \frac{1}{c^2} \frac{\partial}{\partial t} E^y \\
+
+    \frac{\partial}{\partial x} B^y - \frac{\partial}{\partial y} B^x
+    = \mu_0 J^z + \frac{1}{c^2} \frac{\partial}{\partial t} E^z
+
+.. rubric:: Gauss's law for magnetism
+
+.. math::
+
+   \frac{\partial}{\partial x} B^x +
+   \frac{\partial}{\partial y} B^y +
+   \frac{\partial}{\partial z} B^z
+   = 0
+
+.. rubric:: Faraday's law of induction
+
+.. math::
+
+    \frac{\partial}{\partial y} E^z - \frac{\partial}{\partial z} E^y
+    = - \frac{\partial}{\partial t} B^x \\
+
+    \frac{\partial}{\partial z} E^x - \frac{\partial}{\partial x} E^z
+    = - \frac{\partial}{\partial t} B^y \\
+
+    \frac{\partial}{\partial x} E^y - \frac{\partial}{\partial y} E^x
+    = - \frac{\partial}{\partial t} B^z \\
 
 .. }}}
 
@@ -137,10 +155,26 @@ Gathering and reordering the terms, a clear structures becomes apparent:
 .. math::
 
    \begin{matrix}
-                                                    & + \frac{\partial E^x}{\partial x} & + \frac{\partial E^y}{\partial y} & + \frac{\partial E^z}{\partial z} & = & + \rho/\epsilon_0 \\
-    + \frac{1}{c^2} \frac{\partial E^x}{\partial t} &                                   & - \frac{\partial B^z}{\partial y} & + \frac{\partial B^y}{\partial z} & = & - \mu_0 J^x       \\
-    + \frac{1}{c^2} \frac{\partial E^y}{\partial t} & + \frac{\partial B^z}{\partial x} &                                   & - \frac{\partial B^x}{\partial z} & = & - \mu_0 J^y       \\
-    + \frac{1}{c^2} \frac{\partial E^z}{\partial t} & - \frac{\partial B^y}{\partial x} & + \frac{\partial B^x}{\partial y} &                                   & = & - \mu_0 J^z       \\
+                                                       &
+       +               \frac{\partial E^x}{\partial x} &
+       +               \frac{\partial E^y}{\partial y} &
+       +               \frac{\partial E^z}{\partial z} &
+       = & + \rho/\epsilon_0 \\
+       + \frac{1}{c^2} \frac{\partial E^x}{\partial t} &
+                                                       &
+       -               \frac{\partial B^z}{\partial y} &
+       +               \frac{\partial B^y}{\partial z} &
+       = & - \mu_0 J^x \\
+       + \frac{1}{c^2} \frac{\partial E^y}{\partial t} &
+       +               \frac{\partial B^z}{\partial x} &
+                                                       &
+       -               \frac{\partial B^x}{\partial z} &
+       = & - \mu_0 J^y \\
+       + \frac{1}{c^2} \frac{\partial E^z}{\partial t} &
+       -               \frac{\partial B^y}{\partial x} &
+       +               \frac{\partial B^x}{\partial y} &
+                                                       &
+       = & - \mu_0 J^z \\
    \end{matrix}
 
 .. rubric:: Homogenous equations
@@ -148,10 +182,26 @@ Gathering and reordering the terms, a clear structures becomes apparent:
 .. math::
 
    \begin{matrix}
-                                      & + \frac{\partial B^x}{\partial x} & + \frac{\partial B^y}{\partial y} & + \frac{\partial B^z}{\partial z} & = & 0 \\
-    + \frac{\partial B^x}{\partial t} &                                   & + \frac{\partial E^z}{\partial y} & - \frac{\partial E^y}{\partial z} & = & 0 \\
-    + \frac{\partial B^y}{\partial t} & - \frac{\partial E^z}{\partial x} &                                   & + \frac{\partial E^x}{\partial z} & = & 0 \\
-    + \frac{\partial B^z}{\partial t} & + \frac{\partial E^y}{\partial x} & - \frac{\partial E^x}{\partial y} &                                   & = & 0 \\
+                                     &
+   + \frac{\partial B^x}{\partial x} &
+   + \frac{\partial B^y}{\partial y} &
+   + \frac{\partial B^z}{\partial z} &
+   = & 0 \\
+   + \frac{\partial B^x}{\partial t} &
+                                     &
+   + \frac{\partial E^z}{\partial y} &
+   - \frac{\partial E^y}{\partial z} &
+   = & 0 \\
+   + \frac{\partial B^y}{\partial t} &
+   - \frac{\partial E^z}{\partial x} &
+                                     &
+   + \frac{\partial E^x}{\partial z} &
+   = & 0 \\
+   + \frac{\partial B^z}{\partial t} &
+   + \frac{\partial E^y}{\partial x} &
+   - \frac{\partial E^x}{\partial y} &
+                                     &
+   = & 0 \\
    \end{matrix}
 
 .. }}}
@@ -178,10 +228,10 @@ Additionally, we define for the time dimension :math:`\partial_t =
 .. math::
 
    \begin{matrix}
-                            & +\partial_x \tilde{E^x} & +\partial_y \tilde{E^y} & +\partial_y \tilde{E^z} & = & + \mu_0 c \rho  \\
-    +\partial_t \tilde{E^x} &                         & -\partial_y        B^z  & +\partial_z        B^y  & = & - \mu_0 J^x     \\
-    +\partial_t \tilde{E^y} & +\partial_x        B^z  &                         & -\partial_z        B^x  & = & - \mu_0 J^y     \\
-    +\partial_t \tilde{E^z} & -\partial_x        B^y  & +\partial_y        B^x  &                         & = & - \mu_0 J^z     \\
+                       & +\partial_x \Ex & +\partial_y \Ey & +\partial_y \Ez & = & + \mu_0 c \rho  \\
+       +\partial_t \Ex &                 & -\partial_y \Bz & +\partial_z \By & = & - \mu_0 J^x     \\
+       +\partial_t \Ey & +\partial_x \Bz &                 & -\partial_z \Bx & = & - \mu_0 J^y     \\
+       +\partial_t \Ez & -\partial_x \By & +\partial_y \Bx &                 & = & - \mu_0 J^z
    \end{matrix}
 
 .. rubric:: Homogenous equations
@@ -189,10 +239,10 @@ Additionally, we define for the time dimension :math:`\partial_t =
 .. math::
 
    \begin{matrix}
-                            & +\partial_x        B^x  & +\partial_y        B^y  & +\partial_z        B^z  & = & 0 \\
-    +\partial_t        B^x  &                         & +\partial_y \tilde{E^z} & -\partial_z \tilde{E^y} & = & 0 \\
-    +\partial_t        B^y  & -\partial_x \tilde{E^z} &                         & +\partial_z \tilde{E^x} & = & 0 \\
-    +\partial_t        B^z  & +\partial_x \tilde{E^y} & -\partial_y \tilde{E^x} &                         & = & 0 \\
+                       & +\partial_x \Bx & +\partial_y \By & +\partial_z \Bz & = & 0 \\
+       +\partial_t \Bx &                 & +\partial_y \Ez & -\partial_z \Ey & = & 0 \\
+       +\partial_t \By & -\partial_x \Ez &                 & +\partial_z \Ex & = & 0 \\
+       +\partial_t \Bz & +\partial_x \Ey & -\partial_y \Ex &                 & = & 0
    \end{matrix}
 
 For readers well-versed in the tensor formulation of electromagnetism, the
@@ -233,39 +283,35 @@ equivalent to:
 
 .. math::
 
-   {\small
    \begin{bmatrix}
-   \partial_t     & \partial_x   & \partial_y   & \partial_z    \\
+       \partial_t     & \partial_x   & \partial_y   & \partial_z    \\
    \end{bmatrix}
    \begin{bmatrix}
-                  & +\tilde{E^x} & +\tilde{E^y} & + \tilde{E^z} \\
-    +\tilde{E^x}  &              & +       B^z  & -        B^y  \\
-    +\tilde{E^y}  & -       B^z  &              & +        B^x  \\
-    +\tilde{E^z}  & +       B^y  & -       B^x  &               \\
+            & +\Ex & +\Ey & +\Ez \\
+       +\Ex &      & +\Bz & -\By \\
+       +\Ey & -\Bz &      & +\Bx \\
+       +\Ez & +\By & -\Bx &      \\
    \end{bmatrix}
    =
    \begin{bmatrix}
    + \mu_0 c \rho & - \mu_0 J^x  & - \mu_0 J^y  & - \mu_0 J^z   \\
    \end{bmatrix}
-   }
 
 .. math::
 
-   {\small
    \begin{bmatrix}
-   \partial_t     & \partial_x   & \partial_y   & \partial_z    \\
+       \partial_t    & \partial_x   & \partial_y   & \partial_z    \\
    \end{bmatrix}
    \begin{bmatrix}
-                 & +       B^x  & +       B^y  & +       B^z  \\
-    +       B^x  &              & -\tilde{E^z} & +\tilde{E^y} \\
-    +       B^y  & +\tilde{E^z} &              & -\tilde{E^x} \\
-    +       B^z  & -\tilde{E^y} & +\tilde{E^x} &              \\
+            & +\Bx & +\By & +\Bz \\
+       +\Bx &      & -\Ez & +\Ey \\
+       +\By & +\Ez &      & -\Ex \\
+       +\Bz & -\Ey & +\Ex &      \\
    \end{bmatrix}
    =
    \begin{bmatrix}
-   0 & 0 & 0 & 0 \\
+       0 & 0 & 0 & 0 \\
    \end{bmatrix}
-   }
 
 We have thus obtained the Faraday tensor (inhomogenous equations) and its dual
 (homogenous equations).
@@ -294,12 +340,7 @@ With musical notation, the Maxwell equations are expressed as:
    \partial_y \\
    \partial_z \\
    \end{bmatrix}^{\flat} &
-   \begin{bmatrix}
-                  & +\tilde{E^x} & +\tilde{E^y} & + \tilde{E^z} \\
-    +\tilde{E^x}  &              & +       B^z  & -        B^y  \\
-    +\tilde{E^y}  & -       B^z  &              & +        B^x  \\
-    +\tilde{E^z}  & +       B^y  & -       B^x  &               \\
-   \end{bmatrix}^{\sharp\flat}
+   \FaradaySharpFlat
    =
    \begin{bmatrix}
    + \mu_0 c \rho \\
