@@ -115,7 +115,7 @@ Metric>` to obtain the other forms. The electromagnetic field tensor is:
    }
 
 .. admonition:: Step by step
-   :class: dropdown, toggle-shown
+   :class: dropdown
 
    .. math::
 
@@ -155,7 +155,7 @@ Metric>` to obtain the other forms. The electromagnetic field tensor is:
 .. {{{
 
 .. math::
- 
+
    {\small
        F^{\flat\sharp}
        = F^{\flat\flat} \eta^{\sharp\sharp}
@@ -164,7 +164,7 @@ Metric>` to obtain the other forms. The electromagnetic field tensor is:
    }
 
 .. admonition:: Step by step
-   :class: dropdown, toggle-shown
+   :class: dropdown
 
    .. math::
 
@@ -402,62 +402,133 @@ Contravariant-covariant
 
 .. math::
 
-   \begin{bmatrix}
-   \partial_t \\
-   \partial_x \\
-   \partial_y \\
-   \partial_z \\
-   \end{bmatrix}^{\flat} &
+   \{ \partial_t \\ \partial_x \\ \partial_y \\ \partial_z \\ \}^{\flat} &
    \FaradaySharpFlat
-   =
-   \begin{bmatrix}
-   + \mu_0 c \rho \\
-   - \mu_0 J^x    \\
-   - \mu_0 J^y    \\
-   - \mu_0 J^z    \\
-   \end{bmatrix}^{\flat}
+   = \{ +\mu_0 c \rho \\ -\mu_0 J^x \\ -\mu_0 J^y \\ -\mu_0 J^z \\ \}^{\flat}
+
+.. admonition:: Back to the 1865 Maxwell Equations
+   :class: dropdown
+
+   Applying matrix multiplication rules directly result in:
+
+   .. math::
+
+      \begin{matrix}
+                          & +\partial_x \Ex & +\partial_y \Ey & +\partial_y \Ez & = & + \mu_0 c \rho \\
+          +\partial_t \Ex &                 & -\partial_y \Bz & +\partial_z \By & = & - \mu_0 J^x    \\
+          +\partial_t \Ey & +\partial_x \Bz &                 & -\partial_z \Bx & = & - \mu_0 J^y    \\
+          +\partial_t \Ez & -\partial_x \By & +\partial_y \Bx &                 & = & - \mu_0 J^z    \\
+      \end{matrix}
 
 .. math::
 
-   \begin{bmatrix}
-   \partial_t \\
-   \partial_x \\
-   \partial_y \\
-   \partial_z
-   \end{bmatrix}^{\flat}
+   \{ \partial_t \\ \partial_x \\ \partial_y \\ \partial_z \}^{\flat}
    \begin{bmatrix}
                  & +       B^x  & +       B^y  & +       B^z  \\
     +       B^x  &              & -\tilde{E^z} & +\tilde{E^y} \\
     +       B^y  & +\tilde{E^z} &              & -\tilde{E^x} \\
     +       B^z  & -\tilde{E^y} & +\tilde{E^x} &              \\
    \end{bmatrix}^{\sharp \flat}
-   =
-   \begin{bmatrix}
-   0 \\
-   0 \\
-   0 \\
-   0 \\
-   \end{bmatrix}^{\flat}
+   = \{ 0 \\ 0 \\ 0 \\ 0 \\ \}^{\flat}
 
 Contravariant-contravariant
 '''''''''''''''''''''''''''
 
 .. math::
 
-   \begin{bmatrix}
-   \partial_t \\
-   \partial_x \\
-   \partial_y \\
-   \partial_z \\
-   \end{bmatrix}^{\flat}
-   \FaradaySharpSharp
-   =
-   \begin{bmatrix}
-   \mu_0 c \rho \\
-   \mu_0 J^x    \\
-   \mu_0 J^y    \\
-   \mu_0 J^z    \\
-   \end{bmatrix}^{\sharp}
+   \{ \partial_t \\ \partial_x \\ \partial_y \\ \partial_z \}^{\flat} \FaradaySharpSharp
+   = \{ \mu_0 c \rho \\ \mu_0 J^x \\ \mu_0 J^y \\ \mu_0 J^z \}^{\sharp}
+
+.. admonition:: Back to the 1865 Maxwell Equations
+   :class: dropdown
+
+   Upacking the musical tensor notation result in:
+
+   .. math::
+
+      {\scriptsize
+          \{ \partial_t \\ \partial_x \\ \partial_y \\ \partial_z \}^{\flat} \FaradaySharpSharp
+          =
+          \{ \partial_t & \partial_x & \partial_y & \partial_z \}^{\flat}
+          \FaradayColCol
+      }
+
+   Calculating the left-hand side with matrix multiplication rules results in:
+
+   .. math::
+
+      {\scriptsize
+          \{ \partial_t \\ \partial_x \\ \partial_y \\ \partial_z \}^{\flat} \FaradaySharpSharp
+          =
+          \begin{matrix}
+              \begin{alignat}{1}
+               \partial_t & \{   0  \\ -\Ex \\ -\Ey \\ -\Ez \} &
+              +\partial_x & \{ +\Ex \\   0  \\ -\Bz \\ +\By \} &
+              +\partial_y & \{ +\Ey \\ +\Bz \\   0  \\ -\Bx \} &
+              +\partial_z & \{ +\Ez \\ -\By \\ +\Bx \\   0  \} \\
+              \end{alignat}
+          \end{matrix}
+      }
+
+   .. math::
+
+      {\scriptsize
+          \{ \partial_t \\ \partial_x \\ \partial_y \\ \partial_z \}^{\flat} \FaradaySharpSharp
+          =
+          \begin{bmatrix}
+              \begin{alignat}{1}
+                              & +\partial_x \Ex & +\partial_y \Ey & +\partial_z \Ez \\
+              -\partial_t \Ex &                 & +\partial_y \Bz & -\partial_z \By \\
+              -\partial_t \Ey & -\partial_x \Bz &                 & +\partial_z \Bx \\
+              -\partial_t \Ez & +\partial_x \By & -\partial_y \Bx &                 \\
+              \end{alignat}
+          \end{bmatrix}
+      }
+
+   With the left-hand side of the equation equal to the right-hand side, we get:
+
+   .. math::
+
+      {\scriptsize
+          \begin{bmatrix}
+              \begin{alignat}{1}
+                              & +\partial_x \Ex & +\partial_y \Ey & +\partial_z \Ez \\
+              -\partial_t \Ex &                 & +\partial_y \Bz & -\partial_z \By \\
+              -\partial_t \Ey & -\partial_x \Bz &                 & +\partial_z \Bx \\
+              -\partial_t \Ez & +\partial_x \By & -\partial_y \Bx &                 \\
+              \end{alignat}
+          \end{bmatrix}
+          =
+          \CurrentCol
+      }
+
+   Which is then unpacked in a system of equations:
+
+   .. math::
+
+      {\scriptsize
+      \begin{matrix}
+                          & +\partial_x \Ex & +\partial_y \Ey & +\partial_y \Ez & = & + \mu_0 c \rho \\
+          -\partial_t \Ex &                 & +\partial_y \Bz & -\partial_z \By & = & + \mu_0 J^x    \\
+          -\partial_t \Ey & -\partial_x \Bz &                 & +\partial_z \Bx & = & + \mu_0 J^y    \\
+          -\partial_t \Ez & +\partial_x \By & -\partial_y \Bx &                 & = & + \mu_0 J^z    \\
+      \end{matrix}\\
+      }
+
+   And reordered to obtain back the Maxwell equations derived in
+   :ref:`faraday_tensor_derivation:Deriving the Faraday Tensor from the 1865
+   Maxwell Equations`
+
+   .. math::
+
+      {\scriptsize
+      \begin{matrix}
+                          & +\partial_x \Ex & +\partial_y \Ey & +\partial_y \Ez & = & + \mu_0 c \rho \\
+          +\partial_t \Ex &                 & -\partial_y \Bz & +\partial_z \By & = & - \mu_0 J^x    \\
+          +\partial_t \Ey & +\partial_x \Bz &                 & -\partial_z \Bx & = & - \mu_0 J^y    \\
+          +\partial_t \Ez & -\partial_x \By & +\partial_y \Bx &                 & = & - \mu_0 J^z    \\
+      \end{matrix}
+      }
 
 .. math::
 
@@ -486,20 +557,47 @@ Covariant-covariant
 
 .. math::
 
-   \begin{bmatrix}
-   \partial_t \\
-   \partial_x \\
-   \partial_y \\
-   \partial_z \\
-   \end{bmatrix}^{\sharp}
+   \{ \partial_t \\ \partial_x \\ \partial_y \\ \partial_z \\ \}^{\sharp}
    \FaradayFlatFlat
-   =
-   \begin{bmatrix}
-   + \mu_0 c \rho \\
-   - \mu_0 J^x    \\
-   - \mu_0 J^y    \\
-   - \mu_0 J^z    \\
-   \end{bmatrix}^{\flat}
+   = \{ +\mu_0 c \rho \\ -\mu_0 J^x \\ -\mu_0 J^y \\ -\mu_0 J^z \}^{\flat}
+
+.. admonition:: Back to the 1865 Maxwell Equations
+   :class: dropdown, toggle-shown
+
+   Upacking the musical tensor notation result in:
+
+   .. math::
+
+      {\scriptsize
+          \begin{align}
+          & \{ \partial_t \\ \partial_x \\ \partial_y \\ \partial_z \}^{\sharp} \FaradayFlatFlat \\
+          & =
+          \{ \partial_t \\ \partial_x \\ \partial_y \\ \partial_z \}^{\sharp} \FaradayRowRow \\
+          &=
+           \partial_t \{   0  \\ -\Ex \\ -\Ey \\ -\Ez \}^\flat
+          +\partial_x \{ +\Ex \\   0  \\ +\Bz \\ -\By \}^\flat
+          +\partial_y \{ +\Ey \\ -\Bz \\   0  \\ +\Bx \}^\flat
+          +\partial_z \{ +\Ez \\ +\By \\ -\Bx \\   0  \}^\flat
+          \end{align}
+      }
+
+   Calculating the left-hand side thus results in:
+
+   .. math::
+
+      {\scriptsize
+          \{ \partial_t \\ \partial_x \\ \partial_y \\ \partial_z \}^{\sharp} \FaradayFlatFlat
+          =
+          \begin{matrix}
+              \begin{alignat}{1}
+               \partial_t & \{   0  \\ -\Ex \\ -\Ey \\ -\Ez \}^\flat &
+              +\partial_x & \{ +\Ex \\   0  \\ +\Bz \\ -\By \}^\flat &
+              +\partial_y & \{ +\Ey \\ -\Bz \\   0  \\ +\Bx \}^\flat &
+              +\partial_z & \{ +\Ez \\ +\By \\ -\Bx \\   0  \}^\flat \\
+              \end{alignat}
+          \end{matrix}
+      }
+
 
 Covariant-contravariant
 '''''''''''''''''''''''

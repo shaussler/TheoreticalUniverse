@@ -139,6 +139,33 @@ mathjax3_config = {
                 \end{bmatrix}^{\flat\flat}
             ''',
 
+            # Current
+            # -------
+
+            'CurrentCol': r'''\{
+                \mu_0 c \rho \\
+                \mu_0 J^x    \\
+                \mu_0 J^y    \\
+                \mu_0 J^z    \\
+            \}''',
+
+            # Define Faraday Tensors
+            # ----------------------
+
+            'FaradayColCol': r'''\{
+                \{      \\ -\Ex \\ -\Ey \\ -\Ez \} \\
+                \{ +\Ex \\      \\ -\Bz \\ +\By \} \\
+                \{ +\Ey \\ +\Bz \\      \\ -\Bx \} \\
+                \{ +\Ez \\ -\By \\ +\Bx \\      \}
+            \}''',
+
+            'FaradayRowRow': r'''\{
+                \{   0 , -\Ex, -\Ey, -\Ez \}  &
+                \{ +\Ex,   0 , +\Bz, -\By \} &
+                \{ +\Ey, -\Bz,   0 , +\Bx \} &
+                \{ +\Ez, +\By, -\Bx,   0  \}
+            \}''',
+
             # Define Faraday Tensors
             # ----------------------
 

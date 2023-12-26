@@ -7,9 +7,9 @@ Deriving the Faraday Tensor from the 1865 Maxwell Equations
 
 In this article, I present a straightforward, natural and elegant derivation of
 the Faraday tensor. This derivation draws strong inspiration from Minkowski's
-1908 paper, 
-`The Fundamental Equations for Electromagnetic Processes in Moving Bodies
-<https://en.wikisource.org/wiki/Translation:The_Fundamental_Equations_for_Electromagnetic_Processes_in_Moving_Bodies>`_.
+1908 paper, `The Fundamental Equations for Electromagnetic Processes in Moving
+Bodies <https://en.wikisource.org/wiki/Translation:
+The_Fundamental_Equations_for_Electromagnetic_Processes_in_Moving_Bodies>`_.
 What sets this derivation apart is that it avoids the often-seen backward proof
 that the tensor formulation is equivalent to the Maxwell equations. Notably, it
 doesn't rely on the widespread vector formulation introduced by Mr. Heaviside,
@@ -19,9 +19,8 @@ presented with modern notation and the benefit of hindsight.
 This derivation might not be widely known. If I am mistaken and you are aware
 of freely available resources covering this derivation, open an issue and I
 will include a reference. Also if you find mistakes don't hesitate to open an
-issue or directly provide corrections by sending a merge request to my
-`Github repository
-<https://github.com/shaussler/TheoreticalUniverse/>`_.
+issue or directly provide corrections by sending a merge request to my `Github
+repository <https://github.com/shaussler/TheoreticalUniverse/>`_.
 
 I assume the reader possesses a strong grasp of vector calculus, including
 familiarity with the vector dot and cross products, as well as matrix
