@@ -163,7 +163,6 @@ Following vanilla matrix multiplication rules for :math:`\alpha = \{ +1 & 0
    \}^{\flat\sharp}
 
 
-
 .. rubric:: Rank (1,1) to (2,0)
 
 Raising the index of a contravariant/covariant tensor is expressed with
@@ -243,18 +242,16 @@ Following vanilla matrix multiplication rules for :math:`\alpha = \{ +1 & 0
    \{
        +1 &  0 \\
         0 & -1 \\
-   \}^{\sharp\sharp}
-   \{
-       a & c \\
-       b & d \\
+   \}^{\flat\flat}
+   \{ a & c \\
+      b & d \\
    \}^{\sharp\flat} 
    &= \{
            \{ +1 \\ 0 \}^\flat \; a + \{ 0 \\ -1 \}^{\flat} \; b,&
            \{ +1 \\ 0 \}^\flat \; c + \{ 0 \\ -1 \}^{\flat} \; d
       \}\\
-   &= \{ \{ +a \\ -b \}^{\flat}, &
-         \{ +c \\ -d \}^{\flat}
-      \}
+   &= \{ \{ +a \\ -b \}^{\flat} &
+         \{ +c \\ -d \}^{\flat} \}
    = \{ +a & +c \\ -b & -d \}^{\flat\flat}
   \end{align}
 

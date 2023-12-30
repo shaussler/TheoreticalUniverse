@@ -12,27 +12,47 @@ notation <musical_notation:The Musical Tensor Notation>` to facilitate
 calculations. In this article, I systematically derive all variations of the
 electromagnetic field tensor.
 
-.. The musical tensor representation aims at compact expressions while following
-.. matrix multiplication rules. Recall that:
-.. 
-.. .. math::
-.. 
-..    \{ \{ a & b \} & \{ c & d \}\}
-..    = \{ \{a \\ b\}^\flat & \{c \\ d\}^\flat\}^\flat
-..    = \{ \{a \\ b\}^\flat \\ \{c \\ d\}^\flat\}^\flat
-..    = \{ \{ a & b \}^\flat \{ c & d \}^\flat \}^\flat
-.. 
-.. .. math::
-.. 
-..    \{ \{ a \\ b \} \\ \{ c \\ d \}\}
-..    = \{ \{a \\ b\}^\sharp & \{c \\ d\}^\sharp\}^\sharp
-..    = \{ \{a \\ b\}^\sharp \\ \{c \\ d\}^\sharp\}^\sharp
-..    = \{ \{ a & b \}^\sharp \{ c & d \}^\sharp \}^\sharp
+Rewriting
+---------
+
+.. admonition:: Preliminary
+
+   .. math::
+
+      \star \bv{e_t} \wedge \bv{e_x} = -\bv{e_y} \wedge \bv{e_z} \\
+      \star \bv{e_t} \wedge \bv{e_y} = -\bv{e_z} \wedge \bv{e_x} \\
+      \star \bv{e_t} \wedge \bv{e_z} = -\bv{e_x} \wedge \bv{e_y}
+
+   .. math::
+
+      \star \bv{e_y} \wedge \bv{e_z} = \bv{e_t} \wedge \bv{e_x} \\
+      \star \bv{e_z} \wedge \bv{e_x} = \bv{e_t} \wedge \bv{e_y} \\
+      \star \bv{e_x} \wedge \bv{e_y} = \bv{e_t} \wedge \bv{e_z}
+
+   .. math::
+
+      \begin{matrix}
+                        & +\partial_x \Ex & +\partial_y \Ey & +\partial_y \Ez & = & + \mu_0 c \rho \\
+        +\partial_t \Ex &                 & -\partial_y \Bz & +\partial_z \By & = & - \mu_0 J^x    \\
+        +\partial_t \Ey & +\partial_x \Bz &                 & -\partial_z \Bx & = & - \mu_0 J^y    \\
+        +\partial_t \Ez & -\partial_x \By & +\partial_y \Bx &                 & = & - \mu_0 J^z
+      \end{matrix}
+
+   .. math::
+
+      \{ \partial_t \\ \partial_x \\ \partial_y \\ \partial_z \}^{\flat}
+      \{                      & +\Ex \; dt \wedge dx & +\Ey \; dt \wedge dy & +\Ez \; dt \wedge dz \\
+         +\Ex \; dx \wedge dt &                      & -\Bz \; dx \wedge dy & -\By \; dx \wedge dz \\
+         +\Ey \; dy \wedge dt & -\Bz \; dy \wedge dx &                      & +\Bx \; dy \wedge dz \\
+         +\Ez \; dz \wedge dt & -\By \; dz \wedge dx & +\Bx \; dz \wedge dy &                      \}
+      =
+      \{ +\mu_0 c \rho \\ -\mu_0 J^x \\ -\mu_0 J^y \\ -\mu_0 J^z \}^{\flat}
 
 Inhomogenous equations
 ----------------------
 
-.. rubric:: Contravariant-covariant
+Contravariant-covariant
+'''''''''''''''''''''''
 
 .. {{{
 
@@ -47,7 +67,8 @@ Metric>` to obtain the other forms. The electromagnetic field tensor is:
 
 .. }}}
 
-.. rubric:: Contravariant-contravariant
+Contravariant-contravariant
+'''''''''''''''''''''''''''
 
 .. {{{
 
@@ -101,7 +122,8 @@ Metric>` to obtain the other forms. The electromagnetic field tensor is:
 
 .. }}}
 
-.. rubric:: Covariant-covariant
+Covariant-covariant
+'''''''''''''''''''
 
 .. {{{
 
@@ -149,8 +171,9 @@ Metric>` to obtain the other forms. The electromagnetic field tensor is:
       }
 
 .. }}}
-
-.. rubric:: Covariant-contravariant
+ 
+Covariant-contravariant
+'''''''''''''''''''''''
 
 .. {{{
 
@@ -158,32 +181,32 @@ Metric>` to obtain the other forms. The electromagnetic field tensor is:
 
    {\small
        F^{\flat\sharp}
-       = F^{\flat\flat} \eta^{\sharp\sharp}
-       = \FaradayFlatFlat \EtaSharpSharp
-       = \FaradayFlatSharp
+       = \eta^{\flat\flat} F^{\sharp\sharp}
+       = \EtaFlatFlat \FaradaySharpSharp
+       = 
    }
 
 .. admonition:: Step by step
-   :class: dropdown
+   :class: dropdown, toggle-shown
 
    .. math::
 
       {\scriptsize
       F^{\flat\sharp}
-      = F^{\flat\flat} \eta^{\sharp\sharp}
+      = \eta^{\flat\flat }F^{\sharp\sharp}
       =
       \begin{bmatrix}
-          \{      \\ -\Ex \\ -\Ey \\ -\Ez \\ \}^{\flat} &
-          \{ +\Ex \\      \\ +\Bz \\ -\By \\ \}^{\flat} &
-          \{ +\Ey \\ -\Bz \\      \\ +\Bx \\ \}^{\flat} &
-          \{ +\Ez \\ +\By \\ -Bx  \\      \\ \}^{\flat}
-      \end{bmatrix}^{\flat}
+          \EtatRow &
+          \EtaxRow &
+          \EtayRow &
+          \EtazRow 
+      \end{bmatrix}
       \begin{bmatrix}
-          \EtatSharp^{\sharp} \\
-          \EtaxSharp^{\sharp} \\
-          \EtaySharp^{\sharp} \\
-          \EtazSharp^{\sharp} \\
-      \end{bmatrix}^{\sharp} \\
+          \{      \\ -\Ex \\ -\Ey \\ -\Ez \\ \} \\
+          \{ +\Ex \\      \\ -\Bz \\ +\By \\ \} \\
+          \{ +\Ey \\ +\Bz \\      \\ -\Bx \\ \} \\
+          \{ +\Ez \\ -\By \\ +\Bx \\      \\ \}
+      \end{bmatrix}
       }
 
    .. math::
@@ -193,12 +216,19 @@ Metric>` to obtain the other forms. The electromagnetic field tensor is:
       =
       \begin{bmatrix}
           \begin{alignat}{1}
-            0  & \EtatCol^\sharp & +\Ex & \EtaxCol^\sharp & +\Ey & \EtayCol^\sharp & +\Ez & \EtazCol^\sharp \\
-          -\Ex & \EtatCol^\sharp & + 0  & \EtaxCol^\sharp & -\Bz & \EtayCol^\sharp & +\By & \EtazCol^\sharp \\
-          -\Ey & \EtatCol^\sharp & +\Bz & \EtaxCol^\sharp & + 0  & \EtayCol^\sharp & -\Bx & \EtazCol^\sharp \\
-          -\Ez & \EtatCol^\sharp & -\By & \EtaxCol^\sharp & +\Bx & \EtayCol^\sharp & + 0  & \EtazCol^\sharp \\
+            0  & \EtatCol^\flat & +\Ex & \EtaxCol^\flat & +\Ey & \EtayCol^\flat & +\Ez & \EtazCol^\flat \\
+          -\Ex & \EtatCol^\flat & + 0  & \EtaxCol^\flat & -\Bz & \EtayCol^\flat & +\By & \EtazCol^\flat \\
+          -\Ey & \EtatCol^\flat & +\Bz & \EtaxCol^\flat & + 0  & \EtayCol^\flat & -\Bx & \EtazCol^\flat \\
+          -\Ez & \EtatCol^\flat & -\By & \EtaxCol^\flat & +\Bx & \EtayCol^\flat & + 0  & \EtazCol^\flat \\
           \end{alignat}
-      \end{bmatrix}^\flat
+      \end{bmatrix}^\sharp
+      =
+      \begin{bmatrix}
+               & -\Ex & -\Ey & -\Ez \\
+          -\Ex &      & -\Bz & +\By \\
+          -\Ey & -\Bz &      & -\Bx \\
+          -\Ez & +\By & +\Bx &      \\
+      \end{bmatrix}^\sharp
       }
 
 .. }}}
@@ -206,7 +236,8 @@ Metric>` to obtain the other forms. The electromagnetic field tensor is:
 Homogenous equations
 --------------------
 
-.. rubric:: Contravariant-covariant
+Contravariant-covariant
+'''''''''''''''''''''''
 
 .. {{{
 
@@ -225,7 +256,8 @@ Homogenous equations
 
 .. }}}
 
-.. rubric:: Contravariant-contravariant
+Contravariant-contravariant
+'''''''''''''''''''''''''''
 
 .. {{{
 
@@ -259,45 +291,46 @@ Homogenous equations
 
 .. }}}
 
-.. rubric:: Covariant-covariant
+.. .. rubric:: Covariant-covariant
+..
+.. .. {{{
+.. 
+.. .. warning::
+.. 
+..    I have not doubled check that one.
+.. 
+.. .. math::
+.. 
+..    {\scriptsize
+..    G^{\flat\flat}
+..    =
+..    \eta^{\flat\flat} G^{\sharp\flat}
+..    =
+..    \begin{bmatrix}
+..     1 &  0 &  0 &  0 \\
+..     0 & -1 &  0 &  0 \\
+..     0 &  0 & -1 &  0 \\
+..     0 &  0 &  0 & -1
+..    \end{bmatrix}^{\flat\flat}
+..    \begin{bmatrix}
+..                  & +       B^x  & +       B^y  & +       B^z  \\
+..     +       B^x  &              & -\tilde{E^z} & +\tilde{E^y} \\
+..     +       B^y  & +\tilde{E^z} &              & -\tilde{E^x} \\
+..     +       B^z  & -\tilde{E^y} & +\tilde{E^x} &              \\
+..    \end{bmatrix}^{\sharp\flat}
+..    =
+..    \begin{bmatrix}
+..                  & +       B^x  & +       B^y  & +       B^z  \\
+..     -       B^x  &              & +\tilde{E^z} & -\tilde{E^y} \\
+..     -       B^y  & -\tilde{E^z} &              & +\tilde{E^x} \\
+..     -       B^z  & +\tilde{E^y} & -\tilde{E^x} &              \\
+..    \end{bmatrix}^{\flat\flat}
+..    }
+.. 
+.. .. }}}
 
-.. {{{
-
-.. warning::
-
-   I have not doubled check that one.
-
-.. math::
-
-   {\scriptsize
-   G^{\flat\flat}
-   =
-   \eta^{\flat\flat} G^{\sharp\flat}
-   =
-   \begin{bmatrix}
-    1 &  0 &  0 &  0 \\
-    0 & -1 &  0 &  0 \\
-    0 &  0 & -1 &  0 \\
-    0 &  0 &  0 & -1
-   \end{bmatrix}^{\flat\flat}
-   \begin{bmatrix}
-                 & +       B^x  & +       B^y  & +       B^z  \\
-    +       B^x  &              & -\tilde{E^z} & +\tilde{E^y} \\
-    +       B^y  & +\tilde{E^z} &              & -\tilde{E^x} \\
-    +       B^z  & -\tilde{E^y} & +\tilde{E^x} &              \\
-   \end{bmatrix}^{\sharp\flat}
-   =
-   \begin{bmatrix}
-                 & +       B^x  & +       B^y  & +       B^z  \\
-    -       B^x  &              & +\tilde{E^z} & -\tilde{E^y} \\
-    -       B^y  & -\tilde{E^z} &              & +\tilde{E^x} \\
-    -       B^z  & +\tilde{E^y} & -\tilde{E^x} &              \\
-   \end{bmatrix}^{\flat\flat}
-   }
-
-.. }}}
-
-.. rubric:: Covariant-contravariant
+Covariant-contravariant
+'''''''''''''''''''''''
 
 .. {{{
 
@@ -395,10 +428,10 @@ Covariant-contravariant
 Explicit formulation of Maxwell equations
 -----------------------------------------
 
-.. {{{
-
 Contravariant-covariant
 '''''''''''''''''''''''
+
+.. {{{
 
 .. math::
 
@@ -431,8 +464,12 @@ Contravariant-covariant
    \end{bmatrix}^{\sharp \flat}
    = \{ 0 \\ 0 \\ 0 \\ 0 \\ \}^{\flat}
 
+.. }}}
+
 Contravariant-contravariant
 '''''''''''''''''''''''''''
+
+.. {{{
 
 .. math::
 
@@ -533,10 +570,10 @@ Contravariant-contravariant
 .. math::
 
    \begin{bmatrix}
-   \partial_t \\
-   \partial_x \\
-   \partial_y \\
-   \partial_z \\
+   +\partial_t \\
+   +\partial_x \\
+   +\partial_y \\
+   +\partial_z \\
    \end{bmatrix}^{\flat}
    \begin{bmatrix}
                  & -       B^x  & -       B^y  & -       B^z  \\
@@ -552,14 +589,26 @@ Contravariant-contravariant
    0 \\
    \end{bmatrix}^{\sharp}
 
+.. }}}
+
 Covariant-covariant
 '''''''''''''''''''
 
+.. {{{
+
 .. math::
 
-   \{ \partial_t \\ \partial_x \\ \partial_y \\ \partial_z \\ \}^{\sharp}
+   \{ +\partial_t \\
+      -\partial_x \\
+      -\partial_y \\
+      -\partial_z \\
+   \}^{\sharp}
    \FaradayFlatFlat
    = \{ +\mu_0 c \rho \\ -\mu_0 J^x \\ -\mu_0 J^y \\ -\mu_0 J^z \}^{\flat}
+
+.. warning::
+
+   Bug.
 
 .. admonition:: Back to the 1865 Maxwell Equations
    :class: dropdown, toggle-shown
@@ -569,38 +618,117 @@ Covariant-covariant
    .. math::
 
       {\scriptsize
-          \begin{align}
-          & \{ \partial_t \\ \partial_x \\ \partial_y \\ \partial_z \}^{\sharp} \FaradayFlatFlat \\
-          & =
-          \{ \partial_t \\ \partial_x \\ \partial_y \\ \partial_z \}^{\sharp} \FaradayRowRow \\
-          &=
-           \partial_t \{   0  \\ -\Ex \\ -\Ey \\ -\Ez \}^\flat
-          +\partial_x \{ +\Ex \\   0  \\ +\Bz \\ -\By \}^\flat
-          +\partial_y \{ +\Ey \\ -\Bz \\   0  \\ +\Bx \}^\flat
-          +\partial_z \{ +\Ez \\ +\By \\ -\Bx \\   0  \}^\flat
-          \end{align}
+      \begin{align}
+      \partial^{\sharp} F^{\flat\flat}
+      & = \{
+              +\partial_t \\
+              -\partial_x \\
+              -\partial_y \\
+              -\partial_z
+          \}^{\sharp}
+          \begin{bmatrix}
+                    & -\Ex & -\Ey & -\Ez \\
+               -\Ex &      & -\Bz & +\By \\
+               -\Ey & +\Bz &      & -\Bx \\
+               -\Ez & -\By & +\Bx &      \\
+          \end{bmatrix}^{\flat\flat} \\
+      & = \{
+              +\partial_t \\
+              -\partial_x \\
+              -\partial_y \\
+              -\partial_z
+          \}^{\sharp}
+          \{
+              \{   0 , -\Ex, -\Ey, -\Ez \} &
+              \{ -\Ex,   0 , +\Bz, -\By \} &
+              \{ -\Ey, -\Bz,   0 , +\Bx \} &
+              \{ -\Ez, +\By, -\Bx,   0  \}
+          \} \\
+      &=
+          +\partial_t \{   0  \\ -\Ex \\ -\Ey \\ -\Ez \}^\flat
+          -\partial_x \{ -\Ex \\   0  \\ +\Bz \\ -\By \}^\flat
+          -\partial_y \{ -\Ey \\ -\Bz \\   0  \\ +\Bx \}^\flat
+          -\partial_z \{ -\Ez \\ +\By \\ -\Bx \\   0  \}^\flat
+      =
+      \{
+          \begin{matrix}
+                              \\
+              +\partial_t \Ex \\
+              +\partial_t \Ey \\
+              +\partial_t \Ez \\
+          \end{matrix} &
+          \begin{matrix}
+              +\partial_x \Ex \\
+                              \\
+              -\partial_x \Bz \\
+              +\partial_x \By \\
+          \end{matrix} &
+          \begin{matrix}
+              +\partial_y \Ey \\
+              +\partial_y \Bz \\
+                              \\
+              -\partial_y \Bx \\
+          \end{matrix} &
+          \begin{matrix}
+              +\partial_z \Ez \\
+              -\partial_z \By \\
+              +\partial_z \Bx \\
+                              \\
+          \end{matrix}
+      \}^{\flat}
+      \end{align}
       }
 
-   Calculating the left-hand side thus results in:
+   The full expression :math:`\partial^\sharp F^{\flat\flat} = J_\flat` is then:
 
    .. math::
 
       {\scriptsize
-          \{ \partial_t \\ \partial_x \\ \partial_y \\ \partial_z \}^{\sharp} \FaradayFlatFlat
-          =
-          \begin{matrix}
-              \begin{alignat}{1}
-               \partial_t & \{   0  \\ -\Ex \\ -\Ey \\ -\Ez \}^\flat &
-              +\partial_x & \{ +\Ex \\   0  \\ +\Bz \\ -\By \}^\flat &
-              +\partial_y & \{ +\Ey \\ -\Bz \\   0  \\ +\Bx \}^\flat &
-              +\partial_z & \{ +\Ez \\ +\By \\ -\Bx \\   0  \}^\flat \\
-              \end{alignat}
-          \end{matrix}
+      \{
+          \begin{matrix}                 \\ +\partial_t \Ex \\ +\partial_t \Ey \\ +\partial_t \Ez \\ \end{matrix} &
+          \begin{matrix} +\partial_x \Ex \\                 \\ +\partial_x \Bz \\ -\partial_x \By \\ \end{matrix} &
+          \begin{matrix} +\partial_y \Ey \\ -\partial_y \Bz \\                 \\ +\partial_y \Bx \\ \end{matrix} &
+          \begin{matrix} +\partial_z \Ez \\ +\partial_z \By \\ -\partial_z \Bx \\                 \\ \end{matrix}
+      \}^{\flat}
+      =
+      \{ + \mu_0 c \rho \\ -\mu_0 J^x \\ -\mu_0 J^y \\ -\mu_0 Jz \}^\flat
+      }
+
+   Which is then unpacked in a system of equations:
+
+   .. math::
+
+      {\scriptsize
+      \begin{matrix}
+                          & +\partial_x \Ex & +\partial_y \Ey & +\partial_y \Ez & = & + \mu_0 c \rho \\
+          +\partial_t \Ex &                 & -\partial_y \Bz & +\partial_z \By & = & - \mu_0 J^x    \\
+          +\partial_t \Ey & +\partial_x \Bz &                 & -\partial_z \Bx & = & - \mu_0 J^y    \\
+          +\partial_t \Ez & -\partial_x \By & +\partial_y \Bx &                 & = & - \mu_0 J^z    \\
+      \end{matrix}\\
+      }
+
+   And reordered to obtain back the Maxwell equations derived in
+   :ref:`faraday_tensor_derivation:Deriving the Faraday Tensor from the 1865
+   Maxwell Equations`
+
+   .. math::
+
+      {\scriptsize
+      \begin{matrix}
+                          & +\partial_x \Ex & +\partial_y \Ey & +\partial_y \Ez & = & + \mu_0 c \rho \\
+          +\partial_t \Ex &                 & -\partial_y \Bz & +\partial_z \By & = & - \mu_0 J^x    \\
+          +\partial_t \Ey & +\partial_x \Bz &                 & -\partial_z \Bx & = & - \mu_0 J^y    \\
+          +\partial_t \Ez & -\partial_x \By & +\partial_y \Bx &                 & = & - \mu_0 J^z    \\
+      \end{matrix}
       }
 
 
+.. }}}
+
 Covariant-contravariant
 '''''''''''''''''''''''
+
+.. {{{
 
 .. }}}
 

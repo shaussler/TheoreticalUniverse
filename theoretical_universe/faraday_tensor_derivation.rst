@@ -317,51 +317,6 @@ We have thus obtained the Faraday tensor (inhomogenous equations) and its dual
 
 .. }}}
 
-The Musical Equations
----------------------
-
-.. {{{
-
-In the article :ref:`musical_notation:The Musical Tensor Notation`, I propose
-an alternative notation to facilitate calculations. In the post
-:ref:`all_faraday_tensors:All Faraday Tensors`, I employ this musical notation
-to systematically derive all forms of the Faraday tensor.
-
-.. include:: ./summary_musical_notation.rst
-
-With musical notation, the Maxwell equations are expressed as:
-
-.. math::
-
-   \{ \partial_t \\ \partial_x \\ \partial_y \\ \partial_z \\ \}^{\flat} &
-   \FaradaySharpFlat
-   =
-   \begin{bmatrix}
-   + \mu_0 c \rho \\
-   - \mu_0 J^x    \\
-   - \mu_0 J^y    \\
-   - \mu_0 J^z    \\
-   \end{bmatrix}^{\flat}
-
-.. math::
-
-   \{ \partial_t \\ \partial_x \\ \partial_y \\ \partial_z \}^{\flat}
-   \FaradayDualSharpFlat
-   =\{ 0 \\ 0 \\ 0 \\ 0 \\ \}^{\flat}
-
-With the Faraday tensor noted :math:`F` and its dual :math:`G`, the musical
-Maxwell equations can also be summarized with:
-
-.. math::
-
-   \partial^{\flat} F^{\sharp\flat} = J^{\flat} \\
-   \partial^{\flat} G^{\sharp\flat} = 0^{\flat}
-
-These really are the same as the tensor equations. The advantage lies when
-tensors are fully expanded and matrix multiplication rules explicitely applied.
-
-.. }}}
-
 The Tensor Equations
 --------------------
 
