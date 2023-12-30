@@ -1,7 +1,5 @@
-.. created by sphinx-quickstart on Sat Oct  7 12:15:53 2023.
-
-Theoretical Universe
-====================
+Theoretical Universe upcoming papers
+====================================
 
 A personal collection of papers about math and physics.
 
@@ -9,10 +7,11 @@ A personal collection of papers about math and physics.
    :maxdepth: 1
    :caption: Contents:
 
-   faraday_tensor_derivation.rst
+   all_faraday_tensors.rst
+   hodge_dual_faraday_tensor.rst
+   musical_field_equations.rst
+   minkowski_metric.rst
    musical_notation.rst
-   de_guas_theorem.rst
-   upcoming.rst
 
 LINKS:
 
@@ -26,10 +25,3 @@ LINKS:
    Repository    https://github.com/shaussler/TheoreticalUniverse
    Issues        https://github.com/shaussler/TheoreticalUniverse/issues
    ============= =======================================================
-
-.. Indices and tables
-.. ==================
-.. 
-.. * :ref:`genindex`
-.. * :ref:`modindex`
-.. * :ref:`search`
