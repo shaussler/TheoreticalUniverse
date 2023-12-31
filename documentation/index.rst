@@ -8,6 +8,7 @@ A personal collection of papers about math and physics.
    :caption: Contents:
 
    all_faraday_tensors.rst
+   differential_forms_maxwell.rst
    hodge_dual_faraday_tensor.rst
    musical_field_equations.rst
    minkowski_metric.rst

@@ -124,6 +124,9 @@ mathjax3_config = {
             'EtayRow': r'\{ 0 &  0 & -1 &  0 \}',
             'EtazRow': r'\{ 0 &  0 &  0 & -1 \}',
 
+            'EtaRowRow': r'\{ \EtatRow & \EtaxRow & \EtayRow & \EtazRow \}',
+            'EtaColCol': r'\{ \EtatCol \\ \EtaxCol \\ \EtayCol \\ \EtazCol \}',
+
             'EtaSharpSharp': r'''
                 \begin{bmatrix}
                     +1 &  0 &  0 &  0 \\

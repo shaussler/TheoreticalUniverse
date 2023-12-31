@@ -16,6 +16,37 @@ Representation of Multilinear Forms
 
 .. include:: ./musical_notation_multilinear_forms.rst
 
+Matrix Multiplication
+---------------------
+
+Applying matrix :math:`A` to matrix :math:`B`:
+
+.. math::
+
+   \{ A^{\sharp\flat} B^{\sharp\flat} \}^\mu{}_\nu = A^\mu{}_\gamma B^\gamma{}_\nu
+
+Applying matrix :math:`A` to vector :math:`\bv{v}`
+
+.. math::
+
+   \{ A^{\sharp\flat} v^{\sharp} \}^\mu = A^\mu{}_\gamma v^\gamma
+
+.. math::
+
+   \{ A^{\flat\flat} v^{\sharp} \}^\mu = A_\mu{}_\gamma v^\gamma
+
+The new situation is to apply a vector :math:`v^\sharp` to a matrix :math:`A`.
+This results in taking the transpose and then *follow matrix multiplication
+rules fro mthe left*.
+
+.. math::
+
+   \{ v^\sharp A^{\flat\sharp} \}^\mu = v^\gamma A_\gamma{}^\mu = v^\gamma A^T_\mu{}^\gamma
+
+.. math::
+
+   \{ v^\sharp A^{\flat\flat} \}_\mu = v^\gamma A_\gamma{}_\mu = v^\gamma A^T_\mu{}_\gamma
+
 Representation of the Metric Tensor
 -----------------------------------
 
@@ -254,6 +285,46 @@ Following vanilla matrix multiplication rules for :math:`\alpha = \{ +1 & 0
          \{ +c \\ -d \}^{\flat} \}
    = \{ +a & +c \\ -b & -d \}^{\flat\flat}
   \end{align}
+
+
+Applying the metric tensor
+--------------------------
+
+.. math::
+
+   a_i A^i{}_j = b_j \\
+   a^i A_i{}_j = b_j \\
+   a^k g_{ik} g^{im} A_m{}_j = b_j
+
+So my thing would then be:
+
+.. math::
+
+   \partial_\mu F^\mu{}_\nu = J_\nu \\
+   \partial^\delta \eta_{\mu\delta} \eta^{\mu\gamma} F_\gamma{}_\nu = J_\nu \\
+   \eta_{\mu\delta} \partial^\delta \eta^{\mu\gamma} F_\gamma{}_\nu = J_\nu \\
+   \eta_{\mu\delta} \partial^\delta F_\gamma{}_\nu \eta^{\mu\gamma} = J_\nu \\
+   \eta_{\mu\delta} \partial^\delta F_\gamma{}_\nu \eta^{\gamma\mu} = J_\nu \\
+   \partial^\mu F_\mu{}_\nu = J_\nu \\
+
+So that:
+
+.. math::
+
+   {\scriptsize
+   \begin{align}
+   J_\nu &= \partial_\mu F^\mu{}_\nu\\
+   J_\nu &= \partial^\delta \eta_{\mu\delta} \eta^{\mu\gamma} F_\gamma{}_\nu \\
+         &= \{ +\partial_t \\ -\partial_x \\ -\partial_y \\ -\partial_z \} \EtaRowRow \EtaColCol F^{\flat\flat} \\
+   J_\nu &= \eta_{\mu\delta} \partial^\delta \eta^{\mu\gamma} F_\gamma{}_\nu \\
+   J_\nu &= \eta_{\mu\delta} \partial^\delta F_\gamma{}_\nu \eta^{\mu\gamma} \\
+   J_\nu &= \eta_{\mu\delta} \partial^\delta F_\gamma{}_\nu \eta^{\gamma\mu} \\
+   J_\nu &= \eta_{\mu\delta} \partial^\delta F_\nu{}_\gamma \eta^{\gamma\mu} \\
+         &= \EtaRowRow \{ +\partial_t \\ -\partial_x \\ -\partial_y \\ -\partial_z \} F^{\flat\flat T} \EtaColCol
+         \\
+   J_\nu &= \partial^\mu F_\mu{}_\nu \\
+   \end{align}
+   }
 
 Notable Difference
 ------------------

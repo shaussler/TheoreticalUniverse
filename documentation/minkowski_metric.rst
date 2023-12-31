@@ -5,10 +5,6 @@ The Minkowski Metric
 
    by Stéphane Haussler
 
-.. warning::
-
-   Under construction
-
 Flat metric tensor:
 
 .. math::
@@ -30,7 +26,10 @@ By definition:
    e^\mu \cdot e_\nu = \delta^\mu_\nu
 
 
-The rules of matrix multiplication and the metric tensor:
+The rules of matrix multiplication and the metric tensor.
+
+The metric tensor
+-----------------
 
 .. math::
 
@@ -69,7 +68,6 @@ The rules of matrix multiplication and the metric tensor:
     0 &  0 & -1 &  0 \\
     0 &  0 &  0 & -1 \\
    \end{bmatrix}^{\sharp\sharp}
-
 
 .. math::
 
@@ -110,6 +108,93 @@ The rules of matrix multiplication and the metric tensor:
         0 &  0 &  0 & -1 \\
        \end{bmatrix}^{\sharp\sharp}
    \end{align}
+
+Applying metric tensor to ifself
+--------------------------------
+
+.. warning::
+
+   .. rubric:: Applying the metric tensor
+
+   .. math::
+
+      \eta_{\mu\delta} \; \eta^{\delta\nu} = \delta_\mu{}^\nu
+
+   .. math::
+   
+      {\scriptsize 
+      \begin{align}
+      \eta^{\flat\flat} \eta^{\sharp\sharp}
+      = & \EtaFlatFlat \EtaSharpSharp \\
+      \eta^{\flat\flat} \eta^{\sharp\sharp}
+      = & \EtaRowRow \EtaColCol \\
+      = & \{ 1 \EtatCol &  0 \EtaxCol &  0 \EtayCol &  0 \EtazCol \} + \\
+        & \{ 0 \EtatCol & -1 \EtaxCol &  0 \EtayCol &  0 \EtazCol \} + \\
+        & \{ 0 \EtatCol &  0 \EtaxCol & -1 \EtayCol &  0 \EtazCol \} + \\
+        & \{ 0 \EtatCol &  0 \EtaxCol &  0 \EtayCol & -1 \EtazCol \}   \\ 
+      \eta^{\flat\flat} \eta^{\sharp\sharp}
+      = & \{ 1 & 0 & 0 & 0 \\
+             0 & 0 & 0 & 0 \\
+             0 & 0 & 0 & 0 \\
+             0 & 0 & 0 & 0 \} +
+          \{ 0 & 0 & 0 & 0 \\
+             0 & 1 & 0 & 0 \\
+             0 & 0 & 0 & 0 \\
+             0 & 0 & 0 & 0 \} + 
+          \{ 0 & 0 & 0 & 0 \\
+             0 & 0 & 0 & 0 \\
+             0 & 0 & 1 & 0 \\
+             0 & 0 & 0 & 0 \} + 
+          \{ 0 & 0 & 0 & 0 \\
+             0 & 0 & 0 & 0 \\
+             0 & 0 & 0 & 0 \\
+             0 & 0 & 0 & 1 \} \\ 
+      \eta^{\flat\flat} \eta^{\sharp\sharp}
+      = & \{ 1 & 0 & 0 & 0 \\
+             0 & 1 & 0 & 0 \\
+             0 & 0 & 1 & 0 \\
+             0 & 0 & 0 & 1 \}
+      \end{align}
+      }
+
+Applying the metric tensor
+--------------------------
+
+.. math::
+
+   a_i A^i{}_j = b_j \\
+   a^i A_i{}_j = b_j \\
+   a^k g_{ik} g^{im} A_m{}_j = b_j
+
+So my thing would then be:
+
+.. math::
+
+   \partial_\mu F^\mu{}_\nu = J_\nu \\
+   \partial^\delta \eta_{\mu\delta} \eta^{\mu\gamma} F_\gamma{}_\nu = J_\nu \\
+   \eta_{\mu\delta} \partial^\delta \eta^{\mu\gamma} F_\gamma{}_\nu = J_\nu \\
+   \eta_{\mu\delta} \partial^\delta F_\gamma{}_\nu \eta^{\mu\gamma} = J_\nu \\
+   \eta_{\mu\delta} \partial^\delta F_\gamma{}_\nu \eta^{\gamma\mu} = J_\nu \\
+   \partial^\mu F_\mu{}_\nu = J_\nu \\
+
+So that:
+
+.. math::
+
+   {\scriptsize
+   \begin{align}
+   J_\nu &= \partial_\mu F^\mu{}_\nu\\
+   J_\nu &= \partial^\delta \eta_{\mu\delta} \eta^{\mu\gamma} F_\gamma{}_\nu \\
+         &= \{ +\partial_t \\ -\partial_x \\ -\partial_y \\ -\partial_z \} \EtaRowRow \EtaColCol F^{\flat\flat} \\
+   J_\nu &= \eta_{\mu\delta} \partial^\delta \eta^{\mu\gamma} F_\gamma{}_\nu \\
+   J_\nu &= \eta_{\mu\delta} \partial^\delta F_\gamma{}_\nu \eta^{\mu\gamma} \\
+   J_\nu &= \eta_{\mu\delta} \partial^\delta F_\gamma{}_\nu \eta^{\gamma\mu} \\
+   J_\nu &= \eta_{\mu\delta} \partial^\delta F_\nu{}_\gamma \eta^{\gamma\mu} \\
+         &= \EtaRowRow \{ +\partial_t \\ -\partial_x \\ -\partial_y \\ -\partial_z \} F^{\flat\flat T} \EtaColCol
+         \\
+   J_\nu &= \partial^\mu F_\mu{}_\nu \\
+   \end{align}
+   }
 
 
 https://vixra.org/abs/1710.0196
