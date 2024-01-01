@@ -11,6 +11,8 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-python@v3
+      - name: Install build dependencies
+        run: pip install wheel setuptools
       - name: Build theoretical_python
         run: python setup.py bdist_wheel
       - name: Install theoretical_python
