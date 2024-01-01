@@ -391,7 +391,7 @@ Covariant-covariant
       \partial^\gamma F_\gamma{}_\mu = \partial_\gamma F^\gamma{}_\mu
       }
 
-   However doing that we loose indsight on how to explicitely get back to the
+   However doing that we loose insight on how to explicitely get back to the
    1865 Maxwell equations from the doubly covariant electromagnetic tensor. In
    particular this permits to clarify matrix multiplication rules of a
    contravariant vector from the left.

@@ -5,10 +5,10 @@ Deriving the Faraday Tensor from the 1865 Maxwell Equations
 
    by Stéphane Haussler
 
-In this article, I present a straightforward, natural and elegant derivation of
-the Faraday tensor. This derivation draws strong inspiration from Minkowski's
-1908 paper, `The Fundamental Equations for Electromagnetic Processes in Moving
-Bodies <https://en.wikisource.org/wiki/Translation:
+In this article, I present a straightforward and natural derivation of the
+electromagnetic field tensor. This derivation draws strong inspiration from
+Minkowski's 1908 paper, `The Fundamental Equations for Electromagnetic
+Processes in Moving Bodies <https://en.wikisource.org/wiki/Translation:
 The_Fundamental_Equations_for_Electromagnetic_Processes_in_Moving_Bodies>`_.
 What sets this derivation apart is that it avoids the often-seen backward proof
 that the tensor formulation is equivalent to the Maxwell equations. Notably, it
@@ -17,16 +17,16 @@ but rather adheres to the original 1865 formulation by Mr. Maxwell, albeit
 presented with modern notation and the benefit of hindsight.
 
 This derivation might not be widely known. If I am mistaken and you are aware
-of freely available resources covering this derivation, open an issue and I
-will include a reference. Also if you find mistakes don't hesitate to open an
-issue or directly provide corrections by sending a merge request to my `Github
-repository <https://github.com/shaussler/TheoreticalUniverse/>`_.
+of freely available resources, open an issue and I will include a reference. If
+you find mistakes, don't hesitate to open an issue or directly provide
+corrections by sending a merge request to my `Github repository
+<https://github.com/shaussler/TheoreticalUniverse/>`_.
 
 I assume the reader possesses a strong grasp of vector calculus, including
 familiarity with the vector dot and cross products, as well as matrix
-multiplication. Surprisingly, while an understanding of Maxwell's equations and
-tensor calculus can enrich the content, they are not essential to follow this
-derivation.
+multiplication. While an understanding of Maxwell's equations and tensor
+calculus certainly can enrich the content, they are not essential to follow
+this derivation.
 
 The Vector Formulation of Mr. Heaviside
 ---------------------------------------
@@ -38,22 +38,24 @@ Mr. Maxwell's groundbreaking work in 1865,
 <https://en.m.wikipedia.org/wiki/A_Dynamical_Theory_of_the_Electromagnetic_Field>`_
 (`pdf <https://www.jstor.org/stable/108892>`_)
 , utilized differential expressions rather than the modern vector formulation
-proposed by Mr. Heaviside. It's essential to note that in 1865, the concept of
-vectors had not yet been introduced.
+proposed by Mr. Heaviside. Indeed in 1865, the concept of vectors had not yet
+been introduced.
 
-Mr. Heaviside proposed the vector form of the Maxwell equations which is the
-most widespread formulation today. I therefore start from there and unpack into
-a form closer in spirit to the 1865 equation. The equations consist of two
-inhomogenous (Gauss's law and Ampère'circuital law) and two homogenous vector
-equations (Gauss's law for magnetism and Faraday's law of induction), which is
-how I organize the equations.
+`Mr. Heaviside proposed both the concept of vectors as well as the vector form
+of the Maxwell equations.
+<https://youtu.be/M12CJIuX8D4?si=nuOUEFmRu5Jx4jHJ>`_
+This is the most widespread formulation today. I therefore start from there and
+unpack into a form closer in spirit to the 1865 equation. The equations consist
+of two inhomogenous (Gauss's law and Ampère'circuital law) and two homogenous
+vector equations (Gauss's law for magnetism and Faraday's law of induction),
+which is how I organize the equations.
 
 While these equations are undoubtedly intriguing, within the context of this
 derivation, a deep comprehension of the physics behind them is unnecessary. I
-simply present them as the initial basis for this derivation. With the
-exception of Maxwell's modification to Ampère's circuital law, these equations
-represent the mathematical expression of empirical observations. Therefore,
-they can be regarded as established experimental facts.
+simply present them as the initial basis for the derivation. With the exception
+of Maxwell's modification to Ampère's circuital law, these equations represent
+the mathematical expression of empirical observations. Therefore, they can be
+regarded as established experimental facts.
 
 .. rubric:: Gauss's law
 
@@ -87,6 +89,7 @@ field :math:`\vect{B}=\{ B^x \\ B^y \\ B^z \}`, and operator
 y} \\ \frac{\partial}{\partial z} \}`
 
 .. }}}
+
 
 The Equations of Mr. Maxwell
 ----------------------------
@@ -141,6 +144,7 @@ the 1865 Maxwell formulation, albeit with modern notation and conventions.
     = - \frac{\partial}{\partial t} B^z \\
 
 .. }}}
+
 
 The Underlying Structure
 ------------------------
@@ -204,6 +208,7 @@ Gathering and reordering the terms, a clear structures becomes apparent:
    \end{matrix}
 
 .. }}}
+
 
 The Ordered Equations
 ---------------------
@@ -271,6 +276,7 @@ be apparent that we can employ matrices operations.
 
 .. }}}
 
+
 The Tensor of Mr. Faraday
 -------------------------
 
@@ -317,6 +323,7 @@ We have thus obtained the Faraday tensor (inhomogenous equations) and its dual
 
 .. }}}
 
+
 The Tensor Equations
 --------------------
 
@@ -356,7 +363,7 @@ dual.
 You can find this form in an alternative derivation `here
 <https://www.wikihow.life/Derive-the-Faraday-Tensor>`_.
 
-The Maxwell equations are:
+The tensor form of the Maxwell equations is then:
 
 .. math::
 
