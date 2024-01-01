@@ -1,0 +1,3 @@
+[build-system]
+requires = ["wheel"]
+build-backend = "wheel.pep517.build"

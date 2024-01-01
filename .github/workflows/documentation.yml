@@ -11,8 +11,10 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-python@v3
-      - name: Install dependencies
-        run: pip install sphinx myst_parser furo sphinx-book-theme sphinxcontrib-googleanalytics sphinx_sitemap sphinx-togglebutton
+      - name: Build theoretical_python
+        run: python setup.py bdist_wheel
+      - name: Install theoretical_python
+        run: pip install dist/theoretical_python*.whl
       - name: Sphinx build
         run: sphinx-build theoretical_universe/ doc/
       - name: Deploy to GitHub Pages
