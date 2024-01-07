@@ -329,18 +329,19 @@ The Tensor Equations
 
 .. {{{
 
-
-The left hand side is flat and therefore represent a covector with lower
-indices. In tensor notation, we write :math:`\partial_\mu`. The right hand side
-is also flat and therefore represent a covector with lower indices
-:math:`J_\nu`. The rank 2 tensors in the expressions are therefore necessarily
-one time contravariant and one time covariant. We then write in tensor notation
-:math:`F^\mu{}_\nu` for the Faraday tensor, and :math:`G^\mu{}_\nu` for its
-dual.
+The flat left hand side is a covector, which we note in tensor notation with
+lower indices :math:`\partial_\mu`. The right hand side is also flat and
+therefore is a covector :math:`J_\nu`. The rank 2 tensors in the expressions
+are necessarily one time contravariant and one time covariant. We multiply each
+column of :math:`\partial` with each row of :math:`F`, and repeat for all
+columns of :math:`F`. With the first index of :math:`F` being the row
+:math:`\mu`, and :math:`\nu`, this means :math:`\partial_\mu F^\mu{}_\nu`. We
+then write in tensor notation :math:`F^\mu{}_\nu` for the Faraday tensor, and
+:math:`G^\mu{}_\nu` for its dual:
 
 .. math::
 
-   F^\mu{}_\nu
+   \{ F^\mu{}_\nu \}
    =
    \begin{bmatrix}
             & +\Ex & +\Ey & +\Ez \\
@@ -351,7 +352,7 @@ dual.
 
 .. math::
 
-   G^\mu{}_\nu
+   \{ G^\mu{}_\nu \}
    =
    \begin{bmatrix}
              & +\Bx & +\By & +\Bz \\
@@ -360,14 +361,15 @@ dual.
        +\Bz  & -\Ey & +\Ex &      \\
    \end{bmatrix}
 
-You can find this form in an alternative derivation `here
-<https://www.wikihow.life/Derive-the-Faraday-Tensor>`_.
-
-The tensor form of the Maxwell equations is then:
+Maxwell's equations are then:
 
 .. math::
 
    \partial_{\mu} F^\mu{}_\nu & = J_{\nu} \\
    \partial_{\mu} G^\mu{}_\nu & = 0
+
+To double-check the result, you can have a look at `this alternative derivation
+of the mixed electromagnetic tensor
+<https://www.wikihow.life/Derive-the-Faraday-Tensor>`_.
 
 .. }}}
