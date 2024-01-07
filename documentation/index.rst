@@ -10,7 +10,8 @@ A personal collection of papers about math and physics.
    all_faraday_tensors.rst
    differential_forms_maxwell.rst
    hodge_dual_faraday_tensor.rst
-   musical_field_equations.rst
+   lorentz_force.rst
+   musical_field_equations.md
    minkowski_metric.rst
    musical_notation.rst
 
