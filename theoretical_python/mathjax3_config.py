@@ -11,8 +11,8 @@ def mathjax3_config():
            'packages': {'[+]': ['ams']},
            'macros': {
     
-                # Define variables
-                # ----------------
+                # Define Components and a phantom
+                # -------------------------------
     
                 'Et': r'\tilde{E^{t}}',
                 'Ex': r'\tilde{E^{x}}',
@@ -24,6 +24,9 @@ def mathjax3_config():
                 'By': r'B^{y}',
                 'Bz': r'B^{z}',
     
+                'Pp': r'\phantom{P^{p}}',
+                'sPp': r'\phantom{+P^{p}}',
+
                 # Redefine vectors
                 # ----------------
     
@@ -128,9 +131,9 @@ def mathjax3_config():
                 'FaradayFlatSharp': r'''
                     \begin{bmatrix}
                              & +\Ex & +\Ey & +\Ez \\
-                        ?\Ex &      & +\Bz & -\By \\
-                        ?\Ey & -\Bz &      & +\Bx \\
-                        ?\Ez & +\By & -\Bx &      \\
+                        +\Ex &      & +\Bz & -\By \\
+                        +\Ey & -\Bz &      & +\Bx \\
+                        +\Ez & +\By & -\Bx &      \\
                     \end{bmatrix}^{\flat\sharp}
                 ''',
     
