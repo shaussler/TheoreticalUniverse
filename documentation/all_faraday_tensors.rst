@@ -12,8 +12,10 @@ notation <musical_notation:The Musical Tensor Notation>` to facilitate
 calculations. In this article, I systematically derive all variations of the
 electromagnetic field tensor.
 
+
 Inhomogenous equations
 ----------------------
+
 
 Contravariant-covariant
 '''''''''''''''''''''''
@@ -27,9 +29,13 @@ Metric>` to obtain the other forms. The electromagnetic field tensor is:
 
 .. math::
 
-   F^{\sharp\flat} = \FaradaySharpFlat
+   \{ F^\mu{}_\nu \} = F^{\sharp\flat} = \FaradaySharpFlat
+
+The musical notation matches he tensor notation with :math:`F^{\sharp\flat} =
+\{ F^\mu{}_\nu \}`
 
 .. }}}
+
 
 Contravariant-contravariant
 '''''''''''''''''''''''''''
@@ -39,10 +45,13 @@ Contravariant-contravariant
 .. math::
 
    {\small
-       F^{\sharp\sharp} = F^{\sharp\flat} \eta^{\sharp\sharp}
-                        = \FaradaySharpFlat \EtaSharpSharp
-                        = \FaradaySharpSharp
+        F^{\sharp\sharp} = F^{\sharp\flat} \eta^{\sharp\sharp}
+                         = \FaradaySharpFlat \EtaSharpSharp
+                         = \FaradaySharpSharp
    }
+
+The row/row musical notation corresponds to the row/column tensor notation
+with: :math:`F^{\sharp\sharp} = \{ F^\mu{}^\nu \}^T`
 
 .. admonition:: Step by step
    :class: dropdown
@@ -52,7 +61,7 @@ Contravariant-contravariant
       {\scriptsize
           F^{\sharp\sharp}
           =
-          \FaradaySharpSharp
+          \FaradaySharpFlat
           \{ \EtatSharp \\ \EtaxSharp \\ \EtaySharp \\ \EtazSharp \}
           =
           \begin{bmatrix}
@@ -87,32 +96,23 @@ Contravariant-contravariant
 
 .. }}}
 
+
 Covariant-covariant
 '''''''''''''''''''
 
 .. {{{
 
-.. warning::
+.. math::
+ 
+   {\scriptsize
+       F^{\flat\flat}
+       = \eta{\flat\flat} F^{\sharp\flat}
+       = \EtaFlatFlat \FaradaySharpFlat
+       = \FaradayFlatFlat
+   }
 
-   Doesn't match when I try to get back the Maxwell equations. Actually, this
-   one kinda makes sense and has the form I would like to have.
-
-   .. math::
-    
-      {\scriptsize
-          F^{\flat\flat}
-          = \eta{\flat\flat} F^{\sharp\flat}
-          = \EtaFlatFlat \FaradaySharpFlat
-          = \FaradayFlatFlat
-      }
-
-.. warning::
+.. admonition:: Step by step
    :class: dropdown
-
-   .. rubric:: Step by step 
-
-   Getting a form I kinda like but not getting the Maxwell equations back with
-   that.
 
    .. math::
 
@@ -147,6 +147,7 @@ Covariant-covariant
 
 .. }}}
  
+
 Covariant-contravariant
 '''''''''''''''''''''''
 
@@ -158,7 +159,7 @@ Covariant-contravariant
        F^{\flat\sharp}
        = \eta^{\flat\flat} F^{\sharp\sharp}
        = \EtaFlatFlat \FaradaySharpSharp
-       = 
+       = \FaradayFlatSharp
    }
 
 .. admonition:: Step by step
@@ -191,22 +192,18 @@ Covariant-contravariant
       =
       \begin{bmatrix}
           \begin{alignat}{1}
-            0  & \EtatCol^\flat & +\Ex & \EtaxCol^\flat & +\Ey & \EtayCol^\flat & +\Ez & \EtazCol^\flat \\
-          -\Ex & \EtatCol^\flat & + 0  & \EtaxCol^\flat & -\Bz & \EtayCol^\flat & +\By & \EtazCol^\flat \\
-          -\Ey & \EtatCol^\flat & +\Bz & \EtaxCol^\flat & + 0  & \EtayCol^\flat & -\Bx & \EtazCol^\flat \\
-          -\Ez & \EtatCol^\flat & -\By & \EtaxCol^\flat & +\Bx & \EtayCol^\flat & + 0  & \EtazCol^\flat \\
+            0  & \EtatCol^\flat & -\Ex & \EtaxCol^\flat & -\Ey & \EtayCol^\flat & -\Ez & \EtazCol^\flat \\
+          +\Ex & \EtatCol^\flat & + 0  & \EtaxCol^\flat & -\Bz & \EtayCol^\flat & +\By & \EtazCol^\flat \\
+          +\Ey & \EtatCol^\flat & +\Bz & \EtaxCol^\flat & + 0  & \EtayCol^\flat & -\Bx & \EtazCol^\flat \\
+          +\Ez & \EtatCol^\flat & -\By & \EtaxCol^\flat & +\Bx & \EtayCol^\flat & + 0  & \EtazCol^\flat \\
           \end{alignat}
       \end{bmatrix}^\sharp
       =
-      \begin{bmatrix}
-               & -\Ex & -\Ey & -\Ez \\
-          -\Ex &      & -\Bz & +\By \\
-          -\Ey & -\Bz &      & -\Bx \\
-          -\Ez & +\By & +\Bx &      \\
-      \end{bmatrix}^\sharp
+      \FaradayFlatSharp
       }
 
 .. }}}
+
 
 Homogenous equations
 --------------------
@@ -219,8 +216,10 @@ Homogenous equations
 
 .. rubric:: Covariant-contravariant
 
-Explicit formulation of Maxwell equations
------------------------------------------
+
+Musical  equations
+------------------
+
 
 Contravariant-covariant
 '''''''''''''''''''''''
@@ -252,6 +251,7 @@ Contravariant-covariant
 .. }}}
 
 .. rubric:: Homogenous Equations
+
 
 Contravariant-contravariant
 '''''''''''''''''''''''''''
@@ -356,6 +356,7 @@ Contravariant-contravariant
 
 .. }}}
 
+
 Covariant-covariant
 '''''''''''''''''''
 
@@ -397,7 +398,7 @@ Covariant-covariant
    contravariant vector from the left.
 
 .. admonition:: Back to the 1865 Maxwell's Equations
-   :class: dropdown
+   :class: dropdown, toggle-shown
 
    Upacking the musical tensor notation result in:
 
@@ -416,22 +417,22 @@ Covariant-covariant
       \end{align}
       }
 
-   To apply a vector to a matrix from the left clearly is not standard. However
-   it can be stated with tensor notation:
+   To apply a vector to a matrix from the left is not standard. However it can
+   be stated with tensor notation:
 
    .. math::
 
       {\small
-      \{ \partial^\sharp F^{\flat\flat} \}_\mu
+      \{ \partial^\sharp F^{\flat\flat} \}_\nu
       =
-      \partial^\gamma F_\gamma{}_\mu = \partial^\gamma F^T_\mu{}_\gamma
+      \partial^\mu F_\mu{}_\nu = \partial^\mu F^T_{\nu\mu}
       }
 
    The rule for matrix multiplication can then formulated as *Applying each row
    of the vector to each column of the transposed column-column matrix*. This
    is nearly the same as applying a vector to a matrix, with the twist that the
    transpose of the matrix is taken, and the partial derivatives are applied
-   from the left.
+   from the left:
 
    .. math::
 
@@ -448,13 +449,12 @@ Covariant-covariant
               \{   0  \\ +\Ex \\ +\Ey \\ +\Ez \}^\flat &
               \{ -\Ex \\   0  \\ -\Bz \\ +\By \}^\flat &
               \{ -\Ey \\ +\Bz \\   0  \\ -\Bx \}^\flat &
-              \{ -\Ez \\ -\By \\ +\Bx \\   0  \}^\flat
-          \} \\
+              \{ -\Ez \\ -\By \\ +\Bx \\   0  \}^\flat \}^\flat \\
       & = \{
           +\partial_t \{   0  \\ +\Ex \\ +\Ey \\ +\Ez \}^\flat
           -\partial_x \{ -\Ex \\   0  \\ -\Bz \\ +\By \}^\flat
           -\partial_y \{ -\Ey \\ +\Bz \\   0  \\ -\Bx \}^\flat
-          -\partial_z \{ -\Ez \\ -\By \\ +\Bx \\   0  \}^\flat \} \\
+          -\partial_z \{ -\Ez \\ -\By \\ +\Bx \\   0  \}^\flat \}^\flat \\
       & =
       \{
           \begin{matrix}
@@ -515,13 +515,98 @@ Covariant-covariant
 
 .. }}}
 
-
 .. rubric:: Homogenous Equations
+
 
 Covariant-contravariant
 '''''''''''''''''''''''
 
 .. rubric:: Inhomogenous Equations
+
+.. {{{
+
+.. math::
+
+   \{ +\partial_t \\
+      -\partial_x \\
+      -\partial_y \\
+      -\partial_z \\
+   \}^{\sharp}
+   \FaradayFlatSharp
+   =
+   \{ +\mu_0 c \rho \\
+      +\mu_0 J^x    \\
+      +\mu_0 J^y    \\
+      +\mu_0 J^z    \}^{\sharp}
+
+.. warning:: 
+   :class: dropdown, toggle-shown
+
+   .. rubric:: Back to the 1865 Maxwell's Equations
+
+   Upacking the musical tensor notation result in:
+
+   .. math::
+
+      \partial^\sharp F^{\flat\sharp} = 
+      \{ +\partial_t \\
+         -\partial_x \\
+         -\partial_y \\
+         -\partial_z \\
+      \}^{\sharp}
+      \FaradayFlatSharp
+
+   To apply a vector to a matrix from the left is not standard. However it can
+   be stated with tensor notation:
+
+   .. math::
+
+      {\small
+      \{ \partial^\sharp F^{\flat\sharp} \}_\mu
+      =
+      \partial^\gamma F_\gamma{}^\mu = \partial^\gamma F^T_\mu{}^\gamma
+      }
+
+   The rule for matrix multiplication can then formulated as *Applying each row
+   of the vector to each column of the transposed column-column matrix*. This
+   is nearly the same as applying a vector to a matrix, with the twist that the
+   transpose of the matrix is taken, and the partial derivatives are applied
+   from the left:
+
+   .. math::
+
+      \{
+      +\partial_t  0  -\partial_x \Ex -\partial_y \Ey -\partial_z \Ez \\
+      +\partial_t \Ex -\partial_x  0  -\partial_y \Bz +\partial_z \By \\
+      +\partial_t \Ey +\partial_x \Bz -\partial_y  0  +\partial_z \Bx \\
+      +\partial_t \Ez -\partial_x \By +\partial_y \Bx -\partial_z     \\
+      \}^{\sharp}
+
+   .. math::
+
+      {\small
+      \begin{matrix}
+                          & +\partial_x \Ex & +\partial_y \Ey & +\partial_y \Ez & = & + \mu_0 c \rho \\
+          +\partial_t \Ex &                 & -\partial_y \Bz & +\partial_z \By & = & - \mu_0 J^x    \\
+          +\partial_t \Ey & +\partial_x \Bz &                 & -\partial_z \Bx & = & - \mu_0 J^y    \\
+          +\partial_t \Ez & -\partial_x \By & +\partial_y \Bx &                 & = & - \mu_0 J^z    \\
+      \end{matrix}
+      }
+
+.. \{ \{ \sPp & +\Ex & +\Ey & +\Ez \}^\flat \\
+..    \{ +\Ex & \sPp & -\Bz & +\By \}^\flat \\
+..    \{ +\Ey & +\Bz & \sPp & -\Bx \}^\flat \\
+..    \{ +\Ez & -\By & +\Bx & \sPp \}^\flat \}^\sharp
+.. =
+.. \{ +\partial_t \{ \sPp & +\Ex & +\Ey & +\Ez \}^\flat \\
+..    -\partial_x \{ +\Ex & \sPp & -\Bz & +\By \}^\flat \\
+..    -\partial_y \{ +\Ey & +\Bz & \sPp & -\Bx \}^\flat \\
+..    -\partial_z \{ +\Ez & -\By & +\Bx & \sPp \}^\flat \\
+.. \}^{\sharp}
+     
+
+
+.. }}}
 
 .. rubric:: Homogenous Equations
 
