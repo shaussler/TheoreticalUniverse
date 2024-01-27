@@ -1,5 +1,31 @@
-Differential operators as differential forms
+Differential operators in differential forms
 ============================================
+
+.. warning::
+
+   Under construction.
+
+.. rst-class:: custom-author
+
+   by Stéphane Haussler\
+
+In this article, I use the language of differential forms to express the
+derivative, the gradient, the divergence, the curl and the laplacian in the
+language of differential forms.
+
+I assume the reader possesses a strong grasp of vector calculus and a
+functional understanding of differential forms. I personally learned
+differential forms with yet another `great video serie by Michael Penn
+<https://youtube.com/playlist?list=PL22w63XsKjqzQZtDZO_9s2HEMRJnaOTX7&si=4dDrAZ-oKa1rI7B8>`_.
+I will simplify the concept of the Hodge dual, often presented in a needlessly
+complex manner, making it more accessible. A basic comprehension of vectors,
+covectors, and tensor calculus will enhance the discussion. Familiarity with
+the concepts of Grassman Algebra, Clifford Algebra (AKA Geometric Algebra), Lie
+Groups and Algebra will certainly be a sign that the reader understand
+antisymmetry underlying differential forms
+
+I will be using a pseudo-matrix notation which is not conventional, but that I
+hope highlight symmetries and the reader will find obvious.
 
 Notation
 --------
@@ -28,17 +54,30 @@ Where :math:`g` is the metric tensor, and thus:
    g^{ij} &= dx^i \cdot dx^j
    \end{align}
 
-Finally, the basis vector :math:`\mathbf{e}_i` are:
+Finally, the basis vector :math:`\mathbf{e}_i` are.
+
+Derivative
+----------
+
+The derivative is our basic vector:
 
 .. math::
 
    \mathbf{e}_i = \partial_i
 
-An the basis covectors are:
+The basis covectors are the differentials:
 
 .. math::
 
    \mathbf{e}^i = dx^i
+
+Indeed get:
+
+.. math::
+
+   \mathbf{e}^i \cdot \mathbf{e}_j = dx^i \partial_j = \delta^i_j
+
+
 
 Curl
 ----
@@ -48,9 +87,9 @@ The full expression of the curl of a vector field is
 .. math::
 
    \nabla^\sharp \times F^\sharp =
-   \{ (\py F^z - \pz F^y) \px \\
-      (\pz F^x - \px F^z) \py \\
-      (\px F^y - \py F^x) \pz \}
+   \{ (\partial_y F^z - \partial F^y) \; \partial_x \\
+      (\partial_z F^x - \partial F^z) \; \partial_y \\
+      (\partial_x F^y - \partial F^x) \; \partial_z \}
 
 We demonstrate this is also equal to:
 
@@ -141,4 +180,26 @@ Where we can now take the star operator:
       (\partial_z F^x - \partial_x F^z) dy \\
       (\partial_x F^y - \partial_y F^x) dz \}
 
+We can then sharpen the covector to its vector form:
 
+.. math::
+
+   (\star dF^\flat)^\sharp
+   =
+   \{ (\partial_y F^z - \partial_z F^y) dx^\sharp \\
+      (\partial_z F^x - \partial_x F^z) dy^\sharp \\
+      (\partial_x F^y - \partial_y F^x) dz^\sharp \}
+
+.. math::
+
+   (\star dF^\flat)^\sharp
+   =
+   \{ (\partial_y F^z - \partial_z F^y) \px \\
+      (\partial_z F^x - \partial_x F^z) \py \\
+      (\partial_x F^y - \partial_y F^x) \pt \}
+
+Divergence
+----------
+
+Laplacian
+---------
