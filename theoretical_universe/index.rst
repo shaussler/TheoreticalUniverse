@@ -8,6 +8,7 @@ A personal collection of papers about math and physics.
    :caption: Contents:
 
    faraday_tensor_derivation.rst
+   differential_operators.rst
    de_guas_theorem.rst
 
 LINKS:
