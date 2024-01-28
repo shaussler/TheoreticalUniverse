@@ -77,10 +77,107 @@ Indeed get:
 
    \mathbf{e}^i \cdot \mathbf{e}_j = dx^i \partial_j = \delta^i_j
 
+Divergence
+----------
 
+.. admonition:: Proposition
+
+   .. math::
+
+      \star d \star F^\flat = \nabla^\sharp \cdot F^\sharp
+                            = \mathbf{\nabla} \cdot \mathbf{F}
+
+We begin with :math:`F` as a vector :math:`\mathbf{F} = F^\sharp = F^i
+\partial_i` and flatten:
+
+.. math::
+
+   F^\flat = \{ F^x \partial_x \\
+                F^y \partial_y \\
+                F^z \partial_z \}^\flat
+           = \{ F^x dx \\
+                F^y dy \\
+                F^z dz \}
+
+Apply the :math:`\star` operator:
+
+.. math::
+
+   \star F^\flat = \{ F^x \star dx     \\ F^y \star dy     \\ F^z \star dz     \}
+                 = \{ F^x dy \wedge dz \\ F^y dz \wedge dx \\ F^z dx \wedge dy \}
+
+.. note::
+
+   Since I have not seen anybody mentioning it or highlighting it, you can see
+   the beautiful symmetry out of the Hodge start operator when ordering into
+   row and columns of differential forms:
+
+   .. math::
+   
+      \begin{align}
+      \star F^\flat &= \{                   & F^z dx \wedge dy &                  \\
+                                            &                  & F^x dy \wedge dz \\
+                           F^y dz \wedge dx &                  &                  \} \\
+                    &= \frac{1}{2}
+                       \{                   & +F^z dx \wedge dy & -F^y dx \wedge dz \\
+                          -F^z dy \wedge dx &                   & +F^x dy \wedge dz \\
+                          +F^y dz \wedge dx & -F^x dz \wedge dy &                   \}
+      \end{align}
+
+   With implicit vector and surface basis vectors, we obtain:
+
+   .. math::
+   
+      \star F^\flat
+      = \star \{ F^x \\ F^y \\ F^z \}^\flat
+      = \frac{1}{2}
+        \{      & +F^z & -F^y \\
+           -F^z &      & +F^x \\
+           +F^y & -F^x &      \}^\flat
+
+Apply the :math:`d` operator:
+
+.. math::
+
+   d \star F^\flat = d \{ F^x dy \wedge dz \\
+                          F^y dz \wedge dx \\
+                          F^z dx \wedge dy \}
+   = \{ \partial_x F^x dx \wedge dy \wedge dz \\
+        \partial_y F^y dy \wedge dz \wedge dx \\
+        \partial_z F^z dz \wedge dx \wedge dy \}
+   = \{ \partial_x F^x dx \wedge dy \wedge dz \\
+        \partial_y F^y dx \wedge dy \wedge dz \\
+        \partial_z F^z dx \wedge dy \wedge dz \}
+
+Which can be brought back to a zero form by applying yet again the Hodge star: 
+
+.. math::
+
+   \star d \star F^\flat
+   = \{ \partial_x F^x \star dx \wedge dy \wedge dz \\
+        \partial_y F^y \star dx \wedge dy \wedge dz \\
+        \partial_z F^z \star dx \wedge dy \wedge dz \}
+   = \{ \partial_x F^x \mathbf{1} \\
+        \partial_y F^y \mathbf{1} \\
+        \partial_z F^z \mathbf{1} \}
+   = \partial_x F^x + \partial_y F^y + \partial_z F^z
+
+
+.. admonition:: Proposition
+
+   .. math::
+
+      \nabla^\flat F^\sharp = \mathbf{\nabla} \cdot \mathbf{F}
 
 Curl
 ----
+
+.. admonition:: Proposition
+
+   .. math::
+   
+      (\star(dF^\flat))^\sharp = \nabla^\sharp \times F^\sharp
+
 
 The full expression of the curl of a vector field is
 
@@ -93,9 +190,6 @@ The full expression of the curl of a vector field is
 
 We demonstrate this is also equal to:
 
-.. math::
-
-   \nabla^\sharp \times F^\sharp = (\star(dF^\flat))^\sharp
 
 The vector field is:
 
