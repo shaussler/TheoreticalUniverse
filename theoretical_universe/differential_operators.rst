@@ -1,13 +1,9 @@
 Differential operators in differential forms
 ============================================
 
-.. warning::
-
-   Under construction.
-
 .. rst-class:: custom-author
 
-   by Stéphane Haussler\
+   by Stéphane Haussler
 
 In this article, I use the language of differential forms to express the
 derivative, the gradient, the divergence, the curl and the laplacian in the
@@ -30,6 +26,8 @@ hope highlight symmetries and the reader will find obvious.
 Notation
 --------
 
+.. {{{
+
 The vector field :math:`\mathbf{F}` is noted with the musical isomorphism
 :math:`\sharp` as :math:`F^\sharp`, which either declare :math:`F` is a vector,
 or transform a covector to a vector:
@@ -43,27 +41,7 @@ with the rules of Ricci calculus and utilizing Einstein summation convention.
 
 .. math::
 
-   F^\sharp = F^i \partial_i = F_i \partial^i = g^{il} F_l \partial_i
-
-Where :math:`g` is the metric tensor, and thus:
-
-.. math::
-
-   \begin{align}
-   g_{ij} &= \partial_i \cdot \partial_j \\
-   g^{ij} &= dx^i \cdot dx^j
-   \end{align}
-
-Finally, the basis vector :math:`\mathbf{e}_i` are.
-
-Derivative
-----------
-
-The derivative is our basic vector:
-
-.. math::
-
-   \mathbf{e}_i = \partial_i
+   F^\sharp = F^i \partial_i
 
 The basis covectors are the differentials:
 
@@ -77,8 +55,34 @@ Indeed get:
 
    \mathbf{e}^i \cdot \mathbf{e}_j = dx^i \partial_j = \delta^i_j
 
+Where :math:`g` is the metric tensor, and thus:
+
+.. math::
+
+   \begin{align}
+   g_{ij} &= \partial_i \cdot \partial_j \\
+   g^{ij} &= dx^i \cdot dx^j
+   \end{align}
+
+.. }}}
+
+Derivative
+----------
+
+.. {{{
+
+The partial derivatives are our basic vector:
+
+.. math::
+
+   \mathbf{e}_i = \partial_i
+
+.. }}}
+
 Divergence
 ----------
+
+.. {{{
 
 .. admonition:: Proposition
 
@@ -86,6 +90,12 @@ Divergence
 
       \star d \star F^\flat = \nabla^\sharp \cdot F^\sharp
                             = \mathbf{\nabla} \cdot \mathbf{F}
+
+.. admonition:: Proposition
+
+   .. math::
+
+      \nabla^\flat F^\sharp = \mathbf{\nabla} \cdot \mathbf{F}
 
 We begin with :math:`F` as a vector :math:`\mathbf{F} = F^\sharp = F^i
 \partial_i` and flatten:
@@ -105,35 +115,6 @@ Apply the :math:`\star` operator:
 
    \star F^\flat = \{ F^x \star dx     \\ F^y \star dy     \\ F^z \star dz     \}
                  = \{ F^x dy \wedge dz \\ F^y dz \wedge dx \\ F^z dx \wedge dy \}
-
-.. note::
-
-   Since I have not seen anybody mentioning it or highlighting it, you can see
-   the beautiful symmetry out of the Hodge start operator when ordering into
-   row and columns of differential forms:
-
-   .. math::
-   
-      \begin{align}
-      \star F^\flat &= \{                   & F^z dx \wedge dy &                  \\
-                                            &                  & F^x dy \wedge dz \\
-                           F^y dz \wedge dx &                  &                  \} \\
-                    &= \frac{1}{2}
-                       \{                   & +F^z dx \wedge dy & -F^y dx \wedge dz \\
-                          -F^z dy \wedge dx &                   & +F^x dy \wedge dz \\
-                          +F^y dz \wedge dx & -F^x dz \wedge dy &                   \}
-      \end{align}
-
-   With implicit vector and surface basis vectors, we obtain:
-
-   .. math::
-   
-      \star F^\flat
-      = \star \{ F^x \\ F^y \\ F^z \}^\flat
-      = \frac{1}{2}
-        \{      & +F^z & -F^y \\
-           -F^z &      & +F^x \\
-           +F^y & -F^x &      \}^\flat
 
 Apply the :math:`d` operator:
 
@@ -162,15 +143,12 @@ Which can be brought back to a zero form by applying yet again the Hodge star:
         \partial_z F^z \mathbf{1} \}
    = \partial_x F^x + \partial_y F^y + \partial_z F^z
 
-
-.. admonition:: Proposition
-
-   .. math::
-
-      \nabla^\flat F^\sharp = \mathbf{\nabla} \cdot \mathbf{F}
+.. }}}
 
 Curl
 ----
+
+.. {{{
 
 .. admonition:: Proposition
 
@@ -189,7 +167,6 @@ The full expression of the curl of a vector field is
       (\partial_x F^y - \partial F^x) \; \partial_z \}
 
 We demonstrate this is also equal to:
-
 
 The vector field is:
 
@@ -292,8 +269,13 @@ We can then sharpen the covector to its vector form:
       (\partial_z F^x - \partial_x F^z) \py \\
       (\partial_x F^y - \partial_y F^x) \pt \}
 
-Divergence
-----------
+.. }}}
 
 Laplacian
 ---------
+
+.. {{{
+
+
+
+.. }}}
