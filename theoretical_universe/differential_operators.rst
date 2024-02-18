@@ -5,23 +5,89 @@ Differential operators in differential forms
 
    by Stéphane Haussler
 
+.. warning::
+
+   Under construction
+
 In this article, I use the language of differential forms to express the
 derivative, the gradient, the divergence, the curl and the laplacian in the
-language of differential forms.
+language of differential forms in three dimensions.
 
 I assume the reader possesses a strong grasp of vector calculus and a
-functional understanding of differential forms. I personally learned
-differential forms with yet another `great video serie by Michael Penn
+functional understanding of differential forms. To learn about differential
+forms, I recommend `yet another great video serie by Michael Penn
 <https://youtube.com/playlist?list=PL22w63XsKjqzQZtDZO_9s2HEMRJnaOTX7&si=4dDrAZ-oKa1rI7B8>`_.
-I will simplify the concept of the Hodge dual, often presented in a needlessly
-complex manner, making it more accessible. A basic comprehension of vectors,
-covectors, and tensor calculus will enhance the discussion. Familiarity with
-the concepts of Grassman Algebra, Clifford Algebra (AKA Geometric Algebra), Lie
-Groups and Algebra will certainly be a sign that the reader understand
-antisymmetry underlying differential forms
+I will try simplify the concept of the Hodge dual, often presented in a
+needlessly complex manner, making it more accessible. A basic comprehension of
+vectors, covectors, and tensor calculus will enhance the discussion.
+Familiarity with the concepts of Grassman Algebra, Clifford Algebra (AKA
+Geometric Algebra), Lie Groups and Algebra will certainly be a sign that the
+reader understand the antisymmetry underlying differential forms.
 
-I will be using a pseudo-matrix notation which is not conventional, but that I
-hope highlight symmetries and the reader will find obvious.
+The Hodge dual
+--------------
+
+.. {{{
+
+.. }}}
+
+Improving the notation of Cartan's formalism
+--------------------------------------------
+
+.. {{{
+
+I will be using matrix notation in a manner which is not fully conventional,
+but that I hope highlight symmetries and the reader will find obvious.
+Everything in a matrix is expressed with its basis vectors and can be reordered
+at will. For example, a vector is often expressed as:
+
+.. math::
+
+   v = \{ x \\ y \\ z\}
+
+I merely propse to explicitely write the basis explicitely:
+
+.. math::
+
+   v = \{ x \mathbf{e}_x \\ y \mathbf{e}_y \\ z \mathbf{e}_x \}
+
+Which really means that a :math:`+` sign can be added anywhere and the
+expression written in the standard form:
+
+.. math::
+
+   v = x \mathbf{e}_x + y \mathbf{e}_y + z \mathbf{e}_x 
+
+This is quite powerfull when using a pseudo-vector or pseudo-scalar basis:
+
+.. math::
+
+   \{                                          & +a^{xy} \mathbf{e}_x \wedge \mathbf{e}_y & -a^{zx} \mathbf{e}_x \wedge \mathbf{e}_z \\
+      -a^{xy} \mathbf{e}_y \wedge \mathbf{e}_x &                                          & +a^{yz} \mathbf{e}_y \wedge \mathbf{e}_z \\
+      +a^{zx} \mathbf{e}_z \wedge \mathbf{e}_x & -a^{yz} \mathbf{e}_y \wedge \mathbf{e}_y &                                          \}
+
+That we can for example reorder if we want to:
+
+.. math::
+
+   \{ + 2 a^{yz} \mathbf{e}_y \wedge \mathbf{e}_z \\
+      + 2 a^{zx} \mathbf{e}_z \wedge \mathbf{e}_x \\
+      + 2 a^{xy} \mathbf{e}_x \wedge \mathbf{e}_y \}
+
+Or write as a sum:
+
+.. math::
+
+   2 a^{yz} \mathbf{e}_y \wedge \mathbf{e}_z +
+   2 a^{zx} \mathbf{e}_z \wedge \mathbf{e}_x +
+   2 a^{xy} \mathbf{e}_x \wedge \mathbf{e}_y
+
+And we can write a covector in the same explicit manner. This notation is
+extremely conveniant when performing calculations in Cartan's framework and
+permits also to fall back on regular matrix multiplication or express tensors
+in the same convenient manner.
+
+.. }}}
 
 Notation
 --------
@@ -79,6 +145,27 @@ The partial derivatives are our basic vector:
 
 .. }}}
 
+Gradiant
+--------
+
+.. {{{
+
+.. admonition:: Proposition
+
+   .. math::
+
+      (df)^{\sharp} = \mathbf{\nabla} f
+
+.. math::
+
+   \begin{align}
+   df^{\sharp} & = ( \partial_x f dx + \partial_y f dy + \partial_z f dz )^{\sharp} \\
+               & = \partial_x f (dx)^{\sharp} + \partial_y f (dy)^{\sharp} + \partial_z f (dz)^{\sharp} \\
+               & = \partial_x f \partial_x + \partial_y f \partial_y + \partial_z f \partial_z \\
+   \end{align}
+
+.. }}}
+
 Divergence
 ----------
 
@@ -88,8 +175,7 @@ Divergence
 
    .. math::
 
-      \star d \star F^\flat = \nabla^\sharp \cdot F^\sharp
-                            = \mathbf{\nabla} \cdot \mathbf{F}
+      \star d \star F^\flat = \mathbf{\nabla} \cdot \mathbf{F}
 
 .. admonition:: Proposition
 
@@ -276,6 +362,62 @@ Laplacian
 
 .. {{{
 
+.. admonition:: Proposition
 
+   .. math::
+
+      \star d \star d f = \mathbf{\nabla}^2 f
+
+The differential of a function (zero form) is:
+
+.. math::
+
+   df = \partial_x f dx + \partial_y f dy + \partial_z f dz
+
+Taking the Hodge dual:
+
+.. math::
+
+   \star df = \partial_x f dy \wedge dz + \partial_y dz \wedge dx + \partial_z f dx \wedge dy
+
+Taking the differential
+
+.. math::
+
+   \begin{align}
+   d \star df &= \frac{\partial^2 f}{\partial x} dx \wedge dy \wedge dz +
+                 \frac{\partial^2 f}{\partial y} dy \wedge dz \wedge dx +
+                 \frac{\partial^2 f}{\partial z} dz \wedge dx \wedge dy \\
+              &= \frac{\partial^2 f}{\partial x} dx \wedge dy \wedge dz +
+                 \frac{\partial^2 f}{\partial y} dx \wedge dy \wedge dz +
+                 \frac{\partial^2 f}{\partial z} dx \wedge dy \wedge dz \\
+              &= (
+                     \frac{\partial^2 f}{\partial x} +
+                     \frac{\partial^2 f}{\partial y} +
+                     \frac{\partial^2 f}{\partial z}
+                 ) dx \wedge dy \wedge dz \\
+   \end{align}
+
+Taking the Hodge dual, we tranform volumes to functions and obtain the
+expression for the laplacian:
+
+.. math::
+
+   \star d \star df = (
+       \frac{\partial^2 f}{\partial x} +
+       \frac{\partial^2 f}{\partial y} +
+       \frac{\partial^2 f}{\partial z}
+   )
+
+Laplace-de Rham operator
+------------------------
+
+Can be taken on functions and vectors.
+
+.. admonition:: Proposition
+
+   .. math::
+
+      \Delta f = \delta d f
 
 .. }}}

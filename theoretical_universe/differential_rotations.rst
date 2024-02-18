@@ -5,6 +5,10 @@ Rotations in differential forms
 
    by Stéphane Haussler
 
+.. warning::
+
+   Under construction
+
 Since I have not seen anybody mentioning it or highlighting it, you can see the
 symmetry pop out of the Hodge start operator when ordering into row and columns
 of differential forms:
