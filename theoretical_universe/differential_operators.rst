@@ -15,11 +15,10 @@ functional understanding of differential forms. To learn about differential
 forms, I can only recommend `yet another great video serie by Michael Penn
 <https://youtube.com/playlist?list=PL22w63XsKjqzQZtDZO_9s2HEMRJnaOTX7&si=4dDrAZ-oKa1rI7B8>`_.
 Implicitely assumed with the above requirements is the understanding of tensor
-calculus, and in particular the concept of vectors and covectors.
-
-Familiarity with the concepts of Grassman Algebra, Clifford Algebra (AKA
-Geometric Algebra), Lie Groups and Algebra is not needed but certainly welcome
-for the understanding of the antisymmetry underlying differential forms.
+calculus, and in particular the concept of vectors and covectors. Some basic
+familiarity with the concepts of Grassman Algebra, Clifford Algebra (AKA
+Geometric Algebra), Lie Groups and Algebra is not necessary but welcome for the
+understanding of the antisymmetries at hand.
 
 The Hodge dual
 --------------
@@ -28,30 +27,28 @@ The Hodge dual
 
 The concept of the Hodge dual is often presented in a needlessly complex
 manner, taking into account from the get go a number of dimensions above three,
-and any metric signatures in all generality. These generalizations can be done
-later. Also, as soon as the concept is undersood in three dimensions of space,
-the extension to the 4 dimensional Minkowski metric may feel quite natural.
+and any metric signatures. When the actually quite natural and simple concept
+of the Hodge dual is undersood with the three dimensions we are accustomed to
+live in, extending to the 4-dimensional Minkowski space may feel quite natural.
 
-Here, to get to the concept of the Hodge dual, we first take a coordinate basis
-in 3 dimensions corresponding to our intuitive understanding of dimensions
-:math:`\mathbf{e}_x`, :math:`\mathbf{e}_y` and :math:`\mathbf{e}_z`. We now
-observe that we did not merely define three unit vectors defining our
-coordinates, but also surfaces that we name using the wedge :math:`\wedge`
-product :math:`\mathbf{e}_x \wedge \mathbf{e}_y`, :math:`\mathbf{e}_y \wedge
-\mathbf{e}_z`, and :math:`\mathbf{e}_z \wedge \mathbf{e}_x`:
+First consider a coordinate basis in 3 dimensions that corresponds to our
+intuitive understanding of dimensions :math:`\mathbf{e}_x`,
+:math:`\mathbf{e}_y` and :math:`\mathbf{e}_z`. Now observe that we did not
+merely define three unit vectors, but also three *unit surfaces* that we name
+using the wedge :math:`\wedge` symbol :math:`\mathbf{e}_x \wedge \mathbf{e}_y`,
+:math:`\mathbf{e}_y \wedge \mathbf{e}_z`, and :math:`\mathbf{e}_z \wedge
+\mathbf{e}_x`:
 
 .. image:: _static/hodge_dual_coordinates.png
    :align: center
    :width: 60%
 
-The naming of the surfaces is is carefully chosen counterclock wise. The reason
-is that given a vector and a number representative of a surface, we can
-determine the second vector. This is the deeper link between rotations and
-surfaces. Note that the surfaces is necessarily oriented. For example,
-:math:`\mathbf{e}_z \wedge \mathbf{e}_x = - \mathbf{e}_x \wedge \mathbf{e}_z`.
-
-Now we note that to each basis surface that we have defined, we can associated
-a unique vector.
+The naming of the surfaces is carefully chosen counterclock wise. The reason is
+that given a vector together with a number for the surface, we can uniquely
+determine the second vector needed to obtain that surface. The surface need be
+oriented and a sign convention chosen (Here counterclockwise is positive). For
+example, :math:`\mathbf{e}_z \wedge \mathbf{e}_x = - \mathbf{e}_x \wedge
+\mathbf{e}_z`. Each basis surface can be associated with a unique basis vector:
 
 .. math::
 
@@ -59,8 +56,7 @@ a unique vector.
    \mathbf{e}_y \wedge \mathbf{e}_z \rightarrow \mathbf{e}_x \\
    \mathbf{e}_z \wedge \mathbf{e}_x \rightarrow \mathbf{e}_y
 
-This association defines a dual vector to every oriented surfaces and is called
-the Hodge dual, noted with the star :math:`\star` operator.
+Using the :math:`\star` Hodge dual operator to describe that relation, we have:
 
 .. math::
 
@@ -68,13 +64,28 @@ the Hodge dual, noted with the star :math:`\star` operator.
    \star \mathbf{e}_y \wedge \mathbf{e}_z = \mathbf{e}_x \\
    \star \mathbf{e}_z \wedge \mathbf{e}_x = \mathbf{e}_y
 
-The relation holds in both direction:
+This association defines a dual vector to every oriented surfaces and is called
+the Hodge dual, noted with the star :math:`\star` operator. The relation holds
+in both direction:
 
 .. math::
 
    \star \mathbf{e}_z = \mathbf{e}_x \wedge \mathbf{e}_y \\
    \star \mathbf{e}_x = \mathbf{e}_y \wedge \mathbf{e}_z \\
    \star \mathbf{e}_y = \mathbf{e}_z \wedge \mathbf{e}_x
+
+The Hodge dual in three dimensions is the cross product. The cross product
+defines a vector perpendicular to the surface whose length is proportional to
+the amount of rotation:
+
+.. math::
+
+   \mathbf{e}_x \times \mathbf{e}_y = \star \mathbf{e}_x \wedge \mathbf{e}_y = \mathbf{e}_z \\
+   \mathbf{e}_y \times \mathbf{e}_z = \star \mathbf{e}_y \wedge \mathbf{e}_z = \mathbf{e}_x \\
+   \mathbf{e}_z \times \mathbf{e}_x = \star \mathbf{e}_z \wedge \mathbf{e}_x = \mathbf{e}_y
+
+This establishes the deep connection between the Hodge dual, rotations,
+surfaces, and the cross product.
 
 Going one step futher, we observe that we did not merely define unit surfaces,
 but also unit volumes that we note :math:`\mathbf{e}_x \wedge \mathbf{e}_y
@@ -93,21 +104,31 @@ As well as:
 Where :math:`\mathbf{1}` is the unit number. In other words any number can be
 expressed as a linear combination of :math:`1`.
 
-We have thus the following objects:
+For the vector basis the following objects are defined:
 
-* Real numbers
-* Vectors
-* Bivectors (surfaces)
-* Trivectors (volumes)
+* Real numbers.
+* Vectors.
+* Bivectors correspoding to surfaces and often called pseudo-vectors.
+* Trivectors corresponding to volumes and often called pseudo-scalars.
 
-.. note::
+Placing a mirror in front of this object:
 
-    Even though outside the scope of this short discussion, the conept of the
-    Hodge dual can be extended to any number of dimensions. Furthermore, we
-    assume implicitely that the dot product of all vectors with themselves
-    squares to :math:`\mathbf{e}_i \cdot \mathbf{e}_i = 1`. There again, the
-    concept can be extended to any metric signature, and in particular to the
-    minkowski metric.
+* Scalars (Real numbers) are not changed.
+* Vector are not changed.
+* Surfaces are flipped and the sign changes.
+* Volumes are flipped and the sign changes.
+
+This is the reason behind the naming *pseudo-vector*. When placed in front of a
+mirror, the sign of a positive oriented surface goes to negative. The
+corresponding Hodge dual to the surface is a vector, and the Hodge dual of the
+positive surface is a vector which is flipped. These objects are associated to
+vectors that do not behave like a vector in front of a mirror.
+
+This is also the reason behind the name *pseudo-scalar*. When placed in front
+of a mirror, the sign of a positive oriented volume goes to negative. The Hodge
+dual of the positive the volume is positive scalar. The sign of the Hodge dual
+of the image is a negative scalar. These objects are associated to scalars that
+do not behave like scalars in front of a mirror.
 
 .. }}}
 
