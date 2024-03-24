@@ -1,0 +1,441 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9HQ1J8VKRB"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-9HQ1J8VKRB');
+    </script>
+    
+    <title>Rotations in differential forms &#8212; Theoretical Universe</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=b10eb826" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>window.MathJax = {"chtml": {"displayAlign": "left", "displayIndent": "2em"}, "tex": {"packages": {"[+]": ["ams"]}, "macros": {"Et": "\\tilde{E^{t}}", "Ex": "\\tilde{E^{x}}", "Ey": "\\tilde{E^{y}}", "Ez": "\\tilde{E^{z}}", "Bt": "B^{t}", "Bx": "B^{x}", "By": "B^{y}", "Bz": "B^{z}", "Pp": "\\phantom{P^{p}}", "sPp": "\\phantom{+P^{p}}", "pt": "\\; \\partial_t", "px": "\\; \\partial_x", "py": "\\; \\partial_y", "pz": "\\; \\partial_z", "dtWdt": "\\; dt \\wedge dt", "dxWdt": "\\; dx \\wedge dt", "dyWdt": "\\; dy \\wedge dt", "dzWdt": "\\; dz \\wedge dt", "dtWdx": "\\; dt \\wedge dx", "dxWdx": "\\; dx \\wedge dx", "dyWdx": "\\; dy \\wedge dx", "dzWdx": "\\; dz \\wedge dx", "dtWdy": "\\; dt \\wedge dy", "dxWdy": "\\; dx \\wedge dy", "dyWdy": "\\; dy \\wedge dy", "dzWdy": "\\; dz \\wedge dy", "dtWdz": "\\; dt \\wedge dz", "dxWdz": "\\; dx \\wedge dz", "dyWdz": "\\; dy \\wedge dz", "dzWdz": "\\; dz \\wedge dz", "dtWpt": "\\; dt \\wedge \\partial_t", "dxWpt": "\\; dx \\wedge \\partial_t", "dyWpt": "\\; dy \\wedge \\partial_t", "dzWpt": "\\; dz \\wedge \\partial_t", "dtWpx": "\\; dt \\wedge \\partial_x", "dxWpx": "\\; dx \\wedge \\partial_x", "dyWpx": "\\; dy \\wedge \\partial_x", "dzWpx": "\\; dz \\wedge \\partial_x", "dtWpy": "\\; dt \\wedge \\partial_y", "dxWpy": "\\; dx \\wedge \\partial_y", "dyWpy": "\\; dy \\wedge \\partial_y", "dzWpy": "\\; dz \\wedge \\partial_y", "dtWpz": "\\; dt \\wedge \\partial_z", "dxWpz": "\\; dx \\wedge \\partial_z", "dyWpz": "\\; dy \\wedge \\partial_z", "dzWpz": "\\; dz \\wedge \\partial_z", "ptWdt": "\\; \\partial_t \\wedge dt", "pxWdt": "\\; \\partial_x \\wedge dt", "pyWdt": "\\; \\partial_y \\wedge dt", "pzWdt": "\\; \\partial_z \\wedge dt", "ptWdx": "\\; \\partial_t \\wedge dx", "pxWdx": "\\; \\partial_x \\wedge dx", "pyWdx": "\\; \\partial_y \\wedge dx", "pzWdx": "\\; \\partial_z \\wedge dx", "ptWdy": "\\; \\partial_t \\wedge dy", "pxWdy": "\\; \\partial_x \\wedge dy", "pyWdy": "\\; \\partial_y \\wedge dy", "pzWdy": "\\; \\partial_z \\wedge dy", "ptWdz": "\\; \\partial_t \\wedge dy", "pxWdz": "\\; \\partial_x \\wedge dz", "pyWdz": "\\; \\partial_y \\wedge dz", "pzWdz": "\\; \\partial_z \\wedge dz", "et": "\\; \\mathbf{e_t}", "ex": "\\; \\mathbf{e_x}", "ey": "\\; \\mathbf{e_y}", "ez": "\\; \\mathbf{e_z}", "eT": "\\; \\mathbf{e^t}", "eX": "\\; \\mathbf{e^x}", "eY": "\\; \\mathbf{e^y}", "eZ": "\\; \\mathbf{e^z}", "etTEt": "\\; \\mathbf{e_t} \\otimes \\mathbf{e^t}", "exTEt": "\\; \\mathbf{e_x} \\otimes \\mathbf{e^t}", "eyTEt": "\\; \\mathbf{e_y} \\otimes \\mathbf{e^t}", "ezTEt": "\\; \\mathbf{e_z} \\otimes \\mathbf{e^t}", "etTEx": "\\; \\mathbf{e_t} \\otimes \\mathbf{e^x}", "exTEx": "\\; \\mathbf{e_x} \\otimes \\mathbf{e^x}", "eyTEx": "\\; \\mathbf{e_y} \\otimes \\mathbf{e^x}", "ezTEx": "\\; \\mathbf{e_z} \\otimes \\mathbf{e^x}", "etTEy": "\\; \\mathbf{e_t} \\otimes \\mathbf{e^y}", "exTEy": "\\; \\mathbf{e_x} \\otimes \\mathbf{e^y}", "eyTEy": "\\; \\mathbf{e_y} \\otimes \\mathbf{e^y}", "ezTEy": "\\; \\mathbf{e_z} \\otimes \\mathbf{e^y}", "etTEz": "\\; \\mathbf{e_t} \\otimes \\mathbf{e^z}", "exTEz": "\\; \\mathbf{e_x} \\otimes \\mathbf{e^z}", "eyTEz": "\\; \\mathbf{e_y} \\otimes \\mathbf{e^z}", "ezTEz": "\\; \\mathbf{e_z} \\otimes \\mathbf{e^z}", "dtTdt": "\\; dt \\otimes dt", "dxTdt": "\\; dx \\otimes dt", "dyTdt": "\\; dy \\otimes dt", "dzTdt": "\\; dz \\otimes dt", "dtTdx": "\\; dt \\otimes dx", "dxTdx": "\\; dx \\otimes dx", "dyTdx": "\\; dy \\otimes dx", "dzTdx": "\\; dz \\otimes dx", "dtTdy": "\\; dt \\otimes dy", "dxTdy": "\\; dx \\otimes dy", "dyTdy": "\\; dy \\otimes dy", "dzTdy": "\\; dz \\otimes dy", "dtTdz": "\\; dt \\otimes dz", "dxTdz": "\\; dx \\otimes dz", "dyTdz": "\\; dy \\otimes dz", "dzTdz": "\\; dz \\otimes dz", "ptTpt": "\\partial_t \\otimes \\partial_t", "pxTpt": "\\partial_x \\otimes \\partial_t", "pyTpt": "\\partial_y \\otimes \\partial_t", "pzTpt": "\\partial_z \\otimes \\partial_t", "ptTpx": "\\partial_t \\otimes \\partial_x", "pxTpx": "\\partial_x \\otimes \\partial_x", "pyTpx": "\\partial_y \\otimes \\partial_x", "pzTpx": "\\partial_z \\otimes \\partial_x", "ptTpy": "\\partial_t \\otimes \\partial_y", "pxTpy": "\\partial_x \\otimes \\partial_y", "pyTpy": "\\partial_y \\otimes \\partial_y", "pzTpy": "\\partial_z \\otimes \\partial_y", "ptTpz": "\\partial_t \\otimes \\partial_z", "pxTpz": "\\partial_x \\otimes \\partial_z", "pyTpz": "\\partial_y \\otimes \\partial_z", "pzTpz": "\\partial_z \\otimes \\partial_z", "dtTpt": "\\; dt \\otimes \\partial_t", "dxTpt": "\\; dx \\otimes \\partial_t", "dyTpt": "\\; dy \\otimes \\partial_t", "dzTpt": "\\; dz \\otimes \\partial_t", "dtTpx": "\\; dt \\otimes \\partial_x", "dxTpx": "\\; dx \\otimes \\partial_x", "dyTpx": "\\; dy \\otimes \\partial_x", "dzTpx": "\\; dz \\otimes \\partial_x", "dtTpy": "\\; dt \\otimes \\partial_y", "dxTpy": "\\; dx \\otimes \\partial_y", "dyTpy": "\\; dy \\otimes \\partial_y", "dzTpy": "\\; dz \\otimes \\partial_y", "dtTpz": "\\; dt \\otimes \\partial_z", "dxTpz": "\\; dx \\otimes \\partial_z", "dyTpz": "\\; dy \\otimes \\partial_z", "dzTpz": "\\; dz \\otimes \\partial_z", "ptTdt": "\\; \\partial_t \\otimes dt", "pxTdt": "\\; \\partial_x \\otimes dt", "pyTdt": "\\; \\partial_y \\otimes dt", "pzTdt": "\\; \\partial_z \\otimes dt", "ptTdx": "\\; \\partial_t \\otimes dx", "pxTdx": "\\; \\partial_x \\otimes dx", "pyTdx": "\\; \\partial_y \\otimes dx", "pzTdx": "\\; \\partial_z \\otimes dx", "ptTdy": "\\; \\partial_t \\otimes dy", "pxTdy": "\\; \\partial_x \\otimes dy", "pyTdy": "\\; \\partial_y \\otimes dy", "pzTdy": "\\; \\partial_z \\otimes dy", "ptTdz": "\\; \\partial_t \\otimes dy", "pxTdz": "\\; \\partial_x \\otimes dz", "pyTdz": "\\; \\partial_y \\otimes dz", "pzTdz": "\\; \\partial_z \\otimes dz", "vect": "\\overrightarrow", "av": "\\overrightarrow", "bv": "\\mathbf", "{": "\\begin{bmatrix}", "}": "\\end{bmatrix}", "ph": "\\phantom", "EtatSharp": "\\{+1 \\\\  0 \\\\  0 \\\\  0 \\}", "EtaxSharp": "\\{ 0 \\\\ -1 \\\\  0 \\\\  0 \\}", "EtaySharp": "\\{ 0 \\\\  0 \\\\ -1 \\\\  0 \\}", "EtazSharp": "\\{ 0 \\\\  0 \\\\  0 \\\\ -1 \\}", "EtatFlat": "\\{+1 &  0 &  0 &  0 \\}", "EtaxFlat": "\\{ 0 & -1 & -1 &  0 \\}", "EtayFlat": "\\{ 0 &  0 & -1 &  0 \\}", "EtazFlat": "\\{ 0 &  0 &  0 & -1 \\}", "EtatCol": "\\{+1 \\\\  0 \\\\  0 \\\\  0 \\}", "EtaxCol": "\\{ 0 \\\\ -1 \\\\  0 \\\\  0 \\}", "EtayCol": "\\{ 0 \\\\  0 \\\\ -1 \\\\  0 \\}", "EtazCol": "\\{ 0 \\\\  0 \\\\  0 \\\\ -1 \\}", "EtatRow": "\\{+1 &  0 &  0 &  0 \\}", "EtaxRow": "\\{ 0 & -1 &  0 &  0 \\}", "EtayRow": "\\{ 0 &  0 & -1 &  0 \\}", "EtazRow": "\\{ 0 &  0 &  0 & -1 \\}", "EtaRowRow": "\\{ \\EtatRow & \\EtaxRow & \\EtayRow & \\EtazRow \\}", "EtaColCol": "\\{ \\EtatCol \\\\ \\EtaxCol \\\\ \\EtayCol \\\\ \\EtazCol \\}", "EtaSharpSharp": "\n                    \\begin{bmatrix}\n                        +1 &  0 &  0 &  0 \\\\\n                         0 & -1 &  0 &  0 \\\\\n                         0 &  0 & -1 &  0 \\\\\n                         0 &  0 &  0 & -1 \\\\\n                    \\end{bmatrix}^{\\sharp\\sharp}\n                ", "EtaFlatFlat": "\n                    \\begin{bmatrix}\n                        +1 &  0 &  0 &  0 \\\\\n                         0 & -1 &  0 &  0 \\\\\n                         0 &  0 & -1 &  0 \\\\\n                         0 &  0 &  0 & -1 \\\\\n                    \\end{bmatrix}^{\\flat\\flat}\n                ", "CurrentCol": "\\{\n                    \\mu_0 c \\rho \\\\\n                    \\mu_0 J^x    \\\\\n                    \\mu_0 J^y    \\\\\n                    \\mu_0 J^z    \\\\\n                \\}", "FaradayColCol": "\\{\n                    \\{      \\\\ -\\Ex \\\\ -\\Ey \\\\ -\\Ez \\} \\\\\n                    \\{ +\\Ex \\\\      \\\\ -\\Bz \\\\ +\\By \\} \\\\\n                    \\{ +\\Ey \\\\ +\\Bz \\\\      \\\\ -\\Bx \\} \\\\\n                    \\{ +\\Ez \\\\ -\\By \\\\ +\\Bx \\\\      \\}\n                \\}", "FaradayRowRow": "\\{\n                    \\{   0 , -\\Ex, -\\Ey, -\\Ez \\}  &\n                    \\{ +\\Ex,   0 , +\\Bz, -\\By \\} &\n                    \\{ +\\Ey, -\\Bz,   0 , +\\Bx \\} &\n                    \\{ +\\Ez, +\\By, -\\Bx,   0  \\}\n                \\}", "FaradaySharpFlat": "\n                    \\begin{bmatrix}\n                             & +\\Ex & +\\Ey & +\\Ez \\\\\n                        +\\Ex &      & +\\Bz & -\\By \\\\\n                        +\\Ey & -\\Bz &      & +\\Bx \\\\\n                        +\\Ez & +\\By & -\\Bx &      \\\\\n                    \\end{bmatrix}^{\\sharp\\flat}\n                ", "FaradayFlatSharp": "\n                    \\begin{bmatrix}\n                             & +\\Ex & +\\Ey & +\\Ez \\\\\n                        +\\Ex &      & +\\Bz & -\\By \\\\\n                        +\\Ey & -\\Bz &      & +\\Bx \\\\\n                        +\\Ez & +\\By & -\\Bx &      \\\\\n                    \\end{bmatrix}^{\\flat\\sharp}\n                ", "FaradaySharpSharp": "\n                    \\begin{bmatrix}\n                             & +\\Ex & +\\Ey & +\\Ez \\\\\n                        -\\Ex &      & +\\Bz & -\\By \\\\\n                        -\\Ey & -\\Bz &      & +\\Bx \\\\\n                        -\\Ez & +\\By & -\\Bx &      \\\\\n                    \\end{bmatrix}^{\\sharp\\sharp}\n                ", "FaradayFlatFlat": "\n                    \\begin{bmatrix}\n                             & +\\Ex & +\\Ey & +\\Ez \\\\\n                        -\\Ex &      & -\\Bz & +\\By \\\\\n                        -\\Ey & +\\Bz &      & -\\Bx \\\\\n                        -\\Ez & -\\By & +\\Bx &      \\\\\n                    \\end{bmatrix}^{\\flat\\flat}\n                ", "FaradayDualSharpFlat": "\n                    \\begin{bmatrix}\n                             & +\\Bx & +\\By & +\\Bz \\\\\n                        +\\Bx &      & -\\Ez & +\\Ey \\\\\n                        +\\By & +\\Ez &      & -\\Ex \\\\\n                        +\\Bz & -\\Ey & +\\Ex &      \\\\\n                    \\end{bmatrix}^{\\sharp\\flat}\n                "}}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'differential_rotations';</script>
+    <link rel="canonical" href="https://shaussler.github.io/TheoreticalUniverse/differential_rotations.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Proving De Gua’s Theorem with Clifford Algebra" href="de_guas_theorem.html" />
+    <link rel="prev" title="Differential operators in differential forms" href="differential_operators.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Theoretical Universe</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="faraday_tensor_derivation.html">Deriving the Faraday Tensor from the 1865 Maxwell Equations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="differential_operators.html">Differential operators in differential forms</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Rotations in differential forms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="de_guas_theorem.html">Proving De Gua’s Theorem with Clifford Algebra</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/differential_rotations.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Rotations in differential forms</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="rotations-in-differential-forms">
+<h1>Rotations in differential forms<a class="headerlink" href="#rotations-in-differential-forms" title="Link to this heading">#</a></h1>
+<p class="custom-author">by Stéphane Haussler</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Under construction</p>
+</div>
+<p>Since I have not seen anybody mentioning it or highlighting it, you can see the
+symmetry pop out of the Hodge start operator when ordering into row and columns
+of differential forms:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align}
+\star F^\flat &amp;= \{                   &amp; F^z dx \wedge dy &amp;                  \\
+                                      &amp;                  &amp; F^x dy \wedge dz \\
+                     F^y dz \wedge dx &amp;                  &amp;                  \} \\
+              &amp;= \frac{1}{2}
+                 \{                   &amp; +F^z dx \wedge dy &amp; -F^y dx \wedge dz \\
+                    -F^z dy \wedge dx &amp;                   &amp; +F^x dy \wedge dz \\
+                    +F^y dz \wedge dx &amp; -F^x dz \wedge dy &amp;                   \}
+\end{align}\end{split}\]</div>
+<p>With implicit vector and surface basis vectors, we obtain:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\star F^\flat
+= \star \{ F^x \\ F^y \\ F^z \}^\flat
+= \frac{1}{2}
+  \{      &amp; +F^z &amp; -F^y \\
+     -F^z &amp;      &amp; +F^x \\
+     +F^y &amp; -F^x &amp;      \}^\flat\end{split}\]</div>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="differential_operators.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Differential operators in differential forms</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="de_guas_theorem.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Proving De Gua’s Theorem with Clifford Algebra</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Stéphane Haussler
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024, Stéphane Haussler.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

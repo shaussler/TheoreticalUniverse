@@ -1,0 +1,807 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9HQ1J8VKRB"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-9HQ1J8VKRB');
+    </script>
+    
+    <title>Differential operators in differential forms &#8212; Theoretical Universe</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=384b581d" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=b10eb826" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
+  <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=888ff710"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>window.MathJax = {"chtml": {"displayAlign": "left", "displayIndent": "2em"}, "tex": {"packages": {"[+]": ["ams"]}, "macros": {"Et": "\\tilde{E^{t}}", "Ex": "\\tilde{E^{x}}", "Ey": "\\tilde{E^{y}}", "Ez": "\\tilde{E^{z}}", "Bt": "B^{t}", "Bx": "B^{x}", "By": "B^{y}", "Bz": "B^{z}", "Pp": "\\phantom{P^{p}}", "sPp": "\\phantom{+P^{p}}", "pt": "\\; \\partial_t", "px": "\\; \\partial_x", "py": "\\; \\partial_y", "pz": "\\; \\partial_z", "dtWdt": "\\; dt \\wedge dt", "dxWdt": "\\; dx \\wedge dt", "dyWdt": "\\; dy \\wedge dt", "dzWdt": "\\; dz \\wedge dt", "dtWdx": "\\; dt \\wedge dx", "dxWdx": "\\; dx \\wedge dx", "dyWdx": "\\; dy \\wedge dx", "dzWdx": "\\; dz \\wedge dx", "dtWdy": "\\; dt \\wedge dy", "dxWdy": "\\; dx \\wedge dy", "dyWdy": "\\; dy \\wedge dy", "dzWdy": "\\; dz \\wedge dy", "dtWdz": "\\; dt \\wedge dz", "dxWdz": "\\; dx \\wedge dz", "dyWdz": "\\; dy \\wedge dz", "dzWdz": "\\; dz \\wedge dz", "dtWpt": "\\; dt \\wedge \\partial_t", "dxWpt": "\\; dx \\wedge \\partial_t", "dyWpt": "\\; dy \\wedge \\partial_t", "dzWpt": "\\; dz \\wedge \\partial_t", "dtWpx": "\\; dt \\wedge \\partial_x", "dxWpx": "\\; dx \\wedge \\partial_x", "dyWpx": "\\; dy \\wedge \\partial_x", "dzWpx": "\\; dz \\wedge \\partial_x", "dtWpy": "\\; dt \\wedge \\partial_y", "dxWpy": "\\; dx \\wedge \\partial_y", "dyWpy": "\\; dy \\wedge \\partial_y", "dzWpy": "\\; dz \\wedge \\partial_y", "dtWpz": "\\; dt \\wedge \\partial_z", "dxWpz": "\\; dx \\wedge \\partial_z", "dyWpz": "\\; dy \\wedge \\partial_z", "dzWpz": "\\; dz \\wedge \\partial_z", "ptWdt": "\\; \\partial_t \\wedge dt", "pxWdt": "\\; \\partial_x \\wedge dt", "pyWdt": "\\; \\partial_y \\wedge dt", "pzWdt": "\\; \\partial_z \\wedge dt", "ptWdx": "\\; \\partial_t \\wedge dx", "pxWdx": "\\; \\partial_x \\wedge dx", "pyWdx": "\\; \\partial_y \\wedge dx", "pzWdx": "\\; \\partial_z \\wedge dx", "ptWdy": "\\; \\partial_t \\wedge dy", "pxWdy": "\\; \\partial_x \\wedge dy", "pyWdy": "\\; \\partial_y \\wedge dy", "pzWdy": "\\; \\partial_z \\wedge dy", "ptWdz": "\\; \\partial_t \\wedge dy", "pxWdz": "\\; \\partial_x \\wedge dz", "pyWdz": "\\; \\partial_y \\wedge dz", "pzWdz": "\\; \\partial_z \\wedge dz", "et": "\\; \\mathbf{e_t}", "ex": "\\; \\mathbf{e_x}", "ey": "\\; \\mathbf{e_y}", "ez": "\\; \\mathbf{e_z}", "eT": "\\; \\mathbf{e^t}", "eX": "\\; \\mathbf{e^x}", "eY": "\\; \\mathbf{e^y}", "eZ": "\\; \\mathbf{e^z}", "etTEt": "\\; \\mathbf{e_t} \\otimes \\mathbf{e^t}", "exTEt": "\\; \\mathbf{e_x} \\otimes \\mathbf{e^t}", "eyTEt": "\\; \\mathbf{e_y} \\otimes \\mathbf{e^t}", "ezTEt": "\\; \\mathbf{e_z} \\otimes \\mathbf{e^t}", "etTEx": "\\; \\mathbf{e_t} \\otimes \\mathbf{e^x}", "exTEx": "\\; \\mathbf{e_x} \\otimes \\mathbf{e^x}", "eyTEx": "\\; \\mathbf{e_y} \\otimes \\mathbf{e^x}", "ezTEx": "\\; \\mathbf{e_z} \\otimes \\mathbf{e^x}", "etTEy": "\\; \\mathbf{e_t} \\otimes \\mathbf{e^y}", "exTEy": "\\; \\mathbf{e_x} \\otimes \\mathbf{e^y}", "eyTEy": "\\; \\mathbf{e_y} \\otimes \\mathbf{e^y}", "ezTEy": "\\; \\mathbf{e_z} \\otimes \\mathbf{e^y}", "etTEz": "\\; \\mathbf{e_t} \\otimes \\mathbf{e^z}", "exTEz": "\\; \\mathbf{e_x} \\otimes \\mathbf{e^z}", "eyTEz": "\\; \\mathbf{e_y} \\otimes \\mathbf{e^z}", "ezTEz": "\\; \\mathbf{e_z} \\otimes \\mathbf{e^z}", "dtTdt": "\\; dt \\otimes dt", "dxTdt": "\\; dx \\otimes dt", "dyTdt": "\\; dy \\otimes dt", "dzTdt": "\\; dz \\otimes dt", "dtTdx": "\\; dt \\otimes dx", "dxTdx": "\\; dx \\otimes dx", "dyTdx": "\\; dy \\otimes dx", "dzTdx": "\\; dz \\otimes dx", "dtTdy": "\\; dt \\otimes dy", "dxTdy": "\\; dx \\otimes dy", "dyTdy": "\\; dy \\otimes dy", "dzTdy": "\\; dz \\otimes dy", "dtTdz": "\\; dt \\otimes dz", "dxTdz": "\\; dx \\otimes dz", "dyTdz": "\\; dy \\otimes dz", "dzTdz": "\\; dz \\otimes dz", "ptTpt": "\\partial_t \\otimes \\partial_t", "pxTpt": "\\partial_x \\otimes \\partial_t", "pyTpt": "\\partial_y \\otimes \\partial_t", "pzTpt": "\\partial_z \\otimes \\partial_t", "ptTpx": "\\partial_t \\otimes \\partial_x", "pxTpx": "\\partial_x \\otimes \\partial_x", "pyTpx": "\\partial_y \\otimes \\partial_x", "pzTpx": "\\partial_z \\otimes \\partial_x", "ptTpy": "\\partial_t \\otimes \\partial_y", "pxTpy": "\\partial_x \\otimes \\partial_y", "pyTpy": "\\partial_y \\otimes \\partial_y", "pzTpy": "\\partial_z \\otimes \\partial_y", "ptTpz": "\\partial_t \\otimes \\partial_z", "pxTpz": "\\partial_x \\otimes \\partial_z", "pyTpz": "\\partial_y \\otimes \\partial_z", "pzTpz": "\\partial_z \\otimes \\partial_z", "dtTpt": "\\; dt \\otimes \\partial_t", "dxTpt": "\\; dx \\otimes \\partial_t", "dyTpt": "\\; dy \\otimes \\partial_t", "dzTpt": "\\; dz \\otimes \\partial_t", "dtTpx": "\\; dt \\otimes \\partial_x", "dxTpx": "\\; dx \\otimes \\partial_x", "dyTpx": "\\; dy \\otimes \\partial_x", "dzTpx": "\\; dz \\otimes \\partial_x", "dtTpy": "\\; dt \\otimes \\partial_y", "dxTpy": "\\; dx \\otimes \\partial_y", "dyTpy": "\\; dy \\otimes \\partial_y", "dzTpy": "\\; dz \\otimes \\partial_y", "dtTpz": "\\; dt \\otimes \\partial_z", "dxTpz": "\\; dx \\otimes \\partial_z", "dyTpz": "\\; dy \\otimes \\partial_z", "dzTpz": "\\; dz \\otimes \\partial_z", "ptTdt": "\\; \\partial_t \\otimes dt", "pxTdt": "\\; \\partial_x \\otimes dt", "pyTdt": "\\; \\partial_y \\otimes dt", "pzTdt": "\\; \\partial_z \\otimes dt", "ptTdx": "\\; \\partial_t \\otimes dx", "pxTdx": "\\; \\partial_x \\otimes dx", "pyTdx": "\\; \\partial_y \\otimes dx", "pzTdx": "\\; \\partial_z \\otimes dx", "ptTdy": "\\; \\partial_t \\otimes dy", "pxTdy": "\\; \\partial_x \\otimes dy", "pyTdy": "\\; \\partial_y \\otimes dy", "pzTdy": "\\; \\partial_z \\otimes dy", "ptTdz": "\\; \\partial_t \\otimes dy", "pxTdz": "\\; \\partial_x \\otimes dz", "pyTdz": "\\; \\partial_y \\otimes dz", "pzTdz": "\\; \\partial_z \\otimes dz", "vect": "\\overrightarrow", "av": "\\overrightarrow", "bv": "\\mathbf", "{": "\\begin{bmatrix}", "}": "\\end{bmatrix}", "ph": "\\phantom", "EtatSharp": "\\{+1 \\\\  0 \\\\  0 \\\\  0 \\}", "EtaxSharp": "\\{ 0 \\\\ -1 \\\\  0 \\\\  0 \\}", "EtaySharp": "\\{ 0 \\\\  0 \\\\ -1 \\\\  0 \\}", "EtazSharp": "\\{ 0 \\\\  0 \\\\  0 \\\\ -1 \\}", "EtatFlat": "\\{+1 &  0 &  0 &  0 \\}", "EtaxFlat": "\\{ 0 & -1 & -1 &  0 \\}", "EtayFlat": "\\{ 0 &  0 & -1 &  0 \\}", "EtazFlat": "\\{ 0 &  0 &  0 & -1 \\}", "EtatCol": "\\{+1 \\\\  0 \\\\  0 \\\\  0 \\}", "EtaxCol": "\\{ 0 \\\\ -1 \\\\  0 \\\\  0 \\}", "EtayCol": "\\{ 0 \\\\  0 \\\\ -1 \\\\  0 \\}", "EtazCol": "\\{ 0 \\\\  0 \\\\  0 \\\\ -1 \\}", "EtatRow": "\\{+1 &  0 &  0 &  0 \\}", "EtaxRow": "\\{ 0 & -1 &  0 &  0 \\}", "EtayRow": "\\{ 0 &  0 & -1 &  0 \\}", "EtazRow": "\\{ 0 &  0 &  0 & -1 \\}", "EtaRowRow": "\\{ \\EtatRow & \\EtaxRow & \\EtayRow & \\EtazRow \\}", "EtaColCol": "\\{ \\EtatCol \\\\ \\EtaxCol \\\\ \\EtayCol \\\\ \\EtazCol \\}", "EtaSharpSharp": "\n                    \\begin{bmatrix}\n                        +1 &  0 &  0 &  0 \\\\\n                         0 & -1 &  0 &  0 \\\\\n                         0 &  0 & -1 &  0 \\\\\n                         0 &  0 &  0 & -1 \\\\\n                    \\end{bmatrix}^{\\sharp\\sharp}\n                ", "EtaFlatFlat": "\n                    \\begin{bmatrix}\n                        +1 &  0 &  0 &  0 \\\\\n                         0 & -1 &  0 &  0 \\\\\n                         0 &  0 & -1 &  0 \\\\\n                         0 &  0 &  0 & -1 \\\\\n                    \\end{bmatrix}^{\\flat\\flat}\n                ", "CurrentCol": "\\{\n                    \\mu_0 c \\rho \\\\\n                    \\mu_0 J^x    \\\\\n                    \\mu_0 J^y    \\\\\n                    \\mu_0 J^z    \\\\\n                \\}", "FaradayColCol": "\\{\n                    \\{      \\\\ -\\Ex \\\\ -\\Ey \\\\ -\\Ez \\} \\\\\n                    \\{ +\\Ex \\\\      \\\\ -\\Bz \\\\ +\\By \\} \\\\\n                    \\{ +\\Ey \\\\ +\\Bz \\\\      \\\\ -\\Bx \\} \\\\\n                    \\{ +\\Ez \\\\ -\\By \\\\ +\\Bx \\\\      \\}\n                \\}", "FaradayRowRow": "\\{\n                    \\{   0 , -\\Ex, -\\Ey, -\\Ez \\}  &\n                    \\{ +\\Ex,   0 , +\\Bz, -\\By \\} &\n                    \\{ +\\Ey, -\\Bz,   0 , +\\Bx \\} &\n                    \\{ +\\Ez, +\\By, -\\Bx,   0  \\}\n                \\}", "FaradaySharpFlat": "\n                    \\begin{bmatrix}\n                             & +\\Ex & +\\Ey & +\\Ez \\\\\n                        +\\Ex &      & +\\Bz & -\\By \\\\\n                        +\\Ey & -\\Bz &      & +\\Bx \\\\\n                        +\\Ez & +\\By & -\\Bx &      \\\\\n                    \\end{bmatrix}^{\\sharp\\flat}\n                ", "FaradayFlatSharp": "\n                    \\begin{bmatrix}\n                             & +\\Ex & +\\Ey & +\\Ez \\\\\n                        +\\Ex &      & +\\Bz & -\\By \\\\\n                        +\\Ey & -\\Bz &      & +\\Bx \\\\\n                        +\\Ez & +\\By & -\\Bx &      \\\\\n                    \\end{bmatrix}^{\\flat\\sharp}\n                ", "FaradaySharpSharp": "\n                    \\begin{bmatrix}\n                             & +\\Ex & +\\Ey & +\\Ez \\\\\n                        -\\Ex &      & +\\Bz & -\\By \\\\\n                        -\\Ey & -\\Bz &      & +\\Bx \\\\\n                        -\\Ez & +\\By & -\\Bx &      \\\\\n                    \\end{bmatrix}^{\\sharp\\sharp}\n                ", "FaradayFlatFlat": "\n                    \\begin{bmatrix}\n                             & +\\Ex & +\\Ey & +\\Ez \\\\\n                        -\\Ex &      & -\\Bz & +\\By \\\\\n                        -\\Ey & +\\Bz &      & -\\Bx \\\\\n                        -\\Ez & -\\By & +\\Bx &      \\\\\n                    \\end{bmatrix}^{\\flat\\flat}\n                ", "FaradayDualSharpFlat": "\n                    \\begin{bmatrix}\n                             & +\\Bx & +\\By & +\\Bz \\\\\n                        +\\Bx &      & -\\Ez & +\\Ey \\\\\n                        +\\By & +\\Ez &      & -\\Ex \\\\\n                        +\\Bz & -\\Ey & +\\Ex &      \\\\\n                    \\end{bmatrix}^{\\sharp\\flat}\n                "}}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'differential_operators';</script>
+    <link rel="canonical" href="https://shaussler.github.io/TheoreticalUniverse/differential_operators.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Rotations in differential forms" href="differential_rotations.html" />
+    <link rel="prev" title="Deriving the Faraday Tensor from the 1865 Maxwell Equations" href="faraday_tensor_derivation.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Theoretical Universe</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="faraday_tensor_derivation.html">Deriving the Faraday Tensor from the 1865 Maxwell Equations</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Differential operators in differential forms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="differential_rotations.html">Rotations in differential forms</a></li>
+<li class="toctree-l1"><a class="reference internal" href="de_guas_theorem.html">Proving De Gua’s Theorem with Clifford Algebra</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/differential_operators.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Differential operators in differential forms</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-hodge-dual">The Hodge dual</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#improving-on-the-notation-of-cartan-s-formalism">Improving on the notation of Cartan’s formalism</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#notation">Notation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#derivative">Derivative</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#differential">Differential</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gradiant">Gradiant</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#divergence">Divergence</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#curl">Curl</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#laplacian">Laplacian</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#laplace-operator">Laplace operator</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#laplace-de-rham-operator">Laplace-de Rham operator</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="differential-operators-in-differential-forms">
+<h1>Differential operators in differential forms<a class="headerlink" href="#differential-operators-in-differential-forms" title="Link to this heading">#</a></h1>
+<p class="custom-author">by Stéphane Haussler</p>
+<p>In this article, I use the language of differential forms to systematically
+express the derivative, the gradient, the divergence, the curl and the
+laplacian in three dimensions. I will simplify the concept of the Hodge dual in
+three dimensions, making it more accessible.</p>
+<p>I assume the reader possesses a strong grasp of vector calculus and a
+functional understanding of differential forms. To learn about differential
+forms, I can only recommend <a class="reference external" href="https://youtube.com/playlist?list=PL22w63XsKjqzQZtDZO_9s2HEMRJnaOTX7&amp;si=4dDrAZ-oKa1rI7B8">yet another great video serie by Michael Penn</a>.
+Implicitely assumed with the above requirements is the understanding of tensor
+calculus, and in particular the concept of vectors and covectors. Some basic
+familiarity with the concepts of Grassman Algebra, Clifford Algebra (AKA
+Geometric Algebra), Lie Groups and Algebra is not necessary but welcome for the
+understanding of the antisymmetries at hand.</p>
+<section id="the-hodge-dual">
+<h2>The Hodge dual<a class="headerlink" href="#the-hodge-dual" title="Link to this heading">#</a></h2>
+<p>The concept of the Hodge dual is often presented in a needlessly complex
+manner, taking into account from the get go a number of dimensions above three,
+and any metric signatures. When the actually quite natural and simple concept
+of the Hodge dual is undersood with the three dimensions we are accustomed to
+live in, extending to the 4-dimensional Minkowski space may feel quite natural.</p>
+<p>First consider a coordinate basis in 3 dimensions that corresponds to our
+intuitive understanding of dimensions <span class="math notranslate nohighlight">\(\mathbf{e}_x\)</span>,
+<span class="math notranslate nohighlight">\(\mathbf{e}_y\)</span> and <span class="math notranslate nohighlight">\(\mathbf{e}_z\)</span>. Now observe that we did not
+merely define three unit vectors, but also three <em>unit surfaces</em> that we name
+using the wedge <span class="math notranslate nohighlight">\(\wedge\)</span> symbol <span class="math notranslate nohighlight">\(\mathbf{e}_x \wedge \mathbf{e}_y\)</span>,
+<span class="math notranslate nohighlight">\(\mathbf{e}_y \wedge \mathbf{e}_z\)</span>, and <span class="math notranslate nohighlight">\(\mathbf{e}_z \wedge
+\mathbf{e}_x\)</span>:</p>
+<a class="reference internal image-reference" href="_images/hodge_dual_coordinates.png"><img alt="_images/hodge_dual_coordinates.png" class="align-center" src="_images/hodge_dual_coordinates.png" style="width: 60%;" /></a>
+<p>The naming of the surfaces is carefully chosen counterclock wise. The reason is
+that given a vector together with a number for the surface, we can uniquely
+determine the second vector needed to obtain that surface. The surface need be
+oriented and a sign convention chosen (Here counterclockwise is positive). For
+example, <span class="math notranslate nohighlight">\(\mathbf{e}_z \wedge \mathbf{e}_x = - \mathbf{e}_x \wedge
+\mathbf{e}_z\)</span>. Each basis surface can be associated with a unique basis vector:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\mathbf{e}_x \wedge \mathbf{e}_y \rightarrow \mathbf{e}_z \\
+\mathbf{e}_y \wedge \mathbf{e}_z \rightarrow \mathbf{e}_x \\
+\mathbf{e}_z \wedge \mathbf{e}_x \rightarrow \mathbf{e}_y\end{split}\]</div>
+<p>Using the <span class="math notranslate nohighlight">\(\star\)</span> Hodge dual operator to describe that relation, we have:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\star \mathbf{e}_x \wedge \mathbf{e}_y = \mathbf{e}_z \\
+\star \mathbf{e}_y \wedge \mathbf{e}_z = \mathbf{e}_x \\
+\star \mathbf{e}_z \wedge \mathbf{e}_x = \mathbf{e}_y\end{split}\]</div>
+<p>This association defines a dual vector to every oriented surfaces and is called
+the Hodge dual, noted with the star <span class="math notranslate nohighlight">\(\star\)</span> operator. The relation holds
+in both direction:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\star \mathbf{e}_z = \mathbf{e}_x \wedge \mathbf{e}_y \\
+\star \mathbf{e}_x = \mathbf{e}_y \wedge \mathbf{e}_z \\
+\star \mathbf{e}_y = \mathbf{e}_z \wedge \mathbf{e}_x\end{split}\]</div>
+<p>The Hodge dual in three dimensions is the cross product. The cross product
+defines a vector perpendicular to the surface whose length is proportional to
+the amount of rotation:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\mathbf{e}_x \times \mathbf{e}_y = \star \mathbf{e}_x \wedge \mathbf{e}_y = \mathbf{e}_z \\
+\mathbf{e}_y \times \mathbf{e}_z = \star \mathbf{e}_y \wedge \mathbf{e}_z = \mathbf{e}_x \\
+\mathbf{e}_z \times \mathbf{e}_x = \star \mathbf{e}_z \wedge \mathbf{e}_x = \mathbf{e}_y\end{split}\]</div>
+<p>This establishes the deep connection between the Hodge dual, rotations,
+surfaces, and the cross product.</p>
+<p>Going one step futher, we observe that we did not merely define unit surfaces,
+but also unit volumes that we note <span class="math notranslate nohighlight">\(\mathbf{e}_x \wedge \mathbf{e}_y
+\wedge \mathbf{e}_z\)</span>. We can associate the unit volume with numbers:</p>
+<div class="math notranslate nohighlight">
+\[\star \mathbf{1} = \mathbf{e}_x \wedge \mathbf{e}_y \wedge \mathbf{e}_z\]</div>
+<p>As well as:</p>
+<div class="math notranslate nohighlight">
+\[\star \mathbf{e}_x \wedge \mathbf{e}_y \wedge \mathbf{e}_z = \mathbf{1}\]</div>
+<p>Where <span class="math notranslate nohighlight">\(\mathbf{1}\)</span> is the unit number. In other words any number can be
+expressed as a linear combination of <span class="math notranslate nohighlight">\(1\)</span>.</p>
+<p>For the vector basis the following objects are defined:</p>
+<ul class="simple">
+<li><p>Real numbers.</p></li>
+<li><p>Vectors.</p></li>
+<li><p>Bivectors correspoding to surfaces and often called pseudo-vectors.</p></li>
+<li><p>Trivectors corresponding to volumes and often called pseudo-scalars.</p></li>
+</ul>
+<p>Placing a mirror in front of this object:</p>
+<ul class="simple">
+<li><p>Scalars (Real numbers) are not changed.</p></li>
+<li><p>Vector are not changed.</p></li>
+<li><p>Surfaces are flipped and the sign changes.</p></li>
+<li><p>Volumes are flipped and the sign changes.</p></li>
+</ul>
+<p>This is the reason behind the naming <em>pseudo-vector</em>. When placed in front of a
+mirror, the sign of a positive oriented surface goes to negative. The
+corresponding Hodge dual to the surface is a vector, and the Hodge dual of the
+positive surface is a vector which is flipped. These objects are associated to
+vectors that do not behave like a vector in front of a mirror.</p>
+<p>This is also the reason behind the name <em>pseudo-scalar</em>. When placed in front
+of a mirror, the sign of a positive oriented volume goes to negative. The Hodge
+dual of the positive the volume is positive scalar. The sign of the Hodge dual
+of the image is a negative scalar. These objects are associated to scalars that
+do not behave like scalars in front of a mirror.</p>
+</section>
+<section id="improving-on-the-notation-of-cartan-s-formalism">
+<h2>Improving on the notation of Cartan’s formalism<a class="headerlink" href="#improving-on-the-notation-of-cartan-s-formalism" title="Link to this heading">#</a></h2>
+<p>I will be using matrix notation in a manner which is not fully conventional,
+but that I hope highlight symmetries and the reader will find obvious.
+Everything in a matrix is expressed with its basis vectors and can be reordered
+at will. For example, a vector is often expressed as:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}v = \{ x \\ y \\ z\}\end{split}\]</div>
+<p>I merely propse to explicitely write the basis explicitely:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}v = \{ x \mathbf{e}_x \\ y \mathbf{e}_y \\ z \mathbf{e}_x \}\end{split}\]</div>
+<p>Which really means that a <span class="math notranslate nohighlight">\(+\)</span> sign can be added anywhere and the
+expression written in the standard form:</p>
+<div class="math notranslate nohighlight">
+\[v = x \mathbf{e}_x + y \mathbf{e}_y + z \mathbf{e}_x\]</div>
+<p>This is quite powerfull when using a pseudo-vector or pseudo-scalar basis:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\{                                          &amp; +a^{xy} \mathbf{e}_x \wedge \mathbf{e}_y &amp; -a^{zx} \mathbf{e}_x \wedge \mathbf{e}_z \\
+   -a^{xy} \mathbf{e}_y \wedge \mathbf{e}_x &amp;                                          &amp; +a^{yz} \mathbf{e}_y \wedge \mathbf{e}_z \\
+   +a^{zx} \mathbf{e}_z \wedge \mathbf{e}_x &amp; -a^{yz} \mathbf{e}_y \wedge \mathbf{e}_y &amp;                                          \}\end{split}\]</div>
+<p>That we can for example reorder if we want to:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\{ + 2 a^{yz} \mathbf{e}_y \wedge \mathbf{e}_z \\
+   + 2 a^{zx} \mathbf{e}_z \wedge \mathbf{e}_x \\
+   + 2 a^{xy} \mathbf{e}_x \wedge \mathbf{e}_y \}\end{split}\]</div>
+<p>Or write as a sum:</p>
+<div class="math notranslate nohighlight">
+\[2 a^{yz} \mathbf{e}_y \wedge \mathbf{e}_z +
+2 a^{zx} \mathbf{e}_z \wedge \mathbf{e}_x +
+2 a^{xy} \mathbf{e}_x \wedge \mathbf{e}_y\]</div>
+<p>And we can write a covector in the same explicit manner. This notation is
+extremely conveniant when performing calculations in Cartan’s framework and
+permits also to fall back on regular matrix multiplication or express tensors
+in the same convenient manner.</p>
+</section>
+<section id="notation">
+<h2>Notation<a class="headerlink" href="#notation" title="Link to this heading">#</a></h2>
+<p>The vector field <span class="math notranslate nohighlight">\(\mathbf{F}\)</span> is noted with the musical isomorphism
+<span class="math notranslate nohighlight">\(\sharp\)</span> as <span class="math notranslate nohighlight">\(F^\sharp\)</span>, which either declare <span class="math notranslate nohighlight">\(F\)</span> is a vector,
+or transform a covector to a vector:</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{F}=F^\sharp=(F^\sharp)^\sharp=(F^\flat)^\sharp\]</div>
+<p>The component of <span class="math notranslate nohighlight">\(F^\sharp\)</span> are noted with upper indices consistently
+with the rules of Ricci calculus and utilizing Einstein summation convention.</p>
+</section>
+<section id="derivative">
+<h2>Derivative<a class="headerlink" href="#derivative" title="Link to this heading">#</a></h2>
+<p>The partial derivatives are our basis vectors:</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{e}_i = \partial_i\]</div>
+</section>
+<section id="differential">
+<h2>Differential<a class="headerlink" href="#differential" title="Link to this heading">#</a></h2>
+<p>The differentials are our basis covectors:</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{e}^i = dx^i\]</div>
+</section>
+<section id="gradiant">
+<h2>Gradiant<a class="headerlink" href="#gradiant" title="Link to this heading">#</a></h2>
+<div class="admonition-proposition admonition">
+<p class="admonition-title">Proposition</p>
+<div class="math notranslate nohighlight">
+\[(df)^{\sharp} = \mathbf{\nabla} f\]</div>
+</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align}
+df^{\sharp} &amp; = ( \partial_x f dx + \partial_y f dy + \partial_z f dz )^{\sharp} \\
+            &amp; = \partial_x f (dx)^{\sharp} + \partial_y f (dy)^{\sharp} + \partial_z f (dz)^{\sharp} \\
+            &amp; = \partial_x f \partial_x + \partial_y f \partial_y + \partial_z f \partial_z \\
+\end{align}\end{split}\]</div>
+</section>
+<section id="divergence">
+<h2>Divergence<a class="headerlink" href="#divergence" title="Link to this heading">#</a></h2>
+<div class="admonition-proposition admonition">
+<p class="admonition-title">Proposition</p>
+<div class="math notranslate nohighlight">
+\[\star d \star F^\flat = \mathbf{\nabla} \cdot \mathbf{F}\]</div>
+</div>
+<div class="admonition-proposition admonition">
+<p class="admonition-title">Proposition</p>
+<div class="math notranslate nohighlight">
+\[\nabla^\flat F^\sharp = \mathbf{\nabla} \cdot \mathbf{F}\]</div>
+</div>
+<p>We begin with <span class="math notranslate nohighlight">\(F\)</span> as a vector <span class="math notranslate nohighlight">\(\mathbf{F} = F^\sharp = F^i
+\partial_i\)</span> and flatten:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}F^\flat = \{ F^x \partial_x \\
+             F^y \partial_y \\
+             F^z \partial_z \}^\flat
+        = \{ F^x dx \\
+             F^y dy \\
+             F^z dz \}\end{split}\]</div>
+<p>Apply the <span class="math notranslate nohighlight">\(\star\)</span> operator:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\star F^\flat = \{ F^x \star dx     \\ F^y \star dy     \\ F^z \star dz     \}
+              = \{ F^x dy \wedge dz \\ F^y dz \wedge dx \\ F^z dx \wedge dy \}\end{split}\]</div>
+<p>Apply the <span class="math notranslate nohighlight">\(d\)</span> operator:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}d \star F^\flat = d \{ F^x dy \wedge dz \\
+                       F^y dz \wedge dx \\
+                       F^z dx \wedge dy \}
+= \{ \partial_x F^x dx \wedge dy \wedge dz \\
+     \partial_y F^y dy \wedge dz \wedge dx \\
+     \partial_z F^z dz \wedge dx \wedge dy \}
+= \{ \partial_x F^x dx \wedge dy \wedge dz \\
+     \partial_y F^y dx \wedge dy \wedge dz \\
+     \partial_z F^z dx \wedge dy \wedge dz \}\end{split}\]</div>
+<p>Which can be brought back to a zero form by applying yet again the Hodge star:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\star d \star F^\flat
+= \{ \partial_x F^x \star dx \wedge dy \wedge dz \\
+     \partial_y F^y \star dx \wedge dy \wedge dz \\
+     \partial_z F^z \star dx \wedge dy \wedge dz \}
+= \{ \partial_x F^x \mathbf{1} \\
+     \partial_y F^y \mathbf{1} \\
+     \partial_z F^z \mathbf{1} \}
+= \partial_x F^x + \partial_y F^y + \partial_z F^z\end{split}\]</div>
+</section>
+<section id="curl">
+<h2>Curl<a class="headerlink" href="#curl" title="Link to this heading">#</a></h2>
+<div class="admonition-proposition admonition">
+<p class="admonition-title">Proposition</p>
+<div class="math notranslate nohighlight">
+\[(\star(dF^\flat))^\sharp = \nabla^\sharp \times F^\sharp\]</div>
+</div>
+<p>The full expression of the curl of a vector field is</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\nabla^\sharp \times F^\sharp =
+\{ (\partial_y F^z - \partial F^y) \; \partial_x \\
+   (\partial_z F^x - \partial F^z) \; \partial_y \\
+   (\partial_x F^y - \partial F^x) \; \partial_z \}\end{split}\]</div>
+<p>We demonstrate this is also equal to:</p>
+<p>The vector field is:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}F^\sharp = \{ F^x \px \\ F^y \py \\ F^z \pz \}
+         = F^x \px + F^y \py + F^z \pz\end{split}\]</div>
+<p>Flattening the vector field result in:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}F^\flat = \{ F^x dx \\ F^y dy \\ F^z dz \}
+        = F^x dx + F^y dy + F^z dz\end{split}\]</div>
+<p>Taking the differential, we have:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}dF^\flat =
+\{ \partial_x F^x dx \wedge dx &amp; \partial_y F^x dy \wedge dx &amp; \partial_z F^x dz \wedge dx \\
+   \partial_x F^y dx \wedge dy &amp; \partial_y F^y dy \wedge dy &amp; \partial_z F^y dz \wedge dy \\
+   \partial_x F^z dx \wedge dz &amp; \partial_y F^z dy \wedge dy &amp; \partial_z F^z dz \wedge dz \}\end{split}\]</div>
+<p>Or with more natural row/column convention:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}dF^\flat =
+\{ \partial_x F^x dx \wedge dx &amp; \partial_x F^y dx \wedge dy &amp; \partial_x F^z dx \wedge dz \\
+   \partial_y F^x dy \wedge dx &amp; \partial_y F^y dy \wedge dy &amp; \partial_y F^z dy \wedge dy \\
+   \partial_z F^x dz \wedge dx &amp; \partial_z F^y dz \wedge dy &amp; \partial_z F^z dz \wedge dz \}\end{split}\]</div>
+<p>Where <span class="math notranslate nohighlight">\(dx^i \wedge dx^i = 0\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}dF^\flat =
+\{                             &amp; \partial_x F^y dx \wedge dy &amp; \partial_x F^z dx \wedge dz \\
+   \partial_y F^x dy \wedge dx &amp;                             &amp; \partial_y F^z dy \wedge dy \\
+   \partial_z F^x dz \wedge dx &amp; \partial_z F^y dz \wedge dy &amp;                             \}\end{split}\]</div>
+<p>And <span class="math notranslate nohighlight">\(dx^i \wedge dx^j = -dx^j \wedge dx^i\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}dF^\flat =
+\{                              &amp; +\partial_x F^y dx \wedge dy &amp; -\partial_x F^z dz \wedge dx \\
+   -\partial_y F^x dx \wedge dy &amp;                              &amp; +\partial_y F^z dy \wedge dy \\
+   +\partial_z F^x dz \wedge dx &amp; -\partial_z F^y dy \wedge dz &amp;                              \}\end{split}\]</div>
+<p>That we reorder to:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}dF^\flat =
+\{ +\partial_y F^z dy \wedge dy - \partial_z F^y dy \wedge dz \\
+   +\partial_z F^x dz \wedge dx - \partial_x F^z dz \wedge dx \\
+   +\partial_x F^y dx \wedge dy - \partial_y F^x dx \wedge dy \}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}dF^\flat =
+\{ (\partial_y F^z - \partial_z F^y) dy \wedge dz \\
+   (\partial_z F^x - \partial_x F^z) dz \wedge dx \\
+   (\partial_x F^y - \partial_y F^x) dx \wedge dy \}\end{split}\]</div>
+<p>Where we can now take the star operator:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\star dF^\flat =
+\{ (\partial_y F^z - \partial_z F^y) \star dy \wedge dz \\
+   (\partial_z F^x - \partial_x F^z) \star dz \wedge dx \\
+   (\partial_x F^y - \partial_y F^x) \star dx \wedge dy \}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\star dF^\flat =
+\{ (\partial_y F^z - \partial_z F^y) dx \\
+   (\partial_z F^x - \partial_x F^z) dy \\
+   (\partial_x F^y - \partial_y F^x) dz \}\end{split}\]</div>
+<p>We can then sharpen the covector to its vector form:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}(\star dF^\flat)^\sharp
+=
+\{ (\partial_y F^z - \partial_z F^y) dx^\sharp \\
+   (\partial_z F^x - \partial_x F^z) dy^\sharp \\
+   (\partial_x F^y - \partial_y F^x) dz^\sharp \}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}(\star dF^\flat)^\sharp
+=
+\{ (\partial_y F^z - \partial_z F^y) \px \\
+   (\partial_z F^x - \partial_x F^z) \py \\
+   (\partial_x F^y - \partial_y F^x) \pt \}\end{split}\]</div>
+</section>
+<section id="laplacian">
+<h2>Laplacian<a class="headerlink" href="#laplacian" title="Link to this heading">#</a></h2>
+<div class="admonition-proposition admonition">
+<p class="admonition-title">Proposition</p>
+<div class="math notranslate nohighlight">
+\[\star d \star d f = \mathbf{\nabla}^2 f\]</div>
+</div>
+<p>The differential of a function (zero form) is:</p>
+<div class="math notranslate nohighlight">
+\[df = \partial_x f dx + \partial_y f dy + \partial_z f dz\]</div>
+<p>Taking the Hodge dual:</p>
+<div class="math notranslate nohighlight">
+\[\star df = \partial_x f dy \wedge dz + \partial_y dz \wedge dx + \partial_z f dx \wedge dy\]</div>
+<p>Taking the differential</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{align}
+d \star df &amp;= \frac{\partial^2 f}{\partial x} dx \wedge dy \wedge dz +
+              \frac{\partial^2 f}{\partial y} dy \wedge dz \wedge dx +
+              \frac{\partial^2 f}{\partial z} dz \wedge dx \wedge dy \\
+           &amp;= \frac{\partial^2 f}{\partial x} dx \wedge dy \wedge dz +
+              \frac{\partial^2 f}{\partial y} dx \wedge dy \wedge dz +
+              \frac{\partial^2 f}{\partial z} dx \wedge dy \wedge dz \\
+           &amp;= (
+                  \frac{\partial^2 f}{\partial x} +
+                  \frac{\partial^2 f}{\partial y} +
+                  \frac{\partial^2 f}{\partial z}
+              ) dx \wedge dy \wedge dz \\
+\end{align}\end{split}\]</div>
+<p>Taking the Hodge dual, we tranform volumes to functions and obtain the
+expression for the laplacian:</p>
+<div class="math notranslate nohighlight">
+\[\star d \star df = (
+    \frac{\partial^2 f}{\partial x} +
+    \frac{\partial^2 f}{\partial y} +
+    \frac{\partial^2 f}{\partial z}
+)\]</div>
+</section>
+<section id="laplace-operator">
+<h2>Laplace operator<a class="headerlink" href="#laplace-operator" title="Link to this heading">#</a></h2>
+<p>The Laplace operator is defined on functions:</p>
+<div class="admonition-proposition admonition">
+<p class="admonition-title">Proposition</p>
+<div class="math notranslate nohighlight">
+\[\Delta f = \star d \star d f\]</div>
+</div>
+</section>
+<section id="laplace-de-rham-operator">
+<h2>Laplace-de Rham operator<a class="headerlink" href="#laplace-de-rham-operator" title="Link to this heading">#</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Under construction</p>
+</div>
+<p>The Laplace operator can be generalized to the Laplace-deRham operator
+<span class="math notranslate nohighlight">\(\Delta = d \delta + \delta d\)</span> where <cite>delta = (-1)^k star d star</cite>.</p>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="faraday_tensor_derivation.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Deriving the Faraday Tensor from the 1865 Maxwell Equations</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="differential_rotations.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Rotations in differential forms</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-hodge-dual">The Hodge dual</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#improving-on-the-notation-of-cartan-s-formalism">Improving on the notation of Cartan’s formalism</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#notation">Notation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#derivative">Derivative</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#differential">Differential</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gradiant">Gradiant</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#divergence">Divergence</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#curl">Curl</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#laplacian">Laplacian</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#laplace-operator">Laplace operator</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#laplace-de-rham-operator">Laplace-de Rham operator</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Stéphane Haussler
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024, Stéphane Haussler.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
