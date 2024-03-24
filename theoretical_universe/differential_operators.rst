@@ -5,34 +5,114 @@ Differential operators in differential forms
 
    by Stéphane Haussler
 
-.. warning::
-
-   Under construction
-
-In this article, I use the language of differential forms to express the
-derivative, the gradient, the divergence, the curl and the laplacian in the
-language of differential forms in three dimensions.
+In this article, I use the language of differential forms to systematically
+express the derivative, the gradient, the divergence, the curl and the
+laplacian in three dimensions. I will simplify the concept of the Hodge dual in
+three dimensions, making it more accessible.
 
 I assume the reader possesses a strong grasp of vector calculus and a
 functional understanding of differential forms. To learn about differential
-forms, I recommend `yet another great video serie by Michael Penn
+forms, I can only recommend `yet another great video serie by Michael Penn
 <https://youtube.com/playlist?list=PL22w63XsKjqzQZtDZO_9s2HEMRJnaOTX7&si=4dDrAZ-oKa1rI7B8>`_.
-I will try simplify the concept of the Hodge dual, often presented in a
-needlessly complex manner, making it more accessible. A basic comprehension of
-vectors, covectors, and tensor calculus will enhance the discussion.
+Implicitely assumed with the above requirements is the understanding of tensor
+calculus, and in particular the concept of vectors and covectors.
+
 Familiarity with the concepts of Grassman Algebra, Clifford Algebra (AKA
-Geometric Algebra), Lie Groups and Algebra will certainly be a sign that the
-reader understand the antisymmetry underlying differential forms.
+Geometric Algebra), Lie Groups and Algebra is not needed but certainly welcome
+for the understanding of the antisymmetry underlying differential forms.
 
 The Hodge dual
 --------------
 
 .. {{{
 
+The concept of the Hodge dual is often presented in a needlessly complex
+manner, taking into account from the get go a number of dimensions above three,
+and any metric signatures in all generality. These generalizations can be done
+later. Also, as soon as the concept is undersood in three dimensions of space,
+the extension to the 4 dimensional Minkowski metric may feel quite natural.
+
+Here, to get to the concept of the Hodge dual, we first take a coordinate basis
+in 3 dimensions corresponding to our intuitive understanding of dimensions
+:math:`\mathbf{e}_x`, :math:`\mathbf{e}_y` and :math:`\mathbf{e}_z`. We now
+observe that we did not merely define three unit vectors defining our
+coordinates, but also surfaces that we name using the wedge :math:`\wedge`
+product :math:`\mathbf{e}_x \wedge \mathbf{e}_y`, :math:`\mathbf{e}_y \wedge
+\mathbf{e}_z`, and :math:`\mathbf{e}_z \wedge \mathbf{e}_x`:
+
+.. image:: _static/hodge_dual_coordinates.png
+   :align: center
+   :width: 60%
+
+The naming of the surfaces is is carefully chosen counterclock wise. The reason
+is that given a vector and a number representative of a surface, we can
+determine the second vector. This is the deeper link between rotations and
+surfaces. Note that the surfaces is necessarily oriented. For example,
+:math:`\mathbf{e}_z \wedge \mathbf{e}_x = - \mathbf{e}_x \wedge \mathbf{e}_z`.
+
+Now we note that to each basis surface that we have defined, we can associated
+a unique vector.
+
+.. math::
+
+   \mathbf{e}_x \wedge \mathbf{e}_y \rightarrow \mathbf{e}_z \\
+   \mathbf{e}_y \wedge \mathbf{e}_z \rightarrow \mathbf{e}_x \\
+   \mathbf{e}_z \wedge \mathbf{e}_x \rightarrow \mathbf{e}_y
+
+This association defines a dual vector to every oriented surfaces and is called
+the Hodge dual, noted with the star :math:`\star` operator.
+
+.. math::
+
+   \star \mathbf{e}_x \wedge \mathbf{e}_y = \mathbf{e}_z \\
+   \star \mathbf{e}_y \wedge \mathbf{e}_z = \mathbf{e}_x \\
+   \star \mathbf{e}_z \wedge \mathbf{e}_x = \mathbf{e}_y
+
+The relation holds in both direction:
+
+.. math::
+
+   \star \mathbf{e}_z = \mathbf{e}_x \wedge \mathbf{e}_y \\
+   \star \mathbf{e}_x = \mathbf{e}_y \wedge \mathbf{e}_z \\
+   \star \mathbf{e}_y = \mathbf{e}_z \wedge \mathbf{e}_x
+
+Going one step futher, we observe that we did not merely define unit surfaces,
+but also unit volumes that we note :math:`\mathbf{e}_x \wedge \mathbf{e}_y
+\wedge \mathbf{e}_z`. We can associate the unit volume with numbers:
+
+.. math::
+
+   \star \mathbf{1} = \mathbf{e}_x \wedge \mathbf{e}_y \wedge \mathbf{e}_z
+
+As well as:
+
+.. math::
+
+   \star \mathbf{e}_x \wedge \mathbf{e}_y \wedge \mathbf{e}_z = \mathbf{1}
+
+Where :math:`\mathbf{1}` is the unit number. In other words any number can be
+expressed as a linear combination of :math:`1`.
+
+We have thus the following objects:
+
+* Real numbers
+* Vectors
+* Bivectors (surfaces)
+* Trivectors (volumes)
+
+.. note::
+
+    Even though outside the scope of this short discussion, the conept of the
+    Hodge dual can be extended to any number of dimensions. Furthermore, we
+    assume implicitely that the dot product of all vectors with themselves
+    squares to :math:`\mathbf{e}_i \cdot \mathbf{e}_i = 1`. There again, the
+    concept can be extended to any metric signature, and in particular to the
+    minkowski metric.
+
 .. }}}
 
-Improving the notation of Cartan's formalism
---------------------------------------------
+Improving on the notation of Cartan's formalism
+-----------------------------------------------
 
 .. {{{
 
@@ -105,31 +185,6 @@ or transform a covector to a vector:
 The component of :math:`F^\sharp` are noted with upper indices consistently
 with the rules of Ricci calculus and utilizing Einstein summation convention.
 
-.. math::
-
-   F^\sharp = F^i \partial_i
-
-The basis covectors are the differentials:
-
-.. math::
-
-   \mathbf{e}^i = dx^i
-
-Indeed get:
-
-.. math::
-
-   \mathbf{e}^i \cdot \mathbf{e}_j = dx^i \partial_j = \delta^i_j
-
-Where :math:`g` is the metric tensor, and thus:
-
-.. math::
-
-   \begin{align}
-   g_{ij} &= \partial_i \cdot \partial_j \\
-   g^{ij} &= dx^i \cdot dx^j
-   \end{align}
-
 .. }}}
 
 Derivative
@@ -137,11 +192,24 @@ Derivative
 
 .. {{{
 
-The partial derivatives are our basic vector:
+The partial derivatives are our basis vectors:
 
 .. math::
 
    \mathbf{e}_i = \partial_i
+
+.. }}}
+
+Differential
+------------
+
+.. {{{
+
+The differentials are our basis covectors:
+
+.. math::
+
+   \mathbf{e}^i = dx^i
 
 .. }}}
 
@@ -409,15 +477,33 @@ expression for the laplacian:
        \frac{\partial^2 f}{\partial z}
    )
 
-Laplace-de Rham operator
-------------------------
+.. }}}
 
-Can be taken on functions and vectors.
+Laplace operator
+----------------
+
+.. {{{
+
+The Laplace operator is defined on functions:
 
 .. admonition:: Proposition
 
    .. math::
 
-      \Delta f = \delta d f
+      \Delta f = \star d \star d f
+
+.. }}}
+
+Laplace-de Rham operator
+------------------------
+
+.. {{{
+
+.. warning::
+
+   Under construction
+
+The Laplace operator can be generalized to the Laplace-deRham operator
+:math:`\Delta = d \delta + \delta d` where `\delta = (-1)^k \star d \star`.
 
 .. }}}
