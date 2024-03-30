@@ -6,49 +6,52 @@ Differential operators in differential forms
    by Stéphane Haussler
 
 In this article, I use the language of differential forms to systematically
-express the derivative, the gradient, the divergence, the curl and the
-laplacian in three dimensions. I will simplify the concept of the Hodge dual in
-three dimensions, making it more accessible.
+express the derivative, the differential, the gradient, the divergence, the
+curl and the laplacian in three dimensions. I simplify the concept of the Hodge
+dual by limiting the discussion to three dimensions, making it more accessible.
 
 I assume the reader possesses a strong grasp of vector calculus and a
 functional understanding of differential forms. To learn about differential
-forms, I can only recommend `yet another great video serie by Michael Penn
+forms, `see yet another great video serie by Michael Penn
 <https://youtube.com/playlist?list=PL22w63XsKjqzQZtDZO_9s2HEMRJnaOTX7&si=4dDrAZ-oKa1rI7B8>`_.
-Implicitely assumed with the above requirements is the understanding of tensor
-calculus, and in particular the concept of vectors and covectors. Some basic
-familiarity with the concepts of Grassman Algebra, Clifford Algebra (AKA
-Geometric Algebra), Lie Groups and Algebra is not necessary but welcome for the
-understanding of the antisymmetries at hand.
+Implicitely assumed with the above requisites is a basic understanding of
+tensor calculus, and in particular the concept of vector and covector. Some
+familiarity with the concepts of of either Grassman Algebra, Clifford Algebra
+(AKA Geometric Algebra), or Lie Algebra is not necessary but certainly welcome
+for a deeper understanding of the antisymmetries at hand.
 
 The Hodge dual
 --------------
 
 .. {{{
 
-The concept of the Hodge dual is often presented in a needlessly complex
-manner, taking into account from the get go a number of dimensions above three,
-and any metric signatures. When the actually quite natural and simple concept
-of the Hodge dual is undersood with the three dimensions we are accustomed to
-live in, extending to the 4-dimensional Minkowski space may feel quite natural.
+The Hodge dual is often presented in a needlessly complex manner, taking into
+account from the get go a number of dimensions above three, and any metric
+signatures. The concept is natural with the three dimensions we are accustomed
+to live in. Extending the idea then to 4-dimensional Minkowski space may feel
+quite easier.
 
-First consider a coordinate basis in 3 dimensions that corresponds to our
-intuitive understanding of dimensions :math:`\mathbf{e}_x`,
-:math:`\mathbf{e}_y` and :math:`\mathbf{e}_z`. Now observe that we did not
-merely define three unit vectors, but also three *unit surfaces* that we name
-using the wedge :math:`\wedge` symbol :math:`\mathbf{e}_x \wedge \mathbf{e}_y`,
-:math:`\mathbf{e}_y \wedge \mathbf{e}_z`, and :math:`\mathbf{e}_z \wedge
-\mathbf{e}_x`:
+First consider a coordinate basis in 3 dimensions corresponding to our
+intuitive understanding of space :math:`\mathbf{e}_x`, :math:`\mathbf{e}_y` and
+:math:`\mathbf{e}_z`. Observe that we did not merely define three unit vectors,
+but also three *unit surfaces* that we name using the wedge symbol
+:math:`\wedge`. The surface along the :math:`x` and :math:`y` axis is named
+:math:`\mathbf{e}_x \wedge \mathbf{e}_y`, along the :math:`y` and :math:`z`
+axis :math:`\mathbf{e}_y \wedge \mathbf{e}_z`, and along the :math:`z` and
+:math:`x` axis, :math:`\mathbf{e}_z \wedge \mathbf{e}_x`:
 
 .. image:: _static/hodge_dual_coordinates.png
    :align: center
    :width: 60%
 
 The naming of the surfaces is carefully chosen counterclock wise. The reason is
-that given a vector together with a number for the surface, we can uniquely
-determine the second vector needed to obtain that surface. The surface need be
-oriented and a sign convention chosen (Here counterclockwise is positive). For
-example, :math:`\mathbf{e}_z \wedge \mathbf{e}_x = - \mathbf{e}_x \wedge
-\mathbf{e}_z`. Each basis surface can be associated with a unique basis vector:
+that not only we can define a surface (a number) from two vectors but also
+given a vector together with a surface, we can uniquely determine the second
+vector needed to obtain that surface. The surface need be oriented and a sign
+convention chosen (counterclockwise is positive). For example,
+:math:`\mathbf{e}_z \wedge \mathbf{e}_x = - \mathbf{e}_x \wedge \mathbf{e}_z`.
+
+Each basis surface can be associated with a unique basis vector:
 
 .. math::
 
@@ -56,7 +59,7 @@ example, :math:`\mathbf{e}_z \wedge \mathbf{e}_x = - \mathbf{e}_x \wedge
    \mathbf{e}_y \wedge \mathbf{e}_z \rightarrow \mathbf{e}_x \\
    \mathbf{e}_z \wedge \mathbf{e}_x \rightarrow \mathbf{e}_y
 
-Using the :math:`\star` Hodge dual operator to describe that relation, we have:
+We note this relation with the star :math:`\star` symbol:
 
 .. math::
 
@@ -132,50 +135,56 @@ do not behave like scalars in front of a mirror.
 
 .. }}}
 
-Improving on the notation of Cartan's formalism
------------------------------------------------
+Improving the notation of Cartan's formalism
+--------------------------------------------
 
 .. {{{
 
-I will be using matrix notation in a manner which is not fully conventional,
-but that I hope highlight symmetries and the reader will find obvious.
-Everything in a matrix is expressed with its basis vectors and can be reordered
-at will. For example, a vector is often expressed as:
+I use matrix notation in a manner which is not fully conventional, but that I
+hope highlights symmetries and that the reader will find obvious. Everything in
+a matrix is expressed with its basis vectors and can be reordered at will. For
+example, a vector is often expressed as:
 
 .. math::
 
    v = \{ x \\ y \\ z\}
 
-I merely propse to explicitely write the basis explicitely:
+I merely propose to write the basis explicitely in the matrix:
 
 .. math::
 
    v = \{ x \mathbf{e}_x \\ y \mathbf{e}_y \\ z \mathbf{e}_x \}
 
-Which really means that a :math:`+` sign can be added anywhere and the
-expression written in the standard form:
+Which means that a :math:`+` sign can be added anywhere and the expression
+written in the standard form:
 
 .. math::
 
    v = x \mathbf{e}_x + y \mathbf{e}_y + z \mathbf{e}_x 
 
-This is quite powerfull when using a pseudo-vector or pseudo-scalar basis:
+This is powerfull when using a pseudo-vector or pseudo-scalar basis, since the
+elements of the matrix can be re-ordered at will.
 
 .. math::
 
    \{                                          & +a^{xy} \mathbf{e}_x \wedge \mathbf{e}_y & -a^{zx} \mathbf{e}_x \wedge \mathbf{e}_z \\
       -a^{xy} \mathbf{e}_y \wedge \mathbf{e}_x &                                          & +a^{yz} \mathbf{e}_y \wedge \mathbf{e}_z \\
-      +a^{zx} \mathbf{e}_z \wedge \mathbf{e}_x & -a^{yz} \mathbf{e}_y \wedge \mathbf{e}_y &                                          \}
-
-That we can for example reorder if we want to:
-
-.. math::
-
+      +a^{zx} \mathbf{e}_z \wedge \mathbf{e}_x & -a^{yz} \mathbf{e}_z \wedge \mathbf{e}_y &                                          \}
+   =
    \{ + 2 a^{yz} \mathbf{e}_y \wedge \mathbf{e}_z \\
       + 2 a^{zx} \mathbf{e}_z \wedge \mathbf{e}_x \\
       + 2 a^{xy} \mathbf{e}_x \wedge \mathbf{e}_y \}
 
-Or write as a sum:
+The transpose can be taken if it permits to use the usual rules of matrix
+multiplication: 
+
+.. math::
+
+   \{                                          & -a^{xy} \mathbf{e}_y \wedge \mathbf{e}_x & +a^{zx} \mathbf{e}_z \wedge \mathbf{e}_x \\
+      +a^{xy} \mathbf{e}_x \wedge \mathbf{e}_y &                                          & -a^{yz} \mathbf{e}_z \wedge \mathbf{e}_y \\
+      -a^{zx} \mathbf{e}_x \wedge \mathbf{e}_z & +a^{yz} \mathbf{e}_y \wedge \mathbf{e}_z &                                          \}
+
+All above matrix representations can writen as a sum:
 
 .. math::
 
@@ -183,10 +192,10 @@ Or write as a sum:
    2 a^{zx} \mathbf{e}_z \wedge \mathbf{e}_x +
    2 a^{xy} \mathbf{e}_x \wedge \mathbf{e}_y
 
-And we can write a covector in the same explicit manner. This notation is
-extremely conveniant when performing calculations in Cartan's framework and
-permits also to fall back on regular matrix multiplication or express tensors
-in the same convenient manner.
+We could have written a covector in the same explicit manner. This notation is
+very conveniant when performing calculations in Cartan's framework as it
+permits to identify and organize terms for practical calculations by falling
+back to regular matrix multiplication.
 
 .. }}}
 
@@ -265,12 +274,6 @@ Divergence
    .. math::
 
       \star d \star F^\flat = \mathbf{\nabla} \cdot \mathbf{F}
-
-.. admonition:: Proposition
-
-   .. math::
-
-      \nabla^\flat F^\sharp = \mathbf{\nabla} \cdot \mathbf{F}
 
 We begin with :math:`F` as a vector :math:`\mathbf{F} = F^\sharp = F^i
 \partial_i` and flatten:
@@ -498,33 +501,10 @@ expression for the laplacian:
        \frac{\partial^2 f}{\partial z}
    )
 
-.. }}}
+.. note::
 
-Laplace operator
-----------------
-
-.. {{{
-
-The Laplace operator is defined on functions:
-
-.. admonition:: Proposition
-
-   .. math::
-
-      \Delta f = \star d \star d f
+   The Laplacian is only valid for functions (a 1-form). The Laplacian can be
+   generalized to n-forms with the Laplace-de Rham operator.
 
 .. }}}
 
-Laplace-de Rham operator
-------------------------
-
-.. {{{
-
-.. warning::
-
-   Under construction
-
-The Laplace operator can be generalized to the Laplace-deRham operator
-:math:`\Delta = d \delta + \delta d` where `\delta = (-1)^k \star d \star`.
-
-.. }}}
