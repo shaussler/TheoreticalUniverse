@@ -107,15 +107,15 @@ def mathjax3_config():
                 # Basis vectors
                 # -------------
     
-                'et': r'\; \mathbf{e_t}',
-                'ex': r'\; \mathbf{e_x}',
-                'ey': r'\; \mathbf{e_y}',
-                'ez': r'\; \mathbf{e_z}',
+                'et': r'\mathbf{e_t}',
+                'ex': r'\mathbf{e_x}',
+                'ey': r'\mathbf{e_y}',
+                'ez': r'\mathbf{e_z}',
 
-                'eT': r'\; \mathbf{e^t}',
-                'eX': r'\; \mathbf{e^x}',
-                'eY': r'\; \mathbf{e^y}',
-                'eZ': r'\; \mathbf{e^z}',
+                'eT': r'\mathbf{e^t}',
+                'eX': r'\mathbf{e^x}',
+                'eY': r'\mathbf{e^y}',
+                'eZ': r'\mathbf{e^z}',
 
                 # Tensor products
                 # ---------------

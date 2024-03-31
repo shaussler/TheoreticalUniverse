@@ -1,4 +1,4 @@
-Differential operators in differential forms
+Differential operators in Cartan's Formalism
 ============================================
 
 .. rst-class:: custom-author
@@ -20,7 +20,7 @@ familiarity with the concepts of of either Grassman Algebra, Clifford Algebra
 (AKA Geometric Algebra), or Lie Algebra is not necessary but certainly welcome
 for a deeper understanding of the antisymmetries at hand.
 
-The Hodge dual
+The Hodge Dual
 --------------
 
 .. {{{
@@ -109,41 +109,39 @@ expressed as a linear combination of :math:`1`.
 
 For the vector basis the following objects are defined:
 
-* Real numbers.
+* Scalars.
 * Vectors.
 * Bivectors correspoding to surfaces and often called pseudo-vectors.
 * Trivectors corresponding to volumes and often called pseudo-scalars.
 
-Placing a mirror in front of this object:
+Placing the objects in front of a mirror:
 
-* Scalars (Real numbers) are not changed.
-* Vector are not changed.
+* Scalars look the same.
+* Vectors look the same.
 * Surfaces are flipped and the sign changes.
 * Volumes are flipped and the sign changes.
 
 This is the reason behind the naming *pseudo-vector*. When placed in front of a
-mirror, the sign of a positive oriented surface goes to negative. The
-corresponding Hodge dual to the surface is a vector, and the Hodge dual of the
-positive surface is a vector which is flipped. These objects are associated to
-vectors that do not behave like a vector in front of a mirror.
+mirror, the sign of a positive oriented surface goes to negative. These objects
+are associated to vectors through the hodge dual. This dual vectors flips
+direction with the image of the oriented surface.
 
 This is also the reason behind the name *pseudo-scalar*. When placed in front
-of a mirror, the sign of a positive oriented volume goes to negative. The Hodge
-dual of the positive the volume is positive scalar. The sign of the Hodge dual
-of the image is a negative scalar. These objects are associated to scalars that
-do not behave like scalars in front of a mirror.
+of a mirror, the sign of a positive oriented volume goes to negative. These
+objects are associated to scalars through the hodge dual. This dual sclar flips
+its sign with the image of the oriented volume.
 
 .. }}}
 
-Improving the notation of Cartan's formalism
---------------------------------------------
+Formalism
+---------
 
 .. {{{
 
 I use matrix notation in a manner which is not fully conventional, but that I
 hope highlights symmetries and that the reader will find obvious. Everything in
 a matrix is expressed with its basis vectors and can be reordered at will. For
-example, a vector is often expressed as:
+example, a vector is often expressed with an implicit basis as:
 
 .. math::
 
@@ -196,13 +194,6 @@ We could have written a covector in the same explicit manner. This notation is
 very conveniant when performing calculations in Cartan's framework as it
 permits to identify and organize terms for practical calculations by falling
 back to regular matrix multiplication.
-
-.. }}}
-
-Notation
---------
-
-.. {{{
 
 The vector field :math:`\mathbf{F}` is noted with the musical isomorphism
 :math:`\sharp` as :math:`F^\sharp`, which either declare :math:`F` is a vector,

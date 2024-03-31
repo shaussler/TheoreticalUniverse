@@ -8,6 +8,7 @@ This is a personal compilation of papers focusing on mathematical physics.
    :caption: Contents:
 
    faraday_tensor_derivation.rst
+   all_faraday_tensors.rst
    differential_operators.rst
    differential_rotations.rst
    de_guas_theorem.rst
