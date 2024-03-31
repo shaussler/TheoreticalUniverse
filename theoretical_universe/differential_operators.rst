@@ -10,9 +10,9 @@ express the derivative, the differential, the gradient, the divergence, the
 curl and the laplacian in three dimensions. I simplify the concept of the Hodge
 dual by limiting the discussion to three dimensions, making it more accessible.
 
-I assume the reader possesses a strong grasp of vector calculus and a
-functional understanding of differential forms. To learn about differential
-forms, `see yet another great video serie by Michael Penn
+I assume the reader possesses a strong grasp of vector calculus and a working
+understanding of differential forms and the wedge product. To learn about
+differential forms, `see yet another great video serie by Michael Penn
 <https://youtube.com/playlist?list=PL22w63XsKjqzQZtDZO_9s2HEMRJnaOTX7&si=4dDrAZ-oKa1rI7B8>`_.
 Implicitely assumed with the above requisites is a basic understanding of
 tensor calculus, and in particular the concept of vector and covector. Some
@@ -123,13 +123,13 @@ Placing the objects in front of a mirror:
 
 This is the reason behind the naming *pseudo-vector*. When placed in front of a
 mirror, the sign of a positive oriented surface goes to negative. These objects
-are associated to vectors through the hodge dual. This dual vectors flips
-direction with the image of the oriented surface.
+are associated to vectors through the hodge dual. These dual vectors flip their
+directions with the image of the oriented surface.
 
 This is also the reason behind the name *pseudo-scalar*. When placed in front
 of a mirror, the sign of a positive oriented volume goes to negative. These
-objects are associated to scalars through the hodge dual. This dual sclar flips
-its sign with the image of the oriented volume.
+objects are associated to scalars through the hodge dual. This dual scalars
+flip their signs with the image of the oriented volume.
 
 .. }}}
 

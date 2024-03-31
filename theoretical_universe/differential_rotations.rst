@@ -10,16 +10,23 @@ Rotations in Cartan's Formalism
    Under construction
 
 In this article, I explicitely express rotations in Cartan's formalism and
-improve on the notation to link the practical calculations with differential
-forms to matrix multiplication. Note that I have not seen anybody mentioning it
-or highlighting it, you can see the symmetry pop out of the Hodge star operator
-when ordering differential forms into row and columns.
+improve on the notation link with the practicality of calculations in Cartan's
+formalism to matrix multiplication. You will see (anti-)symmetries pop out of
+the Hodge star operator when ordering the differential forms into matrices.
 
-.. note::
+The content of this article might not be wildely known as I have not found the
+observations detailed here mentioned anywhere. If I am mistaken and you are
+aware of freely available resources, open an issue and I will include a
+reference. If you find mistakes, don't hesitate to open an issue or directly
+provide corrections by sending a merge request to my `Github repository
+<https://github.com/shaussler/TheoreticalUniverse/>`_.
 
-   Bivector and pseudo-vectors are the same object and the wording used
-   interchangeably. For details, see :ref:`my article at section *The Hodge
-   Dual* <differential_operators:The Hodge Dual>`
+I assume the reader posses a strong grasp of vector calculus as well as working
+understanding of differential forms, the wedge product, and :ref:`the concept
+of the Hodge dual <differential_operators:The Hodge Dual>`. With respect to
+wording, note that I interchangeably use the words *oriented surface*,
+*bivector* and *pseudo-vectors* as they are :ref:`the same objects
+<differential_operators:The Hodge Dual>`, albeit named in different contexts.
 
 Formalism
 ---------
@@ -56,49 +63,58 @@ Rotations in three dimensions
 .. {{{
 
 The notation is powerfull when using a pseudo-vector basis, since the elements
-of the matrix can be re-ordered at will.
+of the matrix can be re-ordered at will. Concretely, a rotation :math:`R` in 3
+dimensions is a linear combination of the three associated basis bivectors:
 
 .. math::
 
-   \{ + R^{yz} \mathbf{e}_y \wedge \mathbf{e}_z \\
-      + R^{zx} \mathbf{e}_z \wedge \mathbf{e}_x \\
-      + R^{xy} \mathbf{e}_x \wedge \mathbf{e}_y \\
+   R = 
+   R^{x} \ey \wedge \ez +
+   R^{y} \ez \wedge \ex +
+   R^{z} \ex \wedge \ey
+
+Equivalently, we can write the bivectors in a single column:
+
+.. math::
+
+   R =
+   \{ + R^{x} \mathbf{e}_y \wedge \mathbf{e}_z \\
+      + R^{y} \mathbf{e}_z \wedge \mathbf{e}_x \\
+      + R^{z} \mathbf{e}_x \wedge \mathbf{e}_y \\
    \}
-   = 
-   \{                        & +R^{xy} \ex \wedge \ey &                        \\
-                             &                        & +R^{yz} \ey \wedge \ez \\
-      +R^{zx} \ez \wedge \ex &                        &                        \\
+   
+Or use a row/column matrix notation:
+
+.. math::
+
+   R =
+   \{                       & +R^{z} \ex \wedge \ey &                       \\
+                            &                       & +R^{x} \ey \wedge \ez \\
+      +R^{y} \ez \wedge \ex &                       &                       \\
    \} \\
 
+We are free to split the terms by using the antisymmetric properties of the
+wedge product to obtain:
+
 .. math::
 
-   \{ + R^{yz} \mathbf{e}_y \wedge \mathbf{e}_z \\
-      + R^{zx} \mathbf{e}_z \wedge \mathbf{e}_x \\
-      + R^{xy} \mathbf{e}_x \wedge \mathbf{e}_y \\
-   \}
+   R
    = \frac{1}{2}
-   \{                        & +R^{xy} \ex \wedge \ey & -R^{zx} \ex \wedge \ez \\
-      -R^{xy} \ey \wedge \ex &                        & +R^{yz} \ey \wedge \ez \\
-      +R^{zx} \ez \wedge \ex & -R^{yz} \ez \wedge \ey &                        \\
+   \{                       & +R^{z} \ex \wedge \ey & -R^{y} \ex \wedge \ez \\
+      -R^{z} \ey \wedge \ex &                       & +R^{x} \ey \wedge \ez \\
+      +R^{y} \ez \wedge \ex & -R^{x} \ez \wedge \ey &                       \\
    \}
 
-The transpose can be taken if it permits to use the usual rules of matrix
-multiplication:
+Or even free to invert rows and columns, thus taking the transpose, all while
+keeping an equal sign:
 
 .. math::
 
-   \{                        & -R^{xy} \ey \wedge \ex & +a^{zx} \ez \wedge \ex \\
-      +R^{xy} \ex \wedge \ey &                        & -a^{yz} \ez \wedge \ey \\
-      -R^{zx} \ex \wedge \ez & +R^{yz} \ey \wedge \ez &                        \\
+   R =
+   \{                       & -R^{z} \ey \wedge \ex & +R^{y} \ez \wedge \ex \\
+      +R^{z} \ex \wedge \ey &                       & -R^{x} \ez \wedge \ey \\
+      -R^{y} \ex \wedge \ez & +R^{x} \ey \wedge \ez &                       \\
    \}
-
-All above matrix representations can writen as a sum:
-
-.. math::
-
-   R^{yz} \ey \wedge \ez +
-   R^{zx} \ez \wedge \ex +
-   R^{xy} \ex \wedge \ey
 
 In turn through the use of the Hodge star :math:`\star`, we fall back to the
 description of rotations as describe with the cross product :math:`\times`:
@@ -107,22 +123,22 @@ description of rotations as describe with the cross product :math:`\times`:
 
    \begin{align*}
    & \star (
-       R^{yz} \ey \wedge \ez +
-       R^{zx} \ez \wedge \ex +
-       R^{xy} \ex \wedge \ey 
+       R^{x} \ey \wedge \ez +
+       R^{y} \ez \wedge \ex +
+       R^{z} \ex \wedge \ey 
    )\\
    &=
-   R^{yz} \star \ey \wedge \ez +
-   R^{zx} \star \ez \wedge \ex +
-   R^{xy} \star \ex \wedge \ey \\
+   R^{x} \star \ey \wedge \ez +
+   R^{y} \star \ez \wedge \ex +
+   R^{z} \star \ex \wedge \ey \\
    &=
-   R^{yz} \ex +
-   R^{zx} \ey +
-   R^{xy} \ez \\
+   R^{x} \ex +
+   R^{y} \ey +
+   R^{z} \ez \\
    &=
-   R^{yz} \ey \times \ez +
-   R^{zx} \ez \times \ex +
-   R^{xy} \ex \times \ey \\
+   R^{x} \ey \times \ez +
+   R^{y} \ez \times \ex +
+   R^{z} \ex \times \ey \\
    \end{align*}
 
 We could have written a covector in the same explicit manner. This notation is
