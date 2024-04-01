@@ -14,11 +14,12 @@ improve on the notation link with the practicality of calculations in Cartan's
 formalism to matrix multiplication. You will see (anti-)symmetries pop out of
 the Hodge star operator when ordering the differential forms into matrices.
 
-The content of this article might not be wildely known as I have not found the
-observations detailed here mentioned anywhere. If I am mistaken and you are
-aware of freely available resources, open an issue and I will include a
-reference. If you find mistakes, don't hesitate to open an issue or directly
-provide corrections by sending a merge request to my `Github repository
+The matrix representation of differential forms described in this article might
+not be wildely known as I have not found the observations detailed here
+mentioned anywhere. If I am mistaken and you are aware of freely available
+resources, open an issue and I will include a reference. If you find mistakes,
+don't hesitate to open an issue or directly provide corrections by sending a
+merge request to my `Github repository
 <https://github.com/shaussler/TheoreticalUniverse/>`_.
 
 I assume the reader posses a strong grasp of vector calculus as well as working
@@ -116,13 +117,13 @@ keeping an equal sign:
       -R^{y} \ex \wedge \ez & +R^{x} \ey \wedge \ez &                       \\
    \}
 
-In turn through the use of the Hodge star :math:`\star`, we fall back to the
+Through the use of the Hodge star :math:`\star`, we fall back to the
 description of rotations as describe with the cross product :math:`\times`:
 
 .. math::
 
    \begin{align*}
-   & \star (
+   \star R &= \star (
        R^{x} \ey \wedge \ez +
        R^{y} \ez \wedge \ex +
        R^{z} \ex \wedge \ey 
@@ -134,12 +135,19 @@ description of rotations as describe with the cross product :math:`\times`:
    &=
    R^{x} \ex +
    R^{y} \ey +
-   R^{z} \ez \\
-   &=
+   R^{z} \ez
+   \end{align*}
+
+That is, the Hodge star of the rotation expressed as a linear comibination of
+bivectors is exactly a rotation in terms of cross products in the Hodge dual
+space:
+
+.. math::
+
+   \star R &=
    R^{x} \ey \times \ez +
    R^{y} \ez \times \ex +
    R^{z} \ex \times \ey \\
-   \end{align*}
 
 We could have written a covector in the same explicit manner. This notation is
 very conveniant when performing calculations in Cartan's framework as it
@@ -153,13 +161,13 @@ Rotations in Minkowski space
 
 .. {{{
 
-Hence a general bivector in Minkowski space can be written as:
+Turning now to a bivectors in Minkowski space, any rotation can be written as
+a linear combination of 6 parameters:
 
 .. math::
 
-   \begin{align}
-   B
-   &= \{
+   B^{\sharp\sharp}
+   = \{
        F^{tx} \; \et \wedge \ex \\
        F^{ty} \; \et \wedge \ey \\
        F^{tz} \; \et \wedge \ez \\
@@ -167,13 +175,16 @@ Hence a general bivector in Minkowski space can be written as:
        F^{yz} \; \ey \wedge \ez \\
        F^{zx} \; \ez \wedge \ex \\
    \}
-   \end{align}
 
+The sharp symbol :math:`\sharp` indicates that the components are doubly
+contravariant tensor components. Reordering to a row/column matrix
+representation and using the antisimmetric property of the wedge product, we
+obtain:
 
 .. math::
 
    \begin{align}
-   B
+   B^{\sharp\sharp}
    &= \frac{1}{2} \{
                                   & + F^{tx} \; \et \wedge \ex & + F^{ty} \; \et \wedge \ey & + F^{tz} \; \et \wedge \ez \\ 
        - F^{tx} \; \ex \wedge \et &                            & + F^{xy} \; \ex \wedge \ey & - F^{zx} \; \ex \wedge \ez \\
@@ -182,8 +193,368 @@ Hence a general bivector in Minkowski space can be written as:
    \}
    \end{align}
 
+.. }}}
+
+Metric signature
+----------------
+
+.. {{{
+
+We choose the metric signature :math:`(+, -, -, -)`. The only non-zero components
+are the diagonal components:
+
+.. math::
+
+   \begin{alignat*}{2}
+   \eta_{tt} &= \eta^{tt} &= +1 \\
+   \eta_{xx} &= \eta^{xx} &= -1 \\
+   \eta_{yy} &= \eta^{yy} &= -1 \\
+   \eta_{zz} &= \eta^{zz} &= -1 \\
+   \end{alignat*}
+
+.. math::
+
+   \eta^{\sharp\sharp} = 
+   \{
+       +1 \et \otimes \et \\
+       -1 \ex \otimes \ex \\
+       -1 \ey \otimes \ey \\
+       -1 \ez \otimes \ez \\
+   \}
+
+.. math::
+
+   \eta^{\flat\flat} = 
+   \{
+       +1 \eT \otimes \eT \\
+       -1 \eX \otimes \eX \\
+       -1 \eY \otimes \eY \\
+       -1 \eZ \otimes \eZ \\
+   \}
+
+For the basis vectors, this means:
+    
+.. math::
+
+   \mathbf{e}_\mu \wedge \mathbf{e}_\nu
+   = \frac{1}{2}
+   (\mathbf{e}_\mu \otimes \mathbf{e}_\nu - \mathbf{e}_\nu \otimes \mathbf{e}_\mu)
+
+Per definition, the mixed tensor of the wedge product is obtained by
+contracting with the metric tensor. The contraction hook symbol
+:math:`\lrcorner` does not specify the wedge product slot where the contraction
+occurs and this must be explicitely indicated.
+
+The contraction with the first slot:
+
+.. math::
+
+   \mathbf{e}_\mu \wedge \mathbf{e}^\nu = 
+   \mathbf{e}_\mu \wedge \mathbf{e}_\nu \lrcorner \eta^{\flat\flat}
+
+The contraction with the second slot:
+
+.. math::
+
+   \mathbf{e}^\mu \wedge \mathbf{e}_\nu = 
+   \mathbf{e}_\mu \wedge \mathbf{e}_\nu \lrcorner \eta^{\flat\flat}
+
+.. rubric:: First contraction
+
+.. math::
+
+   \mathbf{e}^\mu \wedge \mathbf{e}_\nu = 
+   \mathbf{e}_\mu \wedge \mathbf{e}_\nu \lrcorner \eta^{\flat\flat}
+
+For all basis bivectors:
+
+.. math::
+
+   \begin{alignat*}{2}
+   \eT \wedge \ex &= \et \wedge \ex \lrcorner \eta^{\flat\flat} &= (\et \otimes \ex - \ex \otimes \et) &\lrcorner (\eT \otimes \eT - \eX \otimes \eX - \eY \otimes \eY - \eZ \otimes \eZ)\\
+   \eT \wedge \ey &= \et \wedge \ey \lrcorner \eta^{\flat\flat} &= (\et \otimes \ey - \ey \otimes \et) &\lrcorner (\eT \otimes \eT - \eX \otimes \eX - \eY \otimes \eY - \eZ \otimes \eZ)\\
+   \eT \wedge \ez &= \et \wedge \ez \lrcorner \eta^{\flat\flat} &= (\et \otimes \ez - \ez \otimes \et) &\lrcorner (\eT \otimes \eT - \eX \otimes \eX - \eY \otimes \eY - \eZ \otimes \eZ)\\
+   \eX \wedge \ey &= \ex \wedge \ey \lrcorner \eta^{\flat\flat} &= (\ex \otimes \ey - \ey \otimes \ex) &\lrcorner (\eT \otimes \eT - \eX \otimes \eX - \eY \otimes \eY - \eZ \otimes \eZ)\\
+   \eY \wedge \ez &= \ey \wedge \ez \lrcorner \eta^{\flat\flat} &= (\ey \otimes \ez - \ez \otimes \ey) &\lrcorner (\eT \otimes \eT - \eX \otimes \eX - \eY \otimes \eY - \eZ \otimes \eZ)\\
+   \eZ \wedge \ex &= \ez \wedge \ex \lrcorner \eta^{\flat\flat} &= (\ez \otimes \ex - \ex \otimes \ez) &\lrcorner (\eT \otimes \eT - \eX \otimes \eX - \eY \otimes \eY - \eZ \otimes \eZ)\\
+   \end{alignat*}
+
+Expanding and simplifying, this results in the following explicit expression of
+the mixed wedge products:
+
+.. math::
+
+   \begin{alignat*}{2}
+   \eT \wedge \ex &= (+\eT \otimes \ex + \eX \otimes \et) \\
+   \eT \wedge \ey &= (+\eT \otimes \ey + \eY \otimes \et) \\
+   \eT \wedge \ez &= (+\eT \otimes \ez + \eZ \otimes \et) \\
+   \eX \wedge \ey &= (-\eX \otimes \ey + \ey \otimes \ex) \\
+   \eY \wedge \ez &= (-\eY \otimes \ez + \ez \otimes \ey) \\
+   \eZ \wedge \ex &= (-\eZ \otimes \ex + \ex \otimes \ez) \\
+   \end{alignat*}
+
+From the explicit calculation of the basis elements, we observe the following
+properties:
+
+====================== ============
+Basis element          Symmetry
+====================== ============
+:math:`\eT \wedge \ex` Symetric
+:math:`\eT \wedge \ey` Symetric
+:math:`\eT \wedge \ez` Symetric
+:math:`\eX \wedge \ey` Antisymetric
+:math:`\eY \wedge \ez` Antisymetric
+:math:`\eZ \wedge \ex` Antisymetric
+====================== ============
+
+.. rubric:: Second contraction
+
+.. math::
+
+   \mathbf{e}_\mu \wedge \mathbf{e}^\nu = 
+   \mathbf{e}_\mu \wedge \mathbf{e}_\nu \lrcorner \eta^{\flat\flat}
+
+For all basis bivectors:
+
+.. math::
+
+   \begin{alignat*}{2}
+   \et \wedge \eX &= \et \wedge \ex \lrcorner \eta^{\flat\flat} &= (\et \otimes \ex - \ex \otimes \et) &\lrcorner (\eT \otimes \eT - \eX \otimes \eX - \eY \otimes \eY - \eZ \otimes \eZ) \\
+   \et \wedge \eY &= \et \wedge \ey \lrcorner \eta^{\flat\flat} &= (\et \otimes \ey - \ey \otimes \et) &\lrcorner (\eT \otimes \eT - \eX \otimes \eX - \eY \otimes \eY - \eZ \otimes \eZ) \\
+   \et \wedge \eZ &= \et \wedge \ez \lrcorner \eta^{\flat\flat} &= (\et \otimes \ez - \ez \otimes \et) &\lrcorner (\eT \otimes \eT - \eX \otimes \eX - \eY \otimes \eY - \eZ \otimes \eZ) \\
+   \ex \wedge \eY &= \ex \wedge \ey \lrcorner \eta^{\flat\flat} &= (\ex \otimes \ey - \ey \otimes \ex) &\lrcorner (\eT \otimes \eT - \eX \otimes \eX - \eY \otimes \eY - \eZ \otimes \eZ) \\
+   \ey \wedge \eZ &= \ey \wedge \ez \lrcorner \eta^{\flat\flat} &= (\ey \otimes \ez - \ez \otimes \ey) &\lrcorner (\eT \otimes \eT - \eX \otimes \eX - \eY \otimes \eY - \eZ \otimes \eZ) \\
+   \ez \wedge \eX &= \ez \wedge \ex \lrcorner \eta^{\flat\flat} &= (\ez \otimes \ex - \ex \otimes \ez) &\lrcorner (\eT \otimes \eT - \eX \otimes \eX - \eY \otimes \eY - \eZ \otimes \eZ) \\
+   \end{alignat*}
+
+Expanding and simplifying, this results in the following explicit expression of
+the mixed wedge products:
+
+.. math::
+
+   \begin{alignat*}{2}
+   \et \wedge \eX &= (-\et \otimes \eX - \ex \otimes \eT) \\
+   \et \wedge \eY &= (-\et \otimes \eY - \ey \otimes \eT) \\
+   \et \wedge \eZ &= (-\et \otimes \eZ - \ez \otimes \eT) \\
+   \ex \wedge \eY &= (-\ex \otimes \eY + \ey \otimes \eX) \\
+   \ey \wedge \eZ &= (-\ey \otimes \eZ + \ez \otimes \eY) \\
+   \ez \wedge \eX &= (-\ez \otimes \eX + \ex \otimes \eZ) \\
+   \end{alignat*}
+
+From the explicit calculation of the basis elements, we observe the following
+properties:
+
+====================== ============
+Basis element          Symmetry
+====================== ============
+:math:`\et \wedge \eX` Symetric
+:math:`\et \wedge \eY` Symetric
+:math:`\et \wedge \eZ` Symetric
+:math:`\ex \wedge \eY` Antisymetric
+:math:`\ey \wedge \eZ` Antisymetric
+:math:`\ez \wedge \eX` Antisymetric
+====================== ============
+
+.. }}}
+
+Raising the Indices Version 1
+-----------------------------
+
+.. {{{
+
+The mixed tensor is obtained by contracting the second slot of the wedge
+product with the Minkowski metric:
+
+.. math::
+
+   B^{\sharp\flat} = B^{\sharp\sharp} \lrcorner \eta_{\flat\flat}
+   = \{
+       F^{tx} \; \et \wedge \ex \\
+       F^{ty} \; \et \wedge \ey \\
+       F^{tz} \; \et \wedge \ez \\
+       F^{xy} \; \ex \wedge \ey \\
+       F^{yz} \; \ey \wedge \ez \\
+       F^{zx} \; \ez \wedge \ex \\
+   \}
+   \lrcorner
+   \eta^{\sharp\sharp}
+   = \{
+       F^{tx} \; \et \wedge \eX \\
+       F^{ty} \; \et \wedge \eY \\
+       F^{tz} \; \et \wedge \eZ \\
+       F^{xy} \; \ex \wedge \eY \\
+       F^{yz} \; \ey \wedge \eZ \\
+       F^{zx} \; \ez \wedge \eX \\
+   \}
+
+Taking into account the symetric property of :math:`\et \wedge \eX`, :math:`\et
+\wedge \eY`, and :math:`\et \wedge \eZ`, as well the antisymetric property of
+:math:`\ex \wedge \eY`, :math:`\ey \wedge \eZ`, and :math:`\ez \wedge \eX`
+demonstrated in the last paragraph, this results in:
+
+.. math::
+
+   \begin{align}
+   B^{\sharp\flat}
+   &= \frac{1}{2} \{
+                                 & + F^t{}^x \; \et \wedge \eX & + F^t{}^y \; \et \wedge \eY & + F^t{}^z \; \et \wedge \eZ \\ 
+     + F^t{}^x \; \ex \wedge \eT &                             & + F^x{}^y \; \ex \wedge \eY & - F^z{}^x \; \ex \wedge \eZ \\
+     + F^t{}^y \; \ey \wedge \eT & - F^x{}^y \; \ey \wedge \eX &                             & + F^y{}^z \; \ey \wedge \eZ \\
+     + F^t{}^z \; \ez \wedge \eT & + F^z{}^x \; \ez \wedge \eX & - F^y{}^z \; \ez \wedge \eY &                             \\
+   \}
+   \end{align}
+
+.. }}}
+
+Raising the indices Version 2
+-----------------------------
+
+.. {{{
+
+We can and raise the indices by applying the Minkowski metric to each
+components. This calculation can be performed in abstract index notation using
+Einstein's summation convention. The following symmetries greatly simplify the
+calculations:
+
+* All off-diagonal terms of the minkowski metric are zero
+* All diagonal terms of the rotation tensor are zero
+* The doubly contravariant rotation tensor is antisymmetric: :math:`F^{\mu\nu}
+  = -F^{\nu\mu}`
+
+With :math:`F^{tt}=0`, as well as :math:`\eta^{tx}=0`,
+:math:`\eta^{ty}=0`:math:`\eta^{tz}=0`, we expand and obtain:
+
+.. math::
+
+   \begin{alignat*}{3}
+   F^t{}_x &= F^{t\gamma} \eta_{\gamma x} &= F^{tx} \eta_{xx} &= -F^{tx} \\
+   F^t{}_y &= F^{t\gamma} \eta_{\gamma y} &= F^{ty} \eta_{yy} &= -F^{ty} \\
+   F^t{}_z &= F^{t\gamma} \eta_{\gamma z} &= F^{tz} \eta_{zz} &= -F^{tz} \\
+   \end{alignat*}
+
+With :math:`F^{xx}=F^{yy}=F^{zz}=0`, :math:`F^{\mu\nu}=-F^{\nu\mu}`, as well as
+:math:`\eta^{tx}=0`, :math:`\eta^{ty}=0`:math:`\eta^{tz}=0`, we expand and
+obtain:
+
+.. math::
+
+   \begin{alignat*}{3}
+   F^x{}_t &= F^{x\gamma} \eta_{\gamma t} &= F^{xt} \eta_{xx} &= -F^{tx} \eta_{xx}&= F^{tx} \\
+   F^y{}_t &= F^{y\gamma} \eta_{\gamma t} &= F^{yt} \eta_{yy} &= -F^{ty} \eta_{yy}&= F^{ty} \\
+   F^z{}_t &= F^{z\gamma} \eta_{\gamma t} &= F^{zt} \eta_{zz} &= -F^{tz} \eta_{zz}&= F^{tz} \\
+   \end{alignat*}
+
+In the same manner and without expanding the sum, we get:
+
+.. math::
+
+   \begin{alignat}{2}
+   F^x{}_y &= F^{x\gamma} \eta_{\gamma y} &= F^{tx} \\
+   F^y{}_z &= F^{y\gamma} \eta_{\gamma z} &= F^{ty} \\
+   F^z{}_x &= F^{z\gamma} \eta_{\gamma x} &= F^{tz} \\
+   \end{alignat}
+
+We have a mixed tensor of Rank two with the form:
+
+.. math::
+
+   \begin{align}
+   B^{\sharp\flat}
+   &= \frac{1}{2} \{
+       F^t{}_t \; \et \wedge \eT & F^t{}_x \; \et \wedge \eX & F^t{}_y \; \et \wedge \eY & F^t{}_z \; \et \wedge \eZ \\ 
+       F^x{}_t \; \ex \wedge \eT & F^x{}_x \; \ex \wedge \eX & F^x{}_y \; \ex \wedge \eY & F^x{}_z \; \ex \wedge \eZ \\
+       F^y{}_t \; \ey \wedge \eT & F^y{}_x \; \ey \wedge \eX & F^y{}_y \; \ey \wedge \eY & F^y{}_z \; \ey \wedge \eZ \\
+       F^z{}_t \; \ez \wedge \eT & F^z{}_x \; \ez \wedge \eX & F^z{}_y \; \ez \wedge \eY & F^z{}_z \; \ez \wedge \eZ \\
+   \}
+   \end{align}
+
+All diagonal components are zero since:
+
+.. math::
+
+   \mathbf{e}_\mu \wedge \mathbf{e}^\mu
+   = \frac{1}{2}
+   (\mathbf{e}_\mu \otimes \mathbf{e}^\mu - \mathbf{e}_\mu \otimes \mathbf{e}^\mu)
+   =0
+
+This result in:
+
+.. math::
+
+   \begin{align}
+   B^{\sharp\flat}
+   &= \frac{1}{2} \{
+                                 & F^t{}_x \; \et \wedge \eX & F^t{}_y \; \et \wedge \eY & F^t{}_z \; \et \wedge \eZ \\ 
+       F^x{}_t \; \ex \wedge \eT &                           & F^x{}_y \; \ex \wedge \eY & F^x{}_z \; \ex \wedge \eZ \\
+       F^y{}_t \; \ey \wedge \eT & F^y{}_x \; \ey \wedge \eX &                           & F^y{}_z \; \ey \wedge \eZ \\
+       F^z{}_t \; \ez \wedge \eT & F^z{}_x \; \ez \wedge \eX & F^z{}_y \; \ez \wedge \eY &                           \\
+   \}
+   \end{align}
+
+Further expanding all coefficients, we obtain:
+
+.. math::
+
+   \begin{align}
+   B^{\sharp\flat}
+   &= \frac{1}{2} \{
+                                                    & F^{t\gamma}\eta_{\gamma x} \; \et \wedge \eX & F^{t\gamma}\eta_{\gamma y} \; \et \wedge \eY & F^{t\gamma}\eta_{\gamma z} \; \et \wedge \eZ \\ 
+      F^{x\gamma} \eta_{\gamma t} \; \ex \wedge \eT &                                              & F^{x\gamma}\eta_{\gamma y} \; \ex \wedge \eY & F^{x\gamma}\eta_{\gamma z} \; \ex \wedge \eZ \\
+      F^{y\gamma} \eta_{\gamma t} \; \ey \wedge \eT & F^{y\gamma}\eta_{\gamma x} \; \ey \wedge \eX &                                              & F^{y\gamma}\eta_{\gamma z} \; \ey \wedge \eZ \\
+      F^{z\gamma} \eta_{\gamma t} \; \ez \wedge \eT & F^{z\gamma}\eta_{\gamma_x} \; \ez \wedge \eX & F^{z\gamma}\eta_{\gamma y} \; \ez \wedge \eY &                                              \\
+   \}
+   \end{align}
+
+Since only the diagonal elements of the metric tensor are non-zero:
+
+.. math::
+
+   \begin{align}
+   B^{\sharp\flat}
+   &= \frac{1}{2} \{
+                                         & F^{tx}\eta_{xx} \; \et \wedge \eX & F^{ty}\eta_{yy} \; \et \wedge \eY & F^{tz}\eta_{zz} \; \et \wedge \eZ \\ 
+      F^{xt} \eta_{tt} \; \ex \wedge \eT &                                   & F^{xy}\eta_{yy} \; \ex \wedge \eY & F^{xz}\eta_{zz} \; \ex \wedge \eZ \\
+      F^{yt} \eta_{tt} \; \ey \wedge \eT & F^{yx}\eta_{xx} \; \ey \wedge \eX &                                   & F^{yz}\eta_{zz} \; \ey \wedge \eZ \\
+      F^{zt} \eta_{tt} \; \ez \wedge \eT & F^{zx}\eta_{xx} \; \ez \wedge \eX & F^{zy}\eta_{yy} \; \ez \wedge \eY &                                   \\
+   \}
+   \end{align}
+
+This elements of the Minkowski metric are replaced by their numerical values:
+
+.. math::
+
+   \begin{align}
+   B^{\sharp\flat}
+   &= \frac{1}{2} \{
+                                 & - F^{tx} \; \et \wedge \eX & - F^{ty} \; \et \wedge \eY & - F^{tz} \; \et \wedge \eZ \\ 
+      + F^{xt} \; \ex \wedge \eT &                            & - F^{xy} \; \ex \wedge \eY & - F^{xz} \; \ex \wedge \eZ \\
+      + F^{yt} \; \ey \wedge \eT & - F^{yx} \; \ey \wedge \eX &                            & - F^{yz} \; \ey \wedge \eZ \\
+      + F^{zt} \; \ez \wedge \eT & - F^{zx} \; \ez \wedge \eX & - F^{zy} \; \ez \wedge \eY &                          \\
+   \}
+   \end{align}
+
+The antisymetric properties of the components of the double contravariant
+rotation tensors permit to simplify and conclude:
+
+.. math::
+
+   \begin{align}
+   B^{\sharp\flat}
+   &= \frac{1}{2} \{
+                                 & - F^{tx} \; \et \wedge \eX & - F^{ty} \; \et \wedge \eY & - F^{tz} \; \et \wedge \eZ \\ 
+      - F^{tx} \; \ex \wedge \eT &                            & - F^{xy} \; \ex \wedge \eY & + F^{zx} \; \ex \wedge \eZ \\
+      - F^{ty} \; \ey \wedge \eT & + F^{xy} \; \ey \wedge \eX &                            & - F^{yz} \; \ey \wedge \eZ \\
+      - F^{tz} \; \ez \wedge \eT & - F^{zx} \; \ez \wedge \eX & + F^{yz} \; \ez \wedge \eY &                          \\
+   \}
+   \end{align}
+
+
+.. }}}
+
 Rotation Hodge Dual
 -------------------
+
+.. {{{
 
 .. math::
 
