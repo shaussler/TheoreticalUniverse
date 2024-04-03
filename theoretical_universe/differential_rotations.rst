@@ -24,10 +24,10 @@ merge request to my `Github repository
 
 I assume the reader posses a strong grasp of vector calculus as well as working
 understanding of differential forms, the wedge product, and :ref:`the concept
-of the Hodge dual <differential_operators:The Hodge Dual>`. With respect to
-wording, note that I interchangeably use the words *oriented surface*,
-*bivector* and *pseudo-vectors* as they are :ref:`the same objects
-<differential_operators:The Hodge Dual>`, albeit named in different contexts.
+of the Hodge dual <hodge_dual:The Hodge Dual>`. With respect to wording, note
+that I interchangeably use the words *oriented surface*, *bivector* and
+*pseudo-vectors* as they are :ref:`the same objects <hodge_dual:The Hodge
+Dual>`, albeit named in different contexts.
 
 Formalism
 ---------
