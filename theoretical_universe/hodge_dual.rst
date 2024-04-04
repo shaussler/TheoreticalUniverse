@@ -14,7 +14,7 @@ dual by first limiting the discussion to three dimensions, making it more
 accessible.
 
 I assume the reader possesses a strong grasp of vector calculus and a working
-understanding of differential forms and the wedge product.
+understanding of *differential forms* and the *wedge product* :math:`\wedge`.
 
 Duality in three dimensions
 ---------------------------

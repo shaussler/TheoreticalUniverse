@@ -11,8 +11,8 @@ curl and the laplacian in three dimensions.
 
 I assume the reader possesses a strong grasp of vector calculus, a working
 understanding of differential forms and the wedge product, as well as of
-<hodge_dual:the Hodge dual star operator :math:`\star`>. To learn about
-differential forms, `see yet another great video serie by Michael Penn
+:ref:`the Hoddge dual <hodge_dual:The Hodge Dual>`. To learn about differential
+forms, `see yet another great video serie by Michael Penn
 <https://youtube.com/playlist?list=PL22w63XsKjqzQZtDZO_9s2HEMRJnaOTX7&si=4dDrAZ-oKa1rI7B8>`_.
 Implicitely assumed with the above requisites is a basic understanding of
 tensor calculus, and in particular the concept of vector and covector. Some
@@ -20,80 +20,10 @@ familiarity with the concepts of of either Grassman Algebra, Clifford Algebra
 (AKA Geometric Algebra), or Lie Algebra is not necessary but certainly welcome
 for a deeper understanding of the antisymmetries at hand.
 
-Formalism
----------
+.. admonition:: Formalism
+   :class: dropdown
 
-.. {{{
-
-I use matrix notation in a manner which is not fully conventional, but that I
-hope highlights symmetries and that the reader will find obvious. Everything in
-a matrix is expressed with its basis vectors and can be reordered at will. For
-example, a vector is often expressed with an implicit basis as:
-
-.. math::
-
-   v = \{ x \\ y \\ z\}
-
-I merely propose to write the basis explicitely in the matrix:
-
-.. math::
-
-   v = \{ x \mathbf{e}_x \\ y \mathbf{e}_y \\ z \mathbf{e}_x \}
-
-Which means that a :math:`+` sign can be added anywhere and the expression
-written in the standard form:
-
-.. math::
-
-   v = x \mathbf{e}_x + y \mathbf{e}_y + z \mathbf{e}_x 
-
-This is powerfull when using a pseudo-vector or pseudo-scalar basis, since the
-elements of the matrix can be re-ordered at will.
-
-.. math::
-
-   \{                                          & +a^{xy} \mathbf{e}_x \wedge \mathbf{e}_y & -a^{zx} \mathbf{e}_x \wedge \mathbf{e}_z \\
-      -a^{xy} \mathbf{e}_y \wedge \mathbf{e}_x &                                          & +a^{yz} \mathbf{e}_y \wedge \mathbf{e}_z \\
-      +a^{zx} \mathbf{e}_z \wedge \mathbf{e}_x & -a^{yz} \mathbf{e}_z \wedge \mathbf{e}_y &                                          \}
-   =
-   \{ + 2 a^{yz} \mathbf{e}_y \wedge \mathbf{e}_z \\
-      + 2 a^{zx} \mathbf{e}_z \wedge \mathbf{e}_x \\
-      + 2 a^{xy} \mathbf{e}_x \wedge \mathbf{e}_y \}
-
-The transpose can be taken if it permits to use the usual rules of matrix
-multiplication: 
-
-.. math::
-
-   \{                                          & -a^{xy} \mathbf{e}_y \wedge \mathbf{e}_x & +a^{zx} \mathbf{e}_z \wedge \mathbf{e}_x \\
-      +a^{xy} \mathbf{e}_x \wedge \mathbf{e}_y &                                          & -a^{yz} \mathbf{e}_z \wedge \mathbf{e}_y \\
-      -a^{zx} \mathbf{e}_x \wedge \mathbf{e}_z & +a^{yz} \mathbf{e}_y \wedge \mathbf{e}_z &                                          \}
-
-All above matrix representations can writen as a sum:
-
-.. math::
-
-   2 a^{yz} \mathbf{e}_y \wedge \mathbf{e}_z +
-   2 a^{zx} \mathbf{e}_z \wedge \mathbf{e}_x +
-   2 a^{xy} \mathbf{e}_x \wedge \mathbf{e}_y
-
-We could have written a covector in the same explicit manner. This notation is
-very conveniant when performing calculations in Cartan's framework as it
-permits to identify and organize terms for practical calculations by falling
-back to regular matrix multiplication.
-
-The vector field :math:`\mathbf{F}` is noted with the musical isomorphism
-:math:`\sharp` as :math:`F^\sharp`, which either declare :math:`F` is a vector,
-or transform a covector to a vector:
-
-.. math::
-
-   \mathbf{F}=F^\sharp=(F^\sharp)^\sharp=(F^\flat)^\sharp
-
-The component of :math:`F^\sharp` are noted with upper indices consistently
-with the rules of Ricci calculus and utilizing Einstein summation convention.
-
-.. }}}
+   .. include:: differential_matrices.rst
 
 Derivative
 ----------

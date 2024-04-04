@@ -5,10 +5,6 @@ Rotations in Cartan's Formalism
 
    by Stéphane Haussler
 
-.. warning::
-
-   Under construction
-
 In this article, I explicitely express rotations in Cartan's formalism and
 improve on the notation link with the practicality of calculations in Cartan's
 formalism to matrix multiplication. You will see (anti-)symmetries pop out of
@@ -26,37 +22,13 @@ I assume the reader posses a strong grasp of vector calculus as well as working
 understanding of differential forms, the wedge product, and :ref:`the concept
 of the Hodge dual <hodge_dual:The Hodge Dual>`. With respect to wording, note
 that I interchangeably use the words *oriented surface*, *bivector* and
-*pseudo-vectors* as they are :ref:`the same objects <hodge_dual:The Hodge
-Dual>`, albeit named in different contexts.
+*pseudo-vectors* as they are :ref:`the same objects <hodge_dual:Pseudo vectors
+and pseudo scalars>`, albeit named in different contexts.
 
-Formalism
----------
+.. admonition:: Notation
+   :class: dropdown
 
-.. {{{
-
-I use matrix notation in a manner which is not fully conventional, but that I
-hope highlights symmetries and that the reader will find obvious. Everything in
-a matrix is expressed with its basis vectors and can be reordered at will. For
-example, a vector is often expressed with an implicit basis as:
-
-.. math::
-
-   v = \{ x \\ y \\ z\}
-
-I merely propose to write the basis explicitely in the matrix:
-
-.. math::
-
-   v = \{ x \mathbf{e}_x \\ y \mathbf{e}_y \\ z \mathbf{e}_x \}
-
-Which means that a :math:`+` sign can be added anywhere and the expression
-written in the standard form:
-
-.. math::
-
-   v = x \mathbf{e}_x + y \mathbf{e}_y + z \mathbf{e}_x
-
-.. }}}
+   .. include:: differential_matrices.rst
 
 Rotations in three dimensions
 -----------------------------
@@ -79,9 +51,9 @@ Equivalently, we can write the bivectors in a single column:
 .. math::
 
    R =
-   \{ + R^{x} \mathbf{e}_y \wedge \mathbf{e}_z \\
-      + R^{y} \mathbf{e}_z \wedge \mathbf{e}_x \\
-      + R^{z} \mathbf{e}_x \wedge \mathbf{e}_y \\
+   \{ + R^{x} \ey \wedge \ez \\
+      + R^{y} \ez \wedge \ex \\
+      + R^{z} \ex \wedge \ey \\
    \}
    
 Or use a row/column matrix notation:
@@ -129,9 +101,9 @@ description of rotations as describe with the cross product :math:`\times`:
        R^{z} \ex \wedge \ey 
    )\\
    &=
-   R^{x} \star \ey \wedge \ez +
-   R^{y} \star \ez \wedge \ex +
-   R^{z} \star \ex \wedge \ey \\
+   R^{x} \star (\ey \wedge \ez) +
+   R^{y} \star (\ez \wedge \ex) +
+   R^{z} \star (\ex \wedge \ey) \\
    &=
    R^{x} \ex +
    R^{y} \ey +
@@ -185,11 +157,12 @@ obtain:
 
    \begin{align}
    B^{\sharp\sharp}
-   &= \frac{1}{2} \{
-                                  & + F^{tx} \; \et \wedge \ex & + F^{ty} \; \et \wedge \ey & + F^{tz} \; \et \wedge \ez \\ 
-       - F^{tx} \; \ex \wedge \et &                            & + F^{xy} \; \ex \wedge \ey & - F^{zx} \; \ex \wedge \ez \\
-       - F^{ty} \; \ey \wedge \et & - F^{xy} \; \ey \wedge \ex &                            & + F^{yz} \; \ey \wedge \ez \\
-       - F^{tz} \; \ez \wedge \et & + F^{zx} \; \ez \wedge \ex & - F^{yz} \; \ez \wedge \ey &                            \\
+   &= \frac{1}{2}
+   \{
+                             & + F^{tx} \; \et \wedge \ex & +F^{ty} \; \et \wedge \ey & +F^{tz} \; \et \wedge \ez \\ 
+   -F^{tx} \; \ex \wedge \et &                            & +F^{xy} \; \ex \wedge \ey & -F^{zx} \; \ex \wedge \ez \\
+   -F^{ty} \; \ey \wedge \et & - F^{xy} \; \ey \wedge \ex &                           & +F^{yz} \; \ey \wedge \ez \\
+   -F^{tz} \; \ez \wedge \et & + F^{zx} \; \ez \wedge \ex & -F^{yz} \; \ez \wedge \ey &                           \\
    \}
    \end{align}
 
@@ -275,12 +248,17 @@ For all basis bivectors:
 .. math::
 
    \begin{alignat*}{1}
-   (\et \wedge \ex)^{\flat\sharp} &=&& \eta_{t \gamma} \mathbf{e}^\gamma \wedge \ex &=&& \eta_{t t} \et \wedge \ex &=&& + \et \wedge \ex \\
-   (\et \wedge \ey)^{\flat\sharp} &=&& \eta_{t \gamma} \mathbf{e}^\gamma \wedge \ey &=&& \eta_{t t} \et \wedge \ey &=&& + \et \wedge \ey \\
-   (\et \wedge \ez)^{\flat\sharp} &=&& \eta_{t \gamma} \mathbf{e}^\gamma \wedge \ez &=&& \eta_{t t} \et \wedge \ez &=&& + \et \wedge \ez \\
-   (\ex \wedge \ey)^{\flat\sharp} &=&& \eta_{x \gamma} \mathbf{e}^\gamma \wedge \ey &=&& \eta_{x x} \ex \wedge \ey &=&& - \ex \wedge \ey \\
-   (\ey \wedge \ez)^{\flat\sharp} &=&& \eta_{y \gamma} \mathbf{e}^\gamma \wedge \ez &=&& \eta_{y y} \ey \wedge \ez &=&& - \ey \wedge \ez \\
-   (\ez \wedge \ex)^{\flat\sharp} &=&& \eta_{z \gamma} \mathbf{e}^\gamma \wedge \ex &=&& \eta_{z z} \ez \wedge \ex &=&& - \ez \wedge \ex \\
+   \newcommand{\eG}{\mathbf{e}^\gamma}
+   \newcommand{\g}{\gamma}
+   \newcommand{\w}{\wedge}
+   \newcommand{\fl}{\flat}
+   \newcommand{\sh}{\sharp}
+   (\et \w \ex)^{\fl\sh} &= \eta_{t \g} \eG \w \ex &= \eta_{t t} \et \w \ex &= + \et \w \ex \\
+   (\et \w \ey)^{\fl\sh} &= \eta_{t \g} \eG \w \ey &= \eta_{t t} \et \w \ey &= + \et \w \ey \\
+   (\et \w \ez)^{\fl\sh} &= \eta_{t \g} \eG \w \ez &= \eta_{t t} \et \w \ez &= + \et \w \ez \\
+   (\ex \w \ey)^{\fl\sh} &= \eta_{x \g} \eG \w \ey &= \eta_{x x} \ex \w \ey &= - \ex \w \ey \\
+   (\ey \w \ez)^{\fl\sh} &= \eta_{y \g} \eG \w \ez &= \eta_{y y} \ey \w \ez &= - \ey \w \ez \\
+   (\ez \w \ex)^{\fl\sh} &= \eta_{z \g} \eG \w \ex &= \eta_{z z} \ez \w \ex &= - \ez \w \ex \\
    \end{alignat*}
 
 Expanding and simplifying, this results in the following explicit expression of
@@ -289,23 +267,33 @@ the mixed wedge products:
 .. math::
 
    \begin{alignat*}{1}
-   (\et \wedge \ex)^{\flat\sharp} &= (\et \otimes \ex - \ex \otimes \et)^{\flat\sharp} &=& \eta_{t \gamma} \mathbf{e}^\gamma \otimes \ex - \eta_{x \gamma} \mathbf{e}^\gamma \otimes \et \\
-   (\et \wedge \ey)^{\flat\sharp} &= (\et \otimes \ey - \ey \otimes \et)^{\flat\sharp} &=& \eta_{t \gamma} \mathbf{e}^\gamma \otimes \ey - \eta_{y \gamma} \mathbf{e}^\gamma \otimes \et \\
-   (\et \wedge \ez)^{\flat\sharp} &= (\et \otimes \ez - \ez \otimes \et)^{\flat\sharp} &=& \eta_{t \gamma} \mathbf{e}^\gamma \otimes \ez - \eta_{z \gamma} \mathbf{e}^\gamma \otimes \et \\
-   (\ex \wedge \ey)^{\flat\sharp} &= (\ex \otimes \ey - \ey \otimes \ex)^{\flat\sharp} &=& \eta_{x \gamma} \mathbf{e}^\gamma \otimes \ey - \eta_{y \gamma} \mathbf{e}^\gamma \otimes \ex \\
-   (\ey \wedge \ez)^{\flat\sharp} &= (\ey \otimes \ez - \ez \otimes \ey)^{\flat\sharp} &=& \eta_{y \gamma} \mathbf{e}^\gamma \otimes \ez - \eta_{z \gamma} \mathbf{e}^\gamma \otimes \ey \\
-   (\ez \wedge \ex)^{\flat\sharp} &= (\ez \otimes \ex - \ex \otimes \ez)^{\flat\sharp} &=& \eta_{z \gamma} \mathbf{e}^\gamma \otimes \ex - \eta_{x \gamma} \mathbf{e}^\gamma \otimes \ez \\
+   \newcommand{\eG}{\mathbf{e}^\gamma}
+   \newcommand{\g}{\gamma}
+   \newcommand{\x}{\otimes}
+   \newcommand{\w}{\wedge}
+   \newcommand{\fl}{\flat}
+   \newcommand{\sh}{\sharp}
+   (\et \w \ex)^{\fl\sh} &= (\et \x \ex - \ex \x \et)^{\fl\sh} &=& \eta_{t \g} \eG \x \ex - \eta_{x \g} \eG \x \et \\
+   (\et \w \ey)^{\fl\sh} &= (\et \x \ey - \ey \x \et)^{\fl\sh} &=& \eta_{t \g} \eG \x \ey - \eta_{y \g} \eG \x \et \\
+   (\et \w \ez)^{\fl\sh} &= (\et \x \ez - \ez \x \et)^{\fl\sh} &=& \eta_{t \g} \eG \x \ez - \eta_{z \g} \eG \x \et \\
+   (\ex \w \ey)^{\fl\sh} &= (\ex \x \ey - \ey \x \ex)^{\fl\sh} &=& \eta_{x \g} \eG \x \ey - \eta_{y \g} \eG \x \ex \\
+   (\ey \w \ez)^{\fl\sh} &= (\ey \x \ez - \ez \x \ey)^{\fl\sh} &=& \eta_{y \g} \eG \x \ez - \eta_{z \g} \eG \x \ey \\
+   (\ez \w \ex)^{\fl\sh} &= (\ez \x \ex - \ex \x \ez)^{\fl\sh} &=& \eta_{z \g} \eG \x \ex - \eta_{x \g} \eG \x \ez \\
    \end{alignat*}
 
 .. math::
 
    \begin{alignat*}{1}
-   (\et \wedge \ex)^{\flat\sharp} &= \eta_{t t} \mathbf{e}^t \otimes \ex - \eta_{x x} \mathbf{e}^x \otimes \et &= + \mathbf{e}^t \otimes \ex + \mathbf{e}^x \otimes \et \\
-   (\et \wedge \ey)^{\flat\sharp} &= \eta_{t t} \mathbf{e}^t \otimes \ey - \eta_{y y} \mathbf{e}^y \otimes \et &= + \mathbf{e}^t \otimes \ey + \mathbf{e}^y \otimes \et \\
-   (\et \wedge \ez)^{\flat\sharp} &= \eta_{t t} \mathbf{e}^t \otimes \ez - \eta_{z z} \mathbf{e}^z \otimes \et &= + \mathbf{e}^t \otimes \ez + \mathbf{e}^z \otimes \et \\
-   (\ex \wedge \ey)^{\flat\sharp} &= \eta_{x x} \mathbf{e}^x \otimes \ey - \eta_{y y} \mathbf{e}^y \otimes \ex &= - \mathbf{e}^x \otimes \ey + \mathbf{e}^y \otimes \ex \\
-   (\ey \wedge \ez)^{\flat\sharp} &= \eta_{y y} \mathbf{e}^y \otimes \ez - \eta_{z z} \mathbf{e}^z \otimes \ey &= - \mathbf{e}^y \otimes \ez + \mathbf{e}^z \otimes \ey \\
-   (\ez \wedge \ex)^{\flat\sharp} &= \eta_{z z} \mathbf{e}^z \otimes \ex - \eta_{x x} \mathbf{e}^x \otimes \ez &= - \mathbf{e}^z \otimes \ex + \mathbf{e}^x \otimes \ez \\
+   \newcommand{\x}{\otimes}
+   \newcommand{\w}{\wedge}
+   \newcommand{\fl}{\flat}
+   \newcommand{\sh}{\sharp}
+   (\et \wedge \ex)^{\fl\sh} &= \eta_{t t} \eT \x \ex - \eta_{x x} \eX \x \et &= + \eT \x \ex + \eX \x \et \\
+   (\et \wedge \ey)^{\fl\sh} &= \eta_{t t} \eT \x \ey - \eta_{y y} \eY \x \et &= + \eT \x \ey + \eY \x \et \\
+   (\et \wedge \ez)^{\fl\sh} &= \eta_{t t} \eT \x \ez - \eta_{z z} \eZ \x \et &= + \eT \x \ez + \eZ \x \et \\
+   (\ex \wedge \ey)^{\fl\sh} &= \eta_{x x} \eX \x \ey - \eta_{y y} \eY \x \ex &= - \eX \x \ey + \eY \x \ex \\
+   (\ey \wedge \ez)^{\fl\sh} &= \eta_{y y} \eY \x \ez - \eta_{z z} \eZ \x \ey &= - \eY \x \ez + \eZ \x \ey \\
+   (\ez \wedge \ex)^{\fl\sh} &= \eta_{z z} \eZ \x \ex - \eta_{x x} \eX \x \ez &= - \eZ \x \ex + \eX \x \ez \\
    \end{alignat*}
 
 .. math::
