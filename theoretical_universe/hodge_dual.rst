@@ -95,6 +95,9 @@ As well as:
 Where :math:`\mathbf{1}` is the unit number. In other words any number can be
 expressed as a linear combination of :math:`1`.
 
+Pseudo vectors and pseudo scalars
+---------------------------------
+
 For the vector basis the following objects are defined:
 
 * Scalars.
@@ -126,4 +129,30 @@ Duality in Minkowski space
 
    Under construction
 
+.. math::
+
+   \begin{alignat*}{2}
+   \star (\mathbf{e}_t \wedge \mathbf{e}_x) &= - &\mathbf{e}_y \wedge \mathbf{e}_z \\
+   \star (\mathbf{e}_t \wedge \mathbf{e}_y) &= - &\mathbf{e}_z \wedge \mathbf{e}_x \\
+   \star (\mathbf{e}_t \wedge \mathbf{e}_z) &= - &\mathbf{e}_x \wedge \mathbf{e}_y \\
+   \star (\mathbf{e}_x \wedge \mathbf{e}_y) &=   &\mathbf{e}_t \wedge \mathbf{e}_z \\
+   \star (\mathbf{e}_y \wedge \mathbf{e}_z) &=   &\mathbf{e}_t \wedge \mathbf{e}_x \\
+   \star (\mathbf{e}_z \wedge \mathbf{e}_x) &=   &\mathbf{e}_t \wedge \mathbf{e}_y \\
+   \end{alignat*}
+
+.. math::
+
+   \star dt = - dx \wedge dy \wedge dz \\
+   \star dx = - dt \wedge dy \wedge dz \\
+   \star dy = - dt \wedge dz \wedge dx \\
+   \star dz = - dt \wedge dx \wedge dy
+
+.. math::
+
+   \star (dt \wedge dx) = - dy \wedge dz \\
+   \star (dt \wedge dy) = - dz \wedge dx \\
+   \star (dt \wedge dz) = - dx \wedge dy \\
+   \star (dx \wedge dy) =   dt \wedge dz \\
+   \star (dz \wedge dx) =   dt \wedge dy \\
+   \star (dy \wedge dz) =   dt \wedge dx
 

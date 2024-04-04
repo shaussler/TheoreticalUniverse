@@ -623,20 +623,3 @@ rotation tensors permit to simplify and conclude:
 
 .. }}}
 
-Hodge Dual
-----------
-
-.. {{{
-
-.. math::
-
-   \begin{alignat*}{2}
-   \star (\mathbf{e}_t \wedge \mathbf{e}_x) &= - &\mathbf{e}_y \wedge \mathbf{e}_z \\
-   \star (\mathbf{e}_t \wedge \mathbf{e}_y) &= - &\mathbf{e}_z \wedge \mathbf{e}_x \\
-   \star (\mathbf{e}_t \wedge \mathbf{e}_z) &= - &\mathbf{e}_x \wedge \mathbf{e}_y \\
-   \star (\mathbf{e}_x \wedge \mathbf{e}_y) &=   &\mathbf{e}_t \wedge \mathbf{e}_z \\
-   \star (\mathbf{e}_y \wedge \mathbf{e}_z) &=   &\mathbf{e}_t \wedge \mathbf{e}_x \\
-   \star (\mathbf{e}_z \wedge \mathbf{e}_x) &=   &\mathbf{e}_t \wedge \mathbf{e}_y \\
-   \end{alignat*}
-
-.. }}}
