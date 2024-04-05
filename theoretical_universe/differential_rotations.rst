@@ -6,68 +6,84 @@ Rotations in Cartan's Formalism
    by Stéphane Haussler
 
 In this article, I explicitely express rotations in Cartan's formalism and
-improve on the notation link with the practicality of calculations in Cartan's
-formalism to matrix multiplication. You will see (anti-)symmetries pop out of
-the Hodge star operator when ordering the differential forms into matrices.
+improve on the notation in order to ease practical calculations in Cartan's
+formalism. You will see (anti-)symmetries pop out of the Hodge star operator
+when ordering the differential forms into matrices.
 
-The matrix representation of differential forms described in this article might
-not be wildely known as I have not found the observations detailed here
-mentioned anywhere. If I am mistaken and you are aware of freely available
-resources, open an issue and I will include a reference. If you find mistakes,
-don't hesitate to open an issue or directly provide corrections by sending a
-merge request to my `Github repository
-<https://github.com/shaussler/TheoreticalUniverse/>`_.
+And then. While study rotations first in three dimensions and then in Minkowski
+space. Most amazingly. Most surprisingly. We will simply stumble upon the
+electromagnetic tensor out of the blue.
+
+The free matrix representation of differential forms described in this article
+might not be wildely known as I have not found my observations mentioned
+anywhere. As I will most likely be proven incorrect, feel free to open an issue
+and I will include a reference. If you find mistakes, don't hesitate to open an
+issue or directly provide corrections by sending a merge request to my `Github
+repository <https://github.com/shaussler/TheoreticalUniverse/>`_.
 
 I assume the reader posses a strong grasp of vector calculus as well as working
 understanding of differential forms, the wedge product, and :ref:`the concept
-of the Hodge dual <hodge_dual:The Hodge Dual>`. With respect to wording, note
-that I interchangeably use the words *oriented surface*, *bivector* and
+of the Hodge dual <hodge_dual:The Hodge Dual>`. With respect to wording, I
+interchangeably use the words *oriented surface*, *bivector* and
 *pseudo-vectors* as they are :ref:`the same objects <hodge_dual:Pseudo vectors
 and pseudo scalars>`, albeit named in different contexts.
 
-.. admonition:: Notation
+.. admonition:: Free matrix representation
    :class: dropdown
 
-   .. include:: differential_matrices.rst
+   .. include:: free_matrix_representation.rst
 
 Rotations in three dimensions
 -----------------------------
 
 .. {{{
 
-The notation is powerfull when using a pseudo-vector basis, since the elements
-of the matrix can be re-ordered at will. Concretely, a rotation :math:`R` in 3
-dimensions is a linear combination of the three associated basis bivectors:
+Using the free matrix representation is powerfull when using a pseudo-vector
+basis, since the elements of the matrix can be re-ordered at will. In three
+dimensions, rotations are possible on the three planes. Concretely, a rotation
+is a linear combination of the three associated basis bivectors:
 
 .. math::
 
-   R = 
-   R^{x} \ey \wedge \ez +
-   R^{y} \ez \wedge \ex +
-   R^{z} \ex \wedge \ey
+   \begin{equation}
+   \renewcommand{\∧}{\wedge}
+   R = R^x \ey \∧ \ez + R^y \ez \∧ \ex + R^z \ex \∧ \ey
+   \end{equation}
 
-Equivalently, we can write the bivectors in a single column:
+With free matrix representation, the bivector can be written as a single
+column:
 
 .. math::
 
+   \begin{equation}
+   \renewcommand{\{}{\begin{bmatrix}} \renewcommand{\}}{\end{bmatrix}}
+   \renewcommand{\∧}{\wedge}
    R =
-   \{ + R^{x} \ey \wedge \ez \\
-      + R^{y} \ez \wedge \ex \\
-      + R^{z} \ex \wedge \ey \\
+   \{
+     + R^x \ey \∧ \ez \\
+     + R^y \ez \∧ \ex \\
+     + R^z \ex \∧ \ey \\
    \}
+   \end{equation}
    
-Or use a row/column matrix notation:
+Or with a row/column matrix notation:
 
 .. math::
 
+   \begin{equation}
+   \renewcommand{\{}{\begin{bmatrix}} \renewcommand{\}}{\end{bmatrix}}
+   \renewcommand{\∧}{\wedge}
    R =
-   \{                       & +R^{z} \ex \wedge \ey &                       \\
-                            &                       & +R^{x} \ey \wedge \ez \\
-      +R^{y} \ez \wedge \ex &                       &                       \\
-   \} \\
+   \{
+                      & + R^z \ex \∧ \ey &                  \\
+                      &                  & + R^x \ey \∧ \ez \\
+     + R^y \ez \∧ \ex &                  &                  \\
+   \} 
+   \end{equation}
 
-We are free to split the terms by using the antisymmetric properties of the
-wedge product to obtain:
+Free to split the terms by using the antisymmetric property
+(:math:`\mathbf{e}_i \wedge \mathbf{e}_j = - \mathbf{e}_j \wedge \mathbf{e}_i`)
+of the wedge product to obtain:
 
 .. math::
 
@@ -78,19 +94,60 @@ wedge product to obtain:
       +R^{y} \ez \wedge \ex & -R^{x} \ez \wedge \ey &                       \\
    \}
 
-Or even free to invert rows and columns, thus taking the transpose, all while
-keeping an equal sign:
+Or invert rows and columns, thus taking the transpose, all while keeping an
+equal sign:
 
 .. math::
 
-   R =
+   R = \frac{1}{2}
    \{                       & -R^{z} \ey \wedge \ex & +R^{y} \ez \wedge \ex \\
       +R^{z} \ex \wedge \ey &                       & -R^{x} \ez \wedge \ey \\
       -R^{y} \ex \wedge \ez & +R^{x} \ey \wedge \ez &                       \\
    \}
 
-Through the use of the Hodge star :math:`\star`, we fall back to the
-description of rotations as describe with the cross product :math:`\times`:
+The 3D rotation group :math:`\mathfrak{so}(3)`
+----------------------------------------------
+
+Whether as a transpose or not, we identify the :math:`\mathfrak{so}(3)`
+matrices as well as get a first hint that we are about to identify the
+electromagnetic tensor. Choosing the implicit basis :math:`\mathbf{e}_i \wedge
+\mathbf{e}_j` in a row major representation, we obtain:
+
+.. math::
+
+   \begin{align}
+   R
+   &= \frac{1}{2}
+   \{
+           & -R^z & +R^y \\
+      +R^z &      & -R^x \\
+      -R^y & +R^x &      \\
+   \} \\
+   &=
+   R^x
+   \{
+       0 &  0 &  0 \\
+       0 &  0 & -1 \\
+       0 & +1 &  0 \\
+   \}
+   + R^y
+   \{
+       0 &  0 & +1 \\
+       0 &  0 &  0 \\
+      -1 &  0 &  0 \\
+   \}
+   + R^z
+   \{
+       0 & -1 &  0 \\
+      +1 &  0 &  0 \\
+       0 &  0 &  0 \\
+   \}
+   \end{align}
+
+Rotations in three dimensions have a dual. We can either express a rotation
+along the three planes, or we can express a rotation along the three directions
+of space. Indeed, through the use of the Hodge star :math:`\star`, we fall back
+to the description of rotations expressed as a cross product :math:`\times`:
 
 .. math::
 
@@ -501,9 +558,11 @@ With :math:`F^{tt}=0`, as well as :math:`\eta^{tx}=0`,
 .. math::
 
    \begin{alignat*}{3}
-   F^t{}_x &= F^{t\gamma} \eta_{\gamma x} &= F^{tx} \eta_{xx} &= -F^{tx} \\
-   F^t{}_y &= F^{t\gamma} \eta_{\gamma y} &= F^{ty} \eta_{yy} &= -F^{ty} \\
-   F^t{}_z &= F^{t\gamma} \eta_{\gamma z} &= F^{tz} \eta_{zz} &= -F^{tz} \\
+   \renewcommand{\γ}{\gamma}
+   \renewcommand{\η}{\eta}
+   F^t{}_x &= F^{t\γ} \η_{\γ x} &= F^{tx} \η_{xx} &= -F^{tx} \\
+   F^t{}_y &= F^{t\γ} \η_{\γ y} &= F^{ty} \η_{yy} &= -F^{ty} \\
+   F^t{}_z &= F^{t\γ} \η_{\γ z} &= F^{tz} \η_{zz} &= -F^{tz} \\
    \end{alignat*}
 
 With :math:`F^{xx}=F^{yy}=F^{zz}=0`, :math:`F^{\mu\nu}=-F^{\nu\mu}`, as well as
@@ -536,10 +595,10 @@ We have a mixed tensor of Rank two with the form:
    \newcommand{\w}{\wedge}
    B^{\sharp\flat}
    &= \frac{1}{2} \{
-       F^t{}_t \et \w \eT & F^t{}_x \et \w \eX & F^t{}_y \et \w \eY & F^t{}_z \et \w \eZ \\
-       F^x{}_t \ex \w \eT & F^x{}_x \ex \w \eX & F^x{}_y \ex \w \eY & F^x{}_z \ex \w \eZ \\
-       F^y{}_t \ey \w \eT & F^y{}_x \ey \w \eX & F^y{}_y \ey \w \eY & F^y{}_z \ey \w \eZ \\
-       F^z{}_t \ez \w \eT & F^z{}_x \ez \w \eX & F^z{}_y \ez \w \eY & F^z{}_z \ez \w \eZ \\
+     F^t{}_t \et \w \eT & F^t{}_x \et \w \eX & F^t{}_y \et \w \eY & F^t{}_z \et \w \eZ \\
+     F^x{}_t \ex \w \eT & F^x{}_x \ex \w \eX & F^x{}_y \ex \w \eY & F^x{}_z \ex \w \eZ \\
+     F^y{}_t \ey \w \eT & F^y{}_x \ey \w \eX & F^y{}_y \ey \w \eY & F^y{}_z \ey \w \eZ \\
+     F^z{}_t \ez \w \eT & F^z{}_x \ez \w \eX & F^z{}_y \ez \w \eY & F^z{}_z \ez \w \eZ \\
    \}
    \end{align}
 
@@ -561,10 +620,10 @@ This result in:
    B^{\sharp\flat}
    &= \frac{1}{2}
    \{
-                          & F^t{}_x \; \et \w \eX & F^t{}_y \et \w \eY & F^t{}_z \et \w \eZ \\
-       F^x{}_t \ex \w \eT &                       & F^x{}_y \ex \w \eY & F^x{}_z \ex \w \eZ \\
-       F^y{}_t \ey \w \eT & F^y{}_x \; \ey \w \eX &                    & F^y{}_z \ey \w \eZ \\
-       F^z{}_t \ez \w \eT & F^z{}_x \; \ez \w \eX & F^z{}_y \ez \w \eY &                    \\
+                          & F^t{}_x \et \w \eX & F^t{}_y \et \w \eY & F^t{}_z \et \w \eZ \\
+       F^x{}_t \ex \w \eT &                    & F^x{}_y \ex \w \eY & F^x{}_z \ex \w \eZ \\
+       F^y{}_t \ey \w \eT & F^y{}_x \ey \w \eX &                    & F^y{}_z \ey \w \eZ \\
+       F^z{}_t \ez \w \eT & F^z{}_x \ez \w \eX & F^z{}_y \ez \w \eY &                    \\
    \}
    \end{align}
 
@@ -573,15 +632,17 @@ Further expanding all coefficients, we obtain:
 .. math::
 
    \begin{align}
-   \newcommand{\g}{\gamma}
-   \newcommand{\w}{\wedge}
+   \newcommand{\{}{\begin{bmatrix}} \newcommand{\}}{\end{bmatrix}}
+   \newcommand{\γ}{\gamma} %u03b3
+   \newcommand{\∧}{\wedge} %u2227
+   \newcommand{\η}{\eta} %u03b
    B^{\sharp\flat}
    &= \frac{1}{2}
    \{
-                                      & F^{t\g}\eta_{\g x} \et \w \eX & F^{t \g} \eta_{\g y} \et \w \eY & F^{t \g}\eta_{\g z} \et \w \eZ \\
-       F^{x\g} \eta_{\g t} \ex \w \eT &                               & F^{x \g} \eta_{\g y} \ex \w \eY & F^{x \g}\eta_{\g z} \ex \w \eZ \\
-       F^{y\g} \eta_{\g t} \ey \w \eT & F^{y\g}\eta_{\g x} \ey \w \eX &                                 & F^{y \g}\eta_{\g z} \ey \w \eZ \\
-       F^{z\g} \eta_{\g t} \ez \w \eT & F^{z\g}\eta_{\g x} \ez \w \eX & F^{z \g} \eta_{\g y} \ez \w \eY &                                \\
+                                  & F^{t\γ} \η_{\γ x} \et \∧ \eX & F^{t \γ} \η_{\γ y} \et \∧ \eY & F^{t \γ} \η_{\γ z} \et \∧ \eZ \\
+     F^{x\g} \η_{\γ t} \ex \∧ \eT &                              & F^{x \γ} \η_{\γ y} \ex \∧ \eY & F^{x \γ} \η_{\γ z} \ex \∧ \eZ \\
+     F^{y\g} \η_{\γ t} \ey \∧ \eT & F^{y\γ} \η_{\γ x} \ey \∧ \eX &                               & F^{y \γ} \η_{\γ z} \ey \∧ \eZ \\
+     F^{z\g} \η_{\γ t} \ez \∧ \eT & F^{z\γ} \η_{\γ x} \ez \∧ \eX & F^{z \γ} \η_{\γ y} \ez \∧ \eY &                               \\
    \}
    \end{align}
 
@@ -590,12 +651,16 @@ Since only the diagonal elements of the metric tensor are non-zero:
 .. math::
 
    \begin{align}
+   \newcommand{\{}{\begin{bmatrix}} \newcommand{\}}{\end{bmatrix}}
+   \newcommand{\∧}{\wedge} %u2227
+   \newcommand{\η}{\eta} %u03b7
    B^{\sharp\flat}
-   &= \frac{1}{2} \{
-                                         & F^{tx}\eta_{xx} \; \et \wedge \eX & F^{ty}\eta_{yy} \; \et \wedge \eY & F^{tz}\eta_{zz} \; \et \wedge \eZ \\
-      F^{xt} \eta_{tt} \; \ex \wedge \eT &                                   & F^{xy}\eta_{yy} \; \ex \wedge \eY & F^{xz}\eta_{zz} \; \ex \wedge \eZ \\
-      F^{yt} \eta_{tt} \; \ey \wedge \eT & F^{yx}\eta_{xx} \; \ey \wedge \eX &                                   & F^{yz}\eta_{zz} \; \ey \wedge \eZ \\
-      F^{zt} \eta_{tt} \; \ez \wedge \eT & F^{zx}\eta_{xx} \; \ez \wedge \eX & F^{zy}\eta_{yy} \; \ez \wedge \eY &                                   \\
+   &= \frac{1}{2}
+   \{
+                               & F^{tx} \η_{xx} \et \∧ \eX & F^{ty} \η_{yy} \et \∧ \eY & F^{tz} \η_{zz} \et \∧ \eZ \\
+     F^{xt} \η_{tt} \ex \∧ \eT &                           & F^{xy} \η_{yy} \ex \∧ \eY & F^{xz} \η_{zz} \ex \∧ \eZ \\
+     F^{yt} \η_{tt} \ey \∧ \eT & F^{yx} \η_{xx} \ey \∧ \eX &                           & F^{yz} \η_{zz} \ey \∧ \eZ \\
+     F^{zt} \η_{tt} \ez \∧ \eT & F^{zx} \η_{xx} \ez \∧ \eX & F^{zy} \η_{yy} \ez \∧ \eY &                           \\
    \}
    \end{align}
 
@@ -604,12 +669,16 @@ This elements of the Minkowski metric are replaced by their numerical values:
 .. math::
 
    \begin{align}
+   \newcommand{\{}{\begin{bmatrix}} \newcommand{\}}{\end{bmatrix}}
+   \newcommand{\et}{\mathbf{e_t}} \newcommand{\ex}{\mathbf{e_x}}
+   \newcommand{\ey}{\mathbf{e_y}} \newcommand{\ez}{\mathbf{e_z}}
+   \newcommand{\∧}{\wedge} %u2227
    B^{\sharp\flat}
    &= \frac{1}{2} \{
-                                 & - F^{tx} \; \et \wedge \eX & - F^{ty} \; \et \wedge \eY & - F^{tz} \; \et \wedge \eZ \\
-      + F^{xt} \; \ex \wedge \eT &                            & - F^{xy} \; \ex \wedge \eY & - F^{xz} \; \ex \wedge \eZ \\
-      + F^{yt} \; \ey \wedge \eT & - F^{yx} \; \ey \wedge \eX &                            & - F^{yz} \; \ey \wedge \eZ \\
-      + F^{zt} \; \ez \wedge \eT & - F^{zx} \; \ez \wedge \eX & - F^{zy} \; \ez \wedge \eY &                            \\
+                         & - F^{tx} \et \∧ \eX & - F^{ty} \et \∧ \eY & - F^{tz} \et \∧ \eZ \\
+     + F^{xt} \ex \∧ \eT &                     & - F^{xy} \ex \∧ \eY & - F^{xz} \ex \∧ \eZ \\
+     + F^{yt} \ey \∧ \eT & - F^{yx} \ey \∧ \eX &                     & - F^{yz} \ey \∧ \eZ \\
+     + F^{zt} \ez \∧ \eT & - F^{zx} \ez \∧ \eX & - F^{zy} \ez \∧ \eY &                     \\
    \}
    \end{align}
 
@@ -619,12 +688,18 @@ rotation tensors permit to simplify and conclude:
 .. math::
 
    \begin{align}
+   \newcommand{\{}{\begin{bmatrix}} \newcommand{\}}{\end{bmatrix}}
+   \newcommand{\et}{\mathbf{e_t}} \newcommand{\ex}{\mathbf{e_x}}
+   \newcommand{\ey}{\mathbf{e_y}} \newcommand{\ez}{\mathbf{e_z}}
+   \newcommand{\eT}{\mathbf{e^t}} \newcommand{\eX}{\mathbf{e^x}}
+   \newcommand{\eY}{\mathbf{e^y}} \newcommand{\eZ}{\mathbf{e^z}}
+   \newcommand{\∧}{\wedge} %u2227
    B^{\sharp\flat}
    &= \frac{1}{2} \{
-                                 & - F^{tx} \; \et \wedge \eX & - F^{ty} \; \et \wedge \eY & - F^{tz} \; \et \wedge \eZ \\
-      - F^{tx} \; \ex \wedge \eT &                            & - F^{xy} \; \ex \wedge \eY & + F^{zx} \; \ex \wedge \eZ \\
-      - F^{ty} \; \ey \wedge \eT & + F^{xy} \; \ey \wedge \eX &                            & - F^{yz} \; \ey \wedge \eZ \\
-      - F^{tz} \; \ez \wedge \eT & - F^{zx} \; \ez \wedge \eX & + F^{yz} \; \ez \wedge \eY &                            \\
+                          & - F^{tx} \; \et \∧ \eX & - F^{ty} \et \∧ \eY & - F^{tz} \et \∧w \eZ \\
+      - F^{tx} \ex \∧ \eT &                        & - F^{xy} \ex \∧ \eY & + F^{zx} \ex \∧w \eZ \\
+      - F^{ty} \ey \∧ \eT & + F^{xy} \; \ey \∧ \eX &                     & - F^{yz} \ey \∧w \eZ \\
+      - F^{tz} \ez \∧ \eT & - F^{zx} \; \ez \∧ \eX & + F^{yz} \ez \∧ \eY &                      \\
    \}
    \end{align}
 

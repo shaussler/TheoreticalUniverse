@@ -9,7 +9,7 @@ This is a personal compilation of papers focusing on mathematical physics.
 
    faraday_tensor_derivation.rst
    hodge_dual.rst
-   differential_matrices.rst
+   differential_formalism.rst
    differential_operators.rst
    differential_rotations.rst
    all_faraday_tensors.rst

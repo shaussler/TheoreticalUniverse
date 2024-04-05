@@ -1,19 +1,3 @@
-Musical Isomorphism, Free Matrix Representation of Differential Forms
-=====================================================================
-
-.. rubric:: Musical operators
-
-The vector field :math:`\mathbf{F}` is noted with the musical isomorphism
-:math:`\sharp` as :math:`F^\sharp`, which either declare :math:`F` is a vector,
-or transform a covector to a vector. The flat operator :math:`\flat` brings a
-vector to a covector.
-
-.. math::
-
-   \mathbf{F}=F^\sharp=(F^\sharp)^\sharp=(F^\flat)^\sharp = v^i \mathbf{e}_i
-
-.. rubric:: Free matrix representation
-
 I use matrix notation in a manner which is not fully conventional, but that I
 hope highlights symmetries and that the reader will find obvious. Everything in
 a matrix is expressed with its basis vectors and can be reordered at will. For

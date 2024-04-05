@@ -20,10 +20,15 @@ familiarity with the concepts of of either Grassman Algebra, Clifford Algebra
 (AKA Geometric Algebra), or Lie Algebra is not necessary but certainly welcome
 for a deeper understanding of the antisymmetries at hand.
 
-.. admonition:: Formalism
+.. admonition:: Musical isomorphisms
    :class: dropdown
 
-   .. include:: differential_matrices.rst
+   .. include:: musical_isomorphisms.rst
+
+.. admonition:: Free matrix representation
+   :class: dropdown
+
+   .. include:: free_matrix_representation.rst
 
 Derivative
 ----------
@@ -51,7 +56,7 @@ The differentials are our basis covectors:
 
 .. }}}
 
-Gradiant
+Gradient
 --------
 
 .. {{{
@@ -65,9 +70,11 @@ Gradiant
 .. math::
 
    \begin{align}
-   df^{\sharp} & = ( \partial_x f dx + \partial_y f dy + \partial_z f dz )^{\sharp} \\
-               & = \partial_x f (dx)^{\sharp} + \partial_y f (dy)^{\sharp} + \partial_z f (dz)^{\sharp} \\
-               & = \partial_x f \partial_x + \partial_y f \partial_y + \partial_z f \partial_z \\
+   \newcommand{\∂}{\partial}
+   \newcommand{\♯}{\sharp}
+   df^{\♯} & = ( \∂_x f dx + \∂_y f dy + \∂_z f dz )^\♯ \\
+           & = \∂_x f (dx)^\♯ + \∂_y f (dy)^\♯ + \∂_z f (dz)^\♯ \\
+           & = \∂_x f \∂_x + \∂_y f \∂_y + \∂_z f \∂_z \\
    \end{align}
 
 .. }}}
