@@ -462,7 +462,7 @@ Basis element          Symmetry     Expression
 
 .. }}}
 
-Raising the Indices Version 1
+Raising the indices Version 1
 -----------------------------
 
 .. {{{
@@ -472,49 +472,90 @@ tensor is obtained by applying the flatternig operator :math:`\flat`:
 
 .. math::
 
-   \begin{align*}
+   \begin{equation}
    B^{\sharp\flat}
-   &= \{
-       F^{tx} \; \et \wedge \ex \\
-       F^{ty} \; \et \wedge \ey \\
-       F^{tz} \; \et \wedge \ez \\
-       F^{xy} \; \ex \wedge \ey \\
-       F^{yz} \; \ey \wedge \ez \\
-       F^{zx} \; \ez \wedge \ex \\
+   =
+   \{
+     F^{tx} \; \et \wedge \ex \\
+     F^{ty} \; \et \wedge \ey \\
+     F^{tz} \; \et \wedge \ez \\
+     F^{xy} \; \ex \wedge \ey \\
+     F^{yz} \; \ey \wedge \ez \\
+     F^{zx} \; \ez \wedge \ex \\
    \}^{\sharp\flat}
-   = \{
-       F^{tx} \; (\et \wedge \eX)^{\sharp\flat} \\
-       F^{ty} \; (\et \wedge \eY)^{\sharp\flat} \\
-       F^{tz} \; (\et \wedge \eZ)^{\sharp\flat} \\
-       F^{xy} \; (\ex \wedge \eY)^{\sharp\flat} \\
-       F^{yz} \; (\ey \wedge \eZ)^{\sharp\flat} \\
-       F^{zx} \; (\ez \wedge \eX)^{\sharp\flat} \\
+   =
+   \{
+     - F^{tx} \; \et \wedge \eX \\
+     - F^{ty} \; \et \wedge \eY \\
+     - F^{tz} \; \et \wedge \eZ \\
+     - F^{xy} \; \ex \wedge \eY \\
+     - F^{yz} \; \ey \wedge \eZ \\
+     - F^{zx} \; \ez \wedge \eX \\
    \}
-   = \{
-       F^{tx} \; \eta_{x \gamma} \et \wedge \mathbf{e}^\gamma \\
-       F^{ty} \; \eta_{y \gamma} \et \wedge \mathbf{e}^\gamma \\
-       F^{tz} \; \eta_{z \gamma} \et \wedge \mathbf{e}^\gamma \\
-       F^{xy} \; \eta_{y \gamma} \ex \wedge \mathbf{e}^\gamma \\
-       F^{yz} \; \eta_{z \gamma} \ey \wedge \mathbf{e}^\gamma \\
-       F^{zx} \; \eta_{x \gamma} \ez \wedge \mathbf{e}^\gamma \\
-   \} \\
-   &= \{
-       F^{tx} \; \eta_{x x} \et \wedge \eX \\
-       F^{ty} \; \eta_{y y} \et \wedge \eY \\
-       F^{tz} \; \eta_{z z} \et \wedge \eZ \\
-       F^{xy} \; \eta_{y y} \ex \wedge \eY \\
-       F^{yz} \; \eta_{z z} \ey \wedge \eZ \\
-       F^{zx} \; \eta_{x x} \ez \wedge \eX \\
-   \}
-   = \{
-       - F^{tx} \; \et \wedge \eX \\
-       - F^{ty} \; \et \wedge \eY \\
-       - F^{tz} \; \et \wedge \eZ \\
-       - F^{xy} \; \ex \wedge \eY \\
-       - F^{yz} \; \ey \wedge \eZ \\
-       - F^{zx} \; \ez \wedge \eX \\
-   \}
-   \end{align*}
+   \end{equation}
+
+.. admonition:: Every calculation step
+   :class: dropdown
+
+   .. math::
+   
+      \begin{align*}
+      B^{\sharp\flat}
+      &=
+      \{
+        F^{tx} \; \et \wedge \ex \\
+        F^{ty} \; \et \wedge \ey \\
+        F^{tz} \; \et \wedge \ez \\
+        F^{xy} \; \ex \wedge \ey \\
+        F^{yz} \; \ey \wedge \ez \\
+        F^{zx} \; \ez \wedge \ex \\
+      \}^{\sharp\flat}
+      =
+      \{
+        F^{tx} \; (\et \wedge \ex)^{\sharp\flat} \\
+        F^{ty} \; (\et \wedge \ey)^{\sharp\flat} \\
+        F^{tz} \; (\et \wedge \ez)^{\sharp\flat} \\
+        F^{xy} \; (\ex \wedge \ey)^{\sharp\flat} \\
+        F^{yz} \; (\ey \wedge \ez)^{\sharp\flat} \\
+        F^{zx} \; (\ez \wedge \ex)^{\sharp\flat} \\
+      \}
+      =
+      \{
+        F^{tx} \; \et \wedge \eta_{x \gamma}\mathbf{e}^\gamma \\
+        F^{ty} \; \et \wedge \eta_{y \gamma}\mathbf{e}^\gamma \\
+        F^{tz} \; \et \wedge \eta_{z \gamma}\mathbf{e}^\gamma \\
+        F^{xy} \; \ex \wedge \eta_{y \gamma}\mathbf{e}^\gamma \\
+        F^{yz} \; \ey \wedge \eta_{z \gamma}\mathbf{e}^\gamma \\
+        F^{zx} \; \ez \wedge \eta_{x \gamma}\mathbf{e}^\gamma \\
+      \} \\
+      &=
+      \{
+        F^{tx} \; \eta_{x \gamma} \et \wedge \mathbf{e}^\gamma \\
+        F^{ty} \; \eta_{y \gamma} \et \wedge \mathbf{e}^\gamma \\
+        F^{tz} \; \eta_{z \gamma} \et \wedge \mathbf{e}^\gamma \\
+        F^{xy} \; \eta_{y \gamma} \ex \wedge \mathbf{e}^\gamma \\
+        F^{yz} \; \eta_{z \gamma} \ey \wedge \mathbf{e}^\gamma \\
+        F^{zx} \; \eta_{x \gamma} \ez \wedge \mathbf{e}^\gamma \\
+      \}
+      =
+      \{
+        F^{tx} \; \eta_{x x} \et \wedge \eX \\
+        F^{ty} \; \eta_{y y} \et \wedge \eY \\
+        F^{tz} \; \eta_{z z} \et \wedge \eZ \\
+        F^{xy} \; \eta_{y y} \ex \wedge \eY \\
+        F^{yz} \; \eta_{z z} \ey \wedge \eZ \\
+        F^{zx} \; \eta_{x x} \ez \wedge \eX \\
+      \}
+      =
+      \{
+        - F^{tx} \; \et \wedge \eX \\
+        - F^{ty} \; \et \wedge \eY \\
+        - F^{tz} \; \et \wedge \eZ \\
+        - F^{xy} \; \ex \wedge \eY \\
+        - F^{yz} \; \ey \wedge \eZ \\
+        - F^{zx} \; \ez \wedge \eX \\
+      \}
+      \end{align*}
 
 Taking into account the symetric property of :math:`\et \wedge \eX`, :math:`\et
 \wedge \eY`, and :math:`\et \wedge \eZ`, as well the antisymetric property of
