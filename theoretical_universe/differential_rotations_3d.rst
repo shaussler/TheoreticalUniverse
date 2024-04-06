@@ -190,13 +190,13 @@ following explicit expression of the mixed wedge products in tensor form:
 From the ∂_xplicit calculation of the basis elements, we observe the following
 properties:
 
-====================== ============ =============================================================
-Basis element          Symmetry     Expression
-====================== ============ =============================================================
-:math:`\∂_x \wedge \eY` Antisymetric :math:`\mathbf{e}^x \otimes ∂_y - \mathbf{e}^y \otimes \∂_x`
-:math:`∂_y \wedge \eZ` Antisymetric :math:`\mathbf{e}^y \otimes ∂_z - \mathbf{e}^z \otimes ∂_y`
-:math:`∂_z \wedge \eX` Antisymetric :math:`\mathbf{e}^z \otimes \∂_x - \mathbf{e}^x \otimes ∂_z`
-====================== ============ =============================================================
+================== ============ ===============================
+Basis element      Symmetry     Expression
+================== ============ ===============================
+:math:`∂_x ∧ dx^y` Antisymetric :math:`dx^x ⊗ ∂_y - dx^y ⊗ ∂_x`
+:math:`∂_y ∧ dx^z` Antisymetric :math:`dx^y ⊗ ∂_z - dx^z ⊗ ∂_y`
+:math:`∂_z ∧ dx^x` Antisymetric :math:`dx^z ⊗ ∂_x - dx^x ⊗ ∂_z`
+================== ============ ===============================
 
 .. math::
 
