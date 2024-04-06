@@ -368,16 +368,15 @@ tensor is obtained by applying the flatternig operator :math:`\flat`:
       \end{bmatrix}
       \end{align*}
 
-Taking into account the symetric property of :math:`\et \wedge \eX`, :math:`\et
-\wedge \eY`, and :math:`\et \wedge \eZ`, as well the antisymetric property of
-:math:`\ex \wedge \eY`, :math:`\ey \wedge \eZ`, and :math:`\ez \wedge \eX`
+Taking into account the symetric property of :math:`∂_t ∧ dx^x`, :math:`∂_t
+∧ dx^y`, and :math:`∂_t ∧ dx^z`, as well the antisymetric property of
+:math:`∂_x ∧ dx^y`, :math:`∂_ey ∧ dx^z`, and :math:`∂_z ∧ dx^x`
 demonstrated above, this results in:
 
 .. math::
 
    \begin{align}
-   \newcommand{\w}{\wedge}
-   B^{\sharp\flat}
+   B^{♯♭}
    &= \frac{1}{2}
    \begin{bmatrix}
                          & - F^{tx} ∂_t ∧ dx^x & - F^{ty} ∂_t ∧ d^y & - F^{tz} ∂_t ∧ dx^z \\
