@@ -107,9 +107,9 @@ on covectors. In this section, we transform the :math:`R` to the mixed tensor.
    % ♯ u266F
    R^{\flat\sharp} =
    \{
-                       & - R^z dx^y ∧ ∂_x & + R^y dx^z \∧ ∂_x \\
-     + R^z dx^x \∧ ∂_y &                  & - R^x dx^z \∧ ∂_y \\
-     - R^y dx^x \∧ ∂_z & + R^x dx^y ∧ ∂_z &                  \\
+                      & - R^z dx^y ∧ ∂_x & + R^y dx^z ∧ ∂_x \\
+     + R^z dx^x ∧ ∂_y &                  & - R^x dx^z ∧ ∂_y \\
+     - R^y dx^x ∧ ∂_z & + R^x dx^y ∧ ∂_z &                  \\
    \}
    \end{equation}
 
