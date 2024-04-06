@@ -110,27 +110,37 @@ For the basis vectors, this means:
 
 .. math::
 
+   \begin{equation}
    ∂_μ ∧ ∂_ν = \frac{1}{2} (∂_μ ⊗ ∂_ν - ∂_ν ⊗ ∂_μ)
+   \end{equation}
 
 We can flatten a basis vector with the flat operator :math:`♭`
 
 .. math::
 
+   \begin{equation}
    (∂_μ)^♭ = η_{μν} dx^ν
+   \end{equation}
 
 And flatten the wedge product like so
 
 .. math::
 
+   \begin{equation}
    (∂_μ ∧ ∂_ν)^{♭♯} = η_{γμ} dx^γ ∧ ∂_ν
+   \end{equation}
 
 .. math::
 
+   \begin{equation}
    (∂_μ ∧ ∂_ν)^{♯♭} = η_{γν} ∂_μ ∧ dx^γ
+   \end{equation}
 
 .. math::
 
+   \begin{equation}
    (∂_μ ∧ ∂_ν)^{♭♭} = η_{δμ} η_{γν} dx^δ ∧ dx^γ
+   \end{equation}
 
 .. }}}
 
@@ -250,16 +260,16 @@ the mixed wedge products:
 From the explicit calculation of the basis elements, we observe the following
 properties:
 
-================== ============ =====================================================
+================== ============ =================================
 Basis element      Symmetry     Expression
-================== ============ =====================================================
-:math:`∂_t ∧ dx^x` Symetric     :math:`+ dx^t \otimes \ex + \mathbf{e}^x \otimes \et`
-:math:`∂_t ∧ dx^y` Symetric     :math:`+ dx^t \otimes \ey + \mathbf{e}^y \otimes \et`
-:math:`∂_t ∧ dx^z` Symetric     :math:`+ dx^t \otimes \ez + \mathbf{e}^z \otimes \et`
-:math:`∂_x ∧ dx^y` Antisymetric :math:`+ dx^x \otimes \ey - \mathbf{e}^y \otimes \ex`
-:math:`∂_y ∧ dx^z` Antisymetric :math:`+ dx^y \otimes \ez - \mathbf{e}^z \otimes \ey`
-:math:`∂_z ∧ dx^x` Antisymetric :math:`+ dx^z \otimes \ex - \mathbf{e}^x \otimes \ez`
-================== ============ =====================================================
+================== ============ =================================
+:math:`∂_t ∧ dx^x` Symetric     :math:`+ dx^t ⊗ ∂_x + dx^x ⊗ ∂_t`
+:math:`∂_t ∧ dx^y` Symetric     :math:`+ dx^t ⊗ ∂_y + dx^y ⊗ ∂_t`
+:math:`∂_t ∧ dx^z` Symetric     :math:`+ dx^t ⊗ ∂_z + dx^z ⊗ ∂_t`
+:math:`∂_x ∧ dx^y` Antisymetric :math:`+ dx^x ⊗ ∂_y - dx^y ⊗ ∂_x`
+:math:`∂_y ∧ dx^z` Antisymetric :math:`+ dx^y ⊗ ∂_z - dx^z ⊗ ∂_y`
+:math:`∂_z ∧ dx^x` Antisymetric :math:`+ dx^z ⊗ ∂_x - dx^x ⊗ ∂_z`
+================== ============ =================================
 
 .. }}}
 
@@ -274,25 +284,25 @@ tensor is obtained by applying the flatternig operator :math:`\flat`:
 .. math::
 
    \begin{equation}
-   B^{\sharp\flat}
+   B^{♯♭}
    =
-   \{
-     F^{tx} \; \et \wedge \ex \\
-     F^{ty} \; \et \wedge \ey \\
-     F^{tz} \; \et \wedge \ez \\
-     F^{xy} \; \ex \wedge \ey \\
-     F^{yz} \; \ey \wedge \ez \\
-     F^{zx} \; \ez \wedge \ex \\
-   \}^{\sharp\flat}
+   \begin{bmatrix}
+     F^{tx} \; ∂_t ∧ ∂_x \\
+     F^{ty} \; ∂_t ∧ ∂_y \\
+     F^{tz} \; ∂_t ∧ ∂_z \\
+     F^{xy} \; ∂_x ∧ ∂_y \\
+     F^{yz} \; ∂_y ∧ ∂_z \\
+     F^{zx} \; ∂_z ∧ ∂_x \\
+   \end{bmatrix}^{♯♭}
    =
-   \{
-     - F^{tx} \; \et \wedge \eX \\
-     - F^{ty} \; \et \wedge \eY \\
-     - F^{tz} \; \et \wedge \eZ \\
-     - F^{xy} \; \ex \wedge \eY \\
-     - F^{yz} \; \ey \wedge \eZ \\
-     - F^{zx} \; \ez \wedge \eX \\
-   \}
+   \begin{bmatrix}
+     - F^{tx} \; ∂_t ∧ dx^x \\
+     - F^{ty} \; ∂_t ∧ dx^y \\
+     - F^{tz} \; ∂_t ∧ dx^z \\
+     - F^{xy} \; ∂_x ∧ dx^y \\
+     - F^{yz} \; ∂_y ∧ dx^z \\
+     - F^{zx} \; ∂_z ∧ dx^x \\
+   \end{bmatrix}
    \end{equation}
 
 .. admonition:: Every calculation step
@@ -301,61 +311,61 @@ tensor is obtained by applying the flatternig operator :math:`\flat`:
    .. math::
    
       \begin{align*}
-      B^{\sharp\flat}
+      B^{♯♭}
       &=
-      \{
-        F^{tx} \; \et \wedge \ex \\
-        F^{ty} \; \et \wedge \ey \\
-        F^{tz} \; \et \wedge \ez \\
-        F^{xy} \; \ex \wedge \ey \\
-        F^{yz} \; \ey \wedge \ez \\
-        F^{zx} \; \ez \wedge \ex \\
-      \}^{\sharp\flat}
+      \begin{bmatrix}
+        F^{tx} \; ∂_t ∧ ∂_x \\
+        F^{ty} \; ∂_t ∧ ∂_y \\
+        F^{tz} \; ∂_t ∧ ∂_z \\
+        F^{xy} \; ∂_x ∧ ∂_y \\
+        F^{yz} \; ∂_y ∧ ∂_z \\
+        F^{zx} \; ∂_z ∧ ∂_x \\
+      \end{bmatrix}^{♯♭}
       =
-      \{
-        F^{tx} \; (\et \wedge \ex)^{\sharp\flat} \\
-        F^{ty} \; (\et \wedge \ey)^{\sharp\flat} \\
-        F^{tz} \; (\et \wedge \ez)^{\sharp\flat} \\
-        F^{xy} \; (\ex \wedge \ey)^{\sharp\flat} \\
-        F^{yz} \; (\ey \wedge \ez)^{\sharp\flat} \\
-        F^{zx} \; (\ez \wedge \ex)^{\sharp\flat} \\
-      \}
+      \begin{bmatrix}
+        F^{tx} \; (∂_t ∧ ∂_x)^{♯♭} \\
+        F^{ty} \; (∂_t ∧ ∂_y)^{♯♭} \\
+        F^{tz} \; (∂_t ∧ ∂_z)^{♯♭} \\
+        F^{xy} \; (∂_x ∧ ∂_y)^{♯♭} \\
+        F^{yz} \; (∂_y ∧ ∂_z)^{♯♭} \\
+        F^{zx} \; (∂_z ∧ ∂_x)^{♯♭} \\
+      \end{bmatrix}
       =
-      \{
-        F^{tx} \; \et \wedge \eta_{x \gamma}\mathbf{e}^\gamma \\
-        F^{ty} \; \et \wedge \eta_{y \gamma}\mathbf{e}^\gamma \\
-        F^{tz} \; \et \wedge \eta_{z \gamma}\mathbf{e}^\gamma \\
-        F^{xy} \; \ex \wedge \eta_{y \gamma}\mathbf{e}^\gamma \\
-        F^{yz} \; \ey \wedge \eta_{z \gamma}\mathbf{e}^\gamma \\
-        F^{zx} \; \ez \wedge \eta_{x \gamma}\mathbf{e}^\gamma \\
-      \} \\
+      \begin{bmatrix}
+        F^{tx} \; ∂_t ∧ η_{xγ} dx^γ \\
+        F^{ty} \; ∂_t ∧ η_{yγ} dx^γ \\
+        F^{tz} \; ∂_t ∧ η_{zγ} dx^γ \\
+        F^{xy} \; ∂_x ∧ η_{yγ} dx^γ \\
+        F^{yz} \; ∂_y ∧ η_{zγ} dx^γ \\
+        F^{zx} \; ∂_z ∧ η_{xγ} dx^γ \\
+      \end{bmatrix} \\
       &=
-      \{
-        F^{tx} \; \eta_{x \gamma} \et \wedge \mathbf{e}^\gamma \\
-        F^{ty} \; \eta_{y \gamma} \et \wedge \mathbf{e}^\gamma \\
-        F^{tz} \; \eta_{z \gamma} \et \wedge \mathbf{e}^\gamma \\
-        F^{xy} \; \eta_{y \gamma} \ex \wedge \mathbf{e}^\gamma \\
-        F^{yz} \; \eta_{z \gamma} \ey \wedge \mathbf{e}^\gamma \\
-        F^{zx} \; \eta_{x \gamma} \ez \wedge \mathbf{e}^\gamma \\
-      \}
+      \begin{bmatrix}
+        F^{tx} \; η_{xγ} ∂_t ∧ dx^γ \\
+        F^{ty} \; η_{yγ} ∂_t ∧ dx^γ \\
+        F^{tz} \; η_{zγ} ∂_t ∧ dx^γ \\
+        F^{xy} \; η_{yγ} ∂_x ∧ dx^γ \\
+        F^{yz} \; η_{zγ} ∂_y ∧ dx^γ \\
+        F^{zx} \; η_{xγ} ∂_z ∧ dx^γ \\
+      \end{bmatrix}
       =
-      \{
-        F^{tx} \; \eta_{x x} \et \wedge \eX \\
-        F^{ty} \; \eta_{y y} \et \wedge \eY \\
-        F^{tz} \; \eta_{z z} \et \wedge \eZ \\
-        F^{xy} \; \eta_{y y} \ex \wedge \eY \\
-        F^{yz} \; \eta_{z z} \ey \wedge \eZ \\
-        F^{zx} \; \eta_{x x} \ez \wedge \eX \\
-      \}
+      \begin{bmatrix}
+        F^{tx} \; η_{xx} ∂_t ∧ dx^x \\
+        F^{ty} \; η_{yy} ∂_t ∧ dx^y \\
+        F^{tz} \; η_{zz} ∂_t ∧ dx^z \\
+        F^{xy} \; η_{yy} ∂_x ∧ dx^y \\
+        F^{yz} \; η_{zz} ∂_y ∧ dx^z \\
+        F^{zx} \; η_{xx} ∂_z ∧ dx^x \\
+      \end{bmatrix}
       =
-      \{
-        - F^{tx} \; \et \wedge \eX \\
-        - F^{ty} \; \et \wedge \eY \\
-        - F^{tz} \; \et \wedge \eZ \\
-        - F^{xy} \; \ex \wedge \eY \\
-        - F^{yz} \; \ey \wedge \eZ \\
-        - F^{zx} \; \ez \wedge \eX \\
-      \}
+      \begin{bmatrix}
+        - F^{tx} \; ∂_t ∧ dx^x \\
+        - F^{ty} \; ∂_t ∧ dx^y \\
+        - F^{tz} \; ∂_t ∧ dx^z \\
+        - F^{xy} \; ∂_x ∧ dx^y \\
+        - F^{yz} \; ∂_y ∧ dx^z \\
+        - F^{zx} \; ∂_z ∧ dx^x \\
+      \end{bmatrix}
       \end{align*}
 
 Taking into account the symetric property of :math:`\et \wedge \eX`, :math:`\et
@@ -369,12 +379,12 @@ demonstrated above, this results in:
    \newcommand{\w}{\wedge}
    B^{\sharp\flat}
    &= \frac{1}{2}
-   \{
-                         & - F^{tx} \et \w \eX & - F^{ty} \et \w \eY & - F^{tz} \et \w \eZ \\
-     - F^{tx} \ex \w \eT &                     & - F^{xy} \ex \w \eY & + F^{zx} \ex \w \eZ \\
-     - F^{ty} \ey \w \eT & + F^{xy} \ey \w \eX &                     & - F^{yz} \ey \w \eZ \\
-     - F^{tz} \ez \w \eT & - F^{zx} \ez \w \eX & + F^{yz} \ez \w \eY &                     \\
-   \}
+   \begin{bmatrix}
+                         & - F^{tx} ∂_t ∧ dx^x & - F^{ty} ∂_t ∧ d^y & - F^{tz} ∂_t ∧ dx^z \\
+     - F^{tx} ∂_x ∧ dx^t &                     & - F^{xy} ∂_x ∧ d^y & + F^{zx} ∂_x ∧ dx^z \\
+     - F^{ty} ∂_y ∧ dx^t & + F^{xy} ∂_y ∧ dx^x &                    & - F^{yz} ∂_y ∧ dx^z \\
+     - F^{tz} ∂_z ∧ dx^t & - F^{zx} ∂_z ∧ dx^x & + F^{yz} ∂_z ∧ d^y &                     \\
+   \end{bmatrix}
    \end{align}
 
 .. }}}
@@ -400,11 +410,9 @@ With :math:`F^{tt}=0`, as well as :math:`\eta^{tx}=0`,
 .. math::
 
    \begin{alignat*}{3}
-   \renewcommand{\γ}{\gamma}
-   \renewcommand{\η}{\eta}
-   F^t{}_x &= F^{t\γ} \η_{\γ x} &= F^{tx} \η_{xx} &= -F^{tx} \\
-   F^t{}_y &= F^{t\γ} \η_{\γ y} &= F^{ty} \η_{yy} &= -F^{ty} \\
-   F^t{}_z &= F^{t\γ} \η_{\γ z} &= F^{tz} \η_{zz} &= -F^{tz} \\
+   F^t{}_x &= F^{tγ} η_{γx} &= F^{tx} η_{xx} &= -F^{tx} \\
+   F^t{}_y &= F^{tγ} η_{γy} &= F^{ty} η_{yy} &= -F^{ty} \\
+   F^t{}_z &= F^{tγ} η_{γz} &= F^{tz} η_{zz} &= -F^{tz} \\
    \end{alignat*}
 
 With :math:`F^{xx}=F^{yy}=F^{zz}=0`, :math:`F^{\mu\nu}=-F^{\nu\mu}`, as well as
@@ -414,9 +422,9 @@ obtain:
 .. math::
 
    \begin{alignat*}{3}
-   F^x{}_t &= F^{x\gamma} \eta_{\gamma t} &= F^{xt} \eta_{tt} &= -F^{tx} \\
-   F^y{}_t &= F^{y\gamma} \eta_{\gamma t} &= F^{yt} \eta_{tt} &= -F^{ty} \\
-   F^z{}_t &= F^{z\gamma} \eta_{\gamma t} &= F^{zt} \eta_{tt} &= -F^{tz} \\
+   F^x{}_t &= F^{xγ} η_{γt} &= F^{xt} η_{tt} &= -F^{tx} \\
+   F^y{}_t &= F^{yγ} η_{γt} &= F^{yt} η_{tt} &= -F^{ty} \\
+   F^z{}_t &= F^{zγ} η_{γt} &= F^{zt} η_{tt} &= -F^{tz} \\
    \end{alignat*}
 
 In the same manner, we get:
@@ -424,9 +432,9 @@ In the same manner, we get:
 .. math::
 
    \begin{alignat}{2}
-   F^x{}_y &= F^{x\gamma} \eta_{\gamma y} &= F^{xy} \eta_{yy} &= -F^{xy} \\
-   F^y{}_z &= F^{y\gamma} \eta_{\gamma z} &= F^{yz} \eta_{zz} &= -F^{yz} \\
-   F^z{}_x &= F^{z\gamma} \eta_{\gamma x} &= F^{zx} \eta_{xx} &= -F^{zx} \\
+   F^x{}_y &= F^{xγ} η_{γy} &= F^{xy} η_{yy} &= -F^{xy} \\
+   F^y{}_z &= F^{yγ} η_{γz} &= F^{yz} η_{zz} &= -F^{yz} \\
+   F^z{}_x &= F^{zγ} η_{γx} &= F^{zx} η_{xx} &= -F^{zx} \\
    \end{alignat}
 
 We have a mixed tensor of Rank two with the form:
@@ -434,39 +442,37 @@ We have a mixed tensor of Rank two with the form:
 .. math::
 
    \begin{align}
-   \newcommand{\w}{\wedge}
-   B^{\sharp\flat}
-   &= \frac{1}{2} \{
-     F^t{}_t \et \w \eT & F^t{}_x \et \w \eX & F^t{}_y \et \w \eY & F^t{}_z \et \w \eZ \\
-     F^x{}_t \ex \w \eT & F^x{}_x \ex \w \eX & F^x{}_y \ex \w \eY & F^x{}_z \ex \w \eZ \\
-     F^y{}_t \ey \w \eT & F^y{}_x \ey \w \eX & F^y{}_y \ey \w \eY & F^y{}_z \ey \w \eZ \\
-     F^z{}_t \ez \w \eT & F^z{}_x \ez \w \eX & F^z{}_y \ez \w \eY & F^z{}_z \ez \w \eZ \\
-   \}
+   B^{♯♭}
+   &= \frac{1}{2}
+   \begin{bmatrix}
+     F^t{}_t ∂_t ∧ dx^t & F^t{}_x ∂_t ∧ dx^x & F^t{}_y ∂_t ∧ dx^y & F^t{}_z ∂_t ∧ dx^z \\
+     F^x{}_t ∂_x ∧ dx^t & F^x{}_x ∂_x ∧ dx^x & F^x{}_y ∂_x ∧ dx^y & F^x{}_z ∂_x ∧ dx^z \\
+     F^y{}_t ∂_y ∧ dx^t & F^y{}_x ∂_y ∧ dx^x & F^y{}_y ∂_y ∧ dx^y & F^y{}_z ∂_y ∧ dx^z \\
+     F^z{}_t ∂_z ∧ dx^t & F^z{}_x ∂_z ∧ dx^x & F^z{}_y ∂_z ∧ dx^y & F^z{}_z ∂_z ∧ dx^z \\
+   \end{bmatrix}
    \end{align}
 
 All diagonal components are zero since:
 
 .. math::
 
-   \mathbf{e}_\mu \wedge \mathbf{e}^\mu
-   = \frac{1}{2}
-   (\mathbf{e}_\mu \otimes \mathbf{e}^\mu - \mathbf{e}_\mu \otimes \mathbf{e}^\mu)
-   =0
+   \begin{equation}
+   ∂_μ ∧ dx^μ = \frac{1}{2}(∂_μ ⊗ dx^μ - ∂_μ ⊗ dx^μ = 0
+   \end{equation}
 
 This result in:
 
 .. math::
 
    \begin{align}
-   \newcommand{\w}{\wedge}
-   B^{\sharp\flat}
+   B^{♯♭}
    &= \frac{1}{2}
-   \{
-                          & F^t{}_x \et \w \eX & F^t{}_y \et \w \eY & F^t{}_z \et \w \eZ \\
-       F^x{}_t \ex \w \eT &                    & F^x{}_y \ex \w \eY & F^x{}_z \ex \w \eZ \\
-       F^y{}_t \ey \w \eT & F^y{}_x \ey \w \eX &                    & F^y{}_z \ey \w \eZ \\
-       F^z{}_t \ez \w \eT & F^z{}_x \ez \w \eX & F^z{}_y \ez \w \eY &                    \\
-   \}
+   \begin{bmatrix}
+                        & F^t{}_x ∂_t ∧ dx^x & F^t{}_y ∂_t ∧ dx^y & F^t{}_z ∂_t ∧ dx^z \\
+     F^x{}_t ∂_x \w \eT &                    & F^x{}_y ∂_x ∧ dx^y & F^x{}_z ∂_x ∧ dx^z \\
+     F^y{}_t ∂_y \w \eT & F^y{}_x ∂_y ∧ dx^x &                    & F^y{}_z ∂_y ∧ dx^z \\
+     F^z{}_t ∂_z \w \eT & F^z{}_x ∂_z ∧ dx^x & F^z{}_y ∂_z ∧ dx^y &                    \\
+   \end{bmatrix}
    \end{align}
 
 Further expanding all coefficients, we obtain:
@@ -474,18 +480,14 @@ Further expanding all coefficients, we obtain:
 .. math::
 
    \begin{align}
-   \newcommand{\{}{\begin{bmatrix}} \newcommand{\}}{\end{bmatrix}}
-   \newcommand{\γ}{\gamma} %u03b3
-   \newcommand{\∧}{\wedge} %u2227
-   \newcommand{\η}{\eta} %u03b
    B^{\sharp\flat}
    &= \frac{1}{2}
-   \{
-                                  & F^{t\γ} \η_{\γ x} \et \∧ \eX & F^{t \γ} \η_{\γ y} \et \∧ \eY & F^{t \γ} \η_{\γ z} \et \∧ \eZ \\
-     F^{x\g} \η_{\γ t} \ex \∧ \eT &                              & F^{x \γ} \η_{\γ y} \ex \∧ \eY & F^{x \γ} \η_{\γ z} \ex \∧ \eZ \\
-     F^{y\g} \η_{\γ t} \ey \∧ \eT & F^{y\γ} \η_{\γ x} \ey \∧ \eX &                               & F^{y \γ} \η_{\γ z} \ey \∧ \eZ \\
-     F^{z\g} \η_{\γ t} \ez \∧ \eT & F^{z\γ} \η_{\γ x} \ez \∧ \eX & F^{z \γ} \η_{\γ y} \ez \∧ \eY &                               \\
-   \}
+   \begin{bmatrix}
+                              & F^{tγ} η_{γx} ∂_t ∧ dx^x & F^{tγ} η_{γy} ∂_t ∧ dx^y & F^{tγ} η_{γz} ∂_t ∧ dx^z \\
+     F^{xγ} η_{γt} ∂_x ∧ dx^t &                          & F^{xγ} η_{γy} ∂_x ∧ dx^y & F^{xγ} η_{γz} ∂_x ∧ dx^z \\
+     F^{yγ} η_{γt} ∂_y ∧ dx^t & F^{yγ} η_{γx} ∂_y ∧ dx^x &                          & F^{yγ} η_{γz} ∂_y ∧ dx^z \\
+     F^{zγ} η_{γt} ∂_z ∧ dx^t & F^{zγ} η_{γx} ∂_z ∧ dx^x & F^{zγ} η_{γy} ∂_z ∧ dx^y &                          \\
+   \end{bmatrix}
    \end{align}
 
 Since only the diagonal elements of the metric tensor are non-zero:
@@ -493,17 +495,14 @@ Since only the diagonal elements of the metric tensor are non-zero:
 .. math::
 
    \begin{align}
-   \newcommand{\{}{\begin{bmatrix}} \newcommand{\}}{\end{bmatrix}}
-   \newcommand{\∧}{\wedge} %u2227
-   \newcommand{\η}{\eta} %u03b7
-   B^{\sharp\flat}
+   B^{♯♭}
    &= \frac{1}{2}
-   \{
-                               & F^{tx} \η_{xx} \et \∧ \eX & F^{ty} \η_{yy} \et \∧ \eY & F^{tz} \η_{zz} \et \∧ \eZ \\
-     F^{xt} \η_{tt} \ex \∧ \eT &                           & F^{xy} \η_{yy} \ex \∧ \eY & F^{xz} \η_{zz} \ex \∧ \eZ \\
-     F^{yt} \η_{tt} \ey \∧ \eT & F^{yx} \η_{xx} \ey \∧ \eX &                           & F^{yz} \η_{zz} \ey \∧ \eZ \\
-     F^{zt} \η_{tt} \ez \∧ \eT & F^{zx} \η_{xx} \ez \∧ \eX & F^{zy} \η_{yy} \ez \∧ \eY &                           \\
-   \}
+   \begin{bmatrix}
+                              & F^{tx} η_{xx} ∂_t ∧ dx^x & F^{ty} η_{yy} ∂_t ∧ dx^y & F^{tz} η_{zz} ∂_t ∧ dx^z \\
+     F^{xt} η_{tt} ∂_x ∧ dx^t &                          & F^{xy} η_{yy} ∂_x ∧ dx^y & F^{xz} η_{zz} ∂_x ∧ dx^z \\
+     F^{yt} η_{tt} ∂_y ∧ dx^t & F^{yx} η_{xx} ∂_y ∧ dx^x &                          & F^{yz} η_{zz} ∂_y ∧ dx^z \\
+     F^{zt} η_{tt} ∂_z ∧ dx^t & F^{zx} η_{xx} ∂_z ∧ dx^x & F^{zy} η_{yy} ∂_z ∧ dx^y &                          \\
+   \end{bmatrix}
    \end{align}
 
 This elements of the Minkowski metric are replaced by their numerical values:
@@ -511,17 +510,14 @@ This elements of the Minkowski metric are replaced by their numerical values:
 .. math::
 
    \begin{align}
-   \newcommand{\{}{\begin{bmatrix}} \newcommand{\}}{\end{bmatrix}}
-   \newcommand{\et}{\mathbf{e_t}} \newcommand{\ex}{\mathbf{e_x}}
-   \newcommand{\ey}{\mathbf{e_y}} \newcommand{\ez}{\mathbf{e_z}}
-   \newcommand{\∧}{\wedge} %u2227
-   B^{\sharp\flat}
-   &= \frac{1}{2} \{
-                         & - F^{tx} \et \∧ \eX & - F^{ty} \et \∧ \eY & - F^{tz} \et \∧ \eZ \\
-     + F^{xt} \ex \∧ \eT &                     & - F^{xy} \ex \∧ \eY & - F^{xz} \ex \∧ \eZ \\
-     + F^{yt} \ey \∧ \eT & - F^{yx} \ey \∧ \eX &                     & - F^{yz} \ey \∧ \eZ \\
-     + F^{zt} \ez \∧ \eT & - F^{zx} \ez \∧ \eX & - F^{zy} \ez \∧ \eY &                     \\
-   \}
+   B^{♯♭}
+   &= \frac{1}{2}
+   \begin{bmatrix}
+                         & - F^{tx} ∂_t ∧ dx^x & - F^{ty} ∂_t ∧ dx^y & - F^{tz} ∂_t ∧ dx^z \\
+     + F^{xt} ∂_x ∧ dx^t &                     & - F^{xy} ∂_x ∧ dx^y & - F^{xz} ∂_x ∧ dx^z \\
+     + F^{yt} ∂_y ∧ dx^t & - F^{yx} ∂_y ∧ dx^x &                     & - F^{yz} ∂_y ∧ dx^z \\
+     + F^{zt} ∂_z ∧ dx^t & - F^{zx} ∂_z ∧ dx^x & - F^{zy} ∂_z ∧ dx^y &                     \\
+   \end{bmatrix}
    \end{align}
 
 The antisymetric properties of the components of the double contravariant
@@ -530,19 +526,14 @@ rotation tensors permit to simplify and conclude:
 .. math::
 
    \begin{align}
-   \newcommand{\{}{\begin{bmatrix}} \newcommand{\}}{\end{bmatrix}}
-   \newcommand{\et}{\mathbf{e_t}} \newcommand{\ex}{\mathbf{e_x}}
-   \newcommand{\ey}{\mathbf{e_y}} \newcommand{\ez}{\mathbf{e_z}}
-   \newcommand{\eT}{\mathbf{e^t}} \newcommand{\eX}{\mathbf{e^x}}
-   \newcommand{\eY}{\mathbf{e^y}} \newcommand{\eZ}{\mathbf{e^z}}
-   \newcommand{\∧}{\wedge} %u2227
-   B^{\sharp\flat}
-   &= \frac{1}{2} \{
-                          & - F^{tx} \; \et \∧ \eX & - F^{ty} \et \∧ \eY & - F^{tz} \et \∧w \eZ \\
-      - F^{tx} \ex \∧ \eT &                        & - F^{xy} \ex \∧ \eY & + F^{zx} \ex \∧w \eZ \\
-      - F^{ty} \ey \∧ \eT & + F^{xy} \; \ey \∧ \eX &                     & - F^{yz} \ey \∧w \eZ \\
-      - F^{tz} \ez \∧ \eT & - F^{zx} \; \ez \∧ \eX & + F^{yz} \ez \∧ \eY &                      \\
-   \}
+   B^{♯♭}
+   &= \frac{1}{2}
+   \begin{bmatrix}
+                         & - F^{tx} \; ∂_t ∧ dx^x & - F^{ty} ∂_t ∧ dx^y & - F^{tz} ∂_t ∧ dx^z \\
+     - F^{tx} ∂_x ∧ dx^t &                        & - F^{xy} ∂_x ∧ dx^y & + F^{zx} ∂_x ∧ dx^z \\
+     - F^{ty} ∂_y ∧ dx^t & + F^{xy} \; ∂_y ∧ dx^x &                     & - F^{yz} ∂_y ∧ dx^z \\
+     - F^{tz} ∂_z ∧ dx^t & - F^{zx} \; ∂_z ∧ dx^x & + F^{yz} ∂_z ∧ dx^y &                     \\
+   \end{bmatrix}
    \end{align}
 
 .. }}}

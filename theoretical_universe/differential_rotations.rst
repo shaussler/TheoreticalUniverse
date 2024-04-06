@@ -42,14 +42,14 @@ basis bivectors:
 .. math::
 
    \begin{equation}
-   B^{\sharp\sharp}
+   B^{♯♯}
    = \{
-       F^{tx} \; \partial_t \wedge \partial_x \\
-       F^{ty} \; \partial_t \wedge \partial_y \\
-       F^{tz} \; \partial_t \wedge \partial_z \\
-       F^{xy} \; \partial_x \wedge \partial_y \\
-       F^{yz} \; \partial_y \wedge \partial_z \\
-       F^{zx} \; \partial_z \wedge \partial_x \\
+     F^{tx} \; ∂_t ∧ ∂_x \\
+     F^{ty} \; ∂_t ∧ ∂_y \\
+     F^{tz} \; ∂_t ∧ ∂_z \\
+     F^{xy} \; ∂_x ∧ ∂_y \\
+     F^{yz} \; ∂_y ∧ ∂_z \\
+     F^{zx} \; ∂_z ∧ ∂_x \\
    \}
    \end{equation}
 
@@ -78,6 +78,10 @@ Expressing the one time contravariant and one time covartiant wedge product
 :math:`\wedge` in term of tensor products :math:`\otimes`, we obtain for the
 basis elements:
 
+.. warning::
+
+   Typo. Correction needed
+
 ================== ============ =================================
 Basis element      Symmetry     Expression
 ================== ============ =================================
@@ -97,7 +101,7 @@ expressed in a contravariant/coveriant form is:
 .. math::
 
    \begin{align}
-   B^{\sharp\flat}
+   B^{♯♭}
    &= \frac{1}{2}
    \{
                          & - F^{tx} ∂_t ∧ dx^x & - F^{ty} ∂_t ∧ dx^y & - F^{tz} ∂_t ∧ dx^z \\
@@ -111,15 +115,16 @@ The electromagnetic field tensor :math:`F` is:
 
 .. math::
 
-   F^{\sharp\flat} =
+   F^{♯♭} =
    \frac{1}{2}
    \begin{bmatrix}
-            & +\Ex & +\Ey & +\Ez \\
-       +\Ex &      & +\Bz & -\By \\
-       +\Ey & -\Bz &      & +\Bx \\
-       +\Ez & +\By & -\Bx &      \\
+           & + \Ex & + \Ey & + \Ez \\
+     + \Ex &       & + \Bz & - \By \\
+     + \Ey & - \Bz &       & + \Bx \\
+     + \Ez & + \By & - \Bx &       \\
    \end{bmatrix}
 
-.. rubric:: Rotations in Cartan's formalism trivially match the Lie Algegra
-   :math:`\mathfrak{so}(1,3)`of the Lorentz group
+.. rubric:: Rotations in Cartan's formalism trivially match the Lie Algegra :math:`\mathfrak{so}(1,3)` of the Lorentz group
 
+
+one. two.
