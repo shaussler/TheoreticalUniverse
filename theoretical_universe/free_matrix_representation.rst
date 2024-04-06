@@ -1,7 +1,6 @@
-I use matrix notation in a manner which is not fully conventional, but that I
-hope highlights symmetries and that the reader will find obvious. Everything in
+I the reader will find the *free matrix representation* obvious. Everything in
 a matrix is expressed with its basis vectors and can be reordered at will. For
-example, a vector is often expressed with an implicit basis as:
+example, a vector is can expressed with an implicit basis as:
 
 .. math::
 
@@ -13,8 +12,8 @@ I merely propose to write the basis explicitely in the matrix:
 
    v = \{ x \mathbf{e}_x \\ y \mathbf{e}_y \\ z \mathbf{e}_x \}
 
-Which means that a :math:`+` sign can be added anywhere and the expression
-written in the standard form:
+Which means that a :math:`+` sign can be added anywhere in the matrix and the
+expression written in the standard form:
 
 .. math::
 
@@ -25,16 +24,16 @@ elements of the matrix can be re-ordered at will.
 
 .. math::
 
-   \{
+   \frac{1}{2}\{
                           & +a^{xy} \ex \wedge \ey & -a^{zx} \ex \wedge \ez \\
    -a^{xy} \ey \wedge \ex &                        & +a^{yz} \ey \wedge \ez \\
    +a^{zx} \ez \wedge \ex & -a^{yz} \ez \wedge \ey &                        \\
    \}
    =
    \{
-   + 2 a^{yz} \ey \wedge \ez \\
-   + 2 a^{zx} \ez \wedge \ex \\
-   + 2 a^{xy} \ex \wedge \ey \\
+   + a^{yz} \ey \wedge \ez \\
+   + a^{zx} \ez \wedge \ex \\
+   + a^{xy} \ex \wedge \ey \\
    \}
 
 The transpose can be taken if it permits to use the usual rules of matrix
@@ -42,6 +41,7 @@ multiplication:
 
 .. math::
 
+   \frac{1}{2}
    \{
                           & -a^{xy} \ey \wedge \ex & +a^{zx} \ez \wedge \ex \\
    +a^{xy} \ex \wedge \ey &                        & -a^{yz} \ez \wedge \ey \\
@@ -52,11 +52,11 @@ All above matrix representations can writen as a sum:
 
 .. math::
 
-   2 a^{yz} \ey \wedge \ez +
-   2 a^{zx} \ez \wedge \ex +
-   2 a^{xy} \ex \wedge \ey
+   a^{yz} \ey \wedge \ez +
+   a^{zx} \ez \wedge \ex +
+   a^{xy} \ex \wedge \ey
 
 We could have written a covector in the same explicit manner. This notation is
 very conveniant when performing calculations in Cartan's framework as it
-permits to identify and organize terms for practical calculations by falling
-back to regular matrix multiplication.
+permits to identify and organize terms for practical calculations, and if
+needed fall back to regular matrix multiplication.
