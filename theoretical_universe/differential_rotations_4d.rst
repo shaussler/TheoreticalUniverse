@@ -144,12 +144,12 @@ For all basis bivectors:
 .. math::
 
    \begin{array}{r}
-   (∂_t ∧ ∂_x)^{♭♯} =& η_{tγ} dx^γ ∧ ∂_x =& η_{tt} ∂_t ∧ ∂_x =& + ∂_t ∧ ∂_x \\
-   (∂_t ∧ ∂_y)^{♭♯} =& η_{tγ} dx^γ ∧ ∂_y =& η_{tt} ∂_t ∧ ∂_y =& + ∂_t ∧ ∂_y \\
-   (∂_t ∧ ∂_z)^{♭♯} =& η_{tγ} dx^γ ∧ ∂_z =& η_{tt} ∂_t ∧ ∂_z =& + ∂_t ∧ ∂_z \\
-   (∂_x ∧ ∂_y)^{♭♯} =& η_{xγ} dx^γ ∧ ∂_y =& η_{xx} ∂_x ∧ ∂_y =& - ∂_x ∧ ∂_y \\
-   (∂_y ∧ ∂_z)^{♭♯} =& η_{yγ} dx^γ ∧ ∂_z =& η_{yy} ∂_y ∧ ∂_z =& - ∂_y ∧ ∂_z \\
-   (∂_z ∧ ∂_x)^{♭♯} =& η_{zγ} dx^γ ∧ ∂_x =& η_{zz} ∂_z ∧ ∂_x =& - ∂_z ∧ ∂_x \\
+   (∂_t ∧ ∂_x)^{♭♯} &=& η_{tγ} dx^γ ∧ ∂_x &=& η_{tt} ∂_t ∧ ∂_x &=& + ∂_t ∧ ∂_x \\
+   (∂_t ∧ ∂_y)^{♭♯} &=& η_{tγ} dx^γ ∧ ∂_y &=& η_{tt} ∂_t ∧ ∂_y &=& + ∂_t ∧ ∂_y \\
+   (∂_t ∧ ∂_z)^{♭♯} &=& η_{tγ} dx^γ ∧ ∂_z &=& η_{tt} ∂_t ∧ ∂_z &=& + ∂_t ∧ ∂_z \\
+   (∂_x ∧ ∂_y)^{♭♯} &=& η_{xγ} dx^γ ∧ ∂_y &=& η_{xx} ∂_x ∧ ∂_y &=& - ∂_x ∧ ∂_y \\
+   (∂_y ∧ ∂_z)^{♭♯} &=& η_{yγ} dx^γ ∧ ∂_z &=& η_{yy} ∂_y ∧ ∂_z &=& - ∂_y ∧ ∂_z \\
+   (∂_z ∧ ∂_x)^{♭♯} &=& η_{zγ} dx^γ ∧ ∂_x &=& η_{zz} ∂_z ∧ ∂_x &=& - ∂_z ∧ ∂_x \\
    \end{array}
 
 Expanding and simplifying, this results in the following explicit expression of
@@ -158,34 +158,34 @@ the mixed wedge products:
 .. math::
 
    \begin{array}{r}
-   (∂_t ∧ ∂_x)^{♭♯} =& (∂_t ⊗ ∂_x - ∂_x ⊗ ∂_t)^{♭♯} =& η_{tγ} dx^γ ⊗ ∂_x - η_{xγ} dx^γ ⊗ ∂_t \\
-   (∂_t ∧ ∂_y)^{♭♯} =& (∂_t ⊗ ∂_y - ∂_y ⊗ ∂_t)^{♭♯} =& η_{tγ} dx^γ ⊗ ∂_y - η_{yγ} dx^γ ⊗ ∂_t \\
-   (∂_t ∧ ∂_z)^{♭♯} =& (∂_t ⊗ ∂_z - ∂_z ⊗ ∂_t)^{♭♯} =& η_{tγ} dx^γ ⊗ ∂_z - η_{zγ} dx^γ ⊗ ∂_t \\
-   (∂_x ∧ ∂_y)^{♭♯} =& (∂_x ⊗ ∂_y - ∂_y ⊗ ∂_x)^{♭♯} =& η_{xγ} dx^γ ⊗ ∂_y - η_{yγ} dx^γ ⊗ ∂_x \\
-   (∂_y ∧ ∂_z)^{♭♯} =& (∂_y ⊗ ∂_z - ∂_z ⊗ ∂_y)^{♭♯} =& η_{yγ} dx^γ ⊗ ∂_z - η_{zγ} dx^γ ⊗ ∂_y \\
-   (∂_z ∧ ∂_x)^{♭♯} =& (∂_z ⊗ ∂_x - ∂_x ⊗ ∂_z)^{♭♯} =& η_{zγ} dx^γ ⊗ ∂_x - η_{xγ} dx^γ ⊗ ∂_z \\
+   (∂_t ∧ ∂_x)^{♭♯} &=& (∂_t ⊗ ∂_x - ∂_x ⊗ ∂_t)^{♭♯} &=& η_{tγ} dx^γ ⊗ ∂_x - η_{xγ} dx^γ ⊗ ∂_t \\
+   (∂_t ∧ ∂_y)^{♭♯} &=& (∂_t ⊗ ∂_y - ∂_y ⊗ ∂_t)^{♭♯} &=& η_{tγ} dx^γ ⊗ ∂_y - η_{yγ} dx^γ ⊗ ∂_t \\
+   (∂_t ∧ ∂_z)^{♭♯} &=& (∂_t ⊗ ∂_z - ∂_z ⊗ ∂_t)^{♭♯} &=& η_{tγ} dx^γ ⊗ ∂_z - η_{zγ} dx^γ ⊗ ∂_t \\
+   (∂_x ∧ ∂_y)^{♭♯} &=& (∂_x ⊗ ∂_y - ∂_y ⊗ ∂_x)^{♭♯} &=& η_{xγ} dx^γ ⊗ ∂_y - η_{yγ} dx^γ ⊗ ∂_x \\
+   (∂_y ∧ ∂_z)^{♭♯} &=& (∂_y ⊗ ∂_z - ∂_z ⊗ ∂_y)^{♭♯} &=& η_{yγ} dx^γ ⊗ ∂_z - η_{zγ} dx^γ ⊗ ∂_y \\
+   (∂_z ∧ ∂_x)^{♭♯} &=& (∂_z ⊗ ∂_x - ∂_x ⊗ ∂_z)^{♭♯} &=& η_{zγ} dx^γ ⊗ ∂_x - η_{xγ} dx^γ ⊗ ∂_z \\
    \end{array}
 
 .. math::
 
    \begin{array}{r}
-   (∂_t ∧ ∂_x)^{♭♯} &= η_{tt} dx^t ⊗ ∂_x - η_{xx} dx^x ⊗ ∂_t &= + dx^t ⊗ ∂_x + dx^x ⊗ ∂_t \\
-   (∂_t ∧ ∂_y)^{♭♯} &= η_{tt} dx^t ⊗ ∂_y - η_{yy} dx^y ⊗ ∂_t &= + dx^t ⊗ ∂_y + dx^y ⊗ ∂_t \\
-   (∂_t ∧ ∂_z)^{♭♯} &= η_{tt} dx^t ⊗ ∂_z - η_{zz} dx^z ⊗ ∂_t &= + dx^t ⊗ ∂_z + dx^z ⊗ ∂_t \\
-   (∂_x ∧ ∂_y)^{♭♯} &= η_{xx} dx^x ⊗ ∂_y - η_{yy} dx^y ⊗ ∂_x &= - dx^x ⊗ ∂_y + dx^y ⊗ ∂_x \\
-   (∂_y ∧ ∂_z)^{♭♯} &= η_{yy} dx^y ⊗ ∂_z - η_{zz} dx^z ⊗ ∂_y &= - dx^y ⊗ ∂_z + dx^z ⊗ ∂_y \\
-   (∂_z ∧ ∂_x)^{♭♯} &= η_{zz} dx^z ⊗ ∂_x - η_{xx} dx^x ⊗ ∂_z &= - dx^z ⊗ ∂_x + dx^x ⊗ ∂_z \\
+   (∂_t ∧ ∂_x)^{♭♯} &=& η_{tt} dx^t ⊗ ∂_x - η_{xx} dx^x ⊗ ∂_t &=& + dx^t ⊗ ∂_x + dx^x ⊗ ∂_t \\
+   (∂_t ∧ ∂_y)^{♭♯} &=& η_{tt} dx^t ⊗ ∂_y - η_{yy} dx^y ⊗ ∂_t &=& + dx^t ⊗ ∂_y + dx^y ⊗ ∂_t \\
+   (∂_t ∧ ∂_z)^{♭♯} &=& η_{tt} dx^t ⊗ ∂_z - η_{zz} dx^z ⊗ ∂_t &=& + dx^t ⊗ ∂_z + dx^z ⊗ ∂_t \\
+   (∂_x ∧ ∂_y)^{♭♯} &=& η_{xx} dx^x ⊗ ∂_y - η_{yy} dx^y ⊗ ∂_x &=& - dx^x ⊗ ∂_y + dx^y ⊗ ∂_x \\
+   (∂_y ∧ ∂_z)^{♭♯} &=& η_{yy} dx^y ⊗ ∂_z - η_{zz} dx^z ⊗ ∂_y &=& - dx^y ⊗ ∂_z + dx^z ⊗ ∂_y \\
+   (∂_z ∧ ∂_x)^{♭♯} &=& η_{zz} dx^z ⊗ ∂_x - η_{xx} dx^x ⊗ ∂_z &=& - dx^z ⊗ ∂_x + dx^x ⊗ ∂_z \\
    \end{array}
 
 .. math::
 
    \begin{array}{r}
-   dx^t ∧ ∂_x =& + dx^t ⊗ ∂_x + dx^x ⊗ ∂_t \\
-   dx^t ∧ ∂_y =& + dx^t ⊗ ∂_y + dx^y ⊗ ∂_t \\
-   dx^t ∧ ∂_z =& + dx^t ⊗ ∂_z + dx^z ⊗ ∂_t \\
-   dx^x ∧ ∂_y =& + dx^x ⊗ ∂_y - dx^y ⊗ ∂_x \\
-   dx^y ∧ ∂_z =& + dx^y ⊗ ∂_z - dx^z ⊗ ∂_y \\
-   dx^z ∧ ∂_x =& + dx^z ⊗ ∂_x - dx^x ⊗ ∂_z \\
+   dx^t ∧ ∂_x &=& + dx^t ⊗ ∂_x + dx^x ⊗ ∂_t \\
+   dx^t ∧ ∂_y &=& + dx^t ⊗ ∂_y + dx^y ⊗ ∂_t \\
+   dx^t ∧ ∂_z &=& + dx^t ⊗ ∂_z + dx^z ⊗ ∂_t \\
+   dx^x ∧ ∂_y &=& + dx^x ⊗ ∂_y - dx^y ⊗ ∂_x \\
+   dx^y ∧ ∂_z &=& + dx^y ⊗ ∂_z - dx^z ⊗ ∂_y \\
+   dx^z ∧ ∂_x &=& + dx^z ⊗ ∂_x - dx^x ⊗ ∂_z \\
    \end{array}
 
 From the explicit calculation of the basis elements, we observe the following
@@ -204,8 +204,8 @@ Basis element      Symmetry
 
 .. }}}
 
-Flatterning of the second kind
-------------------------------
+Flattening of the second kind
+-----------------------------
 
 .. {{{
 
@@ -213,63 +213,53 @@ For all basis bivectors:
 
 .. math::
 
-   \begin{alignat*}{1}
-   \newcommand{\eG}{\mathbf{e}^\gamma}
-   \newcommand{\g}{\gamma}
-   \newcommand{\x}{\otimes}
-   \newcommand{\w}{\wedge}
-   \newcommand{\fl}{\flat}
-   \newcommand{\sh}{\sharp}
-   (\et \w \ex)^{\sh\fl} &= \eta_{x \g} \et \w \eG &= \eta_{x x} \et \w \eX &= - \et \w \eX \\
-   (\et \w \ey)^{\sh\fl} &= \eta_{y \g} \et \w \eG &= \eta_{y y} \et \w \eY &= - \et \w \eY \\
-   (\et \w \ez)^{\sh\fl} &= \eta_{z \g} \et \w \eG &= \eta_{z z} \et \w \eZ &= - \et \w \eZ \\
-   (\ex \w \ey)^{\sh\fl} &= \eta_{y \g} \ex \w \eG &= \eta_{y y} \ex \w \eY &= - \ex \w \eY \\
-   (\ey \w \ez)^{\sh\fl} &= \eta_{z \g} \ey \w \eG &= \eta_{z z} \ey \w \eZ &= - \ey \w \eZ \\
-   (\ez \w \ex)^{\sh\fl} &= \eta_{x \g} \ez \w \eG &= \eta_{x x} \ez \w \eX &= - \ez \w \eX \\
-   \end{alignat*}
+   \begin{array}{}
+   (∂_t ∧ ∂_x)^{♯♭} &=& η_{xγ} ∂_t ∧ dx^γ &=& η_{xx} ∂_t ∧ dx^x &=& - ∂_t ∧ dx^x \\
+   (∂_t ∧ ∂_y)^{♯♭} &=& η_{yγ} ∂_t ∧ dx^γ &=& η_{yy} ∂_t ∧ dx^y &=& - ∂_t ∧ dx^y \\
+   (∂_t ∧ ∂_z)^{♯♭} &=& η_{zγ} ∂_t ∧ dx^γ &=& η_{zz} ∂_t ∧ dx^z &=& - ∂_t ∧ dx^z \\
+   (∂_x ∧ ∂_y)^{♯♭} &=& η_{yγ} ∂_x ∧ dx^γ &=& η_{yy} ∂_x ∧ dx^y &=& - ∂_x ∧ dx^y \\
+   (∂_y ∧ ∂_z)^{♯♭} &=& η_{zγ} ∂_y ∧ dx^γ &=& η_{zz} ∂_y ∧ dx^z &=& - ∂_y ∧ dx^z \\
+   (∂_z ∧ ∂_x)^{♯♭} &=& η_{xγ} ∂_z ∧ dx^γ &=& η_{xx} ∂_z ∧ dx^x &=& - ∂_z ∧ dx^x \\
+   \end{array}
 
 Expanding and simplifying, this results in the following explicit expression of
 the mixed wedge products:
 
 .. math::
 
-   \begin{array}{r}
-   (∂_t ∧ ∂_x)^{♯♭} =& (∂_t ⊗ ∂_x - ∂_x ⊗ ∂_t)^{♯♯} =& η_{xγ} ∂_t ⊗ dx^γ - η_{tγ} ∂_x ⊗ dx^γ \\
-   (∂_t ∧ ∂_y)^{♯♭} =& (∂_t ⊗ ∂_y - ∂_y ⊗ ∂_t)^{♯♯} =& η_{yγ} ∂_t ⊗ dx^γ - η_{tγ} ∂_y ⊗ dx^γ \\
-   (∂_t ∧ ∂_z)^{♯♭} =& (∂_t ⊗ ∂_z - ∂_z ⊗ ∂_t)^{♯♯} =& η_{zγ} ∂_t ⊗ dx^γ - η_{tγ} ∂_z ⊗ dx^γ \\
-   (∂_x ∧ ∂_y)^{♯♭} =& (∂_x ⊗ ∂_y - ∂_y ⊗ ∂_x)^{♯♯} =& η_{yγ} ∂_x ⊗ dx^γ - η_{xγ} ∂_y ⊗ dx^γ \\
-   (∂_y ∧ ∂_z)^{♯♭} =& (∂_y ⊗ ∂_z - ∂_z ⊗ ∂_y)^{♯♯} =& η_{zγ} ∂_y ⊗ dx^γ - η_{yγ} ∂_z ⊗ dx^γ \\
-   (∂_z ∧ ∂_x)^{♯♭} =& (∂_z ⊗ ∂_x - ∂_x ⊗ ∂_z)^{♯♯} =& η_{xγ} ∂_z ⊗ dx^γ - η_{zγ} ∂_x ⊗ dx^γ \\
+   \begin{array}{}
+   (∂_t ∧ ∂_x)^{♯♭} &=& (∂_t ⊗ ∂_x - ∂_x ⊗ ∂_t)^{♯♯} &=& η_{xγ} ∂_t ⊗ dx^γ - η_{tγ} ∂_x ⊗ dx^γ \\
+   (∂_t ∧ ∂_y)^{♯♭} &=& (∂_t ⊗ ∂_y - ∂_y ⊗ ∂_t)^{♯♯} &=& η_{yγ} ∂_t ⊗ dx^γ - η_{tγ} ∂_y ⊗ dx^γ \\
+   (∂_t ∧ ∂_z)^{♯♭} &=& (∂_t ⊗ ∂_z - ∂_z ⊗ ∂_t)^{♯♯} &=& η_{zγ} ∂_t ⊗ dx^γ - η_{tγ} ∂_z ⊗ dx^γ \\
+   (∂_x ∧ ∂_y)^{♯♭} &=& (∂_x ⊗ ∂_y - ∂_y ⊗ ∂_x)^{♯♯} &=& η_{yγ} ∂_x ⊗ dx^γ - η_{xγ} ∂_y ⊗ dx^γ \\
+   (∂_y ∧ ∂_z)^{♯♭} &=& (∂_y ⊗ ∂_z - ∂_z ⊗ ∂_y)^{♯♯} &=& η_{zγ} ∂_y ⊗ dx^γ - η_{yγ} ∂_z ⊗ dx^γ \\
+   (∂_z ∧ ∂_x)^{♯♭} &=& (∂_z ⊗ ∂_x - ∂_x ⊗ ∂_z)^{♯♯} &=& η_{xγ} ∂_z ⊗ dx^γ - η_{zγ} ∂_x ⊗ dx^γ \\
    \end{array}
 
 .. math::
 
-   \begin{alignat*}{1}
-   \newcommand{\x}{\otimes}
-   \newcommand{\w}{\wedge}
-   \newcommand{\fl}{\flat}
-   \newcommand{\sh}{\sharp}
-   (\et \w \ex)^{\fl\sh} &= \eta_{x x} \et \x \ex - \eta_{t t} \ex \x \et &= - \et \x \ex - \ex \x \et \\
-   (\et \w \ey)^{\fl\sh} &= \eta_{y y} \et \x \ey - \eta_{t t} \ey \x \et &= - \et \x \ey - \ey \x \et \\
-   (\et \w \ez)^{\fl\sh} &= \eta_{z z} \et \x \ez - \eta_{t t} \ez \x \et &= - \et \x \ez - \ez \x \et \\
-   (\ex \w \ey)^{\fl\sh} &= \eta_{y y} \ex \x \ey - \eta_{x x} \ey \x \ex &= - \ex \x \ey + \ey \x \ex \\
-   (\ey \w \ez)^{\fl\sh} &= \eta_{z z} \ey \x \ez - \eta_{y y} \ez \x \ey &= - \ey \x \ez + \ez \x \ey \\
-   (\ez \w \ex)^{\fl\sh} &= \eta_{x x} \ez \x \ex - \eta_{z z} \ex \x \ez &= - \ez \x \ex + \ex \x \ez \\
-   \end{alignat*}
+   \begin{array}{}
+   (∂_t ∧ ∂_x)^{♭♯} &=& η_{xx} ∂_t ⊗ ∂_x - η_{tt} ∂_ex ⊗ ∂_t &=& - ∂_t ⊗ ∂_x - ∂_x ⊗ ∂_t \\
+   (∂_t ∧ ∂_y)^{♭♯} &=& η_{yy} ∂_t ⊗ ∂_y - η_{tt} ∂_ey ⊗ ∂_t &=& - ∂_t ⊗ ∂_y - ∂_y ⊗ ∂_t \\
+   (∂_t ∧ ∂_z)^{♭♯} &=& η_{zz} ∂_t ⊗ ∂_z - η_{tt} ∂_ez ⊗ ∂_t &=& - ∂_t ⊗ ∂_z - ∂_z ⊗ ∂_t \\
+   (∂_x ∧ ∂_y)^{♭♯} &=& η_{yy} ∂_x ⊗ ∂_y - η_{xx} ∂_ey ⊗ ∂_x &=& - ∂_x ⊗ ∂_y + ∂_y ⊗ ∂_x \\
+   (∂_y ∧ ∂_z)^{♭♯} &=& η_{zz} ∂_y ⊗ ∂_z - η_{yy} ∂_ez ⊗ ∂_y &=& - ∂_y ⊗ ∂_z + ∂_z ⊗ ∂_y \\
+   (∂_z ∧ ∂_x)^{♭♯} &=& η_{xx} ∂_z ⊗ ∂_x - η_{zz} ∂_ex ⊗ ∂_z &=& - ∂_z ⊗ ∂_x + ∂_x ⊗ ∂_z \\
+   \end{array}
 
 From the explicit calculation of the basis elements, we observe the following
 properties:
 
-====================== ============ =============================================================
-Basis element          Symmetry     Expression
-====================== ============ =============================================================
-:math:`\et \wedge \eX` Symetric     :math:`+ \mathbf{e}^t \otimes \ex + \mathbf{e}^x \otimes \et`
-:math:`\et \wedge \eY` Symetric     :math:`+ \mathbf{e}^t \otimes \ey + \mathbf{e}^y \otimes \et`
-:math:`\et \wedge \eZ` Symetric     :math:`+ \mathbf{e}^t \otimes \ez + \mathbf{e}^z \otimes \et`
-:math:`\ex \wedge \eY` Antisymetric :math:`+ \mathbf{e}^x \otimes \ey - \mathbf{e}^y \otimes \ex`
-:math:`\ey \wedge \eZ` Antisymetric :math:`+ \mathbf{e}^y \otimes \ez - \mathbf{e}^z \otimes \ey`
-:math:`\ez \wedge \eX` Antisymetric :math:`+ \mathbf{e}^z \otimes \ex - \mathbf{e}^x \otimes \ez`
-====================== ============ =============================================================
+================== ============ =====================================================
+Basis element      Symmetry     Expression
+================== ============ =====================================================
+:math:`∂_t ∧ dx^x` Symetric     :math:`+ dx^t \otimes \ex + \mathbf{e}^x \otimes \et`
+:math:`∂_t ∧ dx^y` Symetric     :math:`+ dx^t \otimes \ey + \mathbf{e}^y \otimes \et`
+:math:`∂_t ∧ dx^z` Symetric     :math:`+ dx^t \otimes \ez + \mathbf{e}^z \otimes \et`
+:math:`∂_x ∧ dx^y` Antisymetric :math:`+ dx^x \otimes \ey - \mathbf{e}^y \otimes \ex`
+:math:`∂_y ∧ dx^z` Antisymetric :math:`+ dx^y \otimes \ez - \mathbf{e}^z \otimes \ey`
+:math:`∂_z ∧ dx^x` Antisymetric :math:`+ dx^z \otimes \ex - \mathbf{e}^x \otimes \ez`
+================== ============ =====================================================
 
 .. }}}
 
