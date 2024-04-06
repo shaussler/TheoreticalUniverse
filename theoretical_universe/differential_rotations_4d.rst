@@ -29,23 +29,16 @@ obtain:
 
 .. math::
 
-   \begin{align}
-   %
-   \newcommand{\w}{\wedge}
-   \newcommand{\et}{\; \mathbf{e}_t}
-   \newcommand{\ex}{\; \mathbf{e}_x}
-   \newcommand{\ey}{\; \mathbf{e}_y}
-   \newcommand{\ez}{\; \mathbf{e}_z}
-   %
-   B^{\sharp\sharp}
-   &= \frac{1}{2}
-   \{
-                           & + F^{tx} \et \w \ex & + F^{ty} \et \w \ey & + F^{tz} \et \w \ez \\
-       - F^{tx} \ex \w \et &                     & + F^{xy} \ex \w \ey & - F^{zx} \ex \w \ez \\
-       - F^{ty} \ey \w \et & - F^{xy} \ey \w \ex &                     & + F^{yz} \ey \w \ez \\
-       - F^{tz} \ez \w \et & + F^{zx} \ez \w \ex & - F^{yz} \ez \w \ey &                     \\
-   \}
-   \end{align}
+   \begin{equation}
+   B^{♯♯}
+   = \frac{1}{2}
+   \begin{bmatrix}
+                          & + F^{tx} ∂_t ∧ ∂_x & + F^{ty} ∂_t ∧ ∂_y & + F^{tz} ∂_t ∧ ∂_z \\
+       - F^{tx} ∂_x ∧ ∂_t &                    & + F^{xy} ∂_x ∧ ∂_y & - F^{zx} ∂_x ∧ ∂_z \\
+       - F^{ty} ∂_y ∧ ∂_t & - F^{xy} ∂_y ∧ ∂_x &                    & + F^{yz} ∂_y ∧ ∂_z \\
+       - F^{tz} ∂_z ∧ ∂_t & + F^{zx} ∂_z ∧ ∂_x & - F^{yz} ∂_z ∧ ∂_y &                    \\
+   \end{bmatrix}
+   \end{equation}
 
 Metric
 ------
@@ -58,13 +51,13 @@ with:
 
 .. math::
 
-   \eta =
-   \{
+   η =
+   \begin{bmatrix}
      + 1 &  0 &  0 &  0 \\
        0 & -1 &  0 &  0 \\
        0 &  0 & -1 &  0 \\
        0 &  0 &  0 & -1 \\
-   \}
+   \end{bmatrix}
 
 With *musical notation* and *free matrix representation*, we can write
 explicitely the the coveriance/contravariance of the tensor as well as the
@@ -73,73 +66,71 @@ tensor basis:
 .. math::
 
    \begin{equation}
-   \newcommand{\x}{\otimes}
-   \eta^{\sharp\sharp} =
-   \{
+   \eta^{♯♯} =
+   \begin{bmatrix}
      \begin{array}{rrrr}
-     + 1 \et \x \et &  0 \ex \x \et &  0 \ey \x \et &  0 \ey \x \et \\
-       0 \et \x \ex & -1 \ex \x \ex &  0 \ey \x \ex &  0 \ey \x \ex \\
-       0 \et \x \ey &  0 \ex \x \ey & -1 \ey \x \ey &  0 \ey \x \ey \\
-       0 \et \x \ez &  0 \ex \x \ez &  0 \ey \x \ez & -1 \ey \x \ez \\
+     + 1 \; ∂_t ⊗ ∂_t &  0 \; ∂_x ⊗ ∂_t &  0 \; ∂_y ⊗ ∂_t &  0 \; ∂_y ⊗ ∂_t \\
+       0 \; ∂_t ⊗ ∂_x & -1 \; ∂_x ⊗ ∂_x &  0 \; ∂_y ⊗ ∂_x &  0 \; ∂_y ⊗ ∂_x \\
+       0 \; ∂_t ⊗ ∂_y &  0 \; ∂_x ⊗ ∂_y & -1 \; ∂_y ⊗ ∂_y &  0 \; ∂_y ⊗ ∂_y \\
+       0 \; ∂_t ⊗ ∂_z &  0 \; ∂_x ⊗ ∂_z &  0 \; ∂_y ⊗ ∂_z & -1 \; ∂_y ⊗ ∂_z \\
      \end{array}
-   \}
+   \end{bmatrix}
    \end{equation}
 
 Which permits to rewrite the metrix tensor in a compact and convenient manner:
 
 .. math::
 
-   \eta^{\sharp\sharp} = 
-   \{
-       +1 \et \otimes \et \\
-       -1 \ex \otimes \ex \\
-       -1 \ey \otimes \ey \\
-       -1 \ez \otimes \ez \\
-   \}
+   \begin{equation}
+   \eta^{♯♯} =
+   \begin{bmatrix}
+     +1 ∂_t ⊗ ∂_t \\
+     -1 ∂_x ⊗ ∂_x \\
+     -1 ∂_y ⊗ ∂_y \\
+     -1 ∂_z ⊗ ∂_z \\
+   \end{bmatrix}
+   \end{equation}
 
 Equivalently and with the same procedure and arguments, we express the doubly
 covariant metric tensor with:
 
 .. math::
 
-   \eta^{\flat\flat} = 
-   \{
-       +1 \eT \otimes \eT \\
-       -1 \eX \otimes \eX \\
-       -1 \eY \otimes \eY \\
-       -1 \eZ \otimes \eZ \\
-   \}
+   \begin{equation}
+   \eta^{♭♭} =
+   \begin{bmatrix}
+     +1 dx^t ⊗ dx^t \\
+     -1 dx^x ⊗ dx^x \\
+     -1 dx^y ⊗ dx^y \\
+     -1 dx^z ⊗ dx^z \\
+   \end{bmatrix}
+   \end{equation}
 
 For the basis vectors, this means:
-    
-.. math::
-
-   \mathbf{e}_\mu \wedge \mathbf{e}_\nu
-   = \frac{1}{2}
-   (\mathbf{e}_\mu \otimes \mathbf{e}_\nu - \mathbf{e}_\nu \otimes \mathbf{e}_\mu)
-
-We can flatten a basis vector with the flat operator :math:`\flat`
 
 .. math::
 
-   (\mathbf{e}_\mu)^\flat = \eta_{\mu\nu} \mathbf{e}^\nu
+   ∂_μ ∧ ∂_ν = \frac{1}{2} (∂_μ ⊗ ∂_ν - ∂_ν ⊗ ∂_μ)
+
+We can flatten a basis vector with the flat operator :math:`♭`
+
+.. math::
+
+   (∂_μ)^♭ = η_{μν} dx^ν
 
 And flatten the wedge product like so
 
 .. math::
 
-   (\mathbf{e}_\mu \wedge \mathbf{e}_\nu)^{\flat\sharp}
-   = \eta_{\gamma\mu} \mathbf{e}^\gamma \wedge \mathbf{e}_\nu
+   (∂_μ ∧ ∂_ν)^{♭♯} = η_{γμ} dx^γ ∧ ∂_ν
 
 .. math::
 
-   (\mathbf{e}_\mu \wedge \mathbf{e}_\nu)^{\sharp\flat}
-   = \eta_{\gamma\nu} \mathbf{e}_\mu \wedge \mathbf{e}^\gamma
+   (∂_μ ∧ ∂_ν)^{♯♭} = η_{γν} ∂_μ ∧ dx^γ
 
 .. math::
 
-   (\mathbf{e}_\mu \wedge \mathbf{e}_\nu)^{\flat\flat}
-   = \eta_{\delta\mu} \eta_{\gamma\nu} \mathbf{e}^\delta \wedge \mathbf{e}^\gamma
+   (∂_μ ∧ ∂_ν)^{♭♭} = η_{δμ} η_{γν} dx^δ ∧ dx^γ
 
 .. }}}
 
@@ -152,79 +143,64 @@ For all basis bivectors:
 
 .. math::
 
-   \begin{alignat*}{1}
-   \newcommand{\eG}{\mathbf{e}^\gamma}
-   \newcommand{\g}{\gamma}
-   \newcommand{\w}{\wedge}
-   \newcommand{\fl}{\flat}
-   \newcommand{\sh}{\sharp}
-   (\et \w \ex)^{\fl\sh} &= \eta_{t \g} \eG \w \ex &= \eta_{t t} \et \w \ex &= + \et \w \ex \\
-   (\et \w \ey)^{\fl\sh} &= \eta_{t \g} \eG \w \ey &= \eta_{t t} \et \w \ey &= + \et \w \ey \\
-   (\et \w \ez)^{\fl\sh} &= \eta_{t \g} \eG \w \ez &= \eta_{t t} \et \w \ez &= + \et \w \ez \\
-   (\ex \w \ey)^{\fl\sh} &= \eta_{x \g} \eG \w \ey &= \eta_{x x} \ex \w \ey &= - \ex \w \ey \\
-   (\ey \w \ez)^{\fl\sh} &= \eta_{y \g} \eG \w \ez &= \eta_{y y} \ey \w \ez &= - \ey \w \ez \\
-   (\ez \w \ex)^{\fl\sh} &= \eta_{z \g} \eG \w \ex &= \eta_{z z} \ez \w \ex &= - \ez \w \ex \\
-   \end{alignat*}
+   \begin{array}{r}
+   (∂_t ∧ ∂_x)^{♭♯} =& η_{tγ} dx^γ ∧ ∂_x =& η_{tt} ∂_t ∧ ∂_x =& + ∂_t ∧ ∂_x \\
+   (∂_t ∧ ∂_y)^{♭♯} =& η_{tγ} dx^γ ∧ ∂_y =& η_{tt} ∂_t ∧ ∂_y =& + ∂_t ∧ ∂_y \\
+   (∂_t ∧ ∂_z)^{♭♯} =& η_{tγ} dx^γ ∧ ∂_z =& η_{tt} ∂_t ∧ ∂_z =& + ∂_t ∧ ∂_z \\
+   (∂_x ∧ ∂_y)^{♭♯} =& η_{xγ} dx^γ ∧ ∂_y =& η_{xx} ∂_x ∧ ∂_y =& - ∂_x ∧ ∂_y \\
+   (∂_y ∧ ∂_z)^{♭♯} =& η_{yγ} dx^γ ∧ ∂_z =& η_{yy} ∂_y ∧ ∂_z =& - ∂_y ∧ ∂_z \\
+   (∂_z ∧ ∂_x)^{♭♯} =& η_{zγ} dx^γ ∧ ∂_x =& η_{zz} ∂_z ∧ ∂_x =& - ∂_z ∧ ∂_x \\
+   \end{array}
 
 Expanding and simplifying, this results in the following explicit expression of
 the mixed wedge products:
 
 .. math::
 
-   \begin{alignat*}{1}
-   \newcommand{\eG}{\mathbf{e}^\gamma}
-   \newcommand{\g}{\gamma}
-   \newcommand{\x}{\otimes}
-   \newcommand{\w}{\wedge}
-   \newcommand{\fl}{\flat}
-   \newcommand{\sh}{\sharp}
-   (\et \w \ex)^{\fl\sh} &= (\et \x \ex - \ex \x \et)^{\fl\sh} &=& \eta_{t \g} \eG \x \ex - \eta_{x \g} \eG \x \et \\
-   (\et \w \ey)^{\fl\sh} &= (\et \x \ey - \ey \x \et)^{\fl\sh} &=& \eta_{t \g} \eG \x \ey - \eta_{y \g} \eG \x \et \\
-   (\et \w \ez)^{\fl\sh} &= (\et \x \ez - \ez \x \et)^{\fl\sh} &=& \eta_{t \g} \eG \x \ez - \eta_{z \g} \eG \x \et \\
-   (\ex \w \ey)^{\fl\sh} &= (\ex \x \ey - \ey \x \ex)^{\fl\sh} &=& \eta_{x \g} \eG \x \ey - \eta_{y \g} \eG \x \ex \\
-   (\ey \w \ez)^{\fl\sh} &= (\ey \x \ez - \ez \x \ey)^{\fl\sh} &=& \eta_{y \g} \eG \x \ez - \eta_{z \g} \eG \x \ey \\
-   (\ez \w \ex)^{\fl\sh} &= (\ez \x \ex - \ex \x \ez)^{\fl\sh} &=& \eta_{z \g} \eG \x \ex - \eta_{x \g} \eG \x \ez \\
-   \end{alignat*}
+   \begin{array}{r}
+   (∂_t ∧ ∂_x)^{♭♯} =& (∂_t ⊗ ∂_x - ∂_x ⊗ ∂_t)^{♭♯} =& η_{tγ} dx^γ ⊗ ∂_x - η_{xγ} dx^γ ⊗ ∂_t \\
+   (∂_t ∧ ∂_y)^{♭♯} =& (∂_t ⊗ ∂_y - ∂_y ⊗ ∂_t)^{♭♯} =& η_{tγ} dx^γ ⊗ ∂_y - η_{yγ} dx^γ ⊗ ∂_t \\
+   (∂_t ∧ ∂_z)^{♭♯} =& (∂_t ⊗ ∂_z - ∂_z ⊗ ∂_t)^{♭♯} =& η_{tγ} dx^γ ⊗ ∂_z - η_{zγ} dx^γ ⊗ ∂_t \\
+   (∂_x ∧ ∂_y)^{♭♯} =& (∂_x ⊗ ∂_y - ∂_y ⊗ ∂_x)^{♭♯} =& η_{xγ} dx^γ ⊗ ∂_y - η_{yγ} dx^γ ⊗ ∂_x \\
+   (∂_y ∧ ∂_z)^{♭♯} =& (∂_y ⊗ ∂_z - ∂_z ⊗ ∂_y)^{♭♯} =& η_{yγ} dx^γ ⊗ ∂_z - η_{zγ} dx^γ ⊗ ∂_y \\
+   (∂_z ∧ ∂_x)^{♭♯} =& (∂_z ⊗ ∂_x - ∂_x ⊗ ∂_z)^{♭♯} =& η_{zγ} dx^γ ⊗ ∂_x - η_{xγ} dx^γ ⊗ ∂_z \\
+   \end{array}
 
 .. math::
 
-   \begin{alignat*}{1}
-   \newcommand{\x}{\otimes}
-   \newcommand{\w}{\wedge}
-   \newcommand{\fl}{\flat}
-   \newcommand{\sh}{\sharp}
-   (\et \w \ex)^{\fl\sh} &= \eta_{t t} \eT \x \ex - \eta_{x x} \eX \x \et &= + \eT \x \ex + \eX \x \et \\
-   (\et \w \ey)^{\fl\sh} &= \eta_{t t} \eT \x \ey - \eta_{y y} \eY \x \et &= + \eT \x \ey + \eY \x \et \\
-   (\et \w \ez)^{\fl\sh} &= \eta_{t t} \eT \x \ez - \eta_{z z} \eZ \x \et &= + \eT \x \ez + \eZ \x \et \\
-   (\ex \w \ey)^{\fl\sh} &= \eta_{x x} \eX \x \ey - \eta_{y y} \eY \x \ex &= - \eX \x \ey + \eY \x \ex \\
-   (\ey \w \ez)^{\fl\sh} &= \eta_{y y} \eY \x \ez - \eta_{z z} \eZ \x \ey &= - \eY \x \ez + \eZ \x \ey \\
-   (\ez \w \ex)^{\fl\sh} &= \eta_{z z} \eZ \x \ex - \eta_{x x} \eX \x \ez &= - \eZ \x \ex + \eX \x \ez \\
-   \end{alignat*}
+   \begin{array}{r}
+   (∂_t ∧ ∂_x)^{♭♯} &= η_{tt} dx^t ⊗ ∂_x - η_{xx} dx^x ⊗ ∂_t &= + dx^t ⊗ ∂_x + dx^x ⊗ ∂_t \\
+   (∂_t ∧ ∂_y)^{♭♯} &= η_{tt} dx^t ⊗ ∂_y - η_{yy} dx^y ⊗ ∂_t &= + dx^t ⊗ ∂_y + dx^y ⊗ ∂_t \\
+   (∂_t ∧ ∂_z)^{♭♯} &= η_{tt} dx^t ⊗ ∂_z - η_{zz} dx^z ⊗ ∂_t &= + dx^t ⊗ ∂_z + dx^z ⊗ ∂_t \\
+   (∂_x ∧ ∂_y)^{♭♯} &= η_{xx} dx^x ⊗ ∂_y - η_{yy} dx^y ⊗ ∂_x &= - dx^x ⊗ ∂_y + dx^y ⊗ ∂_x \\
+   (∂_y ∧ ∂_z)^{♭♯} &= η_{yy} dx^y ⊗ ∂_z - η_{zz} dx^z ⊗ ∂_y &= - dx^y ⊗ ∂_z + dx^z ⊗ ∂_y \\
+   (∂_z ∧ ∂_x)^{♭♯} &= η_{zz} dx^z ⊗ ∂_x - η_{xx} dx^x ⊗ ∂_z &= - dx^z ⊗ ∂_x + dx^x ⊗ ∂_z \\
+   \end{array}
 
 .. math::
 
-   \begin{alignat*}{}
-   \eT \wedge \ex &= + \mathbf{e}^t \otimes \ex + \mathbf{e}^x \otimes \et \\
-   \eT \wedge \ey &= + \mathbf{e}^t \otimes \ey + \mathbf{e}^y \otimes \et \\
-   \eT \wedge \ez &= + \mathbf{e}^t \otimes \ez + \mathbf{e}^z \otimes \et \\
-   \eX \wedge \ey &= + \mathbf{e}^x \otimes \ey - \mathbf{e}^y \otimes \ex \\
-   \eY \wedge \ez &= + \mathbf{e}^y \otimes \ez - \mathbf{e}^z \otimes \ey \\
-   \eZ \wedge \ex &= + \mathbf{e}^z \otimes \ex - \mathbf{e}^x \otimes \ez \\
-   \end{alignat*}
+   \begin{array}{r}
+   dx^t ∧ ∂_x =& + dx^t ⊗ ∂_x + dx^x ⊗ ∂_t \\
+   dx^t ∧ ∂_y =& + dx^t ⊗ ∂_y + dx^y ⊗ ∂_t \\
+   dx^t ∧ ∂_z =& + dx^t ⊗ ∂_z + dx^z ⊗ ∂_t \\
+   dx^x ∧ ∂_y =& + dx^x ⊗ ∂_y - dx^y ⊗ ∂_x \\
+   dx^y ∧ ∂_z =& + dx^y ⊗ ∂_z - dx^z ⊗ ∂_y \\
+   dx^z ∧ ∂_x =& + dx^z ⊗ ∂_x - dx^x ⊗ ∂_z \\
+   \end{array}
 
 From the explicit calculation of the basis elements, we observe the following
 properties:
 
-====================== ============
-Basis element          Symmetry
-====================== ============
-:math:`\eT \wedge \ex` Symetric
-:math:`\eT \wedge \ey` Symetric
-:math:`\eT \wedge \ez` Symetric
-:math:`\eX \wedge \ey` Antisymetric
-:math:`\eY \wedge \ez` Antisymetric
-:math:`\eZ \wedge \ex` Antisymetric
-====================== ============
+================== ============
+Basis element      Symmetry
+================== ============
+:math:`dx^t ∧ ∂_x` Symetric
+:math:`dx^t ∧ ∂_y` Symetric
+:math:`dx^t ∧ ∂_z` Symetric
+:math:`dx^x ∧ ∂_y` Antisymetric
+:math:`dx^y ∧ ∂_z` Antisymetric
+:math:`dx^z ∧ ∂_x` Antisymetric
+================== ============
 
 .. }}}
 
@@ -257,20 +233,14 @@ the mixed wedge products:
 
 .. math::
 
-   \begin{alignat*}{1}
-   \newcommand{\eG}{\mathbf{e}^\gamma}
-   \newcommand{\g}{\gamma}
-   \newcommand{\x}{\otimes}
-   \newcommand{\w}{\wedge}
-   \newcommand{\fl}{\flat}
-   \newcommand{\sh}{\sharp}
-   (\et \w \ex)^{\sh\fl} &= (\et \x \ex - \ex \x \et)^{\sh\sh} &= \eta_{x \g} \et \x \eG - \eta_{t \g} \ex \x \eG \\
-   (\et \w \ey)^{\sh\fl} &= (\et \x \ey - \ey \x \et)^{\sh\sh} &= \eta_{y \g} \et \x \eG - \eta_{t \g} \ey \x \eG \\
-   (\et \w \ez)^{\sh\fl} &= (\et \x \ez - \ez \x \et)^{\sh\sh} &= \eta_{z \g} \et \x \eG - \eta_{t \g} \ez \x \eG \\
-   (\ex \w \ey)^{\sh\fl} &= (\ex \x \ey - \ey \x \ex)^{\sh\sh} &= \eta_{y \g} \ex \x \eG - \eta_{x \g} \ey \x \eG \\
-   (\ey \w \ez)^{\sh\fl} &= (\ey \x \ez - \ez \x \ey)^{\sh\sh} &= \eta_{z \g} \ey \x \eG - \eta_{y \g} \ez \x \eG \\
-   (\ez \w \ex)^{\sh\fl} &= (\ez \x \ex - \ex \x \ez)^{\sh\sh} &= \eta_{x \g} \ez \x \eG - \eta_{z \g} \ex \x \eG \\
-   \end{alignat*}
+   \begin{array}{r}
+   (∂_t ∧ ∂_x)^{♯♭} =& (∂_t ⊗ ∂_x - ∂_x ⊗ ∂_t)^{♯♯} =& η_{xγ} ∂_t ⊗ dx^γ - η_{tγ} ∂_x ⊗ dx^γ \\
+   (∂_t ∧ ∂_y)^{♯♭} =& (∂_t ⊗ ∂_y - ∂_y ⊗ ∂_t)^{♯♯} =& η_{yγ} ∂_t ⊗ dx^γ - η_{tγ} ∂_y ⊗ dx^γ \\
+   (∂_t ∧ ∂_z)^{♯♭} =& (∂_t ⊗ ∂_z - ∂_z ⊗ ∂_t)^{♯♯} =& η_{zγ} ∂_t ⊗ dx^γ - η_{tγ} ∂_z ⊗ dx^γ \\
+   (∂_x ∧ ∂_y)^{♯♭} =& (∂_x ⊗ ∂_y - ∂_y ⊗ ∂_x)^{♯♯} =& η_{yγ} ∂_x ⊗ dx^γ - η_{xγ} ∂_y ⊗ dx^γ \\
+   (∂_y ∧ ∂_z)^{♯♭} =& (∂_y ⊗ ∂_z - ∂_z ⊗ ∂_y)^{♯♯} =& η_{zγ} ∂_y ⊗ dx^γ - η_{yγ} ∂_z ⊗ dx^γ \\
+   (∂_z ∧ ∂_x)^{♯♭} =& (∂_z ⊗ ∂_x - ∂_x ⊗ ∂_z)^{♯♯} =& η_{xγ} ∂_z ⊗ dx^γ - η_{zγ} ∂_x ⊗ dx^γ \\
+   \end{array}
 
 .. math::
 
