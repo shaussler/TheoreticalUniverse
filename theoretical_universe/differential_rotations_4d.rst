@@ -10,15 +10,17 @@ a linear combination of 6 parameters:
 
 .. math::
 
-   B^{\sharp\sharp}
-   = \{
-       F^{tx} \; \et \wedge \ex \\
-       F^{ty} \; \et \wedge \ey \\
-       F^{tz} \; \et \wedge \ez \\
-       F^{xy} \; \ex \wedge \ey \\
-       F^{yz} \; \ey \wedge \ez \\
-       F^{zx} \; \ez \wedge \ex \\
-   \}
+   \begin{equation}
+   B^{♯♯}
+   = \begin{bmatrix}
+     F^{tx} ∂_t ∧ ∂_x \\
+     F^{ty} ∂_t ∧ ∂_y \\
+     F^{tz} ∂_t ∧ ∂_z \\
+     F^{xy} ∂_x ∧ ∂_y \\
+     F^{yz} ∂_y ∧ ∂_z \\
+     F^{zx} ∂_z ∧ ∂_x \\
+   \end{bmatrix}
+   \end{equation}
 
 The sharp symbol :math:`\sharp` indicates that the components are doubly
 contravariant tensor components. Reordering to a row/column matrix
