@@ -13,8 +13,9 @@ a linear combination of the three associated basis bivectors:
 .. math::
 
    \begin{equation}
-   \renewcommand{\∧}{\wedge}
-   R = R^x \ey \∧ \ez + R^y \ez \∧ \ex + R^z \ex \∧ \ey
+   % ∂ u2202
+   % ∧ u2227
+   R = R^x ∂_y ∧ ∂_z + R^y ∂_z ∧ ∂_x + R^z ∂_x ∧ ∂_y
    \end{equation}
 
 With free matrix representation, the bivector can be written as a single
@@ -23,13 +24,13 @@ column:
 .. math::
 
    \begin{equation}
-   \renewcommand{\{}{\begin{bmatrix}} \renewcommand{\}}{\end{bmatrix}}
-   \renewcommand{\∧}{\wedge}
+   % ∂ u2202
+   % ∧ u2227
    R =
    \{
-     + R^x \ey \∧ \ez \\
-     + R^y \ez \∧ \ex \\
-     + R^z \ex \∧ \ey \\
+     + R^x ∂_y ∧ ∂_z \\
+     + R^y ∂_z ∧ ∂_x \\
+     + R^z ∂_x ∧ ∂_y \\
    \}
    \end{equation}
    
@@ -38,46 +39,57 @@ Or with a row/column matrix notation:
 .. math::
 
    \begin{equation}
-   \renewcommand{\{}{\begin{bmatrix}} \renewcommand{\}}{\end{bmatrix}}
-   \renewcommand{\∧}{\wedge}
+   % ∂ u2202
+   % ∧ u2227
    R =
    \{
-                      & + R^z \ex \∧ \ey &                  \\
-                      &                  & + R^x \ey \∧ \ez \\
-     + R^y \ez \∧ \ex &                  &                  \\
+                     & + R^z ∂_x ∧ ∂_y &                 \\
+                     &                 & + R^x ∂_y ∧ ∂_z \\
+     + R^y ∂_z ∧ ∂_x &                 &                 \\
    \} 
    \end{equation}
 
-The anti-symmetric property of the wedge product :math:`\mathbf{e}_i \wedge \mathbf{e}_j = - \mathbf{e}_j \wedge
-\mathbf{e}_i` permit to split the terms:
+The anti-symmetric property of the wedge product :math:`\partial_i \wedge
+\partial_j = - \partial_j \wedge \partial_i` permit to split the terms:
 
 .. math::
 
    \begin{equation}
-   \newcommand{\e}{\mathbf{e}}
-   A \e_i \wedge \e_j = \frac{1}{2} (A\e_i \wedge \e_j - A\e_j \wedge e_i)
+   % ∂ u2202
+   % ∧ u2227
+   A ∂_i ∧ ∂_j = \frac{1}{2} (A ∂_i ∧ ∂_j - A ∂_j ∧ ∂_i)
    \end{equation}
 
 We obtain:
 
 .. math::
 
+   \begin{equation}
+   % ∂ u2202
+   % ∧ u2227
    R
    = \frac{1}{2}
-   \{                     & +R^z \ex \wedge \ey & -R^y \ex \wedge \ez \\
-      -R^z \ey \wedge \ex &                     & +R^x \ey \wedge \ez \\
-      +R^y \ez \wedge \ex & -R^x \ez \wedge \ey &                     \\
+   \{
+                      & + R^z ∂_x ∧ ∂_y & - R^y ∂_x ∧ ∂_z \\
+      - R^z ∂_y ∧ ∂_x &                 & + R^x ∂_y ∧ ∂_z \\
+      + R^y ∂_z ∧ ∂_x & - R^x ∂_z ∧ ∂_y &                 \\
    \}
+   \end{equation}
 
 Or we can take the transpose:
 
 .. math::
 
+   \begin{equation}
+   % ∂ u2202
+   % ∧ u2227
    R = \frac{1}{2}
-   \{                       & -R^{z} \ey \wedge \ex & +R^{y} \ez \wedge \ex \\
-      +R^{z} \ex \wedge \ey &                       & -R^{x} \ez \wedge \ey \\
-      -R^{y} \ex \wedge \ez & +R^{x} \ey \wedge \ez &                       \\
+   \{
+                     & -R^z ∂_y ∧ ∂_x & +R^y ∂_z ∧ ∂_x \\
+      +R^z ∂_x ∧ ∂_y &                & -R^x ∂_z ∧ ∂_y \\
+      -R^y ∂_x ∧ ∂_z & +R^x ∂_y ∧ ∂_z &                \\
    \}
+   \end{equation}
 
 Flattening of the first kind
 ----------------------------
@@ -90,14 +102,14 @@ on covectors. In this section, we transform the :math:`R` to the mixed tensor.
 .. math::
 
    \begin{equation}
-   \newcommand{\∧}{\wedge} %u2227
-   \newcommand{\♭}{\flat} %u266D
-   \newcommand{\♯}{\sharp} %u266F
+   % ∧ u2227
+   % ♭ u266D
+   % ♯ u266F
    R^{\flat\sharp} =
    \{
-                      & - R^z \eY \∧ \ex & + R^y \eZ \∧ \ex \\
-     + R^z \eX \∧ \ey &                  & - R^x \eZ \∧ \ey \\
-     - R^y \eX \∧ \ez & + R^x \eY \∧ \ez &                  \\
+                       & - R^z dx^y ∧ ∂_x & + R^y dx^z \∧ ∂_x \\
+     + R^z dx^x \∧ ∂_y &                  & - R^x dx^z \∧ ∂_y \\
+     - R^y dx^x \∧ ∂_z & + R^x dx^y ∧ ∂_z &                  \\
    \}
    \end{equation}
 
@@ -108,34 +120,34 @@ on covectors. In this section, we transform the :math:`R` to the mixed tensor.
    .. math::
    
       \begin{alignat*}{1}
-      \newcommand{\∧}{\wedge} %u2227
-      \newcommand{\♭}{\flat} %u266D
-      \newcommand{\♯}{\sharp} %u266F
-      R^{\flat\sharp}
-      &= (R^{\sharp\sharp})^{\flat\sharp}
+      % ∧ u2227
+      % ♭ u266D
+      % ♯ u266F
+      R^{♭♯}
+      &= (R^{♯♯})^{♭♯}
       \\ &=
       \{
-                             & - R^z \ey \wedge \ex & + R^y \ez \wedge \ex \\
-        + R^z \ex \wedge \ey &                      & - R^x \ez \wedge \ey \\
-        - R^y \ex \wedge \ez & + R^x \ey \wedge \ez &                      \\
+                        & - R^z ∂_y ∧ ∂_x & + R^y ∂_z ∧ ∂_x \\
+        + R^z ∂_x ∧ ∂_y &                 & - R^x ∂_z ∧ ∂_y \\
+        - R^y ∂_x ∧ ∂_z & + R^x ∂_y ∧ ∂_z &                 \\
       \}^{\flat\sharp}
       \\ &=
       \{
-                             & - R^z \ey \wedge \ex & + R^y \ez \wedge \ex \\
-        + R^z \ex \wedge \ey &                      & - R^x \ez \wedge \ey \\
-        - R^y \ex \wedge \ez & + R^x \ey \wedge \ez &                      \\
+                        & - R^z ∂_y ∧ ∂_x & + R^y ∂_z ∧ ∂_x \\
+        + R^z ∂_x ∧ ∂_y &                 & - R^x ∂_z ∧ ∂_y \\
+        - R^y ∂_x ∧ ∂_z & + R^x ∂_y ∧ ∂_z &                 \\
       \}^{\flat\sharp}
       \\ &=
       \{
-                                  & - R^z (\ey \∧ \ex)^{\♭\♯} & + R^y (\ez \∧ \ex)^{\♭\♯} \\
-        + R^z (\ex \∧ \ey)^{\♭\♯} &                           & - R^x (\ez \∧ \ey)^{\♭\♯} \\
-        - R^y (\ex \∧ \ez)^{\♭\♯} & + R^x (\ey \∧ \ez)^{\♭\♯} &                           \\
+                               & - R^z (∂_y ∧ ∂_x)^{♭♯} & + R^y (∂_z ∧ ∂_x)^{♭♯} \\
+        + R^z (∂_x ∧ ∂_y)^{♭♯} &                        & - R^x (∂_z ∧ ∂_y)^{♭♯} \\
+        - R^y (∂_x ∧ ∂_z)^{♭♯} & + R^x (∂_y ∧ ∂_z)^{♭♯} &                        \\
       \}
       \\ &=
       \{
-                         & - R^z \eY \∧ \ex & + R^y \eZ \∧ \ex \\
-        + R^z \eX \∧ \ey &                  & - R^x \eZ \∧ \ey \\
-        - R^y \eX \∧ \ez & + R^x \eY \∧ \ez &                  \\
+                         & - R^z dx^y ∧ ∂_x & + R^y dx^z ∧ ∂_x \\
+        + R^z dx^x ∧ ∂_y &                  & - R^x dx^z ∧ ∂_y \\
+        - R^y dx^x ∧ ∂_z & + R^x dx^y ∧ ∂_z &                  \\
       \}
       \end{alignat*}
 
@@ -151,14 +163,9 @@ For all basis bivectors:
 .. math::
 
    \begin{alignat*}{1}
-   \newcommand{\eI}{\mathbf{e}^i}
-   \newcommand{\x}{\otimes}
-   \newcommand{\w}{\wedge}
-   \newcommand{\fl}{\flat}
-   \newcommand{\sh}{\sharp}
-   (\ex \w \ey)^{\sh\fl} &= \eta_{y i} \ex \w \eI &= \eta_{y y} \ex \w \eY &= \ex \w \eY \\
-   (\ey \w \ez)^{\sh\fl} &= \eta_{z i} \ey \w \eI &= \eta_{z z} \ey \w \eZ &= \ey \w \eZ \\
-   (\ez \w \ex)^{\sh\fl} &= \eta_{x i} \ez \w \eI &= \eta_{x x} \ez \w \eX &= \ez \w \eX \\
+   (∂_x ∧ ∂_y)^{♯♭} &= η_{yi} ∂_x ∧ dx^i &= η_{yy} ∂_x ∧ dx^y &= ∂_x ∧ dx^y \\
+   (∂_y ∧ ∂_z)^{♯♭} &= η_{zi} ∂_y ∧ dx^i &= η_{zz} ∂_y ∧ dx^z &= ∂_y ∧ dx^z \\
+   (∂_z ∧ ∂_x)^{♯♭} &= η_{xi} ∂_z ∧ dx^i &= η_{xx} ∂_z ∧ dx^x &= ∂_z ∧ dx^x \\
    \end{alignat*}
 
 Expanding the wedge product to its tensor form and simplifying, we find the
@@ -167,38 +174,28 @@ following explicit expression of the mixed wedge products in tensor form:
 .. math::
 
    \begin{alignat*}{1}
-   \newcommand{\eI}{\mathbf{e}^i}
-   \newcommand{\x}{\otimes}
-   \newcommand{\w}{\wedge}
-   \newcommand{\η}{\flat} %u03b7
-   \newcommand{\♭}{\flat} %u266D
-   \newcommand{\♯}{\sharp} %u266F
-   (\ex \w \ey)^{\♯\♭} &= (\ex \x \ey - \ey \x \ex)^{\♯\♭} &= \η_{yi} \ex \x \eI - \η_{xi} \ey \x \eI \\
-   (\ey \w \ez)^{\♯\♭} &= (\ey \x \ez - \ez \x \ey)^{\♯\♭} &= \η_{zi} \ey \x \eI - \η_{yi} \ez \x \eI \\
-   (\ez \w \ex)^{\♯\♭} &= (\ez \x \ex - \ex \x \ez)^{\♯\♭} &= \η_{xi} \ez \x \eI - \η_{zi} \ex \x \eI \\
+   (∂_x ∧ ∂_y)^{♯♭} &= (∂_x ⊗ ∂_y - ∂_y ⊗ ∂_x)^{♯♭} &= η_{yi} ∂_x ⊗ dx^i - η_{xi} ∂_y ⊗ dx^i \\
+   (∂_y ∧ ∂_z)^{♯♭} &= (∂_y ⊗ ∂_z - ∂_z ⊗ ∂_y)^{♯♭} &= η_{zi} ∂_y ⊗ dx^i - η_{yi} ∂_z ⊗ dx^i \\
+   (∂_z ∧ ∂_x)^{♯♭} &= (∂_z ⊗ ∂_x - ∂_x ⊗ ∂_z)^{♯♭} &= η_{xi} ∂_z ⊗ dx^i - η_{zi} ∂_x ⊗ dx^i \\
    \end{alignat*}
 
 .. math::
 
    \begin{alignat*}{1}
-   \newcommand{\x}{\otimes}
-   \newcommand{\w}{\wedge}
-   \newcommand{\♭}{\flat} %u266D
-   \newcommand{\♯}{\sharp} %u266F
-   (\ex \w \ey)^{\♯\♭} &= \eta_{yy} \ex \x \ey - \eta_{xx} \ey \x \ex &= \ex \x \ey - \ey \x \ex \\
-   (\ey \w \ez)^{\♯\♭} &= \eta_{zz} \ey \x \ez - \eta_{yy} \ez \x \ey &= \ey \x \ez - \ez \x \ey \\
-   (\ez \w \ex)^{\♯\♭} &= \eta_{xx} \ez \x \ex - \eta_{zz} \ex \x \ez &= \ez \x \ex - \ex \x \ez \\
+   (∂_x ∧ ∂_y)^{♯♭} &= η_{yy} ∂_x ⊗ ∂_y - η_{xx} ∂_y ⊗ ∂_x &= ∂_x ⊗ ∂_y - ∂_y ⊗ ∂_x \\
+   (∂_y ∧ ∂_z)^{♯♭} &= η_{zz} ∂_y ⊗ ∂_z - η_{yy} ∂_z ⊗ ∂_y &= ∂_y ⊗ ∂_z - ∂_z ⊗ ∂_y \\
+   (∂_z ∧ ∂_x)^{♯♭} &= η_{xx} ∂_z ⊗ ∂_x - η_{zz} ∂_x ⊗ ∂_z &= ∂_z ⊗ ∂_x - ∂_x ⊗ ∂_z \\
    \end{alignat*}
 
-From the explicit calculation of the basis elements, we observe the following
+From the ∂_xplicit calculation of the basis elements, we observe the following
 properties:
 
 ====================== ============ =============================================================
 Basis element          Symmetry     Expression
 ====================== ============ =============================================================
-:math:`\ex \wedge \eY` Antisymetric :math:`\mathbf{e}^x \otimes \ey - \mathbf{e}^y \otimes \ex`
-:math:`\ey \wedge \eZ` Antisymetric :math:`\mathbf{e}^y \otimes \ez - \mathbf{e}^z \otimes \ey`
-:math:`\ez \wedge \eX` Antisymetric :math:`\mathbf{e}^z \otimes \ex - \mathbf{e}^x \otimes \ez`
+:math:`\∂_x \wedge \eY` Antisymetric :math:`\mathbf{e}^x \otimes ∂_y - \mathbf{e}^y \otimes \∂_x`
+:math:`∂_y \wedge \eZ` Antisymetric :math:`\mathbf{e}^y \otimes ∂_z - \mathbf{e}^z \otimes ∂_y`
+:math:`∂_z \wedge \eX` Antisymetric :math:`\mathbf{e}^z \otimes \∂_x - \mathbf{e}^x \otimes ∂_z`
 ====================== ============ =============================================================
 
 .. math::
@@ -209,9 +206,9 @@ Basis element          Symmetry     Expression
    \newcommand{\♯}{\sharp} %u266F
    R^{\flat\sharp} =
    \{
-                      & - R^z \eY \∧ \ex & + R^y \eZ \∧ \ex \\
-     + R^z \eX \∧ \ey &                  & - R^x \eZ \∧ \ey \\
-     - R^y \eX \∧ \ez & + R^x \eY \∧ \ez &                  \\
+                      & - R^z dx^y ∧ ∂_x & + R^y dx^z ∧ ∂_x \\
+     + R^z dx^x ∧ ∂_y &                  & - R^x dx^z ∧ ∂_y \\
+     - R^y dx^x ∧ ∂_z & + R^x dx^y ∧ ∂_z &                  \\
    \}
    \end{equation}
 
@@ -221,35 +218,28 @@ Basis element          Symmetry     Expression
    .. math::
    
       \begin{alignat*}{1}
-      \newcommand{\∧}{\wedge} %u2227
-      \newcommand{\♭}{\flat} %u266D
-      \newcommand{\♯}{\sharp} %u266F
-      R^{\flat\sharp}
-      &= (R^{\sharp\sharp})^{\flat\sharp}
-      \\ &=
-      \{
-                             & - R^z \ey \wedge \ex & + R^y \ez \wedge \ex \\
-        + R^z \ex \wedge \ey &                      & - R^x \ez \wedge \ey \\
-        - R^y \ex \wedge \ez & + R^x \ey \wedge \ez &                      \\
-      \}^{\flat\sharp}
-      \\ &=
-      \{
-                             & - R^z \ey \wedge \ex & + R^y \ez \wedge \ex \\
-        + R^z \ex \wedge \ey &                      & - R^x \ez \wedge \ey \\
-        - R^y \ex \wedge \ez & + R^x \ey \wedge \ez &                      \\
-      \}^{\flat\sharp}
-      \\ &=
-      \{
-                                  & - R^z (\ey \∧ \ex)^{\♭\♯} & + R^y (\ez \∧ \ex)^{\♭\♯} \\
-        + R^z (\ex \∧ \ey)^{\♭\♯} &                           & - R^x (\ez \∧ \ey)^{\♭\♯} \\
-        - R^y (\ex \∧ \ez)^{\♭\♯} & + R^x (\ey \∧ \ez)^{\♭\♯} &                           \\
-      \}
-      \\ &=
-      \{
-                         & - R^z \eY \∧ \ex & + R^y \eZ \∧ \ex \\
-        + R^z \eX \∧ \ey &                  & - R^x \eZ \∧ \ey \\
-        - R^y \eX \∧ \ez & + R^x \eY \∧ \ez &                  \\
-      \}
+      R^{♭♯}
+      &= (R^{♯♯})^{♭♯} \\
+      &= \{
+                           & - R^z ∂_y ∧ ∂_x & + R^y ∂_z ∧ ∂_x \\
+           + R^z ∂_x ∧ ∂_y &                 & - R^x ∂_z ∧ ∂_y \\
+           - R^y ∂_x ∧ ∂_z & + R^x ∂_y ∧ ∂_z &                 \\
+         \}^{♭♯} \\
+      &= \{
+                           & - R^z ∂_y ∧ ∂_x & + R^y ∂_z ∧ ∂_x \\
+           + R^z ∂_x ∧ ∂_y &                & - R^x ∂_z ∧ ∂_y \\
+           - R^y ∂_x ∧ ∂_z & + R^x ∂_y ∧ ∂_z &                \\
+         \}^{\flat\sharp} \\
+      &= \{
+                                  & - R^z (∂_y ∧ ∂_x)^{♭♯} & + R^y (∂_z ∧ ∂_x)^{♭♯} \\
+           + R^z (∂_x ∧ ∂_y)^{♭♯} &                        & - R^x (∂_z ∧ ∂_y)^{♭♯} \\
+           - R^y (∂_x ∧ ∂_z)^{♭♯} & + R^x (∂_y ∧ ∂_z)^{♭♯} &                        \\
+         \} \\
+      &= \{
+                            & - R^z dx^y ∧ ∂_x & + R^y dx^z ∧ ∂_x \\
+           + R^z dx^x ∧ ∂_y &                  & - R^x dx^z ∧ ∂_y \\
+           - R^y dx^x ∧ ∂_z & + R^x dx^y ∧ ∂_z &                  \\
+         \}
       \end{alignat*}
 
 .. }}}
@@ -310,31 +300,20 @@ to the description of rotations expressed as a cross product :math:`\times`:
 .. math::
 
    \begin{align*}
-   \star R &= \star (
-       R^{x} \ey \wedge \ez +
-       R^{y} \ez \wedge \ex +
-       R^{z} \ex \wedge \ey 
-   )\\
-   &=
-   R^{x} \star (\ey \wedge \ez) +
-   R^{y} \star (\ez \wedge \ex) +
-   R^{z} \star (\ex \wedge \ey) \\
-   &=
-   R^{x} \ex +
-   R^{y} \ey +
-   R^{z} \ez
+   ⋆R &= ⋆(R^x   ∂_y ∧ ∂_z  + R^y   ∂_z ∧ ∂_x  + R^z   ∂_x ∧ ∂_y) \\
+      &=   R^x ⋆(∂_y ∧ ∂_z) + R^y ⋆(∂_z ∧ ∂_x) + R^z ⋆(∂_x ∧ ∂_y) \\
+      &=   R^x ∂_x + R^y ∂_y + R^z ∂_z
    \end{align*}
 
-That is, the Hodge star of the rotation expressed as a linear comibination of
+That is, the Hodge star of the rotation ∂_xpressed as a linear comibination of
 bivectors is exactly a rotation in terms of cross products in the Hodge dual
 space:
 
 .. math::
 
-   \star R &=
-   R^{x} \ey \times \ez +
-   R^{y} \ez \times \ex +
-   R^{z} \ex \times \ey \\
+   \begin{equation}
+   ⋆R = R^x ∂_y ⨯ ∂_z + R^y ∂_z ⨯ ∂_x + R^z ∂_x ⨯ ∂_y
+   \end{equation}
 
 We could have written a covector in the same explicit manner. This notation is
 very conveniant when performing calculations in Cartan's framework as it
@@ -342,4 +321,3 @@ permits to identify and organize terms for practical calculations by falling
 back to regular matrix multiplication.
 
 .. }}}
-
