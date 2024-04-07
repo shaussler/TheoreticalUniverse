@@ -290,6 +290,8 @@ terms of tensor products:
 .. admonition:: All calculation steps
    :class: dropdown
 
+   .. {{{
+
    Expand in terms of tensor product:
 
    .. math::
@@ -303,7 +305,7 @@ terms of tensor products:
       (∂_z ∧ ∂_x)^{♯♭} &=& (∂_z ⊗ ∂_x - ∂_x ⊗ ∂_z)^{♯♭} \\
       \end{array}
 
-   Apply the flattening operator :math:`♭` to the second tensor component:
+   Distribute the flattening operator :math:`♭` to the second tensor component:
 
    .. math::
 
@@ -316,7 +318,7 @@ terms of tensor products:
       (∂_z ∧ ∂_x)^{♯♭} &=& (∂_z^♯ ⊗ ∂_x^♭ - ∂_x^♯ ⊗ ∂_z^♭) \\
       \end{array}
 
-   Expand:
+   Apply and expand:
 
    .. math::
 
@@ -343,19 +345,33 @@ terms of tensor products:
       (∂_z ∧ ∂_x)^{♯♭} &=& η_{xγ} ∂_z ⊗ dx^γ - η_{zγ} ∂_x ⊗ dx^γ \\
       \end{array}
 
-   Indentify the non-zero component of the Minkowski metric and replace with
-   numerical values:
+   Indentify the non-zero component of the Minkowski metric:
 
    .. math::
 
       \begin{array}{}
-      (∂_t ∧ ∂_x)^{♯♭} &=& η_{xx} ∂_t ⊗ dx^x - η_{tt} ∂_ex ⊗ dx^t &=& - ∂_t ⊗ dx^x - ∂_x ⊗ dx^t \\
-      (∂_t ∧ ∂_y)^{♯♭} &=& η_{yy} ∂_t ⊗ dx^y - η_{tt} ∂_ey ⊗ dx^t &=& - ∂_t ⊗ dx^y - ∂_y ⊗ dx^t \\
-      (∂_t ∧ ∂_z)^{♯♭} &=& η_{zz} ∂_t ⊗ dx^z - η_{tt} ∂_ez ⊗ dx^t &=& - ∂_t ⊗ dx^z - ∂_z ⊗ dx^t \\
-      (∂_x ∧ ∂_y)^{♯♭} &=& η_{yy} ∂_x ⊗ dx^y - η_{xx} ∂_ey ⊗ dx^x &=& - ∂_x ⊗ dx^y + ∂_y ⊗ dx^x \\
-      (∂_y ∧ ∂_z)^{♯♭} &=& η_{zz} ∂_y ⊗ dx^z - η_{yy} ∂_ez ⊗ dx^y &=& - ∂_y ⊗ dx^z + ∂_z ⊗ dx^y \\
-      (∂_z ∧ ∂_x)^{♯♭} &=& η_{xx} ∂_z ⊗ dx^x - η_{zz} ∂_ex ⊗ dx^z &=& - ∂_z ⊗ dx^x + ∂_x ⊗ dx^z \\
+      (∂_t ∧ ∂_x)^{♯♭} &=& η_{xx} ∂_t ⊗ dx^x - η_{tt} ∂_ex ⊗ dx^t \\
+      (∂_t ∧ ∂_y)^{♯♭} &=& η_{yy} ∂_t ⊗ dx^y - η_{tt} ∂_ey ⊗ dx^t \\
+      (∂_t ∧ ∂_z)^{♯♭} &=& η_{zz} ∂_t ⊗ dx^z - η_{tt} ∂_ez ⊗ dx^t \\
+      (∂_x ∧ ∂_y)^{♯♭} &=& η_{yy} ∂_x ⊗ dx^y - η_{xx} ∂_ey ⊗ dx^x \\
+      (∂_y ∧ ∂_z)^{♯♭} &=& η_{zz} ∂_y ⊗ dx^z - η_{yy} ∂_ez ⊗ dx^y \\
+      (∂_z ∧ ∂_x)^{♯♭} &=& η_{xx} ∂_z ⊗ dx^x - η_{zz} ∂_ex ⊗ dx^z \\
       \end{array}
+
+   Apply numerical values:
+
+   .. math::
+
+      \begin{array}{}
+      (∂_t ∧ ∂_x)^{♯♭} &=& - ∂_t ⊗ dx^x - ∂_x ⊗ dx^t \\
+      (∂_t ∧ ∂_y)^{♯♭} &=& - ∂_t ⊗ dx^y - ∂_y ⊗ dx^t \\
+      (∂_t ∧ ∂_z)^{♯♭} &=& - ∂_t ⊗ dx^z - ∂_z ⊗ dx^t \\
+      (∂_x ∧ ∂_y)^{♯♭} &=& - ∂_x ⊗ dx^y + ∂_y ⊗ dx^x \\
+      (∂_y ∧ ∂_z)^{♯♭} &=& - ∂_y ⊗ dx^z + ∂_z ⊗ dx^y \\
+      (∂_z ∧ ∂_x)^{♯♭} &=& - ∂_z ⊗ dx^x + ∂_x ⊗ dx^z \\
+      \end{array}
+
+   .. }}}
 
 We can then identify the expressions for the mixed wedge product explicitely in
 terms of tensor products:
@@ -443,14 +459,17 @@ tensor is obtained by applying the flatternig operator :math:`\flat`:
    \end{bmatrix}
    \end{equation}
 
-.. admonition:: Every calculation step
+.. admonition:: Every calculation steps
    :class: dropdown
 
+   .. {{{
+
+   Apply the musical operator :math:`♯♭`
+
    .. math::
-   
-      \begin{align*}
-      B^{♯♭}
-      &=
+
+      \begin{equation}
+      B^{♯♭} =
       \begin{bmatrix}
         F^{tx} \; ∂_t ∧ ∂_x \\
         F^{ty} \; ∂_t ∧ ∂_y \\
@@ -459,7 +478,14 @@ tensor is obtained by applying the flatternig operator :math:`\flat`:
         F^{yz} \; ∂_y ∧ ∂_z \\
         F^{zx} \; ∂_z ∧ ∂_x \\
       \end{bmatrix}^{♯♭}
-      =
+      \end{equation}
+
+   Distribute the musical operators to each matrix elements:
+
+   .. math::
+
+      \begin{equation}
+      B^{♯♭} =
       \begin{bmatrix}
         F^{tx} \; (∂_t ∧ ∂_x)^{♯♭} \\
         F^{ty} \; (∂_t ∧ ∂_y)^{♯♭} \\
@@ -468,7 +494,30 @@ tensor is obtained by applying the flatternig operator :math:`\flat`:
         F^{yz} \; (∂_y ∧ ∂_z)^{♯♭} \\
         F^{zx} \; (∂_z ∧ ∂_x)^{♯♭} \\
       \end{bmatrix}
-      =
+      \end{equation}
+
+   Distribute the musical operators:
+
+   .. math::
+
+      \begin{equation}
+      B^{♯♭} =
+      \begin{bmatrix}
+        F^{tx} \; (∂_t^♯ ∧ ∂_x^♭) \\
+        F^{ty} \; (∂_t^♯ ∧ ∂_y^♭) \\
+        F^{tz} \; (∂_t^♯ ∧ ∂_z^♭) \\
+        F^{xy} \; (∂_x^♯ ∧ ∂_y^♭) \\
+        F^{yz} \; (∂_y^♯ ∧ ∂_z^♭) \\
+        F^{zx} \; (∂_z^♯ ∧ ∂_x^♭) \\
+      \end{bmatrix}
+      \end{equation}
+
+   Apply and expand:
+
+   .. math::
+
+      \begin{equation}
+      B^{♯♭} =
       \begin{bmatrix}
         F^{tx} \; ∂_t ∧ η_{xγ} dx^γ \\
         F^{ty} \; ∂_t ∧ η_{yγ} dx^γ \\
@@ -476,8 +525,15 @@ tensor is obtained by applying the flatternig operator :math:`\flat`:
         F^{xy} \; ∂_x ∧ η_{yγ} dx^γ \\
         F^{yz} \; ∂_y ∧ η_{zγ} dx^γ \\
         F^{zx} \; ∂_z ∧ η_{xγ} dx^γ \\
-      \end{bmatrix} \\
-      &=
+      \end{bmatrix}
+      \end{equation}
+
+   The metric tensor can be taken out due to mulilinearity:
+
+   .. math::
+
+      \begin{equation}
+      B^{♯♭} =
       \begin{bmatrix}
         F^{tx} \; η_{xγ} ∂_t ∧ dx^γ \\
         F^{ty} \; η_{yγ} ∂_t ∧ dx^γ \\
@@ -486,7 +542,14 @@ tensor is obtained by applying the flatternig operator :math:`\flat`:
         F^{yz} \; η_{zγ} ∂_y ∧ dx^γ \\
         F^{zx} \; η_{xγ} ∂_z ∧ dx^γ \\
       \end{bmatrix}
-      =
+      \end{equation}
+
+   Most terms of the Minkowski metric are zero:
+
+   .. math::
+
+      \begin{equation}
+      B^{♯♭} =
       \begin{bmatrix}
         F^{tx} \; η_{xx} ∂_t ∧ dx^x \\
         F^{ty} \; η_{yy} ∂_t ∧ dx^y \\
@@ -495,7 +558,14 @@ tensor is obtained by applying the flatternig operator :math:`\flat`:
         F^{yz} \; η_{zz} ∂_y ∧ dx^z \\
         F^{zx} \; η_{xx} ∂_z ∧ dx^x \\
       \end{bmatrix}
-      =
+      \end{equation}
+
+   Use the numerical values of the Minkowski metric:
+
+   .. math::
+
+      \begin{equation}
+      B^{♯♭} =
       \begin{bmatrix}
         - F^{tx} \; ∂_t ∧ dx^x \\
         - F^{ty} \; ∂_t ∧ dx^y \\
@@ -504,7 +574,9 @@ tensor is obtained by applying the flatternig operator :math:`\flat`:
         - F^{yz} \; ∂_y ∧ dx^z \\
         - F^{zx} \; ∂_z ∧ dx^x \\
       \end{bmatrix}
-      \end{align*}
+      \end{equation}
+
+   .. }}}
 
 Taking into account the symetric property of :math:`∂_t ∧ dx^x`, :math:`∂_t
 ∧ dx^y`, and :math:`∂_t ∧ dx^z`, as well the antisymetric property of
