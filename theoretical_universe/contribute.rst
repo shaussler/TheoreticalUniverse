@@ -31,12 +31,27 @@ neovim configuration
    imap \alpha   α
    imap \beta    β
    imap \gamma   γ
-   imap \eta     η
-   imap \rho     ρ
+   imap \delta   δ
    imap \epsilon ε
+   imap \zeta    ζ
+   imap \eta     η
+   imap \theta   θ
+   imap \iota    ι
+   imap \kappa   κ
+   imap \lamda   λ
    imap \mu      μ
    imap \nu      ν
-   imap \delta   δ
+   imap \xi      ξ
+   imap \omicron ο
+   imap \pi      π
+   imap \rho     ρ
+   imap \sigma   σ
+   imap \tau     τ
+   imap \upsilon υ
+   imap \phi     φ
+   imap \chi     χ
+   imap \psi     ψ
+   imap \omega   ω
    imap \nabla   ∇
    imap \partial ∂
    imap \star    ⋆
@@ -45,4 +60,3 @@ neovim configuration
    imap \times   ⨯
    imap \flat    ♭
    imap \sharp   ♯
-   imap \etilde  Ẽ

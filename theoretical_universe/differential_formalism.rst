@@ -7,5 +7,6 @@ Musical Isomorphism, Free Matrix Representation of Differential Forms.
    :maxdepth: 2
 
    musical_isomorphisms.rst
-   free_matrix_representation.rst
    hodge_dual.rst
+   free_matrix_representation.rst
+   minkowski_metric.rst

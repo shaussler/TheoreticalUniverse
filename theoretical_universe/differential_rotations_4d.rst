@@ -5,8 +5,8 @@ Rotations in Minkowski Space
 
    by Stéphane Haussler
 
-Turning now to a bivectors in Minkowski space, any rotation can be written as
-a linear combination of 6 parameters:
+Turning now to a bivectors in Minkowski space, **any rotation can be written as
+a linear combination of 6 parameters**:
 
 .. math::
 
@@ -25,7 +25,7 @@ a linear combination of 6 parameters:
 The sharp symbol :math:`\sharp` indicates that the components are doubly
 contravariant tensor components. Reordering to a row/column matrix
 representation and using the antisimmetric property of the wedge product, we
-obtain:
+obtain the **contravariant matrix representation of a rotation**:
 
 .. math::
 
@@ -40,81 +40,8 @@ obtain:
    \end{bmatrix}
    \end{equation}
 
-Metric
-------
-
-.. {{{
-
-We choose the metric signature :math:`(+, -, -, -)`. The only non-zero components
-are the diagonal components. The double contravariant minkowski metric tensor is usually represented in matrix notation
-with:
-
-.. math::
-
-   η =
-   \begin{bmatrix}
-     + 1 &  0 &  0 &  0 \\
-       0 & -1 &  0 &  0 \\
-       0 &  0 & -1 &  0 \\
-       0 &  0 &  0 & -1 \\
-   \end{bmatrix}
-
-With *musical notation* and *free matrix representation*, we can write
-explicitely the the coveriance/contravariance of the tensor as well as the
-tensor basis:
-
-.. math::
-
-   \begin{equation}
-   \eta^{♯♯} =
-   \begin{bmatrix}
-     \begin{array}{rrrr}
-     + 1 \; ∂_t ⊗ ∂_t &  0 \; ∂_x ⊗ ∂_t &  0 \; ∂_y ⊗ ∂_t &  0 \; ∂_y ⊗ ∂_t \\
-       0 \; ∂_t ⊗ ∂_x & -1 \; ∂_x ⊗ ∂_x &  0 \; ∂_y ⊗ ∂_x &  0 \; ∂_y ⊗ ∂_x \\
-       0 \; ∂_t ⊗ ∂_y &  0 \; ∂_x ⊗ ∂_y & -1 \; ∂_y ⊗ ∂_y &  0 \; ∂_y ⊗ ∂_y \\
-       0 \; ∂_t ⊗ ∂_z &  0 \; ∂_x ⊗ ∂_z &  0 \; ∂_y ⊗ ∂_z & -1 \; ∂_y ⊗ ∂_z \\
-     \end{array}
-   \end{bmatrix}
-   \end{equation}
-
-Which permits to rewrite the metrix tensor in a compact and convenient manner:
-
-.. math::
-
-   \begin{equation}
-   \eta^{♯♯} =
-   \begin{bmatrix}
-     +1 ∂_t ⊗ ∂_t \\
-     -1 ∂_x ⊗ ∂_x \\
-     -1 ∂_y ⊗ ∂_y \\
-     -1 ∂_z ⊗ ∂_z \\
-   \end{bmatrix}
-   \end{equation}
-
-Equivalently and with the same procedure and arguments, we express the doubly
-covariant metric tensor with:
-
-.. math::
-
-   \begin{equation}
-   \eta^{♭♭} =
-   \begin{bmatrix}
-     +1 dx^t ⊗ dx^t \\
-     -1 dx^x ⊗ dx^x \\
-     -1 dx^y ⊗ dx^y \\
-     -1 dx^z ⊗ dx^z \\
-   \end{bmatrix}
-   \end{equation}
-
-For the basis vectors, this means:
-
-.. math::
-
-   \begin{equation}
-   ∂_μ ∧ ∂_ν = \frac{1}{2} (∂_μ ⊗ ∂_ν - ∂_ν ⊗ ∂_μ)
-   \end{equation}
-
-We can flatten a basis vector with the flat operator :math:`♭`
+Recall that using :ref:`the Minkowski metric <minkowski_metric:The Minkowski
+Metric>`, we can flatten a basis vector with the flat operator :math:`♭`:
 
 .. math::
 
@@ -122,70 +49,182 @@ We can flatten a basis vector with the flat operator :math:`♭`
    (∂_μ)^♭ = η_{μν} dx^ν
    \end{equation}
 
-And flatten the wedge product like so
+And likewise flatten any index of the doubly contravariant wedge product:
 
 .. math::
 
-   \begin{equation}
-   (∂_μ ∧ ∂_ν)^{♭♯} = η_{γμ} dx^γ ∧ ∂_ν
-   \end{equation}
+   \begin{matrix}
+   (∂_μ ∧ ∂_ν)^{♭♯} &= η_{γμ} dx^γ ∧ ∂_ν         \\
+   (∂_μ ∧ ∂_ν)^{♯♭} &= η_{γν} ∂_μ ∧ dx^γ         \\
+   (∂_μ ∧ ∂_ν)^{♭♭} &= η_{δμ} η_{γν} dx^δ ∧ dx^γ \\
+   \end{matrix}
 
-.. math::
-
-   \begin{equation}
-   (∂_μ ∧ ∂_ν)^{♯♭} = η_{γν} ∂_μ ∧ dx^γ
-   \end{equation}
-
-.. math::
-
-   \begin{equation}
-   (∂_μ ∧ ∂_ν)^{♭♭} = η_{δμ} η_{γν} dx^δ ∧ dx^γ
-   \end{equation}
-
-.. }}}
-
-Flattening of the first kind
-----------------------------
+Flattening of the first index
+-----------------------------
 
 .. {{{
 
-For all basis bivectors:
+We apply the :math:`♭♯` operators to flatten the first index of each basis
+bivectors:
 
 .. math::
 
    \begin{array}{r}
-   (∂_t ∧ ∂_x)^{♭♯} &=& η_{tγ} dx^γ ∧ ∂_x &=& η_{tt} ∂_t ∧ ∂_x &=& + ∂_t ∧ ∂_x \\
-   (∂_t ∧ ∂_y)^{♭♯} &=& η_{tγ} dx^γ ∧ ∂_y &=& η_{tt} ∂_t ∧ ∂_y &=& + ∂_t ∧ ∂_y \\
-   (∂_t ∧ ∂_z)^{♭♯} &=& η_{tγ} dx^γ ∧ ∂_z &=& η_{tt} ∂_t ∧ ∂_z &=& + ∂_t ∧ ∂_z \\
-   (∂_x ∧ ∂_y)^{♭♯} &=& η_{xγ} dx^γ ∧ ∂_y &=& η_{xx} ∂_x ∧ ∂_y &=& - ∂_x ∧ ∂_y \\
-   (∂_y ∧ ∂_z)^{♭♯} &=& η_{yγ} dx^γ ∧ ∂_z &=& η_{yy} ∂_y ∧ ∂_z &=& - ∂_y ∧ ∂_z \\
-   (∂_z ∧ ∂_x)^{♭♯} &=& η_{zγ} dx^γ ∧ ∂_x &=& η_{zz} ∂_z ∧ ∂_x &=& - ∂_z ∧ ∂_x \\
+   (∂_t ∧ ∂_x)^{♭♯} &=& + dx^t ∧ ∂_x \\
+   (∂_t ∧ ∂_y)^{♭♯} &=& + dx^t ∧ ∂_y \\
+   (∂_t ∧ ∂_z)^{♭♯} &=& + dx^t ∧ ∂_z \\
+   (∂_x ∧ ∂_y)^{♭♯} &=& - dx^x ∧ ∂_y \\
+   (∂_y ∧ ∂_z)^{♭♯} &=& - dx^y ∧ ∂_z \\
+   (∂_z ∧ ∂_x)^{♭♯} &=& - dx^z ∧ ∂_x \\
    \end{array}
 
-Expanding and simplifying, this results in the following explicit expression of
-the mixed wedge products:
+.. admonition:: All calculation steps
+   :class: dropdown
+
+   .. {{{
+
+   Distribute the musical operators to their respective indices:
+
+   .. math::
+
+      \begin{array}{r}
+      (∂_t ∧ ∂_x)^{♭♯} &=& (∂_t^♭ ∧ ∂_x^♯) \\
+      (∂_t ∧ ∂_y)^{♭♯} &=& (∂_t^♭ ∧ ∂_y^♯) \\
+      (∂_t ∧ ∂_z)^{♭♯} &=& (∂_t^♭ ∧ ∂_z^♯) \\
+      (∂_x ∧ ∂_y)^{♭♯} &=& (∂_x^♭ ∧ ∂_y^♯) \\
+      (∂_y ∧ ∂_z)^{♭♯} &=& (∂_y^♭ ∧ ∂_z^♯) \\
+      (∂_z ∧ ∂_x)^{♭♯} &=& (∂_z^♭ ∧ ∂_x^♯) \\
+      \end{array}
+
+   Apply the musical operators:
+
+   .. math::
+
+      \begin{array}{r}
+      (∂_t ∧ ∂_x)^{♭♯} &=& η_{tγ} dx^γ ∧ ∂_x \\
+      (∂_t ∧ ∂_y)^{♭♯} &=& η_{tγ} dx^γ ∧ ∂_y \\
+      (∂_t ∧ ∂_z)^{♭♯} &=& η_{tγ} dx^γ ∧ ∂_z \\
+      (∂_x ∧ ∂_y)^{♭♯} &=& η_{xγ} dx^γ ∧ ∂_y \\
+      (∂_y ∧ ∂_z)^{♭♯} &=& η_{yγ} dx^γ ∧ ∂_z \\
+      (∂_z ∧ ∂_x)^{♭♯} &=& η_{zγ} dx^γ ∧ ∂_x \\
+      \end{array}
+
+   Identify the non-zero terms of the metric:
+
+   .. math::
+
+      \begin{array}{r}
+      (∂_t ∧ ∂_x)^{♭♯} &=& η_{tt} dx^t ∧ ∂_x \\
+      (∂_t ∧ ∂_y)^{♭♯} &=& η_{tt} dx^t ∧ ∂_y \\
+      (∂_t ∧ ∂_z)^{♭♯} &=& η_{tt} dx^t ∧ ∂_z \\
+      (∂_x ∧ ∂_y)^{♭♯} &=& η_{xx} dx^x ∧ ∂_y \\
+      (∂_y ∧ ∂_z)^{♭♯} &=& η_{yy} dx^y ∧ ∂_z \\
+      (∂_z ∧ ∂_x)^{♭♯} &=& η_{zz} dx^z ∧ ∂_x \\
+      \end{array}
+
+   Apply the numerical values:
+
+   .. math::
+
+      \begin{array}{r}
+      (∂_t ∧ ∂_x)^{♭♯} &=& + dx^t ∧ ∂_x \\
+      (∂_t ∧ ∂_y)^{♭♯} &=& + dx^t ∧ ∂_y \\
+      (∂_t ∧ ∂_z)^{♭♯} &=& + dx^t ∧ ∂_z \\
+      (∂_x ∧ ∂_y)^{♭♯} &=& - dx^x ∧ ∂_y \\
+      (∂_y ∧ ∂_z)^{♭♯} &=& - dx^y ∧ ∂_z \\
+      (∂_z ∧ ∂_x)^{♭♯} &=& - dx^z ∧ ∂_x \\
+      \end{array}
+
+   .. }}}
+
+We can then identify the expressions for the mixed wedge product explicitely in
+terms of tensor products:
 
 .. math::
 
    \begin{array}{r}
-   (∂_t ∧ ∂_x)^{♭♯} &=& (∂_t ⊗ ∂_x - ∂_x ⊗ ∂_t)^{♭♯} &=& η_{tγ} dx^γ ⊗ ∂_x - η_{xγ} dx^γ ⊗ ∂_t \\
-   (∂_t ∧ ∂_y)^{♭♯} &=& (∂_t ⊗ ∂_y - ∂_y ⊗ ∂_t)^{♭♯} &=& η_{tγ} dx^γ ⊗ ∂_y - η_{yγ} dx^γ ⊗ ∂_t \\
-   (∂_t ∧ ∂_z)^{♭♯} &=& (∂_t ⊗ ∂_z - ∂_z ⊗ ∂_t)^{♭♯} &=& η_{tγ} dx^γ ⊗ ∂_z - η_{zγ} dx^γ ⊗ ∂_t \\
-   (∂_x ∧ ∂_y)^{♭♯} &=& (∂_x ⊗ ∂_y - ∂_y ⊗ ∂_x)^{♭♯} &=& η_{xγ} dx^γ ⊗ ∂_y - η_{yγ} dx^γ ⊗ ∂_x \\
-   (∂_y ∧ ∂_z)^{♭♯} &=& (∂_y ⊗ ∂_z - ∂_z ⊗ ∂_y)^{♭♯} &=& η_{yγ} dx^γ ⊗ ∂_z - η_{zγ} dx^γ ⊗ ∂_y \\
-   (∂_z ∧ ∂_x)^{♭♯} &=& (∂_z ⊗ ∂_x - ∂_x ⊗ ∂_z)^{♭♯} &=& η_{zγ} dx^γ ⊗ ∂_x - η_{xγ} dx^γ ⊗ ∂_z \\
+   (∂_t ∧ ∂_x)^{♭♯} &=& + dx^t ⊗ ∂_x + dx^x ⊗ ∂_t \\
+   (∂_t ∧ ∂_y)^{♭♯} &=& + dx^t ⊗ ∂_y + dx^y ⊗ ∂_t \\
+   (∂_t ∧ ∂_z)^{♭♯} &=& + dx^t ⊗ ∂_z + dx^z ⊗ ∂_t \\
+   (∂_x ∧ ∂_y)^{♭♯} &=& - dx^x ⊗ ∂_y + dx^y ⊗ ∂_x \\
+   (∂_y ∧ ∂_z)^{♭♯} &=& - dx^y ⊗ ∂_z + dx^z ⊗ ∂_y \\
+   (∂_z ∧ ∂_x)^{♭♯} &=& - dx^z ⊗ ∂_x + dx^x ⊗ ∂_z \\
    \end{array}
 
-.. math::
+.. admonition:: All calculation steps
+   :class: dropdown
 
-   \begin{array}{r}
-   (∂_t ∧ ∂_x)^{♭♯} &=& η_{tt} dx^t ⊗ ∂_x - η_{xx} dx^x ⊗ ∂_t &=& + dx^t ⊗ ∂_x + dx^x ⊗ ∂_t \\
-   (∂_t ∧ ∂_y)^{♭♯} &=& η_{tt} dx^t ⊗ ∂_y - η_{yy} dx^y ⊗ ∂_t &=& + dx^t ⊗ ∂_y + dx^y ⊗ ∂_t \\
-   (∂_t ∧ ∂_z)^{♭♯} &=& η_{tt} dx^t ⊗ ∂_z - η_{zz} dx^z ⊗ ∂_t &=& + dx^t ⊗ ∂_z + dx^z ⊗ ∂_t \\
-   (∂_x ∧ ∂_y)^{♭♯} &=& η_{xx} dx^x ⊗ ∂_y - η_{yy} dx^y ⊗ ∂_x &=& - dx^x ⊗ ∂_y + dx^y ⊗ ∂_x \\
-   (∂_y ∧ ∂_z)^{♭♯} &=& η_{yy} dx^y ⊗ ∂_z - η_{zz} dx^z ⊗ ∂_y &=& - dx^y ⊗ ∂_z + dx^z ⊗ ∂_y \\
-   (∂_z ∧ ∂_x)^{♭♯} &=& η_{zz} dx^z ⊗ ∂_x - η_{xx} dx^x ⊗ ∂_z &=& - dx^z ⊗ ∂_x + dx^x ⊗ ∂_z \\
-   \end{array}
+   .. {{{
+
+   Expand wedge products to their tensor expressions:
+
+   .. math::
+
+      \begin{array}{r}
+      (∂_t ∧ ∂_x)^{♭♯} &=& (∂_t ⊗ ∂_x - ∂_x ⊗ ∂_t)^{♭♯} \\
+      (∂_t ∧ ∂_y)^{♭♯} &=& (∂_t ⊗ ∂_y - ∂_y ⊗ ∂_t)^{♭♯} \\
+      (∂_t ∧ ∂_z)^{♭♯} &=& (∂_t ⊗ ∂_z - ∂_z ⊗ ∂_t)^{♭♯} \\
+      (∂_x ∧ ∂_y)^{♭♯} &=& (∂_x ⊗ ∂_y - ∂_y ⊗ ∂_x)^{♭♯} \\
+      (∂_y ∧ ∂_z)^{♭♯} &=& (∂_y ⊗ ∂_z - ∂_z ⊗ ∂_y)^{♭♯} \\
+      (∂_z ∧ ∂_x)^{♭♯} &=& (∂_z ⊗ ∂_x - ∂_x ⊗ ∂_z)^{♭♯} \\
+      \end{array}
+
+   Distribute the musical operators:
+
+   .. math::
+
+      \begin{array}{r}
+      (∂_t ∧ ∂_x)^{♭♯} &=& (∂_t^♭ ⊗ ∂_x^♯ - ∂_x^♭ ⊗ ∂_t^♯) \\
+      (∂_t ∧ ∂_y)^{♭♯} &=& (∂_t^♭ ⊗ ∂_y^♯ - ∂_y^♭ ⊗ ∂_t^♯) \\
+      (∂_t ∧ ∂_z)^{♭♯} &=& (∂_t^♭ ⊗ ∂_z^♯ - ∂_z^♭ ⊗ ∂_t^♯) \\
+      (∂_x ∧ ∂_y)^{♭♯} &=& (∂_x^♭ ⊗ ∂_y^♯ - ∂_y^♭ ⊗ ∂_x^♯) \\
+      (∂_y ∧ ∂_z)^{♭♯} &=& (∂_y^♭ ⊗ ∂_z^♯ - ∂_z^♭ ⊗ ∂_y^♯) \\
+      (∂_z ∧ ∂_x)^{♭♯} &=& (∂_z^♭ ⊗ ∂_x^♯ - ∂_x^♭ ⊗ ∂_z^♯) \\
+      \end{array}
+
+   Apply the musical operators:
+
+   .. math::
+
+      \begin{array}{r}
+      (∂_t ∧ ∂_x)^{♭♯} &=& η_{tγ} dx^γ ⊗ ∂_x - η_{xγ} dx^γ ⊗ ∂_t \\
+      (∂_t ∧ ∂_y)^{♭♯} &=& η_{tγ} dx^γ ⊗ ∂_y - η_{yγ} dx^γ ⊗ ∂_t \\
+      (∂_t ∧ ∂_z)^{♭♯} &=& η_{tγ} dx^γ ⊗ ∂_z - η_{zγ} dx^γ ⊗ ∂_t \\
+      (∂_x ∧ ∂_y)^{♭♯} &=& η_{xγ} dx^γ ⊗ ∂_y - η_{yγ} dx^γ ⊗ ∂_x \\
+      (∂_y ∧ ∂_z)^{♭♯} &=& η_{yγ} dx^γ ⊗ ∂_z - η_{zγ} dx^γ ⊗ ∂_y \\
+      (∂_z ∧ ∂_x)^{♭♯} &=& η_{zγ} dx^γ ⊗ ∂_x - η_{xγ} dx^γ ⊗ ∂_z \\
+      \end{array}
+
+   Select non-zero metric elements:
+
+   .. math::
+
+      \begin{array}{r}
+      (∂_t ∧ ∂_x)^{♭♯} &=& η_{tt} dx^t ⊗ ∂_x - η_{xx} dx^x ⊗ ∂_t \\
+      (∂_t ∧ ∂_y)^{♭♯} &=& η_{tt} dx^t ⊗ ∂_y - η_{yy} dx^y ⊗ ∂_t \\
+      (∂_t ∧ ∂_z)^{♭♯} &=& η_{tt} dx^t ⊗ ∂_z - η_{zz} dx^z ⊗ ∂_t \\
+      (∂_x ∧ ∂_y)^{♭♯} &=& η_{xx} dx^x ⊗ ∂_y - η_{yy} dx^y ⊗ ∂_x \\
+      (∂_y ∧ ∂_z)^{♭♯} &=& η_{yy} dx^y ⊗ ∂_z - η_{zz} dx^z ⊗ ∂_y \\
+      (∂_z ∧ ∂_x)^{♭♯} &=& η_{zz} dx^z ⊗ ∂_x - η_{xx} dx^x ⊗ ∂_z \\
+      \end{array}
+
+   Apply numerical values:
+
+   .. math::
+
+      \begin{array}{r}
+      (∂_t ∧ ∂_x)^{♭♯} &=& + dx^t ⊗ ∂_x + dx^x ⊗ ∂_t \\
+      (∂_t ∧ ∂_y)^{♭♯} &=& + dx^t ⊗ ∂_y + dx^y ⊗ ∂_t \\
+      (∂_t ∧ ∂_z)^{♭♯} &=& + dx^t ⊗ ∂_z + dx^z ⊗ ∂_t \\
+      (∂_x ∧ ∂_y)^{♭♯} &=& - dx^x ⊗ ∂_y + dx^y ⊗ ∂_x \\
+      (∂_y ∧ ∂_z)^{♭♯} &=& - dx^y ⊗ ∂_z + dx^z ⊗ ∂_y \\
+      (∂_z ∧ ∂_x)^{♭♯} &=& - dx^z ⊗ ∂_x + dx^x ⊗ ∂_z \\
+      \end{array}
+
+   .. }}}
+
+We can then identify the expressions for the mixed wedge product explicitely in
+terms of tensor products:
 
 .. math::
 
@@ -198,83 +237,181 @@ the mixed wedge products:
    dx^z ∧ ∂_x &=& + dx^z ⊗ ∂_x - dx^x ⊗ ∂_z \\
    \end{array}
 
-From the explicit calculation of the basis elements, we observe the following
-properties:
-
-================== ============
-Basis element      Symmetry
-================== ============
-:math:`dx^t ∧ ∂_x` Symetric
-:math:`dx^t ∧ ∂_y` Symetric
-:math:`dx^t ∧ ∂_z` Symetric
-:math:`dx^x ∧ ∂_y` Antisymetric
-:math:`dx^y ∧ ∂_z` Antisymetric
-:math:`dx^z ∧ ∂_x` Antisymetric
-================== ============
-
 .. }}}
 
-Flattening of the second kind
------------------------------
+Flattening of the second index
+------------------------------
 
 .. {{{
 
-For all basis bivectors:
+We apply the :math:`♯♭` operators to flatten the second index of each basis
+bivectors and obtain:
 
 .. math::
 
    \begin{array}{}
-   (∂_t ∧ ∂_x)^{♯♭} &=& η_{xγ} ∂_t ∧ dx^γ &=& η_{xx} ∂_t ∧ dx^x &=& - ∂_t ∧ dx^x \\
-   (∂_t ∧ ∂_y)^{♯♭} &=& η_{yγ} ∂_t ∧ dx^γ &=& η_{yy} ∂_t ∧ dx^y &=& - ∂_t ∧ dx^y \\
-   (∂_t ∧ ∂_z)^{♯♭} &=& η_{zγ} ∂_t ∧ dx^γ &=& η_{zz} ∂_t ∧ dx^z &=& - ∂_t ∧ dx^z \\
-   (∂_x ∧ ∂_y)^{♯♭} &=& η_{yγ} ∂_x ∧ dx^γ &=& η_{yy} ∂_x ∧ dx^y &=& - ∂_x ∧ dx^y \\
-   (∂_y ∧ ∂_z)^{♯♭} &=& η_{zγ} ∂_y ∧ dx^γ &=& η_{zz} ∂_y ∧ dx^z &=& - ∂_y ∧ dx^z \\
-   (∂_z ∧ ∂_x)^{♯♭} &=& η_{xγ} ∂_z ∧ dx^γ &=& η_{xx} ∂_z ∧ dx^x &=& - ∂_z ∧ dx^x \\
+   (∂_t ∧ ∂_x)^{♯♭} &=& - ∂_t ∧ dx^x \\
+   (∂_t ∧ ∂_y)^{♯♭} &=& - ∂_t ∧ dx^y \\
+   (∂_t ∧ ∂_z)^{♯♭} &=& - ∂_t ∧ dx^z \\
+   (∂_x ∧ ∂_y)^{♯♭} &=& - ∂_x ∧ dx^y \\
+   (∂_y ∧ ∂_z)^{♯♭} &=& - ∂_y ∧ dx^z \\
+   (∂_z ∧ ∂_x)^{♯♭} &=& - ∂_z ∧ dx^x \\
    \end{array}
 
-Expanding and simplifying, this results in the following explicit expression of
-the mixed wedge products:
+.. admonition:: All calculation steps
+   :class: dropdown
+
+   .. math::
+
+      \begin{array}{}
+      (∂_t ∧ ∂_x)^{♯♭} &=& ∂_t ∧ η_{xγ} dx^γ &=& η_{xγ} ∂_t ∧ dx^γ&=& η_{xx} ∂_t ∧ dx^x &=& - ∂_t ∧ dx^x \\
+      (∂_t ∧ ∂_y)^{♯♭} &=& ∂_t ∧ η_{yγ} dx^γ &=& η_{yγ} ∂_t ∧ dx^γ&=& η_{yy} ∂_t ∧ dx^y &=& - ∂_t ∧ dx^y \\
+      (∂_t ∧ ∂_z)^{♯♭} &=& ∂_t ∧ η_{zγ} dx^γ &=& η_{zγ} ∂_t ∧ dx^γ&=& η_{zz} ∂_t ∧ dx^z &=& - ∂_t ∧ dx^z \\
+      (∂_x ∧ ∂_y)^{♯♭} &=& ∂_x ∧ η_{yγ} dx^γ &=& η_{yγ} ∂_x ∧ dx^γ&=& η_{yy} ∂_x ∧ dx^y &=& - ∂_x ∧ dx^y \\
+      (∂_y ∧ ∂_z)^{♯♭} &=& ∂_y ∧ η_{zγ} dx^γ &=& η_{zγ} ∂_y ∧ dx^γ&=& η_{zz} ∂_y ∧ dx^z &=& - ∂_y ∧ dx^z \\
+      (∂_z ∧ ∂_x)^{♯♭} &=& ∂_z ∧ η_{xγ} dx^γ &=& η_{xγ} ∂_z ∧ dx^γ&=& η_{xx} ∂_z ∧ dx^x &=& - ∂_z ∧ dx^x \\
+      \end{array}
+
+We can then identify the expressions for the mixed wedge product explicitely in
+terms of tensor products:
 
 .. math::
 
    \begin{array}{}
-   (∂_t ∧ ∂_x)^{♯♭} &=& (∂_t ⊗ ∂_x - ∂_x ⊗ ∂_t)^{♯♯} &=& η_{xγ} ∂_t ⊗ dx^γ - η_{tγ} ∂_x ⊗ dx^γ \\
-   (∂_t ∧ ∂_y)^{♯♭} &=& (∂_t ⊗ ∂_y - ∂_y ⊗ ∂_t)^{♯♯} &=& η_{yγ} ∂_t ⊗ dx^γ - η_{tγ} ∂_y ⊗ dx^γ \\
-   (∂_t ∧ ∂_z)^{♯♭} &=& (∂_t ⊗ ∂_z - ∂_z ⊗ ∂_t)^{♯♯} &=& η_{zγ} ∂_t ⊗ dx^γ - η_{tγ} ∂_z ⊗ dx^γ \\
-   (∂_x ∧ ∂_y)^{♯♭} &=& (∂_x ⊗ ∂_y - ∂_y ⊗ ∂_x)^{♯♯} &=& η_{yγ} ∂_x ⊗ dx^γ - η_{xγ} ∂_y ⊗ dx^γ \\
-   (∂_y ∧ ∂_z)^{♯♭} &=& (∂_y ⊗ ∂_z - ∂_z ⊗ ∂_y)^{♯♯} &=& η_{zγ} ∂_y ⊗ dx^γ - η_{yγ} ∂_z ⊗ dx^γ \\
-   (∂_z ∧ ∂_x)^{♯♭} &=& (∂_z ⊗ ∂_x - ∂_x ⊗ ∂_z)^{♯♯} &=& η_{xγ} ∂_z ⊗ dx^γ - η_{zγ} ∂_x ⊗ dx^γ \\
+   (∂_t ∧ ∂_x)^{♯♭} &=& - ∂_t ⊗ dx^x - ∂_x ⊗ dx^t \\
+   (∂_t ∧ ∂_y)^{♯♭} &=& - ∂_t ⊗ dx^y - ∂_y ⊗ dx^t \\
+   (∂_t ∧ ∂_z)^{♯♭} &=& - ∂_t ⊗ dx^z - ∂_z ⊗ dx^t \\
+   (∂_x ∧ ∂_y)^{♯♭} &=& - ∂_x ⊗ dx^y + ∂_y ⊗ dx^x \\
+   (∂_y ∧ ∂_z)^{♯♭} &=& - ∂_y ⊗ dx^z + ∂_z ⊗ dx^y \\
+   (∂_z ∧ ∂_x)^{♯♭} &=& - ∂_z ⊗ dx^x + ∂_x ⊗ dx^z \\
    \end{array}
+
+.. admonition:: All calculation steps
+   :class: dropdown
+
+   Expand in terms of tensor product:
+
+   .. math::
+
+      \begin{array}{}
+      (∂_t ∧ ∂_x)^{♯♭} &=& (∂_t ⊗ ∂_x - ∂_x ⊗ ∂_t)^{♯♭} \\
+      (∂_t ∧ ∂_y)^{♯♭} &=& (∂_t ⊗ ∂_y - ∂_y ⊗ ∂_t)^{♯♭} \\
+      (∂_t ∧ ∂_z)^{♯♭} &=& (∂_t ⊗ ∂_z - ∂_z ⊗ ∂_t)^{♯♭} \\
+      (∂_x ∧ ∂_y)^{♯♭} &=& (∂_x ⊗ ∂_y - ∂_y ⊗ ∂_x)^{♯♭} \\
+      (∂_y ∧ ∂_z)^{♯♭} &=& (∂_y ⊗ ∂_z - ∂_z ⊗ ∂_y)^{♯♭} \\
+      (∂_z ∧ ∂_x)^{♯♭} &=& (∂_z ⊗ ∂_x - ∂_x ⊗ ∂_z)^{♯♭} \\
+      \end{array}
+
+   Apply the flattening operator :math:`♭` to the second tensor component:
+
+   .. math::
+
+      \begin{array}{}
+      (∂_t ∧ ∂_x)^{♯♭} &=& (∂_t^♯ ⊗ ∂_x^♭ - ∂_x^♯ ⊗ ∂_t^♭) \\
+      (∂_t ∧ ∂_y)^{♯♭} &=& (∂_t^♯ ⊗ ∂_y^♭ - ∂_y^♯ ⊗ ∂_t^♭) \\
+      (∂_t ∧ ∂_z)^{♯♭} &=& (∂_t^♯ ⊗ ∂_z^♭ - ∂_z^♯ ⊗ ∂_t^♭) \\
+      (∂_x ∧ ∂_y)^{♯♭} &=& (∂_x^♯ ⊗ ∂_y^♭ - ∂_y^♯ ⊗ ∂_x^♭) \\
+      (∂_y ∧ ∂_z)^{♯♭} &=& (∂_y^♯ ⊗ ∂_z^♭ - ∂_z^♯ ⊗ ∂_y^♭) \\
+      (∂_z ∧ ∂_x)^{♯♭} &=& (∂_z^♯ ⊗ ∂_x^♭ - ∂_x^♯ ⊗ ∂_z^♭) \\
+      \end{array}
+
+   Expand:
+
+   .. math::
+
+      \begin{array}{}
+      (∂_t ∧ ∂_x)^{♯♭} &=& ∂_t ⊗ η_{xγ} dx^γ - η_{tγ} ∂_x ⊗ dx^γ \\
+      (∂_t ∧ ∂_y)^{♯♭} &=& ∂_t ⊗ η_{yγ} dx^γ - η_{tγ} ∂_y ⊗ dx^γ \\
+      (∂_t ∧ ∂_z)^{♯♭} &=& ∂_t ⊗ η_{zγ} dx^γ - η_{tγ} ∂_z ⊗ dx^γ \\
+      (∂_x ∧ ∂_y)^{♯♭} &=& ∂_x ⊗ η_{yγ} dx^γ - η_{xγ} ∂_y ⊗ dx^γ \\
+      (∂_y ∧ ∂_z)^{♯♭} &=& ∂_y ⊗ η_{zγ} dx^γ - η_{yγ} ∂_z ⊗ dx^γ \\
+      (∂_z ∧ ∂_x)^{♯♭} &=& ∂_z ⊗ η_{xγ} dx^γ - η_{zγ} ∂_x ⊗ dx^γ \\
+      \end{array}
+
+   Due to the linearity of the tensor product, the Minkowski metric components
+   can be taken out in front of the expression:
+
+   .. math::
+
+      \begin{array}{}
+      (∂_t ∧ ∂_x)^{♯♭} &=& η_{xγ} ∂_t ⊗ dx^γ - η_{tγ} ∂_x ⊗ dx^γ \\
+      (∂_t ∧ ∂_y)^{♯♭} &=& η_{yγ} ∂_t ⊗ dx^γ - η_{tγ} ∂_y ⊗ dx^γ \\
+      (∂_t ∧ ∂_z)^{♯♭} &=& η_{zγ} ∂_t ⊗ dx^γ - η_{tγ} ∂_z ⊗ dx^γ \\
+      (∂_x ∧ ∂_y)^{♯♭} &=& η_{yγ} ∂_x ⊗ dx^γ - η_{xγ} ∂_y ⊗ dx^γ \\
+      (∂_y ∧ ∂_z)^{♯♭} &=& η_{zγ} ∂_y ⊗ dx^γ - η_{yγ} ∂_z ⊗ dx^γ \\
+      (∂_z ∧ ∂_x)^{♯♭} &=& η_{xγ} ∂_z ⊗ dx^γ - η_{zγ} ∂_x ⊗ dx^γ \\
+      \end{array}
+
+   Indentify the non-zero component of the Minkowski metric and replace with
+   numerical values:
+
+   .. math::
+
+      \begin{array}{}
+      (∂_t ∧ ∂_x)^{♯♭} &=& η_{xx} ∂_t ⊗ dx^x - η_{tt} ∂_ex ⊗ dx^t &=& - ∂_t ⊗ dx^x - ∂_x ⊗ dx^t \\
+      (∂_t ∧ ∂_y)^{♯♭} &=& η_{yy} ∂_t ⊗ dx^y - η_{tt} ∂_ey ⊗ dx^t &=& - ∂_t ⊗ dx^y - ∂_y ⊗ dx^t \\
+      (∂_t ∧ ∂_z)^{♯♭} &=& η_{zz} ∂_t ⊗ dx^z - η_{tt} ∂_ez ⊗ dx^t &=& - ∂_t ⊗ dx^z - ∂_z ⊗ dx^t \\
+      (∂_x ∧ ∂_y)^{♯♭} &=& η_{yy} ∂_x ⊗ dx^y - η_{xx} ∂_ey ⊗ dx^x &=& - ∂_x ⊗ dx^y + ∂_y ⊗ dx^x \\
+      (∂_y ∧ ∂_z)^{♯♭} &=& η_{zz} ∂_y ⊗ dx^z - η_{yy} ∂_ez ⊗ dx^y &=& - ∂_y ⊗ dx^z + ∂_z ⊗ dx^y \\
+      (∂_z ∧ ∂_x)^{♯♭} &=& η_{xx} ∂_z ⊗ dx^x - η_{zz} ∂_ex ⊗ dx^z &=& - ∂_z ⊗ dx^x + ∂_x ⊗ dx^z \\
+      \end{array}
+
+We can then identify the expressions for the mixed wedge product explicitely in
+terms of tensor products:
 
 .. math::
 
-   \begin{array}{}
-   (∂_t ∧ ∂_x)^{♭♯} &=& η_{xx} ∂_t ⊗ ∂_x - η_{tt} ∂_ex ⊗ ∂_t &=& - ∂_t ⊗ ∂_x - ∂_x ⊗ ∂_t \\
-   (∂_t ∧ ∂_y)^{♭♯} &=& η_{yy} ∂_t ⊗ ∂_y - η_{tt} ∂_ey ⊗ ∂_t &=& - ∂_t ⊗ ∂_y - ∂_y ⊗ ∂_t \\
-   (∂_t ∧ ∂_z)^{♭♯} &=& η_{zz} ∂_t ⊗ ∂_z - η_{tt} ∂_ez ⊗ ∂_t &=& - ∂_t ⊗ ∂_z - ∂_z ⊗ ∂_t \\
-   (∂_x ∧ ∂_y)^{♭♯} &=& η_{yy} ∂_x ⊗ ∂_y - η_{xx} ∂_ey ⊗ ∂_x &=& - ∂_x ⊗ ∂_y + ∂_y ⊗ ∂_x \\
-   (∂_y ∧ ∂_z)^{♭♯} &=& η_{zz} ∂_y ⊗ ∂_z - η_{yy} ∂_ez ⊗ ∂_y &=& - ∂_y ⊗ ∂_z + ∂_z ⊗ ∂_y \\
-   (∂_z ∧ ∂_x)^{♭♯} &=& η_{xx} ∂_z ⊗ ∂_x - η_{zz} ∂_ex ⊗ ∂_z &=& - ∂_z ⊗ ∂_x + ∂_x ⊗ ∂_z \\
+   \begin{array}{r}
+   ∂_t ∧ dx^x &=& + ∂_t ⊗ dx^x + ∂_x ⊗ dx^t \\
+   ∂_t ∧ dx^y &=& + ∂_t ⊗ dx^y + ∂_y ⊗ dx^t \\
+   ∂_t ∧ dx^z &=& + ∂_t ⊗ dx^z + ∂_z ⊗ dx^t \\
+   ∂_x ∧ dx^y &=& + ∂_x ⊗ dx^y - ∂_y ⊗ dx^x \\
+   ∂_y ∧ dx^z &=& + ∂_y ⊗ dx^z - ∂_z ⊗ dx^y \\
+   ∂_z ∧ dx^x &=& + ∂_z ⊗ dx^x - ∂_x ⊗ dx^z \\
    \end{array}
 
-From the explicit calculation of the basis elements, we observe the following
-properties:
+.. }}}
+
+Symmetries of the mixed wedge product
+-------------------------------------
+
+.. {{{
+
+From the flattening of the first and second indices, we identified the
+expression of the mixed wedge product in terms of tensor products. We conclude
+that not all elements of the mixed wedge product in Minkowski space are
+antisymmetric. **The elements depending on time are symmetric**.
+
+.. rubric:: Covariant-contravariant basis elements
 
 ================== ============ =================================
 Basis element      Symmetry     Expression
 ================== ============ =================================
-:math:`∂_t ∧ dx^x` Symetric     :math:`+ dx^t ⊗ ∂_x + dx^x ⊗ ∂_t`
-:math:`∂_t ∧ dx^y` Symetric     :math:`+ dx^t ⊗ ∂_y + dx^y ⊗ ∂_t`
-:math:`∂_t ∧ dx^z` Symetric     :math:`+ dx^t ⊗ ∂_z + dx^z ⊗ ∂_t`
-:math:`∂_x ∧ dx^y` Antisymetric :math:`+ dx^x ⊗ ∂_y - dx^y ⊗ ∂_x`
-:math:`∂_y ∧ dx^z` Antisymetric :math:`+ dx^y ⊗ ∂_z - dx^z ⊗ ∂_y`
-:math:`∂_z ∧ dx^x` Antisymetric :math:`+ dx^z ⊗ ∂_x - dx^x ⊗ ∂_z`
+:math:`dx^t ∧ ∂_x` Symetric     :math:`+ dx^t ⊗ ∂_x + dx^x ⊗ ∂_t`
+:math:`dx^t ∧ ∂_y` Symetric     :math:`+ dx^t ⊗ ∂_y + dx^y ⊗ ∂_t`
+:math:`dx^t ∧ ∂_z` Symetric     :math:`+ dx^t ⊗ ∂_z + dx^z ⊗ ∂_t`
+:math:`dx^x ∧ ∂_y` Antisymetric :math:`+ dx^x ⊗ ∂_y - dx^y ⊗ ∂_x`
+:math:`dx^y ∧ ∂_z` Antisymetric :math:`+ dx^y ⊗ ∂_z - dx^z ⊗ ∂_y`
+:math:`dx^z ∧ ∂_x` Antisymetric :math:`+ dx^z ⊗ ∂_x - dx^x ⊗ ∂_z`
+================== ============ =================================
+
+.. rubric:: Contravariant-covariant basis elements
+
+================== ============ =================================
+Basis element      Symmetry     Expression
+================== ============ =================================
+:math:`∂_t ∧ dx^x` Symetric     :math:`+ ∂_t ⊗ dx^x + ∂_x ⊗ dx^t`
+:math:`∂_t ∧ dx^y` Symetric     :math:`+ ∂_t ⊗ dx^y + ∂_y ⊗ dx^t`
+:math:`∂_t ∧ dx^z` Symetric     :math:`+ ∂_t ⊗ dx^z + ∂_z ⊗ dx^t`
+:math:`∂_x ∧ dx^y` Antisymetric :math:`+ ∂_x ⊗ dx^y - ∂_y ⊗ dx^x`
+:math:`∂_y ∧ dx^z` Antisymetric :math:`+ ∂_y ⊗ dx^z - ∂_z ⊗ dx^y`
+:math:`∂_z ∧ dx^x` Antisymetric :math:`+ ∂_z ⊗ dx^x - ∂_x ⊗ dx^z`
 ================== ============ =================================
 
 .. }}}
 
-Raising the indices Version 1
------------------------------
+The Mixed Rotation Tensor
+-------------------------
 
 .. {{{
 
@@ -388,8 +525,13 @@ demonstrated above, this results in:
 
 .. }}}
 
-Raising the indices Version 2
------------------------------
+Calculating the mixed rotation tensor again, but without the Cartan-Hodge formalism
+-----------------------------------------------------------------------------------
+
+.. warning::
+
+   While interesting to compare the advantages of the formalism, this will be
+   taken out
 
 .. {{{
 
@@ -468,9 +610,9 @@ This result in:
    &= \frac{1}{2}
    \begin{bmatrix}
                         & F^t{}_x ∂_t ∧ dx^x & F^t{}_y ∂_t ∧ dx^y & F^t{}_z ∂_t ∧ dx^z \\
-     F^x{}_t ∂_x \w \eT &                    & F^x{}_y ∂_x ∧ dx^y & F^x{}_z ∂_x ∧ dx^z \\
-     F^y{}_t ∂_y \w \eT & F^y{}_x ∂_y ∧ dx^x &                    & F^y{}_z ∂_y ∧ dx^z \\
-     F^z{}_t ∂_z \w \eT & F^z{}_x ∂_z ∧ dx^x & F^z{}_y ∂_z ∧ dx^y &                    \\
+     F^x{}_t ∂_x ∧ dx^t &                    & F^x{}_y ∂_x ∧ dx^y & F^x{}_z ∂_x ∧ dx^z \\
+     F^y{}_t ∂_y ∧ dx^t & F^y{}_x ∂_y ∧ dx^x &                    & F^y{}_z ∂_y ∧ dx^z \\
+     F^z{}_t ∂_z ∧ dx^t & F^z{}_x ∂_z ∧ dx^x & F^z{}_y ∂_z ∧ dx^y &                    \\
    \end{bmatrix}
    \end{align}
 
@@ -537,8 +679,8 @@ rotation tensors permit to simplify and conclude:
 
 .. }}}
 
-:math:`\mathfrak{so}(1,3)` Lie Algegra of the Lorentz group
------------------------------------------------------------
+The :math:`\mathfrak{so}(1,3)` Lie Algegra of the Lorentz group
+---------------------------------------------------------------
 
 .. {{{
 
