@@ -1,16 +1,11 @@
-Musical Isomorphism, Free Matrix Representation of Differential Forms
-=====================================================================
+The Cartan-Hodge Formalism
+==========================
 
-Musical isomorphisms
---------------------
+Musical Isomorphism, Free Matrix Representation of Differential Forms.
 
-.. include:: musical_isomorphisms.rst
+.. toctree::
+   :maxdepth: 2
 
-Free matrix representation
---------------------------
-
-.. include:: free_matrix_representation.rst
-
-
-
-
+   musical_isomorphisms.rst
+   free_matrix_representation.rst
+   hodge_dual.rst

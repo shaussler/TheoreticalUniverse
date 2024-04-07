@@ -1,5 +1,5 @@
-Rotations in Cartan's Formalism
-===============================
+Rotations in the Cartan-Hodge Formalism
+=======================================
 
 .. rst-class:: custom-author
 

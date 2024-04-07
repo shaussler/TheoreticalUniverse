@@ -1,10 +1,15 @@
-I the reader will find the *free matrix representation* obvious. Everything in
-a matrix is expressed with its basis vectors and can be reordered at will. For
-example, a vector is can expressed with an implicit basis as:
+Free Matrix Representation
+==========================
+
+I hope the reader will find the *free matrix representation* obvious.
+Everything in a matrix is expressed with its basis vectors and can be reordered
+at will. For example, a vector is can expressed with an implicit basis as:
 
 .. math::
 
+   \begin{equation}
    v = \{ x \\ y \\ z\}
+   \end{equation}
 
 I merely propose to write the basis explicitely in the matrix:
 

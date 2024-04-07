@@ -33,13 +33,12 @@ The Vector Formulation of Mr. Heaviside
 
 .. {{{
 
-Mr. Maxwell's groundbreaking work in 1865,
-`A Dynamical Theory of the Electromagnetic Field
+Mr. Maxwell's groundbreaking work in 1865, `A Dynamical Theory of the
+Electromagnetic Field
 <https://en.m.wikipedia.org/wiki/A_Dynamical_Theory_of_the_Electromagnetic_Field>`_
-(`pdf <https://www.jstor.org/stable/108892>`_)
-, utilized differential expressions rather than the modern vector formulation
-proposed by Mr. Heaviside. Indeed in 1865, the concept of vectors had not yet
-been introduced.
+(`pdf <https://www.jstor.org/stable/108892>`_) , utilized differential
+expressions rather than the modern vector formulation proposed by Mr.
+Heaviside. Indeed in 1865, the concept of vectors had not yet been introduced.
 
 `Mr. Heaviside proposed both the concept of vectors as well as the vector form
 of the Maxwell equations.
@@ -61,35 +60,37 @@ regarded as established experimental facts.
 
 .. math::
 
-   \vect{\nabla} \cdot \vect{E}  = \rho / \epsilon_0
-
+   \begin{equation}
+   \vect{∇} \cdot \vect{E}  = ρ / ε_0
+   \end{equation}
 
 .. rubric:: Ampère's circuital
 
 .. math::
 
-   \vect{\nabla} \times \vect{B}
-   = \mu_0 \vect{J} + \frac{1}{c^2} \frac{\partial}{\partial t} \vect{E}
+   \begin{equation}
+   \vect{∇} \times \vect{B} = μ_0 \vect{J} + \frac{1}{c^2} \frac{∂}{∂t} \vect{E}
+   \end{equation}
 
 .. rubric:: Gauss's law for magnetism
 
 .. math::
 
-   \vect{\nabla} \cdot \vect{B} = 0
+   \begin{equation}
+   \vect{∇} \cdot \vect{B} = 0
+   \end{equation}
 
 .. rubric:: Faraday's law of induction
 
 .. math::
 
-   \vect{\nabla} \times \vect{E} = -\frac{\partial}{\partial t} \vect{B}
+   \vect{∇} ⨯ \vect{E} = -\frac{∂}{∂t} \vect{B}
 
 With the electric field :math:`\vect{E}=\{ E^x \\ E^y \\ E^z \}`, magnetic
 field :math:`\vect{B}=\{ B^x \\ B^y \\ B^z \}`, and operator
-:math:`\vect{\nabla}=\{ \frac{\partial}{\partial x} \\ \frac{\partial}{\partial
-y} \\ \frac{\partial}{\partial z} \}`
+:math:`\vect{∇}=\{ \frac{∂}{∂x} \\ \frac{∂}{∂y} \\ \frac{∂}{∂z} \}`
 
 .. }}}
-
 
 The Equations of Mr. Maxwell
 ----------------------------
@@ -103,10 +104,9 @@ the 1865 Maxwell formulation, albeit with modern notation and conventions.
 
 .. math::
 
-   \frac{\partial}{\partial x} E^x +
-   \frac{\partial}{\partial y} E^y +
-   \frac{\partial}{\partial z} E^z
-   = \rho / \epsilon_0
+   \begin{equation}
+   \frac{∂}{∂x} E^x + \frac{∂}{∂y} E^y + \frac{∂}{∂z} E^z = ρ / ε_0
+   \end{equation}
 
 .. rubric:: Ampère's circuital law
 
@@ -134,17 +134,11 @@ the 1865 Maxwell formulation, albeit with modern notation and conventions.
 
 .. math::
 
-    \frac{\partial}{\partial y} E^z - \frac{\partial}{\partial z} E^y
-    = - \frac{\partial}{\partial t} B^x \\
-
-    \frac{\partial}{\partial z} E^x - \frac{\partial}{\partial x} E^z
-    = - \frac{\partial}{\partial t} B^y \\
-
-    \frac{\partial}{\partial x} E^y - \frac{\partial}{\partial y} E^x
-    = - \frac{\partial}{\partial t} B^z \\
+    \frac{∂}{∂y} E^z - \frac{∂}{∂z} E^y = - \frac{∂}{∂t} B^x \\
+    \frac{∂}{∂z} E^x - \frac{∂}{∂x} E^z = - \frac{∂}{∂t} B^y \\
+    \frac{∂}{∂x} E^y - \frac{∂}{∂y} E^x = - \frac{∂}{∂t} B^z \\
 
 .. }}}
-
 
 The Underlying Structure
 ------------------------
@@ -158,26 +152,10 @@ Gathering and reordering the terms, a clear structures becomes apparent:
 .. math::
 
    \begin{matrix}
-                                                       &
-       +               \frac{\partial E^x}{\partial x} &
-       +               \frac{\partial E^y}{\partial y} &
-       +               \frac{\partial E^z}{\partial z} &
-       = & + \rho/\epsilon_0 \\
-       + \frac{1}{c^2} \frac{\partial E^x}{\partial t} &
-                                                       &
-       -               \frac{\partial B^z}{\partial y} &
-       +               \frac{\partial B^y}{\partial z} &
-       = & - \mu_0 J^x \\
-       + \frac{1}{c^2} \frac{\partial E^y}{\partial t} &
-       +               \frac{\partial B^z}{\partial x} &
-                                                       &
-       -               \frac{\partial B^x}{\partial z} &
-       = & - \mu_0 J^y \\
-       + \frac{1}{c^2} \frac{\partial E^z}{\partial t} &
-       -               \frac{\partial B^y}{\partial x} &
-       +               \frac{\partial B^x}{\partial y} &
-                                                       &
-       = & - \mu_0 J^z \\
+                                      & + \frac{∂ E^x}{∂x} & + \frac{∂ E^y}{∂y} & + \frac{∂ E^z}{∂z} & = & + ρ/ε_0   \\
+     + \frac{1}{c^2} \frac{∂ E^x}{∂t} &                    & - \frac{∂ B^z}{∂y} & + \frac{∂ B^y}{∂z} & = & - μ_0 J^x \\
+     + \frac{1}{c^2} \frac{∂ E^y}{∂t} & + \frac{∂ B^z}{∂x} &                    & - \frac{∂ B^x}{∂z} & = & - μ_0 J^y \\
+     + \frac{1}{c^2} \frac{∂ E^z}{∂t} & - \frac{∂ B^y}{∂x} & + \frac{∂ B^x}{∂y} &                    & = & - μ_0 J^z \\
    \end{matrix}
 
 .. rubric:: Homogenous equations
@@ -209,7 +187,6 @@ Gathering and reordering the terms, a clear structures becomes apparent:
 
 .. }}}
 
-
 The Ordered Equations
 ---------------------
 
@@ -219,34 +196,33 @@ Recognizing the emerging structure, we slightly modify the expressions. These
 modifications are not intricate. The objective is merely to present a compact
 and symmetrical form, where all terms are aligned.
 
-To eliminate the factor :math:`1/c`, we introduce :math:`\tilde{E^x} = E^x /
-c`, :math:`\tilde{E^y} = E^y / c`, and :math:`\tilde{E^z} = E^z / c`.
-Additionally, we define for the time dimension :math:`\partial_t =
-\frac{\partial}{\partial(ct)}`, and for the spatial dimensions
-:math:`\partial_x = \frac{\partial}{\partial x}`, :math:`\partial_y =
-\frac{\partial}{\partial y}`, as well as :math:`\partial_z =
-\frac{\partial}{\partial z}`. The equations are now:
+To eliminate the factor :math:`1/c`, we introduce :math:`\Ex = E^x / c`,
+:math:`\Ey = E^y / c`, and :math:`\Ez = E^z / c`. Additionally, we define for
+the time dimension :math:`∂_t = \frac{∂}{∂(ct)}`, and for the spatial
+dimensions :math:`∂_x = \frac{∂}{∂ x}`, :math:`∂_y = \frac{∂}{∂y}`, as well as
+:math:`∂_z = \frac{∂}{∂z}`. The equations are now:
 
 .. rubric:: Inhomogenous equations
 
 .. math::
 
-   \begin{matrix}
-                       & +\partial_x \Ex & +\partial_y \Ey & +\partial_y \Ez & = & + \mu_0 c \rho  \\
-       +\partial_t \Ex &                 & -\partial_y \Bz & +\partial_z \By & = & - \mu_0 J^x     \\
-       +\partial_t \Ey & +\partial_x \Bz &                 & -\partial_z \Bx & = & - \mu_0 J^y     \\
-       +\partial_t \Ez & -\partial_x \By & +\partial_y \Bx &                 & = & - \mu_0 J^z
+  
+   \begin{matrix} \newcommand{\E}{\tilde{E}}
+                & + ∂_x \E^x & + ∂_y \E^y & + ∂_y \E^z & = & + μ_0 c ρ \\
+     + ∂_t \E^x &            & - ∂_y  B^z & + ∂_z  B^y & = & - μ_0 J^x \\
+     + ∂_t \E^y & + ∂_x  B^z &            & - ∂_z  B^x & = & - μ_0 J^y \\
+     + ∂_t \E^z & - ∂_x  B^y & + ∂_y  B^x &            & = & - μ_0 J^z \\
    \end{matrix}
 
 .. rubric:: Homogenous equations
 
 .. math::
 
-   \begin{matrix}
-                       & +\partial_x \Bx & +\partial_y \By & +\partial_z \Bz & = & 0 \\
-       +\partial_t \Bx &                 & +\partial_y \Ez & -\partial_z \Ey & = & 0 \\
-       +\partial_t \By & -\partial_x \Ez &                 & +\partial_z \Ex & = & 0 \\
-       +\partial_t \Bz & +\partial_x \Ey & -\partial_y \Ex &                 & = & 0
+   \begin{matrix} \newcommand{\E}{\tilde{E}}
+                & + ∂_x  B^x & + ∂_y  B^y & + ∂_z  B^z & = & 0 \\
+     + ∂_t  B^x &            & + ∂_y \E^z & - ∂_z \E^y & = & 0 \\
+     + ∂_t  B^y & - ∂_x \E^z &            & + ∂_z \E^x & = & 0 \\
+     + ∂_t  B^z & + ∂_x \E^y & - ∂_y \E^x &            & = & 0 \\
    \end{matrix}
 
 For readers well-versed in the tensor formulation of electromagnetism, the
@@ -276,12 +252,10 @@ be apparent that we can employ matrices operations.
 
 .. }}}
 
-
 The Tensor of Mr. Faraday
 -------------------------
 
 .. {{{
-
 
 From matrix multiplication rules, we deduct the ordered equations are
 equivalent to:
@@ -322,7 +296,6 @@ We have thus obtained the Faraday tensor (inhomogenous equations) and its dual
 (homogenous equations).
 
 .. }}}
-
 
 The Tensor Equations
 --------------------

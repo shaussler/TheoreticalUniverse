@@ -1,3 +1,11 @@
+.. Theoretical Universe (c) by Stéphane Haussler
+.. 
+.. Theoretical Universe is licensed under a
+.. Creative Commons Attribution 4.0 International License.
+.. 
+.. You should have received a copy of the license along with this
+.. work. If not, see <https://creativecommons.org/licenses/by/4.0/>.
+
 Theoretical Universe
 ====================
 
@@ -7,6 +15,7 @@ This is a personal compilation of papers focusing on mathematical physics.
    :maxdepth: 1
    :caption: Contents:
 
+   contribute.rst
    faraday_tensor_derivation.rst
    hodge_dual.rst
    differential_formalism.rst

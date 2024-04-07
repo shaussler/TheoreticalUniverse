@@ -1,5 +1,5 @@
-Differential operators in Cartan's Formalism
-============================================
+Differential operators in the Cartan-Hodge Formalism
+====================================================
 
 .. rst-class:: custom-author
 
