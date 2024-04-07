@@ -15,9 +15,9 @@ This is a personal compilation of papers focusing on mathematical physics.
    :maxdepth: 1
    :caption: Contents:
 
+   licence.rst
    contribute.rst
    faraday_tensor_derivation.rst
-   hodge_dual.rst
    differential_formalism.rst
    differential_operators.rst
    differential_rotations.rst

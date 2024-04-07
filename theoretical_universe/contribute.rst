@@ -4,24 +4,22 @@ Contribute
 neovim configuration
 --------------------
 
-I use the following configuration.
+.. code:: vim
 
-.. code:: bash
-
-   " Set fold marker method and fold markers
+   " Fold marker method and fold markers
    set foldmethod=marker
    set foldmarker={{{,}}}
    
-   " Set tab settings
+   " Tab settings
    set tabstop=2
    set softtabstop=0
    set shiftwidth=2
    set expandtab
    
-   " Set encoding
+   " Encoding
    set encoding=utf-8
    
-   " Set one column at 81 and 121
+   " Greyed out columns at 81 and 121
    if has("nvim")
      set colorcolumn=81,121
      highlight ColorColumn guibg=green
@@ -29,7 +27,7 @@ I use the following configuration.
      highlight ColorColumn ctermbg=237
    endif
    
-   " Set spetial characters
+   " Special characters
    imap \alpha   α
    imap \beta    β
    imap \gamma   γ

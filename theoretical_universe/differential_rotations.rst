@@ -25,19 +25,13 @@ interchangeably use the words *oriented surface*, *bivector* and
 *pseudo-vectors* as they are :ref:`the same objects <hodge_dual:Pseudo vectors
 and pseudo scalars>`, albeit named in different contexts.
 
-.. toctree::
-   :maxdepth: 2
-
-   differential_rotations_3d.rst
-   differential_rotations_4d.rst
-
-TL;DR
------
+TL;DR Too long; didn't read
+---------------------------
 
 .. rubric:: Rotations are bivectors
 
-Any rotation in Minkowksi space is represented by a linear combination of the
-basis bivectors:
+Any rotation in 3 dimensional or Minkowksi space is represented by a linear
+combination of the basis bivectors:
 
 .. math::
 
@@ -126,5 +120,12 @@ The electromagnetic field tensor :math:`F` is:
 
 .. rubric:: Rotations in Cartan's formalism trivially match the Lie Algegra :math:`\mathfrak{so}(1,3)` of the Lorentz group
 
-
 one. two.
+
+.. toctree::
+   :maxdepth: 2
+
+   differential_rotations_3d.rst
+   differential_rotations_4d.rst
+
+
