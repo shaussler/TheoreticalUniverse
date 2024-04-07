@@ -5,42 +5,44 @@ Rotations in 3 Dimensions
 
    by Stéphane Haussler
 
-The :ref:`free matrix representation <free_matrix_representation:Free Matrix Representation>` is powerfull when using a bivector basis,
-since the elements of the matrix can be re-ordered at will. In three
-dimensions, rotations are possible on the three planes. A general rotation is a
-linear combination of the three associated basis bivectors:
+The Free Matrix Representation of Rotations
+-------------------------------------------
+
+.. {{{
+
+The :ref:`free matrix representation <free_matrix_representation:Free Matrix
+Representation>` is powerfull when using a bivector basis, since the elements
+of the matrix can be re-ordered at will. In three dimensions, rotations are
+possible on the three planes. A general **rotation is a linear combination of
+the three associated basis bivectors**:
 
 .. math::
 
    \begin{equation}
-   % ∂ u2202
-   % ∧ u2227
    R = R^x ∂_y ∧ ∂_z + R^y ∂_z ∧ ∂_x + R^z ∂_x ∧ ∂_y
    \end{equation}
 
 With free matrix representation, the bivector can be written as a single
 column:
 
-.. math::
+.. topic:: Representation of rotations as a single column of bivectors
 
-   \begin{equation}
-   % ∂ u2202
-   % ∧ u2227
-   R =
-   \{
-     + R^x ∂_y ∧ ∂_z \\
-     + R^y ∂_z ∧ ∂_x \\
-     + R^z ∂_x ∧ ∂_y \\
-   \}
-   \end{equation}
+   .. math::
+   
+      \begin{equation}
+      R =
+      \{
+        + R^x ∂_y ∧ ∂_z \\
+        + R^y ∂_z ∧ ∂_x \\
+        + R^z ∂_x ∧ ∂_y \\
+      \}
+      \end{equation}
    
 Or with a row/column matrix notation:
 
 .. math::
 
    \begin{equation}
-   % ∂ u2202
-   % ∧ u2227
    R =
    \{
                      & + R^z ∂_x ∧ ∂_y &                 \\
@@ -58,7 +60,7 @@ The anti-symmetric property of the wedge product :math:`\partial_i \wedge
    A ∂_i ∧ ∂_j = \frac{1}{2} (A ∂_i ∧ ∂_j - A ∂_j ∧ ∂_i)
    \end{equation}
 
-With a row/column representation, we obtain:
+With a column/row representation, we obtain:
 
 .. math::
 
@@ -72,32 +74,34 @@ With a row/column representation, we obtain:
    \}
    \end{equation}
 
-With a column/row representation, we obtain the transpose:
+With a row/column representation, we obtain:
 
-.. math::
+.. topic:: The matrix representation of rotations
 
-   \begin{equation}
-   % ∂ u2202
-   % ∧ u2227
-   R = \frac{1}{2}
-   \{
-                     & -R^z ∂_y ∧ ∂_x & +R^y ∂_z ∧ ∂_x \\
-      +R^z ∂_x ∧ ∂_y &                & -R^x ∂_z ∧ ∂_y \\
-      -R^y ∂_x ∧ ∂_z & +R^x ∂_y ∧ ∂_z &                \\
-   \}
-   \end{equation}
+   .. math::
+   
+      \begin{equation}
+      R = \frac{1}{2}
+      \{
+                        & -R^z ∂_y ∧ ∂_x & +R^y ∂_z ∧ ∂_x \\
+         +R^z ∂_x ∧ ∂_y &                & -R^x ∂_z ∧ ∂_y \\
+         -R^y ∂_x ∧ ∂_z & +R^x ∂_y ∧ ∂_z &                \\
+      \}
+      \end{equation}
 
 The doubly contravariant rotation object at hand can only act on covectors. To
 fall back to matrix multiplication, we need a mixed tensor that takes as input
 vectors and we thus must flatten one of the components.
 
-Flattening of the first kind
-----------------------------
+.. }}}
+
+Flattening of the first index
+-----------------------------
 
 .. {{{
 
 Flattering of the first kind refers to the flattening of the first component of
-the double contravariant rotation :math:`R`.  In this section, we transform the
+the doubly contravariant rotation :math:`R`.  In this section, we transform the
 :math:`R` to the mixed tensor:
 
 .. math::
@@ -111,37 +115,64 @@ the double contravariant rotation :math:`R`.  In this section, we transform the
    \}
    \end{equation}
 
-.. admonition:: Step by step
+.. admonition:: All calculation steps
    :class: dropdown
 
+   .. {{{
+
+   The expression at hand is double contravariant and must be flattend in the
+   first index:
+
    .. math::
-   
-      \begin{align}
-      R^{♭♯}
-         &= (R^{♯♯})^{♭♯} \\
-         &= \frac{1}{2}
-         \{
-                           & - R^z ∂_y ∧ ∂_x & + R^y ∂_z ∧ ∂_x \\
-           + R^z ∂_x ∧ ∂_y &                 & - R^x ∂_z ∧ ∂_y \\
-           - R^y ∂_x ∧ ∂_z & + R^x ∂_y ∧ ∂_z &                 \\
-         \}^{♭♯} \\
-         &= \frac{1}{2}
-         \{
-                                  & - R^z (∂_y ∧ ∂_x)^{♭♯} & + R^y (∂_z ∧ ∂_x)^{♭♯} \\
-           + R^z (∂_x ∧ ∂_y)^{♭♯} &                        & - R^x (∂_z ∧ ∂_y)^{♭♯} \\
-           - R^y (∂_x ∧ ∂_z)^{♭♯} & + R^x (∂_y ∧ ∂_z)^{♭♯} &                        \\
-         \} \\
-         &= \frac{1}{2}
-         \{
-                            & - R^z dx^y ∧ ∂_x & + R^y dx^z ∧ ∂_x \\
-           + R^z dx^x ∧ ∂_y &                  & - R^x dx^z ∧ ∂_y \\
-           - R^y dx^x ∧ ∂_z & + R^x dx^y ∧ ∂_z &                  \\
-         \}
-      \end{align}
+
+      \begin{equation}
+      R^{♭♯} = (R^{♯♯})^{♭♯}
+      \end{equation}
+
+   Expand the rotation to its matrix form:
+
+   .. math::
+  
+      \begin{equation}
+      R^{♭♯} = \frac{1}{2}
+      \begin{bmatrix}
+                        & - R^z ∂_y ∧ ∂_x & + R^y ∂_z ∧ ∂_x \\
+        + R^z ∂_x ∧ ∂_y &                 & - R^x ∂_z ∧ ∂_y \\
+        - R^y ∂_x ∧ ∂_z & + R^x ∂_y ∧ ∂_z &                 \\
+      \end{bmatrix}^{♭♯}
+      \end{equation}
+
+   Distribute the musical operators:
+
+   .. math::
+
+      \begin{equation}
+      R^{♭♯} = \frac{1}{2}
+      \begin{bmatrix}
+                               & - R^z (∂_y ∧ ∂_x)^{♭♯} & + R^y (∂_z ∧ ∂_x)^{♭♯} \\
+        + R^z (∂_x ∧ ∂_y)^{♭♯} &                        & - R^x (∂_z ∧ ∂_y)^{♭♯} \\
+        - R^y (∂_x ∧ ∂_z)^{♭♯} & + R^x (∂_y ∧ ∂_z)^{♭♯} &                        \\
+      \end{bmatrix}
+      \end{equation}
+
+   Apply the musical operators:
+
+   .. math::
+
+      \begin{equation}
+      R^{♭♯} = \frac{1}{2}
+      \begin{bmatrix}
+                         & - R^z dx^y ∧ ∂_x & + R^y dx^z ∧ ∂_x \\
+        + R^z dx^x ∧ ∂_y &                  & - R^x dx^z ∧ ∂_y \\
+        - R^y dx^x ∧ ∂_z & + R^x dx^y ∧ ∂_z &                  \\
+      \end{bmatrix}
+      \end{equation}
+
+   .. }}}
 
 .. }}}
 
-Flatterning of the second kind
+Flattening of the second index
 ------------------------------
 
 .. {{{
@@ -164,8 +195,10 @@ rotations in Minkowski space. The contravariant/covariant rotation is:
    \}
    \end{equation}
 
-.. admonition:: Step by step calculation
+.. admonition:: All calculation steps
    :class: dropdown
+
+   .. {{{
 
    .. math::
    
@@ -189,6 +222,8 @@ rotations in Minkowski space. The contravariant/covariant rotation is:
       \}
       \end{align}
 
+   .. }}}
+
 Expanding the wedge product to its tensor form and simplifying, we find the
 explicit expression of the mixed wedge products.
 
@@ -200,7 +235,7 @@ explicit expression of the mixed wedge products.
    (∂_z ∧ ∂_x)^{♯♭} &=& ∂_z ⊗ dx^x - ∂_x ⊗ dx^z \\
    \end{array}
 
-.. admonition:: Step by step calculation
+.. admonition:: All calculation steps
    :class: dropdown
 
    .. math::
@@ -240,8 +275,8 @@ Basis element      Expression                       Row/column matrix symmetry
 
 .. }}}
 
-Equivalence to the 3D rotation group :math:`\mathfrak{so}(3)`
--------------------------------------------------------------
+The :math:`\mathfrak{so}(3)` Rotation Group
+-------------------------------------------
 
 .. {{{
 
@@ -281,10 +316,14 @@ electromagnetic tensor. Choosing the implicit basis :math:`\mathbf{e}_i \wedge
    \}
    \end{align}
 
+Which is `a regular choice for the basis
+<https://en.m.wikipedia.org/wiki/3D_rotation_group>`_ of the
+:math:`\mathfrak{so}(3)` group.
+
 .. }}}
 
-Equivalence to the cross product :math:`\times`
------------------------------------------------
+The Cross Product :math:`\times`
+--------------------------------
 
 .. {{{
 
@@ -293,13 +332,35 @@ along the three planes, or we can express a rotation along the three directions
 of space. Indeed, through the use of the Hodge star :math:`\star`, we fall back
 to the description of rotations expressed as a cross product :math:`\times`:
 
+.. margin::
+
+   Apply the Hodge star
+
 .. math::
 
-   \begin{align*}
-   ⋆R &= ⋆(R^x   ∂_y ∧ ∂_z  + R^y   ∂_z ∧ ∂_x  + R^z   ∂_x ∧ ∂_y) \\
-      &=   R^x ⋆(∂_y ∧ ∂_z) + R^y ⋆(∂_z ∧ ∂_x) + R^z ⋆(∂_x ∧ ∂_y) \\
-      &=   R^x ∂_x + R^y ∂_y + R^z ∂_z
-   \end{align*}
+   \begin{equation}
+   ⋆R = ⋆(R^x ∂_y ∧ ∂_z + R^y ∂_z ∧ ∂_x + R^z ∂_x ∧ ∂_y) \\
+   \end{equation}
+
+.. margin::
+
+   Distribute the Hodge star
+
+.. math::
+
+   \begin{equation}
+   ⋆R = R^x ⋆(∂_y ∧ ∂_z) + R^y ⋆(∂_z ∧ ∂_x) + R^z ⋆(∂_x ∧ ∂_y) \\
+   \end{equation}
+
+.. margin::
+
+   Identify the cross product
+
+.. math::
+
+   \begin{equation}
+   ⋆R = R^x ∂_x + R^y ∂_y + R^z ∂_z
+   \end{equation}
 
 That is, the Hodge star of the rotation ∂_xpressed as a linear comibination of
 bivectors is exactly a rotation in terms of cross products in the Hodge dual

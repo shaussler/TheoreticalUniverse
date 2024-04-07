@@ -39,6 +39,10 @@ html_css_files = ['custom.css']
 html_baseurl = 'https://shaussler.github.io/TheoreticalUniverse/'
 html_static_path = ['_static']
 
+html_theme_options = {
+    "use_sidenotes": True
+}
+
 # Google analytics
 # ----------------
 
