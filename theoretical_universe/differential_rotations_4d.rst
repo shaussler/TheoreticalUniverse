@@ -40,8 +40,9 @@ obtain the **contravariant matrix representation of a rotation**:
    \end{bmatrix}
    \end{equation}
 
-Recall that using :ref:`the Minkowski metric <minkowski_metric:The Minkowski
-Metric>`, we can flatten a basis vector with the flat operator :math:`♭`:
+Recall that using :ref:`the Minkowski metric <formalism_minkowski_metric:The
+Minkowski Metric>`, we can flatten a basis vector with the flat operator
+:math:`♭`:
 
 .. math::
 

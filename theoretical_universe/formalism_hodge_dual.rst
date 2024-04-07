@@ -1,5 +1,5 @@
-The Hodge dual
-==============
+Hodge duality
+=============
 
 .. rst-class:: custom-author
 

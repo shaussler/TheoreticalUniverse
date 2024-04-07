@@ -16,10 +16,10 @@ matrix notation with the same object:
        0 &  0 &  0 & -1 \\
    \end{bmatrix}
 
-With :ref:`musical notation <musical_isomorphisms:Musical Isomorphisms>` and
-:ref:`free matrix representation <free_matrix_representation:Free Matrix
-Representation>`, we explicitely write the metric tensor together with its
-basis:
+With :ref:`musical notation <formalism_musical_isomorphisms:Musical
+Isomorphisms>` and :ref:`free matrix representation
+<formalism_free_matrix_representation:Free Matrix Representation>`, we
+explicitely write the metric tensor together with its basis:
 
 .. math::
 
