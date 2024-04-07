@@ -84,7 +84,9 @@ regarded as established experimental facts.
 
 .. math::
 
+   \begin{equation}
    \vect{∇} ⨯ \vect{E} = -\frac{∂}{∂t} \vect{B}
+   \end{equation}
 
 With the electric field :math:`\vect{E}=\{ E^x \\ E^y \\ E^z \}`, magnetic
 field :math:`\vect{B}=\{ B^x \\ B^y \\ B^z \}`, and operator
@@ -112,31 +114,33 @@ the 1865 Maxwell formulation, albeit with modern notation and conventions.
 
 .. math::
 
-    \frac{\partial}{\partial y} B^z - \frac{\partial}{\partial z} B^y
-    = \mu_0 J^x + \frac{1}{c^2} \frac{\partial}{\partial t} E^x \\
-
-    \frac{\partial}{\partial z} B^x - \frac{\partial}{\partial x} B^z
-    = \mu_0 J^y + \frac{1}{c^2} \frac{\partial}{\partial t} E^y \\
-
-    \frac{\partial}{\partial x} B^y - \frac{\partial}{\partial y} B^x
-    = \mu_0 J^z + \frac{1}{c^2} \frac{\partial}{\partial t} E^z
+   \begin{equation}
+   \begin{array}
+   \frac{∂}{∂y} B^z - \frac{∂}{∂z} B^y = μ_0 J^x + \frac{1}{c^2} \frac{∂}{∂t} E^x \\
+   \frac{∂}{∂z} B^x - \frac{∂}{∂x} B^z = μ_0 J^y + \frac{1}{c^2} \frac{∂}{∂t} E^y \\
+   \frac{∂}{∂x} B^y - \frac{∂}{∂y} B^x = μ_0 J^z + \frac{1}{c^2} \frac{∂}{∂t} E^z \\
+   \end{array}
+   \end{equation}
 
 .. rubric:: Gauss's law for magnetism
 
 .. math::
 
-   \frac{\partial}{\partial x} B^x +
-   \frac{\partial}{\partial y} B^y +
-   \frac{\partial}{\partial z} B^z
-   = 0
+   \begin{equation}
+   \frac{∂}{∂x} B^x + \frac{∂}{∂y} B^y + \frac{∂}{∂z} B^z = 0
+   \end{equation}
 
 .. rubric:: Faraday's law of induction
 
 .. math::
 
-    \frac{∂}{∂y} E^z - \frac{∂}{∂z} E^y = - \frac{∂}{∂t} B^x \\
-    \frac{∂}{∂z} E^x - \frac{∂}{∂x} E^z = - \frac{∂}{∂t} B^y \\
-    \frac{∂}{∂x} E^y - \frac{∂}{∂y} E^x = - \frac{∂}{∂t} B^z \\
+   \begin{equation}
+   \begin{array}{}
+   \frac{∂}{∂y} E^z - \frac{∂}{∂z} E^y = - \frac{∂}{∂t} B^x \\
+   \frac{∂}{∂z} E^x - \frac{∂}{∂x} E^z = - \frac{∂}{∂t} B^y \\
+   \frac{∂}{∂x} E^y - \frac{∂}{∂y} E^x = - \frac{∂}{∂t} B^z \\
+   \end{array}
+   \end{equation}
 
 .. }}}
 
@@ -152,10 +156,10 @@ Gathering and reordering the terms, a clear structures becomes apparent:
 .. math::
 
    \begin{matrix}
-                                      & + \frac{∂ E^x}{∂x} & + \frac{∂ E^y}{∂y} & + \frac{∂ E^z}{∂z} & = & + ρ/ε_0   \\
-     + \frac{1}{c^2} \frac{∂ E^x}{∂t} &                    & - \frac{∂ B^z}{∂y} & + \frac{∂ B^y}{∂z} & = & - μ_0 J^x \\
-     + \frac{1}{c^2} \frac{∂ E^y}{∂t} & + \frac{∂ B^z}{∂x} &                    & - \frac{∂ B^x}{∂z} & = & - μ_0 J^y \\
-     + \frac{1}{c^2} \frac{∂ E^z}{∂t} & - \frac{∂ B^y}{∂x} & + \frac{∂ B^x}{∂y} &                    & = & - μ_0 J^z \\
+                                     & + \frac{∂E^x}{∂x} & + \frac{∂E^y}{∂y} & + \frac{∂E^z}{∂z} & = & + ρ/ε_0   \\
+     + \frac{1}{c^2} \frac{∂E^x}{∂t} &                   & - \frac{∂B^z}{∂y} & + \frac{∂B^y}{∂z} & = & - μ_0 J^x \\
+     + \frac{1}{c^2} \frac{∂E^y}{∂t} & + \frac{∂B^z}{∂x} &                   & - \frac{∂B^x}{∂z} & = & - μ_0 J^y \\
+     + \frac{1}{c^2} \frac{∂E^z}{∂t} & - \frac{∂B^y}{∂x} & + \frac{∂B^x}{∂y} &                   & = & - μ_0 J^z \\
    \end{matrix}
 
 .. rubric:: Homogenous equations
@@ -163,26 +167,10 @@ Gathering and reordering the terms, a clear structures becomes apparent:
 .. math::
 
    \begin{matrix}
-                                     &
-   + \frac{\partial B^x}{\partial x} &
-   + \frac{\partial B^y}{\partial y} &
-   + \frac{\partial B^z}{\partial z} &
-   = & 0 \\
-   + \frac{\partial B^x}{\partial t} &
-                                     &
-   + \frac{\partial E^z}{\partial y} &
-   - \frac{\partial E^y}{\partial z} &
-   = & 0 \\
-   + \frac{\partial B^y}{\partial t} &
-   - \frac{\partial E^z}{\partial x} &
-                                     &
-   + \frac{\partial E^x}{\partial z} &
-   = & 0 \\
-   + \frac{\partial B^z}{\partial t} &
-   + \frac{\partial E^y}{\partial x} &
-   - \frac{\partial E^x}{\partial y} &
-                                     &
-   = & 0 \\
+                       & + \frac{∂B^x}{∂x} & + \frac{∂B^y}{∂y} & + \frac{∂B^z}{∂z} &=& 0 \\
+     + \frac{∂B^x}{∂t} &                   & + \frac{∂E^z}{y∂} & - \frac{∂E^y}{∂z} &=& 0 \\
+     + \frac{∂B^y}{∂t} & - \frac{∂E^z}{∂x} &                   & + \frac{∂E^x}{∂z} &=& 0 \\
+     + \frac{∂B^z}{∂t} & + \frac{∂E^y}{∂x} & - \frac{∂E^x}{∂y} &                   &=& 0 \\
    \end{matrix}
 
 .. }}}
@@ -206,24 +194,27 @@ dimensions :math:`∂_x = \frac{∂}{∂ x}`, :math:`∂_y = \frac{∂}{∂y}`, 
 
 .. math::
 
-  
+   \begin{equation}
    \begin{matrix} \newcommand{\E}{\tilde{E}}
                 & + ∂_x \E^x & + ∂_y \E^y & + ∂_y \E^z & = & + μ_0 c ρ \\
      + ∂_t \E^x &            & - ∂_y  B^z & + ∂_z  B^y & = & - μ_0 J^x \\
      + ∂_t \E^y & + ∂_x  B^z &            & - ∂_z  B^x & = & - μ_0 J^y \\
      + ∂_t \E^z & - ∂_x  B^y & + ∂_y  B^x &            & = & - μ_0 J^z \\
    \end{matrix}
+   \end{equation}
 
 .. rubric:: Homogenous equations
 
 .. math::
 
+   \begin{equation}
    \begin{matrix} \newcommand{\E}{\tilde{E}}
                 & + ∂_x  B^x & + ∂_y  B^y & + ∂_z  B^z & = & 0 \\
      + ∂_t  B^x &            & + ∂_y \E^z & - ∂_z \E^y & = & 0 \\
      + ∂_t  B^y & - ∂_x \E^z &            & + ∂_z \E^x & = & 0 \\
      + ∂_t  B^z & + ∂_x \E^y & - ∂_y \E^x &            & = & 0 \\
    \end{matrix}
+   \end{equation}
 
 For readers well-versed in the tensor formulation of electromagnetism, the
 presence and nature of the Faraday tensor and its dual are likely evident.
@@ -232,23 +223,23 @@ be apparent that we can employ matrices operations.
 
 .. note::
 
-   Although beyond our current discussion's scope, defining
-   :math:`\partial_\mu` unifies all dimensions to a unit of inverse distance.
-   :math:`\frac{1}{c}\frac{\partial}{\partial t}
-   =\frac{\partial}{\partial(ct)}` has the units of an inverse distance,
-   exactly like the partial derivative with respect to the spatial dimensions
-   :math:`\frac{\partial}{\partial x}`, :math:`\frac{\partial}{\partial y}`,
-   and :math:`\frac{\partial}{\partial z}`.
+   Although beyond our current discussion's scope, defining :math:`∂_μ` unifies
+   all dimensions to a unit of inverse distance. :math:`\frac{1}{c}\frac{∂}{∂t}
+   =\frac{∂}{∂(ct)}` has the units of an inverse distance, exactly like the
+   partial derivative with respect to the spatial dimensions
+   :math:`\frac{∂}{∂x}`, :math:`\frac{∂}{∂y}`, and :math:`\frac{∂}{∂z}`.
 
 .. note::
 
    The experimental relation between the speed of light :math:`c`, the
-   permittivity of free space :math:`\epsilon_0`, and and the permeability of
-   free space :math:`\mu_0` is used:
+   permitivity of free space :math:`ε_0`, and and the permeability of free
+   space :math:`μ_0` is used:
 
    .. math::
 
-      c=\frac{1}{\sqrt{\epsilon_0 \mu_0}}
+      \begin{equation}
+      c=\frac{1}{\sqrt{ε_0 μ_0}}
+      \end{equation}
 
 .. }}}
 
@@ -262,35 +253,30 @@ equivalent to:
 
 .. math::
 
-   \begin{bmatrix}
-       \partial_t & \partial_x & \partial_y & \partial_z \\
-   \end{bmatrix}
-   \begin{bmatrix}
-            & +\Ex & +\Ey & +\Ez \\
-       +\Ex &      & +\Bz & -\By \\
-       +\Ey & -\Bz &      & +\Bx \\
-       +\Ez & +\By & -\Bx &      \\
+   \begin{equation}
+   \begin{bmatrix} ∂_t & ∂_x & ∂_y & ∂_z \end{bmatrix}
+   \begin{bmatrix} \newcommand{\E}{\tilde{E}}
+            & + \E^x & +\E^y & + \E^z \\
+     + \E^x &        & + B^z & -  B^y \\
+     + \E^y & -  B^z &       & +  B^x \\
+     + \E^z & +  B^y & - B^x &        \\
    \end{bmatrix}
    =
-   \begin{bmatrix}
-       + \mu_0 c \rho & - \mu_0 J^x  & - \mu_0 J^y  & - \mu_0 J^z \\
-   \end{bmatrix}
+   \begin{bmatrix} + μ_0 c ρ & - μ_0 J^x  & - μ_0 J^y  & - μ_0 J^z \end{bmatrix}
+   \end{equation}
 
 .. math::
 
-   \begin{bmatrix}
-       \partial_t & \partial_x & \partial_y & \partial_z \\
+   \begin{equation}
+   \begin{bmatrix} ∂_t & ∂_x & ∂_y & ∂_z \end{bmatrix}
+   \begin{bmatrix} \newcommand{\E}{\tilde{E}}
+           & +  B^x & +  B^y & +  B^z \\
+     + B^x &        & - \E^z & + \E^y \\
+     + B^y & + \E^z &        & - \E^x \\
+     + B^z & - \E^y & + \E^x &        \\
    \end{bmatrix}
-   \begin{bmatrix}
-            & +\Bx & +\By & +\Bz \\
-       +\Bx &      & -\Ez & +\Ey \\
-       +\By & +\Ez &      & -\Ex \\
-       +\Bz & -\Ey & +\Ex &      \\
-   \end{bmatrix}
-   =
-   \begin{bmatrix}
-       0 & 0 & 0 & 0 \\
-   \end{bmatrix}
+   = \begin{bmatrix} 0 & 0 & 0 & 0 \end{bmatrix}
+   \end{equation}
 
 We have thus obtained the Faraday tensor (inhomogenous equations) and its dual
 (homogenous equations).
@@ -303,43 +289,49 @@ The Tensor Equations
 .. {{{
 
 The flat left hand side is a covector, which we note in tensor notation with
-lower indices :math:`\partial_\mu`. The right hand side is also flat and
-therefore is a covector :math:`J_\nu`. The rank 2 tensors in the expressions
-are necessarily one time contravariant and one time covariant. We multiply each
-column of :math:`\partial` with each row of :math:`F`, and repeat for all
-columns of :math:`F`. With the first index of :math:`F` being the row
-:math:`\mu`, and :math:`\nu`, this means :math:`\partial_\mu F^\mu{}_\nu`. We
-then write in tensor notation :math:`F^\mu{}_\nu` for the Faraday tensor, and
-:math:`G^\mu{}_\nu` for its dual:
+lower indices :math:`∂_μ`. The right hand side is also flat and therefore is a
+covector :math:`J_ν`. The rank 2 tensors in the expressions are necessarily one
+time contravariant and one time covariant. We multiply each column of :math:`∂`
+with each row of :math:`F`, and repeat for all columns of :math:`F`. With the
+first index of :math:`F` being the row :math:`μ`, and :math:`ν`, this means
+:math:`∂_μ F^μ{}_ν`. We then write in tensor notation :math:`F^μ{}_ν` for the
+Faraday tensor, and :math:`G^μ{}_ν` for its dual:
 
 .. math::
 
-   \{ F^\mu{}_\nu \}
-   =
-   \begin{bmatrix}
-            & +\Ex & +\Ey & +\Ez \\
-       +\Ex &      & +\Bz & -\By \\
-       +\Ey & -\Bz &      & +\Bx \\
-       +\Ez & +\By & -\Bx &      \\
+   \begin{equation}
+   \{ F^μ{}_ν \} =
+   \begin{bmatrix} \newcommand{\E}{\tilde{E}}
+            & + \E^x & + \E^y & + \E^z \\
+     + \E^x &        & +  B^z & -  B^y \\
+     + \E^y & -  B^z &        & +  B^x \\
+     + \E^z & +  B^y & -  B^x &       \\
    \end{bmatrix}
+   \end{equation}
 
 .. math::
 
-   \{ G^\mu{}_\nu \}
-   =
-   \begin{bmatrix}
-             & +\Bx & +\By & +\Bz \\
-       +\Bx  &      & -\Ez & +\Ey \\
-       +\By  & +\Ez &      & -\Ex \\
-       +\Bz  & -\Ey & +\Ex &      \\
+   \{ G^μ{}_ν \} =
+   \begin{bmatrix} \newcommand{\E}{\tilde{E}}
+             & +  B^x & +  B^y & +  B^z \\
+     +  B^x  &        & - \E^z & + \E^y \\
+     +  B^y  & + \E^z &        & - \E^x \\
+     +  B^z  & - \E^y & + \E^x &        \\
    \end{bmatrix}
 
 Maxwell's equations are then:
 
 .. math::
 
-   \partial_{\mu} F^\mu{}_\nu & = J_{\nu} \\
-   \partial_{\mu} G^\mu{}_\nu & = 0
+   \begin{equation}
+   ∂_μ F^μ{}_ν = J_{ν}
+   \end{equation}
+
+.. math::
+
+   \begin{equation}
+   ∂_μ G^μ{}_ν = 0
+   \end{equation}
 
 To double-check the result, you can have a look at `this alternative derivation
 of the mixed electromagnetic tensor
