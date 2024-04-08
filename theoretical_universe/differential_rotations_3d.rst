@@ -95,8 +95,8 @@ vectors and we thus must flatten one of the components.
 
 .. }}}
 
-Flattening of the first index
------------------------------
+Flattening the First Index
+--------------------------
 
 .. {{{
 
@@ -172,8 +172,8 @@ the doubly contravariant rotation :math:`R`.  In this section, we transform the
 
 .. }}}
 
-Flattening of the second index
-------------------------------
+Flattening the Second Index
+---------------------------
 
 .. {{{
 
@@ -238,28 +238,64 @@ explicit expression of the mixed wedge products.
 .. admonition:: All calculation steps
    :class: dropdown
 
+   Expand the wedge product into tensor products
+
    .. math::
 
       \begin{array}{}
-      (∂_x ∧ ∂_y)^{♯♭} &=& (∂_x ⊗ ∂_y - ∂_y ⊗ ∂_x)^{♯♭} &=&  ∂_x^♯ ⊗ ∂_y^♭ - ∂_y^♯ ⊗ ∂_x^♭ \\
-      (∂_y ∧ ∂_z)^{♯♭} &=& (∂_y ⊗ ∂_z - ∂_z ⊗ ∂_y)^{♯♭} &=&  ∂_y^♯ ⊗ ∂_z^♭ - ∂_z^♯ ⊗ ∂_y^♭ \\
-      (∂_z ∧ ∂_x)^{♯♭} &=& (∂_z ⊗ ∂_x - ∂_x ⊗ ∂_z)^{♯♭} &=&  ∂_z^♯ ⊗ ∂_x^♭ - ∂_x^♯ ⊗ ∂_z^♭ \\
+      (∂_x ∧ ∂_y)^{♯♭} &=& (∂_x ⊗ ∂_y - ∂_y ⊗ ∂_x)^{♯♭} \\
+      (∂_y ∧ ∂_z)^{♯♭} &=& (∂_y ⊗ ∂_z - ∂_z ⊗ ∂_y)^{♯♭} \\
+      (∂_z ∧ ∂_x)^{♯♭} &=& (∂_z ⊗ ∂_x - ∂_x ⊗ ∂_z)^{♯♭} \\
       \end{array}
 
+   Distribute the musical operators:
+
    .. math::
 
       \begin{array}{}
-      (∂_x ∧ ∂_y)^{♯♭} &=& ∂_x ⊗ η_{yi} dx^i - ∂_y ⊗ η_{xi}dx^i &=& η_{yi} ∂_x ⊗ dx^i - η_{xi} ∂_y ⊗ dx^i \\
-      (∂_y ∧ ∂_z)^{♯♭} &=& ∂_y ⊗ η_{zi} dx^i - ∂_z ⊗ η_{yi}dx^i &=& η_{zi} ∂_y ⊗ dx^i - η_{yi} ∂_z ⊗ dx^i \\
-      (∂_z ∧ ∂_x)^{♯♭} &=& ∂_z ⊗ η_{xi} dx^i - ∂_x ⊗ η_{zi}dx^i &=& η_{xi} ∂_z ⊗ dx^i - η_{zi} ∂_x ⊗ dx^i \\
+      (∂_x ∧ ∂_y)^{♯♭} &=& ∂_x^♯ ⊗ ∂_y^♭ - ∂_y^♯ ⊗ ∂_x^♭ \\
+      (∂_y ∧ ∂_z)^{♯♭} &=& ∂_y^♯ ⊗ ∂_z^♭ - ∂_z^♯ ⊗ ∂_y^♭ \\
+      (∂_z ∧ ∂_x)^{♯♭} &=& ∂_z^♯ ⊗ ∂_x^♭ - ∂_x^♯ ⊗ ∂_z^♭ \\
       \end{array}
 
+   Apply the musical operators:
+
    .. math::
 
       \begin{array}{}
-      (∂_x ∧ ∂_y)^{♯♭} &=& η_{yy} ∂_x ⊗ dx^y - η_{xx} ∂_y ⊗ dxx &=& ∂_x ⊗ dx^y - ∂_y ⊗ dx^x \\
-      (∂_y ∧ ∂_z)^{♯♭} &=& η_{zz} ∂_y ⊗ dx^z - η_{yy} ∂_z ⊗ dxy &=& ∂_y ⊗ dx^z - ∂_z ⊗ dx^y \\
-      (∂_z ∧ ∂_x)^{♯♭} &=& η_{xx} ∂_z ⊗ dx^x - η_{zz} ∂_x ⊗ dxz &=& ∂_z ⊗ dx^x - ∂_x ⊗ dx^z \\
+      (∂_x ∧ ∂_y)^{♯♭} &=& ∂_x ⊗ η_{yi} dx^i - ∂_y ⊗ η_{xi}dx^i \\
+      (∂_y ∧ ∂_z)^{♯♭} &=& ∂_y ⊗ η_{zi} dx^i - ∂_z ⊗ η_{yi}dx^i \\
+      (∂_z ∧ ∂_x)^{♯♭} &=& ∂_z ⊗ η_{xi} dx^i - ∂_x ⊗ η_{zi}dx^i \\
+      \end{array}
+
+   Take out the metric components:
+
+   .. math::
+
+      \begin{array}{}
+      (∂_x ∧ ∂_y)^{♯♭} &=& η_{yi} ∂_x ⊗ dx^i - η_{xi} ∂_y ⊗ dx^i \\
+      (∂_y ∧ ∂_z)^{♯♭} &=& η_{zi} ∂_y ⊗ dx^i - η_{yi} ∂_z ⊗ dx^i \\
+      (∂_z ∧ ∂_x)^{♯♭} &=& η_{xi} ∂_z ⊗ dx^i - η_{zi} ∂_x ⊗ dx^i \\
+      \end{array}
+
+   Identify the non-zero terms:
+
+   .. math::
+
+      \begin{array}{}
+      (∂_x ∧ ∂_y)^{♯♭} &=& η_{yy} ∂_x ⊗ dx^y - η_{xx} ∂_y ⊗ dx^x \\
+      (∂_y ∧ ∂_z)^{♯♭} &=& η_{zz} ∂_y ⊗ dx^z - η_{yy} ∂_z ⊗ dx^y \\
+      (∂_z ∧ ∂_x)^{♯♭} &=& η_{xx} ∂_z ⊗ dx^x - η_{zz} ∂_x ⊗ dx^z \\
+      \end{array}
+
+   Apply numerical values
+
+   .. math::
+
+      \begin{array}{}
+      (∂_x ∧ ∂_y)^{♯♭} &=& ∂_x ⊗ dx^y - ∂_y ⊗ dx^x \\
+      (∂_y ∧ ∂_z)^{♯♭} &=& ∂_y ⊗ dx^z - ∂_z ⊗ dx^y \\
+      (∂_z ∧ ∂_x)^{♯♭} &=& ∂_z ⊗ dx^x - ∂_x ⊗ dx^z \\
       \end{array}
 
 From the explicit calculation of the basis elements, we observe the following
@@ -322,19 +358,17 @@ Which is `a regular choice for the basis
 
 .. }}}
 
-The Cross Product :math:`\times`
---------------------------------
+The Cross Product
+-----------------
 
 .. {{{
 
 Rotations in three dimensions have a dual. We can either express a rotation
 along the three planes, or we can express a rotation along the three directions
-of space. Indeed, through the use of the Hodge star :math:`\star`, we fall back
-to the description of rotations expressed as a cross product :math:`\times`:
+of space. Indeed, through the use of the Hodge star :math:`⋆`, we fall back
+to the description of rotations expressed as a cross product :math:`⨯`:
 
-.. margin::
-
-   Apply the Hodge star
+Apply the Hodge star:
 
 .. math::
 
@@ -342,9 +376,7 @@ to the description of rotations expressed as a cross product :math:`\times`:
    ⋆R = ⋆(a \; ∂_y ∧ ∂_z + b \; ∂_z ∧ ∂_x + c \; ∂_x ∧ ∂_y) \\
    \end{equation}
 
-.. margin::
-
-   Distribute the Hodge star
+Distribute the Hodge star:
 
 .. math::
 
@@ -352,9 +384,7 @@ to the description of rotations expressed as a cross product :math:`\times`:
    ⋆R = a ⋆(∂_y ∧ ∂_z) + b ⋆(∂_z ∧ ∂_x) + c ⋆(∂_x ∧ ∂_y) \\
    \end{equation}
 
-.. margin::
-
-   Identify the cross product
+Identify the cross product:
 
 .. math::
 

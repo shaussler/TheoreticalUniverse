@@ -13,12 +13,12 @@ a linear combination of 6 parameters**:
    \begin{equation}
    B^{♯♯}
    = \begin{bmatrix}
-     F^{tx} ∂_t ∧ ∂_x \\
-     F^{ty} ∂_t ∧ ∂_y \\
-     F^{tz} ∂_t ∧ ∂_z \\
-     F^{xy} ∂_x ∧ ∂_y \\
-     F^{yz} ∂_y ∧ ∂_z \\
-     F^{zx} ∂_z ∧ ∂_x \\
+     a \; ∂_t ∧ ∂_x \\
+     b \; ∂_t ∧ ∂_y \\
+     c \; ∂_t ∧ ∂_z \\
+     d \; ∂_x ∧ ∂_y \\
+     e \; ∂_y ∧ ∂_z \\
+     f \; ∂_z ∧ ∂_x \\
    \end{bmatrix}
    \end{equation}
 
@@ -33,10 +33,10 @@ obtain the **contravariant matrix representation of a rotation**:
    B^{♯♯}
    = \frac{1}{2}
    \begin{bmatrix}
-                          & + F^{tx} ∂_t ∧ ∂_x & + F^{ty} ∂_t ∧ ∂_y & + F^{tz} ∂_t ∧ ∂_z \\
-       - F^{tx} ∂_x ∧ ∂_t &                    & + F^{xy} ∂_x ∧ ∂_y & - F^{zx} ∂_x ∧ ∂_z \\
-       - F^{ty} ∂_y ∧ ∂_t & - F^{xy} ∂_y ∧ ∂_x &                    & + F^{yz} ∂_y ∧ ∂_z \\
-       - F^{tz} ∂_z ∧ ∂_t & + F^{zx} ∂_z ∧ ∂_x & - F^{yz} ∂_z ∧ ∂_y &                    \\
+                        & + a \; ∂_t ∧ ∂_x & + b \; ∂_t ∧ ∂_y & + c \; ∂_t ∧ ∂_z \\
+       - a \; ∂_x ∧ ∂_t &                  & + d \; ∂_x ∧ ∂_y & - f \; ∂_x ∧ ∂_z \\
+       - b \; ∂_y ∧ ∂_t & - d \; ∂_y ∧ ∂_x &                  & + e \; ∂_y ∧ ∂_z \\
+       - c \; ∂_z ∧ ∂_t & + f \; ∂_z ∧ ∂_x & - e \; ∂_z ∧ ∂_y &                    \\
    \end{bmatrix}
    \end{equation}
 
@@ -60,8 +60,8 @@ And likewise flatten any index of the doubly contravariant wedge product:
    (∂_μ ∧ ∂_ν)^{♭♭} &= η_{δμ} η_{γν} dx^δ ∧ dx^γ \\
    \end{matrix}
 
-Flattening of the first index
------------------------------
+Flattening the First Index
+--------------------------
 
 .. {{{
 
@@ -110,7 +110,7 @@ bivectors:
       (∂_z ∧ ∂_x)^{♭♯} &=& η_{zγ} dx^γ ∧ ∂_x \\
       \end{array}
 
-   Identify the non-zero terms of the metric:
+   Identify the non-zero metric elements:
 
    .. math::
 
@@ -240,8 +240,8 @@ terms of tensor products:
 
 .. }}}
 
-Flattening of the second index
-------------------------------
+Flattening the Second Index
+---------------------------
 
 .. {{{
 
@@ -262,15 +262,69 @@ bivectors and obtain:
 .. admonition:: All calculation steps
    :class: dropdown
 
+   Distribute the musical operators:
+
    .. math::
 
       \begin{array}{}
-      (∂_t ∧ ∂_x)^{♯♭} &=& ∂_t ∧ η_{xγ} dx^γ &=& η_{xγ} ∂_t ∧ dx^γ&=& η_{xx} ∂_t ∧ dx^x &=& - ∂_t ∧ dx^x \\
-      (∂_t ∧ ∂_y)^{♯♭} &=& ∂_t ∧ η_{yγ} dx^γ &=& η_{yγ} ∂_t ∧ dx^γ&=& η_{yy} ∂_t ∧ dx^y &=& - ∂_t ∧ dx^y \\
-      (∂_t ∧ ∂_z)^{♯♭} &=& ∂_t ∧ η_{zγ} dx^γ &=& η_{zγ} ∂_t ∧ dx^γ&=& η_{zz} ∂_t ∧ dx^z &=& - ∂_t ∧ dx^z \\
-      (∂_x ∧ ∂_y)^{♯♭} &=& ∂_x ∧ η_{yγ} dx^γ &=& η_{yγ} ∂_x ∧ dx^γ&=& η_{yy} ∂_x ∧ dx^y &=& - ∂_x ∧ dx^y \\
-      (∂_y ∧ ∂_z)^{♯♭} &=& ∂_y ∧ η_{zγ} dx^γ &=& η_{zγ} ∂_y ∧ dx^γ&=& η_{zz} ∂_y ∧ dx^z &=& - ∂_y ∧ dx^z \\
-      (∂_z ∧ ∂_x)^{♯♭} &=& ∂_z ∧ η_{xγ} dx^γ &=& η_{xγ} ∂_z ∧ dx^γ&=& η_{xx} ∂_z ∧ dx^x &=& - ∂_z ∧ dx^x \\
+      (∂_t ∧ ∂_x)^{♯♭} &=& ∂_t^♯ ∧ ∂_x^♭ \\
+      (∂_t ∧ ∂_y)^{♯♭} &=& ∂_t^♯ ∧ ∂_y^♭ \\
+      (∂_t ∧ ∂_z)^{♯♭} &=& ∂_t^♯ ∧ ∂_z^♭ \\
+      (∂_x ∧ ∂_y)^{♯♭} &=& ∂_x^♯ ∧ ∂_y^♭ \\
+      (∂_y ∧ ∂_z)^{♯♭} &=& ∂_y^♯ ∧ ∂_z^♭ \\
+      (∂_z ∧ ∂_x)^{♯♭} &=& ∂_z^♯ ∧ ∂_x^♭ \\
+      \end{array}
+
+   Apply the musical operators:
+
+   .. math::
+
+      \begin{array}{}
+      (∂_t ∧ ∂_x)^{♯♭} &=& ∂_t ∧ η_{xγ} dx^γ \\
+      (∂_t ∧ ∂_y)^{♯♭} &=& ∂_t ∧ η_{yγ} dx^γ \\
+      (∂_t ∧ ∂_z)^{♯♭} &=& ∂_t ∧ η_{zγ} dx^γ \\
+      (∂_x ∧ ∂_y)^{♯♭} &=& ∂_x ∧ η_{yγ} dx^γ \\
+      (∂_y ∧ ∂_z)^{♯♭} &=& ∂_y ∧ η_{zγ} dx^γ \\
+      (∂_z ∧ ∂_x)^{♯♭} &=& ∂_z ∧ η_{xγ} dx^γ \\
+      \end{array}
+
+   Take out the metric components:
+
+   .. math::
+
+      \begin{array}{}
+      (∂_t ∧ ∂_x)^{♯♭} &=& η_{xγ} ∂_t ∧ dx^γ \\
+      (∂_t ∧ ∂_y)^{♯♭} &=& η_{yγ} ∂_t ∧ dx^γ \\
+      (∂_t ∧ ∂_z)^{♯♭} &=& η_{zγ} ∂_t ∧ dx^γ \\
+      (∂_x ∧ ∂_y)^{♯♭} &=& η_{yγ} ∂_x ∧ dx^γ \\
+      (∂_y ∧ ∂_z)^{♯♭} &=& η_{zγ} ∂_y ∧ dx^γ \\
+      (∂_z ∧ ∂_x)^{♯♭} &=& η_{xγ} ∂_z ∧ dx^γ \\
+      \end{array}
+
+   Identify the non-zero metric components:
+
+   .. math::
+
+      \begin{array}{}
+      (∂_t ∧ ∂_x)^{♯♭} &=& η_{xx} ∂_t ∧ dx^x \\
+      (∂_t ∧ ∂_y)^{♯♭} &=& η_{yy} ∂_t ∧ dx^y \\
+      (∂_t ∧ ∂_z)^{♯♭} &=& η_{zz} ∂_t ∧ dx^z \\
+      (∂_x ∧ ∂_y)^{♯♭} &=& η_{yy} ∂_x ∧ dx^y \\
+      (∂_y ∧ ∂_z)^{♯♭} &=& η_{zz} ∂_y ∧ dx^z \\
+      (∂_z ∧ ∂_x)^{♯♭} &=& η_{xx} ∂_z ∧ dx^x \\
+      \end{array}
+
+   Apply numerical values:
+
+   .. math::
+
+      \begin{array}{}
+      (∂_t ∧ ∂_x)^{♯♭} &=& - ∂_t ∧ dx^x \\
+      (∂_t ∧ ∂_y)^{♯♭} &=& - ∂_t ∧ dx^y \\
+      (∂_t ∧ ∂_z)^{♯♭} &=& - ∂_t ∧ dx^z \\
+      (∂_x ∧ ∂_y)^{♯♭} &=& - ∂_x ∧ dx^y \\
+      (∂_y ∧ ∂_z)^{♯♭} &=& - ∂_y ∧ dx^z \\
+      (∂_z ∧ ∂_x)^{♯♭} &=& - ∂_z ∧ dx^x \\
       \end{array}
 
 We can then identify the expressions for the mixed wedge product explicitely in
@@ -345,7 +399,7 @@ terms of tensor products:
       (∂_z ∧ ∂_x)^{♯♭} &=& η_{xγ} ∂_z ⊗ dx^γ - η_{zγ} ∂_x ⊗ dx^γ \\
       \end{array}
 
-   Indentify the non-zero component of the Minkowski metric:
+   Identify the non-zero metric components:
 
    .. math::
 
@@ -389,7 +443,7 @@ terms of tensor products:
 
 .. }}}
 
-Symmetries of the mixed wedge product
+Symmetries of the Mixed Wedge Product
 -------------------------------------
 
 .. {{{
@@ -427,8 +481,8 @@ Basis element      Symmetry     Expression
 
 .. }}}
 
-The Mixed Rotation Tensor
--------------------------
+The :math:`♯♭` Rotation Tensor
+------------------------------
 
 .. {{{
 
@@ -441,21 +495,21 @@ tensor is obtained by applying the flatternig operator :math:`\flat`:
    B^{♯♭}
    =
    \begin{bmatrix}
-     F^{tx} \; ∂_t ∧ ∂_x \\
-     F^{ty} \; ∂_t ∧ ∂_y \\
-     F^{tz} \; ∂_t ∧ ∂_z \\
-     F^{xy} \; ∂_x ∧ ∂_y \\
-     F^{yz} \; ∂_y ∧ ∂_z \\
-     F^{zx} \; ∂_z ∧ ∂_x \\
+     a \; ∂_t ∧ ∂_x \\
+     b \; ∂_t ∧ ∂_y \\
+     c \; ∂_t ∧ ∂_z \\
+     d \; ∂_x ∧ ∂_y \\
+     e \; ∂_y ∧ ∂_z \\
+     f \; ∂_z ∧ ∂_x \\
    \end{bmatrix}^{♯♭}
    =
    \begin{bmatrix}
-     - F^{tx} \; ∂_t ∧ dx^x \\
-     - F^{ty} \; ∂_t ∧ dx^y \\
-     - F^{tz} \; ∂_t ∧ dx^z \\
-     - F^{xy} \; ∂_x ∧ dx^y \\
-     - F^{yz} \; ∂_y ∧ dx^z \\
-     - F^{zx} \; ∂_z ∧ dx^x \\
+     - a \; ∂_t ∧ dx^x \\
+     - b \; ∂_t ∧ dx^y \\
+     - c \; ∂_t ∧ dx^z \\
+     - d \; ∂_x ∧ dx^y \\
+     - e \; ∂_y ∧ dx^z \\
+     - f \; ∂_z ∧ dx^x \\
    \end{bmatrix}
    \end{equation}
 
@@ -471,12 +525,12 @@ tensor is obtained by applying the flatternig operator :math:`\flat`:
       \begin{equation}
       B^{♯♭} =
       \begin{bmatrix}
-        F^{tx} \; ∂_t ∧ ∂_x \\
-        F^{ty} \; ∂_t ∧ ∂_y \\
-        F^{tz} \; ∂_t ∧ ∂_z \\
-        F^{xy} \; ∂_x ∧ ∂_y \\
-        F^{yz} \; ∂_y ∧ ∂_z \\
-        F^{zx} \; ∂_z ∧ ∂_x \\
+        a \; ∂_t ∧ ∂_x \\
+        b \; ∂_t ∧ ∂_y \\
+        c \; ∂_t ∧ ∂_z \\
+        d \; ∂_x ∧ ∂_y \\
+        e \; ∂_y ∧ ∂_z \\
+        f \; ∂_z ∧ ∂_x \\
       \end{bmatrix}^{♯♭}
       \end{equation}
 
@@ -487,12 +541,12 @@ tensor is obtained by applying the flatternig operator :math:`\flat`:
       \begin{equation}
       B^{♯♭} =
       \begin{bmatrix}
-        F^{tx} \; (∂_t ∧ ∂_x)^{♯♭} \\
-        F^{ty} \; (∂_t ∧ ∂_y)^{♯♭} \\
-        F^{tz} \; (∂_t ∧ ∂_z)^{♯♭} \\
-        F^{xy} \; (∂_x ∧ ∂_y)^{♯♭} \\
-        F^{yz} \; (∂_y ∧ ∂_z)^{♯♭} \\
-        F^{zx} \; (∂_z ∧ ∂_x)^{♯♭} \\
+        a \; (∂_t ∧ ∂_x)^{♯♭} \\
+        b \; (∂_t ∧ ∂_y)^{♯♭} \\
+        c \; (∂_t ∧ ∂_z)^{♯♭} \\
+        d \; (∂_x ∧ ∂_y)^{♯♭} \\
+        e \; (∂_y ∧ ∂_z)^{♯♭} \\
+        f \; (∂_z ∧ ∂_x)^{♯♭} \\
       \end{bmatrix}
       \end{equation}
 
@@ -503,12 +557,12 @@ tensor is obtained by applying the flatternig operator :math:`\flat`:
       \begin{equation}
       B^{♯♭} =
       \begin{bmatrix}
-        F^{tx} \; (∂_t^♯ ∧ ∂_x^♭) \\
-        F^{ty} \; (∂_t^♯ ∧ ∂_y^♭) \\
-        F^{tz} \; (∂_t^♯ ∧ ∂_z^♭) \\
-        F^{xy} \; (∂_x^♯ ∧ ∂_y^♭) \\
-        F^{yz} \; (∂_y^♯ ∧ ∂_z^♭) \\
-        F^{zx} \; (∂_z^♯ ∧ ∂_x^♭) \\
+        a \; (∂_t^♯ ∧ ∂_x^♭) \\
+        b \; (∂_t^♯ ∧ ∂_y^♭) \\
+        c \; (∂_t^♯ ∧ ∂_z^♭) \\
+        d \; (∂_x^♯ ∧ ∂_y^♭) \\
+        e \; (∂_y^♯ ∧ ∂_z^♭) \\
+        f \; (∂_z^♯ ∧ ∂_x^♭) \\
       \end{bmatrix}
       \end{equation}
 
@@ -519,12 +573,12 @@ tensor is obtained by applying the flatternig operator :math:`\flat`:
       \begin{equation}
       B^{♯♭} =
       \begin{bmatrix}
-        F^{tx} \; ∂_t ∧ η_{xγ} dx^γ \\
-        F^{ty} \; ∂_t ∧ η_{yγ} dx^γ \\
-        F^{tz} \; ∂_t ∧ η_{zγ} dx^γ \\
-        F^{xy} \; ∂_x ∧ η_{yγ} dx^γ \\
-        F^{yz} \; ∂_y ∧ η_{zγ} dx^γ \\
-        F^{zx} \; ∂_z ∧ η_{xγ} dx^γ \\
+        a \; ∂_t ∧ η_{xγ} dx^γ \\
+        b \; ∂_t ∧ η_{yγ} dx^γ \\
+        c \; ∂_t ∧ η_{zγ} dx^γ \\
+        d \; ∂_x ∧ η_{yγ} dx^γ \\
+        e \; ∂_y ∧ η_{zγ} dx^γ \\
+        f \; ∂_z ∧ η_{xγ} dx^γ \\
       \end{bmatrix}
       \end{equation}
 
@@ -535,12 +589,12 @@ tensor is obtained by applying the flatternig operator :math:`\flat`:
       \begin{equation}
       B^{♯♭} =
       \begin{bmatrix}
-        F^{tx} \; η_{xγ} ∂_t ∧ dx^γ \\
-        F^{ty} \; η_{yγ} ∂_t ∧ dx^γ \\
-        F^{tz} \; η_{zγ} ∂_t ∧ dx^γ \\
-        F^{xy} \; η_{yγ} ∂_x ∧ dx^γ \\
-        F^{yz} \; η_{zγ} ∂_y ∧ dx^γ \\
-        F^{zx} \; η_{xγ} ∂_z ∧ dx^γ \\
+        a \; η_{xγ} ∂_t ∧ dx^γ \\
+        b \; η_{yγ} ∂_t ∧ dx^γ \\
+        c \; η_{zγ} ∂_t ∧ dx^γ \\
+        d \; η_{yγ} ∂_x ∧ dx^γ \\
+        e \; η_{zγ} ∂_y ∧ dx^γ \\
+        f \; η_{xγ} ∂_z ∧ dx^γ \\
       \end{bmatrix}
       \end{equation}
 
@@ -551,12 +605,12 @@ tensor is obtained by applying the flatternig operator :math:`\flat`:
       \begin{equation}
       B^{♯♭} =
       \begin{bmatrix}
-        F^{tx} \; η_{xx} ∂_t ∧ dx^x \\
-        F^{ty} \; η_{yy} ∂_t ∧ dx^y \\
-        F^{tz} \; η_{zz} ∂_t ∧ dx^z \\
-        F^{xy} \; η_{yy} ∂_x ∧ dx^y \\
-        F^{yz} \; η_{zz} ∂_y ∧ dx^z \\
-        F^{zx} \; η_{xx} ∂_z ∧ dx^x \\
+        a \; η_{xx} ∂_t ∧ dx^x \\
+        b \; η_{yy} ∂_t ∧ dx^y \\
+        c \; η_{zz} ∂_t ∧ dx^z \\
+        d \; η_{yy} ∂_x ∧ dx^y \\
+        e \; η_{zz} ∂_y ∧ dx^z \\
+        f \; η_{xx} ∂_z ∧ dx^x \\
       \end{bmatrix}
       \end{equation}
 
@@ -567,12 +621,12 @@ tensor is obtained by applying the flatternig operator :math:`\flat`:
       \begin{equation}
       B^{♯♭} =
       \begin{bmatrix}
-        - F^{tx} \; ∂_t ∧ dx^x \\
-        - F^{ty} \; ∂_t ∧ dx^y \\
-        - F^{tz} \; ∂_t ∧ dx^z \\
-        - F^{xy} \; ∂_x ∧ dx^y \\
-        - F^{yz} \; ∂_y ∧ dx^z \\
-        - F^{zx} \; ∂_z ∧ dx^x \\
+        - a \; ∂_t ∧ dx^x \\
+        - b \; ∂_t ∧ dx^y \\
+        - c \; ∂_t ∧ dx^z \\
+        - d \; ∂_x ∧ dx^y \\
+        - e \; ∂_y ∧ dx^z \\
+        - f \; ∂_z ∧ dx^x \\
       \end{bmatrix}
       \end{equation}
 
@@ -589,166 +643,184 @@ demonstrated above, this results in:
    B^{♯♭}
    &= \frac{1}{2}
    \begin{bmatrix}
-                         & - F^{tx} ∂_t ∧ dx^x & - F^{ty} ∂_t ∧ d^y & - F^{tz} ∂_t ∧ dx^z \\
-     - F^{tx} ∂_x ∧ dx^t &                     & - F^{xy} ∂_x ∧ d^y & + F^{zx} ∂_x ∧ dx^z \\
-     - F^{ty} ∂_y ∧ dx^t & + F^{xy} ∂_y ∧ dx^x &                    & - F^{yz} ∂_y ∧ dx^z \\
-     - F^{tz} ∂_z ∧ dx^t & - F^{zx} ∂_z ∧ dx^x & + F^{yz} ∂_z ∧ d^y &                     \\
+                       & - a \; ∂_t ∧ dx^x & - b \; ∂_t ∧ d^y & - c \; ∂_t ∧ dx^z \\
+     - a \; ∂_x ∧ dx^t &                   & + d \; ∂_x ∧ d^y & + f \; ∂_x ∧ dx^z \\
+     - b \; ∂_y ∧ dx^t & - d \; ∂_y ∧ dx^x &                  & + e \; ∂_y ∧ dx^z \\
+     - c \; ∂_z ∧ dx^t & - f \; ∂_z ∧ dx^x & - e \; ∂_z ∧ d^y &                   \\
    \end{bmatrix}
    \end{align}
 
 .. }}}
 
-Calculating the mixed rotation tensor again, but without the Cartan-Hodge formalism
------------------------------------------------------------------------------------
-
-.. warning::
-
-   While interesting to compare the advantages of the formalism, this will be
-   taken out
+The :math:`♭♯` Rotation Tensor
+------------------------------
 
 .. {{{
 
-We can and raise the indices by applying the Minkowski metric to each
-components. This calculation can be performed in abstract index notation using
-Einstein's summation convention. The following symmetries greatly simplify the
-calculations:
-
-* All off-diagonal terms of the minkowski metric are zero
-* All diagonal terms of the rotation tensor are zero
-* The doubly contravariant rotation tensor is antisymmetric: :math:`F^{\mu\nu}
-  = -F^{\nu\mu}`
-
-With :math:`F^{tt}=0`, as well as :math:`\eta^{tx}=0`,
-:math:`\eta^{ty}=0`:math:`\eta^{tz}=0`, we expand and obtain:
-
-.. math::
-
-   \begin{alignat*}{3}
-   F^t{}_x &= F^{tγ} η_{γx} &= F^{tx} η_{xx} &= -F^{tx} \\
-   F^t{}_y &= F^{tγ} η_{γy} &= F^{ty} η_{yy} &= -F^{ty} \\
-   F^t{}_z &= F^{tγ} η_{γz} &= F^{tz} η_{zz} &= -F^{tz} \\
-   \end{alignat*}
-
-With :math:`F^{xx}=F^{yy}=F^{zz}=0`, :math:`F^{\mu\nu}=-F^{\nu\mu}`, as well as
-:math:`\eta^{tx}=0`, :math:`\eta^{ty}=0`:math:`\eta^{tz}=0`, we expand and
-obtain:
-
-.. math::
-
-   \begin{alignat*}{3}
-   F^x{}_t &= F^{xγ} η_{γt} &= F^{xt} η_{tt} &= -F^{tx} \\
-   F^y{}_t &= F^{yγ} η_{γt} &= F^{yt} η_{tt} &= -F^{ty} \\
-   F^z{}_t &= F^{zγ} η_{γt} &= F^{zt} η_{tt} &= -F^{tz} \\
-   \end{alignat*}
-
-In the same manner, we get:
-
-.. math::
-
-   \begin{alignat}{2}
-   F^x{}_y &= F^{xγ} η_{γy} &= F^{xy} η_{yy} &= -F^{xy} \\
-   F^y{}_z &= F^{yγ} η_{γz} &= F^{yz} η_{zz} &= -F^{yz} \\
-   F^z{}_x &= F^{zγ} η_{γx} &= F^{zx} η_{xx} &= -F^{zx} \\
-   \end{alignat}
-
-We have a mixed tensor of Rank two with the form:
-
-.. math::
-
-   \begin{align}
-   B^{♯♭}
-   &= \frac{1}{2}
-   \begin{bmatrix}
-     F^t{}_t ∂_t ∧ dx^t & F^t{}_x ∂_t ∧ dx^x & F^t{}_y ∂_t ∧ dx^y & F^t{}_z ∂_t ∧ dx^z \\
-     F^x{}_t ∂_x ∧ dx^t & F^x{}_x ∂_x ∧ dx^x & F^x{}_y ∂_x ∧ dx^y & F^x{}_z ∂_x ∧ dx^z \\
-     F^y{}_t ∂_y ∧ dx^t & F^y{}_x ∂_y ∧ dx^x & F^y{}_y ∂_y ∧ dx^y & F^y{}_z ∂_y ∧ dx^z \\
-     F^z{}_t ∂_z ∧ dx^t & F^z{}_x ∂_z ∧ dx^x & F^z{}_y ∂_z ∧ dx^y & F^z{}_z ∂_z ∧ dx^z \\
-   \end{bmatrix}
-   \end{align}
-
-All diagonal components are zero since:
+In this section, I raise the indice using the free matrix notaion. The mixed
+tensor is obtained by applying the flatternig operator :math:`\flat`:
 
 .. math::
 
    \begin{equation}
-   ∂_μ ∧ dx^μ = \frac{1}{2}(∂_μ ⊗ dx^μ - ∂_μ ⊗ dx^μ = 0
+   B^{♭♯}
+   =
+   \begin{bmatrix}
+     a \; ∂_t ∧ ∂_x \\
+     b \; ∂_t ∧ ∂_y \\
+     c \; ∂_t ∧ ∂_z \\
+     d \; ∂_x ∧ ∂_y \\
+     e \; ∂_y ∧ ∂_z \\
+     f \; ∂_z ∧ ∂_x \\
+   \end{bmatrix}^{♭♯}
+   =
+   \begin{bmatrix}
+     + a \; dx^x ∧ ∂_t \\
+     + b \; dx^y ∧ ∂_t \\
+     + c \; dx^z ∧ ∂_t \\
+     - d \; dx^y ∧ ∂_x \\
+     - e \; dx^z ∧ ∂_y \\
+     - f \; dx^x ∧ ∂_z \\
+   \end{bmatrix}
    \end{equation}
 
-This result in:
+.. admonition:: Every calculation steps
+   :class: dropdown
+
+   .. {{{
+
+   Apply the musical operator :math:`♭♯`
+
+   .. math::
+
+      \begin{equation}
+      B^{♭♯} =
+      \begin{bmatrix}
+        a \; ∂_t ∧ ∂_x \\
+        b \; ∂_t ∧ ∂_y \\
+        c \; ∂_t ∧ ∂_z \\
+        d \; ∂_x ∧ ∂_y \\
+        e \; ∂_y ∧ ∂_z \\
+        f \; ∂_z ∧ ∂_x \\
+      \end{bmatrix}^{♭♯}
+      \end{equation}
+
+   Distribute the musical operators to each matrix elements:
+
+   .. math::
+
+      \begin{equation}
+      B^{♭♯} =
+      \begin{bmatrix}
+        a \; (∂_t ∧ ∂_x)^{♭♯} \\
+        b \; (∂_t ∧ ∂_y)^{♭♯} \\
+        c \; (∂_t ∧ ∂_z)^{♭♯} \\
+        d \; (∂_x ∧ ∂_y)^{♭♯} \\
+        e \; (∂_y ∧ ∂_z)^{♭♯} \\
+        f \; (∂_z ∧ ∂_x)^{♭♯} \\
+      \end{bmatrix}
+      \end{equation}
+
+   Distribute the musical operators:
+
+   .. math::
+
+      \begin{equation}
+      B^{♭♯} =
+      \begin{bmatrix}
+        a \; (∂_t^♭ ∧ ∂_x^♯) \\
+        b \; (∂_t^♭ ∧ ∂_y^♯) \\
+        c \; (∂_t^♭ ∧ ∂_z^♯) \\
+        d \; (∂_x^♭ ∧ ∂_y^♯) \\
+        e \; (∂_y^♭ ∧ ∂_z^♯) \\
+        f \; (∂_z^♭ ∧ ∂_x^♯) \\
+      \end{bmatrix}
+      \end{equation}
+
+   Apply the musical operators:
+
+   .. math::
+
+      \begin{equation}
+      B^{♭♯} =
+      \begin{bmatrix}
+        a \; η_{tγ} dx^γ ∧ ∂_x^♯ \\
+        b \; η_{tγ} dx^γ ∧ ∂_y^♯ \\
+        c \; η_{tγ} dx^γ ∧ ∂_z^♯ \\
+        d \; η_{xγ} dx^γ ∧ ∂_y^♯ \\
+        e \; η_{yγ} dx^γ ∧ ∂_z^♯ \\
+        f \; η_{zγ} dx^γ ∧ ∂_x^♯ \\
+      \end{bmatrix}
+      \end{equation}
+
+   The metric tensor can be taken out due to mulilinearity:
+
+   .. math::
+
+      \begin{equation}
+      B^{♭♯} =
+      \begin{bmatrix}
+        a \; η_{tγ} ∂_t ∧ ∂_x \\
+        b \; η_{tγ} ∂_t ∧ ∂_y \\
+        c \; η_{tγ} ∂_t ∧ ∂_z \\
+        d \; η_{xγ} ∂_x ∧ ∂_y \\
+        e \; η_{yγ} ∂_y ∧ ∂_z \\
+        f \; η_{zγ} ∂_z ∧ ∂_x \\
+      \end{bmatrix}
+      \end{equation}
+
+   Most terms of the Minkowski metric are zero:
+
+   .. math::
+
+      \begin{equation}
+      B^{♭♯} =
+      \begin{bmatrix}
+        a \; η_{tt} ∂_t ∧ ∂_x \\
+        b \; η_{tt} ∂_t ∧ ∂_y \\
+        c \; η_{tt} ∂_t ∧ ∂_z \\
+        d \; η_{xx} ∂_x ∧ ∂_y \\
+        e \; η_{yy} ∂_y ∧ ∂_z \\
+        f \; η_{zz} ∂_z ∧ ∂_x \\
+      \end{bmatrix}
+      \end{equation}
+
+   Use the numerical values of the Minkowski metric:
+
+   .. math::
+
+      \begin{equation}
+      B^{♭♯} =
+      \begin{bmatrix}
+        + a \; ∂_t ∧ dx^x \\
+        + b \; ∂_t ∧ dx^y \\
+        + c \; ∂_t ∧ dx^z \\
+        - d \; ∂_x ∧ dx^y \\
+        - e \; ∂_y ∧ dx^z \\
+        - f \; ∂_z ∧ dx^x \\
+      \end{bmatrix}
+      \end{equation}
+
+   .. }}}
+
+Taking into account the symetric property of :math:`dx^t ∧ ∂_x`, :math:`dx^t
+∧ ∂_y`, and :math:`dx^t ∧ ∂_z`, as well the antisymetric property of
+:math:`dx^x ∧ ∂_y`, :math:`dx^y ∧ ∂_z`, and :math:`dx^z ∧ ∂_x`
+demonstrated above, this results in:
 
 .. math::
 
    \begin{align}
-   B^{♯♭}
+   B^{♭♯}
    &= \frac{1}{2}
    \begin{bmatrix}
-                        & F^t{}_x ∂_t ∧ dx^x & F^t{}_y ∂_t ∧ dx^y & F^t{}_z ∂_t ∧ dx^z \\
-     F^x{}_t ∂_x ∧ dx^t &                    & F^x{}_y ∂_x ∧ dx^y & F^x{}_z ∂_x ∧ dx^z \\
-     F^y{}_t ∂_y ∧ dx^t & F^y{}_x ∂_y ∧ dx^x &                    & F^y{}_z ∂_y ∧ dx^z \\
-     F^z{}_t ∂_z ∧ dx^t & F^z{}_x ∂_z ∧ dx^x & F^z{}_y ∂_z ∧ dx^y &                    \\
+                       & + a \; dx^t ∧ ∂_x & + b \; dx^t ∧ ∂_y & + c \; dx^t ∧ ∂_z \\
+     + a \; dx^x ∧ ∂_t &                   & + d \; dx^x ∧ ∂_y & + f \; dx^x ∧ ∂_z \\
+     + b \; dx^y ∧ ∂_t & - d \; dx^y ∧ ∂_x &                   & + e \; dx^y ∧ ∂_z \\
+     + c \; dx^z ∧ ∂_t & - f \; dx^z ∧ ∂_x & - e \; dx^z ∧ ∂_y &                   \\
    \end{bmatrix}
    \end{align}
 
-Further expanding all coefficients, we obtain:
-
-.. math::
-
-   \begin{align}
-   B^{\sharp\flat}
-   &= \frac{1}{2}
-   \begin{bmatrix}
-                              & F^{tγ} η_{γx} ∂_t ∧ dx^x & F^{tγ} η_{γy} ∂_t ∧ dx^y & F^{tγ} η_{γz} ∂_t ∧ dx^z \\
-     F^{xγ} η_{γt} ∂_x ∧ dx^t &                          & F^{xγ} η_{γy} ∂_x ∧ dx^y & F^{xγ} η_{γz} ∂_x ∧ dx^z \\
-     F^{yγ} η_{γt} ∂_y ∧ dx^t & F^{yγ} η_{γx} ∂_y ∧ dx^x &                          & F^{yγ} η_{γz} ∂_y ∧ dx^z \\
-     F^{zγ} η_{γt} ∂_z ∧ dx^t & F^{zγ} η_{γx} ∂_z ∧ dx^x & F^{zγ} η_{γy} ∂_z ∧ dx^y &                          \\
-   \end{bmatrix}
-   \end{align}
-
-Since only the diagonal elements of the metric tensor are non-zero:
-
-.. math::
-
-   \begin{align}
-   B^{♯♭}
-   &= \frac{1}{2}
-   \begin{bmatrix}
-                              & F^{tx} η_{xx} ∂_t ∧ dx^x & F^{ty} η_{yy} ∂_t ∧ dx^y & F^{tz} η_{zz} ∂_t ∧ dx^z \\
-     F^{xt} η_{tt} ∂_x ∧ dx^t &                          & F^{xy} η_{yy} ∂_x ∧ dx^y & F^{xz} η_{zz} ∂_x ∧ dx^z \\
-     F^{yt} η_{tt} ∂_y ∧ dx^t & F^{yx} η_{xx} ∂_y ∧ dx^x &                          & F^{yz} η_{zz} ∂_y ∧ dx^z \\
-     F^{zt} η_{tt} ∂_z ∧ dx^t & F^{zx} η_{xx} ∂_z ∧ dx^x & F^{zy} η_{yy} ∂_z ∧ dx^y &                          \\
-   \end{bmatrix}
-   \end{align}
-
-This elements of the Minkowski metric are replaced by their numerical values:
-
-.. math::
-
-   \begin{align}
-   B^{♯♭}
-   &= \frac{1}{2}
-   \begin{bmatrix}
-                         & - F^{tx} ∂_t ∧ dx^x & - F^{ty} ∂_t ∧ dx^y & - F^{tz} ∂_t ∧ dx^z \\
-     + F^{xt} ∂_x ∧ dx^t &                     & - F^{xy} ∂_x ∧ dx^y & - F^{xz} ∂_x ∧ dx^z \\
-     + F^{yt} ∂_y ∧ dx^t & - F^{yx} ∂_y ∧ dx^x &                     & - F^{yz} ∂_y ∧ dx^z \\
-     + F^{zt} ∂_z ∧ dx^t & - F^{zx} ∂_z ∧ dx^x & - F^{zy} ∂_z ∧ dx^y &                     \\
-   \end{bmatrix}
-   \end{align}
-
-The antisymetric properties of the components of the double contravariant
-rotation tensors permit to simplify and conclude:
-
-.. math::
-
-   \begin{align}
-   B^{♯♭}
-   &= \frac{1}{2}
-   \begin{bmatrix}
-                         & - F^{tx} \; ∂_t ∧ dx^x & - F^{ty} ∂_t ∧ dx^y & - F^{tz} ∂_t ∧ dx^z \\
-     - F^{tx} ∂_x ∧ dx^t &                        & - F^{xy} ∂_x ∧ dx^y & + F^{zx} ∂_x ∧ dx^z \\
-     - F^{ty} ∂_y ∧ dx^t & + F^{xy} \; ∂_y ∧ dx^x &                     & - F^{yz} ∂_y ∧ dx^z \\
-     - F^{tz} ∂_z ∧ dx^t & - F^{zx} \; ∂_z ∧ dx^x & + F^{yz} ∂_z ∧ dx^y &                     \\
-   \end{bmatrix}
-   \end{align}
 
 .. }}}
 
@@ -756,6 +828,24 @@ The :math:`\mathfrak{so}(1,3)` Lie Algegra of the Lorentz group
 ---------------------------------------------------------------
 
 .. {{{
+
+We thus obtain the explicit expression of the `Lorentz group
+<https://en.m.wikipedia.org/wiki/Lorentz_group#Lie_Algebra>`_. Taking out the
+explicit basis of the free tensor notation, we get:
+
+.. math::
+
+   \begin{align}
+   B^{♯♭}
+   &= \frac{1}{2}
+   \begin{bmatrix}
+         & + a & + b & + c \\
+     + a &     & + d & + f \\
+     + b & - d &     & + e \\
+     + c & - f & - e &     \\
+   \end{bmatrix}
+   \end{align}
+
 
 .. }}}
 

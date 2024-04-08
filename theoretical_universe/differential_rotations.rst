@@ -39,12 +39,12 @@ combination of the basis bivectors:
    \begin{equation}
    R^{♯♯}
    = \{
-     F^{tx} \; ∂_t ∧ ∂_x \\
-     F^{ty} \; ∂_t ∧ ∂_y \\
-     F^{tz} \; ∂_t ∧ ∂_z \\
-     F^{xy} \; ∂_x ∧ ∂_y \\
-     F^{yz} \; ∂_y ∧ ∂_z \\
-     F^{zx} \; ∂_z ∧ ∂_x \\
+     a \; ∂_t ∧ ∂_x \\
+     b \; ∂_t ∧ ∂_y \\
+     c \; ∂_t ∧ ∂_z \\
+     d \; ∂_x ∧ ∂_y \\
+     e \; ∂_y ∧ ∂_z \\
+     f \; ∂_z ∧ ∂_x \\
    \}
    \end{equation}
 
@@ -58,10 +58,10 @@ obtain the following representation for a rotation:
    \begin{equation}
    R^{♯♯} = \frac{1}{2}
    \begin{bmatrix}
-                       & + F^{tx} ∂_t ∧ ∂_x & + F^{ty} ∂_t ∧ ∂_y & + F^{tz} ∂_t ∧ ∂_z \\
-     - F^{tx} ∂_ ∧ ∂_t &                    & + F^{xy} ∂_x ∧ ∂_y & - F^{zx} ∂_x ∧ ∂_z \\
-     - F^{ty} ∂_ ∧ ∂_t & - F^{xy} ∂_y ∧ ∂_x &                    & + F^{yz} ∂_y ∧ ∂_z \\
-     - F^{tz} ∂_ ∧ ∂_t & + F^{zx} ∂_z ∧ ∂_x & - F^{yz} ∂_z ∧ ∂_y &                    \\
+                     & + a \; ∂_t ∧ ∂_x & + b \; ∂_t ∧ ∂_y & + c \; ∂_t ∧ ∂_z \\
+     - a \; ∂_ ∧ ∂_t &                  & + d \; ∂_x ∧ ∂_y & - f \; ∂_x ∧ ∂_z \\
+     - b \; ∂_ ∧ ∂_t & - d \; ∂_y ∧ ∂_x &                  & + e \; ∂_y ∧ ∂_z \\
+     - c \; ∂_ ∧ ∂_t & + f \; ∂_z ∧ ∂_x & - e \; ∂_z ∧ ∂_y &                  \\
    \end{bmatrix}
    \end{equation}
 
@@ -92,19 +92,37 @@ Basis element      Symmetry     Expression
 .. rubric:: Rotations in Minkowski space match exactly the Faraday tensor
 
 The row-major free matrix representation of any rotation in Minkowski space,
-expressed in a contravariant/coveriant form is:
+expressed in a mixed form and up to a sign:
+
+.. rubric:: ♭♯
 
 .. math::
 
-   \begin{equation}
-   B^{♯♭} = \frac{1}{2}
-   \{
-                         & - F^{tx} ∂_t ∧ dx^x & - F^{ty} ∂_t ∧ dx^y & - F^{tz} ∂_t ∧ dx^z \\
-     - F^{tx} ∂_x ∧ dx^t &                     & - F^{xy} ∂_x ∧ dx^y & + F^{zx} ∂_x ∧ dx^z \\
-     - F^{ty} ∂_y ∧ dx^t & + F^{xy} ∂_y ∧ dx^x &                     & - F^{yz} ∂_y ∧ dx^z \\
-     - F^{tz} ∂_z ∧ dx^t & - F^{zx} ∂_z ∧ dx^x & + F^{yz} ∂_z ∧ dx^y &                     \\
-   \}
-   \end{equation}
+   \begin{align}
+   B^{♭♯}
+   &= \frac{1}{2}
+   \begin{bmatrix}
+                       & + a \; dx^t ∧ ∂_x & + b \; dx^t ∧ ∂_y & + c \; dx^t ∧ ∂_z \\
+     + a \; dx^x ∧ ∂_t &                   & + d \; dx^x ∧ ∂_y & + f \; dx^x ∧ ∂_z \\
+     + b \; dx^y ∧ ∂_t & - d \; dx^y ∧ ∂_x &                   & + e \; dx^y ∧ ∂_z \\
+     + c \; dx^z ∧ ∂_t & - f \; dx^z ∧ ∂_x & - e \; dx^z ∧ ∂_y &                   \\
+   \end{bmatrix}
+   \end{align}
+
+.. rubric:: ♯♭
+
+.. math::
+
+   \begin{align}
+   B^{♯♭}
+   &= \frac{1}{2}
+   \begin{bmatrix}
+                       & - a \; dx^t ∧ ∂_x & - b \; dx^t ∧ ∂_y & - c \; dx^t ∧ ∂_z \\
+     - a \; dx^x ∧ ∂_t &                   & + d \; dx^x ∧ ∂_y & + f \; dx^x ∧ ∂_z \\
+     - b \; dx^y ∧ ∂_t & - d \; dx^y ∧ ∂_x &                   & + e \; dx^y ∧ ∂_z \\
+     - c \; dx^z ∧ ∂_t & - f \; dx^z ∧ ∂_x & - e \; dx^z ∧ ∂_y &                   \\
+   \end{bmatrix}
+   \end{align}
 
 The electromagnetic field tensor :math:`F` is:
 
