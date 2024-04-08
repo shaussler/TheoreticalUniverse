@@ -19,7 +19,7 @@ combination of the three associated basis bivectors**:
 .. math::
 
    \begin{equation}
-   R = R^x ∂_y ∧ ∂_z + R^y ∂_z ∧ ∂_x + R^z ∂_x ∧ ∂_y
+   R = a \; ∂_y ∧ ∂_z + b \; ∂_z ∧ ∂_x + c \; ∂_x ∧ ∂_y
    \end{equation}
 
 With free matrix representation, the bivector can be written as a single
@@ -28,27 +28,27 @@ column:
 .. topic:: Representation of rotations as a single column of bivectors
 
    .. math::
-   
+
       \begin{equation}
       R =
-      \{
-        + R^x ∂_y ∧ ∂_z \\
-        + R^y ∂_z ∧ ∂_x \\
-        + R^z ∂_x ∧ ∂_y \\
-      \}
+      \begin{bmatrix}
+        + a \; ∂_y ∧ ∂_z \\
+        + b \; ∂_z ∧ ∂_x \\
+        + c \; ∂_x ∧ ∂_y \\
+      \end{bmatrix}
       \end{equation}
-   
+
 Or with a row/column matrix notation:
 
 .. math::
 
    \begin{equation}
    R =
-   \{
-                     & + R^z ∂_x ∧ ∂_y &                 \\
-                     &                 & + R^x ∂_y ∧ ∂_z \\
-     + R^y ∂_z ∧ ∂_x &                 &                 \\
-   \} 
+   \begin{bmatrix}
+                      & + c \; ∂_x ∧ ∂_y &                  \\
+                      &                  & + a \; ∂_y ∧ ∂_z \\
+     + b \; ∂_z ∧ ∂_x &                  &                  \\
+   \end{bmatrix}
    \end{equation}
 
 The anti-symmetric property of the wedge product :math:`\partial_i \wedge
@@ -67,11 +67,11 @@ With a column/row representation, we obtain:
    \begin{equation}
    R
    = \frac{1}{2}
-   \{
-                      & + R^z ∂_x ∧ ∂_y & - R^y ∂_x ∧ ∂_z \\
-      - R^z ∂_y ∧ ∂_x &                 & + R^x ∂_y ∧ ∂_z \\
-      + R^y ∂_z ∧ ∂_x & - R^x ∂_z ∧ ∂_y &                 \\
-   \}
+   \begin{bmatrix}
+                       & + c ∂_x ∧ ∂_y & - b \; ∂_x ∧ ∂_z \\
+      - c \; ∂_y ∧ ∂_x &               & + a \; ∂_y ∧ ∂_z \\
+      + b \; ∂_z ∧ ∂_x & - a ∂_z ∧ ∂_y &                  \\
+   \end{bmatrix}
    \end{equation}
 
 With a row/column representation, we obtain:
@@ -79,14 +79,14 @@ With a row/column representation, we obtain:
 .. topic:: The matrix representation of rotations
 
    .. math::
-   
+
       \begin{equation}
       R = \frac{1}{2}
-      \{
-                        & -R^z ∂_y ∧ ∂_x & +R^y ∂_z ∧ ∂_x \\
-         +R^z ∂_x ∧ ∂_y &                & -R^x ∂_z ∧ ∂_y \\
-         -R^y ∂_x ∧ ∂_z & +R^x ∂_y ∧ ∂_z &                \\
-      \}
+      \begin{bmatrix}
+                          & - c \; ∂_y ∧ ∂_x & + b \; ∂_z ∧ ∂_x \\
+         + c \; ∂_x ∧ ∂_y &                  & - a \; ∂_z ∧ ∂_y \\
+         - b \; ∂_x ∧ ∂_z & + a \; ∂_y ∧ ∂_z &               \\
+      \end{bmatrix}
       \end{equation}
 
 The doubly contravariant rotation object at hand can only act on covectors. To
@@ -109,9 +109,9 @@ the doubly contravariant rotation :math:`R`.  In this section, we transform the
    \begin{equation}
    R^{♭♯} =
    \{
-                      & - R^z dx^y ∧ ∂_x & + R^y dx^z ∧ ∂_x \\
-     + R^z dx^x ∧ ∂_y &                  & - R^x dx^z ∧ ∂_y \\
-     - R^y dx^x ∧ ∂_z & + R^x dx^y ∧ ∂_z &                  \\
+                       & - c \; dx^y ∧ ∂_x & + b \; dx^z ∧ ∂_x \\
+     + c \; dx^x ∧ ∂_y &                   & - a \; dx^z ∧ ∂_y \\
+     - b \; dx^x ∧ ∂_z & + a \; dx^y ∧ ∂_z &                   \\
    \}
    \end{equation}
 
@@ -132,13 +132,13 @@ the doubly contravariant rotation :math:`R`.  In this section, we transform the
    Expand the rotation to its matrix form:
 
    .. math::
-  
+
       \begin{equation}
       R^{♭♯} = \frac{1}{2}
       \begin{bmatrix}
-                        & - R^z ∂_y ∧ ∂_x & + R^y ∂_z ∧ ∂_x \\
-        + R^z ∂_x ∧ ∂_y &                 & - R^x ∂_z ∧ ∂_y \\
-        - R^y ∂_x ∧ ∂_z & + R^x ∂_y ∧ ∂_z &                 \\
+                          & - c \; ∂_y ∧ ∂_x & + b \; ∂_z ∧ ∂_x \\
+        + c  \; ∂_x ∧ ∂_y &                  & - a \; ∂_z ∧ ∂_y \\
+        - b  \; ∂_x ∧ ∂_z & + a \; ∂_y ∧ ∂_z &                  \\
       \end{bmatrix}^{♭♯}
       \end{equation}
 
@@ -149,9 +149,9 @@ the doubly contravariant rotation :math:`R`.  In this section, we transform the
       \begin{equation}
       R^{♭♯} = \frac{1}{2}
       \begin{bmatrix}
-                               & - R^z (∂_y ∧ ∂_x)^{♭♯} & + R^y (∂_z ∧ ∂_x)^{♭♯} \\
-        + R^z (∂_x ∧ ∂_y)^{♭♯} &                        & - R^x (∂_z ∧ ∂_y)^{♭♯} \\
-        - R^y (∂_x ∧ ∂_z)^{♭♯} & + R^x (∂_y ∧ ∂_z)^{♭♯} &                        \\
+                                & - c \; (∂_y ∧ ∂_x)^{♭♯} & + b \; (∂_z ∧ ∂_x)^{♭♯} \\
+        + c \; (∂_x ∧ ∂_y)^{♭♯} &                         & - a \; (∂_z ∧ ∂_y)^{♭♯} \\
+        - b \; (∂_x ∧ ∂_z)^{♭♯} & + a \; (∂_y ∧ ∂_z)^{♭♯} &                      \\
       \end{bmatrix}
       \end{equation}
 
@@ -162,9 +162,9 @@ the doubly contravariant rotation :math:`R`.  In this section, we transform the
       \begin{equation}
       R^{♭♯} = \frac{1}{2}
       \begin{bmatrix}
-                         & - R^z dx^y ∧ ∂_x & + R^y dx^z ∧ ∂_x \\
-        + R^z dx^x ∧ ∂_y &                  & - R^x dx^z ∧ ∂_y \\
-        - R^y dx^x ∧ ∂_z & + R^x dx^y ∧ ∂_z &                  \\
+                          & - c \; dx^y ∧ ∂_x & + b \; dx^z ∧ ∂_x \\
+        + c \; dx^x ∧ ∂_y &                   & - a \; dx^z ∧ ∂_y \\
+        - b \; dx^x ∧ ∂_z & + a \; dx^y ∧ ∂_z &                   \\
       \end{bmatrix}
       \end{equation}
 
@@ -189,9 +189,9 @@ rotations in Minkowski space. The contravariant/covariant rotation is:
    \begin{equation}
    R^{♯♭} =
    \{
-                      & - R^z ∂_y ∧ dx^x & + R^y ∂_z ∧ dx^x \\
-     + R^z ∂_x ∧ dx^y &                  & - R^x ∂_z ∧ dx^y \\
-     - R^y ∂_x ∧ dx^z & + R^x ∂_y ∧ dx^z &                  \\
+                       & - c \; ∂_y ∧ dx^x & + b \; ∂_z ∧ dx^x \\
+     + c \; ∂_x ∧ dx^y &                   & - a \; ∂_z ∧ dx^y \\
+     - b \; ∂_x ∧ dx^z & + a \; ∂_y ∧ dx^z &                   \\
    \}
    \end{equation}
 
@@ -201,24 +201,24 @@ rotations in Minkowski space. The contravariant/covariant rotation is:
    .. {{{
 
    .. math::
-   
+
       \begin{align}
       R^{♯♭}
       &= (R^{♯♯})^{♯♭} \\
       &= \frac{1}{2} \{
-                        & - R^z ∂_y ∧ ∂_x & + R^y ∂_z ∧ ∂_x \\
-        + R^z ∂_x ∧ ∂_y &                 & - R^x ∂_z ∧ ∂_y \\
-        - R^y ∂_x ∧ ∂_z & + R^x ∂_y ∧ ∂_z &                 \\
+                         & - c \; ∂_y ∧ ∂_x & + b \; ∂_z ∧ ∂_x \\
+        + c \; ∂_x ∧ ∂_y &                  & - a \; ∂_z ∧ ∂_y \\
+        - b \; ∂_x ∧ ∂_z & + a \; ∂_y ∧ ∂_z &                  \\
       \}^{♯♭} \\
       &= \frac{1}{2} \{
-                               & - R^z (∂_y ∧ ∂_x)^{♯♭} & + R^y (∂_z ∧ ∂_x)^{♯♭} \\
-        + R^z (∂_x ∧ ∂_y)^{♯♭} &                        & - R^x (∂_z ∧ ∂_y)^{♯♭} \\
-        - R^y (∂_x ∧ ∂_z)^{♯♭} & + R^x (∂_y ∧ ∂_z)^{♯♭} &                        \\
+                                & - c \; (∂_y ∧ ∂_x)^{♯♭} & + b \; (∂_z ∧ ∂_x)^{♯♭} \\
+        + c \; (∂_x ∧ ∂_y)^{♯♭} &                         & - a \; (∂_z ∧ ∂_y)^{♯♭} \\
+        - b \; (∂_x ∧ ∂_z)^{♯♭} & + a \; (∂_y ∧ ∂_z)^{♯♭} &                         \\
       \} \\
       &= \frac{1}{2} \{
-                         & - R^z ∂_y ∧ dx^x & + R^y ∂_z ∧ dx^x \\
-        + R^z ∂_x ∧ dx^y &                  & - R^x ∂_z ∧ dx^y \\
-        - R^y ∂_x ∧ dx^z & + R^x ∂_y ∧ dx^z &                  \\
+                          & - c \; ∂_y ∧ dx^x & + b \; ∂_z ∧ dx^x \\
+        + c \; ∂_x ∧ dx^y &                   & - a \; ∂_z ∧ dx^y \\
+        - b \; ∂_x ∧ dx^z & + a \; ∂_y ∧ dx^z &                   \\
       \}
       \end{align}
 
@@ -290,30 +290,30 @@ electromagnetic tensor. Choosing the implicit basis :math:`\mathbf{e}_i \wedge
    \begin{align}
    R
    &= \frac{1}{2}
-   \{
-           & -R^z & +R^y \\
-      +R^z &      & -R^x \\
-      -R^y & +R^x &      \\
-   \} \\
+   \begin{bmatrix}
+          & - c & + b \\
+      + c &     & - a \\
+      - b & + a &     \\
+   \end{bmatrix} \\
    &=
-   R^x
-   \{
+   a
+   \begin{bmatrix}
        0 &  0 &  0 \\
        0 &  0 & -1 \\
        0 & +1 &  0 \\
-   \}
-   + R^y
-   \{
+   \end{bmatrix}
+   + b
+   \begin{bmatrix}
        0 &  0 & +1 \\
        0 &  0 &  0 \\
       -1 &  0 &  0 \\
-   \}
-   + R^z
-   \{
+   \end{bmatrix}
+   + c
+   \begin{bmatrix}
        0 & -1 &  0 \\
       +1 &  0 &  0 \\
        0 &  0 &  0 \\
-   \}
+   \end{bmatrix}
    \end{align}
 
 Which is `a regular choice for the basis
@@ -339,7 +339,7 @@ to the description of rotations expressed as a cross product :math:`\times`:
 .. math::
 
    \begin{equation}
-   ⋆R = ⋆(R^x ∂_y ∧ ∂_z + R^y ∂_z ∧ ∂_x + R^z ∂_x ∧ ∂_y) \\
+   ⋆R = ⋆(a \; ∂_y ∧ ∂_z + b \; ∂_z ∧ ∂_x + c \; ∂_x ∧ ∂_y) \\
    \end{equation}
 
 .. margin::
@@ -349,7 +349,7 @@ to the description of rotations expressed as a cross product :math:`\times`:
 .. math::
 
    \begin{equation}
-   ⋆R = R^x ⋆(∂_y ∧ ∂_z) + R^y ⋆(∂_z ∧ ∂_x) + R^z ⋆(∂_x ∧ ∂_y) \\
+   ⋆R = a ⋆(∂_y ∧ ∂_z) + b ⋆(∂_z ∧ ∂_x) + c ⋆(∂_x ∧ ∂_y) \\
    \end{equation}
 
 .. margin::
@@ -359,7 +359,7 @@ to the description of rotations expressed as a cross product :math:`\times`:
 .. math::
 
    \begin{equation}
-   ⋆R = R^x ∂_x + R^y ∂_y + R^z ∂_z
+   ⋆R = a \; ∂_x + b \; ∂_y + c \; ∂_z
    \end{equation}
 
 That is, the Hodge star of the rotation ∂_xpressed as a linear comibination of
@@ -369,7 +369,7 @@ space:
 .. math::
 
    \begin{equation}
-   ⋆R = R^x ∂_y ⨯ ∂_z + R^y ∂_z ⨯ ∂_x + R^z ∂_x ⨯ ∂_y
+   ⋆R = a \; ∂_y ⨯ ∂_z + b \; ∂_z ⨯ ∂_x + c \; ∂_x ⨯ ∂_y
    \end{equation}
 
 We could have written a covector in the same explicit manner. This notation is
