@@ -18,7 +18,7 @@ matrix notation with the same object:
 
 With :ref:`musical notation <formalism_musical_isomorphisms:Musical
 Isomorphisms>` and :ref:`free matrix representation
-<formalism_free_matrix_representation:Free Matrix Representation>`, we
+<formalism_free_matrix_representation:The Free Matrix Representation>`, we
 explicitely write the metric tensor together with its basis:
 
 .. math::

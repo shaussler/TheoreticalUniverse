@@ -21,8 +21,6 @@ This is a personal compilation of papers focusing on mathematical physics.
    differential_formalism.rst
    differential_operators.rst
    differential_rotations.rst
-   faraday_tensor_rotation.rst
-   faraday_tensor_all.rst
    de_guas_theorem.rst
 
 LINKS:

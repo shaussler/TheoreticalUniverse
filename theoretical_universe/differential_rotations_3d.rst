@@ -10,9 +10,9 @@ The Free Matrix Representation of Rotations
 
 .. {{{
 
-The :ref:`free matrix representation <formalism_free_matrix_representation:Free
-Matrix Representation>` is powerfull when using a bivector basis, since the
-elements of the matrix can be re-ordered at will. In three dimensions,
+The :ref:`free matrix representation <formalism_free_matrix_representation:The
+Free Matrix Representation>` is powerfull when using a bivector basis, since
+the elements of the matrix can be re-ordered at will. In three dimensions,
 rotations are possible on the three planes. A general **rotation is a linear
 combination of the three associated basis bivectors**:
 

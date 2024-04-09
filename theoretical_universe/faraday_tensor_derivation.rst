@@ -196,7 +196,7 @@ dimensions :math:`∂_x = \frac{∂}{∂ x}`, :math:`∂_y = \frac{∂}{∂y}`, 
 
    \begin{equation}
    \begin{matrix} \newcommand{\E}{\tilde{E}}
-                & + ∂_x \E^x & + ∂_y \E^y & + ∂_y \E^z & = & + μ_0 c ρ \\
+                & + ∂_x \E^x & + ∂_y \E^y & + ∂_z \E^z & = & + μ_0 c ρ \\
      + ∂_t \E^x &            & - ∂_y  B^z & + ∂_z  B^y & = & - μ_0 J^x \\
      + ∂_t \E^y & + ∂_x  B^z &            & - ∂_z  B^x & = & - μ_0 J^y \\
      + ∂_t \E^z & - ∂_x  B^y & + ∂_y  B^x &            & = & - μ_0 J^z \\

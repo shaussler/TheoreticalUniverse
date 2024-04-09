@@ -1,5 +1,5 @@
-Free Matrix Representation
-==========================
+The Free Matrix Representation
+==============================
 
 I hope the reader will find the *free matrix representation* obvious.
 Everything in a matrix is expressed with its basis vectors and can be reordered

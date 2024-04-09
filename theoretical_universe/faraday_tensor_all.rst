@@ -47,22 +47,120 @@ Wich were then written in the following matrix form.
 
 From there, we had deduced the tensor formulation in Abstract Index Notation.
 
-Hodge Dual in Minkowski Space
------------------------------
+Rotation
+--------
 
 .. math::
 
-   \star dt = - dx \wedge dy \wedge dz \\
-   \star dx = - dt \wedge dy \wedge dz \\
-   \star dy = - dt \wedge dz \wedge dx \\
-   \star dz = - dt \wedge dx \wedge dy
+   \begin{equation}
+   B^{♯♯}
+   = \begin{bmatrix}
+     a \; ∂_t ∧ ∂_x \\
+     b \; ∂_t ∧ ∂_y \\
+     c \; ∂_t ∧ ∂_z \\
+     d \; ∂_x ∧ ∂_y \\
+     e \; ∂_y ∧ ∂_z \\
+     f \; ∂_z ∧ ∂_x \\
+   \end{bmatrix}
+   \end{equation}
 
 .. math::
 
-   \star (dt \wedge dx) = - dy \wedge dz \\
-   \star (dt \wedge dy) = - dz \wedge dx \\
-   \star (dt \wedge dz) = - dx \wedge dy \\
-   \star (dx \wedge dy) =   dt \wedge dz \\
-   \star (dz \wedge dx) =   dt \wedge dy \\
-   \star (dy \wedge dz) =   dt \wedge dx
+   \begin{align}
+   (B^{♯♯})^{♭♭}
+   &= \begin{bmatrix}
+     a \; ∂_t^♭ ∧ ∂_x^♭ \\
+     b \; ∂_t^♭ ∧ ∂_y^♭ \\
+     c \; ∂_t^♭ ∧ ∂_z^♭ \\
+     d \; ∂_x^♭ ∧ ∂_y^♭ \\
+     e \; ∂_y^♭ ∧ ∂_z^♭ \\
+     f \; ∂_z^♭ ∧ ∂_x^♭ \\
+   \end{bmatrix}
+   = \begin{bmatrix}
+     a \; η_{αt} \; dx^t ∧ η_{βx} \; dx^x \\
+     b \; η_{αt} \; dx^t ∧ η_{βy} \; dx^y \\
+     c \; η_{αt} \; dx^t ∧ η_{βz} \; dx^z \\
+     d \; η_{αx} \; dx^x ∧ η_{βy} \; dx^y \\
+     e \; η_{αy} \; dx^y ∧ η_{βz} \; dx^z \\
+     f \; η_{αz} \; dx^z ∧ η_{βx} \; dx^x \\
+   \end{bmatrix}
+   = \begin{bmatrix}
+     a \; η_{tt} \; dx^t ∧ η_{xx} \; dx^x \\
+     b \; η_{tt} \; dx^t ∧ η_{yy} \; dx^y \\
+     c \; η_{tt} \; dx^t ∧ η_{zz} \; dx^z \\
+     d \; η_{xx} \; dx^x ∧ η_{yy} \; dx^y \\
+     e \; η_{yy} \; dx^y ∧ η_{zz} \; dx^z \\
+     f \; η_{zz} \; dx^z ∧ η_{xx} \; dx^x \\
+   \end{bmatrix}
+   \\&= \begin{bmatrix}
+     a \; (+1) \; dx^t ∧ (-1) \; dx^x \\
+     b \; (+1) \; dx^t ∧ (-1) \; dx^y \\
+     c \; (+1) \; dx^t ∧ (-1) \; dx^z \\
+     d \; (-1) \; dx^x ∧ (-1) \; dx^y \\
+     e \; (-1) \; dx^y ∧ (-1) \; dx^z \\
+     f \; (-1) \; dx^z ∧ (-1) \; dx^x \\
+   \end{bmatrix}
+   = \begin{bmatrix}
+     - a \; dx^t ∧ dx^x \\
+     - b \; dx^t ∧ dx^y \\
+     - c \; dx^t ∧ dx^z \\
+     + d \; dx^x ∧ dx^y \\
+     + e \; dx^y ∧ dx^z \\
+     + f \; dx^z ∧ dx^x \\
+   \end{bmatrix}
+   \end{align}
+
+
+Redefining/reordering the terms:
+
+.. math::
+
+   R = \begin{bmatrix}
+     -a \; dx^t ∧ dx^x \\
+     -b \; dx^t ∧ dx^y \\
+     -c \; dx^t ∧ dx^z \\
+      d \; dx^y ∧ dx^z \\
+      e \; dx^z ∧ dx^x \\
+      f \; dx^x ∧ dx^y \\
+   \end{bmatrix}
+
+.. math::
+
+   dR = \begin{bmatrix}
+     (∂_y (-a) dx^y ∧ dx^t ∧ dx^x+ ∂_z (-a) dx^z ∧ dx^t ∧ dx^x) \\
+     (∂_x (-b) dx^x ∧ dx^t ∧ dx^y+ ∂_z (-b) dx^z ∧ dx^t ∧ dx^y) \\
+     (∂_x (-c) dx^x ∧ dx^t ∧ dx^z+ ∂_y (-c) dx^y ∧ dx^t ∧ dx^z) \\
+     (∂_t (+d) dx^t ∧ dx^y ∧ dx^z+ ∂_x (+d) dx^x ∧ dx^y ∧ dx^z) \\
+     (∂_t (+e) dx^t ∧ dx^z ∧ dx^x+ ∂_y (+e) dx^y ∧ dx^z ∧ dx^x) \\
+     (∂_t (+f) dx^t ∧ dx^x ∧ dx^y+ ∂_z (+f) dx^z ∧ dx^x ∧ dx^y) \\
+   \end{bmatrix}
+
+.. math::
+
+   dR = \begin{bmatrix}
+     ∂_y (-a) dx^t ∧ dx^x ∧ dx^y + ∂_z (-a) dx^t ∧ dx^x ∧ dx^z \\
+     ∂_x (+b) dx^t ∧ dx^x ∧ dx^y + ∂_z (-b) dx^t ∧ dx^y ∧ dx^z \\
+     ∂_x (+c) dx^t ∧ dx^x ∧ dx^z + ∂_y (+c) dx^t ∧ dx^y ∧ dx^z \\
+     ∂_t (+d) dx^t ∧ dx^y ∧ dx^z + ∂_x (+d) dx^x ∧ dx^y ∧ dx^z \\
+     ∂_t (-e) dx^t ∧ dx^x ∧ dx^z + ∂_y (+e) dx^x ∧ dx^y ∧ dx^z \\
+     ∂_t (+f) dx^t ∧ dx^x ∧ dx^y + ∂_z (+f) dx^x ∧ dx^y ∧ dx^z \\
+   \end{bmatrix}
+
+.. math::
+
+   dR = \begin{bmatrix}
+   ∂_y (-a) dx^t ∧ dx^x ∧ dx^y + ∂_x (+b) dx^t ∧ dx^x ∧ dx^y + ∂_t (+f) dx^t ∧ dx^x ∧ dx^y \\
+   ∂_x (-c) dx^t ∧ dx^x ∧ dx^z + ∂_z (+a) dx^t ∧ dx^x ∧ dx^z + ∂_t (+e) dx^t ∧ dx^z ∧ dx^x \\
+   ∂_z (-b) dx^t ∧ dx^y ∧ dx^z + ∂_y (+c) dx^t ∧ dx^y ∧ dx^z + ∂_t (+d) dx^t ∧ dx^y ∧ dx^z \\
+   ∂_x (+d) dx^x ∧ dx^y ∧ dx^z + ∂_y (+e) dx^x ∧ dx^y ∧ dx^z + ∂_z (+f) dx^x ∧ dx^y ∧ dx^z \\
+   \end{bmatrix}
+
+.. math::
+
+   dR = \begin{bmatrix}
+            & + ∂_x d & + ∂_y e & + ∂_z f & dt \\
+   + ∂_t d  &         & + ∂_y c & - ∂_z b & dx \\
+   + ∂_t e  & - ∂_x c &         & + ∂_z a & dy \\
+   + ∂_t f  & + ∂_x b & - ∂_y a &         & dz \\
+   \end{bmatrix}
 
