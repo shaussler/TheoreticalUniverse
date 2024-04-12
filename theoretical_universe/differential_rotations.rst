@@ -21,10 +21,9 @@ open an issue or directly provide corrections by sending a merge request to my
 I assume the reader posses a strong grasp of vector calculus as well as working
 understanding of differential forms, the wedge product, and :ref:`the concept
 of the Hodge dual <formalism_hodge_dual:Hodge Duality>`. With respect to
-wording, I interchangeably use the words *oriented surface*, *bivector* and
-*pseudo-vectors* as they are :ref:`the same objects
-<formalism_hodge_dual:Pseudo vectors and pseudo scalars>`, albeit named in
-different contexts.
+wording, I interchangeably use the words *oriented surface*, *bivector* as they
+are :ref:`the same objects <formalism_hodge_dual:Pseudo vectors and pseudo
+scalars>`, albeit named in different contexts.
 
 TL;DR Too long; didn't read
 ---------------------------
@@ -92,35 +91,18 @@ Basis element      Symmetry     Expression
 .. rubric:: Rotations in Minkowski space match exactly the Faraday tensor
 
 The row-major free matrix representation of any rotation in Minkowski space,
-expressed in a mixed form and up to a sign:
-
-.. rubric:: ♭♯
+expressed in a mixed form:
 
 .. math::
 
    \begin{align}
-   B^{♭♯}
+   R^{♭♯}
    &= \frac{1}{2}
    \begin{bmatrix}
                        & + a \; dx^t ∧ ∂_x & + b \; dx^t ∧ ∂_y & + c \; dx^t ∧ ∂_z \\
-     + a \; dx^x ∧ ∂_t &                   & + d \; dx^x ∧ ∂_y & + f \; dx^x ∧ ∂_z \\
-     + b \; dx^y ∧ ∂_t & - d \; dx^y ∧ ∂_x &                   & + e \; dx^y ∧ ∂_z \\
-     + c \; dx^z ∧ ∂_t & - f \; dx^z ∧ ∂_x & - e \; dx^z ∧ ∂_y &                   \\
-   \end{bmatrix}
-   \end{align}
-
-.. rubric:: ♯♭
-
-.. math::
-
-   \begin{align}
-   B^{♯♭}
-   &= \frac{1}{2}
-   \begin{bmatrix}
-                       & - a \; dx^t ∧ ∂_x & - b \; dx^t ∧ ∂_y & - c \; dx^t ∧ ∂_z \\
-     - a \; dx^x ∧ ∂_t &                   & + d \; dx^x ∧ ∂_y & + f \; dx^x ∧ ∂_z \\
-     - b \; dx^y ∧ ∂_t & - d \; dx^y ∧ ∂_x &                   & + e \; dx^y ∧ ∂_z \\
-     - c \; dx^z ∧ ∂_t & - f \; dx^z ∧ ∂_x & - e \; dx^z ∧ ∂_y &                   \\
+     + a \; dx^x ∧ ∂_t &                   & + f \; dx^x ∧ ∂_y & - e \; dx^x ∧ ∂_z \\
+     + b \; dx^y ∧ ∂_t & - f \; dx^y ∧ ∂_x &                   & + d \; dx^y ∧ ∂_z \\
+     + c \; dx^z ∧ ∂_t & + e \; dx^z ∧ ∂_x & - d \; dx^z ∧ ∂_y &                   \\
    \end{bmatrix}
    \end{align}
 

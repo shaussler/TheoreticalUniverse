@@ -5,40 +5,58 @@ Rotations in Minkowski Space
 
    by Stéphane Haussler
 
-Turning now to a bivectors in Minkowski space, **any rotation can be written as
-a linear combination of 6 parameters**:
+In this section, we explore rotations in Minkowski space. We will express
+rotations first as bivectors, and systematicaly express these rotations
+as a:
 
-.. math::
+* Linear combination of bivectors
+* Doubly contravariant rank 2 tensor
+* Doubly convariant rank 2 tensor
+* Mixed tensors of rank (1,1)
 
-   \begin{equation}
-   B^{♯♯}
-   = \begin{bmatrix}
-     a \; ∂_t ∧ ∂_x \\
-     b \; ∂_t ∧ ∂_y \\
-     c \; ∂_t ∧ ∂_z \\
-     d \; ∂_y ∧ ∂_z \\
-     e \; ∂_z ∧ ∂_x \\
-     f \; ∂_x ∧ ∂_y \\
-   \end{bmatrix}
-   \end{equation}
+We will work out the Lie Algebra of the Lorentz group and the matrix
+representation of rotations. The mixed wedge products will be fully expressed
+in terms of tensor products and their (maybe unexpected) symmetries
+highlighted.
+
+A rotation in Minkowski space is represented by a linear combination of basis
+rotations in all six available plans of rotation.
+
+.. topic:: Rotations in Minkowski Space
+
+   .. math::
+
+      \begin{equation}
+      B^{♯♯}
+      = \begin{bmatrix}
+        a \; ∂_t ∧ ∂_x \\
+        b \; ∂_t ∧ ∂_y \\
+        c \; ∂_t ∧ ∂_z \\
+        d \; ∂_y ∧ ∂_z \\
+        e \; ∂_z ∧ ∂_x \\
+        f \; ∂_x ∧ ∂_y \\
+      \end{bmatrix}
+      \end{equation}
 
 The sharp symbol :math:`\sharp` indicates that the components are doubly
 contravariant tensor components. Reordering to a row/column matrix
 representation and using the antisimmetric property of the wedge product, we
 obtain the **contravariant matrix representation of a rotation**:
 
-.. math::
+.. topic:: The Doubly Contravariant Rotation Matrix
 
-   \begin{equation}
-   B^{♯♯}
-   = \frac{1}{2}
-   \begin{bmatrix}
-                        & + a \; ∂_t ∧ ∂_x & + b \; ∂_t ∧ ∂_y & + c \; ∂_t ∧ ∂_z \\
-       - a \; ∂_x ∧ ∂_t &                  & + f \; ∂_x ∧ ∂_y & - e \; ∂_x ∧ ∂_z \\
-       - b \; ∂_y ∧ ∂_t & - f \; ∂_y ∧ ∂_x &                  & + d \; ∂_y ∧ ∂_z \\
-       - c \; ∂_z ∧ ∂_t & + e \; ∂_z ∧ ∂_x & - d \; ∂_z ∧ ∂_y &                  \\
-   \end{bmatrix}
-   \end{equation}
+   .. math::
+   
+      \begin{equation}
+      B^{♯♯}
+      = \frac{1}{2}
+      \begin{bmatrix}
+                           & + a \; ∂_t ∧ ∂_x & + b \; ∂_t ∧ ∂_y & + c \; ∂_t ∧ ∂_z \\
+          - a \; ∂_x ∧ ∂_t &                  & + f \; ∂_x ∧ ∂_y & - e \; ∂_x ∧ ∂_z \\
+          - b \; ∂_y ∧ ∂_t & - f \; ∂_y ∧ ∂_x &                  & + d \; ∂_y ∧ ∂_z \\
+          - c \; ∂_z ∧ ∂_t & + e \; ∂_z ∧ ∂_x & - d \; ∂_z ∧ ∂_y &                  \\
+      \end{bmatrix}
+      \end{equation}
 
 Recall that using :ref:`the Minkowski metric <formalism_minkowski_metric:The
 Minkowski Metric>`, we can flatten a basis vector with the flat operator
@@ -809,7 +827,7 @@ demonstrated above, this results in:
 
 .. }}}
 
-The :math:`\mathfrak{so}(1,3)` Lie Algegra of the Lorentz group
+The :math:`\mathfrak{so}(1,3)` Lie Algebra of the Lorentz Group
 ---------------------------------------------------------------
 
 .. {{{
