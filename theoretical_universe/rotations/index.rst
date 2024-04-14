@@ -126,5 +126,5 @@ one. two.
 .. toctree::
    :maxdepth: 2
 
-   differential_rotations_3d.rst
-   differential_rotations_4d.rst
+   rotations_in_3_dimensions.rst
+   rotations_in_minkowski_space.rst

@@ -20,7 +20,7 @@ This is a personal compilation of papers focusing on mathematical physics.
    faraday_tensor_derivation.rst
    the_cartan_hodge_formalism/index.rst
    differential_operators.rst
-   differential_rotations.rst
+   rotations/index.rst
    faraday_tensor_rotation.rst
    faraday_tensor_all.rst
    de_guas_theorem.rst
