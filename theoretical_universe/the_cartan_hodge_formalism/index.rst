@@ -5,22 +5,22 @@ The Cartan-Hodge Formalism
 
    by Stéphane Haussler
 
-In this series of articles, I present what I refer to as the Cartan-Hodge
-formalism. The formalism brings together notions and notations into a common
-framework that can be used to perform calculations and highlight symmetries.
-Practical calculations can be perfomed following clear rules, with each step
-written in a compact and intellegible manner.
+In this serie of articles, I introduce the Cartan-Hodge formalism, which
+amalgamates various notions and notations into a unified framework for
+performing calculations and illuminating symmetries. Practical computations
+follow clear and concise rules, with each step presented in a compact and
+comprehensible manner.
 
-The formalism is closely related to tensor Calculus as well as differential
-forms. The notation specifies the Abstract Index Notation (Ricci caculus). The
-musical flat :math:`♭` and sharp :math:`♯` operators transform vectors to
-covectors and vice versa. Hodge duality plays a central role, bringing tensors
-from one space to the dual complement. Finally, I introduce the free matrix
-notation to simplify calculations, and often permit to fall back to matrix
-multiplication in a straightforward manner.
+This formalism closely intertwines with tensor calculus and differential forms.
+The notation extends the Abstract Index Notation (Ricci calculus) with explicit
+tensor basis. The musical flat (:math:`♭`) and sharp (:math:`♯`) operators
+convert vectors to covectors and vice versa. Hodge duality assumes a central
+role, transitioning tensors between spaces and their dual complements.
+Additionally, I introduce the free matrix notation to streamline calculations,
+often allowing a straightforward return to matrix multiplication.
 
-I assume the reader posses strong knowledge of vector and tensor calculus, as
-well as working knowledge of differential forms.
+I assume the reader possesses a solid understanding of vector and tensor
+calculus, as well as a working familiarity with differential forms
 
 .. toctree::
    :maxdepth: 2

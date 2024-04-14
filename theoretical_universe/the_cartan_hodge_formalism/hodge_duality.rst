@@ -16,19 +16,18 @@ dual by first limiting the discussion to three dimensions, making it more
 accessible.
 
 I assume the reader possesses a strong grasp of vector calculus and a working
-understanding of *differential forms* and the *wedge product* :math:`\wedge`.
+understanding of *differential forms* and the *wedge product* :math:`∧`.
 
 Duality in three dimensions
 ---------------------------
 
 First consider a coordinate basis in 3 dimensions corresponding to our
-intuitive understanding of space :math:`\mathbf{e}_x`, :math:`\mathbf{e}_y` and
-:math:`\mathbf{e}_z`. Observe that we did not merely define three unit vectors,
-but also three *unit surfaces* that we name using the wedge symbol
-:math:`\wedge`. The surface along the :math:`x` and :math:`y` axis is named
-:math:`\mathbf{e}_x \wedge \mathbf{e}_y`, along the :math:`y` and :math:`z`
-axis :math:`\mathbf{e}_y \wedge \mathbf{e}_z`, and along the :math:`z` and
-:math:`x` axis, :math:`\mathbf{e}_z \wedge \mathbf{e}_x`:
+intuitive understanding of space :math:`∂_x`, :math:`∂_y` and :math:`∂_z`.
+Observe that we did not merely define three unit vectors, but also three *unit
+surfaces* that we name using the wedge symbol :math:`∧`. The surface along the
+:math:`x` and :math:`y` axis is named :math:`∂_x ∧ ∂_y`, along the :math:`y`
+and :math:`z` axis :math:`∂_y ∧ ∂_z`, and along the :math:`z` and :math:`x`
+axis, :math:`∂_z ∧ ∂_x`:
 
 .. image:: _static/hodge_dual_coordinates.png
    :align: center
@@ -38,34 +37,34 @@ The naming of the surfaces is carefully chosen counterclock wise. The reason is
 that not only we can define a surface (a number) from two vectors but also
 given a vector together with a surface, we can uniquely determine the second
 vector needed to obtain that surface. The surface need be oriented and a sign
-convention chosen (counterclockwise is positive). For example,
-:math:`\mathbf{e}_z \wedge \mathbf{e}_x = - \mathbf{e}_x \wedge \mathbf{e}_z`.
+convention chosen (counterclockwise is positive). For example, :math:`∂_z ∧ ∂_x
+= - ∂_x ∧ ∂_z`.
 
 Each basis surface can be associated with a unique basis vector:
 
 .. math::
 
-   \mathbf{e}_x \wedge \mathbf{e}_y \rightarrow \mathbf{e}_z \\
-   \mathbf{e}_y \wedge \mathbf{e}_z \rightarrow \mathbf{e}_x \\
-   \mathbf{e}_z \wedge \mathbf{e}_x \rightarrow \mathbf{e}_y
+   ∂_x ∧ ∂_y \rightarrow ∂_z \\
+   ∂_y ∧ ∂_z \rightarrow ∂_x \\
+   ∂_z ∧ ∂_x \rightarrow ∂_y
 
-We note this relation with the star :math:`\star` symbol:
+We note this relation with the star symbol :math:`⋆`:
 
 .. math::
 
-   \star \mathbf{e}_x \wedge \mathbf{e}_y = \mathbf{e}_z \\
-   \star \mathbf{e}_y \wedge \mathbf{e}_z = \mathbf{e}_x \\
-   \star \mathbf{e}_z \wedge \mathbf{e}_x = \mathbf{e}_y
+   ⋆ ∂_x ∧ ∂_y = ∂_z \\
+   ⋆ ∂_y ∧ ∂_z = ∂_x \\
+   ⋆ ∂_z ∧ ∂_x = ∂_y
 
 This association defines a dual vector to every oriented surfaces and is called
-the Hodge dual, noted with the star :math:`\star` operator. The relation holds
-in both direction:
+the Hodge dual, noted with the star operator :math:`⋆` operator. The relation
+holds in both direction:
 
 .. math::
 
-   \star \mathbf{e}_z = \mathbf{e}_x \wedge \mathbf{e}_y \\
-   \star \mathbf{e}_x = \mathbf{e}_y \wedge \mathbf{e}_z \\
-   \star \mathbf{e}_y = \mathbf{e}_z \wedge \mathbf{e}_x
+   ⋆ ∂_z = ∂_x ∧ ∂_y \\
+   ⋆ ∂_x = ∂_y ∧ ∂_z \\
+   ⋆ ∂_y = ∂_z ∧ ∂_x
 
 The Hodge dual in three dimensions is the cross product. The cross product
 defines a vector perpendicular to the surface whose length is proportional to
@@ -73,26 +72,26 @@ the amount of rotation:
 
 .. math::
 
-   \mathbf{e}_x \times \mathbf{e}_y = \star \mathbf{e}_x \wedge \mathbf{e}_y = \mathbf{e}_z \\
-   \mathbf{e}_y \times \mathbf{e}_z = \star \mathbf{e}_y \wedge \mathbf{e}_z = \mathbf{e}_x \\
-   \mathbf{e}_z \times \mathbf{e}_x = \star \mathbf{e}_z \wedge \mathbf{e}_x = \mathbf{e}_y
+   ∂_x ⨯ ∂_y = ⋆ ∂_x ∧ ∂_y = ∂_z \\
+   ∂_y ⨯ ∂_z = ⋆ ∂_y ∧ ∂_z = ∂_x \\
+   ∂_z ⨯ ∂_x = ⋆ ∂_z ∧ ∂_x = ∂_y
 
 This establishes the deep connection between the Hodge dual, rotations,
 surfaces, and the cross product.
 
 Going one step futher, we observe that we did not merely define unit surfaces,
-but also unit volumes that we note :math:`\mathbf{e}_x \wedge \mathbf{e}_y
-\wedge \mathbf{e}_z`. We can associate the unit volume with numbers:
+but also unit volumes that we note :math:`∂_x ∧ ∂_y ∧ ∂_z`. We can associate
+the unit volume with numbers:
 
 .. math::
 
-   \star \mathbf{1} = \mathbf{e}_x \wedge \mathbf{e}_y \wedge \mathbf{e}_z
+   ⋆ \mathbf{1} = ∂_x ∧ ∂_y ∧ ∂_z
 
 As well as:
 
 .. math::
 
-   \star \mathbf{e}_x \wedge \mathbf{e}_y \wedge \mathbf{e}_z = \mathbf{1}
+   ⋆ ∂_x ∧ ∂_y ∧ ∂_z = \mathbf{1}
 
 Where :math:`\mathbf{1}` is the unit number. In other words any number can be
 expressed as a linear combination of :math:`1`.
@@ -136,27 +135,27 @@ Duality in Minkowski space
 .. math::
 
    \begin{alignat*}{2}
-   \star (\mathbf{e}_t \wedge \mathbf{e}_x) &= - &\mathbf{e}_y \wedge \mathbf{e}_z \\
-   \star (\mathbf{e}_t \wedge \mathbf{e}_y) &= - &\mathbf{e}_z \wedge \mathbf{e}_x \\
-   \star (\mathbf{e}_t \wedge \mathbf{e}_z) &= - &\mathbf{e}_x \wedge \mathbf{e}_y \\
-   \star (\mathbf{e}_x \wedge \mathbf{e}_y) &=   &\mathbf{e}_t \wedge \mathbf{e}_z \\
-   \star (\mathbf{e}_y \wedge \mathbf{e}_z) &=   &\mathbf{e}_t \wedge \mathbf{e}_x \\
-   \star (\mathbf{e}_z \wedge \mathbf{e}_x) &=   &\mathbf{e}_t \wedge \mathbf{e}_y \\
+   ⋆ (∂_t ∧ ∂_x) &= - &∂_y ∧ ∂_z \\
+   ⋆ (∂_t ∧ ∂_y) &= - &∂_z ∧ ∂_x \\
+   ⋆ (∂_t ∧ ∂_z) &= - &∂_x ∧ ∂_y \\
+   ⋆ (∂_x ∧ ∂_y) &=   &∂_t ∧ ∂_z \\
+   ⋆ (∂_y ∧ ∂_z) &=   &∂_t ∧ ∂_x \\
+   ⋆ (∂_z ∧ ∂_x) &=   &∂_t ∧ ∂_y \\
    \end{alignat*}
 
 .. math::
 
-   \star dt = - dx \wedge dy \wedge dz \\
-   \star dx = - dt \wedge dy \wedge dz \\
-   \star dy = - dt \wedge dz \wedge dx \\
-   \star dz = - dt \wedge dx \wedge dy
+   ⋆ dt = - dx ∧ dy ∧ dz \\
+   ⋆ dx = - dt ∧ dy ∧ dz \\
+   ⋆ dy = - dt ∧ dz ∧ dx \\
+   ⋆ dz = - dt ∧ dx ∧ dy
 
 .. math::
 
-   \star (dt \wedge dx) = - dy \wedge dz \\
-   \star (dt \wedge dy) = - dz \wedge dx \\
-   \star (dt \wedge dz) = - dx \wedge dy \\
-   \star (dx \wedge dy) =   dt \wedge dz \\
-   \star (dz \wedge dx) =   dt \wedge dy \\
-   \star (dy \wedge dz) =   dt \wedge dx
+   ⋆ (dt ∧ dx) = - dy ∧ dz \\
+   ⋆ (dt ∧ dy) = - dz ∧ dx \\
+   ⋆ (dt ∧ dz) = - dx ∧ dy \\
+   ⋆ (dx ∧ dy) =   dt ∧ dz \\
+   ⋆ (dz ∧ dx) =   dt ∧ dy \\
+   ⋆ (dy ∧ dz) =   dt ∧ dx
 
