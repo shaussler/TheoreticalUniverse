@@ -1,3 +1,5 @@
+.. _hodge_duality:
+
 Hodge duality
 =============
 
@@ -94,6 +96,8 @@ As well as:
 
 Where :math:`\mathbf{1}` is the unit number. In other words any number can be
 expressed as a linear combination of :math:`1`.
+
+.. _pseudo_vectors_and_pseudo_scalars:
 
 Pseudo vectors and pseudo scalars
 ---------------------------------

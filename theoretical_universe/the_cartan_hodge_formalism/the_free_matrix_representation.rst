@@ -1,3 +1,5 @@
+.. _the_free_matrix_representation:
+
 The Free Matrix Representation
 ==============================
 

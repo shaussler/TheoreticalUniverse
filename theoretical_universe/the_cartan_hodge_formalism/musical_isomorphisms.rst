@@ -1,3 +1,5 @@
+.. _musical_isomorphisms:
+
 Musical Isomorphisms
 ====================
 

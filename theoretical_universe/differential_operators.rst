@@ -11,8 +11,8 @@ curl and the laplacian in three dimensions.
 
 I assume the reader possesses a strong grasp of vector calculus, a working
 understanding of differential forms and the wedge product, as well as of
-:ref:`the Hoddge dual <formalism_hodge_dual:Hodge Duality>`. To learn about
-differential forms, `see yet another great video serie by Michael Penn
+:ref:`the Hoddge dual <hodge_duality>`. To learn about differential forms, `see
+yet another great video serie by Michael Penn
 <https://youtube.com/playlist?list=PL22w63XsKjqzQZtDZO_9s2HEMRJnaOTX7&si=4dDrAZ-oKa1rI7B8>`_.
 Implicitely assumed with the above requisites is a basic understanding of
 tensor calculus, and in particular the concept of vector and covector. Some

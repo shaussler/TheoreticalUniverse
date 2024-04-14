@@ -26,7 +26,8 @@ well as working knowledge of differential forms.
 .. toctree::
    :maxdepth: 2
 
-   formalism_musical_isomorphisms.rst
-   formalism_hodge_dual.rst
-   formalism_free_matrix_representation.rst
-   formalism_minkowski_metric.rst
+   basis_vectors.rst
+   musical_isomorphisms.rst
+   hodge_duality.rst
+   the_free_matrix_representation.rst
+   the_minkowski_metric.rst

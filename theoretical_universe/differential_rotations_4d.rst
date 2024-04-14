@@ -58,8 +58,7 @@ obtain the **contravariant matrix representation of a rotation**:
       \end{bmatrix}
       \end{equation}
 
-Recall that using :ref:`the Minkowski metric <formalism_minkowski_metric:The
-Minkowski Metric>`, we can flatten a basis vector with the flat operator
+Recall that using :ref:`the Minkowski metric <the_minkowski_metric>`, we can flatten a basis vector with the flat operator
 :math:`♭`:
 
 .. math::
@@ -676,9 +675,8 @@ The :math:`♭♯` Rotation Tensor
 .. {{{
 
 In this section, I flattne the first component using the :ref:`free matrix
-representation <formalism_free_matrix_representation:The Free Matrix
-Representation>`. The mixed tensor is obtained by applying the flatternig
-operator :math:`\flat`:
+representation <the_free_matrix_representation>`. The mixed tensor is obtained
+by applying the flatternig operator :math:`\flat`:
 
 .. math::
 

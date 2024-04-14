@@ -20,10 +20,9 @@ open an issue or directly provide corrections by sending a merge request to my
 
 I assume the reader posses a strong grasp of vector calculus as well as working
 understanding of differential forms, the wedge product, and :ref:`the concept
-of the Hodge dual <formalism_hodge_dual:Hodge Duality>`. With respect to
-wording, I interchangeably use the words *oriented surface*, *bivector* as they
-are :ref:`the same objects <formalism_hodge_dual:Pseudo vectors and pseudo
-scalars>`, albeit named in different contexts.
+of the Hodge dual <hodge_duality>`. With respect to wording, I interchangeably
+use the words *oriented surface*, *bivector* as they are :ref:`the same objects
+<pseudo_vectors_and_pseudo_scalars>`, albeit named in different contexts.
 
 TL;DR Too long; didn't read
 ---------------------------

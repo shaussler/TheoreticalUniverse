@@ -18,9 +18,11 @@ This is a personal compilation of papers focusing on mathematical physics.
    licence.rst
    contribute.rst
    faraday_tensor_derivation.rst
-   differential_formalism.rst
+   the_cartan_hodge_formalism/index.rst
    differential_operators.rst
    differential_rotations.rst
+   faraday_tensor_rotation.rst
+   faraday_tensor_all.rst
    de_guas_theorem.rst
 
 LINKS:
