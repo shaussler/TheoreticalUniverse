@@ -243,6 +243,8 @@ be apparent that we can employ matrices operations.
 
 .. }}}
 
+.. _the_tensor_of_mr_faraday:
+
 The Tensor of Mr. Faraday
 -------------------------
 

@@ -7,15 +7,15 @@ The Cartan-Hodge Formalism
 
 In this serie of articles, I introduce the Cartan-Hodge formalism, which
 amalgamates various notions and notations into a unified framework for
-performing calculations and illuminating symmetries. Practical computations
+performing calculations and highlighting symmetries. Practical computations
 follow clear and concise rules, with each step presented in a compact and
 comprehensible manner.
 
 This formalism closely intertwines with tensor calculus and differential forms.
-The notation extends the Abstract Index Notation (Ricci calculus) with explicit
-tensor basis. The musical flat (:math:`♭`) and sharp (:math:`♯`) operators
-convert vectors to covectors and vice versa. Hodge duality assumes a central
-role, transitioning tensors between spaces and their dual complements.
+The notation extends the abstract index notation (Ricci calculus) by explicitly
+specifying the tensor basis. The musical flat (:math:`♭`) and sharp (:math:`♯`)
+operators convert vectors to covectors and vice versa. Hodge duality assumes a
+central role, transitioning tensors between spaces and their dual complements.
 Additionally, I introduce the free matrix notation to streamline calculations,
 often allowing a straightforward return to matrix multiplication.
 

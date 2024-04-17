@@ -1,5 +1,5 @@
-Differential Operators in the Cartan-Hodge Formalism
-====================================================
+Differential Operators
+======================
 
 .. rst-class:: custom-author
 
@@ -25,11 +25,19 @@ Derivative
 
 .. {{{
 
-The partial derivatives are our basis vectors:
+The partial derivatives are the basis vectors. I am personally still wrapping
+my head around it and refer for details to `Tangent Space Basis
+<https://www.youtube.com/watch?v=rWSoPR8j6Gg>`_ and `Constructing Tangent
+Vectors <https://www.youtube.com/watch?v=rWSoPR8j6Gg&t>`_ by `qncubed3
+<https://www.youtube.com/@qncubed3>`_, or `Coordinate Basis
+<https://www.youtube.com/watch?v=BjU8-n4ixqo&list=PLBh2i93oe2qvRGAtgkTszX7szZDVd6jh1&index=22>`_
+by `brightsideofmaths <https://www.youtube.com/@brightsideofmaths>`_.
 
-.. math::
+.. topic:: Proposition
 
-   \mathbf{e}_i = \partial_i
+   .. math::
+   
+      \mathbf{e}_i = \partial_i
 
 .. }}}
 
@@ -38,11 +46,20 @@ Differential
 
 .. {{{
 
-The differentials are our basis covectors:
+The differential applied to the partial derivative results in:
 
 .. math::
 
-   \mathbf{e}^i = dx^i
+   dx^i ∂_j = δ^i_j
+
+This is the definition for a covector, and we conclude that the differential
+operator is a covector.
+
+.. topic:: Proposition
+
+   .. math::
+   
+      \mathbf{e}^i = dx^i
 
 .. }}}
 
@@ -51,21 +68,44 @@ Gradient
 
 .. {{{
 
-.. admonition:: Proposition
+.. topic:: Proposition
 
    .. math::
 
       (df)^{\sharp} = \mathbf{\nabla} f
 
+Expand :math:`df`:
+
 .. math::
 
-   \begin{align}
-   \newcommand{\∂}{\partial}
-   \newcommand{\♯}{\sharp}
-   df^{\♯} & = ( \∂_x f dx + \∂_y f dy + \∂_z f dz )^\♯ \\
-           & = \∂_x f (dx)^\♯ + \∂_y f (dy)^\♯ + \∂_z f (dz)^\♯ \\
-           & = \∂_x f \∂_x + \∂_y f \∂_y + \∂_z f \∂_z \\
-   \end{align}
+   \begin{equation}
+   (df)^♯ = ( dx ∂_x f + dy ∂_y f + dz ∂_z f)^♯
+   \end{equation}
+
+Distribute the sharp operator :math:`♯`:
+
+.. math::
+
+   \begin{equation}
+   (df)^♯ = (dx)^♯ ∂_x f + (dy)^♯ ∂_y f + (dz)^♯ ∂_z f
+   \end{equation}
+
+Which permits to conclude:
+
+.. math::
+
+   \begin{equation}
+   (df)^♯ = ∂_x f ∂_x + ∂_y f ∂_y + ∂_z f ∂_z
+   \end{equation}
+
+In other words and for clarity:
+
+.. math::
+
+   \begin{equation}
+   \newcommand{\e}{\mathbf{e}}
+   (df)^♯ = ∂_x f \e_x + ∂_y f \e_y + ∂_z f \e_z
+   \end{equation}
 
 .. }}}
 
@@ -74,7 +114,7 @@ Divergence
 
 .. {{{
 
-.. admonition:: Proposition
+.. topic:: Proposition
 
    .. math::
 
@@ -85,46 +125,88 @@ We begin with :math:`F` as a vector :math:`\mathbf{F} = F^\sharp = F^i
 
 .. math::
 
-   F^\flat = \{ F^x \partial_x \\
-                F^y \partial_y \\
-                F^z \partial_z \}^\flat
-           = \{ F^x dx \\
-                F^y dy \\
-                F^z dz \}
+   F^♭ = \begin{bmatrix}
+           F^x ∂_x \\
+           F^y ∂_y \\
+           F^z ∂_z \\
+         \end{bmatrix}^♭
+       = \begin{bmatrix}
+           F^x (∂_x)^♭ \\
+           F^y (∂_y)^♭ \\
+           F^z (∂_z)^♭ \\
+         \end{bmatrix}
+       = \begin{bmatrix}
+           F^x dx \\
+           F^y dy \\
+           F^z dz \\
+         \end{bmatrix}
 
 Apply the :math:`\star` operator:
 
 .. math::
 
-   \star F^\flat = \{ F^x \star dx     \\ F^y \star dy     \\ F^z \star dz     \}
-                 = \{ F^x dy \wedge dz \\ F^y dz \wedge dx \\ F^z dx \wedge dy \}
+   \star F^\flat
+   = ⋆
+   \begin{bmatrix}
+     F^x dx \\
+     F^y dy \\
+     F^z dz \\
+   \end{bmatrix}
+   =
+   \begin{bmatrix}
+     F^x ⋆ dx \\
+     F^y ⋆ dy \\
+     F^z ⋆ dz \\
+   \end{bmatrix}
+   =
+   \begin{bmatrix}
+     F^x dy ∧ dz \\
+     F^y dz ∧ dx \\
+     F^z dx ∧ dy \\
+   \end{bmatrix}
 
 Apply the :math:`d` operator:
 
 .. math::
 
-   d \star F^\flat = d \{ F^x dy \wedge dz \\
-                          F^y dz \wedge dx \\
-                          F^z dx \wedge dy \}
-   = \{ \partial_x F^x dx \wedge dy \wedge dz \\
-        \partial_y F^y dy \wedge dz \wedge dx \\
-        \partial_z F^z dz \wedge dx \wedge dy \}
-   = \{ \partial_x F^x dx \wedge dy \wedge dz \\
-        \partial_y F^y dx \wedge dy \wedge dz \\
-        \partial_z F^z dx \wedge dy \wedge dz \}
+   d ⋆ F^♭ = d
+   \begin{bmatrix}
+     F^x dy \wedge dz \\
+     F^y dz \wedge dx \\
+     F^z dx \wedge dy \\
+   \end{bmatrix}
+   =
+   \begin{bmatrix}
+     ∂_x F^x dx ∧ dy ∧ dz \\
+     ∂_y F^y dy ∧ dz ∧ dx \\
+     ∂_z F^z dz ∧ dx ∧ dy \\
+   \end{bmatrix}
+   =
+   \begin{bmatrix}
+   ∂_x F^x dx ∧ dy ∧ dz \\
+   ∂_y F^y dx ∧ dy ∧ dz \\
+   ∂_z F^z dx ∧ dy ∧ dz \\
+   \end{bmatrix}
 
-Which can be brought back to a zero form by applying yet again the Hodge star: 
+Which can be brought back to a zero form by applying yet again the Hodge star
+:math:`⋆`:
 
 .. math::
 
-   \star d \star F^\flat
-   = \{ \partial_x F^x \star dx \wedge dy \wedge dz \\
-        \partial_y F^y \star dx \wedge dy \wedge dz \\
-        \partial_z F^z \star dx \wedge dy \wedge dz \}
-   = \{ \partial_x F^x \mathbf{1} \\
-        \partial_y F^y \mathbf{1} \\
-        \partial_z F^z \mathbf{1} \}
-   = \partial_x F^x + \partial_y F^y + \partial_z F^z
+   ⋆ d ⋆ F^♭
+   =
+   \begin{bmatrix}
+     ∂_x F^x ⋆ dx ∧ dy ∧ dz \\
+     ∂_y F^y ⋆ dx ∧ dy ∧ dz \\
+     ∂_z F^z ⋆ dx ∧ dy ∧ dz \\
+   \end{bmatrix}
+   =
+   \begin{bmatrix}
+     ∂_x F^x \mathbf{1} \\
+     ∂_y F^y \mathbf{1} \\
+     ∂_z F^z \mathbf{1} \\
+   \end{bmatrix}
+   = ∂_x F^x + ∂_y F^y + ∂_z F^z
 
 .. }}}
 
@@ -133,21 +215,22 @@ Curl
 
 .. {{{
 
-.. admonition:: Proposition
+.. topic:: Proposition
 
    .. math::
-   
-      (\star(dF^\flat))^\sharp = \nabla^\sharp \times F^\sharp
 
+      (⋆(dF^♭))^♯ = ∇^♯ ⨯ F^♯
 
 The full expression of the curl of a vector field is
 
 .. math::
 
-   \nabla^\sharp \times F^\sharp =
-   \{ (\partial_y F^z - \partial F^y) \; \partial_x \\
-      (\partial_z F^x - \partial F^z) \; \partial_y \\
-      (\partial_x F^y - \partial F^x) \; \partial_z \}
+   ∇^♯ ⨯ F^♯ =
+   \begin{bmatrix}
+     (∂_y F^z - ∂ F^y) \; ∂_x \\
+     (∂_z F^x - ∂ F^z) \; ∂_y \\
+     (∂_x F^y - ∂ F^x) \; ∂_z \}
+   \end{bmatrix}
 
 We demonstrate this is also equal to:
 
@@ -259,7 +342,7 @@ Laplacian
 
 .. {{{
 
-.. admonition:: Proposition
+.. topic:: Proposition
 
    .. math::
 

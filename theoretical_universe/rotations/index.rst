@@ -63,29 +63,23 @@ obtain the following representation for a rotation:
    \end{bmatrix}
    \end{equation}
 
-.. rubric:: The components of mixed wedge product can be symmetric in Minkowski
-   space
+.. rubric:: The components of mixed wedge product involving time are symmetric
+   in Minkowski space
 
-Expressing the one time contravariant and one time covartiant wedge product
-:math:`\wedge` in term of tensor products :math:`\otimes`, we obtain for the
-basis elements:
+Expressing the one time contravariant and one time covariant wedge product
+:math:`∧` in term of tensor products :math:`⊗`, we obtain for the basis
+elements:
 
-================== ============ =================================
-Basis element      Symmetry     Expression
-================== ============ =================================
-:math:`dx^t ∧ ∂_x` Symetric     :math:`+ dx^t ⊗ ∂_x + dx^x ⊗ ∂_t`
-:math:`dx^t ∧ ∂_y` Symetric     :math:`+ dx^t ⊗ ∂_y + dx^y ⊗ ∂_t`
-:math:`dx^t ∧ ∂_z` Symetric     :math:`+ dx^t ⊗ ∂_z + dx^z ⊗ ∂_t`
-:math:`dx^x ∧ ∂_y` Antisymetric :math:`+ dx^x ⊗ ∂_y - dx^y ⊗ ∂_x`
-:math:`dx^y ∧ ∂_z` Antisymetric :math:`+ dx^y ⊗ ∂_z - dx^z ⊗ ∂_y`
-:math:`dx^z ∧ ∂_x` Antisymetric :math:`+ dx^z ⊗ ∂_x - dx^x ⊗ ∂_z`
-:math:`∂_t ∧ dx^x` Symetric     :math:`+ ∂_t ⊗ dx^x + ∂_x ⊗ dx^t`
-:math:`∂_t ∧ dx^y` Symetric     :math:`+ ∂_t ⊗ dx^y + ∂_y ⊗ dx^t`
-:math:`∂_t ∧ dx^z` Symetric     :math:`+ ∂_t ⊗ dx^z + ∂_z ⊗ dx^t`
-:math:`∂_x ∧ dx^y` Antisymetric :math:`+ ∂_x ⊗ dx^y - ∂_y ⊗ dx^x`
-:math:`∂_y ∧ dx^z` Antisymetric :math:`+ ∂_y ⊗ dx^z - ∂_z ⊗ dx^y`
-:math:`∂_z ∧ dx^x` Antisymetric :math:`+ ∂_z ⊗ dx^x - ∂_x ⊗ dx^z`
-================== ============ =================================
+============ ================== ================================= ================== =================================
+Symmetry     Basis              Expression                        Basis              Expression
+============ ================== ================================= ================== =================================
+Symetric     :math:`dx^t ∧ ∂_x` :math:`+ dx^t ⊗ ∂_x + dx^x ⊗ ∂_t` :math:`∂_t ∧ dx^x` :math:`+ ∂_t ⊗ dx^x + ∂_x ⊗ dx^t`
+Symetric     :math:`dx^t ∧ ∂_y` :math:`+ dx^t ⊗ ∂_y + dx^y ⊗ ∂_t` :math:`∂_t ∧ dx^y` :math:`+ ∂_t ⊗ dx^y + ∂_y ⊗ dx^t`
+Symetric     :math:`dx^t ∧ ∂_z` :math:`+ dx^t ⊗ ∂_z + dx^z ⊗ ∂_t` :math:`∂_t ∧ dx^z` :math:`+ ∂_t ⊗ dx^z + ∂_z ⊗ dx^t`
+Antisymetric :math:`dx^x ∧ ∂_y` :math:`+ dx^x ⊗ ∂_y - dx^y ⊗ ∂_x` :math:`∂_x ∧ dx^y` :math:`+ ∂_x ⊗ dx^y - ∂_y ⊗ dx^x`
+Antisymetric :math:`dx^y ∧ ∂_z` :math:`+ dx^y ⊗ ∂_z - dx^z ⊗ ∂_y` :math:`∂_y ∧ dx^z` :math:`+ ∂_y ⊗ dx^z - ∂_z ⊗ dx^y`
+Antisymetric :math:`dx^z ∧ ∂_x` :math:`+ dx^z ⊗ ∂_x - dx^x ⊗ ∂_z` :math:`∂_z ∧ dx^x` :math:`+ ∂_z ⊗ dx^x - ∂_x ⊗ dx^z`
+============ ================== ================================= ================== =================================
 
 .. rubric:: Rotations in Minkowski space match exactly the Faraday tensor
 
@@ -105,7 +99,7 @@ expressed in a mixed form:
    \end{bmatrix}
    \end{align}
 
-The electromagnetic field tensor :math:`F` is:
+The :ref:`electromagnetic field tensor <the_tensor_of_mr_faraday>` :math:`F` is:
 
 .. math::
 
@@ -121,7 +115,23 @@ The electromagnetic field tensor :math:`F` is:
 
 .. rubric:: Rotations in Cartan's formalism trivially match the Lie Algegra of the Lorentz group
 
-one. two.
+Using an implicit basis as is the common custom, we trivially obtain the
+representation of the `Lorentz group
+<https://en.m.wikipedia.org/wiki/Lorentz_group#Lie_algebra>`_:
+
+.. math::
+
+   \begin{align}
+   R^{♭♯}
+   &= \frac{1}{2}
+   \begin{bmatrix}
+         & + a & + b  & + c \\
+     + a &     & + f  & - e \\
+     + b & - f &      & + d \\
+     + c & + e & - d  &     \\
+   \end{bmatrix}
+   \end{align}
+
 
 .. toctree::
    :maxdepth: 2

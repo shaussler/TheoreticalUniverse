@@ -472,29 +472,44 @@ antisymmetric. **The elements depending on time are symmetric**.
 
 .. rubric:: Covariant-contravariant basis elements
 
-================== ============ =================================
-Basis element      Symmetry     Expression
-================== ============ =================================
-:math:`dx^t ∧ ∂_x` Symetric     :math:`+ dx^t ⊗ ∂_x + dx^x ⊗ ∂_t`
-:math:`dx^t ∧ ∂_y` Symetric     :math:`+ dx^t ⊗ ∂_y + dx^y ⊗ ∂_t`
-:math:`dx^t ∧ ∂_z` Symetric     :math:`+ dx^t ⊗ ∂_z + dx^z ⊗ ∂_t`
-:math:`dx^y ∧ ∂_z` Antisymetric :math:`+ dx^y ⊗ ∂_z - dx^z ⊗ ∂_y`
-:math:`dx^z ∧ ∂_x` Antisymetric :math:`+ dx^z ⊗ ∂_x - dx^x ⊗ ∂_z`
-:math:`dx^x ∧ ∂_y` Antisymetric :math:`+ dx^x ⊗ ∂_y - dx^y ⊗ ∂_x`
-================== ============ =================================
+================== =================================
+Basis element      Expression
+================== =================================
+:math:`dx^t ∧ ∂_x` :math:`+ dx^t ⊗ ∂_x + dx^x ⊗ ∂_t`
+:math:`dx^t ∧ ∂_y` :math:`+ dx^t ⊗ ∂_y + dx^y ⊗ ∂_t`
+:math:`dx^t ∧ ∂_z` :math:`+ dx^t ⊗ ∂_z + dx^z ⊗ ∂_t`
+:math:`dx^y ∧ ∂_z` :math:`+ dx^y ⊗ ∂_z - dx^z ⊗ ∂_y`
+:math:`dx^z ∧ ∂_x` :math:`+ dx^z ⊗ ∂_x - dx^x ⊗ ∂_z`
+:math:`dx^x ∧ ∂_y` :math:`+ dx^x ⊗ ∂_y - dx^y ⊗ ∂_x`
+================== =================================
 
 .. rubric:: Contravariant-covariant basis elements
 
-================== ============ =================================
-Basis element      Symmetry     Expression
-================== ============ =================================
-:math:`∂_t ∧ dx^x` Symetric     :math:`+ ∂_t ⊗ dx^x + ∂_x ⊗ dx^t`
-:math:`∂_t ∧ dx^y` Symetric     :math:`+ ∂_t ⊗ dx^y + ∂_y ⊗ dx^t`
-:math:`∂_t ∧ dx^z` Symetric     :math:`+ ∂_t ⊗ dx^z + ∂_z ⊗ dx^t`
-:math:`∂_y ∧ dx^z` Antisymetric :math:`+ ∂_y ⊗ dx^z - ∂_z ⊗ dx^y`
-:math:`∂_z ∧ dx^x` Antisymetric :math:`+ ∂_z ⊗ dx^x - ∂_x ⊗ dx^z`
-:math:`∂_x ∧ dx^y` Antisymetric :math:`+ ∂_x ⊗ dx^y - ∂_y ⊗ dx^x`
-================== ============ =================================
+================== =================================
+Basis element      Expression
+================== =================================
+:math:`∂_t ∧ dx^x` :math:`+ ∂_t ⊗ dx^x + ∂_x ⊗ dx^t`
+:math:`∂_t ∧ dx^y` :math:`+ ∂_t ⊗ dx^y + ∂_y ⊗ dx^t`
+:math:`∂_t ∧ dx^z` :math:`+ ∂_t ⊗ dx^z + ∂_z ⊗ dx^t`
+:math:`∂_y ∧ dx^z` :math:`+ ∂_y ⊗ dx^z - ∂_z ⊗ dx^y`
+:math:`∂_z ∧ dx^x` :math:`+ ∂_z ⊗ dx^x - ∂_x ⊗ dx^z`
+:math:`∂_x ∧ dx^y` :math:`+ ∂_x ⊗ dx^y - ∂_y ⊗ dx^x`
+================== =================================
+
+.. rubric:: Symmetries
+
+Taken together, we get:
+
+============ =================================
+Symmetry     Basis elements
+============ =================================
+Symetric     :math:`dx^t ∧ ∂_x = + ∂_t ∧ dx^x`
+Symetric     :math:`dx^t ∧ ∂_y = + ∂_t ∧ dx^y`
+Symetric     :math:`dx^t ∧ ∂_z = + ∂_t ∧ dx^z`
+Antisymetric :math:`dx^y ∧ ∂_z = - ∂_y ∧ dx^z`
+Antisymetric :math:`dx^z ∧ ∂_x = - ∂_z ∧ dx^x`
+Antisymetric :math:`dx^x ∧ ∂_y = - ∂_x ∧ dx^y`
+============ =================================
 
 .. }}}
 
@@ -830,7 +845,7 @@ The :math:`\mathfrak{so}(1,3)` Lie Algebra of the Lorentz Group
 
 .. {{{
 
-We thus obtain explicit expressions of the `Lorentz group
+We thus obtain triviall obtain the representation of the `Lorentz group
 <https://en.m.wikipedia.org/wiki/Lorentz_group#Lie_algebra>`_.
 
 .. math::
