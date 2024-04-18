@@ -40,9 +40,9 @@ combination of the basis bivectors:
      a \; ∂_t ∧ ∂_x \\
      b \; ∂_t ∧ ∂_y \\
      c \; ∂_t ∧ ∂_z \\
-     d \; ∂_x ∧ ∂_y \\
-     e \; ∂_y ∧ ∂_z \\
-     f \; ∂_z ∧ ∂_x \\
+     d \; ∂_y ∧ ∂_z \\
+     e \; ∂_z ∧ ∂_x \\
+     f \; ∂_x ∧ ∂_y \\
    \}
    \end{equation}
 
@@ -56,10 +56,10 @@ obtain the following representation for a rotation:
    \begin{equation}
    R^{♯♯} = \frac{1}{2}
    \begin{bmatrix}
-                     & + a \; ∂_t ∧ ∂_x & + b \; ∂_t ∧ ∂_y & + c \; ∂_t ∧ ∂_z \\
-     - a \; ∂_ ∧ ∂_t &                  & + d \; ∂_x ∧ ∂_y & - f \; ∂_x ∧ ∂_z \\
-     - b \; ∂_ ∧ ∂_t & - d \; ∂_y ∧ ∂_x &                  & + e \; ∂_y ∧ ∂_z \\
-     - c \; ∂_ ∧ ∂_t & + f \; ∂_z ∧ ∂_x & - e \; ∂_z ∧ ∂_y &                  \\
+                      & + a \; ∂_t ∧ ∂_x & + b \; ∂_t ∧ ∂_y & + c \; ∂_t ∧ ∂_z \\
+     - a \; ∂_x ∧ ∂_t &                  & + f \; ∂_x ∧ ∂_y & - e \; ∂_x ∧ ∂_z \\
+     - b \; ∂_y ∧ ∂_t & - f \; ∂_y ∧ ∂_x &                  & + d \; ∂_y ∧ ∂_z \\
+     - c \; ∂_z ∧ ∂_t & + e \; ∂_z ∧ ∂_x & - d \; ∂_z ∧ ∂_y &                  \\
    \end{bmatrix}
    \end{equation}
 
@@ -112,26 +112,6 @@ The :ref:`electromagnetic field tensor <the_tensor_of_mr_faraday>` :math:`F` is:
      + \Ez & + \By & - \Bx &       \\
    \end{bmatrix}
    \end{equation}
-
-.. rubric:: Rotations in Cartan's formalism trivially match the Lie Algegra of the Lorentz group
-
-Using an implicit basis as is the common custom, we trivially obtain the
-representation of the `Lorentz group
-<https://en.m.wikipedia.org/wiki/Lorentz_group#Lie_algebra>`_:
-
-.. math::
-
-   \begin{align}
-   R^{♭♯}
-   &= \frac{1}{2}
-   \begin{bmatrix}
-         & + a & + b  & + c \\
-     + a &     & + f  & - e \\
-     + b & - f &      & + d \\
-     + c & + e & - d  &     \\
-   \end{bmatrix}
-   \end{align}
-
 
 .. toctree::
    :maxdepth: 2
