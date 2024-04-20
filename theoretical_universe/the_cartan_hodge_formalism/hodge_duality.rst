@@ -154,10 +154,14 @@ Duality in Minkowski space
 
 .. math::
 
-   ⋆ (dt ∧ dx) = - dy ∧ dz \\
-   ⋆ (dt ∧ dy) = - dz ∧ dx \\
-   ⋆ (dt ∧ dz) = - dx ∧ dy \\
-   ⋆ (dx ∧ dy) =   dt ∧ dz \\
-   ⋆ (dz ∧ dx) =   dt ∧ dy \\
-   ⋆ (dy ∧ dz) =   dt ∧ dx
-
+   \begin{equation}
+   \newcommand{\+}{\phantom{+}}
+   \begin{matrix}
+   ⋆ (dt ∧ dx) &=  - dy ∧ dz \\
+   ⋆ (dt ∧ dy) &=  - dz ∧ dx \\
+   ⋆ (dt ∧ dz) &=  - dx ∧ dy \\
+   ⋆ (dy ∧ dz) &= \+ dt ∧ dx \\
+   ⋆ (dz ∧ dx) &= \+ dt ∧ dy \\
+   ⋆ (dx ∧ dy) &= \+ dt ∧ dz \\
+   \end{matrix}
+   \end{equation}

@@ -1,3 +1,5 @@
+.. _deriving_the_faraday_tensor_from_the_1865_maxwell_equations:
+
 Deriving the Faraday Tensor from the 1865 Maxwell Equations
 ===========================================================
 
@@ -175,6 +177,8 @@ Gathering and reordering the terms, a clear structures becomes apparent:
 
 .. }}}
 
+.. _the_ordered_equations:
+
 The Ordered Equations
 ---------------------
 
@@ -184,11 +188,11 @@ Recognizing the emerging structure, we slightly modify the expressions. These
 modifications are not intricate. The objective is merely to present a compact
 and symmetrical form, where all terms are aligned.
 
-To eliminate the factor :math:`1/c`, we introduce :math:`\Ex = E^x / c`,
-:math:`\Ey = E^y / c`, and :math:`\Ez = E^z / c`. Additionally, we define for
-the time dimension :math:`∂_t = \frac{∂}{∂(ct)}`, and for the spatial
-dimensions :math:`∂_x = \frac{∂}{∂ x}`, :math:`∂_y = \frac{∂}{∂y}`, as well as
-:math:`∂_z = \frac{∂}{∂z}`. The equations are now:
+To eliminate the factor :math:`1/c`, we introduce :math:`\tilde{E}^x = E^x /
+c`, :math:`\tilde{E}^y = E^y / c`, and :math:`\tilde{E}^z = E^z / c`.
+Additionally, we define for the time dimension :math:`∂_t = \frac{∂}{∂(ct)}`,
+and for the spatial dimensions :math:`∂_x = \frac{∂}{∂ x}`, :math:`∂_y =
+\frac{∂}{∂y}`, as well as :math:`∂_z = \frac{∂}{∂z}`. The equations are now:
 
 .. rubric:: Inhomogenous equations
 
@@ -256,8 +260,9 @@ equivalent to:
 .. math::
 
    \begin{equation}
+   \newcommand{\E}{\tilde{E}}
    \begin{bmatrix} ∂_t & ∂_x & ∂_y & ∂_z \end{bmatrix}
-   \begin{bmatrix} \newcommand{\E}{\tilde{E}}
+   \begin{bmatrix}
             & + \E^x & +\E^y & + \E^z \\
      + \E^x &        & + B^z & -  B^y \\
      + \E^y & -  B^z &       & +  B^x \\
@@ -270,8 +275,9 @@ equivalent to:
 .. math::
 
    \begin{equation}
+   \newcommand{\E}{\tilde{E}}
    \begin{bmatrix} ∂_t & ∂_x & ∂_y & ∂_z \end{bmatrix}
-   \begin{bmatrix} \newcommand{\E}{\tilde{E}}
+   \begin{bmatrix}
            & +  B^x & +  B^y & +  B^z \\
      + B^x &        & - \E^z & + \E^y \\
      + B^y & + \E^z &        & - \E^x \\

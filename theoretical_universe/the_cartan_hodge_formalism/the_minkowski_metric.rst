@@ -3,6 +3,10 @@
 The Minkowski Metric
 ====================
 
+.. rst-class:: custom-author
+
+   by Stéphane Haussler
+
 We choose the metric signature :math:`(+, -, -, -)`. The only non-zero
 components are the diagonal elements. The doubly contravariant and doubley
 covariant Minkowski metric tensors are often (and unfortunately) represented in

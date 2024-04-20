@@ -22,6 +22,7 @@ This is a personal compilation of papers focusing on mathematical physics.
    differential_operators.rst
    rotations/index.rst
    faraday_tensor/index.rst
+   field_equations/index.rst
    de_guas_theorem.rst
 
 LINKS:
