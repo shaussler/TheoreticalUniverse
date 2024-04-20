@@ -1,3 +1,5 @@
+.. _rotation_in_the_cartan_hodge_formalism:
+
 Rotations in the Cartan-Hodge Formalism
 =======================================
 
@@ -29,8 +31,9 @@ TL;DR Too long; didn't read
 
 .. rubric:: Rotations are bivectors
 
-Any rotation in 3 dimensional or Minkowksi space is represented by a linear
-combination of the basis bivectors:
+Any rotation in 4-dimensional Minkowksi space is represented by a linear
+combination of the 6 independent planes of rotation. These are represented with
+6 basis bivectors:
 
 .. math::
 

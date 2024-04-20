@@ -1,3 +1,5 @@
+.. _rotations_in_minkowski_space:
+
 Rotations in Minkowski Space
 ============================
 

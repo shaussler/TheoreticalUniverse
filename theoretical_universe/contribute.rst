@@ -29,3 +29,10 @@ should you want to correct, modify or add to this serie of articles:
 .. literalinclude:: conf/init.vim
    :language: vim
 
+Dropdown
+--------
+
+.. code::
+
+   .. admonition:: All calculation steps
+      :class: dropdown,toggle-shown

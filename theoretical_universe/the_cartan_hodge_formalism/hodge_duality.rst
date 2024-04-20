@@ -125,6 +125,8 @@ of a mirror, the sign of a positive oriented volume goes to negative. These
 objects are associated to scalars through the hodge dual. This dual scalars
 flip their signs with the image of the oriented volume.
 
+.. _duality_in_minkowski_space:
+
 Duality in Minkowski space
 --------------------------
 

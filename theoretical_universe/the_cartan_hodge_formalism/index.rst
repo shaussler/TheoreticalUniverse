@@ -1,3 +1,5 @@
+.. _the_cartan_hodge_formalism:
+
 The Cartan-Hodge Formalism
 ==========================
 
