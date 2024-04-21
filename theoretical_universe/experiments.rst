@@ -29,18 +29,32 @@ On the Minkowski Metric
 .. math::
 
    \begin{equation}
-   P^{♯♯} =
+   p^{♯♯} =
    \begin{bmatrix}
      + a \; ∂_y ∧ ∂_z \\
      + b \; ∂_z ∧ ∂_x \\
      + c \; ∂_x ∧ ∂_y \\
    \end{bmatrix}
    , \;
-   P^{♭♭} =
+   p^{♭♭} =
    \begin{bmatrix}
      + a \; dy ∧ dz \\
      + b \; dz ∧ dx \\
      + c \; dx ∧ dy \\
+   \end{bmatrix}
+   \end{equation}
+
+.. math::
+
+   \begin{equation}
+   p^{♯♯♯} =
+   \begin{bmatrix}
+     + l \; ∂_x ∧ ∂_y ∧ ∂_z \\
+   \end{bmatrix}
+   , \;
+   p^{♭♭♭} =
+   \begin{bmatrix}
+     + l \; dx ∧ dy ∧ dz \\
    \end{bmatrix}
    \end{equation}
 
@@ -62,32 +76,56 @@ On the Minkowski Metric
    \end{bmatrix}
    \end{equation}
 
-Assume:
-
 .. math::
 
    \begin{equation}
-   \begin{matrix}
-   u = c \; x \\
-   v = c \; y \\
-   w = c \; z \\
-   \end{matrix}
-   \end{equation}
-
-.. math::
-
-   \begin{equation}
-   Q^{♯♯} =
+   q^{♯♯} =
    \begin{bmatrix}
      + d \; ∂_v ∧ ∂_w \\
      + e \; ∂_w ∧ ∂_u \\
      + f \; ∂_u ∧ ∂_v \\
    \end{bmatrix}
-   Q^{♭♭} =
+   q^{♭♭} =
    \begin{bmatrix}
      + d \; dv ∧ dw \\
      + e \; dw ∧ du \\
      + f \; du ∧ dv \\
+   \end{bmatrix}
+   \end{equation}
+
+.. math::
+
+   \begin{equation}
+   q^{♯♯♯} =
+   \begin{bmatrix}
+     + m \; ∂_u ∧ ∂_v ∧ w \\
+   \end{bmatrix}
+   q^{♭♭♭} =
+   \begin{bmatrix}
+     + m \; du ∧ dv ∧ dw \\
+   \end{bmatrix}
+   \end{equation}
+
+
+Assume:
+
+.. math::
+
+   \begin{equation}
+   \begin{bmatrix}
+   u = + c \; x \\
+   v = + c \; y \\
+   w = + c \; z \\
+   \end{bmatrix}
+   , \;
+   \begin{bmatrix}
+   d = - c \; a \\
+   e = - c \; b \\
+   f = - c \; c \\
+   \end{bmatrix}
+   , \;
+   \begin{bmatrix}
+   m = - c \; l \\
    \end{bmatrix}
    \end{equation}
 
