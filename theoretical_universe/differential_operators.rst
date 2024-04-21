@@ -219,52 +219,64 @@ Curl
 
    .. math::
 
+      \begin{equation}
       (⋆(dF^♭))^♯ = ∇^♯ ⨯ F^♯
-
-The full expression of the curl of a vector field is
-
-.. math::
-
-   ∇^♯ ⨯ F^♯ =
-   \begin{bmatrix}
-     (∂_y F^z - ∂ F^y) \; ∂_x \\
-     (∂_z F^x - ∂ F^z) \; ∂_y \\
-     (∂_x F^y - ∂ F^x) \; ∂_z \}
-   \end{bmatrix}
-
-We demonstrate this is also equal to:
+      \end{equation}
 
 The vector field is:
 
 .. math::
 
-   F^\sharp = \{ F^x \px \\ F^y \py \\ F^z \pz \}
-            = F^x \px + F^y \py + F^z \pz
+   \begin{equation}
+   F^♯
+   =
+   \begin{bmatrix}
+     F^x ∂_x \\
+     F^y ∂_y \\
+     F^z ∂_z \\
+   \end{bmatrix}
+   = F^x ∂_x + F^y ∂_y + F^z ∂_z
+   \end{equation}
 
 Flattening the vector field result in:
 
 .. math::
 
-   F^\flat = \{ F^x dx \\ F^y dy \\ F^z dz \}
-           = F^x dx + F^y dy + F^z dz
+   \begin{equation}
+   F^\flat =
+   \begin{bmatrix}
+     F^x dx \\
+     F^y dy \\
+     F^z dz \\
+   \end{bmatrix}
+   = F^x dx + F^y dy + F^z dz
+   \end{equation}
 
-Taking the differential, we have: 
+Taking the differential, we have:
 
 .. math::
 
-   dF^\flat =
-   \{ \partial_x F^x dx \wedge dx & \partial_y F^x dy \wedge dx & \partial_z F^x dz \wedge dx \\
-      \partial_x F^y dx \wedge dy & \partial_y F^y dy \wedge dy & \partial_z F^y dz \wedge dy \\
-      \partial_x F^z dx \wedge dz & \partial_y F^z dy \wedge dy & \partial_z F^z dz \wedge dz \}
+   \begin{equation}
+   dF^♭ =
+   \begin{bmatrix}
+     ∂_x F^x dx ∧ dx & ∂_y F^x dy ∧ dx & ∂_z F^x dz ∧ dx \\
+     ∂_x F^y dx ∧ dy & ∂_y F^y dy ∧ dy & ∂_z F^y dz ∧ dy \\
+     ∂_x F^z dx ∧ dz & ∂_y F^z dy ∧ dy & ∂_z F^z dz ∧ dz \\
+   \end{bmatrix}
+   \end{equation}
 
 Or with more natural row/column convention:
 
 .. math::
 
-   dF^\flat =
-   \{ \partial_x F^x dx \wedge dx & \partial_x F^y dx \wedge dy & \partial_x F^z dx \wedge dz \\
-      \partial_y F^x dy \wedge dx & \partial_y F^y dy \wedge dy & \partial_y F^z dy \wedge dy \\
-      \partial_z F^x dz \wedge dx & \partial_z F^y dz \wedge dy & \partial_z F^z dz \wedge dz \}
+   \begin{equation}
+   dF^♭ =
+   \begin{bmatrix}
+     ∂_x F^x dx ∧ dx & ∂_x F^y dx ∧ dy & ∂_x F^z dx ∧ dz \\
+     ∂_y F^x dy ∧ dx & ∂_y F^y dy ∧ dy & ∂_y F^z dy ∧ dy \\
+     ∂_z F^x dz ∧ dx & ∂_z F^y dz ∧ dy & ∂_z F^z dz ∧ dz \\
+   \end{bmatrix}
+   \end{equation}
 
 Where :math:`dx^i \wedge dx^i = 0`:
 
@@ -334,6 +346,20 @@ We can then sharpen the covector to its vector form:
    \{ (\partial_y F^z - \partial_z F^y) \px \\
       (\partial_z F^x - \partial_x F^z) \py \\
       (\partial_x F^y - \partial_y F^x) \pt \}
+
+Where we have recovered the expression of the curl of a vector field:
+
+.. math::
+
+   \begin{equation}
+   ∇^♯ ⨯ F^♯ =
+   \begin{bmatrix}
+     (∂_y F^z - ∂ F^y) \; ∂_x \\
+     (∂_z F^x - ∂ F^z) \; ∂_y \\
+     (∂_x F^y - ∂ F^x) \; ∂_z \\
+   \end{bmatrix}
+   \end{equation}
+
 
 .. }}}
 

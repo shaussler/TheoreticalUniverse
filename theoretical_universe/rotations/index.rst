@@ -1,7 +1,7 @@
-.. _rotation_in_the_cartan_hodge_formalism:
+.. _rotations_in_differential_form:
 
-Rotations in the Cartan-Hodge Formalism
-=======================================
+Rotations in Differential Form
+==============================
 
 .. rst-class:: custom-author
 
