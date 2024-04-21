@@ -9,6 +9,15 @@ Basis vectors
 
    Under construction
 
+.. _orientation_of_space:
+
+Orientation of space
+--------------------
+
+.. image:: _static/hodge_dual_coordinates.png
+   :align: center
+   :width: 60%
+
 .. The differential of a function is:
 .. 
 .. .. math::

@@ -70,3 +70,4 @@ imap \otimes  ⊗
 imap \times   ⨯
 imap \flat    ♭
 imap \sharp   ♯
+imap \rightarrow →

@@ -12,3 +12,4 @@ Differential Operators in Differential Form
    :caption: Contents:
 
    differential_operators.rst
+   the_exterior_derivative_of_rotations.rst
