@@ -1,3 +1,9 @@
+.. Theoretical Universe (c) by Stéphane Haussler
+.. 
+.. Theoretical Universe is licensed under a Creative Commons Attribution 4.0
+.. International License. You should have received a copy of the license along
+.. with this work. If not, see <https://creativecommons.org/licenses/by/4.0/>.
+
 Of Maxwell Equations and Rotations
 ==================================
 
@@ -10,8 +16,8 @@ Of Maxwell Equations and Rotations
    Under construction
 
 This article investigates the connection between :ref:`rotations
-<rotation_in_the_cartan_hodge_formalism>`, the exterior derivative, and the
-equations of Mr. Maxwell. I utilize :ref:`the Cartan-Hodge's formalism
+<rotations_in_differential_form>`, the exterior derivative, and the equations
+of Mr. Maxwell. I utilize :ref:`the Cartan-Hodge's formalism
 <the_cartan_hodge_formalism>` in Minkowski space-time. I demonstrate that
 applying the exterior derivative to rotations yields the equations governing
 electromagnetism. These experssions reveal Maxwell equations are a twist in the
