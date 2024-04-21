@@ -106,8 +106,17 @@ On the Minkowski Metric
    \end{bmatrix}
    \end{equation}
 
+Assumption
+----------
 
-Assume:
+Rationalizing the assumption that oneself is immobile in ones frame of
+reference, hence only the neighbor is moving. That is:
+
+* :math:`u=u(x)`
+* :math:`v=u(y)`
+* :math:`w=u(z)`
+
+For twisting, this is the same.
 
 .. math::
 
@@ -126,6 +135,38 @@ Assume:
    , \;
    \begin{bmatrix}
    m = - c \; l \\
+   \end{bmatrix}
+   \end{equation}
+
+So now try:
+
+.. math::
+
+   \begin{equation}
+   q^♭ = \begin{bmatrix}
+       c^2 x \; dx \\
+       c^2 y \; dy \\
+       c^2 z \; dz \\
+   \end{bmatrix}
+   \end{equation}
+
+.. math::
+
+   \begin{equation}
+   q^{♭♭} =
+   \begin{bmatrix}
+     - c^3 d \; dy ∧ dz \\
+     - c^3 e \; dz ∧ dx \\
+     - c^3 f \; dx ∧ dy \\
+   \end{bmatrix}
+   \end{equation}
+
+.. math::
+
+   \begin{equation}
+   q^{♭♭♭} =
+   \begin{bmatrix}
+     - c^4 l \; dx ∧ dy ∧ dz \\
    \end{bmatrix}
    \end{equation}
 

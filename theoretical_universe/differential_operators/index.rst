@@ -12,7 +12,7 @@ Differential Operators in Differential Form
 The exterior derivative permits to express and generalize all differential
 operators. In this serie of articles, I systematically translate the
 differential operators in the :ref:`Cartan-Hodge formalism
-<cartan_hodge_formalism>` to obtain:
+<the_cartan_hodge_formalism>` to obtain:
 
 .. rubric:: Gradiant
 

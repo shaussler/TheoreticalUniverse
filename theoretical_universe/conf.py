@@ -21,7 +21,13 @@ extensions = [
     'sphinx_sitemap',
     'sphinx.ext.autosectionlabel',
     'sphinx_togglebutton',
+    # 'sphinx.ext.imgmath',  # This should allow to create images for epub
 ]
+
+# imgmath config
+# --------------
+
+imgmath_image_format = 'svg'  # This should allow to create images for epub
 
 # epub configuration
 # ------------------
@@ -29,6 +35,7 @@ extensions = [
 epub_title = 'Theoretical Universe'
 epub_author = 'Stéphane Haussler'
 epub_language = 'en'
+
 
 # Automated labels labels
 # -----------------------
