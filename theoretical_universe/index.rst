@@ -33,7 +33,7 @@ repository <https://github.com/shaussler/TheoreticalUniverse/>`_.
 
 .. toctree::
    :maxdepth: 1
-   :caption: Contents:
+   :caption: Table of Contents:
 
    licence.rst
    contribute.rst

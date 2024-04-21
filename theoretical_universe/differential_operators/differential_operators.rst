@@ -266,9 +266,9 @@ Flattening the vector field result in:
    \begin{equation}
    F^\flat =
    \begin{bmatrix}
-     F^x dx \\
-     F^y dy \\
-     F^z dz \\
+     F^x \; dx \\
+     F^y \; dy \\
+     F^z \; dz \\
    \end{bmatrix}
    = F^x dx + F^y dy + F^z dz
    \end{equation}
@@ -317,11 +317,10 @@ And :math:`dx^i ∧ dx^j = -dx^j ∧ dx^i`:
 .. math::
 
    \begin{equation}
-   dF^♭ =
-   \begin{bmatrix}
-                       & + ∂_x F^y dx ∧ dy & - ∂_x F^z dz ∧ dx \\
-     - ∂_y F^x dx ∧ dy &                   & + ∂_y F^z dy ∧ dy \\
-     + ∂_z F^x dz ∧ dx & - ∂_z F^y dy ∧ dz &                   \\
+   dF^♭ = \begin{bmatrix}
+                         & + ∂_x F^y dx ∧ dy & - ∂_x F^z dz ∧ dx \\
+       - ∂_y F^x dx ∧ dy &                   & + ∂_y F^z dy ∧ dy \\
+       + ∂_z F^x dz ∧ dx & - ∂_z F^y dy ∧ dz &                   \\
    \end{bmatrix}
    \end{equation}
 
@@ -330,22 +329,20 @@ That we reorder to:
 .. math::
 
    \begin{equation}
-   dF^♭ =
-   \begin{bmatrix}
-     + ∂_y F^z dy ∧ dy - ∂_z F^y dy ∧ dz \\
-     + ∂_z F^x dz ∧ dx - ∂_x F^z dz ∧ dx \\
-     + ∂_x F^y dx ∧ dy - ∂_y F^x dx ∧ dy \\
+   dF^♭ = \begin{bmatrix}
+       + ∂_y F^z dy ∧ dy - ∂_z F^y \; dy ∧ dz \\
+       + ∂_z F^x dz ∧ dx - ∂_x F^z \; dz ∧ dx \\
+       + ∂_x F^y dx ∧ dy - ∂_y F^x \; dx ∧ dy \\
    \end{bmatrix}
    \end{equation}
 
 .. math::
 
    \begin{equation}
-   dF^♭ =
-   \begin{bmatrix}
-     (∂_y F^z - ∂_z F^y) dy ∧ dz \\
-     (∂_z F^x - ∂_x F^z) dz ∧ dx \\
-     (∂_x F^y - ∂_y F^x) dx ∧ dy \\
+   dF^♭ = \begin{bmatrix}
+       (∂_y F^z - ∂_z F^y) \; dy ∧ dz \\
+       (∂_z F^x - ∂_x F^z) \; dz ∧ dx \\
+       (∂_x F^y - ∂_y F^x) \; dx ∧ dy \\
    \end{bmatrix}
    \end{equation}
 
@@ -354,38 +351,44 @@ Where we can now take the star operator:
 .. math::
 
    \begin{equation}
-   ⋆ dF^♭ =
-   \begin{bmatrix}
-     (∂_y F^z - ∂_z F^y) ⋆ dy ∧ dz \\
-     (∂_z F^x - ∂_x F^z) ⋆ dz ∧ dx \\
-     (∂_x F^y - ∂_y F^x) ⋆ dx ∧ dy \\
+   ⋆ dF^♭ = \begin{bmatrix}
+       (∂_y F^z - ∂_z F^y) ⋆ dy ∧ dz \\
+       (∂_z F^x - ∂_x F^z) ⋆ dz ∧ dx \\
+       (∂_x F^y - ∂_y F^x) ⋆ dx ∧ dy \\
    \end{bmatrix}
    \end{equation}
 
 .. math::
 
-   \star dF^\flat =
-   \{ (\partial_y F^z - \partial_z F^y) dx \\
-      (\partial_z F^x - \partial_x F^z) dy \\
-      (\partial_x F^y - \partial_y F^x) dz \}
+   \begin{equation}
+   ⋆ dF^♭ = \begin{bmatrix}
+       (∂_y F^z - ∂_z F^y) \; dx \\
+       (∂_z F^x - ∂_x F^z) \; dy \\
+       (∂_x F^y - ∂_y F^x) \; dz \\
+   \end{bmatrix}
+   \end{equation}
 
 We can then sharpen the covector to its vector form:
 
 .. math::
 
-   (\star dF^\flat)^\sharp
-   =
-   \{ (\partial_y F^z - \partial_z F^y) dx^\sharp \\
-      (\partial_z F^x - \partial_x F^z) dy^\sharp \\
-      (\partial_x F^y - \partial_y F^x) dz^\sharp \}
+   \begin{equation}
+   (⋆ dF^♭)^♯ = \begin{bmatrix}
+       (∂_y F^z - ∂_z F^y) \; dx^♯ \\
+       (∂_z F^x - ∂_x F^z) \; dy^♯ \\
+       (∂_x F^y - ∂_y F^x) \; dz^♯ \\
+   \end{bmatrix}
+   \end{equation}
 
 .. math::
 
-   (\star dF^\flat)^\sharp
-   =
-   \{ (\partial_y F^z - \partial_z F^y) \px \\
-      (\partial_z F^x - \partial_x F^z) \py \\
-      (\partial_x F^y - \partial_y F^x) \pt \}
+   \begin{equation}
+   (⋆ dF^♭)^♯ = \begin{bmatrix}
+       (∂_y F^z - ∂_z F^y) \; ∂_x \\
+       (∂_z F^x - ∂_x F^z) \; ∂_y \\
+       (∂_x F^y - ∂_y F^x) \; ∂_t \\
+   \end{bmatrix}
+   \end{equation}
 
 Where we have recovered the expression of the curl of a vector field:
 
@@ -420,30 +423,26 @@ The differential of a function (zero form) is:
 
 .. math::
 
-   df = \partial_x f dx + \partial_y f dy + \partial_z f dz
+   \begin{equation}
+   df = ∂_x f dx + ∂_y f dy + ∂_z f dz
+   \end{equation}
 
 Taking the Hodge dual:
 
 .. math::
 
-   \star df = \partial_x f dy \wedge dz + \partial_y dz \wedge dx + \partial_z f dx \wedge dy
+   \begin{equation}
+   ⋆ df = ∂_x f dy ∧ dz + ∂_y dz ∧ dx + ∂_z f dx ∧ dy
+   \end{equation}
 
 Taking the differential
 
 .. math::
 
    \begin{align}
-   d \star df &= \frac{\partial^2 f}{\partial x} dx \wedge dy \wedge dz +
-                 \frac{\partial^2 f}{\partial y} dy \wedge dz \wedge dx +
-                 \frac{\partial^2 f}{\partial z} dz \wedge dx \wedge dy \\
-              &= \frac{\partial^2 f}{\partial x} dx \wedge dy \wedge dz +
-                 \frac{\partial^2 f}{\partial y} dx \wedge dy \wedge dz +
-                 \frac{\partial^2 f}{\partial z} dx \wedge dy \wedge dz \\
-              &= (
-                     \frac{\partial^2 f}{\partial x} +
-                     \frac{\partial^2 f}{\partial y} +
-                     \frac{\partial^2 f}{\partial z}
-                 ) dx \wedge dy \wedge dz \\
+   d ⋆ df &= \frac{∂^2 f}{∂ x^2} dx ∧ dy ∧ dz + \frac{∂^2 f}{∂ y^2} dy ∧ dz ∧ dx + \frac{∂^2 f}{∂ z^2} dz ∧ dx ∧ dy \\
+          &= \frac{∂^2 f}{∂ x^2} dx ∧ dy ∧ dz + \frac{∂^2 f}{∂ y^2} dx ∧ dy ∧ dz + \frac{∂^2 f}{∂ z^2} dx ∧ dy ∧ dz \\
+          &= \left( \frac{∂^2 f}{∂ x^2} + \frac{∂^2 f}{∂ y^2} + \frac{∂^2 f}{∂ z^2} \right) \; dx ∧ dy ∧ dz         \\
    \end{align}
 
 Taking the Hodge dual, we tranform volumes to functions and obtain the
@@ -451,11 +450,9 @@ expression for the laplacian:
 
 .. math::
 
-   \star d \star df = (
-       \frac{\partial^2 f}{\partial x} +
-       \frac{\partial^2 f}{\partial y} +
-       \frac{\partial^2 f}{\partial z}
-   )
+   \begin{equation}
+   ⋆ d ⋆ df = \left( \frac{∂^2 f}{∂ x^2} + \frac{∂^2 f}{∂ y^2} + \frac{∂^2 f}{∂ z^2} \right)
+   \end{equation}
 
 .. note::
 

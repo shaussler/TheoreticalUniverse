@@ -531,8 +531,8 @@ The hodge dual is:
 I now calculate the exterior derivative of the Hodge dual of a rotation in
 differential form and we get:
 
-.. topic:: Hodge Dual of the Exterior Derivative of the Hodge Dual of a
-   Rotation
+.. topic:: Exterior Derivative of the Hodge Dual of a Rotation in Differential
+   Form
 
    .. math::
 

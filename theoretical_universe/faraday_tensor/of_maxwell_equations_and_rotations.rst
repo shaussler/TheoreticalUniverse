@@ -13,10 +13,6 @@ Of Maxwell Equations and Rotations
 
    by Stéphane Haussler
 
-.. warning::
-
-   Under construction
-
 This article investigates the connection between :ref:`rotations
 <rotations_in_differential_form>`, the :ref:`exterior derivative of rotations
 <the_exterior_derivative_of_rotations>`, and the equations of Mr. Maxwell. I
@@ -169,8 +165,8 @@ And idenfiy the components of the electric and magnetic fields:
    \end{matrix}
    \end{equation}
 
-We conclude electromagnetism is a clockwise Twist in the Fabric of Spacetime
-and Maxwell equations are:
+We conclude electromagnetism is a twist in the fabric of spacetime. The Maxwell
+equations are:
 
 .. topic:: Inhomogenous Maxwell Equations
 
@@ -178,21 +174,19 @@ and Maxwell equations are:
 
       \begin{equation}
       \newcommand{\E}{\tilde{E}}
-      ⋆ d ⋆
-      \begin{bmatrix}
-        \E^x \; dx ∧ dt \\
-        \E^y \; dy ∧ dt \\
-        \E^z \; dz ∧ dt \\
-         B^x \; dy ∧ dz \\
-         B^y \; dz ∧ dx \\
-         B^z \; dx ∧ dy \\
+      ⋆ d ⋆ \begin{bmatrix}
+          \E^x \; dx ∧ dt \\
+          \E^y \; dy ∧ dt \\
+          \E^z \; dz ∧ dt \\
+           B^x \; dy ∧ dz \\
+           B^y \; dz ∧ dx \\
+           B^z \; dx ∧ dy \\
       \end{bmatrix}
-      =
-      \begin{bmatrix}
-      + μ_0 c ρ \; dt \\
-      - μ_0 J^x \; dx \\
-      - μ_0 J^y \; dy \\
-      - μ_0 J^z \; dz \\
+      = \begin{bmatrix}
+          + μ_0 c ρ \; dt \\
+          - μ_0 J^x \; dx \\
+          - μ_0 J^y \; dy \\
+          - μ_0 J^z \; dz \\
       \end{bmatrix}
       \end{equation}
 
@@ -202,14 +196,13 @@ and Maxwell equations are:
 
       \begin{equation}
       \newcommand{\E}{\tilde{E}}
-      ⋆ d
-      \begin{bmatrix}
-        \E^x \; dx ∧ dt \\
-        \E^y \; dy ∧ dt \\
-        \E^z \; dz ∧ dt \\
-         B^x \; dy ∧ dz \\
-         B^y \; dz ∧ dx \\
-         B^z \; dx ∧ dy \\
+      ⋆ d \begin{bmatrix}
+          \E^x \; dx ∧ dt \\
+          \E^y \; dy ∧ dt \\
+          \E^z \; dz ∧ dt \\
+           B^x \; dy ∧ dz \\
+           B^y \; dz ∧ dx \\
+           B^z \; dx ∧ dy \\
       \end{bmatrix}
       = 0
       \end{equation}
