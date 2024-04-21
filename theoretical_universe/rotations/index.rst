@@ -26,10 +26,7 @@ of the Hodge dual <hodge_duality>`. With respect to wording, I interchangeably
 use the words *oriented surface*, *bivector* as they are :ref:`the same objects
 <pseudo_vectors_and_pseudo_scalars>`, albeit named in different contexts.
 
-TL;DR Too long; didn't read
----------------------------
-
-.. rubric:: Rotations are bivectors
+.. rubric:: Rotations are Linear Combinations of Bivectors
 
 Any rotation in 4-dimensional Minkowksi space is represented by a linear
 combination of the 6 independent planes of rotation. These are represented with
@@ -49,7 +46,7 @@ combination of the 6 independent planes of rotation. These are represented with
    \}
    \end{equation}
 
-.. rubric:: Rotations can be order in row-major matrices
+.. rubric:: Rotation Ordered in Row-major Matrice
 
 Using the antisymetric properties of the wedege product :math:`∧`, we trivially
 obtain the following representation for a rotation:
@@ -66,15 +63,15 @@ obtain the following representation for a rotation:
    \end{bmatrix}
    \end{equation}
 
-.. rubric:: The components of mixed wedge product involving time are symmetric
-   in Minkowski space
+.. rubric:: The Time Components of Mixed Wedge Product in Spacetimme are
+   Symmetric
 
 Expressing the one time contravariant and one time covariant wedge product
 :math:`∧` in term of tensor products :math:`⊗`, we obtain for the basis
 elements:
 
 ============ ================== ================================= ================== =================================
-Symmetry     Basis              Expression                        Basis              Expression
+Symmetry     ♭♯ basis element   Tensor expression                 ♯♭ basis element   Tensor expression
 ============ ================== ================================= ================== =================================
 Symetric     :math:`dx^t ∧ ∂_x` :math:`+ dx^t ⊗ ∂_x + dx^x ⊗ ∂_t` :math:`∂_t ∧ dx^x` :math:`+ ∂_t ⊗ dx^x + ∂_x ⊗ dx^t`
 Symetric     :math:`dx^t ∧ ∂_y` :math:`+ dx^t ⊗ ∂_y + dx^y ⊗ ∂_t` :math:`∂_t ∧ dx^y` :math:`+ ∂_t ⊗ dx^y + ∂_y ⊗ dx^t`
@@ -84,7 +81,7 @@ Antisymetric :math:`dx^y ∧ ∂_z` :math:`+ dx^y ⊗ ∂_z - dx^z ⊗ ∂_y` :m
 Antisymetric :math:`dx^z ∧ ∂_x` :math:`+ dx^z ⊗ ∂_x - dx^x ⊗ ∂_z` :math:`∂_z ∧ dx^x` :math:`+ ∂_z ⊗ dx^x - ∂_x ⊗ dx^z`
 ============ ================== ================================= ================== =================================
 
-.. rubric:: Rotations in Minkowski space match exactly the Faraday tensor
+.. rubric:: Rotations in Spacetime Match Exactly the Form of the Faraday Tensor
 
 The row-major free matrix representation of any rotation in Minkowski space,
 expressed in a mixed form:
@@ -102,7 +99,8 @@ expressed in a mixed form:
    \end{bmatrix}
    \end{align}
 
-The :ref:`electromagnetic field tensor <the_tensor_of_mr_faraday>` :math:`F` is:
+For comparison, the :ref:`electromagnetic field tensor
+<the_tensor_of_mr_faraday>` :math:`F` is:
 
 .. math::
 
@@ -118,6 +116,7 @@ The :ref:`electromagnetic field tensor <the_tensor_of_mr_faraday>` :math:`F` is:
 
 .. toctree::
    :maxdepth: 2
+   :caption: Table of Contents
 
    rotations_in_3_dimensions.rst
    rotations_in_minkowski_space.rst

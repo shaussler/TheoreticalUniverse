@@ -257,8 +257,7 @@ differential form:
 
 After a straightforward calculations, we obtain:
 
-.. topic:: Hodge Dual of the exterior derivative of Rotations in Differential
-   Form
+.. topic:: Exterior Derivative of Rotations in Differential Form
 
    .. math::
 

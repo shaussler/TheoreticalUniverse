@@ -412,7 +412,9 @@ Laplacian
 
    .. math::
 
-      \star d \star d f = \mathbf{\nabla}^2 f
+      \begin{equation}
+      ⋆ d ⋆ d f = \mathbf{∇}^2 f
+      \end{equation}
 
 The differential of a function (zero form) is:
 

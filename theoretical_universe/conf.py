@@ -10,18 +10,25 @@ project = 'TheoreticalUniverse'
 html_title = 'Theoretical Universe'
 copyright = '2024, Stéphane Haussler'
 author = 'Stéphane Haussler'
+version = '0.1'
 
 # General configuration
 # ---------------------
 
 extensions = [
-    #'sphinxcontrib.tikz',
     'sphinx.ext.todo',
     'sphinxcontrib.googleanalytics',
     'sphinx_sitemap',
     'sphinx.ext.autosectionlabel',
     'sphinx_togglebutton',
 ]
+
+# epub configuration
+# ------------------
+
+epub_title = 'Theoretical Universe'
+epub_author = 'Stéphane Haussler'
+epub_language = 'en'
 
 # Automated labels labels
 # -----------------------

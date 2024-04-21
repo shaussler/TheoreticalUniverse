@@ -7,7 +7,7 @@
 Theoretical Universe
 ====================
 
-This series was initially conceived as a set of short, independent articles.
+This serie was initially conceived as a set of short, independent articles.
 However, it has expanded beyond my initial expectation. It all begins with the
 derivation of the electromagnetic field tensor from Maxwell's equations of
 1865, a process straightforward for those with a grasp of vector calculus and
