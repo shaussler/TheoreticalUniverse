@@ -42,8 +42,10 @@ by `brightsideofmaths <https://www.youtube.com/@brightsideofmaths>`_.
 .. topic:: Proposition
 
    .. math::
-   
+  
+      \begin{equation}
       \mathbf{e}_i = \partial_i
+      \end{equation}
 
 .. }}}
 
@@ -56,7 +58,9 @@ The differential applied to the partial derivative results in:
 
 .. math::
 
+   \begin{equation}
    dx^i ∂_j = δ^i_j
+   \end{equation}
 
 This is the definition for a covector, and we conclude that the differential
 operator is a covector.
@@ -65,7 +69,9 @@ operator is a covector.
 
    .. math::
    
+      \begin{equation}
       \mathbf{e}^i = dx^i
+      \end{equation}
 
 .. }}}
 
@@ -78,7 +84,9 @@ Gradient
 
    .. math::
 
-      (df)^{\sharp} = \mathbf{\nabla} f
+      \begin{equation}
+      (df)^{♯} = \mathbf{∇} f
+      \end{equation}
 
 Expand :math:`df`:
 
@@ -124,13 +132,16 @@ Divergence
 
    .. math::
 
-      \star d \star F^\flat = \mathbf{\nabla} \cdot \mathbf{F}
+      \begin{equation}
+      ⋆ d ⋆ F^♭t = \mathbf{∇} \cdot \mathbf{F}
+      \end{equation}
 
 We begin with :math:`F` as a vector :math:`\mathbf{F} = F^\sharp = F^i
 \partial_i` and flatten:
 
 .. math::
 
+   \begin{equation}
    F^♭ = \begin{bmatrix}
            F^x ∂_x \\
            F^y ∂_y \\
@@ -146,40 +157,41 @@ We begin with :math:`F` as a vector :math:`\mathbf{F} = F^\sharp = F^i
            F^y dy \\
            F^z dz \\
          \end{bmatrix}
+   \end{equation}
 
 Apply the :math:`\star` operator:
 
 .. math::
 
-   \star F^\flat
-   = ⋆
-   \begin{bmatrix}
-     F^x dx \\
-     F^y dy \\
-     F^z dz \\
-   \end{bmatrix}
-   =
-   \begin{bmatrix}
-     F^x ⋆ dx \\
-     F^y ⋆ dy \\
-     F^z ⋆ dz \\
-   \end{bmatrix}
-   =
-   \begin{bmatrix}
-     F^x dy ∧ dz \\
-     F^y dz ∧ dx \\
-     F^z dx ∧ dy \\
-   \end{bmatrix}
+
+   \begin{equation}
+   ⋆ F^♭ = ⋆ \begin{bmatrix}
+               F^x dx \\
+               F^y dy \\
+               F^z dz \\
+             \end{bmatrix}
+         = \begin{bmatrix}
+             F^x ⋆ dx \\
+             F^y ⋆ dy \\
+             F^z ⋆ dz \\
+           \end{bmatrix}
+         = \begin{bmatrix}
+             F^x dy ∧ dz \\
+             F^y dz ∧ dx \\
+             F^z dx ∧ dy \\
+           \end{bmatrix}
+   \end{equation}
 
 Apply the :math:`d` operator:
 
 .. math::
 
+   \begin{equation}
    d ⋆ F^♭ = d
    \begin{bmatrix}
-     F^x dy \wedge dz \\
-     F^y dz \wedge dx \\
-     F^z dx \wedge dy \\
+     F^x dy ∧ dz \\
+     F^y dz ∧ dx \\
+     F^z dx ∧ dy \\
    \end{bmatrix}
    =
    \begin{bmatrix}
@@ -193,12 +205,14 @@ Apply the :math:`d` operator:
    ∂_y F^y dx ∧ dy ∧ dz \\
    ∂_z F^z dx ∧ dy ∧ dz \\
    \end{bmatrix}
+   \end{equation}
 
 Which can be brought back to a zero form by applying yet again the Hodge star
 :math:`⋆`:
 
 .. math::
 
+   \begin{equation}
    ⋆ d ⋆ F^♭
    =
    \begin{bmatrix}
@@ -213,6 +227,7 @@ Which can be brought back to a zero form by applying yet again the Hodge star
      ∂_z F^z \mathbf{1} \\
    \end{bmatrix}
    = ∂_x F^x + ∂_y F^y + ∂_z F^z
+   \end{equation}
 
 .. }}}
 
@@ -284,49 +299,68 @@ Or with more natural row/column convention:
    \end{bmatrix}
    \end{equation}
 
-Where :math:`dx^i \wedge dx^i = 0`:
+Where :math:`dx^i ∧ dx^i = 0`:
 
 .. math::
 
-   dF^\flat =
-   \{                             & \partial_x F^y dx \wedge dy & \partial_x F^z dx \wedge dz \\
-      \partial_y F^x dy \wedge dx &                             & \partial_y F^z dy \wedge dy \\
-      \partial_z F^x dz \wedge dx & \partial_z F^y dz \wedge dy &                             \}
+   \begin{equation}
+   dF^♭ =
+   \begin{bmatrix}
+                     & ∂_x F^y dx ∧ dy & ∂_x F^z dx ∧ dz \\
+     ∂_y F^x dy ∧ dx &                 & ∂_y F^z dy ∧ dy \\
+     ∂_z F^x dz ∧ dx & ∂_z F^y dz ∧ dy &                 \\
+   \end{bmatrix}
+   \end{equation}
 
-
-And :math:`dx^i \wedge dx^j = -dx^j \wedge dx^i`:
+And :math:`dx^i ∧ dx^j = -dx^j ∧ dx^i`:
 
 .. math::
 
-   dF^\flat =
-   \{                              & +\partial_x F^y dx \wedge dy & -\partial_x F^z dz \wedge dx \\
-      -\partial_y F^x dx \wedge dy &                              & +\partial_y F^z dy \wedge dy \\
-      +\partial_z F^x dz \wedge dx & -\partial_z F^y dy \wedge dz &                              \}
+   \begin{equation}
+   dF^♭ =
+   \begin{bmatrix}
+                       & + ∂_x F^y dx ∧ dy & - ∂_x F^z dz ∧ dx \\
+     - ∂_y F^x dx ∧ dy &                   & + ∂_y F^z dy ∧ dy \\
+     + ∂_z F^x dz ∧ dx & - ∂_z F^y dy ∧ dz &                   \\
+   \end{bmatrix}
+   \end{equation}
 
 That we reorder to:
 
 .. math::
 
-   dF^\flat =
-   \{ +\partial_y F^z dy \wedge dy - \partial_z F^y dy \wedge dz \\
-      +\partial_z F^x dz \wedge dx - \partial_x F^z dz \wedge dx \\
-      +\partial_x F^y dx \wedge dy - \partial_y F^x dx \wedge dy \}
+   \begin{equation}
+   dF^♭ =
+   \begin{bmatrix}
+     + ∂_y F^z dy ∧ dy - ∂_z F^y dy ∧ dz \\
+     + ∂_z F^x dz ∧ dx - ∂_x F^z dz ∧ dx \\
+     + ∂_x F^y dx ∧ dy - ∂_y F^x dx ∧ dy \\
+   \end{bmatrix}
+   \end{equation}
 
 .. math::
 
-   dF^\flat =
-   \{ (\partial_y F^z - \partial_z F^y) dy \wedge dz \\
-      (\partial_z F^x - \partial_x F^z) dz \wedge dx \\
-      (\partial_x F^y - \partial_y F^x) dx \wedge dy \}
+   \begin{equation}
+   dF^♭ =
+   \begin{bmatrix}
+     (∂_y F^z - ∂_z F^y) dy ∧ dz \\
+     (∂_z F^x - ∂_x F^z) dz ∧ dx \\
+     (∂_x F^y - ∂_y F^x) dx ∧ dy \\
+   \end{bmatrix}
+   \end{equation}
 
 Where we can now take the star operator:
 
 .. math::
 
-   \star dF^\flat =
-   \{ (\partial_y F^z - \partial_z F^y) \star dy \wedge dz \\
-      (\partial_z F^x - \partial_x F^z) \star dz \wedge dx \\
-      (\partial_x F^y - \partial_y F^x) \star dx \wedge dy \}
+   \begin{equation}
+   ⋆ dF^♭ =
+   \begin{bmatrix}
+     (∂_y F^z - ∂_z F^y) ⋆ dy ∧ dz \\
+     (∂_z F^x - ∂_x F^z) ⋆ dz ∧ dx \\
+     (∂_x F^y - ∂_y F^x) ⋆ dx ∧ dy \\
+   \end{bmatrix}
+   \end{equation}
 
 .. math::
 

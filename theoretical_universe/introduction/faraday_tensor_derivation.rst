@@ -126,7 +126,7 @@ the 1865 Maxwell formulation, albeit with modern notation and conventions.
 
    \begin{equation}
    \begin{array}{}
-   \frac{∂}{∂y}B^z - \frac{∂}{∂z} B^y = μ_0 J^x + \frac{1}{c^2} \frac{∂}{∂t} E^x \\
+   \frac{∂}{∂y} B^z - \frac{∂}{∂z} B^y = μ_0 J^x + \frac{1}{c^2} \frac{∂}{∂t} E^x \\
    \frac{∂}{∂z} B^x - \frac{∂}{∂x} B^z = μ_0 J^y + \frac{1}{c^2} \frac{∂}{∂t} E^y \\
    \frac{∂}{∂x} B^y - \frac{∂}{∂y} B^x = μ_0 J^z + \frac{1}{c^2} \frac{∂}{∂t} E^z \\
    \end{array}
@@ -207,7 +207,8 @@ and for the spatial dimensions :math:`∂_x = \frac{∂}{∂ x}`, :math:`∂_y =
 .. math::
 
    \begin{equation}
-   \begin{matrix} \newcommand{\E}{\tilde{E}}
+   \newcommand{\E}{\tilde{E}}
+   \begin{matrix}
                 & + ∂_x \E^x & + ∂_y \E^y & + ∂_z \E^z & = & + μ_0 c ρ \\
      + ∂_t \E^x &            & - ∂_y  B^z & + ∂_z  B^y & = & - μ_0 J^x \\
      + ∂_t \E^y & + ∂_x  B^z &            & - ∂_z  B^x & = & - μ_0 J^y \\
@@ -220,7 +221,8 @@ and for the spatial dimensions :math:`∂_x = \frac{∂}{∂ x}`, :math:`∂_y =
 .. math::
 
    \begin{equation}
-   \begin{matrix} \newcommand{\E}{\tilde{E}}
+   \newcommand{\E}{\tilde{E}}
+   \begin{matrix}
                 & + ∂_x  B^x & + ∂_y  B^y & + ∂_z  B^z & = & 0 \\
      + ∂_t  B^x &            & + ∂_y \E^z & - ∂_z \E^y & = & 0 \\
      + ∂_t  B^y & - ∂_x \E^z &            & + ∂_z \E^x & = & 0 \\
@@ -316,24 +318,28 @@ Faraday tensor, and :math:`G^μ{}_ν` for its dual:
 .. math::
 
    \begin{equation}
-   \{ F^μ{}_ν \} =
-   \begin{bmatrix} \newcommand{\E}{\tilde{E}}
+   \newcommand{\E}{\tilde{E}}
+   \begin{bmatrix} F^μ{}_ν \end{bmatrix} =
+   \begin{bmatrix}
             & + \E^x & + \E^y & + \E^z \\
      + \E^x &        & +  B^z & -  B^y \\
      + \E^y & -  B^z &        & +  B^x \\
-     + \E^z & +  B^y & -  B^x &       \\
+     + \E^z & +  B^y & -  B^x &        \\
    \end{bmatrix}
    \end{equation}
 
 .. math::
 
-   \{ G^μ{}_ν \} =
-   \begin{bmatrix} \newcommand{\E}{\tilde{E}}
+   \begin{equation}
+   \newcommand{\E}{\tilde{E}}
+   \begin{bmatrix} G^μ{}_ν \end{bmatrix} =
+   \begin{bmatrix}
              & +  B^x & +  B^y & +  B^z \\
      +  B^x  &        & - \E^z & + \E^y \\
      +  B^y  & + \E^z &        & - \E^x \\
      +  B^z  & - \E^y & + \E^x &        \\
    \end{bmatrix}
+   \end{equation}
 
 Maxwell's equations are then:
 

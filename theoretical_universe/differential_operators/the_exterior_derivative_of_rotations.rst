@@ -16,25 +16,26 @@ The Exterior Derivative of Rotations
 This article investigates the exterior derivative of :ref:`rotations
 <rotations_in_differential_form>` in Minkowski spacetime, utilizing :ref:`the
 Cartan-Hodge's formalism <the_cartan_hodge_formalism>`. I demonstrate in a
-:ref:`further article <of_maxwell_equations_and_rotations>` that applying the
-exterior derivative to rotations yields the equations governing
-electromagnetism, revealing that Maxwell equations are a twist in the fabric of
-spacetime.
+:ref:`further article <of_maxwell_equations_and_rotations>` that we obtain the
+equations governing electromagnetism, revealing that Maxwell equations are a
+twist in the fabric of spacetime.
 
-The content in this articles might not be wildely known as I have not found my
-observations mentioned anywhere. Feel free to open an issue and I will include
-a reference if you are aware of one. If you find mistakes, don't hesitate to
-open an issue or directly provide corrections by sending a merge request to my
-`Github repository <https://github.com/shaussler/TheoreticalUniverse/>`_.
+Although certainly not new, the content in this articles might not be wildely
+known as I have not found my observations mentioned anywhere. Feel free to open
+an issue and I will include a reference if you are aware of one. If you find
+mistakes, don't hesitate to open an issue or directly provide corrections by
+sending a merge request to my `Github repository
+<https://github.com/shaussler/TheoreticalUniverse/>`_.
 
-Rotations in Space-Time
------------------------
+Rotations in Spacetime
+----------------------
 
 .. {{{
 
-A rotation in space-time is a linear combination of the 6 independent basis
-planes. More details can be found in my articly on :ref:`rotations in Minkowski
-Space <rotations_in_minkowski_space>`.
+Rotations in spacetime is can occur in 6 independent planes. Any rotation can
+be described as a linar combination or basis rotations in each plane. More
+details can be found in my articly on :ref:`rotations in Minkowski Space
+<rotations_in_minkowski_space>`.
 
 .. topic:: Rotation in Minkowski Space
 
@@ -59,8 +60,10 @@ Rotations in Differential Forms
 
 .. {{{
 
-For the rotations in terms of basis bivectors, we determine the associated
-differential form. In other words, we fully flatten the rotation:
+The rotations above are doubley contravariant and given in terms of vectors
+corresponding to our physical understanding of space (and time). By taking the
+dual of the rotation bivectors, we derive the associated differential form. In
+other words, we fully flatten the rotation:
 
 .. math::
 
@@ -68,7 +71,8 @@ differential form. In other words, we fully flatten the rotation:
    R^{♭♭} = (R^{♯♯})^{♭♭}
    \end{equation}
 
-and obtain:
+We obtain the doubly covariant form which will be employed our exploration of
+the exterior derivative.
 
 .. topic:: Rotation in Differential Form
 
@@ -538,10 +542,10 @@ differential form and we get:
       ⋆d(⋆R^{♭♭})
       =
       \begin{bmatrix}
-      (   \_    & - ∂_x a & - ∂_y b & - ∂_z c ) ⋆ dt \\
-      ( - ∂_t a &   \_    & + ∂_y f & - ∂_z e ) ⋆ dx \\
-      ( - ∂_t b & - ∂_x f &   \_    & + ∂_z d ) ⋆ dy \\
-      ( - ∂_t c & + ∂_x e & - ∂_y d &   \_    ) ⋆ dz \\
+      (   \_    & - ∂_x a & - ∂_y b & - ∂_z c ) dt \\
+      ( - ∂_t a &   \_    & + ∂_y f & - ∂_z e ) dx \\
+      ( - ∂_t b & - ∂_x f &   \_    & + ∂_z d ) dy \\
+      ( - ∂_t c & + ∂_x e & - ∂_y d &   \_    ) dz \\
       \end{bmatrix}
       \end{equation}
 
@@ -692,10 +696,10 @@ differential form and we get:
       ⋆d(⋆R^{♭♭})
       =
       \begin{bmatrix}
-      (   \_    & + ∂_x a & + ∂_y b & + ∂_z c ) ⋆ - dt \\
-      ( + ∂_t a &   \_    & - ∂_y f & + ∂_z e ) ⋆ - dx \\
-      ( + ∂_t b & + ∂_x f &   \_    & - ∂_z d ) ⋆ - dy \\
-      ( + ∂_t c & - ∂_x e & + ∂_y d &   \_    ) ⋆ - dz \\
+      (   \_    & + ∂_x a & + ∂_y b & + ∂_z c ) - dt \\
+      ( + ∂_t a &   \_    & - ∂_y f & + ∂_z e ) - dx \\
+      ( + ∂_t b & + ∂_x f &   \_    & - ∂_z d ) - dy \\
+      ( + ∂_t c & - ∂_x e & + ∂_y d &   \_    ) - dz \\
       \end{bmatrix}
       \end{equation}
 
@@ -708,10 +712,10 @@ differential form and we get:
       ⋆d(⋆R^{♭♭})
       =
       \begin{bmatrix}
-      (   \_    & - ∂_x a & - ∂_y b & - ∂_z c ) ⋆ dt \\
-      ( - ∂_t a &   \_    & + ∂_y f & - ∂_z e ) ⋆ dx \\
-      ( - ∂_t b & - ∂_x f &   \_    & + ∂_z d ) ⋆ dy \\
-      ( - ∂_t c & + ∂_x e & - ∂_y d &   \_    ) ⋆ dz \\
+      (   \_    & - ∂_x a & - ∂_y b & - ∂_z c ) dt \\
+      ( - ∂_t a &   \_    & + ∂_y f & - ∂_z e ) dx \\
+      ( - ∂_t b & - ∂_x f &   \_    & + ∂_z d ) dy \\
+      ( - ∂_t c & + ∂_x e & - ∂_y d &   \_    ) dz \\
       \end{bmatrix}
       \end{equation}
 
