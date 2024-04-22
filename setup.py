@@ -10,6 +10,6 @@ setup(
     install_requires=[
         'sphinx', 'myst_parser', 'furo', 'sphinx-book-theme',
         'sphinxcontrib-googleanalytics', 'sphinx_sitemap',
-        'sphinx-togglebutton', 'sphinx-reredirect',
+        'sphinx-togglebutton', 'sphinx-reredirects',
     ],
 )
