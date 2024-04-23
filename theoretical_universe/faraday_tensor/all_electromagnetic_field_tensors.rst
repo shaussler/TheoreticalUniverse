@@ -1,4 +1,4 @@
-All Electormagnetic Field Tensors
+All Electromagnetic Field Tensors
 =================================
 
 .. rst-class:: custom-author

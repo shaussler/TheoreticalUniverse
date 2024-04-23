@@ -1,115 +1,103 @@
 .. Theoretical Universe (c) by Stéphane Haussler
-..
-.. Theoretical Universe is licensed under a Creative Commons Attribution 4.0
-.. International License. You should have received a copy of the license along
-.. with this work. If not, see <https://creativecommons.org/licenses/by/4.0/>.
 
-.. _the_exterior_derivative_of_rotations:
+.. Theoretical Universe is licensed under a Creative Commons Attribution 4.0 International License. You should have
+.. received a copy of the license along with this work. If not, see <https://creativecommons.org/licenses/by/4.0/>.
 
-The Exterior Derivative of Rotations
-====================================
+.. _the_exterior_derivative_of_rotations_in_spacetime:
+
+The Exterior Derivative of Rotations in Spacetime
+=================================================
 
 .. rst-class:: custom-author
 
    by Stéphane Haussler
 
-This article investigates the exterior derivative of :ref:`rotations
-<rotations_in_differential_form>` in Minkowski spacetime, utilizing :ref:`the
-Cartan-Hodge's formalism <the_cartan_hodge_formalism>`. I demonstrate in a
-:ref:`further article <of_maxwell_equations_and_rotations>` that we obtain the
-equations governing electromagnetism, revealing that Maxwell equations are a
-twist in the fabric of spacetime.
+This article investigates the exterior derivative of :ref:`rotations expressed in differential form
+<rotations_in_minkowski_space>`. We employ :ref:`the Cartan-Hodge formalism <the_cartan_hodge_formalism>` within the
+context of Minkowski spacetime. Following the systematic calculations presented in this article, I demonstrate in
+:ref:`Of Maxwell Equations and Rotations <of_maxwell_equations_and_rotations>` that a twist in spacetime leads to the
+equations governing electromagnetism.
 
-Although certainly not new, the content in this articles might not be wildely
-known as I have not found my observations mentioned anywhere. Feel free to open
-an issue and I will include a reference if you are aware of one. If you find
-mistakes, don't hesitate to open an issue or directly provide corrections by
-sending a merge request to my `Github repository
+While the concept might not be entirely novel, I have not yet encountered some of my observations elsewhere. If you are
+aware of relevant references, feel free to open an issue and I will include them. I you identify any errors, you can
+either open an issue, or directly submit corrections via a merge request to my GitHub repository: `Theoretical Universe
 <https://github.com/shaussler/TheoreticalUniverse/>`_.
 
-Rotations in Spacetime
-----------------------
+Spacetime Rotations
+-------------------
 
 .. {{{
 
-Rotations in spacetime is can occur in 6 independent planes. Any rotation can
-be described as a linar combination or basis rotations in each plane. More
-details can be found in my articly on :ref:`rotations in Minkowski Space
-<rotations_in_minkowski_space>`.
+Rotations in spacetime can occur in six independent planes. Any rotation can be decomposed into a linear combination of
+basis rotations within each plane:
 
 .. topic:: Rotation in Minkowski Space
 
    .. math::
 
       \begin{equation}
-      R^{♯♯}
-      = \begin{bmatrix}
-        a \; ∂_t ∧ ∂_x \\
-        b \; ∂_t ∧ ∂_y \\
-        c \; ∂_t ∧ ∂_z \\
-        d \; ∂_y ∧ ∂_z \\
-        e \; ∂_z ∧ ∂_x \\
-        f \; ∂_x ∧ ∂_y \\
-      \end{bmatrix}
+          R^{♯♯} = \begin{bmatrix}
+              a \; ∂_t ∧ ∂_x \\
+              b \; ∂_t ∧ ∂_y \\
+              c \; ∂_t ∧ ∂_z \\
+              d \; ∂_y ∧ ∂_z \\
+              e \; ∂_z ∧ ∂_x \\
+              f \; ∂_x ∧ ∂_y \\
+          \end{bmatrix}
       \end{equation}
 
 .. }}}
 
-Rotations in Differential Forms
--------------------------------
+Spacetime Rotations in Differential Forms
+-----------------------------------------
 
 .. {{{
 
-The rotations above are doubley contravariant and given in terms of vectors
-corresponding to our physical understanding of space (and time). By taking the
-dual of the rotation bivectors, we derive the associated differential form. In
-other words, we fully flatten the rotation:
-
-.. math::
-
-   \begin{equation}
-   R^{♭♭} = (R^{♯♯})^{♭♭}
-   \end{equation}
-
-We obtain the doubly covariant form which will be employed our exploration of
-the exterior derivative.
+The generic rotation above is doubly contravariant, given in terms of the wedge product :math:`∧` of vectors
+corresponding to our physical understanding of space (and time). By fully flattening, we obtain the associated doubly
+covariant differential 2-form representative of the rotation:
 
 .. topic:: Rotation in Differential Form
 
    .. math::
 
-      \begin{equation}
-      R^{♭♭}
-      =
-      \begin{bmatrix}
-        -a \; dt ∧ dx \\
-        -b \; dt ∧ dy \\
-        -c \; dt ∧ dz \\
-        +d \; dy ∧ dz \\
-        +e \; dz ∧ dx \\
-        +f \; dx ∧ dy \\
-      \end{bmatrix}
+      \begin{equation} \newcommand{\+}{\phantom{+}}
+          R^{♭♭} = \begin{bmatrix}
+               - a \; dt ∧ dx \\
+               - b \; dt ∧ dy \\
+               - c \; dt ∧ dz \\
+              \+ d \; dy ∧ dz \\
+              \+ e \; dz ∧ dx \\
+              \+ f \; dx ∧ dy \\
+          \end{bmatrix}
       \end{equation}
 
-.. admonition:: All calculation steps
+.. admonition:: All Calculation Steps
    :class: dropdown
 
    .. {{{
+
+   Apply the flat operator :math:`flat` to each components of the doubly contravariant rotation tensor :math:`R^{♯♯}`:
+
+   .. math::
+
+      \begin{equation}
+          R^{♭♭} = (R^{♯♯})^{♭♭}
+      \end{equation}
 
    Expand the full expression and distribute the flat operators :math:`♭`:
 
    .. math::
 
       \begin{equation}
-      R^{♭♭} =
-      \begin{bmatrix}
-        a \; ∂_t^♭ ∧ ∂_x^♭ \\
-        b \; ∂_t^♭ ∧ ∂_y^♭ \\
-        c \; ∂_t^♭ ∧ ∂_z^♭ \\
-        d \; ∂_y^♭ ∧ ∂_z^♭ \\
-        e \; ∂_z^♭ ∧ ∂_x^♭ \\
-        f \; ∂_x^♭ ∧ ∂_y^♭ \\
-      \end{bmatrix}
+          R^{♭♭} = \begin{bmatrix}
+              a \; ∂_t^♭ ∧ ∂_x^♭ \\
+              b \; ∂_t^♭ ∧ ∂_y^♭ \\
+              c \; ∂_t^♭ ∧ ∂_z^♭ \\
+              d \; ∂_y^♭ ∧ ∂_z^♭ \\
+              e \; ∂_z^♭ ∧ ∂_x^♭ \\
+              f \; ∂_x^♭ ∧ ∂_y^♭ \\
+          \end{bmatrix}
       \end{equation}
 
    Expand with the Minkowski metric:
@@ -117,64 +105,58 @@ the exterior derivative.
    .. math::
 
       \begin{equation}
-      R^{♭♭}
-      =
-      \begin{bmatrix}
-        a \; η_{αt} \; dx^α ∧ η_{βx} \; dx^β \\
-        b \; η_{αt} \; dx^α ∧ η_{βy} \; dx^β \\
-        c \; η_{αt} \; dx^α ∧ η_{βz} \; dx^β \\
-        d \; η_{αy} \; dx^α ∧ η_{βz} \; dx^β \\
-        e \; η_{αz} \; dx^α ∧ η_{βx} \; dx^β \\
-        f \; η_{αx} \; dx^α ∧ η_{βy} \; dx^β \\
-      \end{bmatrix}
+          R^{♭♭} = \begin{bmatrix}
+              a \; η_{αt} \; dx^α ∧ η_{βx} \; dx^β \\
+              b \; η_{αt} \; dx^α ∧ η_{βy} \; dx^β \\
+              c \; η_{αt} \; dx^α ∧ η_{βz} \; dx^β \\
+              d \; η_{αy} \; dx^α ∧ η_{βz} \; dx^β \\
+              e \; η_{αz} \; dx^α ∧ η_{βx} \; dx^β \\
+              f \; η_{αx} \; dx^α ∧ η_{βy} \; dx^β \\
+          \end{bmatrix}
       \end{equation}
 
    The wedge product :math:`∧` is bilinear and the Minkowski metric components
-   :math:`η`'s can be taken in front:
+   :math:`η`'s can be taken in front of the expression:
 
    .. math::
 
       \begin{equation}
-      R^{♭♭}
-      =
-      \begin{bmatrix}
-        a \; η_{αt} η_{βx} \; dx^α ∧ dx^β \\
-        b \; η_{αt} η_{βy} \; dx^α ∧ dx^β \\
-        c \; η_{αt} η_{βz} \; dx^α ∧ dx^β \\
-        d \; η_{αy} η_{βz} \; dx^α ∧ dx^β \\
-        e \; η_{αz} η_{βx} \; dx^α ∧ dx^β \\
-        f \; η_{αx} η_{βy} \; dx^α ∧ dx^β \\
-      \end{bmatrix}
+          R^{♭♭} = \begin{bmatrix}
+              a \; η_{αt} η_{βx} \; dx^α ∧ dx^β \\
+              b \; η_{αt} η_{βy} \; dx^α ∧ dx^β \\
+              c \; η_{αt} η_{βz} \; dx^α ∧ dx^β \\
+              d \; η_{αy} η_{βz} \; dx^α ∧ dx^β \\
+              e \; η_{αz} η_{βx} \; dx^α ∧ dx^β \\
+              f \; η_{αx} η_{βy} \; dx^α ∧ dx^β \\
+          \end{bmatrix}
       \end{equation}
 
-   Identify the non-zero components of the Minkowski metric :math:`η`:
+   Identify the non-zero components of the Minkowski metric :math:`η_{μν}`:
 
    .. math::
 
       \begin{equation}
-      R^{♭♭}
-      =
-      \begin{bmatrix}
-        a \; η_{tt} η_{xx} \; dx^t ∧ dx^x \\
-        b \; η_{tt} η_{yy} \; dx^t ∧ dx^y \\
-        c \; η_{tt} η_{zz} \; dx^t ∧ dx^z \\
-        d \; η_{yy} η_{zz} \; dx^y ∧ dx^z \\
-        e \; η_{zz} η_{xx} \; dx^z ∧ dx^x \\
-        f \; η_{xx} η_{yy} \; dx^x ∧ dx^y \\
-      \end{bmatrix}
+          R^{♭♭} = \begin{bmatrix}
+              a \; η_{tt} η_{xx} \; dx^t ∧ dx^x \\
+              b \; η_{tt} η_{yy} \; dx^t ∧ dx^y \\
+              c \; η_{tt} η_{zz} \; dx^t ∧ dx^z \\
+              d \; η_{yy} η_{zz} \; dx^y ∧ dx^z \\
+              e \; η_{zz} η_{xx} \; dx^z ∧ dx^x \\
+              f \; η_{xx} η_{yy} \; dx^x ∧ dx^y \\
+          \end{bmatrix}
       \end{equation}
 
-   We use the definition of the :math:`dx^μ` symbols:
+   For readability, replace the :math:`dx^μ` symbols by their explicit expressions:
 
    .. math::
 
       \begin{equation}
-      \begin{matrix}
-        dx^t = dt \\
-        dx^x = dx \\
-        dx^y = dy \\
-        dx^z = dz \\
-      \end{matrix}
+          \begin{matrix}
+              dx^t = dt \\
+              dx^x = dx \\
+              dx^y = dy \\
+              dx^z = dz \\
+          \end{matrix}
       \end{equation}
 
    We obtain:
@@ -182,33 +164,113 @@ the exterior derivative.
    .. math::
 
       \begin{equation}
-      R^{♭♭}
-      =
-      \begin{bmatrix}
-        a \; η_{tt} η_{xx} \; dt ∧ dx \\
-        b \; η_{tt} η_{yy} \; dt ∧ dy \\
-        c \; η_{tt} η_{zz} \; dt ∧ dz \\
-        d \; η_{yy} η_{zz} \; dy ∧ dz \\
-        e \; η_{zz} η_{xx} \; dz ∧ dx \\
-        f \; η_{xx} η_{yy} \; dx ∧ dy \\
-      \end{bmatrix}
+          R^{♭♭} = \begin{bmatrix}
+              a \; η_{tt} η_{xx} \; dt ∧ dx \\
+              b \; η_{tt} η_{yy} \; dt ∧ dy \\
+              c \; η_{tt} η_{zz} \; dt ∧ dz \\
+              d \; η_{yy} η_{zz} \; dy ∧ dz \\
+              e \; η_{zz} η_{xx} \; dz ∧ dx \\
+              f \; η_{xx} η_{yy} \; dx ∧ dy \\
+          \end{bmatrix}
       \end{equation}
 
-   Apply the numerical values of the :math:`η` components:
+   Apply the numerical values of the Minkowski metric components :math:`η_{μν}`:
 
    .. math::
 
       \begin{equation}
-      R^{♭♭}
-      =
-      \begin{bmatrix}
-        a \; (+1) (-1) \; dt ∧ dx \\
-        b \; (+1) (-1) \; dt ∧ dy \\
-        c \; (+1) (-1) \; dt ∧ dz \\
-        d \; (-1) (-1) \; dy ∧ dz \\
-        e \; (-1) (-1) \; dz ∧ dx \\
-        f \; (-1) (-1) \; dx ∧ dy \\
-      \end{bmatrix}
+          R^{♭♭} = \begin{bmatrix}
+              a \; (+1) (-1) \; dt ∧ dx \\
+              b \; (+1) (-1) \; dt ∧ dy \\
+              c \; (+1) (-1) \; dt ∧ dz \\
+              d \; (-1) (-1) \; dy ∧ dz \\
+              e \; (-1) (-1) \; dz ∧ dx \\
+              f \; (-1) (-1) \; dx ∧ dy \\
+          \end{bmatrix}
+      \end{equation}
+
+   Conclude:
+
+   .. math::
+
+      \begin{equation} \newcommand{\+}{\phantom{+}}
+          R^{♭♭} = \begin{bmatrix}
+                 - a \; dt ∧ dx \\
+                 - b \; dt ∧ dy \\
+                 - c \; dt ∧ dz \\
+                \+ d \; dy ∧ dz \\
+                \+ e \; dz ∧ dx \\
+                \+ f \; dx ∧ dy \\
+          \end{bmatrix}
+      \end{equation}
+
+   .. }}}
+
+The hodge dual is:
+
+.. topic:: Hodge Dual of a Rotation in Differential Form
+
+   .. math::
+
+      \begin{equation}
+          ⋆ R^{♭♭} = \begin{bmatrix}
+              a \; dy ∧ dz \\
+              b \; dz ∧ dx \\
+              c \; dx ∧ dy \\
+              d \; dt ∧ dx \\
+              e \; dt ∧ dy \\
+              f \; dt ∧ dz \\
+          \end{bmatrix}
+      \end{equation}
+
+.. admonition:: All Calculation Steps
+   :class: dropdown
+
+   .. {{{
+
+   Take the hodge dual:
+
+   .. math::
+
+      \begin{equation} \newcommand{\+}{\phantom+}
+          ⋆ R^{♭♭} = ⋆ \begin{bmatrix}
+               - a \; dt ∧ dx \\
+               - b \; dt ∧ dy \\
+               - c \; dt ∧ dz \\
+              \+ d \; dy ∧ dz \\
+              \+ e \; dz ∧ dx \\
+              \+ f \; dx ∧ dy \\
+          \end{bmatrix}
+      \end{equation}
+
+   Distribute the Hodge operator :math:`⋆`:
+
+   .. math::
+
+      \begin{equation} \newcommand{\+}{\phantom+}
+          ⋆ R^{♭♭} = \begin{bmatrix}
+               - a \; ⋆ (dt ∧ dx) \\
+               - b \; ⋆ (dt ∧ dy) \\
+               - c \; ⋆ (dt ∧ dz) \\
+              \+ d \; ⋆ (dy ∧ dz) \\
+              \+ e \; ⋆ (dz ∧ dx) \\
+              \+ f \; ⋆ (dx ∧ dy) \\
+          \end{bmatrix}
+      \end{equation}
+
+   Apply :ref:`their Hodge dual to each basis element <duality_in_minkowski_space>`:
+
+   .. math::
+
+      \begin{equation} \newcommand{\+}{\phantom+}
+          ⋆ R^{♭♭} = \begin{bmatrix}
+               - a \; (-1) \; dy ∧ dz \\
+               - b \; (-1) \; dz ∧ dx \\
+               - c \; (-1) \; dx ∧ dy \\
+              \+ d \; (+1) \; dt ∧ dx \\
+              \+ e \; (+1) \; dt ∧ dy \\
+              \+ f \; (+1) \; dt ∧ dz \\
+          \end{bmatrix}
       \end{equation}
 
    Conclude:
@@ -216,60 +278,40 @@ the exterior derivative.
    .. math::
 
       \begin{equation}
-      R^{♭♭}
-      =
-      \begin{bmatrix}
-        -a \; dt ∧ dx \\
-        -b \; dt ∧ dy \\
-        -c \; dt ∧ dz \\
-        +d \; dy ∧ dz \\
-        +e \; dz ∧ dx \\
-        +f \; dx ∧ dy \\
-      \end{bmatrix}
+          ⋆ R^{♭♭} = \begin{bmatrix}
+              a \; dy ∧ dz \\
+              b \; dz ∧ dx \\
+              c \; dx ∧ dy \\
+              d \; dt ∧ dx \\
+              e \; dt ∧ dy \\
+              f \; dt ∧ dz \\
+          \end{bmatrix}
       \end{equation}
 
    .. }}}
 
 .. }}}
 
-The Exterior Derivative of a Rotation
--------------------------------------
+Exterior Derivative of a Rotation
+---------------------------------
 
 .. {{{
 
-I now apply the exterior derivative operator :math:`d` to the rotation in
-differential form:
+Applying in sequence the exterior derivative operator :math:`d` and the Hodge dual operator :math:`⋆` to the doubly
+covariant rotation :math:`⋆ d R^{♭♭}`, we obtain:
 
-.. math::
-
-   \begin{equation}
-   dR^{♭♭} =
-   d
-   \begin{bmatrix}
-     -a \; dt ∧ dx \\
-     -b \; dt ∧ dy \\
-     -c \; dt ∧ dz \\
-     +d \; dy ∧ dz \\
-     +e \; dz ∧ dx \\
-     +f \; dx ∧ dy \\
-   \end{bmatrix}
-   \end{equation}
-
-After a straightforward calculations, we obtain:
-
-.. topic:: Exterior Derivative of Rotations in Differential Form
+.. topic:: Hodge Dual of the Exterior Derivative of Rotations in Differential Form
 
    .. math::
 
       \begin{equation}\
-      \newcommand{\phan}{\phantom{∂_m m}} % Phantom for alignment
-      ⋆(dR^{♭♭}) =
-      \begin{bmatrix}
-        ( \; \phan   & - ∂_x d & - ∂_y e & - ∂_z f \; ) \; dt \\
-        ( \; - ∂_t d & \phan   & - ∂_y c & + ∂_z b \; ) \; dx \\
-        ( \; - ∂_t e & + ∂_x c & \phan   & - ∂_z a \; ) \; dy \\
-        ( \; - ∂_t f & - ∂_x b & + ∂_y a & \phan   \; ) \; dz \\
-      \end{bmatrix}
+          \newcommand{\_}{\phantom{∂_m m}}
+          ⋆ (dR^{♭♭}) = \begin{bmatrix}
+              ( \_      & - ∂_x d & - ∂_y e & - ∂_z f \, ) \; dt \\
+              ( - ∂_t d & \_      & - ∂_y c & + ∂_z b \, ) \; dx \\
+              ( - ∂_t e & + ∂_x c & \_      & - ∂_z a \, ) \; dy \\
+              ( - ∂_t f & - ∂_x b & + ∂_y a & \_      \, ) \; dz \\
+          \end{bmatrix}
       \end{equation}
 
 .. admonition:: All calculation steps
@@ -282,15 +324,14 @@ After a straightforward calculations, we obtain:
    .. math::
 
       \begin{equation}
-      dR^{♭♭} =
-      \begin{bmatrix}
-        d(-a \; dt ∧ dx) \\
-        d(-b \; dt ∧ dy) \\
-        d(-c \; dt ∧ dz) \\
-        d(+d \; dy ∧ dz) \\
-        d(+e \; dz ∧ dx) \\
-        d(+f \; dx ∧ dy) \\
-      \end{bmatrix}
+          dR^{♭♭} = \begin{bmatrix}
+              d( - a \; dt ∧ dx ) \\
+              d( - b \; dt ∧ dy ) \\
+              d( - c \; dt ∧ dz ) \\
+              d( + d \; dy ∧ dz ) \\
+              d( + e \; dz ∧ dx ) \\
+              d( + f \; dx ∧ dy ) \\
+          \end{bmatrix}
       \end{equation}
 
    Apply the exterior derivative:
@@ -299,33 +340,31 @@ After a straightforward calculations, we obtain:
 
       {\scriptsize
       \begin{equation}
-      dR^{♭♭} =
-      \begin{bmatrix}
-                               &                          &  ∂_y (-a) \; dy ∧ dt ∧ dx & ∂_z (-a) \; dz ∧ dt ∧ dx \\
-                               & ∂_x (-b) \; dx ∧ dt ∧ dy &                           & ∂_z (-b) \; dz ∧ dt ∧ dy \\
-                               & ∂_x (-c) \; dx ∧ dt ∧ dz &  ∂_y (-c) \; dy ∧ dt ∧ dz &                          \\
-      ∂_t (+d) \; dt ∧ dy ∧ dz & ∂_x (+d) \; dx ∧ dy ∧ dz &                           &                          \\
-      ∂_t (+e) \; dt ∧ dz ∧ dx &                          &  ∂_y (+e) \; dy ∧ dz ∧ dx &                          \\
-      ∂_t (+f) \; dt ∧ dx ∧ dy &                          &                           & ∂_z (+f) \; dz ∧ dx ∧ dy \\
-      \end{bmatrix}
+          dR^{♭♭} = \begin{bmatrix}
+                                      &                         & ∂_y (-a)\; dy ∧ dt ∧ dx & ∂_z (-a)\; dz ∧ dt ∧ dx \\
+                                      & ∂_x (-b)\; dx ∧ dt ∧ dy &                         & ∂_z (-b)\; dz ∧ dt ∧ dy \\
+                                      & ∂_x (-c)\; dx ∧ dt ∧ dz & ∂_y (-c)\; dy ∧ dt ∧ dz &                         \\
+              ∂_t (+d)\; dt ∧ dy ∧ dz & ∂_x (+d)\; dx ∧ dy ∧ dz &                         &                         \\
+              ∂_t (+e)\; dt ∧ dz ∧ dx &                         & ∂_y (+e)\; dy ∧ dz ∧ dx &                         \\
+              ∂_t (+f)\; dt ∧ dx ∧ dy &                         &                         & ∂_z (+f)\; dz ∧ dx ∧ dy \\
+          \end{bmatrix}
       \end{equation}
       }
 
-   Reorder the wedge products:
+   Reorder the wedge products :math:`dx^μ \wedge dx^{ν} ∧ dx^{ξ}`. The sign is flipped for every odd permutations:
 
    .. math::
 
       {\scriptsize
       \begin{equation}
-      dR^{♭♭} =
-      \begin{bmatrix}
-                                 &                             & ∂_y (-a)(+1)\; dt ∧ dx ∧ dy & ∂_z (-a)(-1)\; dt ∧ dz ∧ dx \\
-                                 & ∂_x (-b)(-1)\; dt ∧ dx ∧ dy &                             & ∂_z (-b)(+1)\; dt ∧ dy ∧ dz \\
-                                 & ∂_x (-c)(+1)\; dt ∧ dz ∧ dx & ∂_y (-c)(-1)\; dt ∧ dy ∧ dz &                             \\
-      ∂_t (+d)(+1)\; dt ∧ dy∧ dz & ∂_x (+d)(+1)\; dx ∧ dy ∧ dz &                             &                             \\
-      ∂_t (+e)(+1)\; dt ∧ dz∧ dx &                             & ∂_y (+e)(+1)\; dx ∧ dy ∧ dz &                             \\
-      ∂_t (+f)(+1)\; dt ∧ dx∧ dy &                             &                             & ∂_z (+f)(+1)\; dx ∧ dy ∧ dz \\
-      \end{bmatrix}
+          dR^{♭♭} = \begin{bmatrix}
+                                       &                         & ∂_y (-a)(+1)\; dt∧dx∧dy & ∂_z (-a)(-1)\; dt∧dz∧dx \\
+                                       & ∂_x (-b)(-1)\; dt∧dx∧dy &                         & ∂_z (-b)(+1)\; dt∧dy∧dz \\
+                                       & ∂_x (-c)(+1)\; dt∧dz∧dx & ∂_y (-c)(-1)\; dt∧dy∧dz &                         \\
+              ∂_t (+d)(+1)\; dt∧dy∧ dz & ∂_x (+d)(+1)\; dx∧dy∧dz &                         &                         \\
+              ∂_t (+e)(+1)\; dt∧dz∧ dx &                         & ∂_y (+e)(+1)\; dx∧dy∧dz &                         \\
+              ∂_t (+f)(+1)\; dt∧dx∧ dy &                         &                         & ∂_z (+f)(+1)\; dx∧dy∧dz \\
+          \end{bmatrix}
       \end{equation}
       }
 
@@ -335,44 +374,38 @@ After a straightforward calculations, we obtain:
 
       {\scriptsize
       \begin{equation}
-      dR^{♭♭} =
-      \begin{bmatrix}
-                             &                         & ∂_y (-a)\; dt ∧ dx ∧ dy & ∂_z (+a)\; dt ∧ dz ∧ dx \\
-                             & ∂_x (+b)\; dt ∧ dx ∧ dy &                         & ∂_z (-b)\; dt ∧ dy ∧ dz \\
-                             & ∂_x (-c)\; dt ∧ dz ∧ dx & ∂_y (+c)\; dt ∧ dy ∧ dz &                         \\
-      ∂_t (+d)\; dt ∧ dy∧ dz & ∂_x (+d)\; dx ∧ dy ∧ dz &                         &                         \\
-      ∂_t (+e)\; dt ∧ dz∧ dx &                         & ∂_y (+e)\; dx ∧ dy ∧ dz &                         \\
-      ∂_t (+f)\; dt ∧ dx∧ dy &                         &                         & ∂_z (+f)\; dx ∧ dy ∧ dz \\
-      \end{bmatrix}
+          dR^{♭♭} = \begin{bmatrix}
+                                     &                         & ∂_y (-a)\; dt ∧ dx ∧ dy & ∂_z (+a)\; dt ∧ dz ∧ dx \\
+                                     & ∂_x (+b)\; dt ∧ dx ∧ dy &                         & ∂_z (-b)\; dt ∧ dy ∧ dz \\
+                                     & ∂_x (-c)\; dt ∧ dz ∧ dx & ∂_y (+c)\; dt ∧ dy ∧ dz &                         \\
+              ∂_t (+d)\; dt ∧ dy∧ dz & ∂_x (+d)\; dx ∧ dy ∧ dz &                         &                         \\
+              ∂_t (+e)\; dt ∧ dz∧ dx &                         & ∂_y (+e)\; dx ∧ dy ∧ dz &                         \\
+              ∂_t (+f)\; dt ∧ dx∧ dy &                         &                         & ∂_z (+f)\; dx ∧ dy ∧ dz \\
+          \end{bmatrix}
       \end{equation}
       }
 
-   We gather the terms and reorder into columns choosing:
+   Organize the terms into a single column, although the specific ordering is not mandatory. However, for clarity, the
+   free matrix representation allows us to arrange the terms in a logical manner. Note that:
 
-   * The first row with wedge products that do not contain :math:`dt`
-   * The second row with wedge products that do not contain :math:`dx`
-   * The third row with wedge products that do not contain :math:`dy`
-   * The fourth row with wedge products that do not contain :math:`dz`
-
-   The ordering is not strictly necessary, but merely :ref:`the free matrix
-   representation <the_free_matrix_representation>` permits to gather the term
-   in a manner that makes sense:
+   * The first row excludes the terms with :math:`dt`
+   * The second row excludes the terms with :math:`dx`
+   * The third row excludes the terms with :math:`dy`
+   * The fourth row excludes the terms with :math:`dz`
 
    .. math::
 
       \begin{equation}
-      \newcommand{\phan}{\phantom{∂_m m}} % Phantom for alignment
-      dR =
-      \begin{bmatrix}
-        ( \; \phan   & + ∂_x d & + ∂_y e & + ∂_z f \; ) \; dx^x ∧ dx^y ∧ dx^z \\
-        ( \; + ∂_t d & \phan   & + ∂_y c & - ∂_z b \; ) \; dx^t ∧ dx^y ∧ dx^z \\
-        ( \; + ∂_t e & - ∂_x c &   \phan & + ∂_z a \; ) \; dx^t ∧ dx^z ∧ dx^x \\
-        ( \; + ∂_t f & + ∂_x b & - ∂_y a & \phan   \; ) \; dx^t ∧ dx^x ∧ dx^y \\
-      \end{bmatrix}
+          \newcommand{\phan}{\phantom{∂_m m}}
+          dR = \begin{bmatrix}
+              ( \; \phan   & + ∂_x d & + ∂_y e & + ∂_z f \; ) \; dx^x ∧ dx^y ∧ dx^z \\
+              ( \; + ∂_t d & \phan   & + ∂_y c & - ∂_z b \; ) \; dx^t ∧ dx^y ∧ dx^z \\
+              ( \; + ∂_t e & - ∂_x c &   \phan & + ∂_z a \; ) \; dx^t ∧ dx^z ∧ dx^x \\
+              ( \; + ∂_t f & + ∂_x b & - ∂_y a & \phan   \; ) \; dx^t ∧ dx^x ∧ dx^y \\
+          \end{bmatrix}
       \end{equation}
 
-   We can take the :ref:`Hodge dual <duality_in_minkowski_space>` to transform
-   3-forms to 1-forms:
+   Apply the Hodge dual operation :math:`⋆` to convert 3-forms to 1-forms:
 
    .. math::
 
@@ -387,168 +420,46 @@ After a straightforward calculations, we obtain:
       \end{bmatrix}
       \end{equation}
 
-   We finally obtain our final expression:
+   Conclude:
 
    .. math::
 
-      \begin{equation}\
-      \newcommand{\phan}{\phantom{∂_m m}} % Phantom for alignment
-      ⋆(dR) =
-      \begin{bmatrix}
-        ( \; \phan   & - ∂_x d & - ∂_y e & - ∂_z f \; ) \; dt \\
-        ( \; - ∂_t d & \phan   & - ∂_y c & + ∂_z b \; ) \; dx \\
-        ( \; - ∂_t e & + ∂_x c & \phan   & - ∂_z a \; ) \; dy \\
-        ( \; - ∂_t f & - ∂_x b & + ∂_y a & \phan   \; ) \; dz \\
-      \end{bmatrix}
+      \begin{equation}
+          \newcommand{\phan}{\phantom{∂_m m}} % Phantom for alignment
+          ⋆ (dR) = \begin{bmatrix}
+              ( \; \phan   & - ∂_x d & - ∂_y e & - ∂_z f \; ) \; dt \\
+              ( \; - ∂_t d & \phan   & - ∂_y c & + ∂_z b \; ) \; dx \\
+              ( \; - ∂_t e & + ∂_x c & \phan   & - ∂_z a \; ) \; dy \\
+              ( \; - ∂_t f & - ∂_x b & + ∂_y a & \phan   \; ) \; dz \\
+          \end{bmatrix}
       \end{equation}
 
    .. }}}
 
 .. }}}
 
-The Exterior Derivative of the Hodge Dual of a Rotation
--------------------------------------------------------
+Exterior Derivative of the Hodge Dual of a Rotation
+---------------------------------------------------
 
 .. {{{
 
-I have shown above that a rotation in differential form is
-expressed as:
+Applying in sequence the Hodge dual operator :math:`⋆` and the exterior derivative operator :math:`d` to the doubly
+covariant rotation :math:`d ⋆ R^{♭♭}`, we obtain:
 
-.. math::
-
-   \begin{equation}
-   \newcommand{\+}{\phantom+}
-   R^{♭♭}
-   =
-   \begin{bmatrix}
-     -a \; dt ∧ dx \\
-     -b \; dt ∧ dy \\
-     -c \; dt ∧ dz \\
-    \+d \; dy ∧ dz \\
-    \+e \; dz ∧ dx \\
-    \+f \; dx ∧ dy \\
-   \end{bmatrix}
-   \end{equation}
-
-The hodge dual is:
-
-.. topic:: Hodge Dual of a Rotation in Differential Form:
+.. topic:: Exterior Derivative of the Hodge Dual of Rotations in Differential Form
 
    .. math::
 
-      \begin{equation}
-      ⋆R^{♭♭}
-      =
-      \begin{bmatrix}
-        a \; dy ∧ dz \\
-        b \; dz ∧ dx \\
-        c \; dx ∧ dy \\
-        d \; dt ∧ dx \\
-        e \; dt ∧ dy \\
-        f \; dt ∧ dz \\
-      \end{bmatrix}
+      \begin{equation} \newcommand{\_}{\phantom{∂_m m}}
+          d( ⋆ R^{♭♭} ) = \begin{bmatrix}
+              ( \_      &+ ∂_x a & + ∂_y b & + ∂_z c \, ) \; dx ∧ dy ∧ dz \\
+              ( + ∂_t a &\_      & - ∂_y f & + ∂_z e \, ) \; dt ∧ dy ∧ dz \\
+              ( + ∂_t b &+ ∂_x f & \_      & - ∂_z d \, ) \; dt ∧ dz ∧ dx \\
+              ( + ∂_t c &- ∂_x e & + ∂_y d & \_      \, ) \; dt ∧ dx ∧ dy \\
+          \end{bmatrix}
       \end{equation}
 
-.. admonition:: All calculation steps
-   :class: dropdown
-
-   .. {{{
-
-   Take the hodge dual
-
-   .. math::
-
-      \begin{equation}
-      \newcommand{\+}{\phantom+}
-      ⋆R^{♭♭}
-      = ⋆
-      \begin{bmatrix}
-        - a \; dt ∧ dx \\
-        - b \; dt ∧ dy \\
-        - c \; dt ∧ dz \\
-       \+ d \; dy ∧ dz \\
-       \+ e \; dz ∧ dx \\
-       \+ f \; dx ∧ dy \\
-      \end{bmatrix}
-      \end{equation}
-
-   Distribute the Hodge operator :math:`⋆`
-
-   .. math::
-
-      \begin{equation}
-      \newcommand{\+}{\phantom+}
-      ⋆R^{♭♭}
-      =
-      \begin{bmatrix}
-        - a \; ⋆ (dt ∧ dx) \\
-        - b \; ⋆ (dt ∧ dy) \\
-        - c \; ⋆ (dt ∧ dz) \\
-       \+ d \; ⋆ (dy ∧ dz) \\
-       \+ e \; ⋆ (dz ∧ dx) \\
-       \+ f \; ⋆ (dx ∧ dy) \\
-      \end{bmatrix}
-      \end{equation}
-
-   Apply :ref:`the Hodge dual to the basis elements
-   <duality_in_minkowski_space>`:
-
-   .. math::
-
-      \begin{equation}
-      \newcommand{\+}{\phantom+}
-      ⋆R^{♭♭}
-      =
-      \begin{bmatrix}
-         - a \; (-1) \; dy ∧ dz \\
-         - b \; (-1) \; dz ∧ dx \\
-         - c \; (-1) \; dx ∧ dy \\
-        \+ d \; (+1) \; dt ∧ dx \\
-        \+ e \; (+1) \; dt ∧ dy \\
-        \+ f \; (+1) \; dt ∧ dz \\
-      \end{bmatrix}
-      \end{equation}
-
-   Conclude:
-
-   .. math::
-
-      \begin{equation}
-      ⋆R^{♭♭}
-      =
-      \begin{bmatrix}
-        a \; dy ∧ dz \\
-        b \; dz ∧ dx \\
-        c \; dx ∧ dy \\
-        d \; dt ∧ dx \\
-        e \; dt ∧ dy \\
-        f \; dt ∧ dz \\
-      \end{bmatrix}
-      \end{equation}
-
-   .. }}}
-
-I now calculate the exterior derivative of the Hodge dual of a rotation in
-differential form and we get:
-
-.. topic:: Exterior Derivative of the Hodge Dual of a Rotation in Differential
-   Form
-
-   .. math::
-
-      \begin{equation}
-      \newcommand{\_}{\phantom{∂_m m}} % Phantom for alignment
-      ⋆d(⋆R^{♭♭})
-      =
-      \begin{bmatrix}
-      (   \_    & - ∂_x a & - ∂_y b & - ∂_z c ) dt \\
-      ( - ∂_t a &   \_    & + ∂_y f & - ∂_z e ) dx \\
-      ( - ∂_t b & - ∂_x f &   \_    & + ∂_z d ) dy \\
-      ( - ∂_t c & + ∂_x e & - ∂_y d &   \_    ) dz \\
-      \end{bmatrix}
-      \end{equation}
-
-.. admonition:: All calculation steps
+.. admonition:: All Calculation Steps
    :class: dropdown
 
    .. {{{
@@ -644,78 +555,23 @@ differential form and we get:
       \end{equation}
       }
 
-   We gather the terms and reorder into columns choosing:
+   Organize the terms into a single column, although the specific ordering is not mandatory. However, for clarity, the
+   free matrix representation allows us to arrange the terms in a logical manner. Note that:
 
-   * The first row with wedge products that do not contain :math:`dt`
-   * The second row with wedge products that do not contain :math:`dx`
-   * The third row with wedge products that do not contain :math:`dy`
-   * The fourth row with wedge products that do not contain :math:`dz`
-
-   The ordering is not strictly necessary, but merely :ref:`the free matrix
-   representation <the_free_matrix_representation>` permits to gather the term
-   in a manner that makes sense:
+   * The first row excludes the terms with :math:`dt`
+   * The second row excludes the terms with :math:`dx`
+   * The third row excludes the terms with :math:`dy`
+   * The fourth row excludes the terms with :math:`dz`
 
    .. math::
 
-      \begin{equation}
-      \newcommand{\_}{\phantom{∂_m m}} % Phantom for alignment
-      d(⋆R^{♭♭})
-      =
-      \begin{bmatrix}
-      (   \_    + ∂_x a + ∂_y b + ∂_z c ) dx ∧ dy ∧ dz \\
-      ( + ∂_t a   \_    - ∂_y f + ∂_z e ) dt ∧ dy ∧ dz \\
-      ( + ∂_t b + ∂_x f   \_    - ∂_z d ) dt ∧ dz ∧ dx \\
-      ( + ∂_t c - ∂_x e + ∂_y d   \_    ) dt ∧ dx ∧ dy \\
-      \end{bmatrix}
-      \end{equation}
-
-   We can take the :ref:`Hodge dual <duality_in_minkowski_space>` to transform
-   the 3-forms to 1-forms:
-
-   .. math::
-
-      \begin{equation}
-      \newcommand{\_}{\phantom{∂_m m}} % Phantom for alignment
-      ⋆d(⋆R^{♭♭})
-      =
-      \begin{bmatrix}
-      (   \_    & + ∂_x a & + ∂_y b & + ∂_z c ) ⋆ dx ∧ dy ∧ dz \\
-      ( + ∂_t a &   \_    & - ∂_y f & + ∂_z e ) ⋆ dt ∧ dy ∧ dz \\
-      ( + ∂_t b & + ∂_x f &   \_    & - ∂_z d ) ⋆ dt ∧ dz ∧ dx \\
-      ( + ∂_t c & - ∂_x e & + ∂_y d &   \_    ) ⋆ dt ∧ dx ∧ dy \\
-      \end{bmatrix}
-      \end{equation}
-
-   Apply:
-
-   .. math::
-
-      \begin{equation}
-      \newcommand{\_}{\phantom{∂_m m}} % Phantom for alignment
-      ⋆d(⋆R^{♭♭})
-      =
-      \begin{bmatrix}
-      (   \_    & + ∂_x a & + ∂_y b & + ∂_z c ) - dt \\
-      ( + ∂_t a &   \_    & - ∂_y f & + ∂_z e ) - dx \\
-      ( + ∂_t b & + ∂_x f &   \_    & - ∂_z d ) - dy \\
-      ( + ∂_t c & - ∂_x e & + ∂_y d &   \_    ) - dz \\
-      \end{bmatrix}
-      \end{equation}
-
-   Conclude:
-
-   .. math::
-
-      \begin{equation}
-      \newcommand{\_}{\phantom{∂_m m}} % Phantom for alignment
-      ⋆d(⋆R^{♭♭})
-      =
-      \begin{bmatrix}
-      (   \_    & - ∂_x a & - ∂_y b & - ∂_z c ) dt \\
-      ( - ∂_t a &   \_    & + ∂_y f & - ∂_z e ) dx \\
-      ( - ∂_t b & - ∂_x f &   \_    & + ∂_z d ) dy \\
-      ( - ∂_t c & + ∂_x e & - ∂_y d &   \_    ) dz \\
-      \end{bmatrix}
+      \begin{equation} \newcommand{\_}{\phantom{∂_m m}}
+          d( ⋆ R^{♭♭} ) = \begin{bmatrix}
+              ( \_      &+ ∂_x a & + ∂_y b & + ∂_z c \, ) \; dx ∧ dy ∧ dz \\
+              ( + ∂_t a &\_      & - ∂_y f & + ∂_z e \, ) \; dt ∧ dy ∧ dz \\
+              ( + ∂_t b &+ ∂_x f & \_      & - ∂_z d \, ) \; dt ∧ dz ∧ dx \\
+              ( + ∂_t c &- ∂_x e & + ∂_y d & \_      \, ) \; dt ∧ dx ∧ dy \\
+          \end{bmatrix}
       \end{equation}
 
    .. }}}

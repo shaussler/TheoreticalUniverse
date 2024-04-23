@@ -8,6 +8,9 @@ syntax on
 " Set color scheme to 'desert'
 colorscheme desert
 
+" Set textwidth to 120 characters
+set textwidth=120
+
 " Tab settings
 set tabstop=2
 set softtabstop=0

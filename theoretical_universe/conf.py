@@ -22,9 +22,12 @@ extensions = [
     'sphinx.ext.autosectionlabel',
     'sphinx_togglebutton',
     'sphinx_reredirects',
-    # 'sphinx.ext.imgmath',  # This should allow to create images for epub
 ]
 
+source_encoding = 'utf-8'
+
+# Redirects
+# ---------
 
 redirects = {
     "faraday_tensor_derivation": "introduction/faraday_tensor_derivation.html",
