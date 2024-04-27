@@ -16,75 +16,75 @@ Differential Operators in Differential Form
    differential_operators.rst
    the_exterior_derivative_of_rotations.rst
 
-.. rubric:: Differential Operators
+Summary
+-------
 
-The exterior derivative permits to express and generalize all differential operators. In this serie of articles, I
-systematically translate the differential operators in the :ref:`Cartan-Hodge formalism <the_cartan_hodge_formalism>` to
-obtain:
+Differential Operators
+----------------------
 
-.. topic:: Gradiant
+The exterior derivative permits to express and generalize all differential
+operators. In this serie of articles, I systematically translate the
+differential operators in the :ref:`Cartan-Hodge formalism
+<the_cartan_hodge_formalism>` to obtain:
 
-   .. math::
-   
-      \begin{equation}
-          (df)^{♯} = \mathbf{∇} f
-      \end{equation}
+.. rubric:: Gradiant
 
-.. topic:: Divergence
+.. math::
 
-   .. math::
-   
-      \begin{equation}
-          ⋆ d ⋆ F^♭ = \mathbf{∇} \cdot \mathbf{F}
-      \end{equation}
+   (df)^{♯} = \mathbf{∇} f
 
-.. topic:: Curl
+.. rubric:: Divergence
 
-   .. math::
-   
-      \begin{equation}
-          (⋆(dF^♭))^♯ = ∇^♯ ⨯ F^♯
-      \end{equation}
+.. math::
 
-.. topic:: Laplacian
+   ⋆ d ⋆ F^♭ = \mathbf{∇} \cdot \mathbf{F}
 
-   .. math::
-   
-      \begin{equation}
-          ⋆ d ⋆ d f = \mathbf{∇}^2 f
-      \end{equation}
+.. rubric:: Curl
 
-.. rubric:: The Exterior Derivative of Rotations in Spacetime
+.. math::
 
-I investigate the exterior derivative of :ref:`rotations expressed in differential form <rotations_in_minkowski_space>`,
-employing :ref:`the Cartan-Hodge formalism <the_cartan_hodge_formalism>` within the context of Minkowski spacetime. I
-demonstrate in :ref:`Of Maxwell Equations and Rotations <of_maxwell_equations_and_rotations>` that a twist in spacetime
-leads to the equations governing electromagnetism. Readers well versed in the formulation of electromagnetism may
-already recognize the Faraday tensor, its dual, and the Maxwell equations.
+   (⋆(dF^♭))^♯ = ∇^♯ ⨯ F^♯
 
-.. topic:: Hodge Dual of the Exterior Derivative of Rotations in Differential Form
+.. rubric:: Laplacian
 
-   .. math::
-   
-      \begin{equation}\
-          \newcommand{\_}{\phantom{∂_m m}}
-          ⋆ (dR^{♭♭}) = \begin{bmatrix}
-              ( \_      & - ∂_x d & - ∂_y e & - ∂_z f \, ) \; dt \\
-              ( - ∂_t d & \_      & - ∂_y c & + ∂_z b \, ) \; dx \\
-              ( - ∂_t e & + ∂_x c & \_      & - ∂_z a \, ) \; dy \\
-              ( - ∂_t f & - ∂_x b & + ∂_y a & \_      \, ) \; dz \\
-          \end{bmatrix}
-      \end{equation}
+.. math::
 
-.. topic:: Exterior Derivative of the Hodge Dual of Rotations in Differential Form
+   ⋆ d ⋆ d f = \mathbf{∇}^2 f
 
-   .. math::
-   
-      \begin{equation} \newcommand{\_}{\phantom{∂_m m}}
-          d( ⋆ R^{♭♭} ) = \begin{bmatrix}
-              ( \_      &+ ∂_x a & + ∂_y b & + ∂_z c \, ) \; dx ∧ dy ∧ dz \\
-              ( + ∂_t a &\_      & - ∂_y f & + ∂_z e \, ) \; dt ∧ dy ∧ dz \\
-              ( + ∂_t b &+ ∂_x f & \_      & - ∂_z d \, ) \; dt ∧ dz ∧ dx \\
-              ( + ∂_t c &- ∂_x e & + ∂_y d & \_      \, ) \; dt ∧ dx ∧ dy \\
-          \end{bmatrix}
-      \end{equation}
+The Exterior Derivative of Rotations in Spacetime
+-------------------------------------------------
+
+I investigate the exterior derivative of :ref:`rotations expressed in
+differential form <rotations_in_minkowski_space>`, employing :ref:`the
+Cartan-Hodge formalism <the_cartan_hodge_formalism>` within the context of
+Minkowski spacetime. I demonstrate in :ref:`Of Maxwell Equations and Rotations
+<of_maxwell_equations_and_rotations>` that a twist in spacetime leads to the
+equations governing electromagnetism. Readers well versed in the formulation of
+electromagnetism may already recognize the Faraday tensor, its dual, and the
+Maxwell equations.
+
+.. rubric:: Hodge Dual of the Exterior Derivative of Rotations in Differential Form
+
+.. math::
+
+   \newcommand{\_}{\phantom{∂_m m}}
+
+   ⋆ (dR^{♭♭}) = \begin{bmatrix}
+       ( \_      & - ∂_x d & - ∂_y e & - ∂_z f \, ) \; dt \\
+       ( - ∂_t d & \_      & - ∂_y c & + ∂_z b \, ) \; dx \\
+       ( - ∂_t e & + ∂_x c & \_      & - ∂_z a \, ) \; dy \\
+       ( - ∂_t f & - ∂_x b & + ∂_y a & \_      \, ) \; dz \\
+   \end{bmatrix}
+
+.. rubric:: Exterior Derivative of the Hodge Dual of Rotations in Differential Form
+
+.. math::
+
+   \newcommand{\_}{\phantom{∂_m m}}
+
+   d( ⋆ R^{♭♭} ) = \begin{bmatrix}
+       ( \_      &+ ∂_x a & + ∂_y b & + ∂_z c \, ) \; dx ∧ dy ∧ dz \\
+       ( + ∂_t a &\_      & - ∂_y f & + ∂_z e \, ) \; dt ∧ dy ∧ dz \\
+       ( + ∂_t b &+ ∂_x f & \_      & - ∂_z d \, ) \; dt ∧ dz ∧ dx \\
+       ( + ∂_t c &- ∂_x e & + ∂_y d & \_      \, ) \; dt ∧ dx ∧ dy \\
+   \end{bmatrix}

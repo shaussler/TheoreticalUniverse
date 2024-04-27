@@ -5,6 +5,7 @@ The Electromagnetic Field Tensor
    :maxdepth: 1
    :caption: Table of Contents:
 
+   faraday_tensor_derivation.rst
    of_maxwell_equations_and_rotations.rst
    all_electromagnetic_field_tensors.rst
 

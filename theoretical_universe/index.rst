@@ -37,12 +37,10 @@ repository <https://github.com/shaussler/TheoreticalUniverse/>`_.
 
    licence.rst
    contribute.rst
-   introduction/index.rst
    the_cartan_hodge_formalism/index.rst
    rotations/index.rst
    differential_operators/index.rst
    faraday_tensor/index.rst
-   field_equations/index.rst
    miscellaneous/index.rst
 
 LINKS:
