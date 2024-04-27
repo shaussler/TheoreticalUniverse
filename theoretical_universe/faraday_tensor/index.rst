@@ -22,14 +22,9 @@ electromagnetism is a twist in spacetime:
 .. math::
 
    \newcommand{\E}{\tilde{E}}
-
    (d ⋆ - ⋆ d ) \begin{bmatrix}
-       \E^x \; dx ∧ dt \\
-       \E^y \; dy ∧ dt \\
-       \E^z \; dz ∧ dt \\
-        B^x \; dy ∧ dz \\
-        B^y \; dz ∧ dx \\
-        B^z \; dx ∧ dy \\
+       \E^x \; dx ∧ dt \\ \E^y \; dy ∧ dt \\ \E^z \; dz ∧ dt \\
+        B^x \; dy ∧ dz \\  B^y \; dz ∧ dx \\  B^z \; dx ∧ dy \\
    \end{bmatrix}
    = \begin{bmatrix}
        + μ_0 c ρ \; dx ∧ dy ∧ dz\\
@@ -42,9 +37,7 @@ This can be written in a compact form as:
 
 .. rubric:: Compact Maxwell Equations in Differential Form
 
-.. math::
-
-   (d ⋆ - ⋆ d) \; F^{♭♭} = J^\{♭♭♭}
+.. math:: (d ⋆ - ⋆ d) \; F^{♭♭} = J^{♭♭♭}
 
 I like to think the :ref:`Cartan-Hodge formalism <the_cartan_hodge_formalism>`
 offers a more refined, precise, and intuitive description and interpretation of
