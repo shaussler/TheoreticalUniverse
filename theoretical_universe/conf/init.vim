@@ -8,8 +8,8 @@ syntax on
 " Set color scheme to 'desert'
 colorscheme desert
 
-" Set textwidth to 120 characters
-set textwidth=120
+" Set textwidth to 100 characters
+set textwidth=80
 
 " Tab settings
 set tabstop=2
@@ -65,10 +65,12 @@ imap \phi     φ
 imap \chi     χ
 imap \psi     ψ
 imap \omega   ω
+imap \Lambda  Λ
 imap \nabla   ∇
 imap \partial ∂
 imap \star    ⋆
 imap \wedge   ∧
+imap \vee     ∨
 imap \otimes  ⊗
 imap \times   ⨯
 imap \flat    ♭
