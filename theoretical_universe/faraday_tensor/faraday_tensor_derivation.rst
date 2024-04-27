@@ -1,10 +1,8 @@
 .. Theoretical Universe (c) by Stéphane Haussler
 .. 
 .. Theoretical Universe is licensed under a Creative Commons Attribution 4.0
-.. International License.
-.. 
-.. You should have received a copy of the license along with this
-.. work. If not, see <https://creativecommons.org/licenses/by/4.0/>.
+.. International License. You should have received a copy of the license along
+.. with this work. If not, see <https://creativecommons.org/licenses/by/4.0/>.
 
 .. _deriving_the_faraday_tensor_from_the_1865_maxwell_equations:
 
@@ -46,13 +44,12 @@ The Vector Formulation of Mr. Heaviside
 Mr. Maxwell's groundbreaking work in 1865, `A Dynamical Theory of the
 Electromagnetic Field
 <https://en.m.wikipedia.org/wiki/A_Dynamical_Theory_of_the_Electromagnetic_Field>`_
-(`pdf <https://www.jstor.org/stable/108892>`_) , utilized differential
-expressions rather than the modern vector formulation proposed by Mr.
-Heaviside. Indeed in 1865, the concept of vectors had not yet been introduced.
+(`pdf <https://www.jstor.org/stable/108892>`_), utilized differential
+expressions rather than the modern vector formulation proposed by Mr. Heaviside.
+Indeed in 1865, the concept of vectors had not yet been introduced.
 
 `Mr. Heaviside proposed both the concept of vectors as well as the vector form
-of the Maxwell equations.
-<https://youtu.be/M12CJIuX8D4?si=nuOUEFmRu5Jx4jHJ>`_
+of the Maxwell equations. <https://youtu.be/M12CJIuX8D4?si=nuOUEFmRu5Jx4jHJ>`_
 This is the most widespread formulation today. I therefore start from there and
 unpack into a form closer in spirit to the 1865 equation. The equations consist
 of two inhomogenous (Gauss's law and Ampère'circuital law) and two homogenous
@@ -70,17 +67,13 @@ regarded as established experimental facts.
 
 .. math::
 
-   \begin{equation}
    \vect{∇} \cdot \vect{E}  = ρ / ε_0
-   \end{equation}
 
 .. rubric:: Ampère's circuital
 
 .. math::
 
-   \begin{equation}
    \vect{∇} \times \vect{B} = μ_0 \vect{J} + \frac{1}{c^2} \frac{∂}{∂t} \vect{E}
-   \end{equation}
 
 .. rubric:: Gauss's law for magnetism
 

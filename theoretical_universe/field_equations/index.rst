@@ -5,8 +5,8 @@ The Field Equations
 
    by Stéphane Haussler
 
-In this serie of articles, I will translate the Field Equations of Mr. Einstein
-in the Cartan-Hodge Formalism.
+In this serie of articles, I translate the Field Equations of Mr. Einstein in
+the Cartan-Hodge Formalism.
 
 .. warning::
 

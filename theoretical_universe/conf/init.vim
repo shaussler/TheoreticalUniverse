@@ -23,6 +23,9 @@ set clipboard+=unnamedplus
 " Line numbering
 set number
 
+" Show white spaces
+set list
+
 " Mouse support
 set mouse=a
 
@@ -34,7 +37,7 @@ set encoding=utf-8
 
 " Color column
 if has("nvim")
-  set colorcolumn=4,81,121
+  set colorcolumn=4,81,101,121
   highlight ColorColumn guibg=green
   highlight ColorColumn ctermbg=235 guibg=#2c2d27
   highlight ColorColumn ctermbg=237
