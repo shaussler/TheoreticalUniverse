@@ -467,3 +467,14 @@ R^{♭♭}`, we obtain:
    .. }}}
 
 .. }}}
+
+Applying the Laplace-De Rham Operator
+-------------------------------------
+
+.. {{{
+
+From
+
+.. math:: dδ + δd = d ⋆ d ⋆ + ⋆ d ⋆ d
+
+.. }}}
