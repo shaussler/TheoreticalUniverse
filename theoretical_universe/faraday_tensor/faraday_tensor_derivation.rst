@@ -63,33 +63,21 @@ of Maxwell's modification to Ampère's circuital law, these equations represent
 the mathematical expression of empirical observations. Therefore, they can be
 regarded as established experimental facts.
 
-.. rubric:: Gauss's law
+.. rubric:: Gauss's Law
 
-.. math::
+.. math:: \vect{∇} \cdot \vect{E}  = ρ / ε_0
 
-   \vect{∇} \cdot \vect{E}  = ρ / ε_0
+.. rubric:: Ampère's Circuital Law
 
-.. rubric:: Ampère's circuital
+.. math:: \vect{∇} \times \vect{B} = μ_0 \vect{J} + \frac{1}{c^2} \frac{∂}{∂t} \vect{E}
 
-.. math::
+.. rubric:: Gauss's Law for Magnetism
 
-   \vect{∇} \times \vect{B} = μ_0 \vect{J} + \frac{1}{c^2} \frac{∂}{∂t} \vect{E}
-
-.. rubric:: Gauss's law for magnetism
-
-.. math::
-
-   \begin{equation}
-   \vect{∇} \cdot \vect{B} = 0
-   \end{equation}
+.. math:: \vect{∇} \cdot \vect{B} = 0
 
 .. rubric:: Faraday's law of induction
 
-.. math::
-
-   \begin{equation}
-   \vect{∇} ⨯ \vect{E} = -\frac{∂}{∂t} \vect{B}
-   \end{equation}
+.. math:: \vect{∇} ⨯ \vect{E} = -\frac{∂}{∂t} \vect{B}
 
 With the electric field :math:`\vect{E}=\{ E^x \\ E^y \\ E^z \}`, magnetic
 field :math:`\vect{B}=\{ B^x \\ B^y \\ B^z \}`, and operator
@@ -105,45 +93,33 @@ The Equations of Mr. Maxwell
 Unpacking the vector equations into their component form, we obtain in spirit
 the 1865 Maxwell formulation, albeit with modern notation and conventions.
 
-.. rubric:: Gauss's law
+.. rubric:: Gauss's Law
 
 .. math::
 
-   \begin{equation}
    \frac{∂}{∂x} E^x + \frac{∂}{∂y} E^y + \frac{∂}{∂z} E^z = ρ / ε_0
-   \end{equation}
 
-.. rubric:: Ampère's circuital law
+.. rubric:: Ampère's Circuital Law
 
 .. math::
 
-   \begin{equation}
-   \begin{array}{}
    \frac{∂}{∂y} B^z - \frac{∂}{∂z} B^y = μ_0 J^x + \frac{1}{c^2} \frac{∂}{∂t} E^x \\
    \frac{∂}{∂z} B^x - \frac{∂}{∂x} B^z = μ_0 J^y + \frac{1}{c^2} \frac{∂}{∂t} E^y \\
    \frac{∂}{∂x} B^y - \frac{∂}{∂y} B^x = μ_0 J^z + \frac{1}{c^2} \frac{∂}{∂t} E^z \\
-   \end{array}
-   \end{equation}
 
-.. rubric:: Gauss's law for magnetism
+.. rubric:: Gauss's Law for Magnetism
 
 .. math::
 
-   \begin{equation}
    \frac{∂}{∂x} B^x + \frac{∂}{∂y} B^y + \frac{∂}{∂z} B^z = 0
-   \end{equation}
 
-.. rubric:: Faraday's law of induction
+.. rubric:: Faraday's Law of Induction
 
 .. math::
 
-   \begin{equation}
-   \begin{array}{}
    \frac{∂}{∂y} E^z - \frac{∂}{∂z} E^y = - \frac{∂}{∂t} B^x \\
    \frac{∂}{∂z} E^x - \frac{∂}{∂x} E^z = - \frac{∂}{∂t} B^y \\
    \frac{∂}{∂x} E^y - \frac{∂}{∂y} E^x = - \frac{∂}{∂t} B^z \\
-   \end{array}
-   \end{equation}
 
 .. }}}
 
@@ -158,23 +134,19 @@ Gathering and reordering the terms, a clear structures becomes apparent:
 
 .. math::
 
-   \begin{matrix}
                                      & + \frac{∂E^x}{∂x} & + \frac{∂E^y}{∂y} & + \frac{∂E^z}{∂z} & = & + ρ/ε_0   \\
      + \frac{1}{c^2} \frac{∂E^x}{∂t} &                   & - \frac{∂B^z}{∂y} & + \frac{∂B^y}{∂z} & = & - μ_0 J^x \\
      + \frac{1}{c^2} \frac{∂E^y}{∂t} & + \frac{∂B^z}{∂x} &                   & - \frac{∂B^x}{∂z} & = & - μ_0 J^y \\
      + \frac{1}{c^2} \frac{∂E^z}{∂t} & - \frac{∂B^y}{∂x} & + \frac{∂B^x}{∂y} &                   & = & - μ_0 J^z \\
-   \end{matrix}
 
 .. rubric:: Homogenous equations
 
 .. math::
 
-   \begin{matrix}
                        & + \frac{∂B^x}{∂x} & + \frac{∂B^y}{∂y} & + \frac{∂B^z}{∂z} &=& 0 \\
      + \frac{∂B^x}{∂t} &                   & + \frac{∂E^z}{y∂} & - \frac{∂E^y}{∂z} &=& 0 \\
      + \frac{∂B^y}{∂t} & - \frac{∂E^z}{∂x} &                   & + \frac{∂E^x}{∂z} &=& 0 \\
      + \frac{∂B^z}{∂t} & + \frac{∂E^y}{∂x} & - \frac{∂E^x}{∂y} &                   &=& 0 \\
-   \end{matrix}
 
 .. }}}
 
@@ -199,29 +171,21 @@ and for the spatial dimensions :math:`∂_x = \frac{∂}{∂ x}`, :math:`∂_y =
 
 .. math::
 
-   \begin{equation}
    \newcommand{\E}{\tilde{E}}
-   \begin{matrix}
                 & + ∂_x \E^x & + ∂_y \E^y & + ∂_z \E^z & = & + μ_0 c ρ \\
      + ∂_t \E^x &            & - ∂_y  B^z & + ∂_z  B^y & = & - μ_0 J^x \\
      + ∂_t \E^y & + ∂_x  B^z &            & - ∂_z  B^x & = & - μ_0 J^y \\
      + ∂_t \E^z & - ∂_x  B^y & + ∂_y  B^x &            & = & - μ_0 J^z \\
-   \end{matrix}
-   \end{equation}
 
 .. rubric:: Homogenous equations
 
 .. math::
 
-   \begin{equation}
    \newcommand{\E}{\tilde{E}}
-   \begin{matrix}
                 & + ∂_x  B^x & + ∂_y  B^y & + ∂_z  B^z & = & 0 \\
      + ∂_t  B^x &            & + ∂_y \E^z & - ∂_z \E^y & = & 0 \\
      + ∂_t  B^y & - ∂_x \E^z &            & + ∂_z \E^x & = & 0 \\
      + ∂_t  B^z & + ∂_x \E^y & - ∂_y \E^x &            & = & 0 \\
-   \end{matrix}
-   \end{equation}
 
 For readers well-versed in the tensor formulation of electromagnetism, the
 presence and nature of the Faraday tensor and its dual are likely evident.
@@ -242,11 +206,7 @@ be apparent that we can employ matrices operations.
    permitivity of free space :math:`ε_0`, and and the permeability of free
    space :math:`μ_0` is used:
 
-   .. math::
-
-      \begin{equation}
-      c=\frac{1}{\sqrt{ε_0 μ_0}}
-      \end{equation}
+   .. math:: c = \frac{1}{\sqrt{ε_0 μ_0}}
 
 .. }}}
 
@@ -262,7 +222,6 @@ equivalent to:
 
 .. math::
 
-   \begin{equation}
    \newcommand{\E}{\tilde{E}}
    \begin{bmatrix} ∂_t & ∂_x & ∂_y & ∂_z \end{bmatrix}
    \begin{bmatrix}
@@ -273,11 +232,9 @@ equivalent to:
    \end{bmatrix}
    =
    \begin{bmatrix} + μ_0 c ρ & - μ_0 J^x  & - μ_0 J^y  & - μ_0 J^z \end{bmatrix}
-   \end{equation}
 
 .. math::
 
-   \begin{equation}
    \newcommand{\E}{\tilde{E}}
    \begin{bmatrix} ∂_t & ∂_x & ∂_y & ∂_z \end{bmatrix}
    \begin{bmatrix}
@@ -287,7 +244,6 @@ equivalent to:
      + B^z & - \E^y & + \E^x &        \\
    \end{bmatrix}
    = \begin{bmatrix} 0 & 0 & 0 & 0 \end{bmatrix}
-   \end{equation}
 
 We have thus obtained the Faraday tensor (inhomogenous equations) and its dual
 (homogenous equations).
@@ -310,7 +266,6 @@ Faraday tensor, and :math:`G^μ{}_ν` for its dual:
 
 .. math::
 
-   \begin{equation}
    \newcommand{\E}{\tilde{E}}
    \begin{bmatrix} F^μ{}_ν \end{bmatrix} =
    \begin{bmatrix}
@@ -319,11 +274,9 @@ Faraday tensor, and :math:`G^μ{}_ν` for its dual:
      + \E^y & -  B^z &        & +  B^x \\
      + \E^z & +  B^y & -  B^x &        \\
    \end{bmatrix}
-   \end{equation}
 
 .. math::
 
-   \begin{equation}
    \newcommand{\E}{\tilde{E}}
    \begin{bmatrix} G^μ{}_ν \end{bmatrix} =
    \begin{bmatrix}
@@ -332,21 +285,13 @@ Faraday tensor, and :math:`G^μ{}_ν` for its dual:
      +  B^y  & + \E^z &        & - \E^x \\
      +  B^z  & - \E^y & + \E^x &        \\
    \end{bmatrix}
-   \end{equation}
 
 Maxwell's equations are then:
 
 .. math::
 
-   \begin{equation}
-   ∂_μ F^μ{}_ν = J_{ν}
-   \end{equation}
-
-.. math::
-
-   \begin{equation}
-   ∂_μ G^μ{}_ν = 0
-   \end{equation}
+   ∂_μ F^μ{}_ν &= J_{ν} \\
+   ∂_μ G^μ{}_ν &= 0     \\
 
 To double-check the result, you can have a look at `this alternative derivation
 of the mixed electromagnetic tensor
