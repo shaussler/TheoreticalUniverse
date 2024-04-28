@@ -6,8 +6,8 @@
 
 .. _musical_isomorphisms:
 
-Musical Symbols
-===============
+Musicality
+==========
 
 .. rst-class:: custom-author
 
