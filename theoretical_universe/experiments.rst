@@ -5,14 +5,21 @@ Experiment
 
    Gathering thoughts together and experimenting.
 
-On the Minkowski Metric
------------------------
+Generating the Minkowski Metric
+===============================
+
+Tentatively trying to generate a space with mixed metric signature from
+to copies of :math:`\mathbb{R}^3`.
+
+Setting up the frames
+---------------------
+
+.. {{{
 
 .. rubric:: Second in Frame of First
 
 .. math::
 
-   \begin{equation}
    p^♯ = \begin{bmatrix}
        x \; ∂_x \\
        y \; ∂_y \\
@@ -24,7 +31,6 @@ On the Minkowski Metric
        y \; dy \\
        z \; dz \\
    \end{bmatrix}
-   \end{equation}
 
 .. math::
 
@@ -106,8 +112,12 @@ On the Minkowski Metric
    \end{bmatrix}
    \end{equation}
 
+.. }}}
+
 Assumption
 ----------
+
+.. {{{
 
 Rationalizing the assumption that oneself is immobile in ones frame of
 reference, hence only the neighbor is moving. That is:
@@ -170,8 +180,12 @@ So now try:
    \end{bmatrix}
    \end{equation}
 
-Notation to Represent Contraction
----------------------------------
+.. }}}
+
+Representing Contractions
+=========================
+
+.. {{{
 
 .. math::
 
@@ -205,3 +219,208 @@ Notation to Represent Contraction
      - d dx^z \\
    \end{bmatrix}
    \end{equation}
+
+.. }}}
+
+
+Differential as a covector
+==========================
+
+.. {{{
+
+The differential of a function is:
+
+.. math::
+
+   \begin{equation}
+   df = dx \frac{∂f}{∂x} + dy \frac{∂f}{∂y} + dz \frac{∂f}{∂z}
+   \end{equation}
+
+That we rewrite with 
+
+.. math::
+
+   \begin{equation}
+   df = dx \frac{∂}{∂x} f + dy \frac{∂}{∂y} f + dz \frac{∂}{∂z} f
+   \end{equation}
+
+Considering :math:`f(x, y, z)=x`:
+
+.. math::
+
+   \begin{equation}
+   dx = dx \frac{∂}{∂x} x + dy \frac{∂}{∂y} x + dz \frac{∂}{∂z} x
+   \end{equation}
+
+And thus:
+
+.. math::
+
+   \begin{equation}
+   dφ(x) = dx \frac{∂}{∂x} φ(x)
+   \end{equation}
+
+.. math::
+
+   \begin{equation}
+   dφ(x) = α dx
+   \end{equation}
+
+Taking the taylor serie of :math:`φ(x)`:
+
+.. math::
+
+   \begin{equation}
+   φ(x) = φ(a) + x \frac{∂}{∂x} φ(x) + ...
+   \end{equation}
+
+We get:
+
+.. math::
+
+   \begin{equation}
+   dφ(x) = dx \frac{∂}{∂x} [φ(a) + x \frac{∂}{∂x} φ(x)]
+   \end{equation}
+
+Then
+
+.. math::
+
+   \begin{equation}
+   dφ(x) = dx \frac{∂}{∂x} [x α]
+   \end{equation}
+
+.. math::
+
+   \begin{equation}
+   dx = dx \frac{∂}{∂x} x
+   \end{equation}
+
+.. math::
+
+   \begin{equation}
+   dx \frac{∂}{∂x} = 1
+   \end{equation}
+
+.. math::
+
+   \begin{equation}
+   dx \frac{∂}{∂y} = 0
+   \end{equation}
+
+.. math::
+
+   \begin{equation}
+   dx \frac{∂}{∂z} = 0
+   \end{equation}
+
+
+.. math::
+
+   \begin{equation}
+   dx^i ∂_j = δ^i_j
+   \end{equation}
+
+.. }}}
+
+Field Equations
+===============
+
+In this serie of articles, I translate the Field Equations of Mr. Einstein in
+the Cartan-Hodge Formalism.
+
+The Field Equations of Mr. Einstein
+-----------------------------------
+
+.. {{{
+
+.. math::
+
+   G_{μν} + Λ g_{μν} = κ T_{μν}
+
+.. math::
+
+   R_{μν} - \frac{1}{2} R g_{μν} + Λ g_{μν} = κ T_{μν}
+
+.. math::
+
+   dx ⊗ dy = \frac{1}{2} (dx ⊗ dy + dy ⊗ dx) + \frac{1}{2} (dx ⊗ dy - dy ⊗ dx)
+
+.. }}}
+
+Defining Symmetries
+-------------------
+
+.. {{{
+
+The symmetric and antisymmetric parts are:
+
+.. math::
+
+   \begin{matrix}
+   dx ∨ dy = (dx ⊗ dy + dy ⊗ dx) \\
+   dx ∧ dy = (dx ⊗ dy - dy ⊗ dx) \\
+   \end{matrix}
+
+.. }}}
+
+The Stress-Energy Tensor
+------------------------
+
+.. {{{
+
+.. math::
+
+   T^{♭♭} = \begin{bmatrix}
+   T_g \; dt ∨ dt & T_a \; dt ∨ dx & T_b \; dt ∨ dy & T_c \; dt ∨ dz \\
+                  & T_h \; dx ∨ dx & T_f \; dx ∨ dy & T_e \; dx ∨ dz \\
+                  &                & T_i \; dy ∨ dy & T_d \; dy ∨ dz \\
+                  &                &                & T_j \; dz ∨ dz \\
+   \end{bmatrix}
+
+.. math::
+
+   T^{♭♭} = \begin{bmatrix}
+   T_g \; dt ∨ dt & T_a \; dt ∨ dx \\
+   T_h \; dx ∨ dx & T_b \; dt ∨ dy \\
+   T_i \; dy ∨ dy & T_c \; dt ∨ dz \\
+   T_j \; dz ∨ dz & T_d \; dy ∨ dz \\
+                  & T_e \; dz ∨ dx \\
+                  & T_f \; dx ∨ dy \\
+   \end{bmatrix}
+
+.. }}}
+
+The Field Equations in Differential Form
+----------------------------------------
+
+.. {{{
+
+.. math::
+
+   \begin{bmatrix}
+   R_g \; dt ∨ dt & R_a \; dt ∨ dx \\
+   R_h \; dx ∨ dx & R_b \; dt ∨ dy \\
+   R_i \; dy ∨ dy & R_c \; dt ∨ dz \\
+   R_j \; dz ∨ dz & R_d \; dy ∨ dz \\
+                  & R_e \; dz ∨ dx \\
+                  & R_f \; dx ∨ dy \\
+   \end{bmatrix}
+   + (Λ  - \frac{1}{2} R) \begin{bmatrix}
+   g_g \; dt ∨ dt & g_a \; dt ∨ dx \\
+   g_h \; dx ∨ dx & g_b \; dt ∨ dy \\
+   g_i \; dy ∨ dy & g_c \; dt ∨ dz \\
+   g_j \; dz ∨ dz & g_d \; dy ∨ dz \\
+                  & g_e \; dz ∨ dx \\
+                  & g_f \; dx ∨ dy \\
+   \end{bmatrix}
+   = κ \begin{bmatrix}
+   T_g \; dt ∨ dt & T_a \; dt ∨ dx \\
+   T_h \; dx ∨ dx & T_b \; dt ∨ dy \\
+   T_i \; dy ∨ dy & T_c \; dt ∨ dz \\
+   T_j \; dz ∨ dz & T_d \; dy ∨ dz \\
+                  & T_e \; dz ∨ dx \\
+                  & T_f \; dx ∨ dy \\
+   \end{bmatrix}
+
+.. }}}
