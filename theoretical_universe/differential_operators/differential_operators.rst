@@ -400,7 +400,7 @@ d'Alembertian
 
 .. }}}
 
-.. _the_laplace_de_rham_operator::
+.. _the_laplace_de_rham_operator:
 
 The Laplace-De Rham Operator
 ----------------------------
