@@ -1,5 +1,5 @@
 .. Theoretical Universe (c) by Stéphane Haussler
-.. 
+
 .. Theoretical Universe is licensed under a Creative Commons Attribution 4.0
 .. International License. You should have received a copy of the license along
 .. with this work. If not, see <https://creativecommons.org/licenses/by/4.0/>.
@@ -41,11 +41,7 @@ by `brightsideofmaths <https://www.youtube.com/@brightsideofmaths>`_.
 
 .. topic:: Proposition
 
-   .. math::
-  
-      \begin{equation}
-      \mathbf{e}_i = \partial_i
-      \end{equation}
+   .. math:: \mathbf{e}_i = \partial_i
 
 .. }}}
 
@@ -56,22 +52,14 @@ Differential
 
 The differential applied to the partial derivative results in:
 
-.. math::
-
-   \begin{equation}
-   dx^i ∂_j = δ^i_j
-   \end{equation}
+.. math:: dx^i ∂_j = δ^i_j
 
 This is the definition for a covector, and we conclude that the differential
 operator is a covector.
 
 .. topic:: Proposition
 
-   .. math::
-   
-      \begin{equation}
-      \mathbf{e}^i = dx^i
-      \end{equation}
+   .. math:: \mathbf{e}^i = dx^i
 
 .. }}}
 
@@ -82,44 +70,26 @@ Gradient
 
 .. topic:: Proposition
 
-   .. math::
-
-      \begin{equation}
-      (df)^{♯} = \mathbf{∇} f
-      \end{equation}
+   .. math:: (df)^{♯} = \mathbf{∇} f
 
 Expand :math:`df`:
 
-.. math::
-
-   \begin{equation}
-   (df)^♯ = ( dx ∂_x f + dy ∂_y f + dz ∂_z f)^♯
-   \end{equation}
+.. math:: (df)^♯ = ( dx ∂_x f + dy ∂_y f + dz ∂_z f)^♯
 
 Distribute the sharp operator :math:`♯`:
 
-.. math::
-
-   \begin{equation}
-   (df)^♯ = (dx)^♯ ∂_x f + (dy)^♯ ∂_y f + (dz)^♯ ∂_z f
-   \end{equation}
+.. math:: (df)^♯ = (dx)^♯ ∂_x f + (dy)^♯ ∂_y f + (dz)^♯ ∂_z f
 
 Which permits to conclude:
 
-.. math::
-
-   \begin{equation}
-   (df)^♯ = ∂_x f ∂_x + ∂_y f ∂_y + ∂_z f ∂_z
-   \end{equation}
+.. math:: (df)^♯ = ∂_x f ∂_x + ∂_y f ∂_y + ∂_z f ∂_z
 
 In other words and for clarity:
 
 .. math::
 
-   \begin{equation}
    \newcommand{\e}{\mathbf{e}}
    (df)^♯ = ∂_x f \e_x + ∂_y f \e_y + ∂_z f \e_z
-   \end{equation}
 
 .. }}}
 
@@ -130,63 +100,35 @@ Divergence
 
 .. topic:: Proposition
 
-   .. math::
-
-      \begin{equation}
-      ⋆ d ⋆ F^♭t = \mathbf{∇} \cdot \mathbf{F}
-      \end{equation}
+   .. math:: ⋆ d ⋆ F^♭ = \mathbf{∇} \cdot \mathbf{F}
 
 We begin with :math:`F` as a vector :math:`\mathbf{F} = F^\sharp = F^i
 \partial_i` and flatten:
 
 .. math::
 
-   \begin{equation}
-   F^♭ = \begin{bmatrix}
-           F^x ∂_x \\
-           F^y ∂_y \\
-           F^z ∂_z \\
-         \end{bmatrix}^♭
-       = \begin{bmatrix}
-           F^x (∂_x)^♭ \\
-           F^y (∂_y)^♭ \\
-           F^z (∂_z)^♭ \\
-         \end{bmatrix}
-       = \begin{bmatrix}
-           F^x dx \\
-           F^y dy \\
-           F^z dz \\
-         \end{bmatrix}
-   \end{equation}
+   \newcommand{\{}{\begin{bmatrix}}
+   \newcommand{\}}{\end{bmatrix}}
+   F^♭ = \{ F^x ∂_x     \\ F^y ∂_y     \\ F^z ∂_z     \}^♭
+       = \{ F^x (∂_x)^♭ \\ F^y (∂_y)^♭ \\ F^z (∂_z)^♭ \}
+       = \{ F^x dx      \\ F^y dy      \\ F^z dz      \}
 
 Apply the :math:`\star` operator:
 
 .. math::
 
-
+   \newcommand{\{}{\begin{bmatrix}}
+   \newcommand{\}}{\end{bmatrix}}
    \begin{equation}
-   ⋆ F^♭ = ⋆ \begin{bmatrix}
-               F^x dx \\
-               F^y dy \\
-               F^z dz \\
-             \end{bmatrix}
-         = \begin{bmatrix}
-             F^x ⋆ dx \\
-             F^y ⋆ dy \\
-             F^z ⋆ dz \\
-           \end{bmatrix}
-         = \begin{bmatrix}
-             F^x dy ∧ dz \\
-             F^y dz ∧ dx \\
-             F^z dx ∧ dy \\
-           \end{bmatrix}
+   ⋆ F^♭ = ⋆ \{ F^x   dx      \\ F^y   dy    \\ F^z   dz    \}
+         =   \{ F^x ⋆ dx      \\ F^y ⋆ dy    \\ F^z ⋆ dz    \}
+         =   \{ F^x   dy ∧ dz \\ F^y dz ∧ dx \\ F^z dx ∧ dy \}
    \end{equation}
 
 Apply the :math:`d` operator:
 
 .. math::
 
-   \begin{equation}
    d ⋆ F^♭ = d
    \begin{bmatrix}
      F^x dy ∧ dz \\
@@ -205,7 +147,6 @@ Apply the :math:`d` operator:
    ∂_y F^y dx ∧ dy ∧ dz \\
    ∂_z F^z dx ∧ dy ∧ dz \\
    \end{bmatrix}
-   \end{equation}
 
 Which can be brought back to a zero form by applying yet again the Hodge star
 :math:`⋆`:
@@ -413,51 +354,94 @@ Laplacian
 
 .. topic:: Proposition
 
-   .. math::
-
-      \begin{equation}
-      ⋆ d ⋆ d f = \mathbf{∇}^2 f
-      \end{equation}
+   .. math:: ⋆ d ⋆ d f = \mathbf{∇}^2 f
 
 The differential of a function (zero form) is:
 
-.. math::
-
-   \begin{equation}
-   df = ∂_x f dx + ∂_y f dy + ∂_z f dz
-   \end{equation}
+.. math:: df = ∂_x f dx + ∂_y f dy + ∂_z f dz
 
 Taking the Hodge dual:
 
-.. math::
-
-   \begin{equation}
-   ⋆ df = ∂_x f dy ∧ dz + ∂_y dz ∧ dx + ∂_z f dx ∧ dy
-   \end{equation}
+.. math:: ⋆ df = ∂_x f dy ∧ dz + ∂_y dz ∧ dx + ∂_z f dx ∧ dy
 
 Taking the differential
 
 .. math::
 
-   \begin{align}
-   d ⋆ df &= \frac{∂^2 f}{∂ x^2} dx ∧ dy ∧ dz + \frac{∂^2 f}{∂ y^2} dy ∧ dz ∧ dx + \frac{∂^2 f}{∂ z^2} dz ∧ dx ∧ dy \\
-          &= \frac{∂^2 f}{∂ x^2} dx ∧ dy ∧ dz + \frac{∂^2 f}{∂ y^2} dx ∧ dy ∧ dz + \frac{∂^2 f}{∂ z^2} dx ∧ dy ∧ dz \\
-          &= \left( \frac{∂^2 f}{∂ x^2} + \frac{∂^2 f}{∂ y^2} + \frac{∂^2 f}{∂ z^2} \right) \; dx ∧ dy ∧ dz         \\
-   \end{align}
+   \newcommand{∂}[3]{\frac{∂^#1 #2}{d#3^#1}}
+   d ⋆ df &= \∂{2}{f}{x} dx ∧ dy ∧ dz + \∂{2}{f}{y} dy ∧ dz ∧ dx + \∂{2}{f}{z} dz ∧ dx ∧ dy \\
+          &= \∂{2}{f}{x} dx ∧ dy ∧ dz + \∂{2}{f}{y} dx ∧ dy ∧ dz + \∂{2}{f}{z} dx ∧ dy ∧ dz \\
+          &= \left( \∂{2}{f}{x} + \∂{2}{f}{y} + \∂{2}{f}{z} \right) \; dx ∧ dy ∧ dz         \\
 
 Taking the Hodge dual, we tranform volumes to functions and obtain the
 expression for the laplacian:
 
 .. math::
 
-   \begin{equation}
    ⋆ d ⋆ df = \left( \frac{∂^2 f}{∂ x^2} + \frac{∂^2 f}{∂ y^2} + \frac{∂^2 f}{∂ z^2} \right)
-   \end{equation}
 
-.. note::
+The Laplacian in vector calculus is the divergence :math:`\mathbf{∇} \cdot`
+applied to the gradiant of a function :math:`\mathbf{∇} f`:
 
-   The Laplacian is only valid for functions (a 1-form). The Laplacian can be
-   generalized to n-forms with the Laplace-de Rham operator.
+.. math:: \mathbf{∇} \cdot \mathbf{∇} f
+
+Where the divergence is :math:`⋆ d ⋆` and the gradient of a function is
+:math:`df` brings the zero-form to a zero form.
 
 .. }}}
 
+
+d'Alembertian
+-------------
+
+.. {{{
+
+.. warning:: Under construction
+
+.. }}}
+
+.. _the_laplace_de_rham_operator::
+
+The Laplace-De Rham Operator
+----------------------------
+
+.. {{{
+
+.. warning:: Under construction
+
+The Laplacian is only valid for functions (zero-forms). The Laplacian can be
+generalized to n-forms with the Laplace-de Rham operator.
+
+.. math:: ∆ = dδ + δd = (d + δ)^2
+
+Considering a k-form in a space with dimension :math:`n` and parity `s`, the
+`general expression for codifferential
+<https://en.m.wikipedia.org/wiki/Hodge_star_operator#Codifferential>`_ is:
+
+.. math:: δ = (-1)^{n(k+1)+1} s  ⋆ d ⋆
+
+In Euclidean space with :math:`n=3`, the metric signature is :math:`(+,+,+)` and
+the parity therefore :math:`(1)⨯(1)⨯(1)=1`. The codifferential is then:
+
+.. math:: \delta = (-1)^k ⋆ d ⋆
+
+.. topic:: Laplace-De Rham Operator in Euclidean Space
+
+   .. math:: dδ + δd = d ⋆ d ⋆ + (-1)^k ⋆ d ⋆ d
+
+In Minkowski space with :math:`n=4`, the metric signature is :math:`(+,-,-,-)`
+and the parity therefore :math:`(+1)⨯(-1)⨯(-1)⨯(-1)=-1`. The codifferential is
+then:
+
+.. math::
+
+   δ & = (-1)^{n(k+1)+1}   s  ⋆ d ⋆ \\
+     & = (-1)^{4(k+1)+1} (-1) ⋆ d ⋆ \\
+     & = (-1)^{4(k+1)+2}      ⋆ d ⋆ \\
+     & =                      ⋆ d ⋆ \\
+
+.. topic:: Laplace-De Rham Operator in Minkowski Space
+
+   .. math:: dδ + δd = d ⋆ d ⋆ + ⋆ d ⋆ d
+
+.. }}}
