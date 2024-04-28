@@ -60,6 +60,7 @@ repository <https://github.com/shaussler/TheoreticalUniverse/>`_.
    rotations/index.rst
    differential_operators/index.rst
    faraday_tensor/index.rst
+   field_equations/index.rst
    miscellaneous/index.rst
 
 LINKS:
