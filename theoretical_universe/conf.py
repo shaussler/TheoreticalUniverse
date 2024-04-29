@@ -90,7 +90,29 @@ todo_include_todos = True
 # Math configuration
 # ------------------
 
-import theoretical_python
+mathjax3_config = {
+    'chtml': {
+        'displayAlign': 'left',
+        'displayIndent': '2em'
+    },
+    'tex': {
+       'packages': {'[+]': ['ams']},
+       'macros': {
 
-mathjax3_config = theoretical_python.mathjax3_config()
+            'et': r'\mathbf{e_t}',
+
+            # Redefine vectors
+            # ----------------
+
+            'vect': r'\overrightarrow',
+
+            # Redefine matrices
+            # -----------------
+
+            '{': r'\begin{bmatrix}',
+            '}': r'\end{bmatrix}',
+
+        }
+    }
+}
 
