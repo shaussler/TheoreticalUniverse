@@ -30,7 +30,8 @@ source_encoding = 'utf-8'
 # ---------
 
 redirects = {
-    "faraday_tensor_derivation": "introduction/faraday_tensor_derivation.html",
+    'faraday_tensor_derivation': "faraday_tensor/faraday_tensor_derivation.html",
+    'introduction/faraday_tensor_derivation': "../faraday_tensor/faraday_tensor_derivation.html",
     "differential_operators": "differential_operators/differential_operators.html",
     "free_matrix_representation": "the_cartan_hodge_formalism/the_free_matrix_representation.html",
     "differential_rotations": "differential_operators/the_exterior_derivative_of_rotations.html",
