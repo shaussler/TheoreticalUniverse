@@ -14,11 +14,11 @@ jobs:
       - name: Install build dependencies
         run: pip install wheel setuptools
       - name: Install build dependencies for pycartan
-        run: pip numpy sympy scipy
+        run: pip install numpy sympy scipy
       - name: Install build dependencies for pycartan
-        run: pip symbtools
-      - name: Install build dependencies for pycartan
-        run: pip symbtools
+        run: pip install symbtools
+      - name: Install pycartan
+        run: pip install pycartan
       - name: Build theoretical_python
         run: python setup.py bdist_wheel
       - name: Install theoretical_python
