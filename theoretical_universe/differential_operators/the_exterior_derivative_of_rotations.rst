@@ -486,6 +486,7 @@ Applied to a rotation in spacetime, we obtain the wave equations:
 
 .. math::
 
+   \newcommand{\+}{\phantom{+}}
    (d ⋆ d ⋆ + ⋆ d ⋆ d) \begin{bmatrix}
         - a \; dt ∧ dx \\
         - b \; dt ∧ dy \\

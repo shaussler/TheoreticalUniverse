@@ -14,6 +14,7 @@ Differential Operators in Differential Form
    :caption: Table of Contents:
 
    differential_operators.rst
+   translations.rst
    the_exterior_derivative_of_rotations.rst
 
 Summary
@@ -51,8 +52,8 @@ differential operators in the :ref:`Cartan-Hodge formalism
 
    ⋆ d ⋆ d f = \mathbf{∇}^2 f
 
-The Exterior Derivative of Rotations in Spacetime
--------------------------------------------------
+Of Rotations in Spacetime
+-------------------------
 
 I investigate the exterior derivative of :ref:`rotations expressed in
 differential form <rotations_in_minkowski_space>`, employing :ref:`the
@@ -89,14 +90,14 @@ Maxwell equations.
        ( + ∂_t c &- ∂_x e & + ∂_y d & \_      \, ) \; dt ∧ dx ∧ dy \\
    \end{bmatrix}
 
-Laplace-De Rham and the Wave Equation
--------------------------------------
+.. rubric:: Laplace-De Rham on Rotations in Differential Form
 
 In Minkowski space, the Laplace-De Rham operator is :math:`d ⋆ d ⋆ + ⋆ d ⋆ d`.
 Applied to a rotation in spacetime, we obtain the wave equations:
 
 .. math::
 
+   \newcommand{\+}{\phantom{+}}
    (d ⋆ d ⋆ + ⋆ d ⋆ d) \begin{bmatrix}
         - a \; dt ∧ dx \\
         - b \; dt ∧ dy \\
