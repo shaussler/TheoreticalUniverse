@@ -18,6 +18,7 @@ setup(
         'sphinx-reredirects',
         'numpy',
         'scipy',
+        'sympy',
         'symbtools',
         'pycartan',
     ],
