@@ -41,8 +41,12 @@ decomposed into a linear combination of basis rotations within each plane:
    .. math::
 
       R^{♯♯} = \begin{bmatrix}
-          a \; ∂_t ∧ ∂_x \\ b \; ∂_t ∧ ∂_y \\ c \; ∂_t ∧ ∂_z \\
-          d \; ∂_y ∧ ∂_z \\ e \; ∂_z ∧ ∂_x \\ f \; ∂_x ∧ ∂_y \\
+          a \; ∂_t ∧ ∂_x \\
+          b \; ∂_t ∧ ∂_y \\
+          c \; ∂_t ∧ ∂_z \\
+          d \; ∂_y ∧ ∂_z \\
+          e \; ∂_z ∧ ∂_x \\
+          f \; ∂_x ∧ ∂_y \\
       \end{bmatrix}
 
 .. }}}
@@ -63,8 +67,12 @@ differential 2-form representative of the rotation:
 
       \newcommand{\+}{\phantom{+}}
       R^{♭♭} = \begin{bmatrix}
-           - a \; dt ∧ dx \\  - b \; dt ∧ dy \\  - c \; dt ∧ dz \\
-          \+ d \; dy ∧ dz \\ \+ e \; dz ∧ dx \\ \+ f \; dx ∧ dy \\
+           - a \; dt ∧ dx \\
+           - b \; dt ∧ dy \\
+           - c \; dt ∧ dz \\
+          \+ d \; dy ∧ dz \\
+          \+ e \; dz ∧ dx \\
+          \+ f \; dx ∧ dy \\
       \end{bmatrix}
 
 .. admonition:: All Calculation Steps
@@ -471,250 +479,31 @@ R^{♭♭}`, we obtain:
 Applying the Laplace-De Rham Operator
 -------------------------------------
 
-.. warning:: Under construction
-
 .. {{{
 
-In Minkowski space, the Laplace-De Rham operator is:
-
-.. math:: d ⋆ d ⋆ + ⋆ d ⋆ d
-
-.. admonition:: All Calculation Steps :math:`d ⋆ d ⋆ R`
-   :class: dropdown
-
-   .. {{{
-
-   Use the expression of :math:`⋆ R^{♭♭}` calculated above:
-
-   .. math::
-
-      \newcommand{\_}{\phantom{∂_m m}}
-      d ⋆ d ⋆ R^{♭♭} = d ⋆ \begin{bmatrix}
-          ( \_      &+ ∂_x a & + ∂_y b & + ∂_z c \, ) \; dx ∧ dy ∧ dz \\
-          ( + ∂_t a &\_      & - ∂_y f & + ∂_z e \, ) \; dt ∧ dy ∧ dz \\
-          ( + ∂_t b &+ ∂_x f & \_      & - ∂_z d \, ) \; dt ∧ dz ∧ dx \\
-          ( + ∂_t c &- ∂_x e & + ∂_y d & \_      \, ) \; dt ∧ dx ∧ dy \\
-      \end{bmatrix}
-
-   Distribute the Hodge star :math:`⋆`
-
-   .. math::
-
-      \newcommand{\_}{\phantom{∂_m m}}
-      d ⋆ d ⋆ R^{♭♭} = d \begin{bmatrix}
-          ( \_      & + ∂_x a & + ∂_y b & + ∂_z c \, ) \; ⋆ dx ∧ dy ∧ dz \\
-          ( + ∂_t a & \_      & - ∂_y f & + ∂_z e \, ) \; ⋆ dt ∧ dy ∧ dz \\
-          ( + ∂_t b & + ∂_x f & \_      & - ∂_z d \, ) \; ⋆ dt ∧ dz ∧ dx \\
-          ( + ∂_t c & - ∂_x e & + ∂_y d & \_      \, ) \; ⋆ dt ∧ dx ∧ dy \\
-      \end{bmatrix}
-
-   Apply the Hodege star :math:`⋆`:
-
-   .. math::
-
-      \newcommand{\_}{\phantom{∂_m m}}
-      d ⋆ d ⋆ R^{♭♭} = d \begin{bmatrix}
-          ( \_      & + ∂_x a & + ∂_y b & + ∂_z c \, ) \; (-1) \; dt \\
-          ( + ∂_t a & \_      & - ∂_y f & + ∂_z e \, ) \; (-1) \; dx \\
-          ( + ∂_t b & + ∂_x f & \_      & - ∂_z d \, ) \; (-1) \; dy \\
-          ( + ∂_t c & - ∂_x e & + ∂_y d & \_      \, ) \; (-1) \; dz \\
-      \end{bmatrix}
-
-   Flip signs
-
-   .. math::
-
-      \newcommand{\_}{\phantom{∂_m m}}
-      d ⋆ d ⋆ R^{♭♭} = d \begin{bmatrix}
-          ( \_      & - ∂_x a & - ∂_y b & - ∂_z c ) \; dt \\
-          ( - ∂_t a & \_      & + ∂_y f & - ∂_z e ) \; dx \\
-          ( - ∂_t b & - ∂_x f & \_      & + ∂_z d ) \; dy \\
-          ( - ∂_t c & + ∂_x e & - ∂_y d & \_      ) \; dz \\
-      \end{bmatrix}
-
-   Apply the :math:`d` operator:
-
-   .. math::
-
-      \newcommand{\_}{\phantom{∂_m m}}
-      d ⋆ d ⋆ R^{♭♭} = \begin{bmatrix}
-          - ∂_x ∂_x \; a \; dx ∧ dt & - ∂_x ∂_y \; b \; dx ∧ dt & - ∂_x ∂_z \; c \; dx ∧ dt \\
-          - ∂_y ∂_x \; a \; dy ∧ dt & - ∂_y ∂_y \; b \; dy ∧ dt & - ∂_y ∂_z \; c \; dy ∧ dt \\
-          - ∂_z ∂_x \; a \; dz ∧ dt & - ∂_z ∂_y \; b \; dz ∧ dt & - ∂_z ∂_z \; c \; dz ∧ dt \\
-          - ∂_t ∂_t \; a \; dt ∧ dx & - ∂_y ∂_t \; a \; dy ∧ dx & - ∂_z ∂_t \; a \; dz ∧ dx \\
-          + ∂_t ∂_y \; f \; dt ∧ dx & + ∂_y ∂_y \; f \; dy ∧ dx & + ∂_z ∂_y \; f \; dz ∧ dx \\
-          - ∂_t ∂_z \; e \; dt ∧ dx & - ∂_y ∂_z \; e \; dy ∧ dx & - ∂_z ∂_z \; e \; dz ∧ dx \\
-          - ∂_t ∂_t \; b \; dt ∧ dy & - ∂_t ∂_t \; b \; dt ∧ dy & - ∂_t ∂_t \; b \; dt ∧ dy \\
-          - ∂_x ∂_x \; f \; dx ∧ dy & - ∂_x ∂_x \; f \; dx ∧ dy & - ∂_x ∂_x \; f \; dx ∧ dy \\
-          + ∂_z ∂_z \; d \; dz ∧ dy & + ∂_z ∂_z \; d \; dz ∧ dy & + ∂_z ∂_z \; d \; dz ∧ dy \\
-          - ∂_t ∂_t \; c \; dt ∧ dz & - ∂_t ∂_t \; c \; dt ∧ dz & - ∂_t ∂_t \; c \; dt ∧ dz \\
-          + ∂_x ∂_x \; e \; dx ∧ dz & + ∂_x ∂_x \; e \; dx ∧ dz & + ∂_x ∂_x \; e \; dx ∧ dz \\
-          - ∂_y ∂_y \; d \; dy ∧ dz & - ∂_y ∂_y \; d \; dy ∧ dz & - ∂_y ∂_y \; d \; dy ∧ dz \\
-      \end{bmatrix}
-
-   Flip the signs:
-
-   .. math::
-
-      \newcommand{\_}{\phantom{∂_m m}}
-      d ⋆ d ⋆ R^{♭♭} = \begin{bmatrix}
-          + ∂_x ∂_x \; a \; dt ∧ dx & + ∂_x ∂_y \; b \; dt ∧ dx & + ∂_x ∂_z \; c \; dt ∧ dx \\
-          + ∂_y ∂_x \; a \; dt ∧ dy & + ∂_y ∂_y \; b \; dt ∧ dy & + ∂_y ∂_z \; c \; dt ∧ dy \\
-          + ∂_z ∂_x \; a \; dt ∧ dz & + ∂_z ∂_y \; b \; dt ∧ dz & + ∂_z ∂_z \; c \; dt ∧ dz \\
-          - ∂_t ∂_t \; a \; dt ∧ dx & + ∂_y ∂_t \; a \; dx ∧ dy & - ∂_z ∂_t \; a \; dz ∧ dx \\
-          + ∂_t ∂_y \; f \; dt ∧ dx & - ∂_y ∂_y \; f \; dx ∧ dy & + ∂_z ∂_y \; f \; dz ∧ dx \\
-          - ∂_t ∂_z \; e \; dt ∧ dx & + ∂_y ∂_z \; e \; dx ∧ dy & - ∂_z ∂_z \; e \; dz ∧ dx \\
-          - ∂_t ∂_t \; b \; dt ∧ dy & - ∂_t ∂_t \; b \; dt ∧ dy & - ∂_t ∂_t \; b \; dt ∧ dy \\
-          - ∂_x ∂_x \; f \; dx ∧ dy & - ∂_x ∂_x \; f \; dx ∧ dy & - ∂_x ∂_x \; f \; dx ∧ dy \\
-          - ∂_z ∂_z \; d \; dy ∧ dz & - ∂_z ∂_z \; d \; dy ∧ dz & - ∂_z ∂_z \; d \; dy ∧ dz \\
-          - ∂_t ∂_t \; c \; dt ∧ dz & - ∂_t ∂_t \; c \; dt ∧ dz & - ∂_t ∂_t \; c \; dt ∧ dz \\
-          - ∂_x ∂_x \; e \; dz ∧ dx & - ∂_x ∂_x \; e \; dz ∧ dx & - ∂_x ∂_x \; e \; dz ∧ dx \\
-          - ∂_y ∂_y \; d \; dy ∧ dz & - ∂_y ∂_y \; d \; dy ∧ dz & - ∂_y ∂_y \; d \; dy ∧ dz \\
-      \end{bmatrix}
-
-   Gather:
-
-   .. math::
-
-      \newcommand{\_}{\phantom{∂_m m}}
-      d ⋆ d ⋆ R^{♭♭} = \begin{bmatrix}
-          + ∂_x ∂_x \; a \; dt ∧ dx & + ∂_y ∂_x \; a \; dt ∧ dy & + ∂_z ∂_x \; a \; dt ∧ dz \\
-          + ∂_x ∂_y \; b \; dt ∧ dx & + ∂_y ∂_y \; b \; dt ∧ dy & + ∂_z ∂_y \; b \; dt ∧ dz \\
-          + ∂_x ∂_z \; c \; dt ∧ dx & + ∂_y ∂_z \; c \; dt ∧ dy & + ∂_z ∂_z \; c \; dt ∧ dz \\
-          - ∂_t ∂_t \; a \; dt ∧ dx & - ∂_t ∂_t \; b \; dt ∧ dy & - ∂_t ∂_t \; c \; dt ∧ dz \\
-          + ∂_t ∂_y \; f \; dt ∧ dx & - ∂_t ∂_t \; b \; dt ∧ dy & - ∂_t ∂_t \; c \; dt ∧ dz \\
-          - ∂_t ∂_z \; e \; dt ∧ dx & - ∂_t ∂_t \; b \; dt ∧ dy & - ∂_t ∂_t \; c \; dt ∧ dz \\
-          - ∂_z ∂_z \; d \; dy ∧ dz & + ∂_z ∂_y \; f \; dz ∧ dx & + ∂_y ∂_t \; a \; dx ∧ dy \\
-          - ∂_z ∂_z \; d \; dy ∧ dz & - ∂_z ∂_t \; a \; dz ∧ dx & - ∂_y ∂_y \; f \; dx ∧ dy \\
-          - ∂_z ∂_z \; d \; dy ∧ dz & - ∂_z ∂_z \; e \; dz ∧ dx & + ∂_y ∂_z \; e \; dx ∧ dy \\
-          - ∂_y ∂_y \; d \; dy ∧ dz & - ∂_x ∂_x \; e \; dz ∧ dx & - ∂_x ∂_x \; f \; dx ∧ dy \\
-          - ∂_y ∂_y \; d \; dy ∧ dz & - ∂_x ∂_x \; e \; dz ∧ dx & - ∂_x ∂_x \; f \; dx ∧ dy \\
-          - ∂_y ∂_y \; d \; dy ∧ dz & - ∂_x ∂_x \; e \; dz ∧ dx & - ∂_x ∂_x \; f \; dx ∧ dy \\
-      \end{bmatrix}
-
-   .. }}}
-
-
-.. admonition:: All Caclulations Steps :math:`⋆ d ⋆ d`
-   :class: dropdown
-
-   Use the expression of :math:`⋆ dR`
-
-   .. math::
-
-      \newcommand{\phan}{\phantom{∂_m m}}
-      ⋆ d ⋆ (dR) = ⋆ d \begin{bmatrix}
-          ( \; \phan   & - ∂_x d & - ∂_y e & - ∂_z f \; ) \; dt \\
-          ( \; - ∂_t d & \phan   & - ∂_y c & + ∂_z b \; ) \; dx \\
-          ( \; - ∂_t e & + ∂_x c & \phan   & - ∂_z a \; ) \; dy \\
-          ( \; - ∂_t f & - ∂_x b & + ∂_y a & \phan   \; ) \; dz \\
-      \end{bmatrix}
-
-   Appply the exterior derivative :math:`d`:
-
-   .. math::
-
-      \newcommand{\phan}{\phantom{∂_m m}}
-      ⋆ d ⋆ (dR) = ⋆ \begin{bmatrix}
-          - ∂_x ∂_x \; d \; dx ∧ dt & - ∂_y ∂_x \; d \; dy ∧ dt & - ∂_z ∂_x \; d \; dz ∧ dt \\
-          - ∂_x ∂_y \; e \; dx ∧ dt & - ∂_y ∂_y \; e \; dy ∧ dt & - ∂_z ∂_y \; e \; dz ∧ dt \\
-          - ∂_x ∂_z \; f \; dx ∧ dt & - ∂_y ∂_z \; f \; dy ∧ dt & - ∂_z ∂_z \; f \; dz ∧ dt \\
-          %
-          - ∂_t ∂_t \; d \; dt ∧ dx & - ∂_y ∂_t \; d \; dy ∧ dx & - ∂_z ∂_t \; d \; dz ∧ dx \\
-          - ∂_t ∂_y \; c \; dt ∧ dx & - ∂_y ∂_y \; c \; dy ∧ dx & - ∂_z ∂_y \; c \; dz ∧ dx \\
-          + ∂_t ∂_z \; b \; dt ∧ dx & + ∂_y ∂_z \; b \; dy ∧ dx & + ∂_z ∂_z \; b \; dz ∧ dx \\
-          %
-          - ∂_t ∂_t \; e \; dt ∧ dy & - ∂_x ∂_t \; e \; dx ∧ dy & - ∂_z ∂_t \; e \; dz ∧ dy \\
-          + ∂_t ∂_x \; c \; dt ∧ dy & + ∂_x ∂_x \; c \; dx ∧ dy & + ∂_z ∂_x \; c \; dz ∧ dy \\
-          - ∂_t ∂_z \; a \; dt ∧ dy & - ∂_x ∂_z \; a \; dx ∧ dy & - ∂_z ∂_z \; a \; dz ∧ dy \\
-          %
-          - ∂_t ∂_t \; f \; dt ∧ dz & - ∂_x ∂_t \; f \; dx ∧ dz & - ∂_y ∂_t \; f \; dy ∧ dz \\
-          - ∂_t ∂_x \; b \; dt ∧ dz & - ∂_x ∂_x \; b \; dx ∧ dz & - ∂_y ∂_x \; b \; dy ∧ dz \\
-          + ∂_t ∂_y \; a \; dt ∧ dz & + ∂_x ∂_y \; a \; dx ∧ dz & + ∂_y ∂_y \; a \; dy ∧ dz \\
-      \end{bmatrix}
-
-   Flip the signs:
-
-   .. math::
-
-      \newcommand{\phan}{\phantom{∂_m m}}
-      ⋆ d ⋆ (dR) = ⋆ \begin{bmatrix}
-          + ∂_x ∂_x \; d \; dt ∧ dx & + ∂_y ∂_x \; d \; dt ∧ dy & + ∂_z ∂_x \; d \; dt ∧ dz \\
-          + ∂_x ∂_y \; e \; dt ∧ dx & + ∂_y ∂_y \; e \; dt ∧ dy & + ∂_z ∂_y \; e \; dt ∧ dz \\
-          + ∂_x ∂_z \; f \; dt ∧ dx & + ∂_y ∂_z \; f \; dt ∧ dy & + ∂_z ∂_z \; f \; dt ∧ dz \\
-          %
-          - ∂_t ∂_t \; d \; dt ∧ dx & + ∂_y ∂_t \; d \; dx ∧ dy & - ∂_z ∂_t \; d \; dz ∧ dx \\
-          - ∂_t ∂_y \; c \; dt ∧ dx & + ∂_y ∂_y \; c \; dx ∧ dy & - ∂_z ∂_y \; c \; dz ∧ dx \\
-          + ∂_t ∂_z \; b \; dt ∧ dx & - ∂_y ∂_z \; b \; dx ∧ dy & + ∂_z ∂_z \; b \; dz ∧ dx \\
-          %
-          - ∂_t ∂_t \; e \; dt ∧ dy & - ∂_x ∂_t \; e \; dx ∧ dy & + ∂_z ∂_t \; e \; dy ∧ dz \\
-          + ∂_t ∂_x \; c \; dt ∧ dy & + ∂_x ∂_x \; c \; dx ∧ dy & - ∂_z ∂_x \; c \; dy ∧ dz \\
-          - ∂_t ∂_z \; a \; dt ∧ dy & - ∂_x ∂_z \; a \; dx ∧ dy & + ∂_z ∂_z \; a \; dy ∧ dz \\
-          %
-          - ∂_t ∂_t \; f \; dt ∧ dz & + ∂_x ∂_t \; f \; dz ∧ dx & - ∂_y ∂_t \; f \; dy ∧ dz \\
-          - ∂_t ∂_x \; b \; dt ∧ dz & + ∂_x ∂_x \; b \; dz ∧ dx & - ∂_y ∂_x \; b \; dy ∧ dz \\
-          + ∂_t ∂_y \; a \; dt ∧ dz & - ∂_x ∂_y \; a \; dz ∧ dx & + ∂_y ∂_y \; a \; dy ∧ dz \\
-      \end{bmatrix}
-
-   Gather:
-
-   .. math::
-
-      \newcommand{\phan}{\phantom{∂_m m}}
-      ⋆ d ⋆ (dR) = ⋆ \begin{bmatrix}
-          + ∂_x ∂_x \; d \; dt ∧ dx & + ∂_y ∂_x \; d \; dt ∧ dy & + ∂_z ∂_x \; d \; dt ∧ dz \\
-          + ∂_x ∂_y \; e \; dt ∧ dx & + ∂_y ∂_y \; e \; dt ∧ dy & + ∂_z ∂_y \; e \; dt ∧ dz \\
-          + ∂_x ∂_z \; f \; dt ∧ dx & + ∂_y ∂_z \; f \; dt ∧ dy & + ∂_z ∂_z \; f \; dt ∧ dz \\
-          - ∂_t ∂_t \; d \; dt ∧ dx & - ∂_t ∂_t \; e \; dt ∧ dy & - ∂_t ∂_t \; f \; dt ∧ dz \\
-          - ∂_t ∂_y \; c \; dt ∧ dx & + ∂_t ∂_x \; c \; dt ∧ dy & - ∂_t ∂_x \; b \; dt ∧ dz \\
-          + ∂_t ∂_z \; b \; dt ∧ dx & - ∂_t ∂_z \; a \; dt ∧ dy & + ∂_t ∂_y \; a \; dt ∧ dz \\
-          + ∂_z ∂_t \; e \; dy ∧ dz & - ∂_z ∂_t \; d \; dz ∧ dx & + ∂_y ∂_t \; d \; dx ∧ dy \\
-          - ∂_z ∂_x \; c \; dy ∧ dz & - ∂_z ∂_y \; c \; dz ∧ dx & + ∂_y ∂_y \; c \; dx ∧ dy \\
-          + ∂_z ∂_z \; a \; dy ∧ dz & + ∂_z ∂_z \; b \; dz ∧ dx & - ∂_y ∂_z \; b \; dx ∧ dy \\
-          - ∂_y ∂_t \; f \; dy ∧ dz & + ∂_x ∂_t \; f \; dz ∧ dx & - ∂_x ∂_t \; e \; dx ∧ dy \\
-          - ∂_y ∂_x \; b \; dy ∧ dz & + ∂_x ∂_x \; b \; dz ∧ dx & + ∂_x ∂_x \; c \; dx ∧ dy \\
-          + ∂_y ∂_y \; a \; dy ∧ dz & - ∂_x ∂_y \; a \; dz ∧ dx & - ∂_x ∂_z \; a \; dx ∧ dy \\
-       \end{bmatrix}
-
-.. admonition:: Gathering Terms :math:`d ⋆ d ⋆ + ⋆ d ⋆ d`
-   :class: dropdown
-
-   Under construction
+In Minkowski space, the Laplace-De Rham operator is :math:`d ⋆ d ⋆ + ⋆ d ⋆ d`.
+Applied to a rotation in spacetime, we obtain the wave equations:
 
 .. math::
 
-   (- ∂_t ∂_t a + ∂_x ∂_x a + ∂_t ∂_z b - ∂_t ∂_y c + ∂_x ∂_y b + ∂_x ∂_z c) dt ∧ dx \\
-   (- ∂_t ∂_t d + ∂_x ∂_x d - ∂_t ∂_z e + ∂_t ∂_y f + ∂_x ∂_y e + ∂_x ∂_z f) dt ∧ dx \\
-
-   d ⋆ d ⋆ R^{♭♭} = \begin{bmatrix}
-        & + ∂_y ∂_x \; a \; dt ∧ dy & + ∂_z ∂_x \; a \; dt ∧ dz \\
-        & + ∂_y ∂_y \; b \; dt ∧ dy & + ∂_z ∂_y \; b \; dt ∧ dz \\
-        & + ∂_y ∂_z \; c \; dt ∧ dy & + ∂_z ∂_z \; c \; dt ∧ dz \\
-        & - ∂_t ∂_t \; b \; dt ∧ dy & - ∂_t ∂_t \; c \; dt ∧ dz \\
-        & - ∂_t ∂_t \; b \; dt ∧ dy & - ∂_t ∂_t \; c \; dt ∧ dz \\
-        & - ∂_t ∂_t \; b \; dt ∧ dy & - ∂_t ∂_t \; c \; dt ∧ dz \\
-       - ∂_z ∂_z \; d \; dy ∧ dz & + ∂_z ∂_y \; f \; dz ∧ dx & + ∂_y ∂_t \; a \; dx ∧ dy \\
-       - ∂_z ∂_z \; d \; dy ∧ dz & - ∂_z ∂_t \; a \; dz ∧ dx & - ∂_y ∂_y \; f \; dx ∧ dy \\
-       - ∂_z ∂_z \; d \; dy ∧ dz & - ∂_z ∂_z \; e \; dz ∧ dx & + ∂_y ∂_z \; e \; dx ∧ dy \\
-       - ∂_y ∂_y \; d \; dy ∧ dz & - ∂_x ∂_x \; e \; dz ∧ dx & - ∂_x ∂_x \; f \; dx ∧ dy \\
-       - ∂_y ∂_y \; d \; dy ∧ dz & - ∂_x ∂_x \; e \; dz ∧ dx & - ∂_x ∂_x \; f \; dx ∧ dy \\
-       - ∂_y ∂_y \; d \; dy ∧ dz & - ∂_x ∂_x \; e \; dz ∧ dx & - ∂_x ∂_x \; f \; dx ∧ dy \\
+   (d ⋆ d ⋆ + ⋆ d ⋆ d) \begin{bmatrix}
+        - a \; dt ∧ dx \\
+        - b \; dt ∧ dy \\
+        - c \; dt ∧ dz \\
+       \+ d \; dy ∧ dz \\
+       \+ e \; dz ∧ dx \\
+       \+ f \; dx ∧ dy \\
    \end{bmatrix}
-   ⋆ d ⋆ (dR) = ⋆ \begin{bmatrix}
-        & + ∂_y ∂_x \; d \; dt ∧ dy & + ∂_z ∂_x \; d \; dt ∧ dz \\
-        & + ∂_y ∂_y \; e \; dt ∧ dy & + ∂_z ∂_y \; e \; dt ∧ dz \\
-        & + ∂_y ∂_z \; f \; dt ∧ dy & + ∂_z ∂_z \; f \; dt ∧ dz \\
-        & - ∂_t ∂_t \; e \; dt ∧ dy & - ∂_t ∂_t \; f \; dt ∧ dz \\
-        & + ∂_t ∂_x \; c \; dt ∧ dy & - ∂_t ∂_x \; b \; dt ∧ dz \\
-        & - ∂_t ∂_z \; a \; dt ∧ dy & + ∂_t ∂_y \; a \; dt ∧ dz \\
-       + ∂_z ∂_t \; e \; dy ∧ dz & - ∂_z ∂_t \; d \; dz ∧ dx & + ∂_y ∂_t \; d \; dx ∧ dy \\
-       - ∂_z ∂_x \; c \; dy ∧ dz & - ∂_z ∂_y \; c \; dz ∧ dx & + ∂_y ∂_y \; c \; dx ∧ dy \\
-       + ∂_z ∂_z \; a \; dy ∧ dz & + ∂_z ∂_z \; b \; dz ∧ dx & - ∂_y ∂_z \; b \; dx ∧ dy \\
-       - ∂_y ∂_t \; f \; dy ∧ dz & + ∂_x ∂_t \; f \; dz ∧ dx & - ∂_x ∂_t \; e \; dx ∧ dy \\
-       - ∂_y ∂_x \; b \; dy ∧ dz & + ∂_x ∂_x \; b \; dz ∧ dx & + ∂_x ∂_x \; c \; dx ∧ dy \\
-       + ∂_y ∂_y \; a \; dy ∧ dz & - ∂_x ∂_y \; a \; dz ∧ dx & - ∂_x ∂_z \; a \; dx ∧ dy \\
-    \end{bmatrix}
+   &= \begin{bmatrix}
+   - ∂_t^2 a & + ∂_x^2 a & + ∂_y^2 a & + ∂_z^2 a & dt∧dx \\
+   - ∂_t^2 b & + ∂_x^2 b & + ∂_y^2 b & + ∂_z^2 b & dt∧dy \\
+   - ∂_t^2 c & + ∂_x^2 c & + ∂_y^2 c & + ∂_z^2 c & dt∧dz \\
+   + ∂_t^2 d & - ∂_x^2 d & - ∂_y^2 d & - ∂_z^2 d & dy∧dz \\
+   + ∂_t^2 f & - ∂_x^2 f & - ∂_y^2 f & - ∂_z^2 f & dx∧dy \\
+   + ∂_t^2 e & - ∂_x^2 e & - ∂_y^2 e & - ∂_z^2 e & dz∧dx \\
+   \end{bmatrix}
 
-
+Calculations were performed with `pycartan
+<https://github.com/TUD-RST/pycartan>`_.
 
 .. }}}

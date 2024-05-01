@@ -88,3 +88,28 @@ Maxwell equations.
        ( + ∂_t b &+ ∂_x f & \_      & - ∂_z d \, ) \; dt ∧ dz ∧ dx \\
        ( + ∂_t c &- ∂_x e & + ∂_y d & \_      \, ) \; dt ∧ dx ∧ dy \\
    \end{bmatrix}
+
+Laplace-De Rham and the Wave Equation
+-------------------------------------
+
+In Minkowski space, the Laplace-De Rham operator is :math:`d ⋆ d ⋆ + ⋆ d ⋆ d`.
+Applied to a rotation in spacetime, we obtain the wave equations:
+
+.. math::
+
+   (d ⋆ d ⋆ + ⋆ d ⋆ d) \begin{bmatrix}
+        - a \; dt ∧ dx \\
+        - b \; dt ∧ dy \\
+        - c \; dt ∧ dz \\
+       \+ d \; dy ∧ dz \\
+       \+ e \; dz ∧ dx \\
+       \+ f \; dx ∧ dy \\
+   \end{bmatrix}
+   &= \begin{bmatrix}
+   - ∂_t^2 a & + ∂_x^2 a & + ∂_y^2 a & + ∂_z^2 a & dt∧dx \\
+   - ∂_t^2 b & + ∂_x^2 b & + ∂_y^2 b & + ∂_z^2 b & dt∧dy \\
+   - ∂_t^2 c & + ∂_x^2 c & + ∂_y^2 c & + ∂_z^2 c & dt∧dz \\
+   + ∂_t^2 d & - ∂_x^2 d & - ∂_y^2 d & - ∂_z^2 d & dy∧dz \\
+   + ∂_t^2 f & - ∂_x^2 f & - ∂_y^2 f & - ∂_z^2 f & dx∧dy \\
+   + ∂_t^2 e & - ∂_x^2 e & - ∂_y^2 e & - ∂_z^2 e & dz∧dx \\
+   \end{bmatrix}
