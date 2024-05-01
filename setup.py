@@ -16,6 +16,8 @@ setup(
         'sphinx_sitemap',
         'sphinx-togglebutton',
         'sphinx-reredirects',
+        'numpy',
+        'scipy',
         'symbtools',
         'pycartan',
     ],
