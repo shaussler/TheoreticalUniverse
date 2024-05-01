@@ -8,8 +8,15 @@ setup(
     description='Theoretical Universe Python Dependencies',
     packages=find_packages(),
     install_requires=[
-        'sphinx', 'myst_parser', 'furo', 'sphinx-book-theme',
-        'sphinxcontrib-googleanalytics', 'sphinx_sitemap',
-        'sphinx-togglebutton', 'sphinx-reredirects',
+        'sphinx',
+        'myst_parser',
+        'furo',
+        'sphinx-book-theme',
+        'sphinxcontrib-googleanalytics',
+        'sphinx_sitemap',
+        'sphinx-togglebutton',
+        'sphinx-reredirects',
+        'symbtools',
+        'pycartan',
     ],
 )
