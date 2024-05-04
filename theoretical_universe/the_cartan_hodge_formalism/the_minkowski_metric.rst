@@ -27,81 +27,59 @@ metric tensor together with its basis:
 
 .. math::
 
-   \begin{equation}
    \eta^{♯♯} = \begin{bmatrix}
        + ∂_t ⊗ ∂_t &             &             &             \\
                    & - ∂_x ⊗ ∂_x &             &             \\
                    &             & - ∂_y ⊗ ∂_y &             \\
                    &             &             & - ∂_z ⊗ ∂_z \\
    \end{bmatrix}
-   \end{equation}
 
 Simply put and much more compactly:
 
 .. math::
 
-   \begin{equation}
    \eta^{♯♯} = \begin{bmatrix}
        + ∂_t ⊗ ∂_t \\
        - ∂_x ⊗ ∂_x \\
        - ∂_y ⊗ ∂_y \\
        - ∂_z ⊗ ∂_z \\
    \end{bmatrix}
-   \end{equation}
 
 Equivalently and with the same procedure and arguments, we express the doubly
 covariant metric tensor with:
 
 .. math::
 
-   \begin{equation}
    \eta^{♭♭} = \begin{bmatrix}
        + dx^t ⊗ dx^t \\
        - dx^x ⊗ dx^x \\
        - dx^y ⊗ dx^y \\
        - dx^z ⊗ dx^z \\
    \end{bmatrix}
-   \end{equation}
 
 .. rubric:: Applying the metric to a vectors and covectors
 
 We can flatten a basis vector with the flat operator :math:`♭`:
 
-.. math::
-
-   \begin{equation}
-   (∂_μ)^♭ = η_{μν} dx^ν
-   \end{equation}
+.. math:: (∂_μ)^♭ = η_{μν} dx^ν
 
 Or sharpen a basis covector with the flat operator :math:`♯`:
 
-.. math::
-
-   \begin{equation}
-   (dx^μ)^♯ = η^{μν} ∂_ν
-   \end{equation}
+.. math:: (dx^μ)^♯ = η^{μν} ∂_ν
 
 .. rubric:: Applying the metric to wedge products of vectors and covectors
 
 The indices of the wedge product can be sharpened or flattend at will:
 
-.. math::
-
-   \begin{equation}
-   (∂_μ ∧ ∂_ν)^{♭♯} = η_{γμ} dx^γ ∧ ∂_ν
-   \end{equation}
+.. math:: (∂_μ ∧ ∂_ν)^{♭♯} = η_{γμ} dx^γ ∧ ∂_ν
 
 .. math::
 
-   \begin{equation}
    (∂_μ ∧ ∂_ν)^{♯♭} = η_{γν} ∂_μ ∧ dx^γ
-   \end{equation}
 
 .. math::
 
-   \begin{equation}
    (∂_μ ∧ ∂_ν)^{♭♭} = η_{δμ} η_{γν} dx^δ ∧ dx^γ
-   \end{equation}
 
 .. rubric:: Applying the metric to tensor products of vectors and covectors
 
@@ -109,18 +87,12 @@ The indices of the tensor product can be sharpened or flattend at will:
 
 .. math::
 
-   \begin{equation}
    (∂_μ ⊗ ∂_ν)^{♭♯} = η_{γμ} dx^γ ⊗ ∂_ν
-   \end{equation}
 
 .. math::
 
-   \begin{equation}
    (∂_μ ⊗ ∂_ν)^{♯♭} = η_{γν} ∂_μ ⊗ dx^γ
-   \end{equation}
 
 .. math::
 
-   \begin{equation}
    (∂_μ ⊗ ∂_ν)^{♭♭} = η_{δμ} η_{γν} dx^δ ⊗ dx^γ
-   \end{equation}

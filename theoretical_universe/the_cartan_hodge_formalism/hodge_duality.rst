@@ -154,9 +154,7 @@ Duality in Minkowski space
    ⋆ dz = - dt ∧ dx ∧ dy
 
 .. math::
-   :nowrap:
 
-   \begin{equation}
    \newcommand{\+}{\phantom{+}}
    \begin{matrix}
    ⋆ (dt ∧ dx) &=  - dy ∧ dz \\
@@ -166,4 +164,3 @@ Duality in Minkowski space
    ⋆ (dz ∧ dx) &= \+ dt ∧ dy \\
    ⋆ (dx ∧ dy) &= \+ dt ∧ dz \\
    \end{matrix}
-   \end{equation}
