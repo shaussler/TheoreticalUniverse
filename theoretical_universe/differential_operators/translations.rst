@@ -51,13 +51,12 @@ translation:
 
    .. math::
 
-      \newcommand{\+}{\phantom{+}}
-      T^♭ = \begin{bmatrix}
-          \+ a \; dt \\
-           - b \; dx \\
-           - c \; dy \\
-           - d \; dz \\
-      \end{bmatrix}
+      T^♭ = \left[ \begin{aligned}
+            & a \; dt \\
+          - & b \; dx \\
+          - & c \; dy \\
+          - & d \; dz \\
+      \end{aligned} \right]
 
 .. admonition:: All Calculation Steps
    :class: dropdown
@@ -132,13 +131,12 @@ translation:
 
    .. math::
 
-      \newcommand{\+}{\phantom{+}}
-      T^♭ = \begin{bmatrix}
-          \+ a \; dt \\
-           - b \; dx \\
-           - c \; dy \\
-           - d \; dz \\
-      \end{bmatrix}
+      T^♭ = \left[ \begin{aligned}
+             &a \; dt \\
+           - &b \; dx \\
+           - &c \; dy \\
+           - &d \; dz \\
+      \end{aligned} \right]
 
 
    .. }}}

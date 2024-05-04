@@ -32,19 +32,25 @@ Maxwell equations the following expressions:
 
 .. rubric:: Inhomogenous Maxwell equations
 
-.. math:: \newcommand{\E}{\tilde{E}}
+.. math::
+
+   \begin{aligned}
               & + ∂_x \E^x & + ∂_y \E^y & + ∂_z \E^z & = & + μ_0 c ρ \\
    + ∂_t \E^x &            & - ∂_y  B^z & + ∂_z  B^y & = & - μ_0 J^x \\
    + ∂_t \E^y & + ∂_x  B^z &            & - ∂_z  B^x & = & - μ_0 J^y \\
    + ∂_t \E^z & - ∂_x  B^y & + ∂_y  B^x &            & = & - μ_0 J^z \\
+   \end{aligned}
 
 .. rubric:: Homogenous Maxwell equations
 
-.. math:: \newcommand{\E}{\tilde{E}}
+.. math::
+
+   \begin{aligned}
               & + ∂_x  B^x & + ∂_y  B^y & + ∂_z  B^z & = & 0 \\
    + ∂_t  B^x &            & + ∂_y \E^z & - ∂_z \E^y & = & 0 \\
    + ∂_t  B^y & - ∂_x \E^z &            & + ∂_z \E^x & = & 0 \\
    + ∂_t  B^z & + ∂_x \E^y & - ∂_y \E^x &            & = & 0 \\
+   \end{aligned}
 
 .. }}}
 
@@ -75,24 +81,26 @@ the Hodge dual.
 .. rubric:: Exterior Derivative of the Hodge Dual of Rotations in Differential
    Form
 
-.. math:: \newcommand{\_}{\phantom{∂_m m}}
-   d( ⋆ R^{♭♭} ) = \begin{bmatrix}
-       ( \_      &+ ∂_x a & + ∂_y b & + ∂_z c \, ) \; dx ∧ dy ∧ dz \\
-       ( + ∂_t a &\_      & - ∂_y f & + ∂_z e \, ) \; dt ∧ dy ∧ dz \\
-       ( + ∂_t b &+ ∂_x f & \_      & - ∂_z d \, ) \; dt ∧ dz ∧ dx \\
-       ( + ∂_t c &- ∂_x e & + ∂_y d & \_      \, ) \; dt ∧ dx ∧ dy \\
-   \end{bmatrix}
+.. math::
+
+   d( ⋆ R^{♭♭} ) = \left[ \begin{aligned}
+       (&         & + ∂_x a & + ∂_y b & + ∂_z c \:) \; dx ∧ dy ∧ dz \\
+       (& + ∂_t a &         & - ∂_y f & + ∂_z e \:) \; dt ∧ dy ∧ dz \\
+       (& + ∂_t b & + ∂_x f &         & - ∂_z d \:) \; dt ∧ dz ∧ dx \\
+       (& + ∂_t c & - ∂_x e & + ∂_y d &         \:) \; dt ∧ dx ∧ dy \\
+   \end{aligned} \right]
 
 .. rubric:: Hodge Dual of the Exterior Derivative of Rotations in Differential
    Form
 
-.. math:: \newcommand{\_}{\phantom{∂_m m}}
-   ⋆ (dR^{♭♭}) = \begin{bmatrix}
-       ( \_      & - ∂_x d & - ∂_y e & - ∂_z f \, ) \; dt \\
-       ( - ∂_t d & \_      & - ∂_y c & + ∂_z b \, ) \; dx \\
-       ( - ∂_t e & + ∂_x c & \_      & - ∂_z a \, ) \; dy \\
-       ( - ∂_t f & - ∂_x b & + ∂_y a & \_      \, ) \; dz \\
-   \end{bmatrix}
+.. math::
+
+   ⋆ (dR^{♭♭}) = \left[ \begin{aligned}
+       (&         & - ∂_x d & - ∂_y e & - ∂_z f \:) \; dt \\
+       (& - ∂_t d &         & - ∂_y c & + ∂_z b \:) \; dx \\
+       (& - ∂_t e & + ∂_x c &         & - ∂_z a \:) \; dy \\
+       (& - ∂_t f & - ∂_x b & + ∂_y a &         \:) \; dz \\
+   \end{aligned} \right]
 
 .. }}}
 
@@ -103,7 +111,8 @@ Identifying the Equations of Mr. Maxwell
 
 We identifiy the components of the electric and magnetic fields:
 
-.. math:: \newcommand{\E}{\tilde{E}}
+.. math::
+
    \begin{matrix}
        \E^x = a \\
        \E^y = b \\
@@ -115,7 +124,7 @@ We identifiy the components of the electric and magnetic fields:
 
 The doubly covariant Faraday tensor is identified as:
 
-.. math:: \newcommand{\E}{\tilde{E}}
+.. math::
    F^{♭♭} = \begin{bmatrix}
        \E^x \; dx ∧ dt \\
        \E^y \; dy ∧ dt \\
@@ -129,7 +138,8 @@ We conclude electromagnetism is a twist in spacetime. The Maxwell equations are:
 
 .. topic:: Inhomogenous Maxwell Equations
 
-   .. math:: \newcommand{\E}{\tilde{E}}
+   .. math::
+
       d ⋆ \begin{bmatrix}
           \E^x \; dx ∧ dt \\ \E^y \; dy ∧ dt \\ \E^z \; dz ∧ dt \\
            B^x \; dy ∧ dz \\  B^y \; dz ∧ dx \\  B^z \; dx ∧ dy \\
@@ -143,7 +153,8 @@ We conclude electromagnetism is a twist in spacetime. The Maxwell equations are:
 
 .. topic:: Homogenous Maxwell Equations
 
-   .. math:: \newcommand{\E}{\tilde{E}}
+   .. math::
+
       ⋆ d \begin{bmatrix}
           \E^x \; dx ∧ dt \\ \E^y \; dy ∧ dt \\ \E^z \; dz ∧ dt \\
            B^x \; dy ∧ dz \\  B^y \; dz ∧ dx \\  B^z \; dx ∧ dy \\
@@ -163,14 +174,23 @@ differential form:
 Most interestingly, since :math:`⋆dF` is a 1-form and :math:`d*F` result is a
 3-form, we can merge the inhomogenous and homogenous equations:
 
-.. math:: \newcommand{\E}{\tilde{E}}
+.. math::
+
    d ⋆ \begin{bmatrix}
-       \E^x \; dx ∧ dt \\ \E^y \; dy ∧ dt \\ \E^z \; dz ∧ dt \\
-        B^x \; dy ∧ dz \\  B^y \; dz ∧ dx \\  B^z \; dx ∧ dy \\
+       \E^x \; dx ∧ dt \\
+       \E^y \; dy ∧ dt \\
+       \E^z \; dz ∧ dt \\
+        B^x \; dy ∧ dz \\
+        B^y \; dz ∧ dx \\
+        B^z \; dx ∧ dy \\
    \end{bmatrix}
    - ⋆ d \begin{bmatrix}
-       \E^x \; dx ∧ dt \\ \E^y \; dy ∧ dt \\ \E^z \; dz ∧ dt \\
-        B^x \; dy ∧ dz \\  B^y \; dz ∧ dx \\  B^z \; dx ∧ dy \\
+       \E^x \; dx ∧ dt \\
+       \E^y \; dy ∧ dt \\
+       \E^z \; dz ∧ dt \\
+        B^x \; dy ∧ dz \\
+        B^y \; dz ∧ dx \\
+        B^z \; dx ∧ dy \\
   \end{bmatrix}
    = \begin{bmatrix}
        + μ_0 c ρ \; dx ∧ dy ∧ dz\\
@@ -181,10 +201,15 @@ Most interestingly, since :math:`⋆dF` is a 1-form and :math:`d*F` result is a
 
 .. topic:: The Maxwell Equations in Differential Form
 
-   .. math:: \newcommand{\E}{\tilde{E}}
+   .. math::
+
       (d ⋆ - ⋆ d ) \begin{bmatrix}
-          \E^x \; dx ∧ dt \\ \E^y \; dy ∧ dt \\ \E^z \; dz ∧ dt \\
-           B^x \; dy ∧ dz \\  B^y \; dz ∧ dx \\  B^z \; dx ∧ dy \\
+          \E^x \; dx ∧ dt \\
+          \E^y \; dy ∧ dt \\
+          \E^z \; dz ∧ dt \\
+           B^x \; dy ∧ dz \\
+           B^y \; dz ∧ dx \\
+           B^z \; dx ∧ dy \\
       \end{bmatrix}
       = \begin{bmatrix}
           + μ_0 c ρ \; dx ∧ dy ∧ dz\\

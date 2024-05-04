@@ -86,10 +86,7 @@ Which permits to conclude:
 
 In other words and for clarity:
 
-.. math::
-
-   \newcommand{\e}{\mathbf{e}}
-   (df)^♯ = ∂_x f \e_x + ∂_y f \e_y + ∂_z f \e_z
+.. math:: (df)^♯ = ∂_x f \mathbf{e}_x + ∂_y f \mathbf{e}_y + ∂_z f \mathbf{e}_z
 
 .. }}}
 

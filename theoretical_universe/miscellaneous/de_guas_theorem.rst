@@ -11,7 +11,7 @@ of it and recently learned about Clifford Algebra as well as the Hodge dual, I
 decided I would have a go at it that way. It felt a proof should work out
 nicely, and it does!
 
-.. image:: _static/de_guas_theorem_illustration.svg
+.. image:: _static/de_guas_theorem_illustration.png
    :align: center
    :width: 40%
 
@@ -34,22 +34,18 @@ Beginning with the Clifford product of :math:`\mathbf{CA}` and :math:`\mathbf{CB
 
 .. math::
 
-   \begin{align}
-   \mathbf{CA\;CB} = & (\mathbf{CO + OA}) (\mathbf{CO + OB}) \\
-                   = & \mathbf{CO\;CO} + \mathbf{CO\;OB} + \mathbf{OA\;CO} + \mathbf{OA\;OB} \\
-   \end{align}
+   \mathbf{CA\;CB} &= (\mathbf{CO + OA}) (\mathbf{CO + OB}) \\
+                   &= \mathbf{CO\;CO} + \mathbf{CO\;OB} + \mathbf{OA\;CO} + \mathbf{OA\;OB} \\
 
 Expanding both sides into dot and wedge products:
 
 .. math::
 
-   \begin{align}
    \mathbf{CA} \cdot \mathbf{CB} + \mathbf{CA} \wedge \mathbf{CB}
    = & \mathbf{CO} \cdot  \mathbf{CO} + \mathbf{CO} \wedge \mathbf{CO} + \\
      & \mathbf{CO} \cdot  \mathbf{OB} + \mathbf{CO} \wedge \mathbf{OB} + \\
      & \mathbf{OA} \cdot  \mathbf{CO} + \mathbf{OA} \wedge \mathbf{CO} + \\
      & \mathbf{OA} \cdot  \mathbf{OB} + \mathbf{OA} \wedge \mathbf{OB} + \\
-   \end{align}
 
 Since :math:`\mathbf{CO}` is aligned with itself, its wedge product is zero (but
 not its dot product). Since we make the hypothesis of a right corner in
@@ -57,12 +53,10 @@ not its dot product). Since we make the hypothesis of a right corner in
 
 .. math::
 
-   \begin{align}
    \mathbf{CA} \cdot \mathbf{CB} + \mathbf{CA} \wedge \mathbf{CB} = & + \mathbf{CO} \cdot  \mathbf{CO} \\
                                                                     & + \mathbf{CO} \wedge \mathbf{OB} \\
                                                                     & + \mathbf{OA} \wedge \mathbf{CO} \\
                                                                     & + \mathbf{OA} \wedge \mathbf{OB} \\
-   \end{align}
 
 Identifying the Bivector Part
 -----------------------------

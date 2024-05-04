@@ -55,6 +55,7 @@ latex_elements = {
 \usepackage{amsmath}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
+\newcommand{\E}{\tilde{E}}
 ''',
     'fncychap': r'\usepackage[Bjornstrup]{fncychap}',
     'printindex': r'\footnotesize\raggedright\printindex',
@@ -116,20 +117,7 @@ mathjax3_config = {
     'tex': {
        'packages': {'[+]': ['ams']},
        'macros': {
-
-            'et': r'\mathbf{e_t}',
-
-            # Redefine vectors
-            # ----------------
-
-            'vect': r'\overrightarrow',
-
-            # Redefine matrices
-            # -----------------
-
-            '{': r'\begin{bmatrix}',
-            '}': r'\end{bmatrix}',
-
+            '\E': r'\tilde{E}',
         }
     },
     'tex2jax': {

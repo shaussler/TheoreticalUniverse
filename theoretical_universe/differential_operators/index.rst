@@ -68,27 +68,23 @@ Maxwell equations.
 
 .. math::
 
-   \newcommand{\_}{\phantom{∂_m m}}
-
-   ⋆ (dR^{♭♭}) = \begin{bmatrix}
-       ( \_      & - ∂_x d & - ∂_y e & - ∂_z f \, ) \; dt \\
-       ( - ∂_t d & \_      & - ∂_y c & + ∂_z b \, ) \; dx \\
-       ( - ∂_t e & + ∂_x c & \_      & - ∂_z a \, ) \; dy \\
-       ( - ∂_t f & - ∂_x b & + ∂_y a & \_      \, ) \; dz \\
-   \end{bmatrix}
+   ⋆ (dR^{♭♭}) = \left[ \begin{aligned}
+       ( &         & - ∂_x d & - ∂_y e & - ∂_z f & \: ) \; dt \\
+       ( & - ∂_t d &         & - ∂_y c & + ∂_z b & \: ) \; dx \\
+       ( & - ∂_t e & + ∂_x c &         & - ∂_z a & \: ) \; dy \\
+       ( & - ∂_t f & - ∂_x b & + ∂_y a &         & \: ) \; dz \\
+   \end{aligned} \right]
 
 .. rubric:: Exterior Derivative of the Hodge Dual of Rotations in Differential Form
 
 .. math::
 
-   \newcommand{\_}{\phantom{∂_m m}}
-
-   d( ⋆ R^{♭♭} ) = \begin{bmatrix}
-       ( \_      &+ ∂_x a & + ∂_y b & + ∂_z c \, ) \; dx ∧ dy ∧ dz \\
-       ( + ∂_t a &\_      & - ∂_y f & + ∂_z e \, ) \; dt ∧ dy ∧ dz \\
-       ( + ∂_t b &+ ∂_x f & \_      & - ∂_z d \, ) \; dt ∧ dz ∧ dx \\
-       ( + ∂_t c &- ∂_x e & + ∂_y d & \_      \, ) \; dt ∧ dx ∧ dy \\
-   \end{bmatrix}
+   d( ⋆ R^{♭♭} ) = \left[ \begin{aligned}
+       ( &         &+ ∂_x a & + ∂_y b & + ∂_z c & \: ) \; dx ∧ dy ∧ dz \\
+       ( & + ∂_t a &        & - ∂_y f & + ∂_z e & \: ) \; dt ∧ dy ∧ dz \\
+       ( & + ∂_t b &+ ∂_x f &         & - ∂_z d & \: ) \; dt ∧ dz ∧ dx \\
+       ( & + ∂_t c &- ∂_x e & + ∂_y d &         & \: ) \; dt ∧ dx ∧ dy \\
+   \end{aligned} \right]
 
 .. rubric:: Laplace-De Rham on Rotations in Differential Form
 
@@ -97,15 +93,14 @@ Applied to a rotation in spacetime, we obtain the wave equations:
 
 .. math::
 
-   \newcommand{\+}{\phantom{+}}
-   (d ⋆ d ⋆ + ⋆ d ⋆ d) \begin{bmatrix}
-        - a \; dt ∧ dx \\
-        - b \; dt ∧ dy \\
-        - c \; dt ∧ dz \\
-       \+ d \; dy ∧ dz \\
-       \+ e \; dz ∧ dx \\
-       \+ f \; dx ∧ dy \\
-   \end{bmatrix}
+   (d ⋆ d ⋆ + ⋆ d ⋆ d) \left[ \begin{aligned}
+        - & a \; dt ∧ dx \\
+        - & b \; dt ∧ dy \\
+        - & c \; dt ∧ dz \\
+          & d \; dy ∧ dz \\
+          & e \; dz ∧ dx \\
+          & f \; dx ∧ dy \\
+   \end{aligned} \right]
    &= \begin{bmatrix}
    - ∂_t^2 a & + ∂_x^2 a & + ∂_y^2 a & + ∂_z^2 a & dt∧dx \\
    - ∂_t^2 b & + ∂_x^2 b & + ∂_y^2 b & + ∂_z^2 b & dt∧dy \\

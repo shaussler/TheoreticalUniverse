@@ -65,15 +65,14 @@ differential 2-form representative of the rotation:
 
    .. math::
 
-      \newcommand{\+}{\phantom{+}}
-      R^{♭♭} = \begin{bmatrix}
-           - a \; dt ∧ dx \\
-           - b \; dt ∧ dy \\
-           - c \; dt ∧ dz \\
-          \+ d \; dy ∧ dz \\
-          \+ e \; dz ∧ dx \\
-          \+ f \; dx ∧ dy \\
-      \end{bmatrix}
+      R^{♭♭} = \left[ \begin{aligned}
+           - & a \; dt ∧ dx \\
+           - & b \; dt ∧ dy \\
+           - & c \; dt ∧ dz \\
+             & d \; dy ∧ dz \\
+             & e \; dz ∧ dx \\
+             & f \; dx ∧ dy \\
+      \end{aligned} \right]
 
 .. admonition:: All Calculation Steps
    :class: dropdown
@@ -169,11 +168,14 @@ differential 2-form representative of the rotation:
 
    .. math::
 
-      \newcommand{\+}{\phantom{+}}
-      R^{♭♭} = \begin{bmatrix}
-             - a \; dt ∧ dx \\  - b \; dt ∧ dy \\  - c \; dt ∧ dz \\
-            \+ d \; dy ∧ dz \\ \+ e \; dz ∧ dx \\ \+ f \; dx ∧ dy \\
-      \end{bmatrix}
+      R^{♭♭} = \left[ \begin{aligned}
+             - & a \; dt ∧ dx \\
+             - & b \; dt ∧ dy \\
+             - & c \; dt ∧ dz \\
+               & d \; dy ∧ dz \\
+               & e \; dz ∧ dx \\
+               & f \; dx ∧ dy \\
+      \end{aligned} \right]
 
    .. }}}
 
@@ -184,8 +186,12 @@ The hodge dual is:
    .. math::
 
       ⋆ R^{♭♭} = \begin{bmatrix}
-          a \; dy ∧ dz \\ b \; dz ∧ dx \\ c \; dx ∧ dy \\
-          d \; dt ∧ dx \\ e \; dt ∧ dy \\ f \; dt ∧ dz \\
+          a \; dy ∧ dz \\
+          b \; dz ∧ dx \\
+          c \; dx ∧ dy \\
+          d \; dt ∧ dx \\
+          e \; dt ∧ dy \\
+          f \; dt ∧ dz \\
       \end{bmatrix}
 
 .. admonition:: All Calculation Steps
@@ -197,44 +203,53 @@ The hodge dual is:
 
    .. math::
 
-      \newcommand{\+}{\phantom+}
-      ⋆ R^{♭♭} = ⋆ \begin{bmatrix}
-           - a \; dt ∧ dx \\  - b \; dt ∧ dy \\  - c \; dt ∧ dz \\
-          \+ d \; dy ∧ dz \\ \+ e \; dz ∧ dx \\ \+ f \; dx ∧ dy \\
-      \end{bmatrix}
+      ⋆ R^{♭♭} = ⋆ \left[ \begin{aligned}
+           - a \; dt ∧ dx \\
+           - b \; dt ∧ dy \\
+           - c \; dt ∧ dz \\
+             d \; dy ∧ dz \\
+             e \; dz ∧ dx \\
+             f \; dx ∧ dy \\
+      \end{aligned} \right]
 
    Distribute the Hodge operator :math:`⋆`:
 
    .. math::
 
-      \newcommand{\+}{\phantom+}
-      ⋆ R^{♭♭} = \begin{bmatrix}
-           - a \; ⋆ (dt ∧ dx) \\  - b \; ⋆ (dt ∧ dy) \\  - c \; ⋆ (dt ∧ dz) \\
-          \+ d \; ⋆ (dy ∧ dz) \\ \+ e \; ⋆ (dz ∧ dx) \\ \+ f \; ⋆ (dx ∧ dy) \\
-      \end{bmatrix}
+      ⋆ R^{♭♭} = \left[ \begin{aligned}
+           - a \; ⋆ (dt ∧ dx) \\
+           - b \; ⋆ (dt ∧ dy) \\
+           - c \; ⋆ (dt ∧ dz) \\
+             d \; ⋆ (dy ∧ dz) \\
+             e \; ⋆ (dz ∧ dx) \\
+             f \; ⋆ (dx ∧ dy) \\
+      \end{aligned} \right]
 
    Apply :ref:`their Hodge dual to each basis element
    <duality_in_minkowski_space>`:
 
    .. math::
 
-      \newcommand{\+}{\phantom+}
-      ⋆ R^{♭♭} = \begin{bmatrix}
+      ⋆ R^{♭♭} = \left[ \begin{aligned}
            - a \; (-1) \; dy ∧ dz \\
            - b \; (-1) \; dz ∧ dx \\
            - c \; (-1) \; dx ∧ dy \\
-          \+ d \; (+1) \; dt ∧ dx \\
-          \+ e \; (+1) \; dt ∧ dy \\
-          \+ f \; (+1) \; dt ∧ dz \\
-      \end{bmatrix}
+             d \; (+1) \; dt ∧ dx \\
+             e \; (+1) \; dt ∧ dy \\
+             f \; (+1) \; dt ∧ dz \\
+      \end{aligned} \right]
 
    Conclude:
 
    .. math::
 
       ⋆ R^{♭♭} = \begin{bmatrix}
-          a \; dy ∧ dz \\ b \; dz ∧ dx \\ c \; dx ∧ dy \\
-          d \; dt ∧ dx \\ e \; dt ∧ dy \\ f \; dt ∧ dz \\
+          a \; dy ∧ dz \\
+          b \; dz ∧ dx \\
+          c \; dx ∧ dy \\
+          d \; dt ∧ dx \\
+          e \; dt ∧ dy \\
+          f \; dt ∧ dz \\
       \end{bmatrix}
 
    .. }}}
@@ -255,13 +270,12 @@ obtain:
 
    .. math::
 
-      \newcommand{\_}{\phantom{∂_m m}}
-      ⋆ (dR^{♭♭}) = \begin{bmatrix}
-          ( \_      & - ∂_x d & - ∂_y e & - ∂_z f \, ) \; dt \\
-          ( - ∂_t d & \_      & - ∂_y c & + ∂_z b \, ) \; dx \\
-          ( - ∂_t e & + ∂_x c & \_      & - ∂_z a \, ) \; dy \\
-          ( - ∂_t f & - ∂_x b & + ∂_y a & \_      \, ) \; dz \\
-      \end{bmatrix}
+      ⋆ (dR^{♭♭}) = \left[ \begin{aligned}
+          (&         & - ∂_x d & - ∂_y e & - ∂_z f \:) \; dt \\
+          (& - ∂_t d &         & - ∂_y c & + ∂_z b \:) \; dx \\
+          (& - ∂_t e & + ∂_x c &         & - ∂_z a \:) \; dy \\
+          (& - ∂_t f & - ∂_x b & + ∂_y a &         \:) \; dz \\
+      \end{aligned} \right]
 
 .. admonition:: All calculation steps
    :class: dropdown
@@ -273,48 +287,52 @@ obtain:
    .. math::
 
       dR^{♭♭} = \begin{bmatrix}
-          d( - a \; dt ∧ dx ) \\ d( - b \; dt ∧ dy ) \\ d( - c \; dt ∧ dz ) \\
-          d( + d \; dy ∧ dz ) \\ d( + e \; dz ∧ dx ) \\ d( + f \; dx ∧ dy ) \\
+          d( - a \; dt ∧ dx ) \\
+          d( - b \; dt ∧ dy ) \\
+          d( - c \; dt ∧ dz ) \\
+          d( + d \; dy ∧ dz ) \\
+          d( + e \; dz ∧ dx ) \\
+          d( + f \; dx ∧ dy ) \\
       \end{bmatrix}
 
    Apply the exterior derivative:
 
    .. math::
 
-      {\scriptsize dR^{♭♭} = \begin{bmatrix}
+      dR^{♭♭} = \begin{bmatrix}
                                   &                         & ∂_y (-a)\; dy ∧ dt ∧ dx & ∂_z (-a)\; dz ∧ dt ∧ dx \\
                                   & ∂_x (-b)\; dx ∧ dt ∧ dy &                         & ∂_z (-b)\; dz ∧ dt ∧ dy \\
                                   & ∂_x (-c)\; dx ∧ dt ∧ dz & ∂_y (-c)\; dy ∧ dt ∧ dz &                         \\
           ∂_t (+d)\; dt ∧ dy ∧ dz & ∂_x (+d)\; dx ∧ dy ∧ dz &                         &                         \\
           ∂_t (+e)\; dt ∧ dz ∧ dx &                         & ∂_y (+e)\; dy ∧ dz ∧ dx &                         \\
           ∂_t (+f)\; dt ∧ dx ∧ dy &                         &                         & ∂_z (+f)\; dz ∧ dx ∧ dy \\
-      \end{bmatrix}}
+      \end{bmatrix}
 
    Reorder the wedge products :math:`dx^μ \wedge dx^{ν} ∧ dx^{ξ}`. The sign is flipped for every odd permutations:
 
    .. math::
 
-      {\scriptsize dR^{♭♭} = \begin{bmatrix}
+      dR^{♭♭} = \begin{bmatrix}
                                    &                         & ∂_y (-a)(+1)\; dt∧dx∧dy & ∂_z (-a)(-1)\; dt∧dz∧dx \\
                                    & ∂_x (-b)(-1)\; dt∧dx∧dy &                         & ∂_z (-b)(+1)\; dt∧dy∧dz \\
                                    & ∂_x (-c)(+1)\; dt∧dz∧dx & ∂_y (-c)(-1)\; dt∧dy∧dz &                         \\
           ∂_t (+d)(+1)\; dt∧dy∧ dz & ∂_x (+d)(+1)\; dx∧dy∧dz &                         &                         \\
           ∂_t (+e)(+1)\; dt∧dz∧ dx &                         & ∂_y (+e)(+1)\; dx∧dy∧dz &                         \\
           ∂_t (+f)(+1)\; dt∧dx∧ dy &                         &                         & ∂_z (+f)(+1)\; dx∧dy∧dz \\
-      \end{bmatrix}}
+      \end{bmatrix}
 
    Simplify:
 
    .. math::
 
-      {\scriptsize dR^{♭♭} = \begin{bmatrix}
+      dR^{♭♭} = \begin{bmatrix}
                                  &                         & ∂_y (-a)\; dt ∧ dx ∧ dy & ∂_z (+a)\; dt ∧ dz ∧ dx \\
                                  & ∂_x (+b)\; dt ∧ dx ∧ dy &                         & ∂_z (-b)\; dt ∧ dy ∧ dz \\
                                  & ∂_x (-c)\; dt ∧ dz ∧ dx & ∂_y (+c)\; dt ∧ dy ∧ dz &                         \\
           ∂_t (+d)\; dt ∧ dy∧ dz & ∂_x (+d)\; dx ∧ dy ∧ dz &                         &                         \\
           ∂_t (+e)\; dt ∧ dz∧ dx &                         & ∂_y (+e)\; dx ∧ dy ∧ dz &                         \\
           ∂_t (+f)\; dt ∧ dx∧ dy &                         &                         & ∂_z (+f)\; dx ∧ dy ∧ dz \\
-      \end{bmatrix}}
+      \end{bmatrix}
 
    Organize the terms into a single column, although the specific ordering is
    not mandatory. However, for clarity, the free matrix representation allows us
@@ -327,37 +345,34 @@ obtain:
 
    .. math::
 
-      \newcommand{\_}{\phantom{∂_m m}}
-      dR = \begin{bmatrix}
-          ( \; \_      & + ∂_x d & + ∂_y e & + ∂_z f \; ) \; dx^x ∧ dx^y ∧ dx^z \\
-          ( \; + ∂_t d & \_      & + ∂_y c & - ∂_z b \; ) \; dx^t ∧ dx^y ∧ dx^z \\
-          ( \; + ∂_t e & - ∂_x c & \_      & + ∂_z a \; ) \; dx^t ∧ dx^z ∧ dx^x \\
-          ( \; + ∂_t f & + ∂_x b & - ∂_y a & \_      \; ) \; dx^t ∧ dx^x ∧ dx^y \\
-      \end{bmatrix}
+      dR = \left[ \begin{aligned}
+          (&         & + ∂_x d & + ∂_y e & + ∂_z f \:) \; dx^x ∧ dx^y ∧ dx^z \\
+          (& + ∂_t d &         & + ∂_y c & - ∂_z b \:) \; dx^t ∧ dx^y ∧ dx^z \\
+          (& + ∂_t e & - ∂_x c &         & + ∂_z a \:) \; dx^t ∧ dx^z ∧ dx^x \\
+          (& + ∂_t f & + ∂_x b & - ∂_y a &         \:) \; dx^t ∧ dx^x ∧ dx^y \\
+      \end{aligned} \right]
 
    Apply the Hodge dual operation :math:`⋆` to convert 3-forms to 1-forms:
 
    .. math::
 
-      \newcommand{\phan}{\phantom{∂_m m}} % Phantom for alignment
-      ⋆(dR) = \begin{bmatrix}
-        ( \; \phan   & + ∂_x d & + ∂_y e & + ∂_z f \; ) \; (-dt) \\
-        ( \; + ∂_t d & \phan   & + ∂_y c & - ∂_z b \; ) \; (-dx) \\
-        ( \; + ∂_t e & - ∂_x c & \phan   & + ∂_z a \; ) \; (-dy) \\
-        ( \; + ∂_t f & + ∂_x b & - ∂_y a & \phan   \; ) \; (-dz) \\
-      \end{bmatrix}
+      ⋆(dR) = \left[ \begin{aligned}
+        (&         & + ∂_x d & + ∂_y e & + ∂_z f \:) \; (-dt) \\
+        (& + ∂_t d &         & + ∂_y c & - ∂_z b \:) \; (-dx) \\
+        (& + ∂_t e & - ∂_x c &         & + ∂_z a \:) \; (-dy) \\
+        (& + ∂_t f & + ∂_x b & - ∂_y a &         \:) \; (-dz) \\
+      \end{aligned} \right]
 
    Conclude:
 
    .. math::
 
-      \newcommand{\phan}{\phantom{∂_m m}} % Phantom for alignment
-      ⋆ (dR) = \begin{bmatrix}
-          ( \; \phan   & - ∂_x d & - ∂_y e & - ∂_z f \; ) \; dt \\
-          ( \; - ∂_t d & \phan   & - ∂_y c & + ∂_z b \; ) \; dx \\
-          ( \; - ∂_t e & + ∂_x c & \phan   & - ∂_z a \; ) \; dy \\
-          ( \; - ∂_t f & - ∂_x b & + ∂_y a & \phan   \; ) \; dz \\
-      \end{bmatrix}
+      ⋆ (dR) = \left[ \begin{aligned}
+          (&         & - ∂_x d & - ∂_y e & - ∂_z f \:) \; dt \\
+          (& - ∂_t d &         & - ∂_y c & + ∂_z b \:) \; dx \\
+          (& - ∂_t e & + ∂_x c &         & - ∂_z a \:) \; dy \\
+          (& - ∂_t f & - ∂_x b & + ∂_y a &         \:) \; dz \\
+      \end{aligned} \right]
 
    .. }}}
 
@@ -377,13 +392,12 @@ R^{♭♭}`, we obtain:
 
    .. math::
 
-      \newcommand{\_}{\phantom{∂_m m}}
-      d( ⋆ R^{♭♭} ) = \begin{bmatrix}
-          ( \_      &+ ∂_x a & + ∂_y b & + ∂_z c \, ) \; dx ∧ dy ∧ dz \\
-          ( + ∂_t a &\_      & - ∂_y f & + ∂_z e \, ) \; dt ∧ dy ∧ dz \\
-          ( + ∂_t b &+ ∂_x f & \_      & - ∂_z d \, ) \; dt ∧ dz ∧ dx \\
-          ( + ∂_t c &- ∂_x e & + ∂_y d & \_      \, ) \; dt ∧ dx ∧ dy \\
-      \end{bmatrix}
+      d( ⋆ R^{♭♭} ) = \left[ \begin{aligned}
+          (&         & + ∂_x a & + ∂_y b & + ∂_z c \:) \; dx ∧ dy ∧ dz \\
+          (& + ∂_t a &         & - ∂_y f & + ∂_z e \:) \; dt ∧ dy ∧ dz \\
+          (& + ∂_t b & + ∂_x f &         & - ∂_z d \:) \; dt ∧ dz ∧ dx \\
+          (& + ∂_t c & - ∂_x e & + ∂_y d &         \:) \; dt ∧ dx ∧ dy \\
+      \end{aligned} \right]
 
 .. admonition:: All Calculation Steps
    :class: dropdown
@@ -395,8 +409,12 @@ R^{♭♭}`, we obtain:
    .. math::
 
       d(⋆R^{♭♭}) = d \begin{bmatrix}
-        a \; dy ∧ dz \\ b \; dz ∧ dx \\ c \; dx ∧ dy \\
-        d \; dt ∧ dx \\ e \; dt ∧ dy \\ f \; dt ∧ dz \\
+        a \; dy ∧ dz \\
+        b \; dz ∧ dx \\
+        c \; dx ∧ dy \\
+        d \; dt ∧ dx \\
+        e \; dt ∧ dy \\
+        f \; dt ∧ dz \\
       \end{bmatrix}
 
    Distribute the exterior derivative:
@@ -404,48 +422,52 @@ R^{♭♭}`, we obtain:
    .. math::
 
       d(⋆R^{♭♭}) = \begin{bmatrix}
-        d(a \; dy ∧ dz) \\ d(b \; dz ∧ dx) \\ d(c \; dx ∧ dy) \\
-        d(d \; dt ∧ dx) \\ d(e \; dt ∧ dy) \\ d(f \; dt ∧ dz) \\
+        d(a \; dy ∧ dz) \\
+        d(b \; dz ∧ dx) \\
+        d(c \; dx ∧ dy) \\
+        d(d \; dt ∧ dx) \\
+        d(e \; dt ∧ dy) \\
+        d(f \; dt ∧ dz) \\
       \end{bmatrix}
 
    Apply:
 
    .. math::
 
-      {\scriptsize d(⋆R^{♭♭}) = \begin{bmatrix}
-       ∂_t (+a)\; dt ∧ dy ∧ dz) & ∂_x (+a)\; dx ∧ dy ∧ dz &                         &                         \\
-       ∂_t (+b)\; dt ∧ dz ∧ dx) &                         & ∂_y (+b)\; dy ∧ dz ∧ dx &                         \\
-       ∂_t (+c)\; dt ∧ dx ∧ dy) &                         &                         & ∂_z (+c)\; dz ∧ dx ∧ dy \\
-                                &                         & ∂_y (+d)\; dy ∧ dt ∧ dx & ∂_z (+d)\; dz ∧ dt ∧ dx \\
-                                & ∂_x (+e)\; dx ∧ dt ∧ dy &                         & ∂_z (+e)\; dz ∧ dt ∧ dy \\
-                                & ∂_x (+f)\; dx ∧ dt ∧ dz & ∂_y (+f)\; dy ∧ dt ∧ dz &                         \\
-      \end{bmatrix}}
+      d(⋆R^{♭♭}) = \begin{bmatrix}
+          ∂_t (+a)\; dt ∧ dy ∧ dz) & ∂_x (+a)\; dx ∧ dy ∧ dz &                         &                         \\
+          ∂_t (+b)\; dt ∧ dz ∧ dx) &                         & ∂_y (+b)\; dy ∧ dz ∧ dx &                         \\
+          ∂_t (+c)\; dt ∧ dx ∧ dy) &                         &                         & ∂_z (+c)\; dz ∧ dx ∧ dy \\
+                                   &                         & ∂_y (+d)\; dy ∧ dt ∧ dx & ∂_z (+d)\; dz ∧ dt ∧ dx \\
+                                   & ∂_x (+e)\; dx ∧ dt ∧ dy &                         & ∂_z (+e)\; dz ∧ dt ∧ dy \\
+                                   & ∂_x (+f)\; dx ∧ dt ∧ dz & ∂_y (+f)\; dy ∧ dt ∧ dz &                         \\
+      \end{bmatrix}
 
    Reorder the 3-forms:
 
    .. math::
 
-      {\scriptsize d(⋆R^{♭♭}) = \begin{bmatrix}
-       ∂_t (+a)(+1)\; dt ∧ dy ∧ dz & ∂_x (+a)(+1)\; dx ∧ dy ∧ dz &                             &                             \\
-       ∂_t (+b)(+1)\; dt ∧ dz ∧ dx &                             & ∂_y (+b)(+1)\; dx ∧ dy ∧ dz &                             \\
-       ∂_t (+c)(+1)\; dt ∧ dx ∧ dy &                             &                             & ∂_z (+c)(+1)\; dx ∧ dy ∧ dz \\
+      d(⋆R^{♭♭}) = \begin{bmatrix}
+      ∂_t (+a)(+1)\; dt ∧ dy ∧ dz & ∂_x (+a)(+1)\; dx ∧ dy ∧ dz &                             &                             \\
+      ∂_t (+b)(+1)\; dt ∧ dz ∧ dx &                             & ∂_y (+b)(+1)\; dx ∧ dy ∧ dz &                             \\
+      ∂_t (+c)(+1)\; dt ∧ dx ∧ dy &                             &                             & ∂_z (+c)(+1)\; dx ∧ dy ∧ dz \\
                                    &                             & ∂_y (+d)(+1)\; dt ∧ dx ∧ dy & ∂_z (+d)(-1)\; dt ∧ dz ∧ dx \\
                                    & ∂_x (+e)(-1)\; dt ∧ dx ∧ dy &                             & ∂_z (+e)(+1)\; dt ∧ dy ∧ dz \\
                                    & ∂_x (+f)(+1)\; dt ∧ dz ∧ dx & ∂_y (+f)(-1)\; dt ∧ dy ∧ dz &                             \\
-      \end{bmatrix}}
+      \end{bmatrix}
 
    Apply values:
 
    .. math::
 
-      {\scriptsize d(⋆R^{♭♭}) = \begin{bmatrix}
-       ∂_t (+a)\; dt ∧ dy ∧ dz & ∂_x (+a)\; dx ∧ dy ∧ dz &                         &                         \\
-       ∂_t (+b)\; dt ∧ dz ∧ dx &                         & ∂_y (+b)\; dx ∧ dy ∧ dz &                         \\
-       ∂_t (+c)\; dt ∧ dx ∧ dy &                         &                         & ∂_z (+c)\; dx ∧ dy ∧ dz \\
-                               &                         & ∂_y (+d)\; dt ∧ dx ∧ dy & ∂_z (-d)\; dt ∧ dz ∧ dx \\
-                               & ∂_x (-e)\; dt ∧ dx ∧ dy &                         & ∂_z (+e)\; dt ∧ dy ∧ dz \\
-                               & ∂_x (+f)\; dt ∧ dz ∧ dx & ∂_y (-f)\; dt ∧ dy ∧ dz &                         \\
-      \end{bmatrix}}
+      d(⋆R^{♭♭}) = \begin{bmatrix}
+          ∂_t (+a)\; dt ∧ dy ∧ dz & ∂_x (+a)\; dx ∧ dy ∧ dz &                         &                         \\
+          ∂_t (+b)\; dt ∧ dz ∧ dx &                         & ∂_y (+b)\; dx ∧ dy ∧ dz &                         \\
+          ∂_t (+c)\; dt ∧ dx ∧ dy &                         &                         & ∂_z (+c)\; dx ∧ dy ∧ dz \\
+                                  &                         & ∂_y (+d)\; dt ∧ dx ∧ dy & ∂_z (-d)\; dt ∧ dz ∧ dx \\
+                                  & ∂_x (-e)\; dt ∧ dx ∧ dy &                         & ∂_z (+e)\; dt ∧ dy ∧ dz \\
+                                  & ∂_x (+f)\; dt ∧ dz ∧ dx & ∂_y (-f)\; dt ∧ dy ∧ dz &                         \\
+      \end{bmatrix}
 
    Organize the terms into a single column, although the specific ordering is
    not mandatory. However, for clarity, the free matrix representation allows us
@@ -458,13 +480,12 @@ R^{♭♭}`, we obtain:
 
    .. math::
 
-      \newcommand{\_}{\phantom{∂_m m}}
-      d( ⋆ R^{♭♭} ) = \begin{bmatrix}
-          ( \_      &+ ∂_x a & + ∂_y b & + ∂_z c \, ) \; dx ∧ dy ∧ dz \\
-          ( + ∂_t a &\_      & - ∂_y f & + ∂_z e \, ) \; dt ∧ dy ∧ dz \\
-          ( + ∂_t b &+ ∂_x f & \_      & - ∂_z d \, ) \; dt ∧ dz ∧ dx \\
-          ( + ∂_t c &- ∂_x e & + ∂_y d & \_      \, ) \; dt ∧ dx ∧ dy \\
-      \end{bmatrix}
+      d( ⋆ R^{♭♭} ) = \left[ \begin{aligned}
+          (&         & + ∂_x a & + ∂_y b & + ∂_z c \:) \; dx ∧ dy ∧ dz \\
+          (& + ∂_t a &         & - ∂_y f & + ∂_z e \:) \; dt ∧ dy ∧ dz \\
+          (& + ∂_t b & + ∂_x f &         & - ∂_z d \:) \; dt ∧ dz ∧ dx \\
+          (& + ∂_t c & - ∂_x e & + ∂_y d &         \:) \; dt ∧ dx ∧ dy \\
+      \end{aligned} \right]
 
    .. }}}
 
@@ -480,15 +501,14 @@ Applied to a rotation in spacetime, we obtain the wave equations:
 
 .. math::
 
-   \newcommand{\+}{\phantom{+}}
-   (d ⋆ d ⋆ + ⋆ d ⋆ d) \begin{bmatrix}
-        - a \; dt ∧ dx \\
-        - b \; dt ∧ dy \\
-        - c \; dt ∧ dz \\
-       \+ d \; dy ∧ dz \\
-       \+ e \; dz ∧ dx \\
-       \+ f \; dx ∧ dy \\
-   \end{bmatrix}
+   (d ⋆ d ⋆ + ⋆ d ⋆ d) \left[ \begin{aligned}
+        - & a \; dt ∧ dx \\
+        - & b \; dt ∧ dy \\
+        - & c \; dt ∧ dz \\
+          & d \; dy ∧ dz \\
+          & e \; dz ∧ dx \\
+          & f \; dx ∧ dy \\
+   \end{aligned} \right]
    &= \begin{bmatrix}
    - ∂_t^2 a & + ∂_x^2 a & + ∂_y^2 a & + ∂_z^2 a & dt∧dx \\
    - ∂_t^2 b & + ∂_x^2 b & + ∂_y^2 b & + ∂_z^2 b & dt∧dy \\

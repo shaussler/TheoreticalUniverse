@@ -21,10 +21,13 @@ electromagnetism is a twist in spacetime:
 
 .. math::
 
-   \newcommand{\E}{\tilde{E}}
    (d ⋆ - ⋆ d ) \begin{bmatrix}
-       \E^x \; dx ∧ dt \\ \E^y \; dy ∧ dt \\ \E^z \; dz ∧ dt \\
-        B^x \; dy ∧ dz \\  B^y \; dz ∧ dx \\  B^z \; dx ∧ dy \\
+       \E^x \; dx ∧ dt \\
+       \E^y \; dy ∧ dt \\
+       \E^z \; dz ∧ dt \\
+        B^x \; dy ∧ dz \\
+        B^y \; dz ∧ dx \\
+        B^z \; dx ∧ dy \\
    \end{bmatrix}
    = \begin{bmatrix}
        + μ_0 c ρ \; dx ∧ dy ∧ dz\\

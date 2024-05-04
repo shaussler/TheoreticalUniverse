@@ -27,7 +27,6 @@ demonstration of the formulation of Maxwell's equations in differential form:
 
    .. math::
 
-      \newcommand{\E}{\tilde{E}}
       (d ⋆ - ⋆ d ) \begin{bmatrix}
           \E^x \; dx ∧ dt \\ \E^y \; dy ∧ dt \\ \E^z \; dz ∧ dt \\
            B^x \; dy ∧ dz \\  B^y \; dz ∧ dx \\  B^z \; dx ∧ dy \\

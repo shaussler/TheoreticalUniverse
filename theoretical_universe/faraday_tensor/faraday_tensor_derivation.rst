@@ -134,19 +134,23 @@ Gathering and reordering the terms, a clear structures becomes apparent:
 
 .. math::
 
-                                     & + \frac{∂E^x}{∂x} & + \frac{∂E^y}{∂y} & + \frac{∂E^z}{∂z} & = & + ρ/ε_0   \\
-     + \frac{1}{c^2} \frac{∂E^x}{∂t} &                   & - \frac{∂B^z}{∂y} & + \frac{∂B^y}{∂z} & = & - μ_0 J^x \\
-     + \frac{1}{c^2} \frac{∂E^y}{∂t} & + \frac{∂B^z}{∂x} &                   & - \frac{∂B^x}{∂z} & = & - μ_0 J^y \\
-     + \frac{1}{c^2} \frac{∂E^z}{∂t} & - \frac{∂B^y}{∂x} & + \frac{∂B^x}{∂y} &                   & = & - μ_0 J^z \\
+   \begin{aligned}
+                                       & + \frac{∂E^x}{∂x} & + \frac{∂E^y}{∂y} & + \frac{∂E^z}{∂z} & = & + ρ/ε_0   \\
+       + \frac{1}{c^2} \frac{∂E^x}{∂t} &                   & - \frac{∂B^z}{∂y} & + \frac{∂B^y}{∂z} & = & - μ_0 J^x \\
+       + \frac{1}{c^2} \frac{∂E^y}{∂t} & + \frac{∂B^z}{∂x} &                   & - \frac{∂B^x}{∂z} & = & - μ_0 J^y \\
+       + \frac{1}{c^2} \frac{∂E^z}{∂t} & - \frac{∂B^y}{∂x} & + \frac{∂B^x}{∂y} &                   & = & - μ_0 J^z \\
+   \end{aligned}
 
 .. rubric:: Homogenous equations
 
 .. math::
 
-                       & + \frac{∂B^x}{∂x} & + \frac{∂B^y}{∂y} & + \frac{∂B^z}{∂z} &=& 0 \\
-     + \frac{∂B^x}{∂t} &                   & + \frac{∂E^z}{y∂} & - \frac{∂E^y}{∂z} &=& 0 \\
-     + \frac{∂B^y}{∂t} & - \frac{∂E^z}{∂x} &                   & + \frac{∂E^x}{∂z} &=& 0 \\
-     + \frac{∂B^z}{∂t} & + \frac{∂E^y}{∂x} & - \frac{∂E^x}{∂y} &                   &=& 0 \\
+   \begin{aligned}
+                        & + \frac{∂B^x}{∂x} & + \frac{∂B^y}{∂y} & + \frac{∂B^z}{∂z} &=& 0 \\
+      + \frac{∂B^x}{∂t} &                   & + \frac{∂E^z}{y∂} & - \frac{∂E^y}{∂z} &=& 0 \\
+      + \frac{∂B^y}{∂t} & - \frac{∂E^z}{∂x} &                   & + \frac{∂E^x}{∂z} &=& 0 \\
+      + \frac{∂B^z}{∂t} & + \frac{∂E^y}{∂x} & - \frac{∂E^x}{∂y} &                   &=& 0 \\
+   \end{aligned}
 
 .. }}}
 
@@ -171,21 +175,23 @@ and for the spatial dimensions :math:`∂_x = \frac{∂}{∂ x}`, :math:`∂_y =
 
 .. math::
 
-   \newcommand{\E}{\tilde{E}}
+   \begin{aligned}
                 & + ∂_x \E^x & + ∂_y \E^y & + ∂_z \E^z & = & + μ_0 c ρ \\
      + ∂_t \E^x &            & - ∂_y  B^z & + ∂_z  B^y & = & - μ_0 J^x \\
      + ∂_t \E^y & + ∂_x  B^z &            & - ∂_z  B^x & = & - μ_0 J^y \\
      + ∂_t \E^z & - ∂_x  B^y & + ∂_y  B^x &            & = & - μ_0 J^z \\
+   \end{aligned}
 
 .. rubric:: Homogenous equations
 
 .. math::
 
-   \newcommand{\E}{\tilde{E}}
+   \begin{aligned}
                 & + ∂_x  B^x & + ∂_y  B^y & + ∂_z  B^z & = & 0 \\
      + ∂_t  B^x &            & + ∂_y \E^z & - ∂_z \E^y & = & 0 \\
      + ∂_t  B^y & - ∂_x \E^z &            & + ∂_z \E^x & = & 0 \\
      + ∂_t  B^z & + ∂_x \E^y & - ∂_y \E^x &            & = & 0 \\
+   \end{aligned}
 
 For readers well-versed in the tensor formulation of electromagnetism, the
 presence and nature of the Faraday tensor and its dual are likely evident.
@@ -222,7 +228,6 @@ equivalent to:
 
 .. math::
 
-   \newcommand{\E}{\tilde{E}}
    \begin{bmatrix} ∂_t & ∂_x & ∂_y & ∂_z \end{bmatrix}
    \begin{bmatrix}
             & + \E^x & +\E^y & + \E^z \\
@@ -235,7 +240,6 @@ equivalent to:
 
 .. math::
 
-   \newcommand{\E}{\tilde{E}}
    \begin{bmatrix} ∂_t & ∂_x & ∂_y & ∂_z \end{bmatrix}
    \begin{bmatrix}
            & +  B^x & +  B^y & +  B^z \\
@@ -266,7 +270,6 @@ Faraday tensor, and :math:`G^μ{}_ν` for its dual:
 
 .. math::
 
-   \newcommand{\E}{\tilde{E}}
    \begin{bmatrix} F^μ{}_ν \end{bmatrix} =
    \begin{bmatrix}
             & + \E^x & + \E^y & + \E^z \\
@@ -277,7 +280,6 @@ Faraday tensor, and :math:`G^μ{}_ν` for its dual:
 
 .. math::
 
-   \newcommand{\E}{\tilde{E}}
    \begin{bmatrix} G^μ{}_ν \end{bmatrix} =
    \begin{bmatrix}
              & +  B^x & +  B^y & +  B^z \\
