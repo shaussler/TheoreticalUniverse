@@ -119,11 +119,9 @@ Apply the :math:`\star` operator:
 
    \newcommand{\{}{\begin{bmatrix}}
    \newcommand{\}}{\end{bmatrix}}
-   \begin{equation}
    ⋆ F^♭ = ⋆ \{ F^x   dx      \\ F^y   dy    \\ F^z   dz    \}
          =   \{ F^x ⋆ dx      \\ F^y ⋆ dy    \\ F^z ⋆ dz    \}
          =   \{ F^x   dy ∧ dz \\ F^y dz ∧ dx \\ F^z dx ∧ dy \}
-   \end{equation}
 
 Apply the :math:`d` operator:
 
@@ -153,22 +151,17 @@ Which can be brought back to a zero form by applying yet again the Hodge star
 
 .. math::
 
-   \begin{equation}
-   ⋆ d ⋆ F^♭
-   =
-   \begin{bmatrix}
+   ⋆ d ⋆ F^♭ = \begin{bmatrix}
      ∂_x F^x ⋆ dx ∧ dy ∧ dz \\
      ∂_y F^y ⋆ dx ∧ dy ∧ dz \\
      ∂_z F^z ⋆ dx ∧ dy ∧ dz \\
    \end{bmatrix}
-   =
-   \begin{bmatrix}
+   = \begin{bmatrix}
      ∂_x F^x \mathbf{1} \\
      ∂_y F^y \mathbf{1} \\
      ∂_z F^z \mathbf{1} \\
    \end{bmatrix}
    = ∂_x F^x + ∂_y F^y + ∂_z F^z
-   \end{equation}
 
 .. }}}
 
@@ -179,170 +172,133 @@ Curl
 
 .. topic:: Proposition
 
-   .. math::
-
-      \begin{equation}
-      (⋆(dF^♭))^♯ = ∇^♯ ⨯ F^♯
-      \end{equation}
+   .. math:: (⋆(dF^♭))^♯ = ∇^♯ ⨯ F^♯
 
 The vector field is:
 
 .. math::
 
-   \begin{equation}
-   F^♯
-   =
-   \begin{bmatrix}
-     F^x ∂_x \\
-     F^y ∂_y \\
-     F^z ∂_z \\
+   F^♯ = \begin{bmatrix}
+       F^x ∂_x \\
+       F^y ∂_y \\
+       F^z ∂_z \\
    \end{bmatrix}
    = F^x ∂_x + F^y ∂_y + F^z ∂_z
-   \end{equation}
 
 Flattening the vector field result in:
 
 .. math::
 
-   \begin{equation}
-   F^\flat =
-   \begin{bmatrix}
-     F^x \; dx \\
-     F^y \; dy \\
-     F^z \; dz \\
+   F^\flat = \begin{bmatrix}
+       F^x \; dx \\
+       F^y \; dy \\
+       F^z \; dz \\
    \end{bmatrix}
    = F^x dx + F^y dy + F^z dz
-   \end{equation}
 
 Taking the differential, we have:
 
 .. math::
 
-   \begin{equation}
-   dF^♭ =
-   \begin{bmatrix}
-     ∂_x F^x dx ∧ dx & ∂_y F^x dy ∧ dx & ∂_z F^x dz ∧ dx \\
-     ∂_x F^y dx ∧ dy & ∂_y F^y dy ∧ dy & ∂_z F^y dz ∧ dy \\
-     ∂_x F^z dx ∧ dz & ∂_y F^z dy ∧ dy & ∂_z F^z dz ∧ dz \\
+   dF^♭ = \begin{bmatrix}
+       ∂_x F^x dx ∧ dx & ∂_y F^x dy ∧ dx & ∂_z F^x dz ∧ dx \\
+       ∂_x F^y dx ∧ dy & ∂_y F^y dy ∧ dy & ∂_z F^y dz ∧ dy \\
+       ∂_x F^z dx ∧ dz & ∂_y F^z dy ∧ dy & ∂_z F^z dz ∧ dz \\
    \end{bmatrix}
-   \end{equation}
 
 Or with more natural row/column convention:
 
 .. math::
 
-   \begin{equation}
-   dF^♭ =
-   \begin{bmatrix}
-     ∂_x F^x dx ∧ dx & ∂_x F^y dx ∧ dy & ∂_x F^z dx ∧ dz \\
-     ∂_y F^x dy ∧ dx & ∂_y F^y dy ∧ dy & ∂_y F^z dy ∧ dy \\
-     ∂_z F^x dz ∧ dx & ∂_z F^y dz ∧ dy & ∂_z F^z dz ∧ dz \\
+   dF^♭ = \begin{bmatrix}
+       ∂_x F^x dx ∧ dx & ∂_x F^y dx ∧ dy & ∂_x F^z dx ∧ dz \\
+       ∂_y F^x dy ∧ dx & ∂_y F^y dy ∧ dy & ∂_y F^z dy ∧ dy \\
+       ∂_z F^x dz ∧ dx & ∂_z F^y dz ∧ dy & ∂_z F^z dz ∧ dz \\
    \end{bmatrix}
-   \end{equation}
 
 Where :math:`dx^i ∧ dx^i = 0`:
 
 .. math::
 
-   \begin{equation}
-   dF^♭ =
-   \begin{bmatrix}
-                     & ∂_x F^y dx ∧ dy & ∂_x F^z dx ∧ dz \\
-     ∂_y F^x dy ∧ dx &                 & ∂_y F^z dy ∧ dy \\
-     ∂_z F^x dz ∧ dx & ∂_z F^y dz ∧ dy &                 \\
+   dF^♭ = \begin{bmatrix}
+                       & ∂_x F^y dx ∧ dy & ∂_x F^z dx ∧ dz \\
+       ∂_y F^x dy ∧ dx &                 & ∂_y F^z dy ∧ dy \\
+       ∂_z F^x dz ∧ dx & ∂_z F^y dz ∧ dy &                 \\
    \end{bmatrix}
-   \end{equation}
 
 And :math:`dx^i ∧ dx^j = -dx^j ∧ dx^i`:
 
 .. math::
 
-   \begin{equation}
    dF^♭ = \begin{bmatrix}
                          & + ∂_x F^y dx ∧ dy & - ∂_x F^z dz ∧ dx \\
        - ∂_y F^x dx ∧ dy &                   & + ∂_y F^z dy ∧ dy \\
        + ∂_z F^x dz ∧ dx & - ∂_z F^y dy ∧ dz &                   \\
    \end{bmatrix}
-   \end{equation}
 
 That we reorder to:
 
 .. math::
 
-   \begin{equation}
    dF^♭ = \begin{bmatrix}
        + ∂_y F^z dy ∧ dy - ∂_z F^y \; dy ∧ dz \\
        + ∂_z F^x dz ∧ dx - ∂_x F^z \; dz ∧ dx \\
        + ∂_x F^y dx ∧ dy - ∂_y F^x \; dx ∧ dy \\
    \end{bmatrix}
-   \end{equation}
 
 .. math::
 
-   \begin{equation}
    dF^♭ = \begin{bmatrix}
        (∂_y F^z - ∂_z F^y) \; dy ∧ dz \\
        (∂_z F^x - ∂_x F^z) \; dz ∧ dx \\
        (∂_x F^y - ∂_y F^x) \; dx ∧ dy \\
    \end{bmatrix}
-   \end{equation}
 
 Where we can now take the star operator:
 
 .. math::
 
-   \begin{equation}
    ⋆ dF^♭ = \begin{bmatrix}
        (∂_y F^z - ∂_z F^y) ⋆ dy ∧ dz \\
        (∂_z F^x - ∂_x F^z) ⋆ dz ∧ dx \\
        (∂_x F^y - ∂_y F^x) ⋆ dx ∧ dy \\
    \end{bmatrix}
-   \end{equation}
 
 .. math::
 
-   \begin{equation}
    ⋆ dF^♭ = \begin{bmatrix}
        (∂_y F^z - ∂_z F^y) \; dx \\
        (∂_z F^x - ∂_x F^z) \; dy \\
        (∂_x F^y - ∂_y F^x) \; dz \\
    \end{bmatrix}
-   \end{equation}
 
 We can then sharpen the covector to its vector form:
 
 .. math::
 
-   \begin{equation}
    (⋆ dF^♭)^♯ = \begin{bmatrix}
        (∂_y F^z - ∂_z F^y) \; dx^♯ \\
        (∂_z F^x - ∂_x F^z) \; dy^♯ \\
        (∂_x F^y - ∂_y F^x) \; dz^♯ \\
    \end{bmatrix}
-   \end{equation}
 
 .. math::
 
-   \begin{equation}
    (⋆ dF^♭)^♯ = \begin{bmatrix}
        (∂_y F^z - ∂_z F^y) \; ∂_x \\
        (∂_z F^x - ∂_x F^z) \; ∂_y \\
        (∂_x F^y - ∂_y F^x) \; ∂_t \\
    \end{bmatrix}
-   \end{equation}
 
 Where we have recovered the expression of the curl of a vector field:
 
 .. math::
 
-   \begin{equation}
-   ∇^♯ ⨯ F^♯ =
-   \begin{bmatrix}
-     (∂_y F^z - ∂ F^y) \; ∂_x \\
-     (∂_z F^x - ∂ F^z) \; ∂_y \\
-     (∂_x F^y - ∂ F^x) \; ∂_z \\
+   ∇^♯ ⨯ F^♯ = \begin{bmatrix}
+       (∂_y F^z - ∂ F^y) \; ∂_x \\
+       (∂_z F^x - ∂ F^z) \; ∂_y \\
+       (∂_x F^y - ∂ F^x) \; ∂_z \\
    \end{bmatrix}
-   \end{equation}
 
 
 .. }}}
