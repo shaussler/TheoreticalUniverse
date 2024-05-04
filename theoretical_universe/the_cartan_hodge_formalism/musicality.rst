@@ -17,12 +17,12 @@ Musical Declaration
 -------------------
 
 Traditionally, a vector would be noted with a bold font as :math:`\mathbf{V}`,
-or with an arrow symbol :math:`\vect{V}`. These notations precludes the advent
-of tensor calculus and the discovery of the dual covectors, thus leaving no
-notation for these dual objects. The abstract index notation of Ricci calculus
-brings some improvement, with three-vectors expressed as :math:`v^i`, and the
-dual covectors expressed with lower indices as :math:`v_i`. With the musical
-flat :math:`♭` and sharp :math:`♯` symbols, covectors and vectors are
+or with an arrow symbol :math:`\overrightarrow{V}`. These notations precludes
+the advent of tensor calculus and the discovery of the dual covectors, thus
+leaving no notation for these dual objects. The abstract index notation of Ricci
+calculus brings some improvement, with three-vectors expressed as :math:`v^i`,
+and the dual covectors expressed with lower indices as :math:`v_i`. With the
+musical flat :math:`♭` and sharp :math:`♯` symbols, covectors and vectors are
 explicetely declared. For example, a contravariant three-vector is declared with
 the sharp symbol :math:`♯`:
 

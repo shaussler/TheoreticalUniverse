@@ -135,6 +135,7 @@ Duality in Minkowski space
    Under construction
 
 .. math::
+   :nowrap:
 
    \begin{alignat*}{2}
    ⋆ (∂_t ∧ ∂_x) &= - &∂_y ∧ ∂_z \\
@@ -153,6 +154,7 @@ Duality in Minkowski space
    ⋆ dz = - dt ∧ dx ∧ dy
 
 .. math::
+   :nowrap:
 
    \begin{equation}
    \newcommand{\+}{\phantom{+}}

@@ -65,23 +65,23 @@ regarded as established experimental facts.
 
 .. rubric:: Gauss's Law
 
-.. math:: \vect{∇} \cdot \vect{E}  = ρ / ε_0
+.. math:: \overrightarrow{∇} \cdot \overrightarrow{E}  = ρ / ε_0
 
 .. rubric:: Ampère's Circuital Law
 
-.. math:: \vect{∇} \times \vect{B} = μ_0 \vect{J} + \frac{1}{c^2} \frac{∂}{∂t} \vect{E}
+.. math:: \overrightarrow{∇} \times \overrightarrow{B} = μ_0 \overrightarrow{J} + \frac{1}{c^2} \frac{∂}{∂t} \overrightarrow{E}
 
 .. rubric:: Gauss's Law for Magnetism
 
-.. math:: \vect{∇} \cdot \vect{B} = 0
+.. math:: \overrightarrow{∇} \cdot \overrightarrow{B} = 0
 
 .. rubric:: Faraday's law of induction
 
-.. math:: \vect{∇} ⨯ \vect{E} = -\frac{∂}{∂t} \vect{B}
+.. math:: \overrightarrow{∇} ⨯ \overrightarrow{E} = -\frac{∂}{∂t} \overrightarrow{B}
 
-With the electric field :math:`\vect{E}=\{ E^x \\ E^y \\ E^z \}`, magnetic
-field :math:`\vect{B}=\{ B^x \\ B^y \\ B^z \}`, and operator
-:math:`\vect{∇}=\{ \frac{∂}{∂x} \\ \frac{∂}{∂y} \\ \frac{∂}{∂z} \}`
+With the electric field :math:`\overrightarrow{E}=\{ E^x \\ E^y \\ E^z \}`, magnetic
+field :math:`\overrightarrow{B}=\{ B^x \\ B^y \\ B^z \}`, and operator
+:math:`\overrightarrow{∇}=\{ \frac{∂}{∂x} \\ \frac{∂}{∂y} \\ \frac{∂}{∂z} \}`
 
 .. }}}
 
