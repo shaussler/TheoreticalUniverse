@@ -148,17 +148,15 @@ Exterior Derivative of a Translation
 
 .. {{{
 
-.. topic:: Exterior Derivative of a Translation in Differential Form
+.. warning:: Under construction
 
-   .. math::
+.. }}}
 
-      d T^♭ = \begin{bmatrix}
-          (+ ∂_x a + ∂_t b) \; dt ∧ dx \\
-          (+ ∂_y a + ∂_t c) \; dt ∧ dy \\
-          (+ ∂_z a + ∂_t d) \; dt ∧ dz \\
-          (- ∂_z c + ∂_y d) \; dy ∧ dz \\
-          (- ∂_x d + ∂_z b) \; dx ∧ dz \\
-          (- ∂_y b + ∂_x c) \; dx ∧ dy \\
-      \end{bmatrix}
+Laplace-De Rahm
+---------------
+
+.. {{{
+
+.. warning:: Under construction
 
 .. }}}

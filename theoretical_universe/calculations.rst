@@ -17,6 +17,7 @@ Rotations
    '- ∂_x a - ∂_y b - ∂_z c dt  +  - ∂_t a - ∂_z e + ∂_y f dx  +  - ∂_t b + ∂_z d - ∂_x f dy  +  - ∂_t c - ∂_y d + ∂_x e dz'
 
 .. math::
+   :nowrap:
 
    ⋆ d ⋆ R = \begin{bmatrix}\begin{alignat*}{1}
        (&         & - ∂_x a & - ∂_y b & - ∂_z c &) \; dt \\
@@ -43,6 +44,7 @@ Translations
    '- ∂_x a - ∂_t b dt∧dx  +  - ∂_y a - ∂_t c dt∧dy  +  - ∂_z a - ∂_t d dt∧dz  +  ∂_y b - ∂_x c dx∧dy  +  ∂_z b - ∂_x d dx∧dz  +  ∂_z c - ∂_y d dy∧dz'
 
 .. math::
+   :nowrap:
 
    d T = \begin{alignat*}{1}
        (& - ∂_t b & - ∂_x a &         &         &) \; dt∧dx \\

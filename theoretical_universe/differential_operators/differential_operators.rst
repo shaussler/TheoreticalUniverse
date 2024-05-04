@@ -107,21 +107,41 @@ We begin with :math:`F` as a vector :math:`\mathbf{F} = F^\sharp = F^i
 
 .. math::
 
-   \newcommand{\{}{\begin{bmatrix}}
-   \newcommand{\}}{\end{bmatrix}}
-   F^♭ = \{ F^x ∂_x     \\ F^y ∂_y     \\ F^z ∂_z     \}^♭
-       = \{ F^x (∂_x)^♭ \\ F^y (∂_y)^♭ \\ F^z (∂_z)^♭ \}
-       = \{ F^x dx      \\ F^y dy      \\ F^z dz      \}
+   F^♭ = \begin{bmatrix}
+       F^x ∂_x \\
+       F^y ∂_y \\
+       F^z ∂_z \\
+   \end{bmatrix}^♭
+   = \begin{bmatrix}
+       F^x (∂_x)^♭ \\
+       F^y (∂_y)^♭ \\
+       F^z (∂_z)^♭ \\
+   \end{bmatrix}
+   = \begin{bmatrix}
+       F^x dx \\
+       F^y dy \\
+       F^z dz \\
+   \end{bmatrix}
 
 Apply the :math:`\star` operator:
 
 .. math::
 
-   \newcommand{\{}{\begin{bmatrix}}
-   \newcommand{\}}{\end{bmatrix}}
-   ⋆ F^♭ = ⋆ \{ F^x   dx      \\ F^y   dy    \\ F^z   dz    \}
-         =   \{ F^x ⋆ dx      \\ F^y ⋆ dy    \\ F^z ⋆ dz    \}
-         =   \{ F^x   dy ∧ dz \\ F^y dz ∧ dx \\ F^z dx ∧ dy \}
+   ⋆ F^♭ = ⋆ \begin{bmatrix}
+       F^x   dx \\
+       F^y   dy \\
+       F^z   dz \\
+   \end{bmatrix}
+   = \begin{bmatrix}
+       F^x ⋆ dx \\
+       F^y ⋆ dy \\
+       F^z ⋆ dz \\
+   \end{bmatrix}
+   = \begin{bmatrix}
+       F^x dy ∧ dz \\
+       F^y dz ∧ dx \\
+       F^z dx ∧ dy \\
+   \end{bmatrix}
 
 Apply the :math:`d` operator:
 
@@ -324,10 +344,9 @@ Taking the differential
 
 .. math::
 
-   \newcommand{∂}[3]{\frac{∂^#1 #2}{d#3^#1}}
-   d ⋆ df &= \∂{2}{f}{x} dx ∧ dy ∧ dz + \∂{2}{f}{y} dy ∧ dz ∧ dx + \∂{2}{f}{z} dz ∧ dx ∧ dy \\
-          &= \∂{2}{f}{x} dx ∧ dy ∧ dz + \∂{2}{f}{y} dx ∧ dy ∧ dz + \∂{2}{f}{z} dx ∧ dy ∧ dz \\
-          &= \left( \∂{2}{f}{x} + \∂{2}{f}{y} + \∂{2}{f}{z} \right) \; dx ∧ dy ∧ dz         \\
+   d ⋆ df &= \frac{∂^2 f}{∂ x^2} dx ∧ dy ∧ dz + \frac{∂^2 f}{∂ y^2} dy ∧ dz ∧ dx + \frac{∂^2 f}{∂ z^2} dz ∧ dx ∧ dy \\
+          &= \frac{∂^2 f}{∂ x^2} dx ∧ dy ∧ dz + \frac{∂^2 f}{∂ y^2} dx ∧ dy ∧ dz + \frac{∂^2 f}{∂ z^2} dx ∧ dy ∧ dz \\
+          &= \left( \frac{∂^2 f}{∂ x^2} + \frac{∂^2 f}{∂ y^2} + \frac{∂^2 f}{∂ z^2} \right) \; dx ∧ dy ∧ dz         \\
 
 Taking the Hodge dual, we tranform volumes to functions and obtain the
 expression for the laplacian:

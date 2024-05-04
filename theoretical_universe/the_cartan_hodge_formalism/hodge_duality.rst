@@ -135,16 +135,13 @@ Duality in Minkowski space
    Under construction
 
 .. math::
-   :nowrap:
 
-   \begin{alignat*}{2}
-   ⋆ (∂_t ∧ ∂_x) &= - &∂_y ∧ ∂_z \\
-   ⋆ (∂_t ∧ ∂_y) &= - &∂_z ∧ ∂_x \\
-   ⋆ (∂_t ∧ ∂_z) &= - &∂_x ∧ ∂_y \\
-   ⋆ (∂_x ∧ ∂_y) &=   &∂_t ∧ ∂_z \\
-   ⋆ (∂_y ∧ ∂_z) &=   &∂_t ∧ ∂_x \\
-   ⋆ (∂_z ∧ ∂_x) &=   &∂_t ∧ ∂_y \\
-   \end{alignat*}
+   ⋆ (∂_t ∧ ∂_x) = -& ∂_y ∧ ∂_z \\
+   ⋆ (∂_t ∧ ∂_y) = -& ∂_z ∧ ∂_x \\
+   ⋆ (∂_t ∧ ∂_z) = -& ∂_x ∧ ∂_y \\
+   ⋆ (∂_x ∧ ∂_y) =  & ∂_t ∧ ∂_z \\
+   ⋆ (∂_y ∧ ∂_z) =  & ∂_t ∧ ∂_x \\
+   ⋆ (∂_z ∧ ∂_x) =  & ∂_t ∧ ∂_y \\
 
 .. math::
 
@@ -155,12 +152,9 @@ Duality in Minkowski space
 
 .. math::
 
-   \newcommand{\+}{\phantom{+}}
-   \begin{matrix}
-   ⋆ (dt ∧ dx) &=  - dy ∧ dz \\
-   ⋆ (dt ∧ dy) &=  - dz ∧ dx \\
-   ⋆ (dt ∧ dz) &=  - dx ∧ dy \\
-   ⋆ (dy ∧ dz) &= \+ dt ∧ dx \\
-   ⋆ (dz ∧ dx) &= \+ dt ∧ dy \\
-   ⋆ (dx ∧ dy) &= \+ dt ∧ dz \\
-   \end{matrix}
+   ⋆ (dt ∧ dx) = -& dy ∧ dz \\
+   ⋆ (dt ∧ dy) = -& dz ∧ dx \\
+   ⋆ (dt ∧ dz) = -& dx ∧ dy \\
+   ⋆ (dy ∧ dz) =  & dt ∧ dx \\
+   ⋆ (dz ∧ dx) =  & dt ∧ dy \\
+   ⋆ (dx ∧ dy) =  & dt ∧ dz
