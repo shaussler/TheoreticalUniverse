@@ -98,47 +98,41 @@ differential 2-form representative of the rotation:
 
    .. math::
 
-      \begin{equation}
-          R^{♭♭} = \begin{bmatrix}
-              a \; η_{αt} \; dx^α ∧ η_{βx} \; dx^β \\
-              b \; η_{αt} \; dx^α ∧ η_{βy} \; dx^β \\
-              c \; η_{αt} \; dx^α ∧ η_{βz} \; dx^β \\
-              d \; η_{αy} \; dx^α ∧ η_{βz} \; dx^β \\
-              e \; η_{αz} \; dx^α ∧ η_{βx} \; dx^β \\
-              f \; η_{αx} \; dx^α ∧ η_{βy} \; dx^β \\
-          \end{bmatrix}
-      \end{equation}
+      R^{♭♭} = \begin{bmatrix}
+          a \; η_{αt} \; dx^α ∧ η_{βx} \; dx^β \\
+          b \; η_{αt} \; dx^α ∧ η_{βy} \; dx^β \\
+          c \; η_{αt} \; dx^α ∧ η_{βz} \; dx^β \\
+          d \; η_{αy} \; dx^α ∧ η_{βz} \; dx^β \\
+          e \; η_{αz} \; dx^α ∧ η_{βx} \; dx^β \\
+          f \; η_{αx} \; dx^α ∧ η_{βy} \; dx^β \\
+      \end{bmatrix}
 
    The wedge product :math:`∧` is bilinear and the Minkowski metric components
    :math:`η`'s can be taken in front of the expression:
 
    .. math::
 
-      \begin{equation}
-          R^{♭♭} = \begin{bmatrix}
-              a \; η_{αt} η_{βx} \; dx^α ∧ dx^β \\
-              b \; η_{αt} η_{βy} \; dx^α ∧ dx^β \\
-              c \; η_{αt} η_{βz} \; dx^α ∧ dx^β \\
-              d \; η_{αy} η_{βz} \; dx^α ∧ dx^β \\
-              e \; η_{αz} η_{βx} \; dx^α ∧ dx^β \\
-              f \; η_{αx} η_{βy} \; dx^α ∧ dx^β \\
-          \end{bmatrix}
-      \end{equation}
+      R^{♭♭} = \begin{bmatrix}
+          a \; η_{αt} η_{βx} \; dx^α ∧ dx^β \\
+          b \; η_{αt} η_{βy} \; dx^α ∧ dx^β \\
+          c \; η_{αt} η_{βz} \; dx^α ∧ dx^β \\
+          d \; η_{αy} η_{βz} \; dx^α ∧ dx^β \\
+          e \; η_{αz} η_{βx} \; dx^α ∧ dx^β \\
+          f \; η_{αx} η_{βy} \; dx^α ∧ dx^β \\
+      \end{bmatrix}
 
    Identify the non-zero components of the Minkowski metric :math:`η_{μν}`:
 
    .. math::
 
-      \begin{equation}
-          R^{♭♭} = \begin{bmatrix}
-              a \; η_{tt} η_{xx} \; dx^t ∧ dx^x \\
-              b \; η_{tt} η_{yy} \; dx^t ∧ dx^y \\
-              c \; η_{tt} η_{zz} \; dx^t ∧ dx^z \\
-              d \; η_{yy} η_{zz} \; dx^y ∧ dx^z \\
-              e \; η_{zz} η_{xx} \; dx^z ∧ dx^x \\
-              f \; η_{xx} η_{yy} \; dx^x ∧ dx^y \\
-          \end{bmatrix}
-      \end{equation}
+      R^{♭♭} = \begin{bmatrix}
+          a \; η_{tt} η_{xx} \; dx^t ∧ dx^x \\
+          b \; η_{tt} η_{yy} \; dx^t ∧ dx^y \\
+          c \; η_{tt} η_{zz} \; dx^t ∧ dx^z \\
+          d \; η_{yy} η_{zz} \; dx^y ∧ dx^z \\
+          e \; η_{zz} η_{xx} \; dx^z ∧ dx^x \\
+          f \; η_{xx} η_{yy} \; dx^x ∧ dx^y \\
+      \end{bmatrix}
 
    For readability, replace the :math:`dx^μ` symbols by their explicit
    expressions:
