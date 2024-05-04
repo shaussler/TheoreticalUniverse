@@ -22,6 +22,9 @@ extensions = [
     'sphinx.ext.autosectionlabel',
     'sphinx_togglebutton',
     'sphinx_reredirects',
+    # 'sphinx.ext.imgmath',  # epub
+    # 'sphinx.ext.mathjax',  # epub
+    # 'sphinx.ext.ifconfig',  # epub
 ]
 
 source_encoding = 'utf-8'
@@ -40,7 +43,23 @@ redirects = {
 # imgmath config
 # --------------
 
-imgmath_image_format = 'svg'  # This should allow to create images for epub
+# imgmath_image_format = 'png'  # This should allow to create images for epub
+# imgmath_font_size = 12  # Set the font size of the equations
+# imgmath_dvipng_args = ['-gamma', '1.5', '-D', '110', '-bg', 'Transparent']
+# imgmath_latex = 'latex'
+
+latex_engine = 'xelatex'
+
+latex_elements = {
+    'preamble': r'''
+\usepackage{amsmath}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+''',
+    'fncychap': r'\usepackage[Bjornstrup]{fncychap}',
+    'printindex': r'\footnotesize\raggedright\printindex',
+}
+latex_show_urls = 'footnote'
 
 # epub configuration
 # ------------------
@@ -49,9 +68,8 @@ epub_title = 'Theoretical Universe'
 epub_author = 'Stéphane Haussler'
 epub_language = 'en'
 
-
-# Automated labels labels
-# -----------------------
+# Automated labels
+# ----------------
 
 autosectionlabel_prefix_document = True
 
@@ -113,6 +131,10 @@ mathjax3_config = {
             '}': r'\end{bmatrix}',
 
         }
+    },
+    'tex2jax': {
+        'ignoreClass': '.*',
+        'processClass': 'math|output_area',
     }
 }
 
