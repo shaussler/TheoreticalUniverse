@@ -103,7 +103,7 @@ Flattening the first index of of the doubly contravariant form of the rotation
       - b  \; ∂_x ∧ ∂_z & + a \; ∂_y ∧ ∂_z &                  \\
       \end{bmatrix}^{♭♯}
 
-   rubric:: Distribute the musical operators
+   .. rubric:: Distribute the musical operators
 
    .. math::
 
@@ -123,7 +123,7 @@ Flattening the first index of of the doubly contravariant form of the rotation
       - b \; δ_{xi} dx^i ∧ ∂_z & + a \; δ_{yi} dx^i ∧ ∂_z &                          \\
       \end{bmatrix}
 
-   ..rubric:: Identify the non-zero components
+   .. rubric:: Identify the non-zero components
 
    .. math::
 
@@ -133,7 +133,7 @@ Flattening the first index of of the doubly contravariant form of the rotation
       - b \; dx^x ∧ ∂_z & + a \; dx^y ∧ ∂_z &                   \\
       \end{bmatrix}
 
-   .. rubric:: Replace the :math:`dx^i` by their expressions and conclude
+   .. rubric:: Replace the covectors by their expressions and conclude
 
    .. math::
 
@@ -173,7 +173,7 @@ explicit expression of the mixed wedge products.
       (∂_y ∧ ∂_z)^{♭♯} &= (∂_y ⊗ ∂_z - ∂_z ⊗ ∂_y)^{♭♯} \\
       (∂_z ∧ ∂_x)^{♭♯} &= (∂_z ⊗ ∂_x - ∂_x ⊗ ∂_z)^{♭♯} \\
 
-   ..rubric:: Distribute the musical operators
+   .. rubric:: Distribute the musical operators
 
    .. math::
 
@@ -197,7 +197,7 @@ explicit expression of the mixed wedge products.
       (∂_y ∧ ∂_z)^{♭♯} &= δ_{yy} dx^y ⊗ ∂_z - δ_{zz} dx^z ⊗ ∂_y \\
       (∂_z ∧ ∂_x)^{♭♯} &= δ_{zz} dx^z ⊗ ∂_x - δ_{xx} dx^x ⊗ ∂_z \\
 
-   ..rubric: Apply numerical values
+   .. rubric: Apply numerical values
 
    .. math::
 
@@ -205,7 +205,7 @@ explicit expression of the mixed wedge products.
       (∂_y ∧ ∂_z)^{♭♯} &= dx^y ⊗ ∂_z - dx^z ⊗ ∂_y \\
       (∂_z ∧ ∂_x)^{♭♯} &= dx^z ⊗ ∂_x - dx^x ⊗ ∂_z \\
 
-   .. rubric:: Replace the :math:`dx^i` by their expressions and conclude
+   .. rubric:: Replace covectors by their expressions and conclude
 
    .. math::
 
@@ -330,7 +330,7 @@ explicit expression of the mixed wedge products.
 
    .. {{{
 
-   Expand the wedge product into tensor products
+   .. rubric:: Expand exterior products into tensor products
 
    .. math::
 
@@ -338,7 +338,7 @@ explicit expression of the mixed wedge products.
       (∂_y ∧ ∂_z)^{♯♭} &= (∂_y ⊗ ∂_z - ∂_z ⊗ ∂_y)^{♯♭} \\
       (∂_z ∧ ∂_x)^{♯♭} &= (∂_z ⊗ ∂_x - ∂_x ⊗ ∂_z)^{♯♭} \\
 
-   Distribute the musical operators:
+   .. rubric:: Distribute the musical operators
 
    .. math::
 
@@ -346,7 +346,7 @@ explicit expression of the mixed wedge products.
       (∂_y ∧ ∂_z)^{♯♭} &= ∂_y^♯ ⊗ ∂_z^♭ - ∂_z^♯ ⊗ ∂_y^♭ \\
       (∂_z ∧ ∂_x)^{♯♭} &= ∂_z^♯ ⊗ ∂_x^♭ - ∂_x^♯ ⊗ ∂_z^♭ \\
 
-   Apply the musical operators using the euclidean metric:
+   .. rubrci:: Apply the musical operators using the euclidean metric
 
    .. math::
 
@@ -354,7 +354,7 @@ explicit expression of the mixed wedge products.
       (∂_y ∧ ∂_z)^{♯♭} &= ∂_y ⊗ δ_{zi} dx^i - ∂_z ⊗ δ_{yi} dx^i \\
       (∂_z ∧ ∂_x)^{♯♭} &= ∂_z ⊗ δ_{xi} dx^i - ∂_x ⊗ δ_{zi} dx^i \\
 
-   Identify the non-zero terms:
+   .. rubric:: Identify the non-zero terms
 
    .. math::
 
@@ -362,7 +362,7 @@ explicit expression of the mixed wedge products.
       (∂_y ∧ ∂_z)^{♯♭} &= ∂_y ⊗ δ_{zz} dx^z - ∂_z ⊗ δ_{yy} dx^y \\
       (∂_z ∧ ∂_x)^{♯♭} &= ∂_z ⊗ δ_{xx} dx^x - ∂_x ⊗ δ_{zz} dx^z \\
 
-   Apply numerical values
+   .. rubric:: Apply numerical values
 
    .. math::
 
@@ -370,7 +370,7 @@ explicit expression of the mixed wedge products.
       (∂_y ∧ ∂_z)^{♯♭} &= ∂_y ⊗ dx^z - ∂_z ⊗ dx^y \\
       (∂_z ∧ ∂_x)^{♯♭} &= ∂_z ⊗ dx^x - ∂_x ⊗ dx^z \\
 
-   Replace the :math:`dx^i` by their expressions:
+   .. rubric:: Replace the covectors by their expressions:
 
    .. math::
 
