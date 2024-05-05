@@ -15,9 +15,9 @@ Rotations in Differential Form
    rotations_in_minkowski_space.rst
 
 In the following pages, I express rotations in 3-dimensional Euclidean as well
-as 4-dimensional Minkowski space, utilizing :ref:`the Cartan-Hodge formalism`.
-Anti-symmetries emerge from the Hodge star operator when arranging the
-differential forms into matrices, which exactly correspond to
+as in 4-dimensional Minkowski space, utilizing :ref:`the Cartan-Hodge
+formalism`. Anti-symmetries emerge from the Hodge star operator when arranging
+the differential forms into matrices, which exactly correspond to
 :math:`\mathfrak{so}(3)` and :math:`\mathfrak{so}(1,3)` matrices. Finally, we
 establish the identification of the electromagnetic field tensor.
 
@@ -50,30 +50,37 @@ combination of the 6 independent planes of rotation. These are represented with
    f \; ∂_x ∧ ∂_y \\
    \end{bmatrix}
 
-.. rubric:: Matrice Representation of Rotations
-
-Using the free matrix representation and the antisymetric properties of the
-exterior product :math:`∧`, we trivially obtain the following representation for
-a rotation in 3-dimensional Euclidean space:
+Equivalently, rotations in spacetime can be represented by linear combinations
+of 6 basis bicovectors:
 
 .. math::
 
-   R^{♯♯} = \frac{1}{2} \begin{bmatrix}
-                    & - c \; ∂_y ∧ ∂_x & + b \; ∂_z ∧ ∂_x \\
-   + c \; ∂_x ∧ ∂_y &                  & - a \; ∂_z ∧ ∂_y \\
-   - b \; ∂_x ∧ ∂_z & + a \; ∂_y ∧ ∂_z &                  \\
-   \end{bmatrix}
+   R^{♭♭} = \left[ \begin{aligned}
+       - & a \; dt ∧ dx \\
+       - & b \; dt ∧ dy \\
+       - & c \; dt ∧ dz \\
+         & d \; dy ∧ dz \\
+         & e \; dz ∧ dx \\
+         & f \; dx ∧ dy \\
+   \end{aligned} \right]
 
-In 4-dimensional Minkowski space, we obtain:
+.. rubric:: Matrice Representation of the Mixed Exterior Product
+
+The row-major free matrix representation of any rotation in Minkowski space,
+expressed in a mixed form is:
 
 .. math::
 
-   R^{♯♯} = \frac{1}{2} \begin{bmatrix}
-                    & + a \; ∂_t ∧ ∂_x & + b \; ∂_t ∧ ∂_y & + c \; ∂_t ∧ ∂_z \\
-   - a \; ∂_x ∧ ∂_t &                  & + f \; ∂_x ∧ ∂_y & - e \; ∂_x ∧ ∂_z \\
-   - b \; ∂_y ∧ ∂_t & - f \; ∂_y ∧ ∂_x &                  & + d \; ∂_y ∧ ∂_z \\
-   - c \; ∂_z ∧ ∂_t & + e \; ∂_z ∧ ∂_x & - d \; ∂_z ∧ ∂_y &                  \\
+   R^{♭♯} = \frac{1}{2} \begin{bmatrix}
+                     & + a \; dx^t ∧ ∂_x & + b \; dx^t ∧ ∂_y & + c \; dx^t ∧ ∂_z \\
+   + a \; dx^x ∧ ∂_t &                   & + f \; dx^x ∧ ∂_y & - e \; dx^x ∧ ∂_z \\
+   + b \; dx^y ∧ ∂_t & - f \; dx^y ∧ ∂_x &                   & + d \; dx^y ∧ ∂_z \\
+   + c \; dx^z ∧ ∂_t & + e \; dx^z ∧ ∂_x & - d \; dx^z ∧ ∂_y &                   \\
    \end{bmatrix}
+
+Readers well versed in the tensor formulations of electromagnetism will
+recognise the mixed form of the :ref:`electromagnetic field tensor
+<the_tensor_of_mr_faraday>`.
 
 .. rubric:: Symmetries of the Mixed Exterior Product in Minkowski Space
 
@@ -92,20 +99,3 @@ Antisymetric :math:`dy ∧ ∂_z = - dy ∧ ∂_z`
 Antisymetric :math:`dz ∧ ∂_x = - dz ∧ ∂_x`
 Antisymetric :math:`dx ∧ ∂_y = - dx ∧ ∂_y`
 ============ =============================
-
-.. rubric:: Rotations in Spacetime Match Exactly the Form of the Faraday Tensor
-
-The row-major free matrix representation of any rotation in Minkowski space,
-expressed in a mixed form is:
-
-.. math::
-
-   R^{♭♯} = \frac{1}{2} \begin{bmatrix}
-                     & + a \; dx^t ∧ ∂_x & + b \; dx^t ∧ ∂_y & + c \; dx^t ∧ ∂_z \\
-   + a \; dx^x ∧ ∂_t &                   & + f \; dx^x ∧ ∂_y & - e \; dx^x ∧ ∂_z \\
-   + b \; dx^y ∧ ∂_t & - f \; dx^y ∧ ∂_x &                   & + d \; dx^y ∧ ∂_z \\
-   + c \; dx^z ∧ ∂_t & + e \; dx^z ∧ ∂_x & - d \; dx^z ∧ ∂_y &                   \\
-   \end{bmatrix}
-
-Readers well versed in the tensor formulations of electromagnetism will recognise the mixed form of the
-:ref:`electromagnetic field tensor <the_tensor_of_mr_faraday>`.

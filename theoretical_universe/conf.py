@@ -19,15 +19,15 @@ extensions = [
     'sphinx.ext.todo',
     'sphinxcontrib.googleanalytics',
     'sphinx_sitemap',
-    'sphinx.ext.autosectionlabel',
+    # 'sphinx.ext.autosectionlabel',
     'sphinx_togglebutton',
     'sphinx_reredirects',
     # 'sphinx.ext.imgmath',  # epub
-    'sphinx.ext.mathjax',  # epub
-    'sphinx.ext.ifconfig',  # epub
+    # 'sphinx.ext.mathjax',  # epub
+    #  'sphinx.ext.ifconfig',  # epub
 ]
 
-source_encoding = 'utf-8'
+# source_encoding = 'utf-8'
 
 # Redirects
 # ---------
@@ -50,17 +50,18 @@ redirects = {
 
 latex_engine = 'xelatex'
 
-latex_elements = {
-    'preamble': r'''
-\usepackage{amsmath}
-\usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
-\newcommand{\E}{\tilde{E}}
-''',
-    'fncychap': r'\usepackage[Bjornstrup]{fncychap}',
-    'printindex': r'\footnotesize\raggedright\printindex',
-}
-latex_show_urls = 'footnote'
+# latex_elements = {
+#     'preamble': r'''
+# \usepackage{amsmath}
+# \usepackage[T1]{fontenc}
+# \usepackage[utf8]{inputenc}
+# \newcommand{\E}{\tilde{E}}
+# ''',
+#     'fncychap': r'\usepackage[Bjornstrup]{fncychap}',
+#     'printindex': r'\footnotesize\raggedright\printindex',
+# }
+
+# latex_show_urls = 'footnote'
 
 # epub configuration
 # ------------------

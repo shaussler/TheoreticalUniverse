@@ -27,9 +27,9 @@ With free matrix representation, the bivector can be written as a single column:
    .. math::
 
       R^{♯♯} = \begin{bmatrix}
-          a \; ∂_y ∧ ∂_z \\
-          b \; ∂_z ∧ ∂_x \\
-          c \; ∂_x ∧ ∂_y \\
+      a \; ∂_y ∧ ∂_z \\
+      b \; ∂_z ∧ ∂_x \\
+      c \; ∂_x ∧ ∂_y \\
       \end{bmatrix}
 
 Or alternatively with a row/column matrix notation:
@@ -37,9 +37,9 @@ Or alternatively with a row/column matrix notation:
 .. math::
 
    R^{♯♯} = \begin{bmatrix}
-                      & c \; ∂_x ∧ ∂_y &                \\
-                      &                & a \; ∂_y ∧ ∂_z \\
-       b \; ∂_z ∧ ∂_x &                &                \\
+                  & c \; ∂_x ∧ ∂_y &                \\
+                  &                & a \; ∂_y ∧ ∂_z \\
+   b \; ∂_z ∧ ∂_x &                &                \\
    \end{bmatrix}
 
 The anti-symmetric property of the wedge product :math:`∂_i ∧ ∂_j = - ∂_j ∧ ∂_i`
@@ -56,9 +56,9 @@ With a row/column representation, we obtain:
    .. math::
 
       R^{♯♯} = \frac{1}{2} \begin{bmatrix}
-                            & - c \; ∂_y ∧ ∂_x & + b \; ∂_z ∧ ∂_x \\
-           + c \; ∂_x ∧ ∂_y &                  & - a \; ∂_z ∧ ∂_y \\
-           - b \; ∂_x ∧ ∂_z & + a \; ∂_y ∧ ∂_z &               \\
+                       & - c \; ∂_y ∧ ∂_x & + b \; ∂_z ∧ ∂_x \\
+      + c \; ∂_x ∧ ∂_y &                  & - a \; ∂_z ∧ ∂_y \\
+      - b \; ∂_x ∧ ∂_z & + a \; ∂_y ∧ ∂_z &               \\
       \end{bmatrix}
 
 The doubly contravariant rotation object under consideration exclusively
@@ -68,8 +68,8 @@ components.
 
 .. }}}
 
-Flattening the First Index
---------------------------
+:math:`♭♯` Representation
+-------------------------
 
 .. {{{
 
@@ -79,63 +79,61 @@ Flattening the first index of of the doubly contravariant form of the rotation
 .. math::
 
    R^{♭♯} = \begin{bmatrix}
-                       & - c \; dy ∧ ∂_x & + b \; dz ∧ ∂_x \\
-       + c \; dx ∧ ∂_y &                 & - a \; dz ∧ ∂_y \\
-       - b \; dx ∧ ∂_z & + a \; dy ∧ ∂_z &                 \\
+                   & - c \; dy ∧ ∂_x & + b \; dz ∧ ∂_x \\
+   + c \; dx ∧ ∂_y &                 & - a \; dz ∧ ∂_y \\
+   - b \; dx ∧ ∂_z & + a \; dy ∧ ∂_z &                 \\
    \end{bmatrix}
 
-.. admonition:: All Calculation Steps
+.. admonition:: Calculations
    :class: dropdown
 
    .. {{{
 
-   Flatten the first index, keeping the second sharp:
+   .. rubric:: Flatten the first index, keeping the second sharp
 
-   .. math::
+   .. math:: R^{♭♯} = (R^{♯♯})^{♭♯}
 
-      R^{♭♯} = (R^{♯♯})^{♭♯}
-
-   Take the rotation in its matrix form:
+   .. rubric:: Take the rotation in its matrix form
 
    .. math::
 
       R^{♭♯} = \frac{1}{2} \begin{bmatrix}
-                            & - c \; ∂_y ∧ ∂_x & + b \; ∂_z ∧ ∂_x \\
-          + c  \; ∂_x ∧ ∂_y &                  & - a \; ∂_z ∧ ∂_y \\
-          - b  \; ∂_x ∧ ∂_z & + a \; ∂_y ∧ ∂_z &                  \\
+                        & - c \; ∂_y ∧ ∂_x & + b \; ∂_z ∧ ∂_x \\
+      + c  \; ∂_x ∧ ∂_y &                  & - a \; ∂_z ∧ ∂_y \\
+      - b  \; ∂_x ∧ ∂_z & + a \; ∂_y ∧ ∂_z &                  \\
       \end{bmatrix}^{♭♯}
 
-   Distribute the musical operators:
+   rubric:: Distribute the musical operators
 
    .. math::
 
       R^{♭♯} = \frac{1}{2} \begin{bmatrix}
-                                  & - c \; (∂_y ∧ ∂_x)^{♭♯} & + b \; (∂_z ∧ ∂_x)^{♭♯} \\
-          + c \; (∂_x ∧ ∂_y)^{♭♯} &                         & - a \; (∂_z ∧ ∂_y)^{♭♯} \\
-          - b \; (∂_x ∧ ∂_z)^{♭♯} & + a \; (∂_y ∧ ∂_z)^{♭♯} &                         \\
+                              & - c \; (∂_y ∧ ∂_x)^{♭♯} & + b \; (∂_z ∧ ∂_x)^{♭♯} \\
+      + c \; (∂_x ∧ ∂_y)^{♭♯} &                         & - a \; (∂_z ∧ ∂_y)^{♭♯} \\
+      - b \; (∂_x ∧ ∂_z)^{♭♯} & + a \; (∂_y ∧ ∂_z)^{♭♯} &                         \\
       \end{bmatrix}
 
-   Apply the musical operators using the euclidean metric:
+   .. rubric:: Apply musical operators using the euclidean metric
 
    .. math::
 
       R^{♭♯} = \frac{1}{2} \begin{bmatrix}
-                                   & - c \; δ_{yi} dx^i ∧ ∂_x & + b \; δ_{zi} dx^i ∧ ∂_x \\
-          + c \; δ_{xi} dx^i ∧ ∂_y &                          & - a \; δ_{zi} dx^i ∧ ∂_y \\
-          - b \; δ_{xi} dx^i ∧ ∂_z & + a \; δ_{yi} dx^i ∧ ∂_z &                          \\
+                               & - c \; δ_{yi} dx^i ∧ ∂_x & + b \; δ_{zi} dx^i ∧ ∂_x \\
+      + c \; δ_{xi} dx^i ∧ ∂_y &                          & - a \; δ_{zi} dx^i ∧ ∂_y \\
+      - b \; δ_{xi} dx^i ∧ ∂_z & + a \; δ_{yi} dx^i ∧ ∂_z &                          \\
       \end{bmatrix}
 
-   Identify the non-zero components:
+   ..rubric:: Identify the non-zero components
 
    .. math::
 
       R^{♭♯} = \frac{1}{2} \begin{bmatrix}
-                            & - c \; dx^y ∧ ∂_x & + b \; dx^z ∧ ∂_x \\
-          + c \; dx^x ∧ ∂_y &                   & - a \; dx^z ∧ ∂_y \\
-          - b \; dx^x ∧ ∂_z & + a \; dx^y ∧ ∂_z &                   \\
+                        & - c \; dx^y ∧ ∂_x & + b \; dx^z ∧ ∂_x \\
+      + c \; dx^x ∧ ∂_y &                   & - a \; dx^z ∧ ∂_y \\
+      - b \; dx^x ∧ ∂_z & + a \; dx^y ∧ ∂_z &                   \\
       \end{bmatrix}
 
-   Replace the :math:`dx^i` by their expressions:
+   .. rubric:: Replace the :math:`dx^i` by their expressions and conclude
 
    .. math::
 
@@ -143,14 +141,12 @@ Flattening the first index of of the doubly contravariant form of the rotation
       dx^y = dy \\
       dx^z = dz \\
 
-   Conclude:
-
    .. math::
 
       R^{♭♯} = \frac{1}{2} \begin{bmatrix}
-                          & - c \; dy ∧ ∂_x & + b \; dz ∧ ∂_x \\
-          + c \; dx ∧ ∂_y &                 & - a \; dz ∧ ∂_y \\
-          - b \; dx ∧ ∂_z & + a \; dy ∧ ∂_z &                 \\
+                      & - c \; dy ∧ ∂_x & + b \; dz ∧ ∂_x \\
+      + c \; dx ∧ ∂_y &                 & - a \; dz ∧ ∂_y \\
+      - b \; dx ∧ ∂_z & + a \; dy ∧ ∂_z &                 \\
       \end{bmatrix}
 
    .. }}}
@@ -164,12 +160,12 @@ explicit expression of the mixed wedge products.
    (∂_y ∧ ∂_z)^{♭♯} &= dy ⊗ ∂_z - dz ⊗ ∂_y \\
    (∂_z ∧ ∂_x)^{♭♯} &= dz ⊗ ∂_x - dx ⊗ ∂_z \\
 
-.. admonition:: All calculation steps
+.. admonition:: Calculations
    :class: dropdown
 
    .. {{{
 
-   Expand the wedge product into tensor products:
+   .. rubric:: Expand the wedge product into tensor product
 
    .. math::
 
@@ -177,7 +173,7 @@ explicit expression of the mixed wedge products.
       (∂_y ∧ ∂_z)^{♭♯} &= (∂_y ⊗ ∂_z - ∂_z ⊗ ∂_y)^{♭♯} \\
       (∂_z ∧ ∂_x)^{♭♯} &= (∂_z ⊗ ∂_x - ∂_x ⊗ ∂_z)^{♭♯} \\
 
-   Distribute the musical operators:
+   ..rubric:: Distribute the musical operators
 
    .. math::
 
@@ -185,7 +181,7 @@ explicit expression of the mixed wedge products.
       (∂_y ∧ ∂_z)^{♭♯} &= ∂_y^♭ ⊗ ∂_z^♯ - ∂_z^♭ ⊗ ∂_y^♯ \\
       (∂_z ∧ ∂_x)^{♭♯} &= ∂_z^♭ ⊗ ∂_x^♯ - ∂_x^♭ ⊗ ∂_z^♯ \\
 
-   Apply the musical operators using the euclidean metric:
+   .. rubric:: Apply musical operators using the euclidean metric:
 
    .. math::
 
@@ -193,7 +189,7 @@ explicit expression of the mixed wedge products.
       (∂_y ∧ ∂_z)^{♭♯} &= δ_{yi} dx^i ⊗ ∂_z - δ_{zi} dx^i ⊗ ∂_y \\
       (∂_z ∧ ∂_x)^{♭♯} &= δ_{zi} dx^i ⊗ ∂_x - δ_{xi} dx^i ⊗ ∂_z \\
 
-   Identify the non-zero terms:
+   .. rubric:: Identify the non-zero terms
 
    .. math::
 
@@ -201,7 +197,7 @@ explicit expression of the mixed wedge products.
       (∂_y ∧ ∂_z)^{♭♯} &= δ_{yy} dx^y ⊗ ∂_z - δ_{zz} dx^z ⊗ ∂_y \\
       (∂_z ∧ ∂_x)^{♭♯} &= δ_{zz} dx^z ⊗ ∂_x - δ_{xx} dx^x ⊗ ∂_z \\
 
-   Apply numerical values
+   ..rubric: Apply numerical values
 
    .. math::
 
@@ -209,7 +205,7 @@ explicit expression of the mixed wedge products.
       (∂_y ∧ ∂_z)^{♭♯} &= dx^y ⊗ ∂_z - dx^z ⊗ ∂_y \\
       (∂_z ∧ ∂_x)^{♭♯} &= dx^z ⊗ ∂_x - dx^x ⊗ ∂_z \\
 
-   Replace the :math:`dx^i` by their expressions:
+   .. rubric:: Replace the :math:`dx^i` by their expressions and conclude
 
    .. math::
 
@@ -227,8 +223,8 @@ explicit expression of the mixed wedge products.
 
 .. }}}
 
-Flattening the Second Index
----------------------------
+:math:`♯♭` Representation
+-------------------------
 
 .. {{{
 
@@ -243,58 +239,56 @@ Flattening the second index of of the doubly contravariant form of the rotation
        + b \; ∂_z ∧ dx & - a \; ∂_z ∧ dy &                 \\
    \end{bmatrix}
 
-.. admonition:: All calculation steps
+.. admonition:: Calculations
    :class: dropdown
 
    .. {{{
 
-   Flatten the second index, keeping the first sharp:
+   .. rubric:: Flatten the second index, keeping the first sharp:
 
-   .. math::
+   .. math:: R^{♯♭} = (R^{♯♯})^{♯♭}
 
-      R^{♯♭} = (R^{♯♯})^{♯♭}
-
-   Take the rotation in its matrix form:
+   .. rubric:: Take the rotation in its matrix form:
 
    .. math::
 
       R^{♯♭} = \frac{1}{2} \begin{bmatrix}
-                            & - c \; ∂_y ∧ ∂_x & + b \; ∂_z ∧ ∂_x \\
-          + c  \; ∂_x ∧ ∂_y &                  & - a \; ∂_z ∧ ∂_y \\
-          - b  \; ∂_x ∧ ∂_z & + a \; ∂_y ∧ ∂_z &                  \\
+                        & - c \; ∂_y ∧ ∂_x & + b \; ∂_z ∧ ∂_x \\
+      + c  \; ∂_x ∧ ∂_y &                  & - a \; ∂_z ∧ ∂_y \\
+      - b  \; ∂_x ∧ ∂_z & + a \; ∂_y ∧ ∂_z &                  \\
       \end{bmatrix}^{♯♭}
 
-   Distribute the musical operators:
+   .. rubric:: Distribute the musical operators:
 
    .. math::
 
       R^{♯♭} = \frac{1}{2} \begin{bmatrix}
-                                  & - c \; (∂_y ∧ ∂_x)^{♯♭} & + b \; (∂_z ∧ ∂_x)^{♯♭} \\
-          + c \; (∂_x ∧ ∂_y)^{♯♭} &                         & - a \; (∂_z ∧ ∂_y)^{♯♭} \\
-          - b \; (∂_x ∧ ∂_z)^{♯♭} & + a \; (∂_y ∧ ∂_z)^{♯♭} &                         \\
+                              & - c \; (∂_y ∧ ∂_x)^{♯♭} & + b \; (∂_z ∧ ∂_x)^{♯♭} \\
+      + c \; (∂_x ∧ ∂_y)^{♯♭} &                         & - a \; (∂_z ∧ ∂_y)^{♯♭} \\
+      - b \; (∂_x ∧ ∂_z)^{♯♭} & + a \; (∂_y ∧ ∂_z)^{♯♭} &                         \\
       \end{bmatrix}
 
-   Apply the musical operators using the euclidean metric:
+   .. rubric:: Apply the musical operators using the euclidean metric:
 
    .. math::
 
       R^{♯♭} = \frac{1}{2} \begin{bmatrix}
-                                   & - c \; ∂_y ∧ δ_{xi} dx^i & + b \; ∂_z ∧ δ_{xi} dx^i \\
-          + c \; ∂_x ∧ δ_{yi} dx^i &                          & - a \; ∂_z ∧ δ_{yi} dx^i \\
-          - b \; ∂_x ∧ δ_{zi} dx^i & + a \; ∂_y ∧ δ_{zi} dx^i &                          \\
+                               & - c \; ∂_y ∧ δ_{xi} dx^i & + b \; ∂_z ∧ δ_{xi} dx^i \\
+      + c \; ∂_x ∧ δ_{yi} dx^i &                          & - a \; ∂_z ∧ δ_{yi} dx^i \\
+      - b \; ∂_x ∧ δ_{zi} dx^i & + a \; ∂_y ∧ δ_{zi} dx^i &                          \\
       \end{bmatrix}
 
-   Identify the non-zero components:
+   .. rubric:: Identify the non-zero components:
 
    .. math::
 
       R^{♯♭} = \frac{1}{2} \begin{bmatrix}
-                            & - c \; ∂_y ∧ dx^x & + b \; ∂_z ∧ dx^x \\
-          + c \; ∂_x ∧ dx^y &                   & - a \; ∂_z ∧ dx^y \\
-          - b \; ∂_x ∧ dx^z & + a \; ∂_y ∧ dx^z &                   \\
+                        & - c \; ∂_y ∧ dx^x & + b \; ∂_z ∧ dx^x \\
+      + c \; ∂_x ∧ dx^y &                   & - a \; ∂_z ∧ dx^y \\
+      - b \; ∂_x ∧ dx^z & + a \; ∂_y ∧ dx^z &                   \\
       \end{bmatrix}
 
-   Replace the :math:`dx^i` by their expressions:
+   .. rubric:: Replace the :math:`dx^i` by their expressions
 
    .. math::
 
@@ -305,19 +299,19 @@ Flattening the second index of of the doubly contravariant form of the rotation
    .. math::
 
       R^{♯♭} = \frac{1}{2} \begin{bmatrix}
-                          & - c \; ∂_y ∧ dx & + b \; ∂_z ∧ dx \\
-          + c \; ∂_x ∧ dy &                 & - a \; ∂_z ∧ dy \\
-          - b \; ∂_x ∧ dz & + a \; ∂_y ∧ dz &                 \\
+                      & - c \; ∂_y ∧ dx & + b \; ∂_z ∧ dx \\
+      + c \; ∂_x ∧ dy &                 & - a \; ∂_z ∧ dy \\
+      - b \; ∂_x ∧ dz & + a \; ∂_y ∧ dz &                 \\
       \end{bmatrix}
 
-   Reorder:
+   .. rubric:: Reorder and conclude
 
    .. math::
 
       R^{♯♭} = \frac{1}{2} \begin{bmatrix}
-                          & + c \; ∂_x ∧ dy & - b \; ∂_x ∧ dz \\
-          - c \; ∂_y ∧ dx &                 & + a \; ∂_y ∧ dz \\
-          + b \; ∂_z ∧ dx & - a \; ∂_z ∧ dy &                 \\
+                      & + c \; ∂_x ∧ dy & - b \; ∂_x ∧ dz \\
+      - c \; ∂_y ∧ dx &                 & + a \; ∂_y ∧ dz \\
+      + b \; ∂_z ∧ dx & - a \; ∂_z ∧ dy &                 \\
       \end{bmatrix}
 
    .. }}}
@@ -331,7 +325,7 @@ explicit expression of the mixed wedge products.
    (∂_y ∧ ∂_z)^{♯♭} &= ∂_y ⊗ dz - ∂_z ⊗ dy \\
    (∂_z ∧ ∂_x)^{♯♭} &= ∂_z ⊗ dx - ∂_x ⊗ dz \\
 
-.. admonition:: All calculation steps
+.. admonition:: Calculations
    :class: dropdown
 
    .. {{{
