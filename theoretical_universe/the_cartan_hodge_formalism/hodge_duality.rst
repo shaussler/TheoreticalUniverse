@@ -1,4 +1,5 @@
 .. _hodge_duality:
+.. _hodge duality:
 
 Hodge duality
 =============

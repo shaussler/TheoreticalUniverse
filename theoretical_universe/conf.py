@@ -117,7 +117,7 @@ mathjax3_config = {
     'tex': {
        'packages': {'[+]': ['ams']},
        'macros': {
-            '\E': r'\tilde{E}',
+            'E': r'\tilde{E}',
         }
     },
     'tex2jax': {

@@ -7,29 +7,55 @@
 Theoretical Universe
 ====================
 
-This serie was initially conceived as a set of short, independent articles.
-However, it has expanded beyond my initial expectation. It all begins with the
-derivation of the electromagnetic field tensor from Maxwell's equations of
-1865, a process straightforward for those with a grasp of vector calculus and
-matrix multiplication.
+.. rst-class:: custom-title
 
-My exploration extended to Riemannian manifolds, differential forms, and the
-exterior derivative. I delved into musical isomorphisms and the Hodge dual,
-encapsulating these concepts in what I term :ref:`the Cartan-Hodge formalism
-<the_cartan_hodge_formalism>`. This comprehensive framework facilitated a
-systematic analysis of rotation representation in differential form and a
-thorough examination of differential operators within this context. Notably, I
-dissected the exterior derivative of rotations, leading to the understanding
-that it precisely mirrors Maxwell's equations, offering a fully coherent
-demonstration of the formulation of Maxwell's equations in differential form:
+   Maxwell Field Equations in Differential Form
+
+.. rst-class:: custom-author
+
+   by Stéphane Haussler
+
+This serie was originally envisioned as a collection of short, standalone
+articles. However, it has expanded beyond my initial expectation and evolved
+into something more comprehensive. Within these pages, you will find a
+systematic analysis and demonstration of the formulation of electromagnetism
+expressed via differential forms. I point out the article :ref:`faraday tensor
+derivation` for its simplicity. This derivation is straightforward and
+self-contained, requiring only knowledge of vector calculus and matrix
+multiplication.
+
+Subsequent articles assume that readers have a solid understanding of vector
+calculus, a working understanding of differential forms and the wedge product,
+as well as knowledge of :ref:`hodge duality`. For those looking to learn about
+differential forms, `I recommend the excellent video serie by Michael Penn
+<https://youtube.com/playlist?list=PL22w63XsKjqzQZtDZO_9s2HEMRJnaOTX7&si=4dDrAZ-oKa1rI7B8>`_.
+Implicitely assumed in this discussion is a basic understanding of tensor
+calculus, specifically the concept of vector/covector duality. At the heart of
+this work lies the computation of the exterior derivative of rotations in
+Minkowski space, which leads to the insight that it perfectly mirrors Maxwell's
+equations. This provides a comprehensive and coherent demonstration of how
+Maxwell's equations emerge from the framework of differential forms:
+
+.. margin:: A single equation
+
+   Electromagnetism is reduced to a single equation. Indeed, the terms resulting
+   from :math:`d ⋆` is a 3-Form, while the terms resulting from :math:`⋆ d` is a
+   1-form. The equation can then be split into independent 1-form part and
+   3-form part, and fall back to the well known :math:`d\mathbf{F}=0` and
+   :math:`d⋆\mathbf{F}=\mathbf{J}`, where :math:`\mathbf{F}` is the field
+   2-form.
 
 .. topic:: Maxwell Equations in the Cartan-Hodge Formalism
 
    .. math::
 
       (d ⋆ - ⋆ d ) \begin{bmatrix}
-          \E^x \; dx ∧ dt \\ \E^y \; dy ∧ dt \\ \E^z \; dz ∧ dt \\
-           B^x \; dy ∧ dz \\  B^y \; dz ∧ dx \\  B^z \; dx ∧ dy \\
+          \E^x \; dx ∧ dt \\
+          \E^y \; dy ∧ dt \\
+          \E^z \; dz ∧ dt \\
+           B^x \; dy ∧ dz \\
+           B^y \; dz ∧ dx \\
+           B^z \; dx ∧ dy \\
       \end{bmatrix}
       = \begin{bmatrix}
           + μ_0 c ρ \; dx ∧ dy ∧ dz\\
@@ -38,8 +64,10 @@ demonstration of the formulation of Maxwell's equations in differential form:
           - μ_0 J^z \; dt ∧ dx ∧ dy\\
       \end{bmatrix}
 
-   :math:`d` is the exterior derivative, :math:`⋆` the Hodge star operator and
-   :math:`∧` the wedge product.
+   Where :math:`d` is the exterior derivative, :math:`⋆` the Hodge star operator
+   and :math:`∧` the wedge product.
+
+..
 
 Some of the content of these articles, although certainly not *new*, may offer
 insights which may not be widely known. I present the details of all
@@ -48,6 +76,20 @@ aware of freely available resources I should cite, open an issue and I will
 include a reference. If you find mistakes, don't hesitate to directly provide
 corrections by sending a merge request to `the Theoretical Universe Github
 repository <https://github.com/shaussler/TheoreticalUniverse/>`_.
+
+.. rubric:: The Cartan-Hodge Formalism
+
+This section defines the mathematical objects used in this work. We argue on the
+notation to express basis vectors as partial derivatives :math:`∂_μ` and recall
+the use of the musical sharp :math:`♯` operator to transform covectors to
+vectors, and flat :math:`♭` to transform vectors to covectors. The concept of
+the Hodge dual is detailed in a hope simple manner. Finally, I introduce the
+concept of free matrix representation, which I hope readers will find obvious.
+
+I encapsulate these concepts in what I term :ref:`the Cartan-Hodge formalism
+<the_cartan_hodge_formalism>`. This comprehensive framework facilitates the
+systematic analysis of rotation representation in differential form and a
+thorough examination of differential operators within this context.
 
 .. toctree::
    :maxdepth: 1
