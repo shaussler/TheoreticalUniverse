@@ -5,6 +5,7 @@
 .. with this work. If not, see <https://creativecommons.org/licenses/by/4.0/>.
 
 .. _deriving_the_faraday_tensor_from_the_1865_maxwell_equations:
+.. _deriving the Faraday tensor from the 1865 Maxwell equations:
 .. _faraday tensor derivation:
 
 Deriving the Faraday Tensor from the 1865 Maxwell Equations

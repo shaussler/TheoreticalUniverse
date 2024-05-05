@@ -5,6 +5,7 @@
 .. with this work. If not, see <https://creativecommons.org/licenses/by/4.0/>.
 
 .. _the_cartan_hodge_formalism:
+.. _the Cartan-Hodge formalism:
 
 The Cartan-Hodge Formalism
 ==========================

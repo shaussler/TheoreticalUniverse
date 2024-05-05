@@ -26,7 +26,7 @@ With free matrix representation, the bivector can be written as a single column:
 
    .. math::
 
-      R = \begin{bmatrix}
+      R^{♯♯} = \begin{bmatrix}
           a \; ∂_y ∧ ∂_z \\
           b \; ∂_z ∧ ∂_x \\
           c \; ∂_x ∧ ∂_y \\
@@ -36,7 +36,7 @@ Or alternatively with a row/column matrix notation:
 
 .. math::
 
-   R = \begin{bmatrix}
+   R^{♯♯} = \begin{bmatrix}
                       & c \; ∂_x ∧ ∂_y &                \\
                       &                & a \; ∂_y ∧ ∂_z \\
        b \; ∂_z ∧ ∂_x &                &                \\
@@ -55,7 +55,7 @@ With a row/column representation, we obtain:
 
    .. math::
 
-      R = \frac{1}{2} \begin{bmatrix}
+      R^{♯♯} = \frac{1}{2} \begin{bmatrix}
                             & - c \; ∂_y ∧ ∂_x & + b \; ∂_z ∧ ∂_x \\
            + c \; ∂_x ∧ ∂_y &                  & - a \; ∂_z ∧ ∂_y \\
            - b \; ∂_x ∧ ∂_z & + a \; ∂_y ∧ ∂_z &               \\

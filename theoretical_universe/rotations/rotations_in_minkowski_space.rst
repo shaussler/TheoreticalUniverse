@@ -129,7 +129,7 @@ apply the flat operators to each components, :math:`R^{♭♭} = (R^{♯♯})^{�
             & f \; dx ∧ dy \\
       \end{aligned} \right]
 
-.. admonition:: Calculation Steps
+.. admonition:: Calculations
    :class: dropdown
 
    .. {{{
@@ -201,6 +201,135 @@ apply the flat operators to each components, :math:`R^{♭♭} = (R^{♯♯})^{�
 
 .. }}}
 
+The :math:`♭♯` Rotation Tensor
+------------------------------
+
+.. {{{
+
+In this section, I flattne the first component using the :ref:`free matrix
+representation <the_free_matrix_representation>`. The mixed tensor is obtained
+by applying the flatternig operator :math:`\flat`:
+
+.. math::
+
+   B^{♭♯} = \begin{bmatrix}
+       a \; ∂_t ∧ ∂_x \\
+       b \; ∂_t ∧ ∂_y \\
+       c \; ∂_t ∧ ∂_z \\
+       d \; ∂_y ∧ ∂_z \\
+       e \; ∂_z ∧ ∂_x \\
+       f \; ∂_x ∧ ∂_y \\
+   \end{bmatrix}^{♭♯}
+   = \begin{bmatrix}
+       + a \; dx^x ∧ ∂_t \\
+       + b \; dx^y ∧ ∂_t \\
+       + c \; dx^z ∧ ∂_t \\
+       - d \; dx^z ∧ ∂_y \\
+       - e \; dx^x ∧ ∂_z \\
+       - f \; dx^y ∧ ∂_x \\
+   \end{bmatrix}
+
+.. admonition:: Calculations
+   :class: dropdown
+
+   .. {{{
+
+   Apply the musical operator :math:`♭♯`
+
+   .. math::
+
+      B^{♭♯} = \begin{bmatrix}
+          a \; ∂_t ∧ ∂_x \\
+          b \; ∂_t ∧ ∂_y \\
+          c \; ∂_t ∧ ∂_z \\
+          d \; ∂_y ∧ ∂_z \\
+          e \; ∂_z ∧ ∂_x \\
+          f \; ∂_x ∧ ∂_y \\
+      \end{bmatrix}^{♭♯}
+
+   Distribute the musical operators to each matrix elements:
+
+   .. math::
+
+      B^{♭♯} = \begin{bmatrix}
+        a \; (∂_t ∧ ∂_x)^{♭♯} \\
+        b \; (∂_t ∧ ∂_y)^{♭♯} \\
+        c \; (∂_t ∧ ∂_z)^{♭♯} \\
+        d \; (∂_y ∧ ∂_z)^{♭♯} \\
+        e \; (∂_z ∧ ∂_x)^{♭♯} \\
+        f \; (∂_x ∧ ∂_y)^{♭♯} \\
+      \end{bmatrix}
+
+   Distribute the musical operators:
+
+   .. math::
+
+      B^{♭♯} = \begin{bmatrix}
+        a \; (∂_t^♭ ∧ ∂_x^♯) \\
+        b \; (∂_t^♭ ∧ ∂_y^♯) \\
+        c \; (∂_t^♭ ∧ ∂_z^♯) \\
+        d \; (∂_y^♭ ∧ ∂_z^♯) \\
+        e \; (∂_z^♭ ∧ ∂_x^♯) \\
+        f \; (∂_x^♭ ∧ ∂_y^♯) \\
+      \end{bmatrix}
+
+   Apply the musical operators:
+
+   .. math::
+
+      B^{♭♯} = \begin{bmatrix}
+        a \; η_{tγ} dx^γ ∧ ∂_x^♯ \\
+        b \; η_{tγ} dx^γ ∧ ∂_y^♯ \\
+        c \; η_{tγ} dx^γ ∧ ∂_z^♯ \\
+        d \; η_{yγ} dx^γ ∧ ∂_z^♯ \\
+        e \; η_{zγ} dx^γ ∧ ∂_x^♯ \\
+        f \; η_{xγ} dx^γ ∧ ∂_y^♯ \\
+      \end{bmatrix}
+
+   Identify the non-zero terms of the Minkowski metric:
+
+   .. math::
+
+      B^{♭♯} = \begin{bmatrix}
+        a \; η_{tt} dx^t ∧ ∂_x \\
+        b \; η_{tt} dx^t ∧ ∂_y \\
+        c \; η_{tt} dx^t ∧ ∂_z \\
+        d \; η_{yy} dx^y ∧ ∂_z \\
+        e \; η_{zz} dx^z ∧ ∂_x \\
+        f \; η_{xx} dx^x ∧ ∂_y \\
+      \end{bmatrix}
+
+   Use the numerical values of the Minkowski metric:
+
+   .. math::
+
+      B^{♭♯} = \begin{bmatrix}
+        + a \; dx^t ∧ ∂_x \\
+        + b \; dx^t ∧ ∂_y \\
+        + c \; dx^t ∧ ∂_z \\
+        - d \; dx^y ∧ ∂_z \\
+        - e \; dx^z ∧ ∂_x \\
+        - f \; dx^x ∧ ∂_y \\
+      \end{bmatrix}
+
+   .. }}}
+
+Taking into account the symetric property of :math:`dx^t ∧ ∂_x`, :math:`dx^t
+∧ ∂_y`, and :math:`dx^t ∧ ∂_z`, as well the antisymetric property of
+:math:`dx^x ∧ ∂_y`, :math:`dx^y ∧ ∂_z`, and :math:`dx^z ∧ ∂_x`
+demonstrated above, this results in:
+
+.. math::
+
+   B^{♭♯} = \frac{1}{2} \begin{bmatrix}
+                         & + a \; dx^t ∧ ∂_x & + b \; dx^t ∧ ∂_y & + c \; dx^t ∧ ∂_z \\
+       + a \; dx^x ∧ ∂_t &                   & + f \; dx^x ∧ ∂_y & - e \; dx^x ∧ ∂_z \\
+       + b \; dx^y ∧ ∂_t & - f \; dx^y ∧ ∂_x &                   & + d \; dx^y ∧ ∂_z \\
+       + c \; dx^z ∧ ∂_t & + e \; dx^z ∧ ∂_x & - d \; dx^z ∧ ∂_y &                   \\
+   \end{bmatrix}
+
+.. }}}
+
 The :math:`♯♭` Rotation Tensor
 ------------------------------
 
@@ -228,7 +357,7 @@ tensor is obtained by applying the flatternig operator :math:`\flat`:
        - f \; ∂_x ∧ dx^y \\
    \end{bmatrix}
 
-.. admonition:: Calculation Steps
+.. admonition:: Calculations
    :class: dropdown
 
    .. {{{
@@ -342,135 +471,6 @@ demonstrated above, this results in:
 
 .. }}}
 
-The :math:`♭♯` Rotation Tensor
-------------------------------
-
-.. {{{
-
-In this section, I flattne the first component using the :ref:`free matrix
-representation <the_free_matrix_representation>`. The mixed tensor is obtained
-by applying the flatternig operator :math:`\flat`:
-
-.. math::
-
-   B^{♭♯} = \begin{bmatrix}
-       a \; ∂_t ∧ ∂_x \\
-       b \; ∂_t ∧ ∂_y \\
-       c \; ∂_t ∧ ∂_z \\
-       d \; ∂_y ∧ ∂_z \\
-       e \; ∂_z ∧ ∂_x \\
-       f \; ∂_x ∧ ∂_y \\
-   \end{bmatrix}^{♭♯}
-   = \begin{bmatrix}
-       + a \; dx^x ∧ ∂_t \\
-       + b \; dx^y ∧ ∂_t \\
-       + c \; dx^z ∧ ∂_t \\
-       - d \; dx^z ∧ ∂_y \\
-       - e \; dx^x ∧ ∂_z \\
-       - f \; dx^y ∧ ∂_x \\
-   \end{bmatrix}
-
-.. admonition:: Calculation Steps
-   :class: dropdown
-
-   .. {{{
-
-   Apply the musical operator :math:`♭♯`
-
-   .. math::
-
-      B^{♭♯} = \begin{bmatrix}
-          a \; ∂_t ∧ ∂_x \\
-          b \; ∂_t ∧ ∂_y \\
-          c \; ∂_t ∧ ∂_z \\
-          d \; ∂_y ∧ ∂_z \\
-          e \; ∂_z ∧ ∂_x \\
-          f \; ∂_x ∧ ∂_y \\
-      \end{bmatrix}^{♭♯}
-
-   Distribute the musical operators to each matrix elements:
-
-   .. math::
-
-      B^{♭♯} = \begin{bmatrix}
-        a \; (∂_t ∧ ∂_x)^{♭♯} \\
-        b \; (∂_t ∧ ∂_y)^{♭♯} \\
-        c \; (∂_t ∧ ∂_z)^{♭♯} \\
-        d \; (∂_y ∧ ∂_z)^{♭♯} \\
-        e \; (∂_z ∧ ∂_x)^{♭♯} \\
-        f \; (∂_x ∧ ∂_y)^{♭♯} \\
-      \end{bmatrix}
-
-   Distribute the musical operators:
-
-   .. math::
-
-      B^{♭♯} = \begin{bmatrix}
-        a \; (∂_t^♭ ∧ ∂_x^♯) \\
-        b \; (∂_t^♭ ∧ ∂_y^♯) \\
-        c \; (∂_t^♭ ∧ ∂_z^♯) \\
-        d \; (∂_y^♭ ∧ ∂_z^♯) \\
-        e \; (∂_z^♭ ∧ ∂_x^♯) \\
-        f \; (∂_x^♭ ∧ ∂_y^♯) \\
-      \end{bmatrix}
-
-   Apply the musical operators:
-
-   .. math::
-
-      B^{♭♯} = \begin{bmatrix}
-        a \; η_{tγ} dx^γ ∧ ∂_x^♯ \\
-        b \; η_{tγ} dx^γ ∧ ∂_y^♯ \\
-        c \; η_{tγ} dx^γ ∧ ∂_z^♯ \\
-        d \; η_{yγ} dx^γ ∧ ∂_z^♯ \\
-        e \; η_{zγ} dx^γ ∧ ∂_x^♯ \\
-        f \; η_{xγ} dx^γ ∧ ∂_y^♯ \\
-      \end{bmatrix}
-
-   Identify the non-zero terms of the Minkowski metric:
-
-   .. math::
-
-      B^{♭♯} = \begin{bmatrix}
-        a \; η_{tt} dx^t ∧ ∂_x \\
-        b \; η_{tt} dx^t ∧ ∂_y \\
-        c \; η_{tt} dx^t ∧ ∂_z \\
-        d \; η_{yy} dx^y ∧ ∂_z \\
-        e \; η_{zz} dx^z ∧ ∂_x \\
-        f \; η_{xx} dx^x ∧ ∂_y \\
-      \end{bmatrix}
-
-   Use the numerical values of the Minkowski metric:
-
-   .. math::
-
-      B^{♭♯} = \begin{bmatrix}
-        + a \; dx^t ∧ ∂_x \\
-        + b \; dx^t ∧ ∂_y \\
-        + c \; dx^t ∧ ∂_z \\
-        - d \; dx^y ∧ ∂_z \\
-        - e \; dx^z ∧ ∂_x \\
-        - f \; dx^x ∧ ∂_y \\
-      \end{bmatrix}
-
-   .. }}}
-
-Taking into account the symetric property of :math:`dx^t ∧ ∂_x`, :math:`dx^t
-∧ ∂_y`, and :math:`dx^t ∧ ∂_z`, as well the antisymetric property of
-:math:`dx^x ∧ ∂_y`, :math:`dx^y ∧ ∂_z`, and :math:`dx^z ∧ ∂_x`
-demonstrated above, this results in:
-
-.. math::
-
-   B^{♭♯} = \frac{1}{2} \begin{bmatrix}
-                         & + a \; dx^t ∧ ∂_x & + b \; dx^t ∧ ∂_y & + c \; dx^t ∧ ∂_z \\
-       + a \; dx^x ∧ ∂_t &                   & + f \; dx^x ∧ ∂_y & - e \; dx^x ∧ ∂_z \\
-       + b \; dx^y ∧ ∂_t & - f \; dx^y ∧ ∂_x &                   & + d \; dx^y ∧ ∂_z \\
-       + c \; dx^z ∧ ∂_t & + e \; dx^z ∧ ∂_x & - d \; dx^z ∧ ∂_y &                   \\
-   \end{bmatrix}
-
-.. }}}
-
 The :math:`\mathfrak{so}(1,3)` Lie Algebra of the Lorentz Group
 ---------------------------------------------------------------
 
@@ -490,28 +490,36 @@ We thus obtain triviall obtain the representation of the `Lorentz group
 
 .. }}}
 
-Symmetries of the Mixed Wedge Product
--------------------------------------
+Symmetries of the :math:`♭♯` Exterior Product
+---------------------------------------------
 
 .. {{{
 
-.. rubric:: Flattening the First Index
+The purpose here is to determine the symmetries of the mixed exterior product.
+Calculations are tedious, but permit to verify that everything works as it
+should as the quantities are encountered when :ref:`deriving the Faraday tensor
+from the 1865 Maxwell equations`. The discussion can certainly be avoided, but
+it is nice to settle it once and for all. This is important when performing
+matrix multiplications since per convention, matrices are :math:`♯♭` tensors
+organized in tables following the row-column convention. This is not critical
+when using :ref:`the free matrix representation`, but permits to fall back to
+this familiar framework.
 
-.. {{{
-
-We apply the :math:`♭♯` operators to flatten the first index of each basis
-bivectors:
+Applying the :math:`♭♯` operators to flatten the first index of each basis
+bivectors, we obtain:
 
 .. math::
 
-   (∂_t ∧ ∂_x)^{♭♯} &= + dx^t ∧ ∂_x \\
-   (∂_t ∧ ∂_y)^{♭♯} &= + dx^t ∧ ∂_y \\
-   (∂_t ∧ ∂_z)^{♭♯} &= + dx^t ∧ ∂_z \\
-   (∂_y ∧ ∂_z)^{♭♯} &= - dx^y ∧ ∂_z \\
-   (∂_z ∧ ∂_x)^{♭♯} &= - dx^z ∧ ∂_x \\
-   (∂_x ∧ ∂_y)^{♭♯} &= - dx^x ∧ ∂_y \\
+   \begin{alignedat}{1}
+   (∂_t ∧ ∂_x)^{♭♯} =& + dt ∧ ∂_x &\qquad& (∂_x ∧ ∂_t)^{♭♯} =& - dx ∧ ∂_t \\
+   (∂_t ∧ ∂_y)^{♭♯} =& + dt ∧ ∂_y &\qquad& (∂_y ∧ ∂_t)^{♭♯} =& - dy ∧ ∂_t \\
+   (∂_t ∧ ∂_z)^{♭♯} =& + dt ∧ ∂_z &\qquad& (∂_z ∧ ∂_t)^{♭♯} =& - dz ∧ ∂_t \\
+   (∂_y ∧ ∂_z)^{♭♯} =& - dy ∧ ∂_z &\qquad& (∂_y ∧ ∂_x)^{♭♯} =& - dy ∧ ∂_x \\
+   (∂_z ∧ ∂_x)^{♭♯} =& - dz ∧ ∂_x &\qquad& (∂_z ∧ ∂_y)^{♭♯} =& - dz ∧ ∂_y \\
+   (∂_x ∧ ∂_y)^{♭♯} =& - dx ∧ ∂_y &\qquad& (∂_x ∧ ∂_z)^{♭♯} =& - dx ∧ ∂_z \\
+   \end{alignedat}
 
-.. admonition:: All calculation steps
+.. admonition:: Calculations
    :class: dropdown
 
    .. {{{
@@ -520,45 +528,72 @@ bivectors:
 
    .. math::
 
+      \begin{align}
+      &
+      \begin{aligned}
       (∂_t ∧ ∂_x)^{♭♯} &= (∂_t^♭ ∧ ∂_x^♯) \\
       (∂_t ∧ ∂_y)^{♭♯} &= (∂_t^♭ ∧ ∂_y^♯) \\
       (∂_t ∧ ∂_z)^{♭♯} &= (∂_t^♭ ∧ ∂_z^♯) \\
       (∂_x ∧ ∂_y)^{♭♯} &= (∂_x^♭ ∧ ∂_y^♯) \\
       (∂_y ∧ ∂_z)^{♭♯} &= (∂_y^♭ ∧ ∂_z^♯) \\
       (∂_z ∧ ∂_x)^{♭♯} &= (∂_z^♭ ∧ ∂_x^♯) \\
-
-   Apply the musical operators:
-
-   .. math::
-
+      (∂_x ∧ ∂_t)^{♭♯} &= (∂_x^♭ ∧ ∂_t^♯) \\
+      (∂_y ∧ ∂_t)^{♭♯} &= (∂_y^♭ ∧ ∂_t^♯) \\
+      (∂_z ∧ ∂_t)^{♭♯} &= (∂_z^♭ ∧ ∂_t^♯) \\
+      (∂_y ∧ ∂_x)^{♭♯} &= (∂_y^♭ ∧ ∂_x^♯) \\
+      (∂_z ∧ ∂_y)^{♭♯} &= (∂_z^♭ ∧ ∂_y^♯) \\
+      (∂_x ∧ ∂_z)^{♭♯} &= (∂_x^♭ ∧ ∂_z^♯) \\
+      \end{aligned}
+      && \text{Distribute musical operators} \\
+      && \\
+      &\begin{aligned}
       (∂_t ∧ ∂_x)^{♭♯} &= η_{tγ} dx^γ ∧ ∂_x \\
       (∂_t ∧ ∂_y)^{♭♯} &= η_{tγ} dx^γ ∧ ∂_y \\
       (∂_t ∧ ∂_z)^{♭♯} &= η_{tγ} dx^γ ∧ ∂_z \\
       (∂_x ∧ ∂_y)^{♭♯} &= η_{xγ} dx^γ ∧ ∂_y \\
       (∂_y ∧ ∂_z)^{♭♯} &= η_{yγ} dx^γ ∧ ∂_z \\
       (∂_z ∧ ∂_x)^{♭♯} &= η_{zγ} dx^γ ∧ ∂_x \\
-
-   Identify the non-zero metric elements:
-
-   .. math::
-
+      (∂_x ∧ ∂_t)^{♭♯} &= η_{xγ} dx^γ ∧ ∂_t \\
+      (∂_y ∧ ∂_t)^{♭♯} &= η_{yγ} dx^γ ∧ ∂_t \\
+      (∂_z ∧ ∂_t)^{♭♯} &= η_{zγ} dx^γ ∧ ∂_t \\
+      (∂_y ∧ ∂_x)^{♭♯} &= η_{yγ} dx^γ ∧ ∂_x \\
+      (∂_z ∧ ∂_y)^{♭♯} &= η_{zγ} dx^γ ∧ ∂_y \\
+      (∂_x ∧ ∂_z)^{♭♯} &= η_{xγ} dx^γ ∧ ∂_z \\
+      \end{aligned}
+      &&\text{Apply musical operators} \\
+      && \\
+      &\begin{aligned}
       (∂_t ∧ ∂_x)^{♭♯} &= η_{tt} dx^t ∧ ∂_x \\
       (∂_t ∧ ∂_y)^{♭♯} &= η_{tt} dx^t ∧ ∂_y \\
       (∂_t ∧ ∂_z)^{♭♯} &= η_{tt} dx^t ∧ ∂_z \\
       (∂_x ∧ ∂_y)^{♭♯} &= η_{xx} dx^x ∧ ∂_y \\
       (∂_y ∧ ∂_z)^{♭♯} &= η_{yy} dx^y ∧ ∂_z \\
       (∂_z ∧ ∂_x)^{♭♯} &= η_{zz} dx^z ∧ ∂_x \\
-
-   Apply the numerical values:
-
-   .. math::
-
-      (∂_t ∧ ∂_x)^{♭♯} &= + dx^t ∧ ∂_x \\
-      (∂_t ∧ ∂_y)^{♭♯} &= + dx^t ∧ ∂_y \\
-      (∂_t ∧ ∂_z)^{♭♯} &= + dx^t ∧ ∂_z \\
-      (∂_x ∧ ∂_y)^{♭♯} &= - dx^x ∧ ∂_y \\
-      (∂_y ∧ ∂_z)^{♭♯} &= - dx^y ∧ ∂_z \\
-      (∂_z ∧ ∂_x)^{♭♯} &= - dx^z ∧ ∂_x \\
+      (∂_x ∧ ∂_t)^{♭♯} &= η_{xx} dx^x ∧ ∂_t \\
+      (∂_y ∧ ∂_t)^{♭♯} &= η_{yy} dx^y ∧ ∂_t \\
+      (∂_z ∧ ∂_t)^{♭♯} &= η_{zz} dx^z ∧ ∂_t \\
+      (∂_y ∧ ∂_x)^{♭♯} &= η_{yy} dx^y ∧ ∂_x \\
+      (∂_z ∧ ∂_y)^{♭♯} &= η_{zz} dx^z ∧ ∂_y \\
+      (∂_x ∧ ∂_z)^{♭♯} &= η_{xx} dx^x ∧ ∂_z \\
+      \end{aligned}
+      && \text{Identify non-zero metric elements} \\
+      && \\
+      &\begin{aligned}
+      (∂_t ∧ ∂_x)^{♭♯} &= + dt ∧ ∂_x \\
+      (∂_t ∧ ∂_y)^{♭♯} &= + dt ∧ ∂_y \\
+      (∂_t ∧ ∂_z)^{♭♯} &= + dt ∧ ∂_z \\
+      (∂_x ∧ ∂_y)^{♭♯} &= - dx ∧ ∂_y \\
+      (∂_y ∧ ∂_z)^{♭♯} &= - dy ∧ ∂_z \\
+      (∂_z ∧ ∂_x)^{♭♯} &= - dz ∧ ∂_x \\
+      (∂_x ∧ ∂_t)^{♭♯} &= - dx ∧ ∂_t \\
+      (∂_y ∧ ∂_t)^{♭♯} &= - dy ∧ ∂_t \\
+      (∂_z ∧ ∂_t)^{♭♯} &= - dz ∧ ∂_t \\
+      (∂_y ∧ ∂_x)^{♭♯} &= - dy ∧ ∂_x \\
+      (∂_z ∧ ∂_y)^{♭♯} &= - dz ∧ ∂_y \\
+      (∂_x ∧ ∂_z)^{♭♯} &= - dx ∧ ∂_z \\
+      \end{aligned}
+      && \text{Apply numerical values} \\
+      \end{align}
 
    .. }}}
 
@@ -567,72 +602,84 @@ terms of tensor products:
 
 .. math::
 
-   (∂_t ∧ ∂_x)^{♭♯} &= + dx^t ⊗ ∂_x + dx^x ⊗ ∂_t \\
-   (∂_t ∧ ∂_y)^{♭♯} &= + dx^t ⊗ ∂_y + dx^y ⊗ ∂_t \\
-   (∂_t ∧ ∂_z)^{♭♯} &= + dx^t ⊗ ∂_z + dx^z ⊗ ∂_t \\
-   (∂_y ∧ ∂_z)^{♭♯} &= - dx^y ⊗ ∂_z + dx^z ⊗ ∂_y \\
-   (∂_z ∧ ∂_x)^{♭♯} &= - dx^z ⊗ ∂_x + dx^x ⊗ ∂_z \\
-   (∂_x ∧ ∂_y)^{♭♯} &= - dx^x ⊗ ∂_y + dx^y ⊗ ∂_x \\
+    \begin{alignedat}{1}
+   (∂_t ∧ ∂_x)^{♭♯} =& + dt ⊗ ∂_x &+& dx ⊗ ∂_t &\qquad& (∂_x ∧ ∂_t)^{♭♯} =& - dx ⊗ ∂_t &-& dt ⊗ ∂_x \\
+   (∂_t ∧ ∂_y)^{♭♯} =& + dt ⊗ ∂_y &+& dy ⊗ ∂_t &\qquad& (∂_y ∧ ∂_t)^{♭♯} =& - dy ⊗ ∂_t &-& dt ⊗ ∂_y \\
+   (∂_t ∧ ∂_z)^{♭♯} =& + dt ⊗ ∂_z &+& dz ⊗ ∂_t &\qquad& (∂_z ∧ ∂_t)^{♭♯} =& - dz ⊗ ∂_t &-& dt ⊗ ∂_z \\
+   (∂_y ∧ ∂_z)^{♭♯} =& - dy ⊗ ∂_z &+& dz ⊗ ∂_y &\qquad& (∂_z ∧ ∂_y)^{♭♯} =& - dz ⊗ ∂_y &+& dy ⊗ ∂_z \\
+   (∂_z ∧ ∂_x)^{♭♯} =& - dz ⊗ ∂_x &+& dx ⊗ ∂_z &\qquad& (∂_x ∧ ∂_z)^{♭♯} =& - dx ⊗ ∂_z &+& dz ⊗ ∂_x \\
+   (∂_x ∧ ∂_y)^{♭♯} =& - dx ⊗ ∂_y &+& dy ⊗ ∂_x &\qquad& (∂_y ∧ ∂_x)^{♭♯} =& - dy ⊗ ∂_x &+& dx ⊗ ∂_y \\
+   \end{alignedat}
 
-.. admonition:: All calculation steps
+.. admonition:: Calculations
    :class: dropdown
 
    .. {{{
 
-   Expand wedge products to their tensor expressions:
+   .. rubric:: Expand exterior products to their tensor expressions
 
    .. math::
 
-      (∂_t ∧ ∂_x)^{♭♯} &= (∂_t ⊗ ∂_x - ∂_x ⊗ ∂_t)^{♭♯} \\
-      (∂_t ∧ ∂_y)^{♭♯} &= (∂_t ⊗ ∂_y - ∂_y ⊗ ∂_t)^{♭♯} \\
-      (∂_t ∧ ∂_z)^{♭♯} &= (∂_t ⊗ ∂_z - ∂_z ⊗ ∂_t)^{♭♯} \\
-      (∂_y ∧ ∂_z)^{♭♯} &= (∂_y ⊗ ∂_z - ∂_z ⊗ ∂_y)^{♭♯} \\
-      (∂_z ∧ ∂_x)^{♭♯} &= (∂_z ⊗ ∂_x - ∂_x ⊗ ∂_z)^{♭♯} \\
-      (∂_x ∧ ∂_y)^{♭♯} &= (∂_x ⊗ ∂_y - ∂_y ⊗ ∂_x)^{♭♯} \\
+      \begin{alignedat}{1}
+      (∂_t ∧ ∂_x)^{♭♯} =& (∂_t ⊗ ∂_x &-& ∂_x ⊗ ∂_t)^{♭♯} &\qquad& (∂_x ∧ ∂_t)^{♭♯} &=& (∂_x ⊗ ∂_t &-& ∂_t ⊗ ∂_x)^{♭♯} \\
+      (∂_t ∧ ∂_y)^{♭♯} =& (∂_t ⊗ ∂_y &-& ∂_y ⊗ ∂_t)^{♭♯} &\qquad& (∂_y ∧ ∂_t)^{♭♯} &=& (∂_y ⊗ ∂_t &-& ∂_t ⊗ ∂_y)^{♭♯} \\
+      (∂_t ∧ ∂_z)^{♭♯} =& (∂_t ⊗ ∂_z &-& ∂_z ⊗ ∂_t)^{♭♯} &\qquad& (∂_z ∧ ∂_t)^{♭♯} &=& (∂_z ⊗ ∂_t &-& ∂_t ⊗ ∂_z)^{♭♯} \\
+      (∂_y ∧ ∂_z)^{♭♯} =& (∂_y ⊗ ∂_z &-& ∂_z ⊗ ∂_y)^{♭♯} &\qquad& (∂_z ∧ ∂_y)^{♭♯} &=& (∂_z ⊗ ∂_y &-& ∂_y ⊗ ∂_z)^{♭♯} \\
+      (∂_z ∧ ∂_x)^{♭♯} =& (∂_z ⊗ ∂_x &-& ∂_x ⊗ ∂_z)^{♭♯} &\qquad& (∂_x ∧ ∂_z)^{♭♯} &=& (∂_x ⊗ ∂_z &-& ∂_z ⊗ ∂_x)^{♭♯} \\
+      (∂_x ∧ ∂_y)^{♭♯} =& (∂_x ⊗ ∂_y &-& ∂_y ⊗ ∂_x)^{♭♯} &\qquad& (∂_y ∧ ∂_x)^{♭♯} &=& (∂_y ⊗ ∂_x &-& ∂_x ⊗ ∂_y)^{♭♯} \\
+      \end{alignedat}
 
-   Distribute the musical operators:
-
-   .. math::
-
-      (∂_t ∧ ∂_x)^{♭♯} &= (∂_t^♭ ⊗ ∂_x^♯ - ∂_x^♭ ⊗ ∂_t^♯) \\
-      (∂_t ∧ ∂_y)^{♭♯} &= (∂_t^♭ ⊗ ∂_y^♯ - ∂_y^♭ ⊗ ∂_t^♯) \\
-      (∂_t ∧ ∂_z)^{♭♯} &= (∂_t^♭ ⊗ ∂_z^♯ - ∂_z^♭ ⊗ ∂_t^♯) \\
-      (∂_y ∧ ∂_z)^{♭♯} &= (∂_y^♭ ⊗ ∂_z^♯ - ∂_z^♭ ⊗ ∂_y^♯) \\
-      (∂_z ∧ ∂_x)^{♭♯} &= (∂_z^♭ ⊗ ∂_x^♯ - ∂_x^♭ ⊗ ∂_z^♯) \\
-      (∂_x ∧ ∂_y)^{♭♯} &= (∂_x^♭ ⊗ ∂_y^♯ - ∂_y^♭ ⊗ ∂_x^♯) \\
-
-   Apply the musical operators:
+   .. rubric:: Distribute musical operators
 
    .. math::
 
-      (∂_t ∧ ∂_x)^{♭♯} &= η_{tγ} dx^γ ⊗ ∂_x - η_{xγ} dx^γ ⊗ ∂_t \\
-      (∂_t ∧ ∂_y)^{♭♯} &= η_{tγ} dx^γ ⊗ ∂_y - η_{yγ} dx^γ ⊗ ∂_t \\
-      (∂_t ∧ ∂_z)^{♭♯} &= η_{tγ} dx^γ ⊗ ∂_z - η_{zγ} dx^γ ⊗ ∂_t \\
-      (∂_y ∧ ∂_z)^{♭♯} &= η_{yγ} dx^γ ⊗ ∂_z - η_{zγ} dx^γ ⊗ ∂_y \\
-      (∂_z ∧ ∂_x)^{♭♯} &= η_{zγ} dx^γ ⊗ ∂_x - η_{xγ} dx^γ ⊗ ∂_z \\
-      (∂_x ∧ ∂_y)^{♭♯} &= η_{xγ} dx^γ ⊗ ∂_y - η_{yγ} dx^γ ⊗ ∂_x \\
+      \begin{alignedat}{1}
+      (∂_t ∧ ∂_x)^{♭♯} =& ∂_t^♭ ⊗ ∂_x^♯ - ∂_x^♭ ⊗ ∂_t^♯ &\qquad& (∂_x ∧ ∂_t)^{♭♯} &=& ∂_x^♭ ⊗ ∂_t^♯ - ∂_t^♭ ⊗ ∂_x^♯ \\
+      (∂_t ∧ ∂_y)^{♭♯} =& ∂_t^♭ ⊗ ∂_y^♯ - ∂_y^♭ ⊗ ∂_t^♯ &\qquad& (∂_y ∧ ∂_t)^{♭♯} &=& ∂_y^♭ ⊗ ∂_t^♯ - ∂_t^♭ ⊗ ∂_y^♯ \\
+      (∂_t ∧ ∂_z)^{♭♯} =& ∂_t^♭ ⊗ ∂_z^♯ - ∂_z^♭ ⊗ ∂_t^♯ &\qquad& (∂_z ∧ ∂_t)^{♭♯} &=& ∂_z^♭ ⊗ ∂_t^♯ - ∂_t^♭ ⊗ ∂_z^♯ \\
+      (∂_y ∧ ∂_z)^{♭♯} =& ∂_y^♭ ⊗ ∂_z^♯ - ∂_z^♭ ⊗ ∂_y^♯ &\qquad& (∂_z ∧ ∂_y)^{♭♯} &=& ∂_z^♭ ⊗ ∂_y^♯ - ∂_y^♭ ⊗ ∂_z^♯ \\
+      (∂_z ∧ ∂_x)^{♭♯} =& ∂_z^♭ ⊗ ∂_x^♯ - ∂_x^♭ ⊗ ∂_z^♯ &\qquad& (∂_x ∧ ∂_z)^{♭♯} &=& ∂_x^♭ ⊗ ∂_z^♯ - ∂_z^♭ ⊗ ∂_x^♯ \\
+      (∂_x ∧ ∂_y)^{♭♯} =& ∂_x^♭ ⊗ ∂_y^♯ - ∂_y^♭ ⊗ ∂_x^♯ &\qquad& (∂_y ∧ ∂_x)^{♭♯} &=& ∂_y^♭ ⊗ ∂_x^♯ - ∂_x^♭ ⊗ ∂_y^♯ \\
+      \end{alignedat}
 
-   Select non-zero metric elements:
-
-   .. math::
-
-      (∂_t ∧ ∂_x)^{♭♯} &= η_{tt} dx^t ⊗ ∂_x - η_{xx} dx^x ⊗ ∂_t \\
-      (∂_t ∧ ∂_y)^{♭♯} &= η_{tt} dx^t ⊗ ∂_y - η_{yy} dx^y ⊗ ∂_t \\
-      (∂_t ∧ ∂_z)^{♭♯} &= η_{tt} dx^t ⊗ ∂_z - η_{zz} dx^z ⊗ ∂_t \\
-      (∂_y ∧ ∂_z)^{♭♯} &= η_{yy} dx^y ⊗ ∂_z - η_{zz} dx^z ⊗ ∂_y \\
-      (∂_z ∧ ∂_x)^{♭♯} &= η_{zz} dx^z ⊗ ∂_x - η_{xx} dx^x ⊗ ∂_z \\
-      (∂_x ∧ ∂_y)^{♭♯} &= η_{xx} dx^x ⊗ ∂_y - η_{yy} dx^y ⊗ ∂_x \\
-
-   Apply numerical values:
+   .. rubric:: Apply musical operators
 
    .. math::
 
-      (∂_t ∧ ∂_x)^{♭♯} &= + dx^t ⊗ ∂_x + dx^x ⊗ ∂_t \\
-      (∂_t ∧ ∂_y)^{♭♯} &= + dx^t ⊗ ∂_y + dx^y ⊗ ∂_t \\
-      (∂_t ∧ ∂_z)^{♭♯} &= + dx^t ⊗ ∂_z + dx^z ⊗ ∂_t \\
-      (∂_y ∧ ∂_z)^{♭♯} &= - dx^y ⊗ ∂_z + dx^z ⊗ ∂_y \\
-      (∂_z ∧ ∂_x)^{♭♯} &= - dx^z ⊗ ∂_x + dx^x ⊗ ∂_z \\
-      (∂_x ∧ ∂_y)^{♭♯} &= - dx^x ⊗ ∂_y + dx^y ⊗ ∂_x \\
+      \begin{alignedat}{1}
+      (∂_t ∧ ∂_x)^{♭♯} &= η_{tγ} dx^γ ⊗ ∂_x - η_{xγ} dx^γ ⊗ ∂_t &\qquad& (∂_x ∧ ∂_t)^{♭♯} &=& η_{xγ} dx^γ ⊗ ∂_t - η_{tγ} dx^γ ⊗ ∂_x \\
+      (∂_t ∧ ∂_y)^{♭♯} &= η_{tγ} dx^γ ⊗ ∂_y - η_{yγ} dx^γ ⊗ ∂_t &\qquad& (∂_y ∧ ∂_t)^{♭♯} &=& η_{yγ} dx^γ ⊗ ∂_t - η_{tγ} dx^γ ⊗ ∂_y \\
+      (∂_t ∧ ∂_z)^{♭♯} &= η_{tγ} dx^γ ⊗ ∂_z - η_{zγ} dx^γ ⊗ ∂_t &\qquad& (∂_z ∧ ∂_t)^{♭♯} &=& η_{zγ} dx^γ ⊗ ∂_t - η_{tγ} dx^γ ⊗ ∂_z \\
+      (∂_y ∧ ∂_z)^{♭♯} &= η_{yγ} dx^γ ⊗ ∂_z - η_{zγ} dx^γ ⊗ ∂_y &\qquad& (∂_z ∧ ∂_y)^{♭♯} &=& η_{zγ} dx^γ ⊗ ∂_y - η_{yγ} dx^γ ⊗ ∂_z \\
+      (∂_z ∧ ∂_x)^{♭♯} &= η_{zγ} dx^γ ⊗ ∂_x - η_{xγ} dx^γ ⊗ ∂_z &\qquad& (∂_x ∧ ∂_z)^{♭♯} &=& η_{xγ} dx^γ ⊗ ∂_z - η_{zγ} dx^γ ⊗ ∂_x \\
+      (∂_x ∧ ∂_y)^{♭♯} &= η_{xγ} dx^γ ⊗ ∂_y - η_{yγ} dx^γ ⊗ ∂_x &\qquad& (∂_y ∧ ∂_x)^{♭♯} &=& η_{yγ} dx^γ ⊗ ∂_x - η_{xγ} dx^γ ⊗ ∂_y \\
+      \end{alignedat}
+
+   .. rubric:: Identify non-zero metric elements
+
+   .. math::
+
+      \begin{alignedat}{1}
+      (∂_t ∧ ∂_x)^{♭♯} &= η_{tt} dx^t ⊗ ∂_x - η_{xx} dx^x ⊗ ∂_t &\qquad& (∂_x ∧ ∂_t)^{♭♯} &=& η_{xx} dx^x ⊗ ∂_t - η_{tt} dx^t ⊗ ∂_x \\
+      (∂_t ∧ ∂_y)^{♭♯} &= η_{tt} dx^t ⊗ ∂_y - η_{yy} dx^y ⊗ ∂_t &\qquad& (∂_y ∧ ∂_t)^{♭♯} &=& η_{yy} dx^y ⊗ ∂_t - η_{tt} dx^t ⊗ ∂_y \\
+      (∂_t ∧ ∂_z)^{♭♯} &= η_{tt} dx^t ⊗ ∂_z - η_{zz} dx^z ⊗ ∂_t &\qquad& (∂_z ∧ ∂_t)^{♭♯} &=& η_{zz} dx^z ⊗ ∂_t - η_{tt} dx^t ⊗ ∂_z \\
+      (∂_y ∧ ∂_z)^{♭♯} &= η_{yy} dx^y ⊗ ∂_z - η_{zz} dx^z ⊗ ∂_y &\qquad& (∂_z ∧ ∂_y)^{♭♯} &=& η_{zz} dx^z ⊗ ∂_y - η_{yy} dx^y ⊗ ∂_z \\
+      (∂_z ∧ ∂_x)^{♭♯} &= η_{zz} dx^z ⊗ ∂_x - η_{xx} dx^x ⊗ ∂_z &\qquad& (∂_x ∧ ∂_z)^{♭♯} &=& η_{xx} dx^x ⊗ ∂_z - η_{zz} dx^z ⊗ ∂_x \\
+      (∂_x ∧ ∂_y)^{♭♯} &= η_{xx} dx^x ⊗ ∂_y - η_{yy} dx^y ⊗ ∂_x &\qquad& (∂_y ∧ ∂_x)^{♭♯} &=& η_{yy} dx^y ⊗ ∂_x - η_{xx} dx^x ⊗ ∂_y \\
+      \end{alignedat}
+
+   .. rubric:: Apply numerical values
+
+   .. math::
+
+      \begin{alignedat}{1}
+      (∂_t ∧ ∂_x)^{♭♯} &= + dt ⊗ ∂_x &+& dx ⊗ ∂_t & \qquad & (∂_x ∧ ∂_t)^{♭♯} &=& - dx ⊗ ∂_t &-& dt ⊗ ∂_x \\
+      (∂_t ∧ ∂_y)^{♭♯} &= + dt ⊗ ∂_y &+& dy ⊗ ∂_t & \qquad & (∂_y ∧ ∂_t)^{♭♯} &=& - dy ⊗ ∂_t &-& dt ⊗ ∂_y \\
+      (∂_t ∧ ∂_z)^{♭♯} &= + dt ⊗ ∂_z &+& dz ⊗ ∂_t & \qquad & (∂_z ∧ ∂_t)^{♭♯} &=& - dz ⊗ ∂_t &-& dt ⊗ ∂_z \\
+      (∂_y ∧ ∂_z)^{♭♯} &= - dy ⊗ ∂_z &+& dz ⊗ ∂_y & \qquad & (∂_z ∧ ∂_y)^{♭♯} &=& - dz ⊗ ∂_y &+& dy ⊗ ∂_z \\
+      (∂_z ∧ ∂_x)^{♭♯} &= - dz ⊗ ∂_x &+& dx ⊗ ∂_z & \qquad & (∂_x ∧ ∂_z)^{♭♯} &=& - dx ⊗ ∂_z &+& dz ⊗ ∂_x \\
+      (∂_x ∧ ∂_y)^{♭♯} &= - dx ⊗ ∂_y &+& dy ⊗ ∂_x & \qquad & (∂_y ∧ ∂_x)^{♭♯} &=& - dy ⊗ ∂_x &+& dx ⊗ ∂_y \\
+      \end{alignedat}
 
    .. }}}
 
@@ -641,16 +688,34 @@ terms of tensor products:
 
 .. math::
 
-   dx^t ∧ ∂_x &= + dx^t ⊗ ∂_x + dx^x ⊗ ∂_t \\
-   dx^t ∧ ∂_y &= + dx^t ⊗ ∂_y + dx^y ⊗ ∂_t \\
-   dx^t ∧ ∂_z &= + dx^t ⊗ ∂_z + dx^z ⊗ ∂_t \\
-   dx^y ∧ ∂_z &= + dx^y ⊗ ∂_z - dx^z ⊗ ∂_y \\
-   dx^z ∧ ∂_x &= + dx^z ⊗ ∂_x - dx^x ⊗ ∂_z \\
-   dx^x ∧ ∂_y &= + dx^x ⊗ ∂_y - dx^y ⊗ ∂_x \\
+   \begin{alignedat}{1}
+   dt ∧ ∂_x =& + dt ⊗ ∂_x & + & dx ⊗ ∂_t & \qquad & dx ∧ ∂_t &=& + dt ⊗ ∂_x & + & dx ⊗ ∂_t \\
+   dt ∧ ∂_y =& + dt ⊗ ∂_y & + & dy ⊗ ∂_t & \qquad & dy ∧ ∂_t &=& + dt ⊗ ∂_y & + & dy ⊗ ∂_t \\
+   dt ∧ ∂_z =& + dt ⊗ ∂_z & + & dz ⊗ ∂_t & \qquad & dz ∧ ∂_t &=& + dt ⊗ ∂_z & + & dz ⊗ ∂_t \\
+   dy ∧ ∂_z =& + dy ⊗ ∂_z & - & dz ⊗ ∂_y & \qquad & dz ∧ ∂_y &=& - dy ⊗ ∂_z & + & dz ⊗ ∂_y \\
+   dz ∧ ∂_x =& + dz ⊗ ∂_x & - & dx ⊗ ∂_z & \qquad & dx ∧ ∂_z &=& - dz ⊗ ∂_x & + & dx ⊗ ∂_z \\
+   dx ∧ ∂_y =& + dx ⊗ ∂_y & - & dy ⊗ ∂_x & \qquad & dy ∧ ∂_x &=& - dx ⊗ ∂_y & + & dy ⊗ ∂_x \\
+   \end{alignedat}
+
+Taken together, we get:
+
+.. topic:: Symmetries of the :math:`♭♯` Mixed Exterior Product
+
+   ============ =============================
+   Symmetry     Basis elements
+   ============ =============================
+   Symetric     :math:`dt ∧ ∂_x = + dt ∧ ∂_x`
+   Symetric     :math:`dt ∧ ∂_y = + dt ∧ ∂_y`
+   Symetric     :math:`dt ∧ ∂_z = + dt ∧ ∂_z`
+   Antisymetric :math:`dy ∧ ∂_z = - dy ∧ ∂_z`
+   Antisymetric :math:`dz ∧ ∂_x = - dz ∧ ∂_x`
+   Antisymetric :math:`dx ∧ ∂_y = - dx ∧ ∂_y`
+   ============ =============================
 
 .. }}}
 
-.. rubric:: Flattening the Second Index
+Symmetries of the :math:`♯♭` Exterior Product
+---------------------------------------------
 
 .. {{{
 
@@ -659,37 +724,43 @@ bivectors and obtain:
 
 .. math::
 
-   (∂_t ∧ ∂_x)^{♯♭} &= - ∂_t ∧ dx^x \\
-   (∂_t ∧ ∂_y)^{♯♭} &= - ∂_t ∧ dx^y \\
-   (∂_t ∧ ∂_z)^{♯♭} &= - ∂_t ∧ dx^z \\
-   (∂_y ∧ ∂_z)^{♯♭} &= - ∂_y ∧ dx^z \\
-   (∂_z ∧ ∂_x)^{♯♭} &= - ∂_z ∧ dx^x \\
-   (∂_x ∧ ∂_y)^{♯♭} &= - ∂_x ∧ dx^y \\
+   \begin{alignedat}{1}
+   (∂_t ∧ ∂_x)^{♯♭} &= - ∂_t ∧ dx &\qquad& \\
+   (∂_t ∧ ∂_y)^{♯♭} &= - ∂_t ∧ dy &\qquad& \\
+   (∂_t ∧ ∂_z)^{♯♭} &= - ∂_t ∧ dz &\qquad& \\
+   (∂_y ∧ ∂_z)^{♯♭} &= - ∂_y ∧ dz &\qquad& \\
+   (∂_z ∧ ∂_x)^{♯♭} &= - ∂_z ∧ dx &\qquad& \\
+   (∂_x ∧ ∂_y)^{♯♭} &= - ∂_x ∧ dy &\qquad& \\
+   \end{alignedat}
 
-.. admonition:: All calculation steps
-   :class: dropdown
+.. admonition:: Calculations
+   :class: dropdown,toggle-shown
 
-   Distribute the musical operators:
-
-   .. math::
-
-      (∂_t ∧ ∂_x)^{♯♭} &= ∂_t^♯ ∧ ∂_x^♭ \\
-      (∂_t ∧ ∂_y)^{♯♭} &= ∂_t^♯ ∧ ∂_y^♭ \\
-      (∂_t ∧ ∂_z)^{♯♭} &= ∂_t^♯ ∧ ∂_z^♭ \\
-      (∂_y ∧ ∂_z)^{♯♭} &= ∂_y^♯ ∧ ∂_z^♭ \\
-      (∂_z ∧ ∂_x)^{♯♭} &= ∂_z^♯ ∧ ∂_x^♭ \\
-      (∂_x ∧ ∂_y)^{♯♭} &= ∂_x^♯ ∧ ∂_y^♭ \\
-
-   Apply the musical operators:
+   .. rubric:: Distribute the musical operators
 
    .. math::
 
-      (∂_t ∧ ∂_x)^{♯♭} &= ∂_t ∧ η_{xγ} dx^γ \\
-      (∂_t ∧ ∂_y)^{♯♭} &= ∂_t ∧ η_{yγ} dx^γ \\
-      (∂_t ∧ ∂_z)^{♯♭} &= ∂_t ∧ η_{zγ} dx^γ \\
-      (∂_y ∧ ∂_z)^{♯♭} &= ∂_y ∧ η_{zγ} dx^γ \\
-      (∂_z ∧ ∂_x)^{♯♭} &= ∂_z ∧ η_{xγ} dx^γ \\
-      (∂_x ∧ ∂_y)^{♯♭} &= ∂_x ∧ η_{yγ} dx^γ \\
+      \begin{alignedat}{1}
+      (∂_t ∧ ∂_x)^{♯♭} &= ∂_t^♯ ∧ ∂_x^♭ &\qquad& (∂_x ∧ ∂_t)^{♯♭} &=& ∂_x^♯ ∧ ∂_t^♭ \\
+      (∂_t ∧ ∂_y)^{♯♭} &= ∂_t^♯ ∧ ∂_y^♭ &\qquad& (∂_y ∧ ∂_t)^{♯♭} &=& ∂_y^♯ ∧ ∂_t^♭ \\
+      (∂_t ∧ ∂_z)^{♯♭} &= ∂_t^♯ ∧ ∂_z^♭ &\qquad& (∂_z ∧ ∂_t)^{♯♭} &=& ∂_z^♯ ∧ ∂_t^♭ \\
+      (∂_y ∧ ∂_z)^{♯♭} &= ∂_y^♯ ∧ ∂_z^♭ &\qquad& (∂_z ∧ ∂_y)^{♯♭} &=& ∂_z^♯ ∧ ∂_y^♭ \\
+      (∂_z ∧ ∂_x)^{♯♭} &= ∂_z^♯ ∧ ∂_x^♭ &\qquad& (∂_x ∧ ∂_z)^{♯♭} &=& ∂_x^♯ ∧ ∂_z^♭ \\
+      (∂_x ∧ ∂_y)^{♯♭} &= ∂_x^♯ ∧ ∂_y^♭ &\qquad& (∂_y ∧ ∂_x)^{♯♭} &=& ∂_y^♯ ∧ ∂_x^♭ \\
+      \end{alignedat}
+
+   .. rubric:: Apply the musical operators
+
+   .. math::
+
+      \begin{alignedat}{1}
+      (∂_t ∧ ∂_x)^{♯♭} &= ∂_t ∧ η_{xγ} dx^γ &\qquad& (∂_x ∧ ∂_t)^{♯♭} &=& ∂_x ∧ η_{γt} dγ \\
+      (∂_t ∧ ∂_y)^{♯♭} &= ∂_t ∧ η_{yγ} dx^γ &\qquad& (∂_y ∧ ∂_t)^{♯♭} &=& ∂_y ∧ η_{γt} dγ \\
+      (∂_t ∧ ∂_z)^{♯♭} &= ∂_t ∧ η_{zγ} dx^γ &\qquad& (∂_z ∧ ∂_t)^{♯♭} &=& ∂_z ∧ η_{γt} dγ \\
+      (∂_y ∧ ∂_z)^{♯♭} &= ∂_y ∧ η_{zγ} dx^γ &\qquad& (∂_z ∧ ∂_y)^{♯♭} &=& ∂_z ∧ η_{γy} dγ \\
+      (∂_z ∧ ∂_x)^{♯♭} &= ∂_z ∧ η_{xγ} dx^γ &\qquad& (∂_x ∧ ∂_z)^{♯♭} &=& ∂_x ∧ η_{γz} dγ \\
+      (∂_x ∧ ∂_y)^{♯♭} &= ∂_x ∧ η_{yγ} dx^γ &\qquad& (∂_y ∧ ∂_x)^{♯♭} &=& ∂_y ∧ η_{γx} dγ \\
+      \end{alignedat}
 
    Take out the metric components:
 
@@ -736,7 +807,7 @@ terms of tensor products:
    (∂_z ∧ ∂_x)^{♯♭} &= - ∂_z ⊗ dx^x + ∂_x ⊗ dx^z \\
    (∂_x ∧ ∂_y)^{♯♭} &= - ∂_x ⊗ dx^y + ∂_y ⊗ dx^x \\
 
-.. admonition:: All calculation steps
+.. admonition:: Calculations
    :class: dropdown
 
    .. {{{
@@ -821,60 +892,6 @@ terms of tensor products:
    ∂_y ∧ dx^z &= + ∂_y ⊗ dx^z - ∂_z ⊗ dx^y \\
    ∂_z ∧ dx^x &= + ∂_z ⊗ dx^x - ∂_x ⊗ dx^z \\
    ∂_x ∧ dx^y &= + ∂_x ⊗ dx^y - ∂_y ⊗ dx^x \\
-
-.. }}}
-
-.. rubric:: Symmetries
-
-.. {{{
-
-From the flattening of the first and second indices, we identified the
-expression of the mixed wedge product in terms of tensor products. We conclude
-that not all elements of the mixed wedge product in Minkowski space are
-antisymmetric. **The elements depending on time are symmetric**.
-
-.. rubric:: Covariant-contravariant basis elements
-
-================== =================================
-Basis element      Expression
-================== =================================
-:math:`dx^t ∧ ∂_x` :math:`+ dx^t ⊗ ∂_x + dx^x ⊗ ∂_t`
-:math:`dx^t ∧ ∂_y` :math:`+ dx^t ⊗ ∂_y + dx^y ⊗ ∂_t`
-:math:`dx^t ∧ ∂_z` :math:`+ dx^t ⊗ ∂_z + dx^z ⊗ ∂_t`
-:math:`dx^y ∧ ∂_z` :math:`+ dx^y ⊗ ∂_z - dx^z ⊗ ∂_y`
-:math:`dx^z ∧ ∂_x` :math:`+ dx^z ⊗ ∂_x - dx^x ⊗ ∂_z`
-:math:`dx^x ∧ ∂_y` :math:`+ dx^x ⊗ ∂_y - dx^y ⊗ ∂_x`
-================== =================================
-
-.. rubric:: Contravariant-covariant basis elements
-
-================== =================================
-Basis element      Expression
-================== =================================
-:math:`∂_t ∧ dx^x` :math:`+ ∂_t ⊗ dx^x + ∂_x ⊗ dx^t`
-:math:`∂_t ∧ dx^y` :math:`+ ∂_t ⊗ dx^y + ∂_y ⊗ dx^t`
-:math:`∂_t ∧ dx^z` :math:`+ ∂_t ⊗ dx^z + ∂_z ⊗ dx^t`
-:math:`∂_y ∧ dx^z` :math:`+ ∂_y ⊗ dx^z - ∂_z ⊗ dx^y`
-:math:`∂_z ∧ dx^x` :math:`+ ∂_z ⊗ dx^x - ∂_x ⊗ dx^z`
-:math:`∂_x ∧ dx^y` :math:`+ ∂_x ⊗ dx^y - ∂_y ⊗ dx^x`
-================== =================================
-
-.. rubric:: Symmetries
-
-Taken together, we get:
-
-============ =================================
-Symmetry     Basis elements
-============ =================================
-Symetric     :math:`dx^t ∧ ∂_x = + ∂_t ∧ dx^x`
-Symetric     :math:`dx^t ∧ ∂_y = + ∂_t ∧ dx^y`
-Symetric     :math:`dx^t ∧ ∂_z = + ∂_t ∧ dx^z`
-Antisymetric :math:`dx^y ∧ ∂_z = - ∂_y ∧ dx^z`
-Antisymetric :math:`dx^z ∧ ∂_x = - ∂_z ∧ dx^x`
-Antisymetric :math:`dx^x ∧ ∂_y = - ∂_x ∧ dx^y`
-============ =================================
-
-.. }}}
 
 .. }}}
 

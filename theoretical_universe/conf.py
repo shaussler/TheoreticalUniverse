@@ -23,8 +23,8 @@ extensions = [
     'sphinx_togglebutton',
     'sphinx_reredirects',
     # 'sphinx.ext.imgmath',  # epub
-    # 'sphinx.ext.mathjax',  # epub
-    # 'sphinx.ext.ifconfig',  # epub
+    'sphinx.ext.mathjax',  # epub
+    'sphinx.ext.ifconfig',  # epub
 ]
 
 source_encoding = 'utf-8'
