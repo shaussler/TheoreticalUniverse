@@ -18,19 +18,12 @@ The Cartan-Hodge Formalism
    :maxdepth: 1
    :caption: Table of Contents
 
+   basis_vectors.rst
    musicality.rst
    hodge_duality.rst
    the_free_matrix_representation.rst
-
-.. ifconfig:: draft in ('yes')
-
-   .. toctree::
-      :maxdepth: 1
-      :caption: Under construction
-
-      basis_vectors.rst
-      the_exterior_derivative.rst
-      the_minkowski_metric.rst
+   the_exterior_derivative.rst
+   the_minkowski_metric.rst
 
 Summary
 -------

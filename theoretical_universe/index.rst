@@ -109,16 +109,8 @@ deep connection between the electromagnetism and rotations in spacetime.
    rotations/index.rst
    differential_operators/index.rst
    faraday_tensor/index.rst
+   field_equations/index.rst
    miscellaneous/index.rst
-
-
-.. ifconfig:: draft in ('yes')
-
-   .. toctree::
-      :maxdepth: 1
-      :caption: Under construction
-
-      field_equations/index.rst
 
 LINKS:
 
