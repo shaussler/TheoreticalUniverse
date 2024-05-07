@@ -24,7 +24,7 @@ extensions = [
     'sphinx_reredirects',
     # 'sphinx.ext.imgmath',  # epub
     # 'sphinx.ext.mathjax',  # epub
-    #  'sphinx.ext.ifconfig',  # epub
+    # 'sphinx.ext.ifconfig',  # epub
 ]
 
 # source_encoding = 'utf-8'
@@ -87,7 +87,8 @@ html_baseurl = 'https://shaussler.github.io/TheoreticalUniverse/'
 html_static_path = ['_static']
 
 html_theme_options = {
-    "use_sidenotes": True
+    "use_sidenotes": True,
+    "navigation_with_keys": False,
 }
 
 # Google analytics
