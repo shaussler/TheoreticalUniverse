@@ -10,11 +10,10 @@ The Free Matrix Representation of Rotations
 
 .. {{{
 
-The :ref:`free matrix representation <the_free_matrix_representation>` is
-powerfull when using a bivector basis, since the elements of the matrix can be
-re-ordered at will. In three dimensions, rotations are possible on the three
-planes. A rotation is expressed as a linear combination of the three associated
-basis bivectors:
+:ref:`the free matrix representation` is powerfull when using a bivector basis,
+since the elements of the matrix can be re-ordered at will. In three dimensions,
+rotations are possible on the three planes. A rotation is expressed as a linear
+combination of the three associated basis bivectors:
 
 .. math::
 
@@ -288,7 +287,7 @@ Flattening the second index of of the doubly contravariant form of the rotation
       - b \; ∂_x ∧ dx^z & + a \; ∂_y ∧ dx^z &                   \\
       \end{bmatrix}
 
-   .. rubric:: Replace the :math:`dx^i` by their expressions
+   .. rubric:: Replace the covectors by their expressions
 
    .. math::
 
@@ -346,7 +345,7 @@ explicit expression of the mixed wedge products.
       (∂_y ∧ ∂_z)^{♯♭} &= ∂_y^♯ ⊗ ∂_z^♭ - ∂_z^♯ ⊗ ∂_y^♭ \\
       (∂_z ∧ ∂_x)^{♯♭} &= ∂_z^♯ ⊗ ∂_x^♭ - ∂_x^♯ ⊗ ∂_z^♭ \\
 
-   .. rubrci:: Apply the musical operators using the euclidean metric
+   .. rubric:: Apply the musical operators using the euclidean metric
 
    .. math::
 

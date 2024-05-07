@@ -96,14 +96,15 @@ The :math:`♭♭` Rotation Tensor
 
 .. {{{
 
-Using :ref:`the Minkowski metric <the_minkowski_metric>`, we can flatten a basis
-vector with the flat operator :math:`♭`:
+Using the Minkowski metric, we flatten a basis vector with the flat operator
+:math:`♭`:
 
 .. math::
 
    (∂_μ)^♭ = η_{μν} dx^ν
 
-And likewise flatten any index of the doubly contravariant wedge product:
+Likewise any index of the doubly contravariant exterior product can be
+flattened:
 
 .. math::
 
@@ -114,7 +115,8 @@ And likewise flatten any index of the doubly contravariant wedge product:
    \end{matrix}
 
 To obtain the doubly covariant representation of rotations in spacetime, we
-apply the flat operators to each components, :math:`R^{♭♭} = (R^{♯♯})^{♭♭}`:
+apply the flat operators :math:`♭♭` to each components :math:`R^{♭♭} =
+(R^{♯♯})^{♭♭}`:
 
 .. topic:: Doubly Covariant Representation of Rotations in Minkowski Space
 
@@ -134,6 +136,8 @@ apply the flat operators to each components, :math:`R^{♭♭} = (R^{♯♯})^{�
 
    .. {{{
 
+   .. rubric:: Apply the flat operators
+
    .. math::
 
       R^{♭♭} = \begin{bmatrix}
@@ -145,7 +149,7 @@ apply the flat operators to each components, :math:`R^{♭♭} = (R^{♯♯})^{�
       f \; ∂_x ∧ ∂_y \\
       \end{bmatrix}^{♭♭}
 
-   Distribute the flat operators :math:`♭`
+   .. rubric:: Distribute the musical operators
 
    .. math::
 
@@ -158,7 +162,7 @@ apply the flat operators to each components, :math:`R^{♭♭} = (R^{♯♯})^{�
       f \; ∂_x^♭ ∧ ∂_y^♭ \\
       \end{bmatrix}
 
-   Expand:
+   .. rubric:: Expand
 
    .. math::
 
@@ -171,7 +175,7 @@ apply the flat operators to each components, :math:`R^{♭♭} = (R^{♯♯})^{�
           f \; η_{xμ} d^μ ∧ η_{yμ} d^μ \\
       \end{bmatrix}
 
-   Identify non-zero terms:
+   .. rubric:: Identify non-zero terms
 
    .. math::
 
@@ -184,7 +188,7 @@ apply the flat operators to each components, :math:`R^{♭♭} = (R^{♯♯})^{�
           f \; η_{xx} dx ∧ η_{yy} dy \\
       \end{bmatrix}
 
-   Apply numerical values:
+   .. rubric:: Apply numerical values
 
    .. math::
 
@@ -234,7 +238,7 @@ by applying the flatternig operator :math:`\flat`:
 
    .. {{{
 
-   Apply the musical operator :math:`♭♯`
+   .. rubric:: Apply the musical operators
 
    .. math::
 
@@ -247,7 +251,7 @@ by applying the flatternig operator :math:`\flat`:
           f \; ∂_x ∧ ∂_y \\
       \end{bmatrix}^{♭♯}
 
-   Distribute the musical operators to each matrix elements:
+   .. rubric:: Distribute the musical operators to each matrix elements
 
    .. math::
 
@@ -260,7 +264,7 @@ by applying the flatternig operator :math:`\flat`:
         f \; (∂_x ∧ ∂_y)^{♭♯} \\
       \end{bmatrix}
 
-   Distribute the musical operators:
+   .. rubric:: Distribute the musical operators
 
    .. math::
 
@@ -273,7 +277,7 @@ by applying the flatternig operator :math:`\flat`:
         f \; (∂_x^♭ ∧ ∂_y^♯) \\
       \end{bmatrix}
 
-   Apply the musical operators:
+   .. rubric:: Apply the musical operators
 
    .. math::
 
@@ -286,7 +290,7 @@ by applying the flatternig operator :math:`\flat`:
         f \; η_{xγ} dx^γ ∧ ∂_y^♯ \\
       \end{bmatrix}
 
-   Identify the non-zero terms of the Minkowski metric:
+   .. rubric:: Identify the non-zero terms of the Minkowski metric
 
    .. math::
 
@@ -299,7 +303,7 @@ by applying the flatternig operator :math:`\flat`:
         f \; η_{xx} dx^x ∧ ∂_y \\
       \end{bmatrix}
 
-   Use the numerical values of the Minkowski metric:
+   .. rubric:: Use the numerical values of the Minkowski metric
 
    .. math::
 
@@ -322,10 +326,10 @@ demonstrated above, this results in:
 .. math::
 
    B^{♭♯} = \frac{1}{2} \begin{bmatrix}
-                         & + a \; dx^t ∧ ∂_x & + b \; dx^t ∧ ∂_y & + c \; dx^t ∧ ∂_z \\
-       + a \; dx^x ∧ ∂_t &                   & + f \; dx^x ∧ ∂_y & - e \; dx^x ∧ ∂_z \\
-       + b \; dx^y ∧ ∂_t & - f \; dx^y ∧ ∂_x &                   & + d \; dx^y ∧ ∂_z \\
-       + c \; dx^z ∧ ∂_t & + e \; dx^z ∧ ∂_x & - d \; dx^z ∧ ∂_y &                   \\
+                      & + a \; dx^t ∧ ∂_x & + b \; dx^t ∧ ∂_y & + c \; dx^t ∧ ∂_z \\
+    + a \; dx^x ∧ ∂_t &                   & + f \; dx^x ∧ ∂_y & - e \; dx^x ∧ ∂_z \\
+    + b \; dx^y ∧ ∂_t & - f \; dx^y ∧ ∂_x &                   & + d \; dx^y ∧ ∂_z \\
+    + c \; dx^z ∧ ∂_t & + e \; dx^z ∧ ∂_x & - d \; dx^z ∧ ∂_y &                   \\
    \end{bmatrix}
 
 .. }}}
@@ -362,33 +366,33 @@ tensor is obtained by applying the flatternig operator :math:`\flat`:
 
    .. {{{
 
-   Apply the musical operator :math:`♯♭`
+   .. rubric:: Apply the musical operators
 
    .. math::
 
       B^{♯♭} = \begin{bmatrix}
-          a \; ∂_t ∧ ∂_x \\
-          b \; ∂_t ∧ ∂_y \\
-          c \; ∂_t ∧ ∂_z \\
-          d \; ∂_y ∧ ∂_z \\
-          e \; ∂_z ∧ ∂_x \\
-          f \; ∂_x ∧ ∂_y \\
+        a \; ∂_t ∧ ∂_x \\
+        b \; ∂_t ∧ ∂_y \\
+        c \; ∂_t ∧ ∂_z \\
+        d \; ∂_y ∧ ∂_z \\
+        e \; ∂_z ∧ ∂_x \\
+        f \; ∂_x ∧ ∂_y \\
       \end{bmatrix}^{♯♭}
 
-   Distribute the musical operators to each matrix elements:
+   .. rubric:: Distribute the musical operators to each matrix elements
 
    .. math::
 
       B^{♯♭} = \begin{bmatrix}
-          a \; (∂_t ∧ ∂_x)^{♯♭} \\
-          b \; (∂_t ∧ ∂_y)^{♯♭} \\
-          c \; (∂_t ∧ ∂_z)^{♯♭} \\
-          d \; (∂_y ∧ ∂_z)^{♯♭} \\
-          e \; (∂_z ∧ ∂_x)^{♯♭} \\
-          f \; (∂_x ∧ ∂_y)^{♯♭} \\
+        a \; (∂_t ∧ ∂_x)^{♯♭} \\
+        b \; (∂_t ∧ ∂_y)^{♯♭} \\
+        c \; (∂_t ∧ ∂_z)^{♯♭} \\
+        d \; (∂_y ∧ ∂_z)^{♯♭} \\
+        e \; (∂_z ∧ ∂_x)^{♯♭} \\
+        f \; (∂_x ∧ ∂_y)^{♯♭} \\
       \end{bmatrix}
 
-   Distribute the musical operators:
+   .. rubric:: Distribute the musical operators
 
    .. math::
 
@@ -401,7 +405,7 @@ tensor is obtained by applying the flatternig operator :math:`\flat`:
         f \; (∂_x^♯ ∧ ∂_y^♭) \\
       \end{bmatrix}
 
-   Apply and expand:
+   .. rubric:: Apply and expand
 
    .. math::
 
@@ -414,33 +418,33 @@ tensor is obtained by applying the flatternig operator :math:`\flat`:
         f \; ∂_x ∧ η_{yγ} dx^γ \\
       \end{bmatrix}
 
-   The metric tensor can be taken out due to mulilinearity:
+   .. rubric:: The metric tensor can be taken out due to mulilinearity
 
    .. math::
 
       B^{♯♭} = \begin{bmatrix}
-          a \; η_{xγ} ∂_t ∧ dx^γ \\
-          b \; η_{yγ} ∂_t ∧ dx^γ \\
-          c \; η_{zγ} ∂_t ∧ dx^γ \\
-          d \; η_{zγ} ∂_y ∧ dx^γ \\
-          e \; η_{xγ} ∂_z ∧ dx^γ \\
-          f \; η_{yγ} ∂_x ∧ dx^γ \\
+        a \; η_{xγ} ∂_t ∧ dx^γ \\
+        b \; η_{yγ} ∂_t ∧ dx^γ \\
+        c \; η_{zγ} ∂_t ∧ dx^γ \\
+        d \; η_{zγ} ∂_y ∧ dx^γ \\
+        e \; η_{xγ} ∂_z ∧ dx^γ \\
+        f \; η_{yγ} ∂_x ∧ dx^γ \\
       \end{bmatrix}
 
-   Most terms of the Minkowski metric are zero:
+   .. rubric:: Most terms of the Minkowski metric are zero
 
    .. math::
 
       B^{♯♭} = \begin{bmatrix}
-          a \; η_{xx} ∂_t ∧ dx^x \\
-          b \; η_{yy} ∂_t ∧ dx^y \\
-          c \; η_{zz} ∂_t ∧ dx^z \\
-          d \; η_{zz} ∂_y ∧ dx^z \\
-          e \; η_{xx} ∂_z ∧ dx^x \\
-          f \; η_{yy} ∂_x ∧ dx^y \\
+        a \; η_{xx} ∂_t ∧ dx^x \\
+        b \; η_{yy} ∂_t ∧ dx^y \\
+        c \; η_{zz} ∂_t ∧ dx^z \\
+        d \; η_{zz} ∂_y ∧ dx^z \\
+        e \; η_{xx} ∂_z ∧ dx^x \\
+        f \; η_{yy} ∂_x ∧ dx^y \\
       \end{bmatrix}
 
-   Use the numerical values of the Minkowski metric:
+   .. rubric:: Use the numerical values of the Minkowski metric
 
    .. math::
 
@@ -455,18 +459,18 @@ tensor is obtained by applying the flatternig operator :math:`\flat`:
 
    .. }}}
 
-Taking into account the symetric property of :math:`∂_t ∧ dx^x`, :math:`∂_t
-∧ dx^y`, and :math:`∂_t ∧ dx^z`, as well the antisymetric property of
-:math:`∂_x ∧ dx^y`, :math:`∂_ey ∧ dx^z`, and :math:`∂_z ∧ dx^x`
-demonstrated above, this results in:
+Taking into account the symetric property of :math:`∂_t ∧ dx^x`, :math:`∂_t ∧
+dx^y`, and :math:`∂_t ∧ dx^z`, as well the antisymetric property of :math:`∂_x ∧
+dx^y`, :math:`∂_ey ∧ dx^z`, and :math:`∂_z ∧ dx^x` demonstrated above, this
+results in:
 
 .. math::
 
    B^{♯♭} = \frac{1}{2} \begin{bmatrix}
-                         & - a \; ∂_t ∧ dx^x & - b \; ∂_t ∧ d^y & - c \; ∂_t ∧ dx^z \\
-       - a \; ∂_x ∧ dx^t &                   & - f \; ∂_x ∧ d^y & + e \; ∂_x ∧ dx^z \\
-       - b \; ∂_y ∧ dx^t & + f \; ∂_y ∧ dx^x &                  & - d \; ∂_y ∧ dx^z \\
-       - c \; ∂_z ∧ dx^t & - e \; ∂_z ∧ dx^x & + d \; ∂_z ∧ d^y &                   \\
+                       & - a \; ∂_t ∧ dx^x & - b \; ∂_t ∧ d^y & - c \; ∂_t ∧ dx^z \\
+     - a \; ∂_x ∧ dx^t &                   & - f \; ∂_x ∧ d^y & + e \; ∂_x ∧ dx^z \\
+     - b \; ∂_y ∧ dx^t & + f \; ∂_y ∧ dx^x &                  & - d \; ∂_y ∧ dx^z \\
+     - c \; ∂_z ∧ dx^t & - e \; ∂_z ∧ dx^x & + d \; ∂_z ∧ d^y &                   \\
    \end{bmatrix}
 
 .. }}}

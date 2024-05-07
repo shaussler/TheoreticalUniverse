@@ -13,54 +13,73 @@ Musicality
 
    by Stéphane Haussler
 
-Musical Declaration
--------------------
+.. rubric:: Musical declarations
 
-Traditionally, a vector would be noted with a bold font as :math:`\mathbf{V}`,
-or with an arrow symbol :math:`\overrightarrow{V}`. These notations precludes
-the advent of tensor calculus and the discovery of the dual covectors, thus
-leaving no notation for these dual objects. The abstract index notation of Ricci
-calculus brings some improvement, with three-vectors expressed as :math:`v^i`,
-and the dual covectors expressed with lower indices as :math:`v_i`. With the
-musical flat :math:`♭` and sharp :math:`♯` symbols, covectors and vectors are
-explicetely declared. For example, a contravariant three-vector is declared with
-the sharp symbol :math:`♯`:
+Traditionally, vectors are noted with a bold font as :math:`\mathbf{V}`, or with
+an arrow symbol :math:`\overrightarrow{V}`. These notations precludes the advent
+of tensor calculus and the discovery of the dual covectors, thus leaving no
+notation for these dual objects. The abstract index notation of Ricci calculus
+brings some improvement, with three-vectors expressed as :math:`v^i`, and the
+dual covectors expressed with lower indices as :math:`v_i`. With the musical
+flat :math:`♭` and sharp :math:`♯` symbols, covectors and vectors are explicitly
+declared. For example, a contravariant three-vector is noted with the sharp
+symbol :math:`♯`:
 
-.. topic:: Musical Vector Notation
-
-   .. math:: V^♯
+.. math:: V^♯
 
 Whereas the dual covariant three-covector is declared with the flat symbol
 :math:`♭`:
 
-.. topic:: Musical Covector Notation
+.. math:: V^♭
 
-   .. math:: V^♭
+.. rubric:: Musical operations
 
-Musical Operations
-------------------
+Considering a vector in 3 dimensional Euclidean space expressed as a linear
+combination of th basis vectors :math:`∂_i`:
 
 .. math::
 
    V^♯ = a \; ∂_x + b \; ∂_y + c \; ∂_z
 
-The musical flat :math:`♭` and sharp :math:`♯` symbols are further utilzed as
-operators to convert vectors to covectors and vice versa. For example, a
-three-vector with euclidean metric :math:`δ` is flattend to a three-covector
-with:
+The musical flat :math:`♭` symbol is further utilized as an operator converting
+vectors to covectors. For example, the three-vector :math:`V^♯` is flattend to a
+three-covector using the Euclidean metric :math:`δ` with:
 
 .. math::
 
-   V^{♭} &= (V^♯)^♭                                                         \\
-         &= a \; ∂_x^♭ + b \; ∂_y^♭ + c \; ∂_z^♭                            \\
-         &= a \; δ_{xi} \; dx^i + b \; δ_{yi} \; dx^i + c \; δ_{zi} \; dx^i \\
-         &= a \; dx + b \; dy + c \; dz                                     \\
+   V^♭ &= (V^♯)^♭                                                         \\
+       &= a \; ∂_x^♭ + b \; ∂_y^♭ + c \; ∂_z^♭                            \\
+       &= a \; δ_{xi} \; dx^i + b \; δ_{yi} \; dx^i + c \; δ_{zi} \; dx^i \\
+       &= a \; δ_{xx} \; dx^x + b \; δ_{yy} \; dx^y + c \; δ_{zz} \; dx^z \\
+       &= a \; dx + b \; dy + c \; dz                                     \\
 
-The vector field :math:`\mathbf{F}` is noted with the musical isomorphism
-:math:`\sharp` as :math:`F^\sharp`, which either declare :math:`F` is a vector,
-or transform a covector to a vector. The flat operator :math:`\flat` brings a
-vector to a covector.
+Likewise, the musical sharp :math:`♯` is utilized as an operatro converting
+covectors to vecotrs. For example, the three-covector :math:`V^♭` is sharpened
+to a three-vector using:
 
 .. math::
 
-   \mathbf{F}=F^\sharp=(F^\sharp)^\sharp=(F^\flat)^\sharp = v^i \mathbf{e}_i
+   V^♯ &= (V^♭)^♯                                                      \\
+       &= a \; dx^♯ + b \; dy^♯ + c \; dz^♯                             \\
+       &= a \; δ_{xi} \; ∂_i + b \; δ_{yi} \; ∂_i + c \; δ_{zi} \; ∂_i \\
+       &= a \; δ_{xx} \; ∂_x + b \; δ_{yy} \; ∂_y + c \; δ_{zz} \; ∂_z \\
+       &= a \; ∂_x + b \; ∂_y + c \; ∂_z                               \\
+
+The notation can be further utilzed to raise or lower the indices of a tensor T
+of any rank. For example, a doubly contravariant tensor in Minkowski space
+:math:`T^{♯♯}`, also noted :math:`T^{μν}` in abstract index notation is lowered
+using the metric component :math:`η_{μν}` with:
+
+.. math::
+
+   T^{♭♯} &= (T^{♯♯})^{♭♯} \\
+          &= T^{μν} \; (∂_μ ⊗ ∂_ν)^{♭♯} \\
+          &= T^{μν} \; ∂_μ^♭ ⊗ ∂_ν^♯ \\
+          &= T^{μν} \; η_{μγ} \; dx^{γ} ⊗ ∂_ν
+
+In comparison to Ricci calculus, musicality serves as a means to clearly
+articulate the tensor basis alongside its components. Those familiar with
+abstract index notation may initially perceive the musical notation with
+explicit tensor bases as merely introducing additional symbols. However, the
+practical utility of this notation becomes evident when conducting real
+calculations with all elements of the Cartan-Hodge formalism.
