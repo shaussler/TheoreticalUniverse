@@ -1,7 +1,14 @@
-# Configuration file for the Sphinx documentation builder.
-#
+# Configuration file for the Sphinx documentation builder
+# -------------------------------------------------------
+
 # For the full list of built-in configuration values, see the documentation:
 # https://www.sphinx-doc.org/en/master/usage/configuration.html
+
+import os
+
+def setup(app):
+    draft = 'yes' if 'TERMUX_VERSION' in os.environ else 'no'
+    app.add_config_value('draft', draft, 'env')
 
 # Project information
 # -------------------
@@ -19,13 +26,13 @@ extensions = [
     'sphinx.ext.todo',
     'sphinxcontrib.googleanalytics',
     'sphinx_sitemap',
-    # 'sphinx.ext.autosectionlabel',
     'sphinx_togglebutton',
     'sphinx_reredirects',
     # 'sphinx.ext.imgmath',  # epub
     # 'sphinx.ext.mathjax',  # epub
-    # 'sphinx.ext.ifconfig',  # epub
+    'sphinx.ext.ifconfig',  # epub
 ]
+
 
 # source_encoding = 'utf-8'
 

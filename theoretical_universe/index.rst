@@ -52,7 +52,6 @@ Minkowski space, which leads to the insight that it perfectly mirrors Maxwell's
 equations. This provides a comprehensive and coherent demonstration of how
 Maxwell's equations emerge from the framework of differential forms:
 
-
 .. topic:: Maxwell Equations in the Cartan-Hodge Formalism
 
    .. math::
@@ -110,8 +109,16 @@ deep connection between the electromagnetism and rotations in spacetime.
    rotations/index.rst
    differential_operators/index.rst
    faraday_tensor/index.rst
-   field_equations/index.rst
    miscellaneous/index.rst
+
+
+.. ifconfig:: draft in ('yes')
+
+   .. toctree::
+      :maxdepth: 1
+      :caption: Under construction
+
+      field_equations/index.rst
 
 LINKS:
 

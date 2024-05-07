@@ -73,6 +73,17 @@ To automaticall update on modifications:
 
    sphinx-autobuild -j 4 ./ _build/html/
 
+Hiding Content under Construction
+---------------------------------
+
+Since I am working from my mobile phone, the sphinx configuration checks if the
+environment variable ``TERMUX_VERSION`` is set in order to determine whether
+draft content should be shown. To hide content, use:
+
+.. code:: rst
+
+   .. ifconfig:: draft in ('yes')
+
 Dropdown
 --------
 

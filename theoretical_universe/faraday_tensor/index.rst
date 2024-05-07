@@ -21,19 +21,19 @@ electromagnetism is a twist in spacetime:
 
 .. math::
 
-   (d ⋆ - ⋆ d ) \begin{bmatrix}
-       \E^x \; dx ∧ dt \\
-       \E^y \; dy ∧ dt \\
-       \E^z \; dz ∧ dt \\
-        B^x \; dy ∧ dz \\
-        B^y \; dz ∧ dx \\
-        B^z \; dx ∧ dy \\
-   \end{bmatrix}
+   (d ⋆ - ⋆ d ) \left[ \begin{aligned}
+     -& \E^x \; dt ∧ dx \\
+     -& \E^y \; dt ∧ dy \\
+     -& \E^z \; dt ∧ dz \\
+      &  B^x \; dy ∧ dz \\
+      &  B^y \; dz ∧ dx \\
+      &  B^z \; dx ∧ dy \\
+   \end{aligned}\right]
    = \begin{bmatrix}
-       + μ_0 c ρ \; dx ∧ dy ∧ dz\\
-       - μ_0 J^x \; dt ∧ dy ∧ dz\\
-       - μ_0 J^y \; dt ∧ dz ∧ dx\\
-       - μ_0 J^z \; dt ∧ dx ∧ dy\\
+     + μ_0 c ρ \; dx ∧ dy ∧ dz\\
+     - μ_0 J^x \; dt ∧ dy ∧ dz\\
+     - μ_0 J^y \; dt ∧ dz ∧ dx\\
+     - μ_0 J^z \; dt ∧ dx ∧ dy\\
    \end{bmatrix}
 
 This can be written in a compact form as:
@@ -51,14 +51,16 @@ across a comprehensive derivation from Maxwell's equations to their differential
 form representation. Typically, I've encountered reverse demonstrations where
 the equivalence between the two forms is demonstrated.
 
-.. rubric:: All Electromagentic Field Tensors
+.. ifconfig:: draft in ('yes')
 
-.. warning::
+   .. warning:: Draft content
 
-   Under construction
+   .. rubric:: The Wave Equation
 
-Systematic caculation of all electromagnetic field tensor and hodge dual forms:
+   .. rubric:: All Electromagentic Field Tensors
 
-* the doubly covariant form
-* the doubly contravariant from
-* the mixed froms
+   Systematic caculation of all electromagnetic field tensor and hodge dual forms:
+
+   * the doubly covariant form
+   * the doubly contravariant from
+   * the mixed froms
