@@ -13,32 +13,42 @@ Of Maxwell Equations and Rotations
 
    by Stéphane Haussler
 
-This article investigates the connection between :ref:`rotations
-<rotations_in_differential_form>`, the :ref:`exterior derivative of rotations
-<the_exterior_derivative_of_rotations_in_spacetime>`, and the equations of Mr.
-Maxwell. I utilize :ref:`the Cartan-Hodge's formalism
-<the_cartan_hodge_formalism>` in Minkowski space-time. I demonstrate that
-applying the exterior derivative to rotations yields the equations governing
-electromagnetism. These expressions reveal Maxwell equations are a twist in
-spacetime.
+This article elucidates the direct relashionship between :ref:`rotations in
+differential form` and the :ref:`equations of Mr. Maxwell <the ordered
+equations>`. In a previous articles, I utilized :ref:`the Cartan-Hodge
+formalism` to obtain :ref:`the exterior derivative of rotations in spacetime`.
+Through identification, we will establish that the equations governing
+electromagnetism exactly are spacetime rotations to which is applied the
+exterior derivative. We thus interpret electromagnetism as a twist in spacetime.
+
+The equations obtained are the well-recognized expressions of the differential
+geometric formulation of Maxwell's equations. I slightly improve on the
+formulation to finally combine the expression of electromagnetism into a single
+equation.
+
+The present line of reasoning and derivation may feel more intuitive compared to
+the conventional approach of retroactively proving that expression the the
+electromagnetic tensor in a certain manner as a combination of 2-forms, followed
+by applying the Hodge operator and the exterior product, leads back Maxwell's
+equations.
 
 The Equations of Mr. Maxwell
 ----------------------------
 
 .. {{{
 
-In a :ref:`previous article <the_ordered_equations>`, I derive from the 1865
-Maxwell equations the following expressions:
+In a previous article, I derive from the 1865 Maxwell equations :ref:`the
+following expressions<the ordered equations>`:
 
 .. rubric:: Inhomogenous Maxwell equations
 
 .. math::
 
    \begin{aligned}
-              & + ∂_x \E^x & + ∂_y \E^y & + ∂_z \E^z & = & + μ_0 c ρ \\
-   + ∂_t \E^x &            & - ∂_y  B^z & + ∂_z  B^y & = & - μ_0 J^x \\
-   + ∂_t \E^y & + ∂_x  B^z &            & - ∂_z  B^x & = & - μ_0 J^y \\
-   + ∂_t \E^z & - ∂_x  B^y & + ∂_y  B^x &            & = & - μ_0 J^z \\
+                & + ∂_x \E^x & + ∂_y \E^y & + ∂_z \E^z & = & + μ_0 c ρ \\
+     + ∂_t \E^x &            & - ∂_y  B^z & + ∂_z  B^y & = & - μ_0 J^x \\
+     + ∂_t \E^y & + ∂_x  B^z &            & - ∂_z  B^x & = & - μ_0 J^y \\
+     + ∂_t \E^z & - ∂_x  B^y & + ∂_y  B^x &            & = & - μ_0 J^z \\
    \end{aligned}
 
 .. rubric:: Homogenous Maxwell equations
@@ -46,10 +56,10 @@ Maxwell equations the following expressions:
 .. math::
 
    \begin{aligned}
-              & + ∂_x  B^x & + ∂_y  B^y & + ∂_z  B^z & = & 0 \\
-   + ∂_t  B^x &            & + ∂_y \E^z & - ∂_z \E^y & = & 0 \\
-   + ∂_t  B^y & - ∂_x \E^z &            & + ∂_z \E^x & = & 0 \\
-   + ∂_t  B^z & + ∂_x \E^y & - ∂_y \E^x &            & = & 0 \\
+                & + ∂_x  B^x & + ∂_y  B^y & + ∂_z  B^z & = & 0 \\
+     + ∂_t  B^x &            & + ∂_y \E^z & - ∂_z \E^y & = & 0 \\
+     + ∂_t  B^y & - ∂_x \E^z &            & + ∂_z \E^x & = & 0 \\
+     + ∂_t  B^z & + ∂_x \E^y & - ∂_y \E^x &            & = & 0 \\
    \end{aligned}
 
 .. }}}
@@ -114,24 +124,24 @@ We identifiy the components of the electric and magnetic fields:
 .. math::
 
    \begin{matrix}
-       \E^x = a \\
-       \E^y = b \\
-       \E^z = c \\
-        B^x = d \\
-        B^y = e \\
-        B^z = f \\
+     \E^x = a \\
+     \E^y = b \\
+     \E^z = c \\
+      B^x = d \\
+      B^y = e \\
+      B^z = f \\
    \end{matrix}
 
 The doubly covariant Faraday tensor is identified as:
 
 .. math::
    F^{♭♭} = \begin{bmatrix}
-       \E^x \; dx ∧ dt \\
-       \E^y \; dy ∧ dt \\
-       \E^z \; dz ∧ dt \\
-        B^x \; dy ∧ dz \\
-        B^y \; dz ∧ dx \\
-        B^z \; dx ∧ dy \\
+     \E^x \; dx ∧ dt \\
+     \E^y \; dy ∧ dt \\
+     \E^z \; dz ∧ dt \\
+      B^x \; dy ∧ dz \\
+      B^y \; dz ∧ dx \\
+      B^z \; dx ∧ dy \\
    \end{bmatrix}
 
 We conclude electromagnetism is a twist in spacetime. The Maxwell equations are:
@@ -141,8 +151,8 @@ We conclude electromagnetism is a twist in spacetime. The Maxwell equations are:
    .. math::
 
       d ⋆ \begin{bmatrix}
-          \E^x \; dx ∧ dt \\ \E^y \; dy ∧ dt \\ \E^z \; dz ∧ dt \\
-           B^x \; dy ∧ dz \\  B^y \; dz ∧ dx \\  B^z \; dx ∧ dy \\
+        \E^x \; dx ∧ dt \\ \E^y \; dy ∧ dt \\ \E^z \; dz ∧ dt \\
+         B^x \; dy ∧ dz \\  B^y \; dz ∧ dx \\  B^z \; dx ∧ dy \\
       \end{bmatrix}
       = \begin{bmatrix}
           + μ_0 c ρ \; dx ∧ dy ∧ dz\\
@@ -171,7 +181,7 @@ differential form:
        d \mathbf{F}  &=& 0          \\
    \end{matrix}
 
-Most interestingly, since :math:`⋆dF` is a 1-form and :math:`d*F` result is a
+Most interestingly, since :math:`⋆dF` is a 1-form and :math:`d⋆F` result is a
 3-form, we can merge the inhomogenous and homogenous equations:
 
 .. math::

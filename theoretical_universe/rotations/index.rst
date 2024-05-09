@@ -1,4 +1,5 @@
 .. _rotations_in_differential_form:
+.. _rotations in differential form:
 
 Rotations in Differential Form
 ==============================
