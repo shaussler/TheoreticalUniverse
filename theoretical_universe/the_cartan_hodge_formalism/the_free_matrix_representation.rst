@@ -76,3 +76,47 @@ We could have written a covector in the same explicit manner. This notation is
 very conveniant when performing calculations in Cartan's framework as it
 permits to identify and organize terms for practical calculations, and if
 needed fall back to regular matrix multiplication.
+
+.. ifconfig:: draft in ('yes')
+
+   .. warning:: Draft
+
+   Representing Contractions
+   -------------------------
+
+   .. {{{
+
+   .. math::
+
+      \begin{equation}
+      \begin{bmatrix} a \; ∂_t & b \; ∂_x & c \; ∂_y & d \; ∂_z \end{bmatrix}
+      \begin{bmatrix}
+        + dx^t ⊗ dx^t \\
+        - dx^x ⊗ dx^x \\
+        - dx^y ⊗ dx^y \\
+        - dx^z ⊗ dx^z \\
+      \end{bmatrix}
+      =
+      \begin{bmatrix}
+        + a \braket{∂_t|dx^t ⊗ dx^t} \\
+        + b \braket{∂_x|dx^x ⊗ dx^x} \\
+        + c \braket{∂_y|dx^y ⊗ dx^y} \\
+        + d \braket{∂_z|dx^z ⊗ dx^z} \\
+      \end{bmatrix}
+      =
+      \begin{bmatrix}
+        + a \braket{∂_t|dx^t} dx^t \\
+        + b \braket{∂_x|dx^x} dx^x \\
+        + c \braket{∂_y|dx^y} dx^y \\
+        + d \braket{∂_z|dx^z} dx^z \\
+      \end{bmatrix}
+      =
+      \begin{bmatrix}
+        + a dx^t \\
+        - b dx^x \\
+        - c dx^y \\
+        - d dx^z \\
+      \end{bmatrix}
+      \end{equation}
+
+   .. }}}

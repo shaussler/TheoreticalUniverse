@@ -20,25 +20,24 @@ formalism` to obtain :ref:`the exterior derivative of rotations in spacetime`.
 Through identification, we will establish that the equations governing
 electromagnetism exactly are spacetime rotations to which is applied the
 exterior derivative. We thus interpret electromagnetism as a twist in spacetime.
-
-The equations obtained are the well-recognized expressions of the differential
-geometric formulation of Maxwell's equations. I slightly improve on the
-formulation to finally combine the expression of electromagnetism into a single
-equation.
-
 The present line of reasoning and derivation may feel more intuitive compared to
-the conventional approach of retroactively proving that expression the the
+the conventional approach of retroactively proving that expressing the
 electromagnetic tensor in a certain manner as a combination of 2-forms, followed
-by applying the Hodge operator and the exterior product, leads back Maxwell's
+by applying the Hodge operator and the exterior product, leads back to Maxwell's
 equations.
+
+The mathematical expressions obtained are the well-recognized expressions of the
+differential geometric formulation of Maxwell's equations. I finally further
+slightly improve on the conventional notation to combine the expressions into a
+single equation.
 
 The Equations of Mr. Maxwell
 ----------------------------
 
 .. {{{
 
-In a previous article, I derive from the 1865 Maxwell equations :ref:`the
-following expressions<the ordered equations>`:
+In a previous article, I present :ref:`the Maxwell equations of 1865` expressed
+with modern notations, and reoredered with the benefit of hindsight:
 
 .. rubric:: Inhomogenous Maxwell equations
 

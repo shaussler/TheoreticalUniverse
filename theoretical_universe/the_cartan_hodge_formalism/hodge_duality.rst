@@ -47,7 +47,7 @@ Each basis surface can be associated with a unique basis vector:
 
    ∂_x ∧ ∂_y \rightarrow ∂_z \\
    ∂_y ∧ ∂_z \rightarrow ∂_x \\
-   ∂_z ∧ ∂_x \rightarrow ∂_y
+   ∂_z ∧ ∂_x \rightarrow ∂_y \\
 
 We note this relation with the star symbol :math:`⋆`:
 
@@ -55,7 +55,7 @@ We note this relation with the star symbol :math:`⋆`:
 
    ⋆ ∂_x ∧ ∂_y = ∂_z \\
    ⋆ ∂_y ∧ ∂_z = ∂_x \\
-   ⋆ ∂_z ∧ ∂_x = ∂_y
+   ⋆ ∂_z ∧ ∂_x = ∂_y \\
 
 This association defines a dual vector to every oriented surfaces and is called
 the Hodge dual, noted with the star operator :math:`⋆` operator. The relation
@@ -65,7 +65,7 @@ holds in both direction:
 
    ⋆ ∂_z = ∂_x ∧ ∂_y \\
    ⋆ ∂_x = ∂_y ∧ ∂_z \\
-   ⋆ ∂_y = ∂_z ∧ ∂_x
+   ⋆ ∂_y = ∂_z ∧ ∂_x \\
 
 The Hodge dual in three dimensions is the cross product. The cross product
 defines a vector perpendicular to the surface whose length is proportional to
@@ -75,7 +75,7 @@ the amount of rotation:
 
    ∂_x ⨯ ∂_y = ⋆ ∂_x ∧ ∂_y = ∂_z \\
    ∂_y ⨯ ∂_z = ⋆ ∂_y ∧ ∂_z = ∂_x \\
-   ∂_z ⨯ ∂_x = ⋆ ∂_z ∧ ∂_x = ∂_y
+   ∂_z ⨯ ∂_x = ⋆ ∂_z ∧ ∂_x = ∂_y \\
 
 This establishes the deep connection between the Hodge dual, rotations,
 surfaces, and the cross product.
@@ -131,31 +131,31 @@ flip their signs with the image of the oriented volume.
 Duality in Minkowski space
 --------------------------
 
-.. warning::
+.. math::
 
-   Under construction
+   ⋆ dt &= - dx ∧ dy ∧ dz \\
+   ⋆ dx &= - dt ∧ dy ∧ dz \\
+   ⋆ dy &= - dt ∧ dz ∧ dx \\
+   ⋆ dz &= - dt ∧ dx ∧ dy \\
 
 .. math::
 
-   ⋆ (∂_t ∧ ∂_x) = -& ∂_y ∧ ∂_z \\
-   ⋆ (∂_t ∧ ∂_y) = -& ∂_z ∧ ∂_x \\
-   ⋆ (∂_t ∧ ∂_z) = -& ∂_x ∧ ∂_y \\
-   ⋆ (∂_x ∧ ∂_y) =  & ∂_t ∧ ∂_z \\
-   ⋆ (∂_y ∧ ∂_z) =  & ∂_t ∧ ∂_x \\
-   ⋆ (∂_z ∧ ∂_x) =  & ∂_t ∧ ∂_y \\
+   ⋆ (dt ∧ dx) &= -& dy ∧ dz \\
+   ⋆ (dt ∧ dy) &= -& dz ∧ dx \\
+   ⋆ (dt ∧ dz) &= -& dx ∧ dy \\
+   ⋆ (dy ∧ dz) &=  & dt ∧ dx \\
+   ⋆ (dz ∧ dx) &=  & dt ∧ dy \\
+   ⋆ (dx ∧ dy) &=  & dt ∧ dz \\
 
-.. math::
+.. ifconfig:: draft in ('yes')
 
-   ⋆ dt = - dx ∧ dy ∧ dz \\
-   ⋆ dx = - dt ∧ dy ∧ dz \\
-   ⋆ dy = - dt ∧ dz ∧ dx \\
-   ⋆ dz = - dt ∧ dx ∧ dy
+   .. warning:: Draft
 
-.. math::
+   .. math::
 
-   ⋆ (dt ∧ dx) = -& dy ∧ dz \\
-   ⋆ (dt ∧ dy) = -& dz ∧ dx \\
-   ⋆ (dt ∧ dz) = -& dx ∧ dy \\
-   ⋆ (dy ∧ dz) =  & dt ∧ dx \\
-   ⋆ (dz ∧ dx) =  & dt ∧ dy \\
-   ⋆ (dx ∧ dy) =  & dt ∧ dz
+      ⋆ (∂_t ∧ ∂_x) = -& ∂_y ∧ ∂_z \\
+      ⋆ (∂_t ∧ ∂_y) = -& ∂_z ∧ ∂_x \\
+      ⋆ (∂_t ∧ ∂_z) = -& ∂_x ∧ ∂_y \\
+      ⋆ (∂_x ∧ ∂_y) =  & ∂_t ∧ ∂_z \\
+      ⋆ (∂_y ∧ ∂_z) =  & ∂_t ∧ ∂_x \\
+      ⋆ (∂_z ∧ ∂_x) =  & ∂_t ∧ ∂_y \\

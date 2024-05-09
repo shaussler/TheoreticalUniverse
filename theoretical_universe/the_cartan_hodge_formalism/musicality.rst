@@ -77,9 +77,9 @@ using the metric component :math:`η_{μν}` with:
           &= T^{μν} \; ∂_μ^♭ ⊗ ∂_ν^♯ \\
           &= T^{μν} \; η_{μγ} \; dx^{γ} ⊗ ∂_ν
 
-In comparison to Ricci calculus, musicality serves as a means to clearly
-articulate the tensor basis alongside its components. Those familiar with
-abstract index notation may initially perceive the musical notation with
-explicit tensor bases as merely introducing additional symbols. However, the
-practical utility of this notation becomes evident when conducting real
-calculations with all elements of the Cartan-Hodge formalism.
+Compared to Ricci calculus, musicality serves as a means to clearly articulate
+the tensor basis alongside its components. Those familiar with abstract index
+notation may initially perceive the musical notation with explicit tensor bases
+as merely introducing additional symbols. However, the practical utility of this
+notation becomes evident when conducting real calculations with all elements of
+the Cartan-Hodge formalism.

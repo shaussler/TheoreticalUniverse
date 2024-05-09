@@ -28,15 +28,6 @@ to directly provide corrections by sending a merge request to `the Theoretical
 Universe Github repository
 <https://github.com/shaussler/TheoreticalUniverse/>`_.
 
-.. margin:: A single equation
-
-   Electromagnetism is reduced to a single equation. Indeed, the terms resulting
-   from :math:`d ⋆` are 3-forms, while the terms resulting from :math:`⋆ d` are
-   1-forms. The equation can be unambiguously split into independent 1-form part
-   and 3-form part. We fall back to the well known equations
-   :math:`d\mathbf{F}=0` and :math:`d⋆\mathbf{F}=\mathbf{J}`, where
-   :math:`\mathbf{F}` is the field 2-form.
-
 I point out the article :ref:`faraday tensor derivation` for its simplicity.
 This derivation is straightforward and self-contained, requiring only knowledge
 of vector calculus and matrix multiplication. Subsequent articles assume that
@@ -51,6 +42,15 @@ this work lies the computation of the exterior derivative of rotations in
 Minkowski space, which leads to the insight that it perfectly mirrors Maxwell's
 equations. This provides a comprehensive and coherent demonstration of how
 Maxwell's equations emerge from the framework of differential forms:
+
+.. margin:: A single equation
+
+   Electromagnetism is reduced to a single equation. Indeed, the terms resulting
+   from :math:`d ⋆` are 3-forms, while the terms resulting from :math:`⋆ d` are
+   1-forms. The equation can be unambiguously split into independent 1-form part
+   and 3-form part. We fall back to the well known equations
+   :math:`d\mathbf{F}=0` and :math:`d⋆\mathbf{F}=\mathbf{J}`, where
+   :math:`\mathbf{F}` is the field 2-form.
 
 .. topic:: Maxwell Equations in the Cartan-Hodge Formalism
 
