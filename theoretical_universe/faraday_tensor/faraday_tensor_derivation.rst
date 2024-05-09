@@ -136,23 +136,23 @@ Gathering and reordering the terms, a clear structures becomes apparent:
 
 .. math::
 
-   \begin{aligned}
-                                       & + \frac{∂E^x}{∂x} & + \frac{∂E^y}{∂y} & + \frac{∂E^z}{∂z} & = & + ρ/ε_0   \\
-       + \frac{1}{c^2} \frac{∂E^x}{∂t} &                   & - \frac{∂B^z}{∂y} & + \frac{∂B^y}{∂z} & = & - μ_0 J^x \\
-       + \frac{1}{c^2} \frac{∂E^y}{∂t} & + \frac{∂B^z}{∂x} &                   & - \frac{∂B^x}{∂z} & = & - μ_0 J^y \\
-       + \frac{1}{c^2} \frac{∂E^z}{∂t} & - \frac{∂B^y}{∂x} & + \frac{∂B^x}{∂y} &                   & = & - μ_0 J^z \\
-   \end{aligned}
+   \begin{alignedat}{1}
+                                       & + \frac{∂E^x}{∂x} & + \frac{∂E^y}{∂y} & + \frac{∂E^z}{∂z} & = + ρ/ε_0   \\
+       + \frac{1}{c^2} \frac{∂E^x}{∂t} &                   & - \frac{∂B^z}{∂y} & + \frac{∂B^y}{∂z} & = - μ_0 J^x \\
+       + \frac{1}{c^2} \frac{∂E^y}{∂t} & + \frac{∂B^z}{∂x} &                   & - \frac{∂B^x}{∂z} & = - μ_0 J^y \\
+       + \frac{1}{c^2} \frac{∂E^z}{∂t} & - \frac{∂B^y}{∂x} & + \frac{∂B^x}{∂y} &                   & = - μ_0 J^z \\
+   \end{alignedat}
 
 .. rubric:: Homogenous equations
 
 .. math::
 
-   \begin{aligned}
-                        & + \frac{∂B^x}{∂x} & + \frac{∂B^y}{∂y} & + \frac{∂B^z}{∂z} &=& 0 \\
-      + \frac{∂B^x}{∂t} &                   & + \frac{∂E^z}{y∂} & - \frac{∂E^y}{∂z} &=& 0 \\
-      + \frac{∂B^y}{∂t} & - \frac{∂E^z}{∂x} &                   & + \frac{∂E^x}{∂z} &=& 0 \\
-      + \frac{∂B^z}{∂t} & + \frac{∂E^y}{∂x} & - \frac{∂E^x}{∂y} &                   &=& 0 \\
-   \end{aligned}
+   \begin{alignedat}{1}
+                        & + \frac{∂B^x}{∂x} & + \frac{∂B^y}{∂y} & + \frac{∂B^z}{∂z} &= 0 \\
+      + \frac{∂B^x}{∂t} &                   & + \frac{∂E^z}{y∂} & - \frac{∂E^y}{∂z} &= 0 \\
+      + \frac{∂B^y}{∂t} & - \frac{∂E^z}{∂x} &                   & + \frac{∂E^x}{∂z} &= 0 \\
+      + \frac{∂B^z}{∂t} & + \frac{∂E^y}{∂x} & - \frac{∂E^x}{∂y} &                   &= 0 \\
+   \end{alignedat}
 
 .. }}}
 
@@ -178,23 +178,23 @@ and for the spatial dimensions :math:`∂_x = \frac{∂}{∂ x}`, :math:`∂_y =
 
 .. math::
 
-   \begin{aligned}
-                & + ∂_x \E^x & + ∂_y \E^y & + ∂_z \E^z & = & + μ_0 c ρ \\
-     + ∂_t \E^x &            & - ∂_y  B^z & + ∂_z  B^y & = & - μ_0 J^x \\
-     + ∂_t \E^y & + ∂_x  B^z &            & - ∂_z  B^x & = & - μ_0 J^y \\
-     + ∂_t \E^z & - ∂_x  B^y & + ∂_y  B^x &            & = & - μ_0 J^z \\
-   \end{aligned}
+   \begin{alignedat}{1}
+                & + ∂_x \E^x & + ∂_y \E^y & + ∂_z \E^z & = + μ_0 c ρ \\
+     + ∂_t \E^x &            & - ∂_y  B^z & + ∂_z  B^y & = - μ_0 J^x \\
+     + ∂_t \E^y & + ∂_x  B^z &            & - ∂_z  B^x & = - μ_0 J^y \\
+     + ∂_t \E^z & - ∂_x  B^y & + ∂_y  B^x &            & = - μ_0 J^z \\
+   \end{alignedat}
 
 .. rubric:: Homogenous equations
 
 .. math::
 
-   \begin{aligned}
-                & + ∂_x  B^x & + ∂_y  B^y & + ∂_z  B^z & = & 0 \\
-     + ∂_t  B^x &            & + ∂_y \E^z & - ∂_z \E^y & = & 0 \\
-     + ∂_t  B^y & - ∂_x \E^z &            & + ∂_z \E^x & = & 0 \\
-     + ∂_t  B^z & + ∂_x \E^y & - ∂_y \E^x &            & = & 0 \\
-   \end{aligned}
+   \begin{alignedat}{1}
+                & + ∂_x  B^x & + ∂_y  B^y & + ∂_z  B^z & = 0 \\
+     + ∂_t  B^x &            & + ∂_y \E^z & - ∂_z \E^y & = 0 \\
+     + ∂_t  B^y & - ∂_x \E^z &            & + ∂_z \E^x & = 0 \\
+     + ∂_t  B^z & + ∂_x \E^y & - ∂_y \E^x &            & = 0 \\
+   \end{alignedat}
 
 For readers well-versed in the tensor formulation of electromagnetism, the
 presence and nature of the Faraday tensor and its dual are likely evident.
