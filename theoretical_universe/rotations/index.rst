@@ -31,9 +31,9 @@ combination of the 3 independent planes of rotation. These are represented with
 .. math::
 
    R^{♯♯} = \begin{bmatrix}
-   a \; ∂_y ∧ ∂_z \\
-   b \; ∂_z ∧ ∂_x \\
-   c \; ∂_x ∧ ∂_y \\
+     a \; ∂_y ∧ ∂_z \\
+     b \; ∂_z ∧ ∂_x \\
+     c \; ∂_x ∧ ∂_y \\
    \end{bmatrix}
 
 Any rotation in 4-dimensional Minkowksi space is represented by a linear
@@ -43,12 +43,12 @@ combination of the 6 independent planes of rotation. These are represented with
 .. math::
 
    R^{♯♯}= \begin{bmatrix}
-   a \; ∂_t ∧ ∂_x \\
-   b \; ∂_t ∧ ∂_y \\
-   c \; ∂_t ∧ ∂_z \\
-   d \; ∂_y ∧ ∂_z \\
-   e \; ∂_z ∧ ∂_x \\
-   f \; ∂_x ∧ ∂_y \\
+     a \; ∂_t ∧ ∂_x \\
+     b \; ∂_t ∧ ∂_y \\
+     c \; ∂_t ∧ ∂_z \\
+     d \; ∂_y ∧ ∂_z \\
+     e \; ∂_z ∧ ∂_x \\
+     f \; ∂_x ∧ ∂_y \\
    \end{bmatrix}
 
 Equivalently, rotations in spacetime can be represented by linear combinations
@@ -57,12 +57,12 @@ of 6 basis bicovectors:
 .. math::
 
    R^{♭♭} = \left[ \begin{aligned}
-       - & a \; dt ∧ dx \\
-       - & b \; dt ∧ dy \\
-       - & c \; dt ∧ dz \\
-         & d \; dy ∧ dz \\
-         & e \; dz ∧ dx \\
-         & f \; dx ∧ dy \\
+     - & a \; dt ∧ dx \\
+     - & b \; dt ∧ dy \\
+     - & c \; dt ∧ dz \\
+       & d \; dy ∧ dz \\
+       & e \; dz ∧ dx \\
+       & f \; dx ∧ dy \\
    \end{aligned} \right]
 
 .. rubric:: Matrice Representation of the Mixed Exterior Product
@@ -73,10 +73,10 @@ expressed in a mixed form is:
 .. math::
 
    R^{♭♯} = \frac{1}{2} \begin{bmatrix}
-                     & + a \; dx^t ∧ ∂_x & + b \; dx^t ∧ ∂_y & + c \; dx^t ∧ ∂_z \\
-   + a \; dx^x ∧ ∂_t &                   & + f \; dx^x ∧ ∂_y & - e \; dx^x ∧ ∂_z \\
-   + b \; dx^y ∧ ∂_t & - f \; dx^y ∧ ∂_x &                   & + d \; dx^y ∧ ∂_z \\
-   + c \; dx^z ∧ ∂_t & + e \; dx^z ∧ ∂_x & - d \; dx^z ∧ ∂_y &                   \\
+                       & + a \; dx^t ∧ ∂_x & + b \; dx^t ∧ ∂_y & + c \; dx^t ∧ ∂_z \\
+     + a \; dx^x ∧ ∂_t &                   & + f \; dx^x ∧ ∂_y & - e \; dx^x ∧ ∂_z \\
+     + b \; dx^y ∧ ∂_t & - f \; dx^y ∧ ∂_x &                   & + d \; dx^y ∧ ∂_z \\
+     + c \; dx^z ∧ ∂_t & + e \; dx^z ∧ ∂_x & - d \; dx^z ∧ ∂_y &                   \\
    \end{bmatrix}
 
 Readers well versed in the tensor formulations of electromagnetism will

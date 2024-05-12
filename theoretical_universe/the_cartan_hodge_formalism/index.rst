@@ -29,35 +29,32 @@ Summary
 -------
 
 In this serie of articles, I introduce the Cartan-Hodge formalism, which bundles
-the notions of *tensor calculus*, *musical operators*, the *Hodge duality*, the
-*free matrix representation* into a unified framework for performing
-calculations and highlighting symmetries. Practical computations follow clear
-and concise rules, with each step presented in a compact and comprehensible
-manner. I assume the reader possesses a solid understanding of vector and tensor
-calculus, as well as a working familiarity with differential forms.
+the notions of *tensor calculus*, *musical operators*, *Hodge duality*,
+*exterior derivative*, and the *free matrix representation* into a unified
+framework for performing calculations and highlighting symmetries. Practical
+computations follow clear and concise rules, with each step presented in a
+compact and comprehensible manner. This section is not a comprehensive
+introduction into these subjects, but recalls basic definitions and properties
+necessary to perform calculations. I assume the reader possesses a solid
+understanding of vector and tensor calculus, as well as a working familiarity
+with differential forms and the exterior derivative.
 
 .. rubric:: Basis Vectors and Covectors
 
-The euclidean basis vectors are traditionally noted :math:`\mathbf{e}_x`,
+The Euclidean basis vectors are traditionally noted :math:`\mathbf{e}_x`,
 :math:`\mathbf{e}_y`, and :math:`\mathbf{e}_z`. It can be demonstrated that the
 basis vectors are the partial derivatives:
 
-.. math::
+.. math:: \mathbf{e}_i = ∂_i
 
-   \mathbf{e}_i = ∂_i
+Any vector can  be expressed as a linear combination of the basis vectors as:
 
-Any vector can  be expressed as a linear combination of the basis vectors as
+.. math:: a \; ∂_x + b \; ∂_y + c \; ∂_z
 
-.. math::
+The differential applied to the basis vectors results in the Kronecker
+:math:`δ`:
 
-   a \; ∂_x + b \; ∂_y + c \; ∂_z
-
-Noticing that the differential applied to the basis vectors result in the
-Kronecker :math:`δ`:
-
-.. math::
-
-   dx^i (∂_j) = δ^i_j
+.. math:: dx^i (∂_j) = δ^i_j
 
 Therefore the dual basis covectors are:
 
@@ -68,9 +65,7 @@ Therefore the dual basis covectors are:
 And a covariant dual covector is expressed as linear combination of the basis
 covectors:
 
-.. math::
-
-   a \; dx + b \; dy + c \; dz
+.. math:: a \; dx + b \; dy + c \; dz
 
 .. rubric:: Musical Operators
 
@@ -78,12 +73,10 @@ With the musical flat :math:`♭` and sharp :math:`♯` symbols, covectors and
 vectors are explicetely declared. For example, a contravariant three-vector is
 declared with the sharp operator :math:`♯` as:
 
-.. math::
-
-   V^♯ = a \; ∂_x + b \; ∂_y + c \; ∂_z
+.. math:: V^♯ = a \; ∂_x + b \; ∂_y + c \; ∂_z
 
 The musical flat :math:`♭` and sharp :math:`♯` symbols are further utilzed as
-operators to convert vectors to covectors and vice versa. For example, a
+operators converting vectors to covectors and vice versa. For example, a
 three-vector with euclidean metric :math:`δ` is flattend to a three-covector
 with:
 
@@ -96,17 +89,22 @@ with:
 
 .. rubric:: The Free Matrix Representation
 
-With the *free matrix representation*, the vectors can be ordered into arbitray
+With the *free matrix representation*, vectors can be ordered into arbitray
 matrix, while keeping the tensor basis is explicitly included. A vector can the
 be expressed explicitly as:
 
 .. math::
 
-   V^♯ = \begin{bmatrix} a \; ∂_x \\ b \; ∂_y \\ c \; ∂_z \end{bmatrix}
+   V^♯ = \begin{bmatrix}
+     a \; ∂_x \\
+     b \; ∂_y \\
+     c \; ∂_z \\
+   \end{bmatrix}
 
-But the representation can be freely modified the best facilitate calculations,
-as the brackets acts as an operator :math:`\begin{bmatrix}\end{bmatrix}` adding
-elements. As an example, the following representation of a vector is also valid:
+The representation can be freely modified to best facilitate calculations, with
+the brackets acting as an operator :math:`\begin{bmatrix}\end{bmatrix}` adding
+elements together. As an example, the following row representation of a vector is
+also valid in the free matrix representation:
 
 .. math::
 

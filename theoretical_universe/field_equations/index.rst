@@ -15,8 +15,15 @@ The Field Equations
 
 .. ifconfig:: draft in ('yes')
 
+   .. warning:: Draft content
+
    In this serie of articles, I translate the Field Equations of Mr. Einstein in
    the Cartan-Hodge Formalism.
+
+   The Rieman Curvature Tensor
+   ---------------------------
+
+   https://en.m.wikipedia.org/wiki/Curvature_form
 
    The Field Equations of Mr. Einstein
    -----------------------------------

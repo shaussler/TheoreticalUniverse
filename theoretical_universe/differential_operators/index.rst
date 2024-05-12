@@ -30,27 +30,19 @@ differential operators in the :ref:`Cartan-Hodge formalism
 
 .. rubric:: Gradiant
 
-.. math::
-
-   (df)^{♯} = \mathbf{∇} f
+.. math:: (df)^{♯} = \mathbf{∇} f
 
 .. rubric:: Divergence
 
-.. math::
-
-   ⋆ d ⋆ F^♭ = \mathbf{∇} \cdot \mathbf{F}
+.. math:: ⋆ d ⋆ F^♭ = \mathbf{∇} \cdot \mathbf{F}
 
 .. rubric:: Curl
 
-.. math::
-
-   (⋆(dF^♭))^♯ = ∇^♯ ⨯ F^♯
+.. math:: (⋆(dF^♭))^♯ = ∇^♯ ⨯ F^♯
 
 .. rubric:: Laplacian
 
-.. math::
-
-   ⋆ d ⋆ d f = \mathbf{∇}^2 f
+.. math:: ⋆ d ⋆ d f = \mathbf{∇}^2 f
 
 Of Rotations in Spacetime
 -------------------------
@@ -64,27 +56,29 @@ equations governing electromagnetism. Readers well versed in the formulation of
 electromagnetism may already recognize the Faraday tensor, its dual, and the
 Maxwell equations.
 
-.. rubric:: Hodge Dual of the Exterior Derivative of Rotations in Differential Form
+.. rubric:: Hodge Dual of the Exterior Derivative of Rotations in Differential
+   Form
 
 .. math::
 
-   ⋆ (dR^{♭♭}) = \left[ \begin{aligned}
-       ( &         & - ∂_x d & - ∂_y e & - ∂_z f & \: ) \; dt \\
-       ( & - ∂_t d &         & - ∂_y c & + ∂_z b & \: ) \; dx \\
-       ( & - ∂_t e & + ∂_x c &         & - ∂_z a & \: ) \; dy \\
-       ( & - ∂_t f & - ∂_x b & + ∂_y a &         & \: ) \; dz \\
-   \end{aligned} \right]
+   ⋆ (dR^{♭♭}) = \left[ \begin{alignedat}{1}
+     ( &         & - ∂_x d & - ∂_y e & - ∂_z f & \: ) \; dt \\
+     ( & - ∂_t d &         & - ∂_y c & + ∂_z b & \: ) \; dx \\
+     ( & - ∂_t e & + ∂_x c &         & - ∂_z a & \: ) \; dy \\
+     ( & - ∂_t f & - ∂_x b & + ∂_y a &         & \: ) \; dz \\
+   \end{alignedat} \right]
 
-.. rubric:: Exterior Derivative of the Hodge Dual of Rotations in Differential Form
+.. rubric:: Exterior Derivative of the Hodge Dual of Rotations in Differential
+   Form
 
 .. math::
 
-   d( ⋆ R^{♭♭} ) = \left[ \begin{aligned}
-       ( &         &+ ∂_x a & + ∂_y b & + ∂_z c & \: ) \; dx ∧ dy ∧ dz \\
-       ( & + ∂_t a &        & - ∂_y f & + ∂_z e & \: ) \; dt ∧ dy ∧ dz \\
-       ( & + ∂_t b &+ ∂_x f &         & - ∂_z d & \: ) \; dt ∧ dz ∧ dx \\
-       ( & + ∂_t c &- ∂_x e & + ∂_y d &         & \: ) \; dt ∧ dx ∧ dy \\
-   \end{aligned} \right]
+   d( ⋆ R^{♭♭} ) = \left[ \begin{alignedat}{1}
+     ( &         &+ ∂_x a & + ∂_y b & + ∂_z c & \: ) \; dx ∧ dy ∧ dz \\
+     ( & + ∂_t a &        & - ∂_y f & + ∂_z e & \: ) \; dt ∧ dy ∧ dz \\
+     ( & + ∂_t b &+ ∂_x f &         & - ∂_z d & \: ) \; dt ∧ dz ∧ dx \\
+     ( & + ∂_t c &- ∂_x e & + ∂_y d &         & \: ) \; dt ∧ dx ∧ dy \\
+   \end{alignedat} \right]
 
 .. rubric:: Laplace-De Rham on Rotations in Differential Form
 
@@ -94,18 +88,18 @@ Applied to a rotation in spacetime, we obtain the wave equations:
 .. math::
 
    (d ⋆ d ⋆ + ⋆ d ⋆ d) \left[ \begin{aligned}
-        - & a \; dt ∧ dx \\
-        - & b \; dt ∧ dy \\
-        - & c \; dt ∧ dz \\
-          & d \; dy ∧ dz \\
-          & e \; dz ∧ dx \\
-          & f \; dx ∧ dy \\
+     - & a \; dt ∧ dx \\
+     - & b \; dt ∧ dy \\
+     - & c \; dt ∧ dz \\
+       & d \; dy ∧ dz \\
+       & e \; dz ∧ dx \\
+       & f \; dx ∧ dy \\
    \end{aligned} \right]
-   &= \begin{bmatrix}
-   - ∂_t^2 a & + ∂_x^2 a & + ∂_y^2 a & + ∂_z^2 a & dt∧dx \\
-   - ∂_t^2 b & + ∂_x^2 b & + ∂_y^2 b & + ∂_z^2 b & dt∧dy \\
-   - ∂_t^2 c & + ∂_x^2 c & + ∂_y^2 c & + ∂_z^2 c & dt∧dz \\
-   + ∂_t^2 d & - ∂_x^2 d & - ∂_y^2 d & - ∂_z^2 d & dy∧dz \\
-   + ∂_t^2 f & - ∂_x^2 f & - ∂_y^2 f & - ∂_z^2 f & dx∧dy \\
-   + ∂_t^2 e & - ∂_x^2 e & - ∂_y^2 e & - ∂_z^2 e & dz∧dx \\
-   \end{bmatrix}
+   &= \left[ \begin{alignedat}{1}
+     ( & - ∂_t^2 a & + ∂_x^2 a & + ∂_y^2 a & + ∂_z^2 a & \: ) \; dt∧dx \\
+     ( & - ∂_t^2 b & + ∂_x^2 b & + ∂_y^2 b & + ∂_z^2 b & \: ) \; dt∧dy \\
+     ( & - ∂_t^2 c & + ∂_x^2 c & + ∂_y^2 c & + ∂_z^2 c & \: ) \; dt∧dz \\
+     ( & + ∂_t^2 d & - ∂_x^2 d & - ∂_y^2 d & - ∂_z^2 d & \: ) \; dy∧dz \\
+     ( & + ∂_t^2 f & - ∂_x^2 f & - ∂_y^2 f & - ∂_z^2 f & \: ) \; dx∧dy \\
+     ( & + ∂_t^2 e & - ∂_x^2 e & - ∂_y^2 e & - ∂_z^2 e & \: ) \; dz∧dx \\
+   \end{alignedat} \right]
