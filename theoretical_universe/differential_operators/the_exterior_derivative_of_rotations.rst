@@ -4,8 +4,7 @@
 .. International License. You should have received a copy of the license along
 .. with this work. If not, see <https://creativecommons.org/licenses/by/4.0/>.
 
-.. _the_exterior_derivative_of_rotations_in_spacetime:
-.. _the exterior derivative of rotations in spacetime:
+.. _The Exterior Derivative of Rotations in Spacetime:
 
 The Exterior Derivative of Rotations in Spacetime
 =================================================

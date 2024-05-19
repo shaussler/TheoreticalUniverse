@@ -9,15 +9,12 @@ The Electromagnetic Field Tensor
    of_maxwell_equations_and_rotations.rst
    all_electromagnetic_field_tensors.rst
 
-.. rubric:: Of Maxwell Equations and Rotations in Spacetime
-
-In this serie of articles, we finally conclude on the formalism of
-electromagnetism in differential form. From the stystematic analysis of the
-:ref:`exterior derivative of rotations in differential forms
-<the_exterior_derivative_of_rotations_in_spacetime>`, we determine that
-electromagnetism is a twist in spacetime:
-
-.. rubric:: Maxwell Equations in Differential Form
+In this serie of articles, I conclude on the formalism of electromagnetism in
+differential form. From the stystematic analysis of :ref:`the exterior
+derivative of rotations <The Exterior Derivative of Rotations in Spacetime>`, we
+determine that electromagnetism is a twist in spacetime expressed with the
+exterior derivative :math:`d` and the Hodge dual :math:`⋆`. The Equations of Mr.
+Maxwell written in Differential Form are:
 
 .. math::
 
@@ -36,20 +33,36 @@ electromagnetism is a twist in spacetime:
      - μ_0 J^z \; dt ∧ dx ∧ dy\\
    \end{bmatrix}
 
-This can be written in a compact form as:
-
-.. rubric:: Compact Maxwell Equations in Differential Form
+This can be written compactly in one line as:
 
 .. math:: (d ⋆ - ⋆ d) \; F^{♭♭} = J^{♭♭♭}
 
-I like to think :ref:`the Cartan-Hodge formalism <the Cartan-Hodge formalism>`
-offers a more refined, precise, and intuitive description and interpretation of
-the mathematical entities under consideration. It unveils the true essence of
-the Faraday tensor and establishes a clear connection to rotations in spacetime.
-While many of the expressions mentioned are undoubtedly familiar, I haven't come
-across a comprehensive derivation from Maxwell's equations to their differential
-form representation. Typically, I've encountered reverse demonstrations where
-the equivalence between the two forms is demonstrated.
+Where :math:`F` is the Faraday tensor expressed as a 2-form, and :math:`J` is
+the 4-current expressed as a 3-form. :math:`\tilde{E}^i` are the electric field
+components divided by the speed of light :math:`c`, and :math:`B^i` are the
+magnetic field components. :math:`μ_0` is the `vacuum permeability
+<https://en.m.wikipedia.org/wiki/Vacuum_permeability>`_ and :math:`c ρ` and
+:math:`J^i` are the component of the `four-current
+<https://en.m.wikipedia.org/wiki/Four-current>`_.
+
+To double-check the results, I direct you to `Michael Penn's video on Maxwell's
+equations via differential forms
+<https://www.youtube.com/watch?v=YQoiR-HEUqk>`_. These pages, I hope, improve
+upon other sources by offering a natural, precise and intuitive derivation of
+the Faraday tensor written as an electromagnetic 2-form. I hope to clarify the
+essence of the Faraday tensor and establish a clear connection to rotations in
+spacetime. While many of these expressions are undoubtedly familiar to many, I
+have not come across a comprehensive derivation of Maxwell's equations in their
+differential form representation. Typically, the equivalence with the widespread
+and now standard vector formulation of Mr. Heaviside is demonstrated in reverse.
+The standard approach take the final equations as well as the eletromagnetic
+2-form as a given, and then demonstrate the equivalence with Maxwell equations
+in the standard vector formulation. In contrastg, I begin by defining rotations
+in Minkowski spacetime and demonstrate how they can be written as 2-forms. I
+then calculate the exterior derivative, essentially exploring how to *twist*
+spacetime, and naturally *find* the Faraday tensor and the equations of Mr
+Maxwell in a form equivalent to the original 1865 formulation. This provides a
+deep connection between twists in spacetime and electromagnetism.
 
 .. ifconfig:: draft in ('yes')
 
