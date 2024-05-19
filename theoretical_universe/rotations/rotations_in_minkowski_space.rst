@@ -4,8 +4,7 @@
 .. international license. you should have received a copy of the license along
 .. with this work. if not, see <https://creativecommons.org/licenses/by/4.0/>.
 
-.. _rotations_in_minkowski_space:
-.. _rotations in minkowski space:
+.. _Rotations in Minkowski Space:
 
 Rotations in Minkowski Space
 ============================
@@ -43,50 +42,55 @@ linear combination of all basis rotations in all six available planes.
    .. math::
 
       R^{♯♯} = \begin{bmatrix}
-      a \; ∂_t ∧ ∂_x \\
-      b \; ∂_t ∧ ∂_y \\
-      c \; ∂_t ∧ ∂_z \\
-      d \; ∂_y ∧ ∂_z \\
-      e \; ∂_z ∧ ∂_x \\
-      f \; ∂_x ∧ ∂_y \\
+        a \; ∂_t ∧ ∂_x \\
+        b \; ∂_t ∧ ∂_y \\
+        c \; ∂_t ∧ ∂_z \\
+        d \; ∂_y ∧ ∂_z \\
+        e \; ∂_z ∧ ∂_x \\
+        f \; ∂_x ∧ ∂_y \\
       \end{bmatrix}
 
 The sharp symbol :math:`\sharp` indicates that the components are doubly
-contravariant tensor components. Using the antisymmetric property of the wedge
-product (:math:`∂_μ ∧ ∂_ν = - ∂_ν ∧ ∂_μ`) all terms can be rewritten as
-:math:`∂_μ ∧ ∂_ν = \frac{1}{2}( ∂_μ ∧ ∂_ν - ∂_ν ∧ ∂_μ)`. We get:
+contravariant tensor components. Using the antisymmetric property of the
+exterior product :math:`∂_μ ∧ ∂_ν = - ∂_ν ∧ ∂_μ`, all terms can be rewritten as
+:math:`∂_μ ∧ ∂_ν = \frac{1}{2}( ∂_μ ∧ ∂_ν - ∂_ν ∧ ∂_μ)`:
 
 .. math::
 
    R^{♯♯} = \begin{bmatrix}
-   a \; \frac{1}{2} (∂_t ∧ ∂_x - ∂_x ∧ ∂_t) \\
-   b \; \frac{1}{2} (∂_t ∧ ∂_y - ∂_y ∧ ∂_t) \\
-   c \; \frac{1}{2} (∂_t ∧ ∂_z - ∂_z ∧ ∂_t) \\
-   d \; \frac{1}{2} (∂_y ∧ ∂_z - ∂_z ∧ ∂_y) \\
-   e \; \frac{1}{2} (∂_z ∧ ∂_x - ∂_x ∧ ∂_z) \\
-   f \; \frac{1}{2} (∂_x ∧ ∂_y - ∂_y ∧ ∂_x) \\
+     a \; \frac{1}{2} (∂_t ∧ ∂_x - ∂_x ∧ ∂_t) \\
+     b \; \frac{1}{2} (∂_t ∧ ∂_y - ∂_y ∧ ∂_t) \\
+     c \; \frac{1}{2} (∂_t ∧ ∂_z - ∂_z ∧ ∂_t) \\
+     d \; \frac{1}{2} (∂_y ∧ ∂_z - ∂_z ∧ ∂_y) \\
+     e \; \frac{1}{2} (∂_z ∧ ∂_x - ∂_x ∧ ∂_z) \\
+     f \; \frac{1}{2} (∂_x ∧ ∂_y - ∂_y ∧ ∂_x) \\
    \end{bmatrix}
-   = \frac{1}{2} \begin{bmatrix}
-   a \; ∂_t ∧ ∂_x - a \; ∂_x ∧ ∂_t) \\
-   b \; ∂_t ∧ ∂_y - b \; ∂_y ∧ ∂_t) \\
-   c \; ∂_t ∧ ∂_z - c \; ∂_z ∧ ∂_t) \\
-   d \; ∂_y ∧ ∂_z - d \; ∂_z ∧ ∂_y) \\
-   e \; ∂_z ∧ ∂_x - e \; ∂_x ∧ ∂_z) \\
-   f \; ∂_x ∧ ∂_y - f \; ∂_y ∧ ∂_x) \\
+
+With minor rearangement, we get:
+
+.. math::
+
+   R^{♯♯} = \frac{1}{2} \begin{bmatrix}
+     a \; ∂_t ∧ ∂_x - a \; ∂_x ∧ ∂_t) \\
+     b \; ∂_t ∧ ∂_y - b \; ∂_y ∧ ∂_t) \\
+     c \; ∂_t ∧ ∂_z - c \; ∂_z ∧ ∂_t) \\
+     d \; ∂_y ∧ ∂_z - d \; ∂_z ∧ ∂_y) \\
+     e \; ∂_z ∧ ∂_x - e \; ∂_x ∧ ∂_z) \\
+     f \; ∂_x ∧ ∂_y - f \; ∂_y ∧ ∂_x) \\
    \end{bmatrix}
 
 The free matrix representation permits to state the obvious, in that we can
-rewrite the rotation with a row/column matrix representation:
+rewrite the rotation above utilizing a row/column matrix representation:
 
-.. topic:: The Doubly Contravariant Rotation Matrix
+.. topic:: The Doubly Contravariant Rotation in Matrix Form
 
    .. math::
 
       R^{♯♯}= \frac{1}{2} \begin{bmatrix}
-                       & + a \; ∂_t ∧ ∂_x & + b \; ∂_t ∧ ∂_y & + c \; ∂_t ∧ ∂_z \\
-      - a \; ∂_x ∧ ∂_t &                  & + f \; ∂_x ∧ ∂_y & - e \; ∂_x ∧ ∂_z \\
-      - b \; ∂_y ∧ ∂_t & - f \; ∂_y ∧ ∂_x &                  & + d \; ∂_y ∧ ∂_z \\
-      - c \; ∂_z ∧ ∂_t & + e \; ∂_z ∧ ∂_x & - d \; ∂_z ∧ ∂_y &                  \\
+                         & + a \; ∂_t ∧ ∂_x & + b \; ∂_t ∧ ∂_y & + c \; ∂_t ∧ ∂_z \\
+        - a \; ∂_x ∧ ∂_t &                  & + f \; ∂_x ∧ ∂_y & - e \; ∂_x ∧ ∂_z \\
+        - b \; ∂_y ∧ ∂_t & - f \; ∂_y ∧ ∂_x &                  & + d \; ∂_y ∧ ∂_z \\
+        - c \; ∂_z ∧ ∂_t & + e \; ∂_z ∧ ∂_x & - d \; ∂_z ∧ ∂_y &                  \\
       \end{bmatrix}
 
 .. }}}
@@ -109,9 +113,9 @@ flattened:
 .. math::
 
    \begin{matrix}
-   (∂_μ ∧ ∂_ν)^{♭♯} &= η_{γμ} dx^γ ∧ ∂_ν         \\
-   (∂_μ ∧ ∂_ν)^{♯♭} &= η_{γν} ∂_μ ∧ dx^γ         \\
-   (∂_μ ∧ ∂_ν)^{♭♭} &= η_{δμ} η_{γν} dx^δ ∧ dx^γ \\
+     (∂_μ ∧ ∂_ν)^{♭♯} &= η_{γμ} dx^γ ∧ ∂_ν         \\
+     (∂_μ ∧ ∂_ν)^{♯♭} &= η_{γν} ∂_μ ∧ dx^γ         \\
+     (∂_μ ∧ ∂_ν)^{♭♭} &= η_{δμ} η_{γν} dx^δ ∧ dx^γ \\
    \end{matrix}
 
 To obtain the doubly covariant representation of rotations in spacetime, we
@@ -123,12 +127,12 @@ apply the flat operators :math:`♭♭` to each components :math:`R^{♭♭} =
    .. math::
 
       R^{♭♭} = \left[ \begin{aligned}
-      - & a \; dt ∧ dx \\
-      - & b \; dt ∧ dy \\
-      - & c \; dt ∧ dz \\
-        & d \; dy ∧ dz \\
-        & e \; dz ∧ dx \\
-        & f \; dx ∧ dy \\
+        - & a \; dt ∧ dx \\
+        - & b \; dt ∧ dy \\
+        - & c \; dt ∧ dz \\
+          & d \; dy ∧ dz \\
+          & e \; dz ∧ dx \\
+          & f \; dx ∧ dy \\
       \end{aligned} \right]
 
 .. admonition:: Calculations
@@ -141,12 +145,12 @@ apply the flat operators :math:`♭♭` to each components :math:`R^{♭♭} =
    .. math::
 
       R^{♭♭} = \begin{bmatrix}
-      a \; ∂_t ∧ ∂_x \\
-      b \; ∂_t ∧ ∂_y \\
-      c \; ∂_t ∧ ∂_z \\
-      d \; ∂_y ∧ ∂_z \\
-      e \; ∂_z ∧ ∂_x \\
-      f \; ∂_x ∧ ∂_y \\
+        a \; ∂_t ∧ ∂_x \\
+        b \; ∂_t ∧ ∂_y \\
+        c \; ∂_t ∧ ∂_z \\
+        d \; ∂_y ∧ ∂_z \\
+        e \; ∂_z ∧ ∂_x \\
+        f \; ∂_x ∧ ∂_y \\
       \end{bmatrix}^{♭♭}
 
    .. rubric:: Distribute the musical operators
@@ -154,12 +158,12 @@ apply the flat operators :math:`♭♭` to each components :math:`R^{♭♭} =
    .. math::
 
       R^{♭♭} = \begin{bmatrix}
-      a \; ∂_t^♭ ∧ ∂_x^♭ \\
-      b \; ∂_t^♭ ∧ ∂_y^♭ \\
-      c \; ∂_t^♭ ∧ ∂_z^♭ \\
-      d \; ∂_y^♭ ∧ ∂_z^♭ \\
-      e \; ∂_z^♭ ∧ ∂_x^♭ \\
-      f \; ∂_x^♭ ∧ ∂_y^♭ \\
+        a \; ∂_t^♭ ∧ ∂_x^♭ \\
+        b \; ∂_t^♭ ∧ ∂_y^♭ \\
+        c \; ∂_t^♭ ∧ ∂_z^♭ \\
+        d \; ∂_y^♭ ∧ ∂_z^♭ \\
+        e \; ∂_z^♭ ∧ ∂_x^♭ \\
+        f \; ∂_x^♭ ∧ ∂_y^♭ \\
       \end{bmatrix}
 
    .. rubric:: Expand
@@ -167,12 +171,12 @@ apply the flat operators :math:`♭♭` to each components :math:`R^{♭♭} =
    .. math::
 
       R^{♭♭} = \begin{bmatrix}
-          a \; η_{tμ} d^μ ∧ η_{xμ} d^μ \\
-          b \; η_{tμ} d^μ ∧ η_{yμ} d^μ \\
-          c \; η_{tμ} d^μ ∧ η_{zμ} d^μ \\
-          d \; η_{yμ} d^μ ∧ η_{zμ} d^μ \\
-          e \; η_{zμ} d^μ ∧ η_{xμ} d^μ \\
-          f \; η_{xμ} d^μ ∧ η_{yμ} d^μ \\
+        a \; η_{tμ} d^μ ∧ η_{xμ} d^μ \\
+        b \; η_{tμ} d^μ ∧ η_{yμ} d^μ \\
+        c \; η_{tμ} d^μ ∧ η_{zμ} d^μ \\
+        d \; η_{yμ} d^μ ∧ η_{zμ} d^μ \\
+        e \; η_{zμ} d^μ ∧ η_{xμ} d^μ \\
+        f \; η_{xμ} d^μ ∧ η_{yμ} d^μ \\
       \end{bmatrix}
 
    .. rubric:: Identify non-zero terms
@@ -180,12 +184,12 @@ apply the flat operators :math:`♭♭` to each components :math:`R^{♭♭} =
    .. math::
 
       R^{♭♭} = \begin{bmatrix}
-          a \; η_{tt} dt ∧ η_{xx} dx \\
-          b \; η_{tt} dt ∧ η_{yy} dy \\
-          c \; η_{tt} dt ∧ η_{zz} dz \\
-          d \; η_{yy} dy ∧ η_{zz} dz \\
-          e \; η_{zz} dz ∧ η_{xx} dx \\
-          f \; η_{xx} dx ∧ η_{yy} dy \\
+        a \; η_{tt} dt ∧ η_{xx} dx \\
+        b \; η_{tt} dt ∧ η_{yy} dy \\
+        c \; η_{tt} dt ∧ η_{zz} dz \\
+        d \; η_{yy} dy ∧ η_{zz} dz \\
+        e \; η_{zz} dz ∧ η_{xx} dx \\
+        f \; η_{xx} dx ∧ η_{yy} dy \\
       \end{bmatrix}
 
    .. rubric:: Apply numerical values
@@ -193,12 +197,12 @@ apply the flat operators :math:`♭♭` to each components :math:`R^{♭♭} =
    .. math::
 
       R^{♭♭} = \left[ \begin{aligned}
-          - & a \; dt ∧ dx \\
-          - & b \; dt ∧ dy \\
-          - & c \; dt ∧ dz \\
-            & d \; dy ∧ dz \\
-            & e \; dz ∧ dx \\
-            & f \; dx ∧ dy \\
+        - & a \; dt ∧ dx \\
+        - & b \; dt ∧ dy \\
+        - & c \; dt ∧ dz \\
+          & d \; dy ∧ dz \\
+          & e \; dz ∧ dx \\
+          & f \; dx ∧ dy \\
       \end{aligned} \right]
 
    .. }}}

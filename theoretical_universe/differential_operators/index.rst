@@ -9,6 +9,10 @@
 Differential Operators in Differential Form
 ===========================================
 
+.. rst-class:: custom-author
+
+   by Stéphane Haussler
+
 .. toctree::
    :maxdepth: 1
    :caption: Table of Contents:
@@ -17,20 +21,24 @@ Differential Operators in Differential Form
    translations.rst
    the_exterior_derivative_of_rotations.rst
 
-Summary
--------
+The following pages systematically explore the application of the exterior
+derivative in both Euclidean space and Minkowski spacetime. Traditional
+differential operators from vector calculus are reinterpreted using the language
+of differential forms, musical operators, and the Hodge dual. These operations
+are then generalized and systematically applied in Minkowski spacetime. A
+central focus lies in the analysis of 2-forms, as the primary objective of this
+work is to highlight the profound connection between electromagnetism and
+rotations.
 
 Differential Operators
 ----------------------
 
-The exterior derivative permits to express and generalize all differential
-operators. In this serie of articles, I systematically translate the
-differential operators in the :ref:`Cartan-Hodge formalism
-<the_cartan_hodge_formalism>` to obtain:
+All standard differential operators commonly encountered in vector calculus are
+expressed in the framework of differential forms, musicality, and Hodge duality:
 
 .. rubric:: Gradiant
 
-.. math:: (df)^{♯} = \mathbf{∇} f
+.. math:: (df)^♯ = \mathbf{∇} f
 
 .. rubric:: Divergence
 
@@ -44,17 +52,18 @@ differential operators in the :ref:`Cartan-Hodge formalism
 
 .. math:: ⋆ d ⋆ d f = \mathbf{∇}^2 f
 
-Of Rotations in Spacetime
--------------------------
+Rotations in Minkowski Spacetime
+--------------------------------
 
-I investigate the exterior derivative of :ref:`rotations expressed in
-differential form <rotations_in_minkowski_space>`, employing :ref:`the
-Cartan-Hodge formalism <the_cartan_hodge_formalism>` within the context of
-Minkowski spacetime. I demonstrate in :ref:`Of Maxwell Equations and Rotations
-<of_maxwell_equations_and_rotations>` that a twist in spacetime leads to the
-equations governing electromagnetism. Readers well versed in the formulation of
-electromagnetism may already recognize the Faraday tensor, its dual, and the
-Maxwell equations.
+At the heart of this work lies the exploration of the exterior derivative
+applied to :ref:`rotations expressed in differential form <Rotations in
+Minkowski Space>`, employing :ref:`the Cartan-Hodge formalism <the Cartan-Hodge
+formalism>`, and within the context of Minkowski spacetime. I identify in a
+further article :ref:`Of Maxwell Equations and Rotations` that a twist in
+spacetime leads to the equations governing electromagnetism. Readers well versed
+in the formulation of electromagnetism will readily recognize the Faraday
+tensor, its dual, and the Maxwell equations. The Laplace-De Rham operator
+results in wave equations.
 
 .. rubric:: Hodge Dual of the Exterior Derivative of Rotations in Differential
    Form
@@ -82,8 +91,6 @@ Maxwell equations.
 
 .. rubric:: Laplace-De Rham on Rotations in Differential Form
 
-In Minkowski space, the Laplace-De Rham operator is :math:`d ⋆ d ⋆ + ⋆ d ⋆ d`.
-Applied to a rotation in spacetime, we obtain the wave equations:
 
 .. math::
 

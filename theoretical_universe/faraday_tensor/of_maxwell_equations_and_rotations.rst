@@ -5,6 +5,7 @@
 .. with this work. If not, see <https://creativecommons.org/licenses/by/4.0/>.
 
 .. _of_maxwell_equations_and_rotations:
+.. _Of Maxwell Equations and Rotations:
 
 Of Maxwell Equations and Rotations
 ==================================

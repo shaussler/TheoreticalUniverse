@@ -12,19 +12,19 @@ Differential Operators
    by Stéphane Haussler
 
 In this article, I use the language of differential forms to systematically
-express the derivative, the differential, the gradient, the divergence, the
-curl and the laplacian in three dimensions.
+express the derivative, the differential, the gradient, the divergence, the curl
+and the laplacian in 3-dimensional Euclidean space.
 
 I assume the reader possesses a strong grasp of vector calculus, a working
-understanding of differential forms and the wedge product, as well as of
-:ref:`the Hoddge dual <hodge_duality>`. To learn about differential forms, `see
-yet another great video serie by Michael Penn
+understanding of differential forms, the exterior product, musical operators, as
+well as :ref:`the Hoddge dual <hodge_duality>`. To learn about differential
+forms, `see yet another great video serie by Michael Penn
 <https://youtube.com/playlist?list=PL22w63XsKjqzQZtDZO_9s2HEMRJnaOTX7&si=4dDrAZ-oKa1rI7B8>`_.
-Implicitely assumed with the above requisites is a basic understanding of
-tensor calculus, and in particular the concept of vector and covector. Some
-familiarity with the concepts of of either Grassman Algebra, Clifford Algebra
-(AKA Geometric Algebra), or Lie Algebra is not necessary but certainly welcome
-for a deeper understanding of the antisymmetries at hand.
+Implicitely assumed with the above requisites is a basic understanding of tensor
+calculus, and in particular the concept of vector and covector. Some familiarity
+with the concepts of of either Grassman Algebra, Clifford Algebra (AKA Geometric
+Algebra), or Lie Algebra is not necessary but certainly welcome for a deeper
+understanding of the antisymmetries at hand.
 
 Derivative
 ----------

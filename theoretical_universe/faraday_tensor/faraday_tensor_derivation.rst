@@ -67,23 +67,34 @@ regarded as established experimental facts.
 
 .. rubric:: Gauss's Law
 
-.. math:: \overrightarrow{∇} \cdot \overrightarrow{E}  = ρ / ε_0
+.. math::
+
+   \overrightarrow{∇} \cdot \overrightarrow{E}  = ρ / ε_0
 
 .. rubric:: Ampère's Circuital Law
 
-.. math:: \overrightarrow{∇} \times \overrightarrow{B} = μ_0 \overrightarrow{J} + \frac{1}{c^2} \frac{∂}{∂t} \overrightarrow{E}
+.. math::
 
-.. rubric:: Gauss's Law for Magnetism
-
-.. math:: \overrightarrow{∇} \cdot \overrightarrow{B} = 0
+   \overrightarrow{∇} \times \overrightarrow{B} =
+   μ_0 \overrightarrow{J} + \frac{1}{c^2} \frac{∂}{∂t} \overrightarrow{E}
 
 .. rubric:: Faraday's law of induction
 
-.. math:: \overrightarrow{∇} ⨯ \overrightarrow{E} = -\frac{∂}{∂t} \overrightarrow{B}
+.. math::
 
-With the electric field :math:`\overrightarrow{E}=\{ E^x \\ E^y \\ E^z \}`, magnetic
-field :math:`\overrightarrow{B}=\{ B^x \\ B^y \\ B^z \}`, and operator
-:math:`\overrightarrow{∇}=\{ \frac{∂}{∂x} \\ \frac{∂}{∂y} \\ \frac{∂}{∂z} \}`
+   \overrightarrow{∇} ⨯ \overrightarrow{E} = -\frac{∂}{∂t} \overrightarrow{B}
+
+.. rubric:: Gauss's Law for Magnetism
+
+.. math::
+
+   \overrightarrow{∇} \cdot \overrightarrow{B} = 0
+
+With the electric field :math:`\overrightarrow{E} = \begin{bmatrix} E^x \\ E^y
+\\ E^z \end{bmatrix}`, magnetic field :math:`\overrightarrow{B} =
+\begin{bmatrix} B^x \\ B^y \\ B^z \end{bmatrix}`, and operator
+:math:`\overrightarrow{∇} = \begin{bmatrix} \frac{∂}{∂x} \\ \frac{∂}{∂y} \\
+\frac{∂}{∂z} \end{bmatrix}`
 
 .. }}}
 
@@ -132,7 +143,7 @@ The Underlying Structure
 
 Gathering and reordering the terms, a clear structures becomes apparent:
 
-.. rubric:: Inhomogenous equations
+.. rubric:: Inhomogenous equations: Gauss's law and Ampère's circuital law
 
 .. math::
 
@@ -143,7 +154,7 @@ Gathering and reordering the terms, a clear structures becomes apparent:
        + \frac{1}{c^2} \frac{∂E^z}{∂t} & - \frac{∂B^y}{∂x} & + \frac{∂B^x}{∂y} &                   & = - μ_0 J^z \\
    \end{alignedat}
 
-.. rubric:: Homogenous equations
+.. rubric:: Homogenous equations: Guauss's law and Faraday's law of induction
 
 .. math::
 

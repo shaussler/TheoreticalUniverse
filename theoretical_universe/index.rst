@@ -41,39 +41,36 @@ calculus, specifically the concept of vector/covector duality. At the heart of
 this work lies the computation of the exterior derivative of rotations in
 Minkowski space, which leads to the insight that it perfectly mirrors Maxwell's
 equations. This provides a comprehensive and coherent demonstration of how
-Maxwell's equations emerge from the framework of differential forms:
+Maxwell's equations emerge from the framework of differential forms.
 
-.. margin:: A single equation
-
-   Electromagnetism is reduced to a single equation. Indeed, the terms resulting
-   from :math:`d ⋆` are 3-forms, while the terms resulting from :math:`⋆ d` are
-   1-forms. The equation can be unambiguously split into independent 1-form part
-   and 3-form part. We fall back to the well known equations
-   :math:`d\mathbf{F}=0` and :math:`d⋆\mathbf{F}=\mathbf{J}`, where
-   :math:`\mathbf{F}` is the field 2-form.
+Electromagnetism is reduced to a single equation. Indeed, the terms resulting
+from :math:`d ⋆` are 3-forms, while the terms resulting from :math:`⋆ d` are
+1-forms. The equation can be unambiguously split into independent 1-form part
+and 3-form part. We fall back to the well known equations :math:`d\mathbf{F}=0`
+and :math:`d⋆\mathbf{F}=\mathbf{J}`, where :math:`\mathbf{F}` is the field
+2-form.
 
 .. topic:: Maxwell Equations in the Cartan-Hodge Formalism
 
    .. math::
 
       (d ⋆ - ⋆ d ) \begin{bmatrix}
-          \E^x \; dx ∧ dt \\
-          \E^y \; dy ∧ dt \\
-          \E^z \; dz ∧ dt \\
-           B^x \; dy ∧ dz \\
-           B^y \; dz ∧ dx \\
-           B^z \; dx ∧ dy \\
+        \E^x \; dx ∧ dt \\
+        \E^y \; dy ∧ dt \\
+        \E^z \; dz ∧ dt \\
+         B^x \; dy ∧ dz \\
+         B^y \; dz ∧ dx \\
+         B^z \; dx ∧ dy \\
       \end{bmatrix}
       = \begin{bmatrix}
-          + μ_0 c ρ \; dx ∧ dy ∧ dz\\
-          - μ_0 J^x \; dt ∧ dy ∧ dz\\
-          - μ_0 J^y \; dt ∧ dz ∧ dx\\
-          - μ_0 J^z \; dt ∧ dx ∧ dy\\
+        + μ_0 c ρ \; dx ∧ dy ∧ dz\\
+        - μ_0 J^x \; dt ∧ dy ∧ dz\\
+        - μ_0 J^y \; dt ∧ dz ∧ dx\\
+        - μ_0 J^z \; dt ∧ dx ∧ dy\\
       \end{bmatrix}
 
-   Where :math:`d` is the exterior derivative, :math:`⋆` the Hodge star operator
-   and :math:`∧` the wedge product.
-
+   Where :math:`d` is the exterior derivative, :math:`⋆` the Hodge star, and
+   :math:`∧` the exterior product.
 
 .. rubric:: The Cartan-Hodge Formalism
 
