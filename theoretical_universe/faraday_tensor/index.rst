@@ -42,7 +42,7 @@ This can be written in a compact form as:
 
 .. math:: (d ⋆ - ⋆ d) \; F^{♭♭} = J^{♭♭♭}
 
-I like to think the :ref:`Cartan-Hodge formalism <the_cartan_hodge_formalism>`
+I like to think :ref:`the Cartan-Hodge formalism <the Cartan-Hodge formalism>`
 offers a more refined, precise, and intuitive description and interpretation of
 the mathematical entities under consideration. It unveils the true essence of
 the Faraday tensor and establishes a clear connection to rotations in spacetime.

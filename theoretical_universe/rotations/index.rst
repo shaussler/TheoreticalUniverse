@@ -93,10 +93,10 @@ equal. We obtain:
 ============ =============================
 Symmetry     Basis elements
 ============ =============================
-Symetric     :math:`dt ∧ ∂_x = + dt ∧ ∂_x`
-Symetric     :math:`dt ∧ ∂_y = + dt ∧ ∂_y`
-Symetric     :math:`dt ∧ ∂_z = + dt ∧ ∂_z`
-Antisymetric :math:`dy ∧ ∂_z = - dy ∧ ∂_z`
-Antisymetric :math:`dz ∧ ∂_x = - dz ∧ ∂_x`
-Antisymetric :math:`dx ∧ ∂_y = - dx ∧ ∂_y`
+Symetric     :math:`dt ∧ ∂_x = + dx ∧ ∂_t`
+Symetric     :math:`dt ∧ ∂_y = + dy ∧ ∂_t`
+Symetric     :math:`dt ∧ ∂_z = + dz ∧ ∂_t`
+Antisymetric :math:`dy ∧ ∂_z = - dz ∧ ∂_y`
+Antisymetric :math:`dz ∧ ∂_x = - dx ∧ ∂_z`
+Antisymetric :math:`dx ∧ ∂_y = - dy ∧ ∂_x`
 ============ =============================

@@ -31,24 +31,32 @@ Universe Github repository
 I point out the article :ref:`faraday tensor derivation` for its simplicity.
 This derivation is straightforward and self-contained, requiring only knowledge
 of vector calculus and matrix multiplication. Subsequent articles assume that
-readers have a solid understanding of vector calculus, a working understanding
-of differential forms and the wedge product, as well as knowledge of :ref:`hodge
-duality`. For those looking to learn about differential forms, `I recommend the
-excellent video serie by Michael Penn
+readers have a working understanding of:
+
+* `differential forms <https://en.m.wikipedia.org/wiki/Differential_form>`_
+* `musicality <https://en.m.wikipedia.org/wiki/Musical_isomorphism>`_
+* `the exterior product <https://en.m.wikipedia.org/wiki/Exterior_algebra>`_
+* `Hodge duality <https://en.m.wikipedia.org/wiki/Hodge_star_operator>`_
+
+I gather all these *tools* in what I name the :ref:`The Cartan-Hodge Formalism`.
+There you will find a review and my personal view of the concepts named above. I
+also introduce :ref:`The Free Matrix Representation`, which I hope the
+prospective reader will find obvious and in my opinion permits to help perform
+actual computations. For those looking to learn about differential forms, `I
+would like to recommend the excellent video serie by Michael Penn
 <https://youtube.com/playlist?list=PL22w63XsKjqzQZtDZO_9s2HEMRJnaOTX7&si=4dDrAZ-oKa1rI7B8>`_.
-Implicitely assumed in this discussion is a basic understanding of tensor
-calculus, specifically the concept of vector/covector duality. At the heart of
-this work lies the computation of the exterior derivative of rotations in
-Minkowski space, which leads to the insight that it perfectly mirrors Maxwell's
-equations. This provides a comprehensive and coherent demonstration of how
-Maxwell's equations emerge from the framework of differential forms.
+Implicitely assumed is a knowledge of tensor calculus, and specifically the
+concept of vector/covector duality. At the heart of this work lies the
+computation of the exterior derivative of rotations in Minkowski space, which
+leads to the insight that it perfectly mirrors Maxwell's equations. This
+provides a comprehensive and coherent demonstration of how Maxwell's equations
+emerge from the framework of differential forms.
 
 Electromagnetism is reduced to a single equation. Indeed, the terms resulting
 from :math:`d ⋆` are 3-forms, while the terms resulting from :math:`⋆ d` are
-1-forms. The equation can be unambiguously split into independent 1-form part
-and 3-form part. We fall back to the well known equations :math:`d\mathbf{F}=0`
-and :math:`d⋆\mathbf{F}=\mathbf{J}`, where :math:`\mathbf{F}` is the field
-2-form.
+1-forms. The equation can be unambiguously split into independent 1-form and and
+3-form parts. We fall back to the well known equations :math:`d\mathbf{F}=0` and
+:math:`d⋆\mathbf{F}=\mathbf{J}`, where :math:`\mathbf{F}` is the field 2-form.
 
 .. topic:: Maxwell Equations in the Cartan-Hodge Formalism
 
@@ -72,7 +80,7 @@ and :math:`d⋆\mathbf{F}=\mathbf{J}`, where :math:`\mathbf{F}` is the field
    Where :math:`d` is the exterior derivative, :math:`⋆` the Hodge star, and
    :math:`∧` the exterior product.
 
-.. rubric:: The Cartan-Hodge Formalism
+.. rubric:: :ref:`The Cartan-Hodge Formalism`
 
 This section defines the mathematical objects used in this work. There is argued
 the best notation to express basis vectors are partial derivatives :math:`∂_μ`.
@@ -82,12 +90,12 @@ covectors to vectors, and flat :math:`♭` to transform vectors to covectors. Th
 concept of the Hodge dual is detailed. Finally, I introduce the concept of free
 matrix representation, which I hope readers will find very obvious.
 
-I encapsulate these concepts in what I term :ref:`the Cartan-Hodge formalism
-<the_cartan_hodge_formalism>`. This comprehensive framework facilitates the
-systematic analysis of rotation representation in differential form and a
-thorough examination of differential operators within this context.
+I encapsulate these concepts in what I name the Cartan-Hodge formalism. This
+comprehensive framework facilitates the systematic analysis of rotation
+representation in differential form and a thorough examination of differential
+operators within this context.
 
-.. rubric:: Rotations in Differential Form
+.. rubric:: :ref:`Rotations in Differential Form`
 
 This section is a systematic analyis of the representation of rotations in three
 dimensions and in spacetime. Rotations are expressed as linear combinations of
