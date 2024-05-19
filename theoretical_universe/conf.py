@@ -28,13 +28,8 @@ extensions = [
     'sphinx_sitemap',
     'sphinx_togglebutton',
     'sphinx_reredirects',
-    # 'sphinx.ext.imgmath',  # epub
-    # 'sphinx.ext.mathjax',  # epub
-    'sphinx.ext.ifconfig',  # epub
+    'sphinx.ext.ifconfig',
 ]
-
-
-# source_encoding = 'utf-8'
 
 # Redirects
 # ---------
@@ -47,28 +42,10 @@ redirects = {
     "differential_rotations": "differential_operators/the_exterior_derivative_of_rotations.html",
 }
 
-# imgmath config
-# --------------
-
-# imgmath_image_format = 'png'  # This should allow to create images for epub
-# imgmath_font_size = 12  # Set the font size of the equations
-# imgmath_dvipng_args = ['-gamma', '1.5', '-D', '110', '-bg', 'Transparent']
-# imgmath_latex = 'latex'
+# Latex engine
+# ------------
 
 latex_engine = 'xelatex'
-
-# latex_elements = {
-#     'preamble': r'''
-# \usepackage{amsmath}
-# \usepackage[T1]{fontenc}
-# \usepackage[utf8]{inputenc}
-# \newcommand{\E}{\tilde{E}}
-# ''',
-#     'fncychap': r'\usepackage[Bjornstrup]{fncychap}',
-#     'printindex': r'\footnotesize\raggedright\printindex',
-# }
-
-# latex_show_urls = 'footnote'
 
 # epub configuration
 # ------------------
