@@ -73,6 +73,13 @@ To automaticall update on modifications:
 
    sphinx-autobuild -j 4 ./ _build/html/
 
+Check for broken links
+----------------------
+
+.. code:: bash
+
+   sphinx-build ./ _build/html/ -b linkcheck
+
 Hiding Content under Construction
 ---------------------------------
 

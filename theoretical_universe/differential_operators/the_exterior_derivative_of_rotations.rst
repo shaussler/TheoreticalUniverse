@@ -14,7 +14,7 @@ The Exterior Derivative of Rotations in Spacetime
    by Stéphane Haussler
 
 This article investigates the exterior derivative of :ref:`rotations expressed
-in differential form <rotations_in_minkowski_space>`. We employ :ref:`the
+in differential form <Rotations in Minkowski Space>`. We employ :ref:`the
 Cartan-Hodge formalism <the_cartan_hodge_formalism>` within the context of
 Minkowski spacetime. Following the systematic calculations presented in this
 article, I demonstrate in :ref:`Of Maxwell Equations and Rotations

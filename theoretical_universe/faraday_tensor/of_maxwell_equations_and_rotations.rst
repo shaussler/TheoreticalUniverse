@@ -70,7 +70,7 @@ The Exterior Derivative of Rotations
 
 .. {{{
 
-In a :ref:`previous article <rotations_in_minkowski_space>`, I investigate
+In a :ref:`previous article <Rotations in Minkowski Space>`, I investigate
 spacetime rotations in differential form and demonstrate that rotations can be
 expressed as:
 
@@ -84,10 +84,9 @@ expressed as:
        &f \; dx ∧ dy \\
    \end{aligned} \right]
 
-In a :ref:`subsequent article
-<the_exterior_derivative_of_rotations_in_spacetime>`, I systematically calculate
-the exterior derivative of that rotation, as well as the exterior derivative of
-the Hodge dual.
+In a :ref:`subsequent article <The Exterior Derivative of Rotations in
+Spacetime>`, I systematically calculate the exterior derivative of that
+rotation, as well as the exterior derivative of the Hodge dual.
 
 .. rubric:: Exterior Derivative of the Hodge Dual of Rotations in Differential
    Form
