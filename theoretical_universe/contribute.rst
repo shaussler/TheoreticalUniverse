@@ -99,7 +99,21 @@ neovim configuration
 --------------------
 
 I use neovim on Android termux and you might find my configuration helpfull,
-should you want to correct, modify or add to this serie of articles:
+should you want to correct, modify or add to this serie of articles. To install
+neovim plugins:
+
+.. code:: bash
+
+   curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+And use the configuration included in the repository:
 
 .. literalinclude:: conf/init.vim
    :language: vim
+
+To install in vim:
+
+.. code:: vim
+
+   :PlugInstall

@@ -43,6 +43,23 @@ if has("nvim")
   highlight ColorColumn ctermbg=237
 endif
 
+" Use vim-plug as the plugin manager
+call plug#begin('~/.vim/plugged')
+
+" Add the reStructuredText syntax highlighting plugin
+Plug 'marshallward/vim-restructuredtext'
+
+call plug#end()
+
+" Enable filetype plugins and indentation
+filetype plugin indent on
+
+" Ensure syntax highlighting is enabled
+syntax on
+
+" Auto-apply filetype and syntax highlighting for .rst files
+autocmd BufRead,BufNewFile *.rst set filetype=rst
+
 " Shortcuts to UTF-8 characters
 imap \alpha     α
 imap \beta      β
