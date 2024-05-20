@@ -7,30 +7,41 @@
 .. _of_maxwell_equations_and_rotations:
 .. _Of Maxwell Equations and Rotations:
 
-Of Maxwell Equations and Rotations
-==================================
+Maxwell Equations via Differential Forms
+========================================
+
+.. rst-class:: custom-title
+
+   and the Connection to Rotations
 
 .. rst-class:: custom-author
 
    by Stéphane Haussler
 
-This article elucidates the direct relashionship between :ref:`rotations in
-differential form` and the :ref:`equations of Mr. Maxwell <the ordered
-equations>`. In a previous articles, I utilized :ref:`the Cartan-Hodge
-formalism` to obtain :ref:`the exterior derivative of rotations in spacetime`.
-Through identification, we will establish that the equations governing
-electromagnetism exactly are spacetime rotations to which is applied the
-exterior derivative. We thus interpret electromagnetism as a twist in spacetime.
-The present line of reasoning and derivation may feel more intuitive compared to
-the conventional approach of retroactively proving that expressing the
-electromagnetic tensor in a certain manner as a combination of 2-forms, followed
-by applying the Hodge operator and the exterior product, leads back to Maxwell's
-equations.
+The present pages underscore the direct relashionship between :ref:`Rotations in
+Differential Form` and the :ref:`equations of Mr. Maxwell <The Ordered
+Equations>`. In a previous investigation, I utilized :ref:`The Cartan-Hodge
+Formalism` to derive :ref:`The Exterior Derivative of Rotations in Spacetime`.
+Through simple and direct identification, we will establish that the equations
+governing electromagnetism exactly are spacetime rotations to which is applied
+the exterior derivative and interpret electromagnetism as a twist in spacetime.
+This line of reasoning should feel intuitive compared to the conventional
+approach of:
 
-The mathematical expressions obtained are the well-recognized expressions of the
-differential geometric formulation of Maxwell's equations. I finally further
-slightly improve on the conventional notation to combine the expressions into a
-single equation.
+* expressing the electromagnetic tensor as an arbitrary combination of
+  2-forms
+* followed by applying the Hodge operator and the exterior product
+* unpacking the electric and magnetic components from the vector formulation of
+  Mr. Heaviside
+* and finally identifying Mr. Maxwell's equations
+
+As an example of this standard proof, see `a nonetheless great video by Michael
+Penn <https://www.youtube.com/watch?v=YQoiR-HEUqk&t=3s>`_.
+
+The mathematical expressions obtained in this section correspond to the
+well-recognized differential geometric formulation of Maxwell's equations. I
+finally slightly improve on the conventional notation to combine the expressions
+into a single equation.
 
 The Equations of Mr. Maxwell
 ----------------------------

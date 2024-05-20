@@ -167,8 +167,7 @@ Gathering and reordering the terms, a clear structures becomes apparent:
 
 .. }}}
 
-.. _the_ordered_equations:
-.. _the ordered equations:
+.. _The Ordered Equations:
 
 The Ordered Equations
 ---------------------
