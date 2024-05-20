@@ -14,35 +14,35 @@ matrix notation with the same object:
 
 .. math::
 
-   η = \begin{bmatrix}
-       + 1 &  0 &  0 &  0 \\
-         0 & -1 &  0 &  0 \\
-         0 &  0 & -1 &  0 \\
-         0 &  0 &  0 & -1 \\
-   \end{bmatrix}
+   η = \left[ \begin{alignedat}{1}
+     + & 1 \quad&   & 0 \quad &  & 0 \quad  &   & 0 \\
+       & 0 \quad& - & 1 \quad &  & 0 \quad  &   & 0 \\
+       & 0 \quad&   & 0 \quad & -& 1 \quad  &   & 0 \\
+       & 0 \quad&   & 0 \quad &  & 0 \quad  & - & 1 \\
+   \end{alignedat} \right]
 
-With :ref:`musical notation <musical_isomorphisms>` and :ref:`free matrix
-representation <the_free_matrix_representation>`, we explicitely write the
-metric tensor together with its basis:
-
-.. math::
-
-   \eta^{♯♯} = \begin{bmatrix}
-       + ∂_t ⊗ ∂_t &             &             &             \\
-                   & - ∂_x ⊗ ∂_x &             &             \\
-                   &             & - ∂_y ⊗ ∂_y &             \\
-                   &             &             & - ∂_z ⊗ ∂_z \\
-   \end{bmatrix}
-
-Simply put and much more compactly:
+Using :ref:`musical <Musicality>` and :ref:`free matrix notation <The Free
+Matrix Representation>`, we explicitely write the metric tensor together with
+its basis:
 
 .. math::
 
-   \eta^{♯♯} = \begin{bmatrix}
-       + ∂_t ⊗ ∂_t \\
-       - ∂_x ⊗ ∂_x \\
-       - ∂_y ⊗ ∂_y \\
-       - ∂_z ⊗ ∂_z \\
+   η^{♯♯} = \left[ \begin{alignedat}{1}
+     + ∂_t ⊗ ∂_t &             &             &             \\
+                 & - ∂_x ⊗ ∂_x &             &             \\
+                 &             & - ∂_y ⊗ ∂_y &             \\
+                 &             &             & - ∂_z ⊗ ∂_z \\
+   \end{alignedat} \right]
+
+Which can be reduced to the much more compact form:
+
+.. math::
+
+   η^{♯♯} = \begin{bmatrix}
+     + ∂_t ⊗ ∂_t \\
+     - ∂_x ⊗ ∂_x \\
+     - ∂_y ⊗ ∂_y \\
+     - ∂_z ⊗ ∂_z \\
    \end{bmatrix}
 
 Equivalently and with the same procedure and arguments, we express the doubly
@@ -50,11 +50,11 @@ covariant metric tensor with:
 
 .. math::
 
-   \eta^{♭♭} = \begin{bmatrix}
-       + dx^t ⊗ dx^t \\
-       - dx^x ⊗ dx^x \\
-       - dx^y ⊗ dx^y \\
-       - dx^z ⊗ dx^z \\
+   η^{♭♭} = \begin{bmatrix}
+     + dx^t ⊗ dx^t \\
+     - dx^x ⊗ dx^x \\
+     - dx^y ⊗ dx^y \\
+     - dx^z ⊗ dx^z \\
    \end{bmatrix}
 
 .. rubric:: Applying the metric to a vectors and covectors

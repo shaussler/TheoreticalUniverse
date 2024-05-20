@@ -110,6 +110,7 @@ deep connection between the electromagnetism and rotations in spacetime.
 
    licence.rst
    contribute.rst
+   resources.rst
    the_cartan_hodge_formalism/index.rst
    rotations/index.rst
    differential_operators/index.rst
