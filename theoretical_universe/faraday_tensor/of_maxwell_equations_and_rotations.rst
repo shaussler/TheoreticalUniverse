@@ -12,49 +12,99 @@ Maxwell Equations via Differential Forms
 
 .. rst-class:: custom-title
 
-   and the Connection to Rotations
+   The Connection to Rotations
 
 .. rst-class:: custom-author
 
    by Stéphane Haussler
 
-The present pages underscore the direct relashionship between :ref:`Rotations in
+The present pages underscore the direct relation between :ref:`Rotations in
 Differential Form` and the :ref:`equations of Mr. Maxwell <The Ordered
-Equations>`. In a previous investigation, I utilized :ref:`The Cartan-Hodge
+Equations>`. In a previous investigation, I utilize :ref:`The Cartan-Hodge
 Formalism` to derive :ref:`The Exterior Derivative of Rotations in Spacetime`.
-Through simple and direct identification, we will establish that the equations
-governing electromagnetism exactly are spacetime rotations to which is applied
-the exterior derivative and interpret electromagnetism as a twist in spacetime.
-This line of reasoning should feel intuitive compared to the conventional
-approach of:
+Through a straightforward identification process, we will demonstrate that the
+equations governing electromagnetism are, in fact, spacetime rotations with the
+exterior derivative applied. This allows us to interpret electromagnetism as a
+twist in spacetime. To prove this, we calculate the exterior derivative of
+arbitrary rotations in Minkowski spacetime and then identify the equivalence to
+Maxwell's equations.
 
-* expressing the electromagnetic tensor as an arbitrary combination of
-  2-forms
-* followed by applying the Hodge operator and the exterior product
-* unpacking the electric and magnetic components from the vector formulation of
-  Mr. Heaviside
-* and finally identifying Mr. Maxwell's equations
+This line of reasoning should feel more intuitive than the conventional
+approach, which involves several steps. First, express the electromagnetic
+tensor as an arbitrary combination of 2-forms. Then, apply the Hodge star
+operator and the exterior product. Next, extract the electric and magnetic
+components from the standard vector formulation developed by Mr. Heaviside.
+Finally, identify the equivalence of the formulations. For an example of the
+standard proof, see `a nonetheless great video by Michael Penn
+<https://www.youtube.com/watch?v=YQoiR-HEUqk&t=3s>`_.
 
-As an example of this standard proof, see `a nonetheless great video by Michael
-Penn <https://www.youtube.com/watch?v=YQoiR-HEUqk&t=3s>`_.
+The mathematical expressions obtained in this section correspond to `the
+well-recognized differential geometric formulation of Maxwell's equations
+<https://en.m.wikipedia.org/wiki/Mathematical_descriptions_of_the_electromagnetic_field#Differential_forms_approach>`_.
+Where :math:`\mathbf{F}` is the field 2-form and :math:`\mathbf{J}` the current
+3-form.
 
-The mathematical expressions obtained in this section correspond to the
-well-recognized differential geometric formulation of Maxwell's equations. I
-finally slightly improve on the conventional notation to combine the expressions
-into a single equation.
+.. math::
+
+   d\:\mathbf{F} = 0 \\
+   d⋆ \mathbf{F} = \mathbf{J}
+
+We note already that we can improve on the formulation by writing a single
+equation:
+
+.. math::
+
+   ⋆ \: d \: \mathbf{F} + d⋆\mathbf{F} = \mathbf{J}
+
+.. admonition:: Proof
+   :class: dropdown
+
+   Since :math:`d\:\mathbf{F}` is a 3-form, its Hodge dual
+   :math:`⋆\:d\:\mathbf{F}` is a 1-form. We can thus rewrite the homogenous
+   equation as acting on 1-forms, and the inhomogenous equations as acting on
+   3-forms:
+
+   .. math::
+
+      ⋆ \: d \: \mathbf{F} &= 0          && \qquad\text{1-forms} \\
+      d⋆\mathbf{F}         &= \mathbf{J} && \qquad\text{3-forms} \\
+
+   Expanding the right hand side of both equations for the argument, we have:
+
+   .. math::
+
+      ⋆ \: d \: \mathbf{F} =& \: 0\:dt + 0\:dx + 0\:dy + 0\:dz                                             \\
+      d⋆\mathbf{F}         =& \: \mu_0 ρ dx∧dy∧dz - μ_0 J^x dt∧dy∧dz - μ_0 J^y dt∧dz∧dx - μ_0 J^z dt∧dx∧dy \\
+
+   Therefore, the differential geometric formulation can be unambigously reduced
+   to a single equation involving both 3-forms and 1-forms:
+
+   .. math::
+
+      ⋆ \: d \: \mathbf{F} + d⋆\mathbf{F} = \mathbf{J}
+
+   We come back to that point at the end of this page.
+
+Note that we will use the Cartan-Hodge formalism, which permits to be explicit
+about the nature of the mathematical objects involved by using musical notation.
+For example, the electromagnetic field 2-form :math:`\mathbf{F}` is written
+:math:`F^{♭♭}`, the current 3-form :math:`J^{♭♭♭}` and the Hodge dual current
+1-form :math:`J^♭`.
 
 The Equations of Mr. Maxwell
 ----------------------------
 
 .. {{{
 
-In a previous article, I present :ref:`the Maxwell equations of 1865 <deriving
-the Faraday tensor from the 1865 Maxwell equations>` expressed with modern
-notations, and reoredered with the benefit of hindsight:
+In the article :ref:`Deriving the Faraday Tensor from the 1865 Maxwell
+Equations`, I reordered and expressed the original Maxwell's equations with
+modern notation. We use this form as the basis for formulating the
+electromagnetic field equations using geometric differential forms.
 
 .. rubric:: Inhomogenous Maxwell equations
 
 .. math::
+   :label: M1
 
    \begin{alignedat}{1}
                 & + ∂_x \E^x & + ∂_y \E^y & + ∂_z \E^z & = & + μ_0 c ρ \\
@@ -66,6 +116,7 @@ notations, and reoredered with the benefit of hindsight:
 .. rubric:: Homogenous Maxwell equations
 
 .. math::
+   :label: M2
 
    \begin{alignedat}{1}
                 & + ∂_x  B^x & + ∂_y  B^y & + ∂_z  B^z & = 0 \\
@@ -81,9 +132,9 @@ The Exterior Derivative of Rotations
 
 .. {{{
 
-In a :ref:`previous article <Rotations in Minkowski Space>`, I investigate
-spacetime rotations in differential form and demonstrate that rotations can be
-expressed as:
+In the article :ref:`Rotations in Minkowski Space`, I investigate spacetime
+rotations in differential form and demonstrate that rotations can be expressed
+as:
 
 .. math::
    R^{♭♭} = \left[ \begin{aligned}
@@ -95,28 +146,30 @@ expressed as:
        &f \; dx ∧ dy \\
    \end{aligned} \right]
 
-In a :ref:`subsequent article <The Exterior Derivative of Rotations in
-Spacetime>`, I systematically calculate the exterior derivative of that
-rotation, as well as the exterior derivative of the Hodge dual.
+In the subsequent article :ref:`The Exterior Derivative of Rotations in
+Spacetime`, I systematically calculate the exterior derivative of arbitrary
+rotations and their Hodge dual, obtaining the following expressions:
 
-.. rubric:: Exterior Derivative of the Hodge Dual of Rotations in Differential
-   Form
+.. rubric:: Exterior derivative of the Hodge dual of rotations in differential
+   form
 
 .. math::
+   :label: dR1
 
-   d( ⋆ R^{♭♭} ) = \left[ \begin{alignedat}{1}
+   d ⋆ R^{♭♭} = \left[ \begin{alignedat}{1}
      (&         & + ∂_x a & + ∂_y b & + ∂_z c \:&) \; dx ∧ dy ∧ dz \\
      (& + ∂_t a &         & - ∂_y f & + ∂_z e \:&) \; dt ∧ dy ∧ dz \\
      (& + ∂_t b & + ∂_x f &         & - ∂_z d \:&) \; dt ∧ dz ∧ dx \\
      (& + ∂_t c & - ∂_x e & + ∂_y d &         \:&) \; dt ∧ dx ∧ dy \\
    \end{alignedat} \right]
 
-.. rubric:: Hodge Dual of the Exterior Derivative of Rotations in Differential
-   Form
+.. rubric:: Hodge dual of the exterior derivative of rotations in differential
+   form
 
 .. math::
+   :label: dR2
 
-   ⋆ (dR^{♭♭}) = \left[ \begin{alignedat}{1}
+   ⋆\:d\:R^{♭♭} = \left[ \begin{alignedat}{1}
      (&       \;   & - ∂_x \; d & - ∂_y \; e & - ∂_z \; f \:&) \; dt \\
      (& - ∂_t \; d &       \;   & - ∂_y \; c & + ∂_z \; b \:&) \; dx \\
      (& - ∂_t \; e & + ∂_x \; c &       \;   & - ∂_z \; a \:&) \; dy \\
@@ -130,23 +183,27 @@ Identifying the Equations of Mr. Maxwell
 
 .. {{{
 
-We identifiy the components of the electric and magnetic fields:
+From equations :eq:`M1` and :eq:`dR1`, identifiying the components of the
+electric field :math:`\tilde{E}^i=E^i/c` and magnetic field :math:`B^i` is
+trivial:
 
 .. math::
 
    \begin{matrix}
-     \E^x = a \\
-     \E^y = b \\
-     \E^z = c \\
-      B^x = d \\
-      B^y = e \\
-      B^z = f \\
+     \E^x = a & B^x = d \\
+     \E^y = b & B^y = e \\
+     \E^z = c & B^z = f \\
    \end{matrix}
 
-The doubly covariant Faraday tensor is identified as:
+We could have equally used equations :eq:`M2` and :eq:`dR1` for the
+identification. There, the sign of :eq:`M2` can be flipped as needed. The doubly
+covariant Faraday tensor :math:`F^{♭♭}` is identified as an arbitrary rotation
+in Minkowski spacetime:
+
+.. rubric:: The doubly covariant Faraday 2-form as a rotation in spacetime
 
 .. math::
-   F^{♭♭} = \left[ \begin{aligned}
+   R{♭♭} = F^{♭♭} = \left[ \begin{aligned}
      - & \E^x \; dt ∧ dx \\
      - & \E^y \; dt ∧ dy \\
      - & \E^z \; dt ∧ dz \\
@@ -155,53 +212,55 @@ The doubly covariant Faraday tensor is identified as:
        &  B^z \; dx ∧ dy \\
    \end{aligned} \right]
 
-We conclude electromagnetism is a twist in spacetime. The Maxwell equations are:
+Maxwell equations are then simply obtained by applying the exterior derivative
+to that rotation with :math:`d ⋆ F^{♭♭}` and its Hodge dual :math:`d ⋆ F^{♭♭}`.
+We conclude that electromagnetism is a twist in spacetime. The equations of Mr.
+Maxwell are:
 
-.. topic:: Inhomogenous Maxwell Equations
-
-   .. math::
-
-      d ⋆ \left[ \begin{aligned}
-        - & \E^x \; dt ∧ dx \\
-        - & \E^y \; dt ∧ dy \\
-        - & \E^z \; dt ∧ dz \\
-          &  B^x \; dy ∧ dz \\
-          &  B^y \; dz ∧ dx \\
-          &  B^z \; dx ∧ dy \\
-      \end{aligned} \right]
-      = \begin{bmatrix}
-        + μ_0 c ρ \; dx ∧ dy ∧ dz\\
-        - μ_0 J^x \; dt ∧ dy ∧ dz\\
-        - μ_0 J^y \; dt ∧ dz ∧ dx\\
-        - μ_0 J^z \; dt ∧ dx ∧ dy\\
-      \end{bmatrix}
-
-.. topic:: Homogenous Maxwell Equations
-
-   .. math::
-
-      ⋆ d \left[ \begin{aligned}
-        - & \E^x \; dt ∧ dx \\
-        - & \E^y \; dt ∧ dy \\
-        - & \E^z \; dt ∧ dz \\
-          &  B^x \; dy ∧ dz \\
-          &  B^y \; dz ∧ dx \\
-          &  B^z \; dx ∧ dy \\
-      \end{aligned} \right]
-      = 0
-
-Thus we fall back to `the conventional expression of Maxwell equations in
-differential form:
-<https://en.m.wikipedia.org/wiki/Mathematical_descriptions_of_the_electromagnetic_field#Differential_forms_approach>`_
+.. rubric:: Inhomogenous Maxwell equations via differential forms
 
 .. math::
-   \begin{matrix}
-       d⋆ \mathbf{F} &=& \mathbf{J} \\
-       d  \mathbf{F} &=& 0          \\
-   \end{matrix}
 
-Most interestingly, since :math:`⋆dF` is a 1-form and :math:`d⋆F` result is a
-3-form, we can merge the inhomogenous and homogenous equations.
+   d\:⋆ \left[ \begin{aligned}
+     - & \E^x \; dt ∧ dx \\
+     - & \E^y \; dt ∧ dy \\
+     - & \E^z \; dt ∧ dz \\
+       &  B^x \; dy ∧ dz \\
+       &  B^y \; dz ∧ dx \\
+       &  B^z \; dx ∧ dy \\
+   \end{aligned} \right]
+   = \begin{bmatrix}
+     + μ_0 c ρ \; dx ∧ dy ∧ dz\\
+     - μ_0 J^x \; dt ∧ dy ∧ dz\\
+     - μ_0 J^y \; dt ∧ dz ∧ dx\\
+     - μ_0 J^z \; dt ∧ dx ∧ dy\\
+   \end{bmatrix}
+
+.. rubric:: Homogenous Maxwell equations via differential forms
+
+.. math::
+
+   ⋆\:d \left[ \begin{aligned}
+     - & \E^x \; dt ∧ dx \\
+     - & \E^y \; dt ∧ dy \\
+     - & \E^z \; dt ∧ dz \\
+       &  B^x \; dy ∧ dz \\
+       &  B^y \; dz ∧ dx \\
+       &  B^z \; dx ∧ dy \\
+   \end{aligned} \right]
+   = 0
+
+Thus and as advertised in the introduction, we fall back to the well-known
+expression of Maxwell equations in differential form where :math:`\mathbf{F}` is
+the field 2-form and :math:`\mathbf{J}` is the current 3-form.
+
+.. math::
+
+   d\:\mathbf{F} &=& 0          \\
+   d⋆ \mathbf{F} &=& \mathbf{J} \\
+
+Most interestingly, since :math:`⋆\:d\:F` is a 1-form and :math:`d⋆F` a 3-form,
+we can unambiguously merge the inhomogenous and homogenous equations [note1]_.
 
 .. math::
 
@@ -212,7 +271,7 @@ Most interestingly, since :math:`⋆dF` is a 1-form and :math:`d⋆F` result is 
        &  B^x \; dy ∧ dz \\
        &  B^y \; dz ∧ dx \\
        &  B^z \; dx ∧ dy \\
-   \end{aligned} \right] - ⋆ d \left[ \begin{aligned}
+   \end{aligned} \right] + ⋆\:d \left[ \begin{aligned}
      - & \E^x \; dt ∧ dx \\
      - & \E^y \; dt ∧ dy \\
      - & \E^z \; dt ∧ dz \\
@@ -226,53 +285,45 @@ Most interestingly, since :math:`⋆dF` is a 1-form and :math:`d⋆F` result is 
        - μ_0 J^z \; dt ∧ dx ∧ dy\\
    \end{bmatrix}
 
-.. note::
 
-   An equation containing 3-forms and 2-forms cannot be reduced. For example, the
-   following equation cannot be simplified:
+.. rubric:: The Maxwell Equations in Differential Form
 
-   .. math:: a \; dx ∧ dy + b \; dx ∧ dy ∧ dz = c \; dx ∧ dy
+.. math::
 
-   Surfaces and volumes certainly are different objects which can however be
-   written in the same equation using the :math:`+` symbol, just that these
-   objects certainly cannot be *added*. Similar examples are adding real and the
-   imaginary parts of imaginary numbers, or bivectors and trivectors in Clifford
-   algebra. Hence with the exemplary equation above, we necessarily have:
+   (d ⋆ + ⋆ d ) \left[ \begin{aligned}
+     \E^x \; dt ∧ dx \\
+     \E^y \; dt ∧ dy \\
+     \E^z \; dt ∧ dz \\
+      B^x \; dy ∧ dz \\
+      B^y \; dz ∧ dx \\
+      B^z \; dx ∧ dy \\
+   \end{aligned} \right] = \left[ \begin{aligned}
+     + μ_0 c ρ \; dx ∧ dy ∧ dz\\
+     - μ_0 J^x \; dt ∧ dy ∧ dz\\
+     - μ_0 J^y \; dt ∧ dz ∧ dx\\
+     - μ_0 J^z \; dt ∧ dx ∧ dy\\
+   \end{aligned} \right]
 
-   .. math::
+With a shorthand :math:`F^{♭♭}` for the electromagnetic field 2-form and
+:math:`J^{♭♭♭}` for the current 3-form, we conclude with the compact form
+[note2]_:
 
-      a &= c \\
-      b &= 0 \\
+.. topic:: Maxwell equations
 
-   This is how we can write the Maxwell equations via differential forms to a
-   single equation.
+   .. math:: (d ⋆ + ⋆ d) \; F^{♭♭} = J^{♭♭♭}
 
-.. topic:: The Maxwell Equations in Differential Form
-
-   .. math::
-
-      (d ⋆ - ⋆ d ) \left[ \begin{aligned}
-        \E^x \; dt ∧ dx \\
-        \E^y \; dt ∧ dy \\
-        \E^z \; dt ∧ dz \\
-         B^x \; dy ∧ dz \\
-         B^y \; dz ∧ dx \\
-         B^z \; dx ∧ dy \\
-      \end{aligned} \right] = \left[ \begin{aligned}
-        + μ_0 c ρ \; dx ∧ dy ∧ dz\\
-        - μ_0 J^x \; dt ∧ dy ∧ dz\\
-        - μ_0 J^y \; dt ∧ dz ∧ dx\\
-        - μ_0 J^z \; dt ∧ dx ∧ dy\\
-      \end{aligned} \right]
-
-Or with a shorthand:
-
-.. topic:: The Maxwell Equations in Differential Form
-
-   .. math:: (d ⋆ - ⋆ d) \; F^{♭♭} = J^{♭♭♭}
-
-.. note::
-
-   Flipping the sign of :math:`⋆ d` is also valid.
 
 .. }}}
+
+.. [note1] An equation containing 3-forms and 2-forms indeed cannot be reduced.
+   For example, the following equation: :math:`a \; dx ∧ dy + b \; dx ∧ dy ∧ dz
+   = c \; dx ∧ dy` cannot be simplified. Surface 2-forms and volume 3-forms are
+   distinct objects, but they can be represented in the same equation using the
+   :math:`+` symbol, even though they cannot actually be added together. Similar
+   examples include combining the real and imaginary parts of complex numbers,
+   or adding bivectors and trivectors in Clifford algebra. With the exemplary
+   equation above, we thus necessarily have :math:`a = c` as well as :math:`b =
+   0`. This is how we can write the Maxwell equations via differential forms
+   into a single equation.
+
+.. [note2] Flipping the sign of :math:`⋆ d` is equally valid.

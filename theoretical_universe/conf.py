@@ -71,7 +71,7 @@ html_baseurl = 'https://shaussler.github.io/TheoreticalUniverse/'
 html_static_path = ['_static']
 
 html_theme_options = {
-    "use_sidenotes": True,
+    "use_sidenotes": False,
     "navigation_with_keys": False,
 }
 
