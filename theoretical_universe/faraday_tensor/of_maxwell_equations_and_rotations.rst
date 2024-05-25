@@ -85,11 +85,11 @@ equation:
 
    We come back to that point at the end of this page.
 
-Note that we will use the Cartan-Hodge formalism, which permits to be explicit
-about the nature of the mathematical objects involved by using musical notation.
-For example, the electromagnetic field 2-form :math:`\mathbf{F}` is written
-:math:`F^{♭♭}`, the current 3-form :math:`J^{♭♭♭}` and the Hodge dual current
-1-form :math:`J^♭`.
+We will use however, unless explicitly mentioned, the Cartan-Hodge formalism,
+which permits to be explicit about the nature of the mathematical objects
+involved by using musical notation. For example, the electromagnetic field
+2-form :math:`\mathbf{F}` is written :math:`F^{♭♭}`, the current 3-form
+:math:`J^{♭♭♭}` and the Hodge dual current 1-form :math:`J^♭`.
 
 The Equations of Mr. Maxwell
 ----------------------------
