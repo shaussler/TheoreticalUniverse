@@ -82,7 +82,7 @@ abstract index notation
    \end{bmatrix}
 
 .. admonition:: Calculations
-   :class: dropdown,toggle-shown
+   :class: dropdown
 
    .. rubric:: Start from the Faraday 2-form
 
