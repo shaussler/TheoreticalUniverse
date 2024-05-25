@@ -6,9 +6,10 @@
 
 .. _of_maxwell_equations_and_rotations:
 .. _Of Maxwell Equations and Rotations:
+.. _Maxwell's Equations via Differential Forms:
 
-Maxwell Equations via Differential Forms
-========================================
+Maxwell's Equations via Differential Forms
+==========================================
 
 .. rst-class:: custom-title
 
@@ -203,7 +204,8 @@ in Minkowski spacetime:
 .. rubric:: The doubly covariant Faraday 2-form as a rotation in spacetime
 
 .. math::
-   R{♭♭} = F^{♭♭} = \left[ \begin{aligned}
+
+   R^{♭♭} = F^{♭♭} = \left[ \begin{aligned}
      - & \E^x \; dt ∧ dx \\
      - & \E^y \; dt ∧ dy \\
      - & \E^z \; dt ∧ dz \\
@@ -285,7 +287,6 @@ we can unambiguously merge the inhomogenous and homogenous equations [note1]_.
        - μ_0 J^z \; dt ∧ dx ∧ dy\\
    \end{bmatrix}
 
-
 .. rubric:: The Maxwell Equations in Differential Form
 
 .. math::
@@ -311,7 +312,6 @@ With a shorthand :math:`F^{♭♭}` for the electromagnetic field 2-form and
 .. topic:: Maxwell equations
 
    .. math:: (d ⋆ + ⋆ d) \; F^{♭♭} = J^{♭♭♭}
-
 
 .. }}}
 
