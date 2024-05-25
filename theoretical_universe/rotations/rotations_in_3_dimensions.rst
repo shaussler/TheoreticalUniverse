@@ -1,3 +1,9 @@
+.. Theoretical Universe (c) by Stéphane Haussler
+
+.. Theoretical Universe is licensed under a Creative Commons Attribution 4.0
+.. International License. You should have received a copy of the license along
+.. with this work. If not, see <https://creativecommons.org/licenses/by/4.0/>.
+
 Rotations in 3 Dimensions
 =========================
 
@@ -26,20 +32,20 @@ With free matrix representation, the bivector can be written as a single column:
    .. math::
 
       R^{♯♯} = \begin{bmatrix}
-      a \; ∂_y ∧ ∂_z \\
-      b \; ∂_z ∧ ∂_x \\
-      c \; ∂_x ∧ ∂_y \\
+        a \; ∂_y ∧ ∂_z \\
+        b \; ∂_z ∧ ∂_x \\
+        c \; ∂_x ∧ ∂_y \\
       \end{bmatrix}
 
 Or alternatively with a row/column matrix notation:
 
 .. math::
 
-   R^{♯♯} = \begin{bmatrix}
-                  & c \; ∂_x ∧ ∂_y &                \\
-                  &                & a \; ∂_y ∧ ∂_z \\
-   b \; ∂_z ∧ ∂_x &                &                \\
-   \end{bmatrix}
+   R^{♯♯} = \left[ \begin{alignedat}{1}
+                    & c \; ∂_x ∧ ∂_y &                \\
+                    &                & a \; ∂_y ∧ ∂_z \\
+     b \; ∂_z ∧ ∂_x &                &                \\
+   \end{alignedat} \right]
 
 The anti-symmetric property of the wedge product :math:`∂_i ∧ ∂_j = - ∂_j ∧ ∂_i`
 permit to split the terms:
@@ -272,9 +278,9 @@ Flattening the second index of of the doubly contravariant form of the rotation
    .. math::
 
       R^{♯♭} = \frac{1}{2} \begin{bmatrix}
-                               & - c \; ∂_y ∧ δ_{xi} dx^i & + b \; ∂_z ∧ δ_{xi} dx^i \\
-      + c \; ∂_x ∧ δ_{yi} dx^i &                          & - a \; ∂_z ∧ δ_{yi} dx^i \\
-      - b \; ∂_x ∧ δ_{zi} dx^i & + a \; ∂_y ∧ δ_{zi} dx^i &                          \\
+                                 & - c \; ∂_y ∧ δ_{xi} dx^i & + b \; ∂_z ∧ δ_{xi} dx^i \\
+        + c \; ∂_x ∧ δ_{yi} dx^i &                          & - a \; ∂_z ∧ δ_{yi} dx^i \\
+        - b \; ∂_x ∧ δ_{zi} dx^i & + a \; ∂_y ∧ δ_{zi} dx^i &                          \\
       \end{bmatrix}
 
    .. rubric:: Identify the non-zero components:
@@ -282,9 +288,9 @@ Flattening the second index of of the doubly contravariant form of the rotation
    .. math::
 
       R^{♯♭} = \frac{1}{2} \begin{bmatrix}
-                        & - c \; ∂_y ∧ dx^x & + b \; ∂_z ∧ dx^x \\
-      + c \; ∂_x ∧ dx^y &                   & - a \; ∂_z ∧ dx^y \\
-      - b \; ∂_x ∧ dx^z & + a \; ∂_y ∧ dx^z &                   \\
+                          & - c \; ∂_y ∧ dx^x & + b \; ∂_z ∧ dx^x \\
+        + c \; ∂_x ∧ dx^y &                   & - a \; ∂_z ∧ dx^y \\
+        - b \; ∂_x ∧ dx^z & + a \; ∂_y ∧ dx^z &                   \\
       \end{bmatrix}
 
    .. rubric:: Replace the covectors by their expressions
@@ -298,9 +304,9 @@ Flattening the second index of of the doubly contravariant form of the rotation
    .. math::
 
       R^{♯♭} = \frac{1}{2} \begin{bmatrix}
-                      & - c \; ∂_y ∧ dx & + b \; ∂_z ∧ dx \\
-      + c \; ∂_x ∧ dy &                 & - a \; ∂_z ∧ dy \\
-      - b \; ∂_x ∧ dz & + a \; ∂_y ∧ dz &                 \\
+                        & - c \; ∂_y ∧ dx & + b \; ∂_z ∧ dx \\
+        + c \; ∂_x ∧ dy &                 & - a \; ∂_z ∧ dy \\
+        - b \; ∂_x ∧ dz & + a \; ∂_y ∧ dz &                 \\
       \end{bmatrix}
 
    .. rubric:: Reorder and conclude
@@ -308,9 +314,9 @@ Flattening the second index of of the doubly contravariant form of the rotation
    .. math::
 
       R^{♯♭} = \frac{1}{2} \begin{bmatrix}
-                      & + c \; ∂_x ∧ dy & - b \; ∂_x ∧ dz \\
-      - c \; ∂_y ∧ dx &                 & + a \; ∂_y ∧ dz \\
-      + b \; ∂_z ∧ dx & - a \; ∂_z ∧ dy &                 \\
+                        & + c \; ∂_x ∧ dy & - b \; ∂_x ∧ dz \\
+        - c \; ∂_y ∧ dx &                 & + a \; ∂_y ∧ dz \\
+        + b \; ∂_z ∧ dx & - a \; ∂_z ∧ dy &                 \\
       \end{bmatrix}
 
    .. }}}
@@ -385,8 +391,12 @@ explicit expression of the mixed wedge products.
 
    .. }}}
 
+.. }}}
+
 Symmetries of the Mixed Wedge Product
 -------------------------------------
+
+.. {{{
 
 From the explicit calculation of the basis elements, we observe the following
 properties:
@@ -416,25 +426,25 @@ electromagnetic tensor. Choosing the implicit basis :math:`\mathbf{e}_i \wedge
 
    \begin{align} R &= \frac{1}{2}
    \begin{bmatrix}
-          & - c & + b \\
-      + c &     & - a \\
-      - b & + a &     \\
+         & - c & + b \\
+     + c &     & - a \\
+     - b & + a &     \\
    \end{bmatrix} \\
-   &= a \begin{bmatrix}
-       0 &  0 &  0 \\
-       0 &  0 & -1 \\
-       0 & +1 &  0 \\
-   \end{bmatrix}
-   + b \begin{bmatrix}
-       0 &  0 & +1 \\
-       0 &  0 &  0 \\
-      -1 &  0 &  0 \\
-   \end{bmatrix}
-   + c \begin{bmatrix}
-       0 & -1 &  0 \\
-      +1 &  0 &  0 \\
-       0 &  0 &  0 \\
-   \end{bmatrix}
+   &= a \left[ \begin{alignedat}{1}
+     \; 0 & \;   & 0 & \;  & 0 \\
+     \; 0 & \;   & 0 & \;- & 1 \\
+     \; 0 & \; + & 1 & \;  & 0 \\
+   \end{alignedat} \right]
+   + b \left[ \begin{alignedat}{1}
+       & 0 & \quad 0 & \; + & 1 \\
+       & 0 & \quad 0 & \;   & 0 \\
+     - & 1 & \quad 0 & \;   & 0 \\
+   \end{alignedat} \right]
+   + c \left[ \begin{alignedat}{1}
+       & 0 & - & 1 & \quad 0 \\
+     + & 1 &   & 0 & \quad 0 \\
+       & 0 &   & 0 & \quad 0 \\
+   \end{alignedat} \right]
    \end{align}
 
 Which is `a regular choice for the basis
@@ -485,3 +495,4 @@ permits to identify and organize terms for practical calculations by falling
 back to regular matrix multiplication.
 
 .. }}}
+
