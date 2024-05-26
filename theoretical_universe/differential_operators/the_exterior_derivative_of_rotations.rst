@@ -294,7 +294,7 @@ obtain:
          d( + f \; dx ∧ dy ) \\
       \end{bmatrix}
 
-   ..rubric:: Apply the exterior derivative
+   .. rubric:: Apply the exterior derivative
 
    .. math::
 
@@ -320,7 +320,7 @@ obtain:
         ∂_t (+f)(+1)\; dt∧dx∧ dy &                         &                         & ∂_z (+f)(+1)\; dx∧dy∧dz \\
       \end{bmatrix}
 
-   ..rubric:: Simplify
+   .. rubric:: Simplify
 
    .. math::
 
@@ -333,7 +333,7 @@ obtain:
         ∂_t (+f)\; dt ∧ dx∧ dy &                         &                         & ∂_z (+f)\; dx ∧ dy ∧ dz \\
       \end{bmatrix}
 
-   ..rubric:: Organize the terms into a single column
+   .. rubric:: Organize the terms into a single column
 
    Although the specific ordering is not mandatory. However, for clarity, the
    free matrix representation allows us to arrange the terms in a logical

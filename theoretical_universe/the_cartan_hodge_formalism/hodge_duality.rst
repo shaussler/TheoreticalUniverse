@@ -127,8 +127,9 @@ objects are associated to scalars through the hodge dual. This dual scalars
 flip their signs with the image of the oriented volume.
 
 .. _duality_in_minkowski_space:
+.. _Duality in Minkowski Space:
 
-Duality in Minkowski space
+Duality in Minkowski Space
 --------------------------
 
 .. math::
@@ -153,9 +154,9 @@ Duality in Minkowski space
 
    .. math::
 
-      ⋆ (∂_t ∧ ∂_x) = -& ∂_y ∧ ∂_z \\
-      ⋆ (∂_t ∧ ∂_y) = -& ∂_z ∧ ∂_x \\
-      ⋆ (∂_t ∧ ∂_z) = -& ∂_x ∧ ∂_y \\
-      ⋆ (∂_x ∧ ∂_y) =  & ∂_t ∧ ∂_z \\
-      ⋆ (∂_y ∧ ∂_z) =  & ∂_t ∧ ∂_x \\
-      ⋆ (∂_z ∧ ∂_x) =  & ∂_t ∧ ∂_y \\
+      ⋆ (∂_t ∧ ∂_x) &= -& ∂_y ∧ ∂_z \\
+      ⋆ (∂_t ∧ ∂_y) &= -& ∂_z ∧ ∂_x \\
+      ⋆ (∂_t ∧ ∂_z) &= -& ∂_x ∧ ∂_y \\
+      ⋆ (∂_x ∧ ∂_y) &=  & ∂_t ∧ ∂_z \\
+      ⋆ (∂_y ∧ ∂_z) &=  & ∂_t ∧ ∂_x \\
+      ⋆ (∂_z ∧ ∂_x) &=  & ∂_t ∧ ∂_y \\
