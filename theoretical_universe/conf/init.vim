@@ -2,14 +2,11 @@
 set foldmethod=marker
 set foldmarker={{{,}}}
 
-" Enable syntax highlighting
-syntax on
-
 " Set color scheme to 'desert'
 colorscheme desert
 
 " Set textwidth to 100 characters
-set textwidth=80
+" set textwidth=80
 
 " Tab settings
 set tabstop=2
@@ -54,7 +51,7 @@ call plug#end()
 " Enable filetype plugins and indentation
 filetype plugin indent on
 
-" Ensure syntax highlighting is enabled
+" Enable syntax highlighting
 syntax on
 
 " Auto-apply filetype and syntax highlighting for .rst files
