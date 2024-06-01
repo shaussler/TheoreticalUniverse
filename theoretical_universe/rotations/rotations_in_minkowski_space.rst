@@ -13,18 +13,15 @@ Rotations in Minkowski Space
 
    by Stéphane Haussler
 
-In this section, we explore rotations in minkowski space. We express rotations
-first as linear combination of bivectors, and systematically derive the
-expression as:
+In this page, I systematically explore the geometric differential
+representation of rotations in minkowski spacetime. Rotations are first
+expressed as linear combination of rotation planes with bivectors. The dual
+differential 2-forms are then derived, as well as the mixed tensor
+representation in form of matrices.
 
-* linear combination of bicovectors
-* doubly contravariant rank 2 tensor
-* doubly convariant rank 2 tensor
-* mixed tensors of rank (1,1)
-
-We work out the Lie algebra of the Lorentz group and the matrix representation
-of rotations. The mixed wedge products are fully expressed in terms of tensor
-products and their symmetries highlighted.
+We work out the Lie algebra of the Lorentz group as well as the full matrix
+representation of rotations. The mixed wedge products are fully expressed in
+terms of tensor products and their symmetries highlighted.
 
 The :math:`♯♯` Rotation Tensor
 ------------------------------
@@ -220,7 +217,7 @@ by applying the flatternig operator :math:`\flat`:
 
 .. math::
 
-   B^{♭♯} = \begin{bmatrix}
+   R^{♭♯} = \begin{bmatrix}
        a \; ∂_t ∧ ∂_x \\
        b \; ∂_t ∧ ∂_y \\
        c \; ∂_t ∧ ∂_z \\
@@ -329,11 +326,11 @@ demonstrated above, this results in:
 
 .. math::
 
-   B^{♭♯} = \frac{1}{2} \begin{bmatrix}
-                      & + a \; dx^t ∧ ∂_x & + b \; dx^t ∧ ∂_y & + c \; dx^t ∧ ∂_z \\
-    + a \; dx^x ∧ ∂_t &                   & + f \; dx^x ∧ ∂_y & - e \; dx^x ∧ ∂_z \\
-    + b \; dx^y ∧ ∂_t & - f \; dx^y ∧ ∂_x &                   & + d \; dx^y ∧ ∂_z \\
-    + c \; dx^z ∧ ∂_t & + e \; dx^z ∧ ∂_x & - d \; dx^z ∧ ∂_y &                   \\
+   R^{♭♯} = \frac{1}{2} \begin{bmatrix}
+                       & + a \; dx^t ∧ ∂_x & + b \; dx^t ∧ ∂_y & + c \; dx^t ∧ ∂_z \\
+     + a \; dx^x ∧ ∂_t &                   & + f \; dx^x ∧ ∂_y & - e \; dx^x ∧ ∂_z \\
+     + b \; dx^y ∧ ∂_t & - f \; dx^y ∧ ∂_x &                   & + d \; dx^y ∧ ∂_z \\
+     + c \; dx^z ∧ ∂_t & + e \; dx^z ∧ ∂_x & - d \; dx^z ∧ ∂_y &                   \\
    \end{bmatrix}
 
 .. }}}
@@ -348,21 +345,21 @@ tensor is obtained by applying the flatternig operator :math:`\flat`:
 
 .. math::
 
-   B^{♯♭} = \begin{bmatrix}
-       a \; ∂_t ∧ ∂_x \\
-       b \; ∂_t ∧ ∂_y \\
-       c \; ∂_t ∧ ∂_z \\
-       d \; ∂_y ∧ ∂_z \\
-       e \; ∂_z ∧ ∂_x \\
-       f \; ∂_x ∧ ∂_y \\
+   R^{♯♭} = \begin{bmatrix}
+     a \; ∂_t ∧ ∂_x \\
+     b \; ∂_t ∧ ∂_y \\
+     c \; ∂_t ∧ ∂_z \\
+     d \; ∂_y ∧ ∂_z \\
+     e \; ∂_z ∧ ∂_x \\
+     f \; ∂_x ∧ ∂_y \\
    \end{bmatrix}^{♯♭}
    = \begin{bmatrix}
-       - a \; ∂_t ∧ dx^x \\
-       - b \; ∂_t ∧ dx^y \\
-       - c \; ∂_t ∧ dx^z \\
-       - d \; ∂_y ∧ dx^z \\
-       - e \; ∂_z ∧ dx^x \\
-       - f \; ∂_x ∧ dx^y \\
+     - a \; ∂_t ∧ dx^x \\
+     - b \; ∂_t ∧ dx^y \\
+     - c \; ∂_t ∧ dx^z \\
+     - d \; ∂_y ∧ dx^z \\
+     - e \; ∂_z ∧ dx^x \\
+     - f \; ∂_x ∧ dx^y \\
    \end{bmatrix}
 
 .. admonition:: Calculations
@@ -439,7 +436,7 @@ tensor is obtained by applying the flatternig operator :math:`\flat`:
 
    .. math::
 
-      B^{♯♭} = \begin{bmatrix}
+      R^{♯♭} = \begin{bmatrix}
         a \; η_{xx} ∂_t ∧ dx^x \\
         b \; η_{yy} ∂_t ∧ dx^y \\
         c \; η_{zz} ∂_t ∧ dx^z \\
@@ -452,7 +449,7 @@ tensor is obtained by applying the flatternig operator :math:`\flat`:
 
    .. math::
 
-      B^{♯♭} = \begin{bmatrix}
+      R^{♯♭} = \begin{bmatrix}
         - a \; ∂_t ∧ dx^x \\
         - b \; ∂_t ∧ dx^y \\
         - c \; ∂_t ∧ dx^z \\
@@ -470,7 +467,7 @@ results in:
 
 .. math::
 
-   B^{♯♭} = \frac{1}{2} \begin{bmatrix}
+   R^{♯♭} = \frac{1}{2} \begin{bmatrix}
                        & - a \; ∂_t ∧ dx^x & - b \; ∂_t ∧ d^y & - c \; ∂_t ∧ dx^z \\
      - a \; ∂_x ∧ dx^t &                   & - f \; ∂_x ∧ d^y & + e \; ∂_x ∧ dx^z \\
      - b \; ∂_y ∧ dx^t & + f \; ∂_y ∧ dx^x &                  & - d \; ∂_y ∧ dx^z \\
@@ -479,8 +476,8 @@ results in:
 
 .. }}}
 
-Symmetries of the :math:`♭♯` Exterior Product
----------------------------------------------
+Symmetries of Rotations in :math:`♭♯` Form
+------------------------------------------
 
 .. {{{
 
@@ -660,8 +657,8 @@ Taken together, we get:
 
 .. }}}
 
-Symmetries of the :math:`♯♭` Exterior Product
----------------------------------------------
+Symmetries of Rotations in :math:`♯♭` Form
+------------------------------------------
 
 .. {{{
 
@@ -837,12 +834,12 @@ the mixeed exterior product are correct.
    ============ =============================
    Symmetry     Basis elements
    ============ =============================
-   Symetric     :math:`dt ∧ ∂_x = + dx ∧ ∂_t`
-   Symetric     :math:`dt ∧ ∂_y = + dy ∧ ∂_t`
-   Symetric     :math:`dt ∧ ∂_z = + dz ∧ ∂_t`
-   Antisymetric :math:`dy ∧ ∂_z = - dz ∧ ∂_y`
-   Antisymetric :math:`dz ∧ ∂_x = - dx ∧ ∂_z`
-   Antisymetric :math:`dx ∧ ∂_y = - dy ∧ ∂_x`
+   Symetric     :math:`∂_t ∧ dx = + ∂_x ∧ dt`
+   Symetric     :math:`∂_t ∧ dy = + ∂_y ∧ dt`
+   Symetric     :math:`∂_t ∧ dz = + ∂_z ∧ dt`
+   Antisymetric :math:`∂_y ∧ dz = - ∂_z ∧ dy`
+   Antisymetric :math:`∂_z ∧ dx = - ∂_x ∧ dz`
+   Antisymetric :math:`∂_x ∧ dy = - ∂_y ∧ dx`
    ============ =============================
 
 .. }}}
@@ -869,11 +866,11 @@ The type :math:`♯♭` row/column matrix representation of rotations is:
 
 .. math::
 
-   R^{♯♭} = \frac{1}{2} \begin{bmatrix}
-                         & - a \; ∂_t ∧ dx^x & - b \; ∂_t ∧ d^y & - c \; ∂_t ∧ dx^z \\
-       - a \; ∂_x ∧ dx^t &                   & - f \; ∂_x ∧ d^y & + e \; ∂_x ∧ dx^z \\
-       - b \; ∂_y ∧ dx^t & + f \; ∂_y ∧ dx^x &                  & - d \; ∂_y ∧ dx^z \\
-       - c \; ∂_z ∧ dx^t & - e \; ∂_z ∧ dx^x & + d \; ∂_z ∧ d^y &                   \\
+   R^{♭♯} = \frac{1}{2} \begin{bmatrix}
+                       & + a \; dx^t ∧ ∂_x & + b \; dx^t ∧ ∂_y & + c \; dx^t ∧ ∂_z \\
+     + a \; dx^x ∧ ∂_t &                   & + f \; dx^x ∧ ∂_y & - e \; dx^x ∧ ∂_z \\
+     + b \; dx^y ∧ ∂_t & - f \; dx^y ∧ ∂_x &                   & + d \; dx^y ∧ ∂_z \\
+     + c \; dx^z ∧ ∂_t & + e \; dx^z ∧ ∂_x & - d \; dx^z ∧ ∂_y &                   \\
    \end{bmatrix}
 
 Taking out the basis bivectors from :ref:`the free matrix representation`, we
@@ -883,11 +880,11 @@ interpretation as a rotation in spacetime:
 
 .. math::
 
-   B^{♯♭}= \frac{1}{2} \begin{bmatrix}
+   R^{♭♯} = \frac{1}{2} \begin{bmatrix}
            & + a & + b & + c \\
-       + a &     & + d & + f \\
-       + b & - d &     & + e \\
-       + c & - f & - e &     \\
+       + a &     & + f & - e \\
+       + b & - f &     & + d \\
+       + c & + e & - d &     \\
    \end{bmatrix}
 
 .. }}}

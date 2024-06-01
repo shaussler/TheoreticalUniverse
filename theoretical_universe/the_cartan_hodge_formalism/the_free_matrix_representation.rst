@@ -1,3 +1,9 @@
+.. Theoretical Universe (c) by Stéphane Haussler
+
+.. theoretical universe is licensed under a creative commons attribution 4.0
+.. international license. you should have received a copy of the license along
+.. with this work. if not, see <https://creativecommons.org/licenses/by/4.0/>.
+
 .. _the_free_matrix_representation:
 .. _the free matrix representation:
 
@@ -7,6 +13,13 @@ The Free Matrix Representation
 .. rst-class:: custom-author
 
    by Stéphane Haussler
+
+.. warning:: Under construction
+
+Vectors
+-------
+
+.. {{{
 
 I hope the reader will find the *free matrix representation* obvious.
 Everything in a matrix is expressed with its basis vectors and can be reordered
@@ -30,6 +43,13 @@ I merely propose to write the basis explicitely in the matrix:
        c \; ∂_x \\
    \end{bmatrix}
 
+.. }}}
+
+Bivectors
+---------
+
+.. {{{
+
 Which means that a :math:`+` sign can be added anywhere in the matrix and the
 expression written in the standard form:
 
@@ -42,40 +62,52 @@ elements of the matrix can be re-ordered at will.
 
 .. math::
 
-   \frac{1}{2}\begin{bmatrix}
-                             & + a^{xy} \; ∂_x ∧ ∂_y & - a^{zx} \; ∂_x ∧ ∂_z \\
-       - a^{xy} \; ∂_y ∧ ∂_x &                       & + a^{yz} \; ∂_y ∧ ∂_z \\
-       + a^{zx} \; ∂_z ∧ ∂_x & - a^{yz} \; ∂_z ∧ ∂_y &                       \\
+   R^{♯♯} = \begin{bmatrix}
+     a \; ∂_y ∧ ∂_z \\
+     b \; ∂_z ∧ ∂_x \\
+     c \; ∂_x ∧ ∂_y \\
    \end{bmatrix}
-   = \begin{bmatrix}
-       + a^{yz} \; ∂_y ∧ ∂_z \\
-       + a^{zx} \; ∂_z ∧ ∂_x \\
-       + a^{xy} \; ∂_x ∧ ∂_y \\
+
+.. math::
+
+   R^{♯♯} = \frac{1}{2} \begin{bmatrix}
+                    & - c \; ∂_y ∧ ∂_x & + b \; ∂_z ∧ ∂_x \\
+   + c \; ∂_x ∧ ∂_y &                  & - a \; ∂_z ∧ ∂_y \\
+   - b \; ∂_x ∧ ∂_z & + a \; ∂_y ∧ ∂_z &               \\
    \end{bmatrix}
+
+.. }}}
+
+The Rules of Matrix Multiplication
+----------------------------------
+
+.. {{{
 
 The transpose can be taken if it permits to use the usual rules of matrix
 multiplication:
 
 .. math::
 
-   \frac{1}{2} \begin{bmatrix}
-                             & - a^{xy} \; ∂_y ∧ ∂_x & + a^{zx} \; ∂_z ∧ ∂_x \\
-       + a^{xy} \; ∂_x ∧ ∂_y &                       & - a^{yz} \; ∂_z ∧ ∂_y \\
-       - a^{zx} \; ∂_x ∧ ∂_z & + a^{yz} \; ∂_y ∧ ∂_z &                       \\
+   R^{♭♯} = \frac{1}{2} \begin{bmatrix}
+                   & - c \; dy ∧ ∂_x & + b \; dz ∧ ∂_x \\
+   + c \; dx ∧ ∂_y &                 & - a \; dz ∧ ∂_y \\
+   - b \; dx ∧ ∂_z & + a \; dy ∧ ∂_z &                 \\
    \end{bmatrix}
 
 All above matrix representations can writen as a sum:
 
 .. math::
 
-   a^{yz} \; ∂_y ∧ ∂_z +
-   a^{zx} \; ∂_z ∧ ∂_x +
-   a^{xy} \; ∂_x ∧ ∂_y
+   a \; ∂_y ∧ ∂_z +
+   b \; ∂_z ∧ ∂_x +
+   c \; ∂_x ∧ ∂_y
 
 We could have written a covector in the same explicit manner. This notation is
 very conveniant when performing calculations in Cartan's framework as it
 permits to identify and organize terms for practical calculations, and if
 needed fall back to regular matrix multiplication.
+
+.. }}}
 
 .. ifconfig:: draft in ('yes')
 
