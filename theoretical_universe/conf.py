@@ -42,6 +42,14 @@ redirects = {
     "differential_rotations": "differential_operators/the_exterior_derivative_of_rotations.html",
 }
 
+# Link checks
+# -----------
+
+linkcheck_ignore = [
+    r'https://www.jstor.org/stable/108892',  # The website seems to refuse linkcheck
+]
+
+
 # Latex engine
 # ------------
 

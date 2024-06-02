@@ -354,12 +354,12 @@ tensor is obtained by applying the flatternig operator :math:`\flat`:
      f \; ∂_x ∧ ∂_y \\
    \end{bmatrix}^{♯♭}
    = \begin{bmatrix}
-     - a \; ∂_t ∧ dx^x \\
-     - b \; ∂_t ∧ dx^y \\
-     - c \; ∂_t ∧ dx^z \\
-     - d \; ∂_y ∧ dx^z \\
-     - e \; ∂_z ∧ dx^x \\
-     - f \; ∂_x ∧ dx^y \\
+     - a \; ∂_t ∧ dx \\
+     - b \; ∂_t ∧ dy \\
+     - c \; ∂_t ∧ dz \\
+     - d \; ∂_y ∧ dz \\
+     - e \; ∂_z ∧ dx \\
+     - f \; ∂_x ∧ dy \\
    \end{bmatrix}
 
 .. admonition:: Calculations
@@ -468,10 +468,10 @@ results in:
 .. math::
 
    R^{♯♭} = \frac{1}{2} \begin{bmatrix}
-                       & - a \; ∂_t ∧ dx^x & - b \; ∂_t ∧ d^y & - c \; ∂_t ∧ dx^z \\
-     - a \; ∂_x ∧ dx^t &                   & - f \; ∂_x ∧ d^y & + e \; ∂_x ∧ dx^z \\
-     - b \; ∂_y ∧ dx^t & + f \; ∂_y ∧ dx^x &                  & - d \; ∂_y ∧ dx^z \\
-     - c \; ∂_z ∧ dx^t & - e \; ∂_z ∧ dx^x & + d \; ∂_z ∧ d^y &                   \\
+                     & - a \; ∂_t ∧ dx & - b \; ∂_t ∧ dy & - c \; ∂_t ∧ dz \\
+     - a \; ∂_x ∧ dt &                 & - f \; ∂_x ∧ dy & + e \; ∂_x ∧ dz \\
+     - b \; ∂_y ∧ dt & + f \; ∂_y ∧ dx &                 & - d \; ∂_y ∧ dz \\
+     - c \; ∂_z ∧ dt & - e \; ∂_z ∧ dx & + d \; ∂_z ∧ dy &                 \\
    \end{bmatrix}
 
 .. }}}

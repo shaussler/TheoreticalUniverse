@@ -73,10 +73,10 @@ expressed in a mixed form is:
 .. math::
 
    R^{♭♯} = \frac{1}{2} \begin{bmatrix}
-                       & + a \; dx^t ∧ ∂_x & + b \; dx^t ∧ ∂_y & + c \; dx^t ∧ ∂_z \\
-     + a \; dx^x ∧ ∂_t &                   & + f \; dx^x ∧ ∂_y & - e \; dx^x ∧ ∂_z \\
-     + b \; dx^y ∧ ∂_t & - f \; dx^y ∧ ∂_x &                   & + d \; dx^y ∧ ∂_z \\
-     + c \; dx^z ∧ ∂_t & + e \; dx^z ∧ ∂_x & - d \; dx^z ∧ ∂_y &                   \\
+                     & + a \; dt ∧ ∂_x & + b \; dt ∧ ∂_y & + c \; dt ∧ ∂_z \\
+     + a \; dx ∧ ∂_t &                 & + f \; dx ∧ ∂_y & - e \; dx ∧ ∂_z \\
+     + b \; dy ∧ ∂_t & - f \; dy ∧ ∂_x &                 & + d \; dy ∧ ∂_z \\
+     + c \; dz ∧ ∂_t & + e \; dz ∧ ∂_x & - d \; dz ∧ ∂_y &                 \\
    \end{bmatrix}
 
 Readers well versed in the tensor formulations of electromagnetism will

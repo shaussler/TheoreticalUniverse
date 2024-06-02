@@ -42,6 +42,6 @@ I sometimes participate in discussions, which are gathered here:
   an electromagnetic wave can propagate in a vacuum?
   <https://www.quora.com/Using-Maxwells-equations-in-differential-form-how-does-one-explain-that-an-electromagnetic-wave-can-propagate-in-a-vacuum/answer/St%C3%A9phane-Haussler>`_
 
-* `What is an intuitive explanation of differential forms formulation of
-  Maxwell's equations?
-  <https://www.quora.com/What-is-an-intuitive-explanation-of-dfferential-forms-formulation-of-Maxwells-equations/answer/St%C3%A9phane-Haussler>`_
+.. * `What is an intuitive explanation of differential forms formulation of
+..  Maxwell's equations?
+..  <https://www.quora.com/What-is-an-intuitive-explanation-of-differential-forms-formulation-of-Maxwells-equations/answer/St%C3%A9phane-Haussler>`_

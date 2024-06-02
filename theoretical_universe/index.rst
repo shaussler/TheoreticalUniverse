@@ -115,7 +115,6 @@ deep connection between the electromagnetism and rotations in spacetime.
    rotations/index.rst
    differential_operators/index.rst
    faraday_tensor/index.rst
-   field_equations/index.rst
    miscellaneous/index.rst
 
 LINKS:
