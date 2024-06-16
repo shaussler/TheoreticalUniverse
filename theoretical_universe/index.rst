@@ -15,48 +15,58 @@ Theoretical Universe
 
    by Stéphane Haussler
 
-This serie was originally envisioned as a collection of short, standalone
-articles. However, it has expanded beyond my initial expectation and evolved
-into something more comprehensive. Within these pages, you will find a
-systematic analysis and demonstration of the formulation of electromagnetism
-expressed via differential forms. Some of the content of these articles,
-although certainly not *new*, may offer insights which may not be widely known.
-I present the details of all calculations to give the reader a chance to follow
-and find mistakes. If you are aware of freely available resources I should cite,
-open an issue and I will include a reference. If you find errors, don't hesitate
-to directly provide corrections by sending a merge request to `the Theoretical
-Universe Github repository
+Within these pages, you will find a systematic analysis and demonstration of
+the formulation of electromagnetism expressed via differential forms. Some of
+the content of these articles, although certainly not *new*, may offer insights
+not be widely known. I present the details of all calculations to give the
+reader a chance to follow and find mistakes. If you are aware of freely
+available resources I should cite, open an issue and I will include a
+reference. If you find errors, don't hesitate to directly provide corrections
+by sending a merge request to `the Theoretical Universe Github repository
 <https://github.com/shaussler/TheoreticalUniverse/>`_.
 
 I point out the article :ref:`faraday tensor derivation` for its simplicity.
 This derivation is straightforward and self-contained, requiring only knowledge
-of vector calculus and matrix multiplication. Subsequent articles assume that
-readers have a working understanding of:
+of vector calculus and matrix multiplication.
 
-* `differential forms <https://en.m.wikipedia.org/wiki/Differential_form>`_
-* `musicality <https://en.m.wikipedia.org/wiki/Musical_isomorphism>`_
-* `the exterior product <https://en.m.wikipedia.org/wiki/Exterior_algebra>`_
-* `Hodge duality <https://en.m.wikipedia.org/wiki/Hodge_star_operator>`_
-
-I gather all these *tools* in what I name the :ref:`The Cartan-Hodge Formalism`.
-There you will find a review and my personal view of the concepts named above. I
-also introduce :ref:`The Free Matrix Representation`, which I hope the
-prospective reader will find obvious and in my opinion permits to help perform
-actual computations. For those looking to learn about differential forms, `I
-would like to recommend the excellent video serie by Michael Penn
+Subsequent articles assumes you, the reader, have a working understanding of
+`tensor calculus <https://en.m.wikipedia.org/wiki/Tensor_calculus>`_, the
+concept of vector/covector duality `differential forms
+<https://en.m.wikipedia.org/wiki/Differential_form>`_, `musicality
+<https://en.m.wikipedia.org/wiki/Musical_isomorphism>`_, `the exterior product
+<https://en.m.wikipedia.org/wiki/Exterior_algebra>`_ and `hodge duality
+<https://en.m.wikipedia.org/wiki/Hodge_star_operator>`_. I gather all these
+*tools* into what I call the :ref:`The Cartan-Hodge Formalism`. There you will
+find a personal overview of these concepts, which can be used as review
+material, though certainly not as primary learning material. I also introduce
+:ref:`the free matrix representation <The Free Matrix Representation>`, which I
+hope the prospective reader will find obvious and usefull for performing actual
+computations. For those looking to learn about differential forms, `I loved the
+excellent video serie by Michael Penn
 <https://youtube.com/playlist?list=PL22w63XsKjqzQZtDZO_9s2HEMRJnaOTX7&si=4dDrAZ-oKa1rI7B8>`_.
-Implicitely assumed is a knowledge of tensor calculus, and specifically the
-concept of vector/covector duality. At the heart of this work lies the
-computation of the exterior derivative of rotations in Minkowski space, which
-leads to the insight that it perfectly mirrors Maxwell's equations. This
-provides a comprehensive and coherent demonstration of how Maxwell's equations
-emerge from the framework of differential forms.
 
-Electromagnetism is reduced to a single equation. Indeed, the terms resulting
-from :math:`d ⋆` are 3-forms, while the terms resulting from :math:`⋆ d` are
-1-forms. The equation can be unambiguously split into independent 1-form and and
-3-form parts. We fall back to the well known equations :math:`d\mathbf{F}=0` and
-:math:`d⋆\mathbf{F}=\mathbf{J}`, where :math:`\mathbf{F}` is the field 2-form.
+At the heart of this work lie three articles:
+
+* :ref:`Rotations in Minkowski Space`.
+* :ref:`The Exterior Derivative of Rotations in Spacetime`
+* :ref:`Maxwell's Equations via Differential Forms`
+
+In the first article, differential forms are presented as a simple yet
+powerfull concept for representing rotations and generalizing them to
+four-dimensional Minkowski spacetime. The connection to regular matrix
+multiplication is explained, along with its relation to the Lie algebra of the
+Lorentz Group :math:`\mathfrak{so}(1,3)`. The second article explores how to
+perform a twist in spacetime, essentially applying a derivation operator to a
+rotation. There, the exterior derivative of rotations in spacetime is
+systematically analyzed. The final article links the exterior derivative of
+rotations to Maxwell's equations by identification, revealing that we are
+dealing with a twist in spacetime. This provides a comprehensive and coherent
+demonstration of how Maxwell's equations emerge from the framework of
+differential forms and electromagnetism is reduced to a single equation.
+
+This serie was originally envisioned as a collection of short, standalone
+articles. However, it has expanded beyond my initial expectation and evolved
+into something more comprehensive.
 
 .. topic:: Maxwell Equations in the Cartan-Hodge Formalism
 
@@ -78,7 +88,13 @@ from :math:`d ⋆` are 3-forms, while the terms resulting from :math:`⋆ d` are
       \end{bmatrix}
 
    Where :math:`d` is the exterior derivative, :math:`⋆` the Hodge star, and
-   :math:`∧` the exterior product.
+   :math:`∧` the exterior product. :math:`\E^x`, :math:`\E^y` and :math:`\E^z`
+   are the components of the electric field divided by the speed of light
+   :math:`c`, and :math:`B^x`, :math:`B^y`, :math:`B^z` the components of the
+   magnetic field. The term on the right hand side is the four-current, with
+   :math:`μ_0` the permeability of free space, :math:`ρ` the volume charge
+   density, and :math:`J^x`, :math:`J^y`, :math:`J^z` the components of the
+   conventional current density.
 
 .. rubric:: :ref:`The Cartan-Hodge Formalism`
 
