@@ -16,10 +16,41 @@ Theoretical Universe
    by Stéphane Haussler
 
 Within these pages, you will find a systematic analysis and demonstration of
-the formulation of electromagnetism expressed via differential forms. Some of
-the content of these articles, although certainly not *new*, may offer insights
-not be widely known. I present the details of all calculations to give the
-reader a chance to follow and find mistakes. If you are aware of freely
+the formulation of electromagnetism expressed via differential forms.
+
+Mr. James Cleck Maxwell presented his groundbreaking work in 1865 in `A
+Dynamical Theory of the Electromagnetic Field
+<https://en.m.wikipedia.org/wiki/A_Dynamical_Theory_of_the_Electromagnetic_Field>`_
+(`pdf <https://www.jstor.org/stable/108892>`_). His unification of
+electrostatics and magnetism, and its mathematical formulation, led to many
+significant discoveries. Mr. Maxwell noted that his equations implied the
+propagation of waves at a constant speed, which matched exactly the measured
+speed of light. This identified light as electromagnetic waves. Other noted
+that the equations implied a constant speed of light, regardless of the
+relative motion of objects. This led to the theory of special relativity. Later
+general relativity was inspired by the search for a formulation of gravity that
+would resemble the field equations for electromagnetism.
+
+Mathematically, the equations were initially presented using differential
+expressions, which differ significantly from the modern standard formulation.
+The mathematical work of Mr. Maxwell is deeply rooted in experiment,
+translating the experimental work and ideas, most notably of Mr. Faraday, into
+mathematical expressions. Looking for a simpler and more elegant form `Mr.
+Heaviside to proposed both the concept of vectors as well as the modern
+standard vector form of the Maxwell equations.
+<https://youtu.be/M12CJIuX8D4?si=nuOUEFmRu5Jx4jHJ>`_. There are further
+mathematical formulations, including tensor equations, `quaternions
+<https://peeterjoot.com/2018/03/05/a-derivation-of-the-quaternion-maxwells-equations-using-geometric-algebra/>`_,
+geometric algebra, differential forms (and quite a few other). I have settled
+on the differential form formulation, as it feels to me like the most elegant
+and complete approach. I could not however find (free) material to my exact
+liking that present the Maxwell field equations from a differential form
+perspective. Hence I am doing it myself and this is the reason for the
+existence of this site.
+
+Some of the content of these articles, although certainly not *new*, may offer
+insights not widely known. I present the details of all calculations to give
+the reader a chance to follow and find mistakes. If you are aware of freely
 available resources I should cite, open an issue and I will include a
 reference. If you find errors, don't hesitate to directly provide corrections
 by sending a merge request to `the Theoretical Universe Github repository
@@ -31,18 +62,18 @@ of vector calculus and matrix multiplication.
 
 Subsequent articles assumes you, the reader, have a working understanding of
 `tensor calculus <https://en.m.wikipedia.org/wiki/Tensor_calculus>`_, the
-concept of vector/covector duality `differential forms
+concept of vector/covector duality, `differential forms
 <https://en.m.wikipedia.org/wiki/Differential_form>`_, `musicality
 <https://en.m.wikipedia.org/wiki/Musical_isomorphism>`_, `the exterior product
 <https://en.m.wikipedia.org/wiki/Exterior_algebra>`_ and `hodge duality
 <https://en.m.wikipedia.org/wiki/Hodge_star_operator>`_. I gather all these
-*tools* into what I call the :ref:`The Cartan-Hodge Formalism`. There you will
-find a personal overview of these concepts, which can be used as review
-material, though certainly not as primary learning material. I also introduce
-:ref:`the free matrix representation <The Free Matrix Representation>`, which I
-hope the prospective reader will find obvious and usefull for performing actual
-computations. For those looking to learn about differential forms, `I loved the
-excellent video serie by Michael Penn
+*tools* into what I call the :ref:`the Cartan-Hodge formalism <The Cartan-Hodge
+Formalism>`. There you will find a personal overview of these concepts, which
+can be used as review material, though certainly not as primary learning
+material. I also introduce :ref:`the free matrix representation <The Free
+Matrix Representation>`, which I hope the prospective reader will find obvious
+and usefull for performing actual computations. For those looking to learn
+about differential forms, `I loved the excellent video serie by Michael Penn
 <https://youtube.com/playlist?list=PL22w63XsKjqzQZtDZO_9s2HEMRJnaOTX7&si=4dDrAZ-oKa1rI7B8>`_.
 
 At the heart of this work lie three articles:
@@ -55,7 +86,7 @@ In the first article, differential forms are presented as a simple yet
 powerfull concept for representing rotations and generalizing them to
 four-dimensional Minkowski spacetime. The connection to regular matrix
 multiplication is explained, along with its relation to the Lie algebra of the
-Lorentz Group :math:`\mathfrak{so}(1,3)`. The second article explores how to
+Lorentz group :math:`\mathfrak{so}(1,3)`. The second article explores how to
 perform a twist in spacetime, essentially applying a derivation operator to a
 rotation. There, the exterior derivative of rotations in spacetime is
 systematically analyzed. The final article links the exterior derivative of
@@ -98,13 +129,14 @@ into something more comprehensive.
 
 .. rubric:: :ref:`The Cartan-Hodge Formalism`
 
-This section defines the mathematical objects used in this work. There is argued
-the best notation to express basis vectors are partial derivatives :math:`∂_μ`.
-This in turns permits to express basis covectors as differentials :math:`d^μ`.
-Recalled is the use of the musical sharp :math:`♯` operator to transform
-covectors to vectors, and flat :math:`♭` to transform vectors to covectors. The
-concept of the Hodge dual is detailed. Finally, I introduce the concept of free
-matrix representation, which I hope readers will find very obvious.
+This section reviews the mathematical objects used in this work. Basis vectors
+are identified as partial derivatives :math:`\mathbf{e_μ} = ∂_μ`, which in
+turns permits to express basis covectors as differentials :math:`\mathbf{e^μ} =
+dx^μ`. The musical sharp operator :math:`♯` transforms covectors to vectors,
+and the musical flat operator :math:`♭` transforms vectors to covectors. The
+concept of the Hodge dual and the star operator :math:`⋆` are explained.
+Finally, I introduce the free matrix representation, which I hope readers will
+find obvious enough.
 
 I encapsulate these concepts in what I name the Cartan-Hodge formalism. This
 comprehensive framework facilitates the systematic analysis of rotation
@@ -113,12 +145,14 @@ operators within this context.
 
 .. rubric:: :ref:`Rotations in Differential Form`
 
-This section is a systematic analyis of the representation of rotations in three
-dimensions and in spacetime. Rotations are expressed as linear combinations of
-basis rotations in each planes. The expressions as double covariant tensors,
-double contravariant tensors, and mixed tensors are derived. Symmetries are
-systematically analyzed. In this section, we get the first insight about the
-deep connection between the electromagnetism and rotations in spacetime.
+This section contains a systematic analyis of the representation of rotations
+in Euclidean three-dimensional space, as well as its generalization to
+four-dimensional Minkowski spacetime. Rotations are expressed as linear
+combinations of basis rotations in each planes. The expressions as double
+covariant tensors, double contravariant tensors, and mixed tensors are derived.
+Symmetries are systematically analyzed. In this section, we get the first
+insight about the deep connection between the electromagnetism and rotations in
+spacetime.
 
 .. toctree::
    :maxdepth: 1
