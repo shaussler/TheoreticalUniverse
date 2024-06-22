@@ -11,6 +11,41 @@ Basis vectors
 
    by Stéphane Haussler
 
+Basis vectors as partial derivatives
+------------------------------------
+
+In this study, we the basis vectors as partial derivatives:
+
+.. math::
+
+   \mathbf{e}_t & = ∂_t \\
+   \mathbf{e}_x & = ∂_x \\
+   \mathbf{e}_y & = ∂_y \\
+   \mathbf{e}_z & = ∂_z \\
+
+A prospective reader who may be rightfully unsettled by this notation can *just
+accept*, or *just replace* the :math:`∂_μ` symbols with the
+:math:`\mathbf{e}_μ` symbols. I do not delve into the details here as it is not
+the focus of this study, and for now refer to video `Manifolds 22 | Coordinate
+Basis
+<https://www.youtube.com/watch?v=BjU8-n4ixqo&list=PLHlTqVYmqunWXBoO3xZhQOAoc8oqd-2Su&index=48>`_
+by `The Bright Side of Mathematics
+<https://www.youtube.com/@brightsideofmaths>`_. As a broad justification, if
+you have never seen or thought of partial derivatives as basis vectors, notice
+that partial derivatives indeed fullfill the definition for a `vector space
+<https://en.m.wikipedia.org/wiki/Vector_space>`_. Partial derivatives behave
+linearly like vectors and the following examplary relations are true:
+
+.. math::
+
+  a (∂_t + ∂_x) = a ∂_t + a ∂_x \\
+  (a+b) ∂_y     = a ∂_y + b ∂_y \\
+
+I do not systematically lay down the properties of a vector space with the
+associated proof for partial derivatives. If you think this is needed, do not
+hesitate to `open an issue in the TheoreticalUniverse repository
+<https://github.com/shaussler/TheoreticalUniverse/issues>`_
+
 .. _orientation_of_space:
 
 Orientation of space

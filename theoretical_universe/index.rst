@@ -15,38 +15,36 @@ Theoretical Universe
 
    by Stéphane Haussler
 
-Within these pages, you will find a systematic analysis and demonstration of
+Within these pages, you will find a systematic derivation and analysis and of
 the formulation of electromagnetism expressed via differential forms.
 
-Mr. James Cleck Maxwell presented his groundbreaking work in 1865 in `A
-Dynamical Theory of the Electromagnetic Field
+Mr. James Cleck Maxwell presented his groundbreaking 1865 work uniting
+electrostatics and magnetism: `A Dynamical Theory of the Electromagnetic Field
 <https://en.m.wikipedia.org/wiki/A_Dynamical_Theory_of_the_Electromagnetic_Field>`_
-(`pdf <https://www.jstor.org/stable/108892>`_). His unification of
-electrostatics and magnetism, and its mathematical formulation, led to many
-significant discoveries. Mr. Maxwell noted that his equations implied the
-propagation of waves at a constant speed, which matched exactly the measured
+(`pdf <https://www.jstor.org/stable/108892>`_). His unification led to
+significant discoveries. Mr. Maxwell noted that his equations imply the
+propagation of waves at a constant speed, which exactly matches the measured
 speed of light. This identified light as electromagnetic waves. Other noted
 that the equations implied a constant speed of light, regardless of the
-relative motion of objects. This led to the theory of special relativity. Later
-general relativity was inspired by the search for a formulation of gravity that
-would resemble the field equations for electromagnetism.
+relative motion of objects. This led to the theory of special relativity.
+Later, general relativity was inspired by the search for a formulation of
+gravity that would resemble the field equations for electromagnetism.
 
-Mathematically, the equations were initially presented using differential
-expressions, which differ significantly from the modern standard formulation.
 The mathematical work of Mr. Maxwell is deeply rooted in experiment,
-translating the experimental work and ideas, most notably of Mr. Faraday, into
-mathematical expressions. Looking for a simpler and more elegant form `Mr.
-Heaviside to proposed both the concept of vectors as well as the modern
-standard vector form of the Maxwell equations.
-<https://youtu.be/M12CJIuX8D4?si=nuOUEFmRu5Jx4jHJ>`_. There are further
-mathematical formulations, including tensor equations, `quaternions
+translating ideas, most notably of Mr. Faraday, into mathematical expressions.
+The original equations were initially presented by Mr Maxwell using
+differential expressions, which differ significantly from the modern standard
+formulation. `Mr. Heaviside proposed both the concept of vectors as well as the
+modern standard vector form of the Maxwell equations
+<https://youtu.be/M12CJIuX8D4?si=nuOUEFmRu5Jx4jHJ>`_. Further mathematical
+formulations include the tensor approach, `quaternions
 <https://peeterjoot.com/2018/03/05/a-derivation-of-the-quaternion-maxwells-equations-using-geometric-algebra/>`_,
-geometric algebra, differential forms (and quite a few other). I have settled
-on the differential form formulation, as it feels to me like the most elegant
-and complete approach. I could not however find (free) material to my exact
-liking that present the Maxwell field equations from a differential form
-perspective. Hence I am doing it myself and this is the reason for the
-existence of this site.
+geometric algebra, differential forms. There are more formulations I did not
+look at (yet), but have for now settled on the differential form formulation,
+as it feels to me like the most elegant and complete approach. I could not
+however find (free) material to my exact liking that present the Maxwell field
+equations from a differential form perspective. Hence I am doing it myself and
+this is the reason for the existence of this site.
 
 Some of the content of these articles, although certainly not *new*, may offer
 insights not widely known. I present the details of all calculations to give
@@ -76,7 +74,7 @@ and usefull for performing actual computations. For those looking to learn
 about differential forms, `I loved the excellent video serie by Michael Penn
 <https://youtube.com/playlist?list=PL22w63XsKjqzQZtDZO_9s2HEMRJnaOTX7&si=4dDrAZ-oKa1rI7B8>`_.
 
-At the heart of this work lie three articles:
+The pivotal aspects this study lie in three articles:
 
 * :ref:`Rotations in Minkowski Space`.
 * :ref:`The Exterior Derivative of Rotations in Spacetime`
