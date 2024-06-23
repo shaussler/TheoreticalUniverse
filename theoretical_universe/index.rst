@@ -15,36 +15,37 @@ Theoretical Universe
 
    by Stéphane Haussler
 
-Within these pages, you will find a systematic derivation and analysis and of
-the formulation of electromagnetism expressed via differential forms.
+Within these pages, you will find a derivation and systematic analysis of
+electromagnetism formulated in terms of differential forms.
 
-Mr. James Cleck Maxwell presented his groundbreaking 1865 work uniting
-electrostatics and magnetism: `A Dynamical Theory of the Electromagnetic Field
+In 1865, Mr. James Cleck Maxwell presented his groundbreaking work, `A
+Dynamical Theory of the Electromagnetic Field
 <https://en.m.wikipedia.org/wiki/A_Dynamical_Theory_of_the_Electromagnetic_Field>`_
-(`pdf <https://www.jstor.org/stable/108892>`_). His unification led to
-significant discoveries. Mr. Maxwell noted that his equations imply the
-propagation of waves at a constant speed, which exactly matches the measured
-speed of light. This identified light as electromagnetic waves. Other noted
-that the equations implied a constant speed of light, regardless of the
-relative motion of objects. This led to the theory of special relativity.
-Later, general relativity was inspired by the search for a formulation of
-gravity that would resemble the field equations for electromagnetism.
+(`pdf <https://www.jstor.org/stable/108892>`_). This seminal paper united
+electrostatics and magnetism, leading to significant discoveries. Mr. Maxwell
+noted his equations imply the propagation of waves at a constant speed,
+matching exactly the measured speed of light. This identified light as
+electromagnetic waves. Other noted that the equations suggest the speed of
+light is constant, regardless of the relative motion of objects. This paved the
+way for the theory of special relativity. Later, general relativity was
+inspired by the search for a theory of gravitation resembling the field
+equations for electromagnetism.
 
-The mathematical work of Mr. Maxwell is deeply rooted in experiment,
-translating ideas, most notably of Mr. Faraday, into mathematical expressions.
-The original equations were initially presented by Mr Maxwell using
-differential expressions, which differ significantly from the modern standard
-formulation. `Mr. Heaviside proposed both the concept of vectors as well as the
-modern standard vector form of the Maxwell equations
-<https://youtu.be/M12CJIuX8D4?si=nuOUEFmRu5Jx4jHJ>`_. Further mathematical
-formulations include the tensor approach, `quaternions
+The mathematical work of Mr. Maxwell is deeply rooted in experiments,
+translating ideas, most notably from Mr. Michael Faraday, into mathematical
+expressions. The original equations were presented using differential
+expressions, which differ significantly from the standard modern vector
+formulation. `Mr. Oliver Heaviside proposed both the concept of vectors, as
+well as the modern standard vector form of the Maxwell's equations
+<https://youtu.be/M12CJIuX8D4?si=nuOUEFmRu5Jx4jHJ>`_.
+
+Further mathematical formulations include the tensor approach, `quaternions
 <https://peeterjoot.com/2018/03/05/a-derivation-of-the-quaternion-maxwells-equations-using-geometric-algebra/>`_,
-geometric algebra, differential forms. There are more formulations I did not
-look at (yet), but have for now settled on the differential form formulation,
-as it feels to me like the most elegant and complete approach. I could not
-however find (free) material to my exact liking that present the Maxwell field
-equations from a differential form perspective. Hence I am doing it myself and
-this is the reason for the existence of this site.
+geometric algebra, and differential forms. There are more formulations I did
+not look at (yet), but have for now settled on the differential form
+formulation, as it feels to me the most elegant and complete approach. I could
+however not find (free) material to my exact liking. Therefore, I am doing it
+myself.
 
 Some of the content of these articles, although certainly not *new*, may offer
 insights not widely known. I present the details of all calculations to give

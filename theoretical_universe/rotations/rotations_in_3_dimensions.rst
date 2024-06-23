@@ -73,6 +73,8 @@ components.
 
 .. }}}
 
+.. _♭♯ representation:
+
 :math:`♭♯` Representation
 -------------------------
 

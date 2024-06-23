@@ -11,10 +11,10 @@ Basis vectors
 
    by Stéphane Haussler
 
-Basis vectors as partial derivatives
-------------------------------------
+Partial derivatives
+-------------------
 
-In this study, we the basis vectors as partial derivatives:
+In this study, basis vectors are partial derivatives:
 
 .. math::
 
@@ -23,28 +23,49 @@ In this study, we the basis vectors as partial derivatives:
    \mathbf{e}_y & = ∂_y \\
    \mathbf{e}_z & = ∂_z \\
 
-A prospective reader who may be rightfully unsettled by this notation can *just
-accept*, or *just replace* the :math:`∂_μ` symbols with the
-:math:`\mathbf{e}_μ` symbols. I do not delve into the details here as it is not
-the focus of this study, and for now refer to video `Manifolds 22 | Coordinate
-Basis
+If you have never seen or thought of partial derivatives as basis vectors
+before, you may be rightfully unsettled. However this notation is not central
+to any calculations or arguments in these pages. Therefore I propose *simply
+accepting it*, or *just replace* the :math:`∂_μ` symbols with the
+:math:`\mathbf{e}_μ` symbols. For deeper understanding, I recommenend the
+learning material from video `Manifolds 22 | Coordinate Basis
 <https://www.youtube.com/watch?v=BjU8-n4ixqo&list=PLHlTqVYmqunWXBoO3xZhQOAoc8oqd-2Su&index=48>`_
 by `The Bright Side of Mathematics
-<https://www.youtube.com/@brightsideofmaths>`_. As a broad justification, if
-you have never seen or thought of partial derivatives as basis vectors, notice
-that partial derivatives indeed fullfill the definition for a `vector space
-<https://en.m.wikipedia.org/wiki/Vector_space>`_. Partial derivatives behave
-linearly like vectors and the following examplary relations are true:
+<https://www.youtube.com/@brightsideofmaths>`_. As a broad justification
+however, notice how partial derivatives indeed fulfill the definition for a
+`vector space <https://en.m.wikipedia.org/wiki/Vector_space>`_. They behave
+linearly like vectors and the following examplary relations hold:
 
 .. math::
 
   a (∂_t + ∂_x) = a ∂_t + a ∂_x \\
   (a+b) ∂_y     = a ∂_y + b ∂_y \\
 
-I do not systematically lay down the properties of a vector space with the
-associated proof for partial derivatives. If you think this is needed, do not
-hesitate to `open an issue in the TheoreticalUniverse repository
+I do not systematically lay down the properties of a vector space with
+associated proof for partial derivatives. If you believe this is necessary,
+please feel free to to `open an issue in the TheoreticalUniverse repository
 <https://github.com/shaussler/TheoreticalUniverse/issues>`_
+
+Differentials
+-------------
+
+Using the partial derivatives as basis vectors, we note the associated
+covectors are the differentials:
+
+.. math::
+
+   dx^μ ∂_ν = δ^μ_ν
+
+Where :math:`δ` is the Kronecher-delta and the expression fulfills the
+definition of covectors, i.e. :math:`\mathbf{e}^μ \mathbf{e}_ν = δ^μ_ν`. We
+have:
+
+.. math::
+
+   \mathbf{e}^t & = dt \\
+   \mathbf{e}^x & = dx \\
+   \mathbf{e}^y & = dy \\
+   \mathbf{e}^z & = dz \\
 
 .. _orientation_of_space:
 
