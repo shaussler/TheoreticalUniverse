@@ -6,10 +6,11 @@
 
 .. _deriving_the_faraday_tensor_from_the_1865_maxwell_equations:
 .. _deriving the Faraday tensor from the 1865 Maxwell equations:
+.. _deriving the Faraday tensor from the 1865 Maxwell's equations:
 .. _faraday tensor derivation:
 
-Deriving the Faraday Tensor from the 1865 Maxwell Equations
-===========================================================
+Deriving the Faraday Tensor from the 1865 Maxwell's Equations
+=============================================================
 
 .. rst-class:: custom-author
 
