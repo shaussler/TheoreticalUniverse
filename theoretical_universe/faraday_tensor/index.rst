@@ -9,34 +9,30 @@ The Electromagnetic Field Tensor
    of_maxwell_equations_and_rotations.rst
    all_electromagnetic_field_tensors.rst
 
-My goal with these pages is to improve upon other sources by offering a
-natural, precise, and intuitive derivation of the Faraday tensor expressed as
-an electromagnetic 2-form, along with the equations governing electormagnetism
-in differential form. I aim to clarify the essence of the Faraday tensor and
-establish the connection to rotations in Minkowski spacetime. While many of
-these expressions will be familiar to the reader acquainted with the Faraday
-2-form, I have not encountered a comprehensive derivation of Maxwell's
-equations in their differential form representation. Typically, the standard
-approach takes the final equations and the electromagnetic 2-form as given,
-demonstrating their equivalence with Maxwell's equations in the standard vector
-formulation proposed by Mr. Heaviside. In contrast, I start by defining
-rotations in Minkowski spacetime and show how they can be written as 2-forms. I
-then calculate the exterior derivative, exploring how to twist spacetime, and
-naturally derive the Faraday tensor and Maxwell's equations in a form
-equivalent to the original 1865 formulation. This approach provides a deep
-connection between spacetime twists and electromagnetism.
+My aim with these pages is to improve upon other sources by providing a clear
+and natural derivation of the Faraday tensor as an electromagnetic 2-form,
+along with the expression of Maxwell's equations via geometric differential
+forms. I seek to clarify the connection of the Faraday tensor to rotations in
+Minkowski spacetime.
 
-Through a systematic analysis of rotations, we will establish that
-electromagnetism is essentially a twist in spacetime. By utilizing the exterior
-derivative :math:`d` and the Hodge dual :math:`⋆`, we will derive the theory of
-electromagnetism into a single equation:
+I could not find a truly satisfying derivation of Maxwell's equations in
+differential form. Typically, the standard approach assumes the final equations
+as well as the electromagnetic Faraday 2-form, and then proving their
+equivalence to Maxwell's equations in the widespread vector formulation of
+Heaviside. In contrast, I begin by expressing rotations in Minkowski spacetime
+as 2-forms. I then systematically compute the exterior derivative of rotations
+to explore the expression of twists in Minkowski spacetime. This procedure
+naturally leads to the emergence of the Faraday tensor. By utilizing the
+exterior derivative :math:`d` and the Hodge dual :math:`⋆`, we will derive the
+theory of electromagnetism into a single equation:
 
 .. math:: (d ⋆ - ⋆ d) \; F^{♭♭} = J^{♭♭♭}
 
-Where the Faraday tensor :math:`F` is expressed as a 2-form :math:`F^{♭♭}`, and
-the 4-current :math:`J` is expressed as a 3-form :math:`F^{♭♭♭}`. Expanding in
-component form we obtain a set of equations which can be used for actual
-computations:
+Where the Faraday tensor :math:`F` will be identified as a generic rotation in
+4-dimensional spacetime and expressed as a 2-form :math:`F^{♭♭}`. The 4-current
+:math:`J` is expressed as a 3-form :math:`F^{♭♭♭}` and represents the amount of
+torque. Expanding in component form, we obtain a set of equations which can be
+used for actual computations:
 
 .. math::
 
@@ -82,9 +78,9 @@ expressed and analyzed using differential forms.
 
 .. rubric:: :ref:`The Exterior Derivative of Rotations in Spacetime`
 
-This allows for a systematic analysis of the exterior derivative applied to
-rotations. In layman's terms, we examine how to apply a rotational force, or
-torque, to twist spacetime.
+We systematically analyse the exterior derivative applied to rotations. In
+layman's terms, we examine how to apply a rotational force, or torque, to
+express a twist in 4-dimensional spacetime.
 
 .. rubric:: :ref:`Deriving the Faraday Tensor from the 1865 Maxwell's Equations`
 
@@ -94,15 +90,15 @@ inspiration from the work of Mr. Minkowski.
 
 .. rubric:: :ref:`Maxwell's Equations via Differential Forms`
 
-This is the core of our analysis, where everything falls into place in the most
-straightforward manner. From the expressions derived while studying rotations
-in differential forms, Maxwell's equations naturally emerge, allowing us to
-identify the fundamental equations governing electromagnetism.
+This is the cornerstone of our analysis, where everything falls into place in
+the most straightforward manner. From the expressions derived while studying
+rotations in differential forms, Maxwell's equations naturally emerge, allowing
+us to identify the fundamental equations governing electromagnetism.
 
 .. rubric:: :ref:`All Electromagnetic Field Tensors`
 
-Here, we systematically calculate all representations of the Faraday tensor:
-the doubly covariant form, the doubly contravariant form, both mixed forms, as
-well as the Hodge duals of all these quantities. I hope this will clarify the
+We systematically calculate all representations of the Faraday tensor: the
+doubly covariant form, the doubly contravariant form, both mixed forms, as well
+as the Hodge duals of all these quantities. I hope this will clarify the
 expression of all Faraday tensors using metric signature :math:`(+,-,-,-)`
 (Please let me know if you find mistakes!).
