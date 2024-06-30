@@ -1,0 +1,861 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9HQ1J8VKRB"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-9HQ1J8VKRB');
+    </script>
+    
+    <title>The Exterior Derivative of Rotations in Spacetime &#8212; Theoretical Universe</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=c1fb35df" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>window.MathJax = {"chtml": {"displayAlign": "left", "displayIndent": "2em"}, "tex": {"packages": {"[+]": ["ams"]}, "macros": {"E": "\\tilde{E}"}}, "tex2jax": {"ignoreClass": ".*", "processClass": "math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'differential_operators/the_exterior_derivative_of_rotations';</script>
+    <link rel="canonical" href="https://shaussler.github.io/TheoreticalUniverse/differential_operators/the_exterior_derivative_of_rotations.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="The Electromagnetic Field Tensor" href="../faraday_tensor/index.html" />
+    <link rel="prev" title="Differential Operators" href="differential_operators.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Theoretical Universe</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Table of Contents:</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../licence.html">Licence</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../resources.html">Resources</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../the_cartan_hodge_formalism/index.html">The Cartan-Hodge Formalism</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../the_cartan_hodge_formalism/basis_vectors.html">Basis vectors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../the_cartan_hodge_formalism/musicality.html">Musicality</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../the_cartan_hodge_formalism/hodge_duality.html">Hodge duality</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../the_cartan_hodge_formalism/the_free_matrix_representation.html">The Free Matrix Representation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../the_cartan_hodge_formalism/the_minkowski_metric.html">The Minkowski Metric</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../rotations/index.html">Rotations in Differential Form</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../rotations/rotations_in_3_dimensions.html">Rotations in 3 Dimensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rotations/rotations_in_minkowski_space.html">Rotations in Minkowski Space</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Differential Operators in Differential Form</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="differential_operators.html">Differential Operators</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">The Exterior Derivative of Rotations in Spacetime</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../faraday_tensor/index.html">The Electromagnetic Field Tensor</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../faraday_tensor/faraday_tensor_derivation.html">Deriving the Faraday Tensor from the 1865 Maxwell’s Equations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faraday_tensor/of_maxwell_equations_and_rotations.html">Maxwell’s Equations via Differential Forms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faraday_tensor/all_electromagnetic_field_tensors.html">All Electromagnetic Field Tensors</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../miscellaneous/index.html">Random Thoughts</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../miscellaneous/de_guas_theorem.html">Proving De Gua’s Theorem with Clifford Algebra</a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/differential_operators/the_exterior_derivative_of_rotations.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>The Exterior Derivative of Rotations in Spacetime</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spacetime-rotations">Spacetime Rotations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spacetime-rotations-in-differential-forms">Spacetime Rotations in Differential Forms</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exterior-derivative-of-a-rotation">Exterior Derivative of a Rotation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exterior-derivative-of-the-hodge-dual-of-a-rotation">Exterior Derivative of the Hodge Dual of a Rotation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#applying-the-laplace-de-rham-operator">Applying the Laplace-De Rham Operator</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="the-exterior-derivative-of-rotations-in-spacetime">
+<span id="id1"></span><h1>The Exterior Derivative of Rotations in Spacetime<a class="headerlink" href="#the-exterior-derivative-of-rotations-in-spacetime" title="Link to this heading">#</a></h1>
+<p class="custom-author">by Stéphane Haussler</p>
+<p>This article investigates the exterior derivative of <a class="reference internal" href="../rotations/rotations_in_minkowski_space.html#rotations-in-minkowski-space"><span class="std std-ref">rotations expressed
+in differential form</span></a>. We employ <a class="reference internal" href="../the_cartan_hodge_formalism/index.html#the-cartan-hodge-formalism"><span class="std std-ref">the
+Cartan-Hodge formalism</span></a> within the context of
+Minkowski spacetime. Following the systematic calculations presented in this
+article, I demonstrate in <a class="reference internal" href="../faraday_tensor/of_maxwell_equations_and_rotations.html#of-maxwell-equations-and-rotations"><span class="std std-ref">Of Maxwell Equations and Rotations</span></a> that a twist in spacetime leads to the
+equations governing electromagnetism.</p>
+<p>While the concept might not be entirely novel, I have not yet encountered some
+of my observations elsewhere. If you are aware of relevant references, feel free
+to open an issue and I will include them. I you identify any errors, you can
+either open an issue, or directly submit corrections via a merge request to my
+GitHub repository: <a class="reference external" href="https://github.com/shaussler/TheoreticalUniverse/">Theoretical Universe</a>.</p>
+<section id="spacetime-rotations">
+<h2>Spacetime Rotations<a class="headerlink" href="#spacetime-rotations" title="Link to this heading">#</a></h2>
+<p>Rotations in spacetime can occur in six independent planes. Any rotation can be
+decomposed into a linear combination of basis rotations within each plane:</p>
+<aside class="topic">
+<p class="topic-title">Rotation in Minkowski Space</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}R^{♯♯} = \begin{bmatrix}
+  a \; ∂_t ∧ ∂_x \\
+  b \; ∂_t ∧ ∂_y \\
+  c \; ∂_t ∧ ∂_z \\
+  d \; ∂_y ∧ ∂_z \\
+  e \; ∂_z ∧ ∂_x \\
+  f \; ∂_x ∧ ∂_y \\
+\end{bmatrix}\end{split}\]</div>
+</aside>
+</section>
+<section id="spacetime-rotations-in-differential-forms">
+<h2>Spacetime Rotations in Differential Forms<a class="headerlink" href="#spacetime-rotations-in-differential-forms" title="Link to this heading">#</a></h2>
+<p>The generic rotation above is doubly contravariant, given in terms of the wedge
+product <span class="math notranslate nohighlight">\(∧\)</span> of vectors corresponding to our physical understanding of
+space (and time). By fully flattening, we obtain the associated doubly covariant
+differential 2-form representative of the rotation:</p>
+<aside class="topic">
+<p class="topic-title">Rotation in Differential Form</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}R^{♭♭} = \left[ \begin{aligned}
+  - &amp; a \; dt ∧ dx \\
+  - &amp; b \; dt ∧ dy \\
+  - &amp; c \; dt ∧ dz \\
+    &amp; d \; dy ∧ dz \\
+    &amp; e \; dz ∧ dx \\
+    &amp; f \; dx ∧ dy \\
+\end{aligned} \right]\end{split}\]</div>
+</aside>
+<div class="dropdown admonition">
+<p class="admonition-title">All Calculation Steps</p>
+<p>Apply the flat operator <span class="math notranslate nohighlight">\(flat\)</span> to each components of the doubly
+contravariant rotation tensor <span class="math notranslate nohighlight">\(R^{♯♯}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[R^{♭♭} = (R^{♯♯})^{♭♭}\]</div>
+<p>Expand the full expression and distribute the flat operators <span class="math notranslate nohighlight">\(♭\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}R^{♭♭} = \begin{bmatrix}
+  a \; ∂_t^♭ ∧ ∂_x^♭ \\ b \; ∂_t^♭ ∧ ∂_y^♭ \\ c \; ∂_t^♭ ∧ ∂_z^♭ \\
+  d \; ∂_y^♭ ∧ ∂_z^♭ \\ e \; ∂_z^♭ ∧ ∂_x^♭ \\ f \; ∂_x^♭ ∧ ∂_y^♭ \\
+\end{bmatrix}\end{split}\]</div>
+<p>Expand with the Minkowski metric:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}R^{♭♭} = \begin{bmatrix}
+  a \; η_{αt} \; dx^α ∧ η_{βx} \; dx^β \\
+  b \; η_{αt} \; dx^α ∧ η_{βy} \; dx^β \\
+  c \; η_{αt} \; dx^α ∧ η_{βz} \; dx^β \\
+  d \; η_{αy} \; dx^α ∧ η_{βz} \; dx^β \\
+  e \; η_{αz} \; dx^α ∧ η_{βx} \; dx^β \\
+  f \; η_{αx} \; dx^α ∧ η_{βy} \; dx^β \\
+\end{bmatrix}\end{split}\]</div>
+<p>The wedge product <span class="math notranslate nohighlight">\(∧\)</span> is bilinear and the Minkowski metric components
+<span class="math notranslate nohighlight">\(η\)</span>’s can be taken in front of the expression:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}R^{♭♭} = \begin{bmatrix}
+  a \; η_{αt} η_{βx} \; dx^α ∧ dx^β \\
+  b \; η_{αt} η_{βy} \; dx^α ∧ dx^β \\
+  c \; η_{αt} η_{βz} \; dx^α ∧ dx^β \\
+  d \; η_{αy} η_{βz} \; dx^α ∧ dx^β \\
+  e \; η_{αz} η_{βx} \; dx^α ∧ dx^β \\
+  f \; η_{αx} η_{βy} \; dx^α ∧ dx^β \\
+\end{bmatrix}\end{split}\]</div>
+<p>Identify the non-zero components of the Minkowski metric <span class="math notranslate nohighlight">\(η_{μν}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}R^{♭♭} = \begin{bmatrix}
+  a \; η_{tt} η_{xx} \; dx^t ∧ dx^x \\
+  b \; η_{tt} η_{yy} \; dx^t ∧ dx^y \\
+  c \; η_{tt} η_{zz} \; dx^t ∧ dx^z \\
+  d \; η_{yy} η_{zz} \; dx^y ∧ dx^z \\
+  e \; η_{zz} η_{xx} \; dx^z ∧ dx^x \\
+  f \; η_{xx} η_{yy} \; dx^x ∧ dx^y \\
+\end{bmatrix}\end{split}\]</div>
+<p>For readability, replace the <span class="math notranslate nohighlight">\(dx^μ\)</span> symbols by their explicit
+expressions:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}dx^t &amp;= dt \\ dx^x &amp;= dx \\ dx^y &amp;= dy \\ dx^z &amp;= dz\end{split}\]</div>
+<p>We obtain:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}R^{♭♭} = \begin{bmatrix}
+  a \; η_{tt} η_{xx} \; dt ∧ dx \\
+  b \; η_{tt} η_{yy} \; dt ∧ dy \\
+  c \; η_{tt} η_{zz} \; dt ∧ dz \\
+  d \; η_{yy} η_{zz} \; dy ∧ dz \\
+  e \; η_{zz} η_{xx} \; dz ∧ dx \\
+  f \; η_{xx} η_{yy} \; dx ∧ dy \\
+\end{bmatrix}\end{split}\]</div>
+<p>Apply the numerical values of the Minkowski metric components <span class="math notranslate nohighlight">\(η_{μν}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}R^{♭♭} = \begin{bmatrix}
+    a \; (+1) (-1) \; dt ∧ dx \\
+    b \; (+1) (-1) \; dt ∧ dy \\
+    c \; (+1) (-1) \; dt ∧ dz \\
+    d \; (-1) (-1) \; dy ∧ dz \\
+    e \; (-1) (-1) \; dz ∧ dx \\
+    f \; (-1) (-1) \; dx ∧ dy \\
+\end{bmatrix}\end{split}\]</div>
+<p>Conclude:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}R^{♭♭} = \left[ \begin{aligned}
+  - &amp; a \; dt ∧ dx \\
+  - &amp; b \; dt ∧ dy \\
+  - &amp; c \; dt ∧ dz \\
+    &amp; d \; dy ∧ dz \\
+    &amp; e \; dz ∧ dx \\
+    &amp; f \; dx ∧ dy \\
+\end{aligned} \right]\end{split}\]</div>
+</div>
+<p>The hodge dual is:</p>
+<aside class="topic">
+<p class="topic-title">Hodge Dual of a Rotation in Differential Form</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}⋆ R^{♭♭} = \begin{bmatrix}
+  a \; dy ∧ dz \\
+  b \; dz ∧ dx \\
+  c \; dx ∧ dy \\
+  d \; dt ∧ dx \\
+  e \; dt ∧ dy \\
+  f \; dt ∧ dz \\
+\end{bmatrix}\end{split}\]</div>
+</aside>
+<div class="dropdown admonition">
+<p class="admonition-title">Calculation steps</p>
+<p class="rubric">Take the Hodge dual</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}⋆ R^{♭♭} = ⋆ \left[ \begin{aligned}
+  - a \; dt ∧ dx \\
+  - b \; dt ∧ dy \\
+  - c \; dt ∧ dz \\
+    d \; dy ∧ dz \\
+    e \; dz ∧ dx \\
+    f \; dx ∧ dy \\
+\end{aligned} \right]\end{split}\]</div>
+<p class="rubric">Distribute the Hodge operator</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}⋆ R^{♭♭} = \left[ \begin{aligned}
+  - a \; ⋆ (dt ∧ dx) \\
+  - b \; ⋆ (dt ∧ dy) \\
+  - c \; ⋆ (dt ∧ dz) \\
+    d \; ⋆ (dy ∧ dz) \\
+    e \; ⋆ (dz ∧ dx) \\
+    f \; ⋆ (dx ∧ dy) \\
+\end{aligned} \right]\end{split}\]</div>
+<p class="rubric">Apply Hodge dual to each basis elements</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}⋆ R^{♭♭} = \left[ \begin{aligned}
+  - a \; (-1) \; dy ∧ dz \\
+  - b \; (-1) \; dz ∧ dx \\
+  - c \; (-1) \; dx ∧ dy \\
+    d \; (+1) \; dt ∧ dx \\
+    e \; (+1) \; dt ∧ dy \\
+    f \; (+1) \; dt ∧ dz \\
+\end{aligned} \right]\end{split}\]</div>
+<p class="rubric">Conclude</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}⋆ R^{♭♭} = \begin{bmatrix}
+  a \; dy ∧ dz \\
+  b \; dz ∧ dx \\
+  c \; dx ∧ dy \\
+  d \; dt ∧ dx \\
+  e \; dt ∧ dy \\
+  f \; dt ∧ dz \\
+\end{bmatrix}\end{split}\]</div>
+</div>
+</section>
+<section id="exterior-derivative-of-a-rotation">
+<h2>Exterior Derivative of a Rotation<a class="headerlink" href="#exterior-derivative-of-a-rotation" title="Link to this heading">#</a></h2>
+<p>Applying in sequence the exterior derivative operator <span class="math notranslate nohighlight">\(d\)</span> and the Hodge
+dual operator <span class="math notranslate nohighlight">\(⋆\)</span> to the doubly covariant rotation <span class="math notranslate nohighlight">\(⋆ d R^{♭♭}\)</span>, we
+obtain:</p>
+<aside class="topic">
+<p class="topic-title">Hodge Dual of the Exterior Derivative of Rotations in Differential
+Form</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}⋆ (dR^{♭♭}) = \left[ \begin{alignedat}{1}
+  (&amp;         &amp; - ∂_x d &amp; - ∂_y e &amp; - ∂_z f &amp;\:) \; dt \\
+  (&amp; - ∂_t d &amp;         &amp; - ∂_y c &amp; + ∂_z b &amp;\:) \; dx \\
+  (&amp; - ∂_t e &amp; + ∂_x c &amp;         &amp; - ∂_z a &amp;\:) \; dy \\
+  (&amp; - ∂_t f &amp; - ∂_x b &amp; + ∂_y a &amp;         &amp;\:) \; dz \\
+\end{alignedat} \right]\end{split}\]</div>
+</aside>
+<div class="dropdown admonition">
+<p class="admonition-title">Calculation steps</p>
+<p class="rubric">Distribute the exterior derivative</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}dR^{♭♭} = \begin{bmatrix}
+   d( - a \; dt ∧ dx ) \\
+   d( - b \; dt ∧ dy ) \\
+   d( - c \; dt ∧ dz ) \\
+   d( + d \; dy ∧ dz ) \\
+   d( + e \; dz ∧ dx ) \\
+   d( + f \; dx ∧ dy ) \\
+\end{bmatrix}\end{split}\]</div>
+<p class="rubric">Apply the exterior derivative</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}dR^{♭♭} = \begin{bmatrix}
+                          &amp;                         &amp; ∂_y (-a)\; dy ∧ dt ∧ dx &amp; ∂_z (-a)\; dz ∧ dt ∧ dx \\
+                          &amp; ∂_x (-b)\; dx ∧ dt ∧ dy &amp;                         &amp; ∂_z (-b)\; dz ∧ dt ∧ dy \\
+                          &amp; ∂_x (-c)\; dx ∧ dt ∧ dz &amp; ∂_y (-c)\; dy ∧ dt ∧ dz &amp;                         \\
+  ∂_t (+d)\; dt ∧ dy ∧ dz &amp; ∂_x (+d)\; dx ∧ dy ∧ dz &amp;                         &amp;                         \\
+  ∂_t (+e)\; dt ∧ dz ∧ dx &amp;                         &amp; ∂_y (+e)\; dy ∧ dz ∧ dx &amp;                         \\
+  ∂_t (+f)\; dt ∧ dx ∧ dy &amp;                         &amp;                         &amp; ∂_z (+f)\; dz ∧ dx ∧ dy \\
+\end{bmatrix}\end{split}\]</div>
+<p class="rubric">Reorder exterior products, flipping the sign for every odd permutations</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}dR^{♭♭} = \begin{bmatrix}
+                           &amp;                         &amp; ∂_y (-a)(+1)\; dt∧dx∧dy &amp; ∂_z (-a)(-1)\; dt∧dz∧dx \\
+                           &amp; ∂_x (-b)(-1)\; dt∧dx∧dy &amp;                         &amp; ∂_z (-b)(+1)\; dt∧dy∧dz \\
+                           &amp; ∂_x (-c)(+1)\; dt∧dz∧dx &amp; ∂_y (-c)(-1)\; dt∧dy∧dz &amp;                         \\
+  ∂_t (+d)(+1)\; dt∧dy∧ dz &amp; ∂_x (+d)(+1)\; dx∧dy∧dz &amp;                         &amp;                         \\
+  ∂_t (+e)(+1)\; dt∧dz∧ dx &amp;                         &amp; ∂_y (+e)(+1)\; dx∧dy∧dz &amp;                         \\
+  ∂_t (+f)(+1)\; dt∧dx∧ dy &amp;                         &amp;                         &amp; ∂_z (+f)(+1)\; dx∧dy∧dz \\
+\end{bmatrix}\end{split}\]</div>
+<p class="rubric">Simplify</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}dR^{♭♭} = \begin{bmatrix}
+                         &amp;                         &amp; ∂_y (-a)\; dt ∧ dx ∧ dy &amp; ∂_z (+a)\; dt ∧ dz ∧ dx \\
+                         &amp; ∂_x (+b)\; dt ∧ dx ∧ dy &amp;                         &amp; ∂_z (-b)\; dt ∧ dy ∧ dz \\
+                         &amp; ∂_x (-c)\; dt ∧ dz ∧ dx &amp; ∂_y (+c)\; dt ∧ dy ∧ dz &amp;                         \\
+  ∂_t (+d)\; dt ∧ dy∧ dz &amp; ∂_x (+d)\; dx ∧ dy ∧ dz &amp;                         &amp;                         \\
+  ∂_t (+e)\; dt ∧ dz∧ dx &amp;                         &amp; ∂_y (+e)\; dx ∧ dy ∧ dz &amp;                         \\
+  ∂_t (+f)\; dt ∧ dx∧ dy &amp;                         &amp;                         &amp; ∂_z (+f)\; dx ∧ dy ∧ dz \\
+\end{bmatrix}\end{split}\]</div>
+<p class="rubric">Organize the terms into a single column</p>
+<p>Although the specific ordering is not mandatory. However, for clarity, the
+free matrix representation allows us to arrange the terms in a logical
+manner. Note that:</p>
+<ul class="simple">
+<li><p>The first row excludes the terms with <span class="math notranslate nohighlight">\(dt\)</span></p></li>
+<li><p>The second row excludes the terms with <span class="math notranslate nohighlight">\(dx\)</span></p></li>
+<li><p>The third row excludes the terms with <span class="math notranslate nohighlight">\(dy\)</span></p></li>
+<li><p>The fourth row excludes the terms with <span class="math notranslate nohighlight">\(dz\)</span></p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}dR = \left[ \begin{alignedat}{1}
+  (&amp;         &amp; + ∂_x d &amp; + ∂_y e &amp; + ∂_z f &amp;\:) \; dx^x ∧ dx^y ∧ dx^z \\
+  (&amp; + ∂_t d &amp;         &amp; + ∂_y c &amp; - ∂_z b &amp;\:) \; dx^t ∧ dx^y ∧ dx^z \\
+  (&amp; + ∂_t e &amp; - ∂_x c &amp;         &amp; + ∂_z a &amp;\:) \; dx^t ∧ dx^z ∧ dx^x \\
+  (&amp; + ∂_t f &amp; + ∂_x b &amp; - ∂_y a &amp;         &amp;\:) \; dx^t ∧ dx^x ∧ dx^y \\
+\end{alignedat} \right]\end{split}\]</div>
+<p class="rubric">Apply the Hodge dual, thereby converting 3-forms to 1-forms:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}⋆(dR) = \left[ \begin{alignedat}{1}
+  (&amp;         &amp; + ∂_x d &amp; + ∂_y e &amp; + ∂_z f &amp;\:) \; (-dt) \\
+  (&amp; + ∂_t d &amp;         &amp; + ∂_y c &amp; - ∂_z b &amp;\:) \; (-dx) \\
+  (&amp; + ∂_t e &amp; - ∂_x c &amp;         &amp; + ∂_z a &amp;\:) \; (-dy) \\
+  (&amp; + ∂_t f &amp; + ∂_x b &amp; - ∂_y a &amp;         &amp;\:) \; (-dz) \\
+\end{alignedat} \right]\end{split}\]</div>
+<p class="rubric">Conclude</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}⋆ (dR) = \left[ \begin{alignedat}{1}
+  (&amp;         &amp; - ∂_x d &amp; - ∂_y e &amp; - ∂_z f &amp;\:) \; dt \\
+  (&amp; - ∂_t d &amp;         &amp; - ∂_y c &amp; + ∂_z b &amp;\:) \; dx \\
+  (&amp; - ∂_t e &amp; + ∂_x c &amp;         &amp; - ∂_z a &amp;\:) \; dy \\
+  (&amp; - ∂_t f &amp; - ∂_x b &amp; + ∂_y a &amp;         &amp;\:) \; dz \\
+\end{alignedat} \right]\end{split}\]</div>
+</div>
+</section>
+<section id="exterior-derivative-of-the-hodge-dual-of-a-rotation">
+<h2>Exterior Derivative of the Hodge Dual of a Rotation<a class="headerlink" href="#exterior-derivative-of-the-hodge-dual-of-a-rotation" title="Link to this heading">#</a></h2>
+<p>Applying in sequence the Hodge dual operator <span class="math notranslate nohighlight">\(⋆\)</span> and the exterior
+derivative operator <span class="math notranslate nohighlight">\(d\)</span> to the doubly covariant rotation <span class="math notranslate nohighlight">\(d ⋆
+R^{♭♭}\)</span>, we obtain:</p>
+<aside class="topic">
+<p class="topic-title">Exterior Derivative of the Hodge Dual of Rotations in Differential
+Form</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}d( ⋆ R^{♭♭} ) = \left[ \begin{alignedat}{1}
+  (&amp;         &amp; + ∂_x a &amp; + ∂_y b &amp; + ∂_z c &amp;\:) \; dx ∧ dy ∧ dz \\
+  (&amp; + ∂_t a &amp;         &amp; - ∂_y f &amp; + ∂_z e &amp;\:) \; dt ∧ dy ∧ dz \\
+  (&amp; + ∂_t b &amp; + ∂_x f &amp;         &amp; - ∂_z d &amp;\:) \; dt ∧ dz ∧ dx \\
+  (&amp; + ∂_t c &amp; - ∂_x e &amp; + ∂_y d &amp;         &amp;\:) \; dt ∧ dx ∧ dy \\
+\end{alignedat} \right]\end{split}\]</div>
+</aside>
+<div class="dropdown admonition">
+<p class="admonition-title">Calculation steps</p>
+<p class="rubric">Take the exterior derivative</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}d(⋆R^{♭♭}) = d \begin{bmatrix}
+  a \; dy ∧ dz \\
+  b \; dz ∧ dx \\
+  c \; dx ∧ dy \\
+  d \; dt ∧ dx \\
+  e \; dt ∧ dy \\
+  f \; dt ∧ dz \\
+\end{bmatrix}\end{split}\]</div>
+<p class="rubric">Distribute the exterior derivative</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}d(⋆R^{♭♭}) = \begin{bmatrix}
+  d(a \; dy ∧ dz) \\
+  d(b \; dz ∧ dx) \\
+  d(c \; dx ∧ dy) \\
+  d(d \; dt ∧ dx) \\
+  d(e \; dt ∧ dy) \\
+  d(f \; dt ∧ dz) \\
+\end{bmatrix}\end{split}\]</div>
+<p class="rubric">Apply</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}d(⋆R^{♭♭}) = \begin{bmatrix}
+  ∂_t (+a)\; dt ∧ dy ∧ dz) &amp; ∂_x (+a)\; dx ∧ dy ∧ dz &amp;                         &amp;                         \\
+  ∂_t (+b)\; dt ∧ dz ∧ dx) &amp;                         &amp; ∂_y (+b)\; dy ∧ dz ∧ dx &amp;                         \\
+  ∂_t (+c)\; dt ∧ dx ∧ dy) &amp;                         &amp;                         &amp; ∂_z (+c)\; dz ∧ dx ∧ dy \\
+                           &amp;                         &amp; ∂_y (+d)\; dy ∧ dt ∧ dx &amp; ∂_z (+d)\; dz ∧ dt ∧ dx \\
+                           &amp; ∂_x (+e)\; dx ∧ dt ∧ dy &amp;                         &amp; ∂_z (+e)\; dz ∧ dt ∧ dy \\
+                           &amp; ∂_x (+f)\; dx ∧ dt ∧ dz &amp; ∂_y (+f)\; dy ∧ dt ∧ dz &amp;                         \\
+\end{bmatrix}\end{split}\]</div>
+<p class="rubric">Reorder the 3-forms</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}d(⋆R^{♭♭}) = \begin{bmatrix}
+  ∂_t (+a)(+1)\; dt ∧ dy ∧ dz &amp; ∂_x (+a)(+1)\; dx ∧ dy ∧ dz &amp;                             &amp;                             \\
+  ∂_t (+b)(+1)\; dt ∧ dz ∧ dx &amp;                             &amp; ∂_y (+b)(+1)\; dx ∧ dy ∧ dz &amp;                             \\
+  ∂_t (+c)(+1)\; dt ∧ dx ∧ dy &amp;                             &amp;                             &amp; ∂_z (+c)(+1)\; dx ∧ dy ∧ dz \\
+                              &amp;                             &amp; ∂_y (+d)(+1)\; dt ∧ dx ∧ dy &amp; ∂_z (+d)(-1)\; dt ∧ dz ∧ dx \\
+                              &amp; ∂_x (+e)(-1)\; dt ∧ dx ∧ dy &amp;                             &amp; ∂_z (+e)(+1)\; dt ∧ dy ∧ dz \\
+                              &amp; ∂_x (+f)(+1)\; dt ∧ dz ∧ dx &amp; ∂_y (+f)(-1)\; dt ∧ dy ∧ dz &amp;                             \\
+\end{bmatrix}\end{split}\]</div>
+<p class="rubric">Apply values</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}d(⋆R^{♭♭}) = \begin{bmatrix}
+  ∂_t (+a)\; dt ∧ dy ∧ dz &amp; ∂_x (+a)\; dx ∧ dy ∧ dz &amp;                         &amp;                         \\
+  ∂_t (+b)\; dt ∧ dz ∧ dx &amp;                         &amp; ∂_y (+b)\; dx ∧ dy ∧ dz &amp;                         \\
+  ∂_t (+c)\; dt ∧ dx ∧ dy &amp;                         &amp;                         &amp; ∂_z (+c)\; dx ∧ dy ∧ dz \\
+                          &amp;                         &amp; ∂_y (+d)\; dt ∧ dx ∧ dy &amp; ∂_z (-d)\; dt ∧ dz ∧ dx \\
+                          &amp; ∂_x (-e)\; dt ∧ dx ∧ dy &amp;                         &amp; ∂_z (+e)\; dt ∧ dy ∧ dz \\
+                          &amp; ∂_x (+f)\; dt ∧ dz ∧ dx &amp; ∂_y (-f)\; dt ∧ dy ∧ dz &amp;                         \\
+\end{bmatrix}\end{split}\]</div>
+<p class="rubric">Organize the terms into a single column</p>
+<p>Although the specific ordering is not mandatory. However, for clarity, the
+free matrix representation allows us to arrange the terms in a logical
+manner. Note that:</p>
+<ul class="simple">
+<li><p>The first row excludes the terms with <span class="math notranslate nohighlight">\(dt\)</span></p></li>
+<li><p>The second row excludes the terms with <span class="math notranslate nohighlight">\(dx\)</span></p></li>
+<li><p>The third row excludes the terms with <span class="math notranslate nohighlight">\(dy\)</span></p></li>
+<li><p>The fourth row excludes the terms with <span class="math notranslate nohighlight">\(dz\)</span></p></li>
+</ul>
+<div class="math notranslate nohighlight">
+\[\begin{split}d( ⋆ R^{♭♭} ) = \left[ \begin{alignedat}{1}
+  (&amp;         &amp; + ∂_x a &amp; + ∂_y b &amp; + ∂_z c &amp;\:) \; dx ∧ dy ∧ dz \\
+  (&amp; + ∂_t a &amp;         &amp; - ∂_y f &amp; + ∂_z e &amp;\:) \; dt ∧ dy ∧ dz \\
+  (&amp; + ∂_t b &amp; + ∂_x f &amp;         &amp; - ∂_z d &amp;\:) \; dt ∧ dz ∧ dx \\
+  (&amp; + ∂_t c &amp; - ∂_x e &amp; + ∂_y d &amp;         &amp;\:) \; dt ∧ dx ∧ dy \\
+\end{alignedat} \right]\end{split}\]</div>
+</div>
+</section>
+<section id="applying-the-laplace-de-rham-operator">
+<h2>Applying the Laplace-De Rham Operator<a class="headerlink" href="#applying-the-laplace-de-rham-operator" title="Link to this heading">#</a></h2>
+<p>In Minkowski space, the Laplace-De Rham operator is <span class="math notranslate nohighlight">\(d ⋆ d ⋆ + ⋆ d ⋆ d\)</span>.
+Applied to a rotation in spacetime, we obtain the wave equations:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}(d ⋆ d ⋆ + ⋆ d ⋆ d) \left[ \begin{aligned}
+     - &amp; a \; dt ∧ dx \\
+     - &amp; b \; dt ∧ dy \\
+     - &amp; c \; dt ∧ dz \\
+       &amp; d \; dy ∧ dz \\
+       &amp; e \; dz ∧ dx \\
+       &amp; f \; dx ∧ dy \\
+\end{aligned} \right]
+&amp;= \left[ \begin{alignedat}{1}
+  (&amp;- ∂_t^2 a &amp; + ∂_x^2 a &amp; + ∂_y^2 a &amp; + ∂_z^2 a &amp;\:)&amp;\: dt∧dx \\
+  (&amp;- ∂_t^2 b &amp; + ∂_x^2 b &amp; + ∂_y^2 b &amp; + ∂_z^2 b &amp;\:)&amp;\: dt∧dy \\
+  (&amp;- ∂_t^2 c &amp; + ∂_x^2 c &amp; + ∂_y^2 c &amp; + ∂_z^2 c &amp;\:)&amp;\: dt∧dz \\
+  (&amp;+ ∂_t^2 d &amp; - ∂_x^2 d &amp; - ∂_y^2 d &amp; - ∂_z^2 d &amp;\:)&amp;\: dy∧dz \\
+  (&amp;+ ∂_t^2 f &amp; - ∂_x^2 f &amp; - ∂_y^2 f &amp; - ∂_z^2 f &amp;\:)&amp;\: dx∧dy \\
+  (&amp;+ ∂_t^2 e &amp; - ∂_x^2 e &amp; - ∂_y^2 e &amp; - ∂_z^2 e &amp;\:)&amp;\: dz∧dx \\
+\end{alignedat} \right]\end{split}\]</div>
+<p>Calculations were performed with <a class="reference external" href="https://github.com/TUD-RST/pycartan">pycartan</a>.</p>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="differential_operators.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Differential Operators</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../faraday_tensor/index.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">The Electromagnetic Field Tensor</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spacetime-rotations">Spacetime Rotations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#spacetime-rotations-in-differential-forms">Spacetime Rotations in Differential Forms</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exterior-derivative-of-a-rotation">Exterior Derivative of a Rotation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exterior-derivative-of-the-hodge-dual-of-a-rotation">Exterior Derivative of the Hodge Dual of a Rotation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#applying-the-laplace-de-rham-operator">Applying the Laplace-De Rham Operator</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Stéphane Haussler
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024, Stéphane Haussler.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
