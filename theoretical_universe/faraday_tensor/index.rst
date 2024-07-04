@@ -1,5 +1,15 @@
+.. Theoretical Universe (c) by Stéphane Haussler
+
+.. Theoretical Universe is licensed under a Creative Commons Attribution 4.0
+.. International License. You should have received a copy of the license along
+.. with this work. If not, see <https://creativecommons.org/licenses/by/4.0/>.
+
 The Electromagnetic Field Tensor
 ================================
+
+.. rst-class:: custom-author
+
+   by Stéphane Haussler
 
 .. toctree::
    :maxdepth: 1
@@ -9,6 +19,9 @@ The Electromagnetic Field Tensor
    of_maxwell_equations_and_rotations.rst
    all_electromagnetic_field_tensors.rst
 
+Summary
+-------
+
 My aim with these pages is to improve upon other sources by providing a clear
 and natural derivation of the Faraday tensor as an electromagnetic 2-form,
 along with the expression of Maxwell's equations via geometric differential
@@ -16,23 +29,24 @@ forms. I seek to clarify the connection of the Faraday tensor to rotations in
 Minkowski spacetime.
 
 I could not find a truly satisfying derivation of Maxwell's equations in
-differential form. Typically, the standard approach assumes the final equations
-as well as the electromagnetic Faraday 2-form, and then proving their
-equivalence to Maxwell's equations in the widespread vector formulation of
-Heaviside. In contrast, I begin by expressing rotations in Minkowski spacetime
-as 2-forms. I then systematically compute the exterior derivative of rotations
-to explore the expression of twists in Minkowski spacetime. This procedure
-naturally leads to the emergence of the Faraday tensor. By utilizing the
-exterior derivative :math:`d` and the Hodge dual :math:`⋆`, we will derive the
-theory of electromagnetism into a single equation:
+differential form. Typically, the standard approach consists in assuming both
+the final equations in differential form, as well as the electromagnetic
+Faraday 2-form, and then prove the equivalence to Maxwell's equations in the
+standard vector form. Here, I start from a mathematical point of view,
+expressing rotations in Minkowski spacetime as 2-forms. I then systematically
+compute the exterior derivative :math:`d` of these rotations, thereby exploring
+how to express twists, or to be more precise torque, in Minkowski spacetime.
+This procedure naturally leads to the emergence of the Faraday tensor. By
+utilizing the exterior derivative :math:`d` and the Hodge dual :math:`⋆`, we
+will derive the theory of electromagnetism into a single equation:
 
 .. math:: (d ⋆ - ⋆ d) \; F^{♭♭} = J^{♭♭♭}
 
-Where the Faraday tensor :math:`F` will be identified as a generic rotation in
-4-dimensional spacetime and expressed as a 2-form :math:`F^{♭♭}`. The 4-current
-:math:`J` is expressed as a 3-form :math:`F^{♭♭♭}` and represents the amount of
-torque. Expanding in component form, we obtain a set of equations which can be
-used for actual computations:
+The Faraday tensor :math:`F` will be identified as a generic rotation in
+spacetime and expressed as a 2-form :math:`F^{♭♭}`. The 4-current :math:`J` is
+expressed as the 3-form :math:`J^{♭♭♭}`, represents the amount of torque
+applied. Expanding in component form, we will obtain the following set of
+equations:
 
 .. math::
 
@@ -51,21 +65,21 @@ used for actual computations:
      - μ_0 J^z \; dt ∧ dx ∧ dy\\
    \end{bmatrix}
 
-Where the wedge symbol :math:`∧` denotes the exterior product,
-:math:`\tilde{E}^i` the electric field components divided by the speed of light
-:math:`c`, and :math:`B^i` are the magnetic field components. :math:`μ_0` is
-the `vacuum permeability
-<https://en.m.wikipedia.org/wiki/Vacuum_permeability>`_ and :math:`c ρ` and
-:math:`J^i` are the components of the `four-current
+The wedge symbol :math:`∧` denotes the exterior product, :math:`\tilde{E}^i`
+the electric field components divided by the speed of light :math:`c`, and
+:math:`B^i` the magnetic field components. :math:`μ_0` is the `vacuum
+permeability <https://en.m.wikipedia.org/wiki/Vacuum_permeability>`_, and
+:math:`c ρ` and :math:`J^i` are the components of the `4-current
 <https://en.m.wikipedia.org/wiki/Four-current>`_.
 
-Maxwell's equations are rooted in experimental observations. Except for
-Maxwell's modification to Ampère's circuital law, these equations are
-mathematical expressions of empirical data, and can thus be considered
-established experimental facts. We approach rotations in differential forms
-from a purely mathematical and systematic perspective. An attentive reader will
-immediately recognize the presence of the equations governing electromagnetism.
-The conclusion will be a straightforward process of identifying components.
+Maxwell's equations are rooted in experimental observations, except for
+Maxwell's modification to Ampère's circuital law, which originates from purely
+mathematical considerations. These equations mathematically express empirical
+data and are established experimental facts. We approach the formulation in
+geometric differential form via a systematic mathematical analysis of
+rotations. There, the reader will likely immediately recognize the presence of
+the equations governing electromagnetism. The conclusion will then consist of a
+straightforward identification.
 
 To double-check the results, I recommend `Michael Penn's video on Maxwell's
 equations via differential forms
