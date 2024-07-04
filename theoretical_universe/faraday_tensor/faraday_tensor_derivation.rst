@@ -237,8 +237,8 @@ The Tensor of Mr. Faraday
 
 .. {{{
 
-From matrix multiplication rules, we deduct the ordered equations are
-equivalent to:
+From matrix multiplication rules, we infer the ordered equations are equivalent
+to:
 
 .. math::
 
