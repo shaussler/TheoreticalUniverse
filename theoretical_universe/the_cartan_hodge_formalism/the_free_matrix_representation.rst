@@ -14,19 +14,19 @@ The Free Matrix Representation
 
    by Stéphane Haussler
 
-I hope the reader will find the *free matrix representation* obvious. In free
-matrix representation, everything in a matrix is expressed with its basis
-vectors, basis bivectors, basis volumes, and can be reordered at will. The
-matrix bracket :math:`[]` act as an opertor adding a :math:`+` sign between
-elements.
+I hope the reader will find the *free matrix representation* intuitive. In this
+representation, each matrix element is expressed using its basis vectors, basis
+bivectors, and basis volumes, and can be reordered freely. The matrix brackets
+:math:`[]` function as an operator, adding a :math:`+` sign between the
+elements within the brackets.
 
 Vectors
 -------
 
 .. {{{
 
-For example, a vector :math:`v^♯` can be expressed with an implicit
-basis as:
+A vector :math:`v^♯` with components :math:`a`, :math:`b`, and :math:`c`  will
+most often expressed using implicit basis vectors in column form:
 
 .. math::
 
@@ -36,47 +36,104 @@ basis as:
      c \\
    \end{bmatrix}
 
-Which means that a :math:`+` sign can be added anywhere in the matrix and the
-expression written in the standard form:
+A *plus* sign :math:`+` can be added to all elements multiplied by their respective
+basis vectors :math:`∂_x`, :math:`∂_y`, and :math:`∂_z`:
 
 .. math::
 
-   v^♯ = a \; ∂_x + b \; ∂_y + c \; ∂_x
+   v^♯ = a \, ∂_x + b \, ∂_y + c \, ∂_x
 
-The free matrix representation proposses to write the basis explicitely in the
+The free matrix representation proposes explicitely writing the basis in the
 matrix, and order the terms as needed to organize and simplify calculations:
 
 .. math::
 
    v^♯ = \begin{bmatrix}
-     a \; ∂_x \\
-     b \; ∂_y \\
-     c \; ∂_z \\
+     a \, ∂_x \\
+     b \, ∂_y \\
+     c \, ∂_z \\
    \end{bmatrix}
 
-Practically, applygin a one-form :math:`ω^♭ = e dx + f dy + g dz` to the 
+Concretely, applying a 1-form :math:`ω^♭ = e \, dx + f \, dy + g \, dz` to the
 vector :math:`v^♯` result in:
 
 .. math::
 
-   w^♭ (v^♯) &= \begin{bmatrix} e \; dx & f \; dy & g \; dz \end{bmatrix}
+   w^♭ (v^♯) = \begin{bmatrix} e \; dx & f \; dy & g \; dz \end{bmatrix}
    \begin{bmatrix}
-     a \; ∂_x \\
-     b \; ∂_y \\
-     c \; ∂_z \\
-   \end{bmatrix} \\
-   w^♭ (v^♯) &= \begin{bmatrix}
-     e \; dx \left[ a \; ∂_x + b \; ∂_y + c \; ∂_z \right] \\
-     f \; dy \left[ a \; ∂_x + b \; ∂_y + c \; ∂_z \right] \\
-     g \; dz \left[ a \; ∂_x + b \; ∂_y + c \; ∂_z \right] \\
+     a \, ∂_x \\
+     b \, ∂_y \\
+     c \, ∂_z \\
    \end{bmatrix}
 
-Distributing all terms and using the fact that :math:`dx^i ∂_j = δ^i_j`, we
-obtain the rules for covector/vector multiplication, the dot product:
+Since the vector and covector bases are explicitely written, we can fully
+reorganize the matrices and represent both the covector :math:`ω^♭` and the
+vector :math:`v^♯` as column matrices. The reader will likely notice that, in
+this common case, the standard notation is more convenient. However, this may
+not hold true for more complex situations.
+
+.. math::
+
+   w^♭ (v^♯) = \begin{bmatrix}
+     e \; dx \\
+     f \; dy \\
+     g \; dz \\
+   \end{bmatrix}
+   \begin{bmatrix}
+     a \, ∂_x \\
+     b \, ∂_y \\
+     c \, ∂_z \\
+   \end{bmatrix}
+
+Distribute :math:`v^♯` to each basis covectors :math:`dx^i`:
+
+.. math::
+
+   w^♭ (v^♯) = \begin{bmatrix}
+     e \, dx \left( a \, ∂_x + b \, ∂_y + c \, ∂_z \right) \\
+     f \, dy \left( a \, ∂_x + b \, ∂_y + c \, ∂_z \right) \\
+     g \, dz \left( a \, ∂_x + b \, ∂_y + c \, ∂_z \right) \\
+   \end{bmatrix}
+
+Distribute each basis vectors :math:`∂_i` to each basis covectors :math:`dx^i`:
+
+.. math::
+
+   w^♭ (v^♯) = \begin{bmatrix}
+     e \, a \, dx ∂_x + e \, b \, dx ∂_y + e \, c \, dx ∂_z \\
+     f \, a \, dy ∂_x + f \, b \, dy ∂_y + f \, c \, dy ∂_z \\
+     g \, a \, dz ∂_x + g \, b \, dz ∂_y + g \, c \, dz ∂_z \\
+   \end{bmatrix}
+
+With :math:`dx^i ∂_j = δ^i_j`, most terms cancel and we obtain:
+
+.. math::
+
+   w^♭ (v^♯) = \begin{bmatrix}
+     e \, a \, dx ∂_x \\
+     f \, b \, dy ∂_y \\
+     g \, c \, dz ∂_z \\
+   \end{bmatrix}
+   = \begin{bmatrix}
+     e \, a \\
+     f \, b \\
+     g \, c \\
+   \end{bmatrix}
+
+In other words we obtain the rules for the dot product, as we certainly
+expected:
 
 .. math::
 
    w^♭ (v^♯) = e\;a + f\;b +g\;c
+
+The calculations above are provided in exhaustive detail to illustrate a key
+point. By incorporating basis vectors and basis covectors into their matrix
+representation, we can organize and simplify calculations. This is achieved by
+arranging the components of covectors into rows and the components of vectors
+into columns, allowing us to follow matrix multiplication rules. While the
+result is straightforward in this example, the approach remains valid and
+effective even for more complex cases involving doubly covariant tensors.
 
 .. }}}
 
