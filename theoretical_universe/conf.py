@@ -49,6 +49,12 @@ linkcheck_ignore = [
     r'https://www.jstor.org/stable/108892',  # The website seems to refuse linkcheck
 ]
 
+# Set date format
+# ---------------
+
+# This can be used to automatically set the date
+
+today_fmt = '%m-%d-%Y'
 
 # Latex engine
 # ------------
@@ -120,3 +126,30 @@ mathjax3_config = {
     }
 }
 
+# Set version and release to current commit
+# -----------------------------------------
+
+import subprocess
+import os
+
+# Function to get current Git commit hash
+def get_current_commit_hash():
+    try:
+        # Run 'git rev-parse HEAD' command to get the current commit hash
+        result = subprocess.run(['git', 'rev-parse', 'HEAD'], stdout=subprocess.PIPE)
+        if result.returncode == 0:
+            return result.stdout.decode('utf-8').strip()
+        else:
+            return None
+    except Exception as e:
+        print(f"Error: {e}")
+        return None
+
+# Get current commit hash
+commit_hash = get_current_commit_hash()
+
+# Set version and release to commit hash
+version = release = commit_hash[:8] if commit_hash else 'unknown'
+
+# Update the globals in conf.py
+globals().update(locals())

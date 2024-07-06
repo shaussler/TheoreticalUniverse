@@ -158,6 +158,7 @@ spacetime.
    :caption: Table of Contents:
 
    licence.rst
+   cite.rst
    contribute.rst
    resources.rst
    the_cartan_hodge_formalism/index.rst
