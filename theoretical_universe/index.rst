@@ -15,11 +15,11 @@ Theoretical Universe
 
    by Stéphane Haussler
 
-Within these pages, you will find a derivation and systematic analysis of
-electromagnetism formulated in terms of differential forms.
+Within these pages, you will find a formulation and systematic analysis of
+electromagnetism using differential forms in the style of Élie Cartan.
 
-In 1865, Mr. James Cleck Maxwell presented his groundbreaking work, `A
-Dynamical Theory of the Electromagnetic Field
+In 1865, James Cleck Maxwell presented his groundbreaking work, `A Dynamical
+Theory of the Electromagnetic Field
 <https://en.m.wikipedia.org/wiki/A_Dynamical_Theory_of_the_Electromagnetic_Field>`_
 (`pdf <https://www.jstor.org/stable/108892>`_). This seminal paper united
 electrostatics and magnetism, leading to significant discoveries. Mr. Maxwell

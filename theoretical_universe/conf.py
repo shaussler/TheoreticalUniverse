@@ -147,9 +147,11 @@ def get_current_commit_hash():
 
 # Get current commit hash
 commit_hash = get_current_commit_hash()
+commit_hash = commit_hash[:8] if commit_hash else 'unknown'
 
-# Set version and release to commit hash
-version = release = commit_hash[:8] if commit_hash else 'unknown'
+rst_prolog = f"""
+.. |commit_hash| replace:: {commit_hash}
+"""
 
 # Update the globals in conf.py
 globals().update(locals())

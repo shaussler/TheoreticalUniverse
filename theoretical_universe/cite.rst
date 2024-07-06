@@ -16,6 +16,4 @@ version can be restored from the *Theoretical Universe* repository.
 
    Stéphane Haussler, *Theoretical Universe*,
    https://shaussler.github.io/TheoreticalUniverse/, Last modified |today|,
-   Commit |version|
-
-
+   Commit |commit_hash|
