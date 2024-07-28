@@ -15,21 +15,24 @@ Theoretical Universe
 
    by Stéphane Haussler
 
-Within these pages, you will find a formulation and systematic analysis of
-electromagnetism using differential forms in the style of Élie Cartan.
+Within these pages, you will find the formulation of electromagnetism in terms
+of Élie Cartan's differential forms, along with a systematic analysis of this
+formulation.
 
 In 1865, James Cleck Maxwell presented his groundbreaking work, `A Dynamical
 Theory of the Electromagnetic Field
 <https://en.m.wikipedia.org/wiki/A_Dynamical_Theory_of_the_Electromagnetic_Field>`_
 (`pdf <https://www.jstor.org/stable/108892>`_). This seminal paper united
 electrostatics and magnetism, leading to significant discoveries. Mr. Maxwell
-noted his equations imply the propagation of waves at a constant speed,
-matching exactly the measured speed of light. This identified light as
-electromagnetic waves. Other noted that the equations suggest the speed of
-light is constant, regardless of the relative motion of objects. This paved the
-way for the theory of special relativity. Later, general relativity was
-inspired by the search for a theory of gravitation resembling the field
-equations for electromagnetism.
+noted that his equations implied the propagation of waves at a constant speed,
+which exactly matched the measured speed of light, thereby identifying light as
+electromagnetic waves. Others observed that these equations implied an
+astonishing fact: the speed of light is constant, regardless of the relative
+motion of objects. This was experimentally confirmed by Albert Michelson and
+Edward Morley, paving the way for the theory of special relativity. Later,
+Albert Einstein drew inspiration from Mr. Maxwell's work once more when
+developing the theory of general relativity, seeking a formulation that
+resembled the field equations for electromagnetism.
 
 The mathematical work of Mr. Maxwell is deeply rooted in experiments,
 translating ideas, most notably from Mr. Michael Faraday, into mathematical
@@ -75,24 +78,25 @@ and usefull for performing actual computations. For those looking to learn
 about differential forms, `I loved the excellent video serie by Michael Penn
 <https://youtube.com/playlist?list=PL22w63XsKjqzQZtDZO_9s2HEMRJnaOTX7&si=4dDrAZ-oKa1rI7B8>`_.
 
-The pivotal aspects this study lie in three articles:
+The pivotal aspects the present study lie in three articles:
 
 * :ref:`Rotations in Minkowski Space`.
 * :ref:`The Exterior Derivative of Rotations in Spacetime`
 * :ref:`Maxwell's Equations via Differential Forms`
 
 In the first article, differential forms are presented as a simple yet
-powerfull concept for representing rotations and generalizing them to
-four-dimensional Minkowski spacetime. The connection to regular matrix
-multiplication is explained, along with its relation to the Lie algebra of the
+powerfull concept for representing rotations, and generalize to
+four-dimensional Minkowski spacetime. The connection to *standard* rotation
+matrices is laid plain, along with the relation to the Lie algebra of the
 Lorentz group :math:`\mathfrak{so}(1,3)`. The second article explores how to
 perform a twist in spacetime, essentially applying a derivation operator to a
 rotation. There, the exterior derivative of rotations in spacetime is
 systematically analyzed. The final article links the exterior derivative of
 rotations to Maxwell's equations by identification, revealing that we are
-dealing with a twist in spacetime. This provides a comprehensive and coherent
-demonstration of how Maxwell's equations emerge from the framework of
-differential forms and electromagnetism is reduced to a single equation.
+dealing with a twist, or to be more precise torque, in Minkowski spacetime.
+This provides a comprehensive and coherent demonstration of how Maxwell's
+equations emerge from the framework of differential forms and electromagnetism
+is reduced to a single equation.
 
 This serie was originally envisioned as a collection of short, standalone
 articles. However, it has expanded beyond my initial expectation and evolved
