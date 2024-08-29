@@ -28,8 +28,8 @@ partial derivative symbol :math:`∂_μ`:
 
 If you have never seen or thought of partial derivatives as basis vectors, you
 may be rightfully unsettled. However this *notation* is not central to any
-calculations or arguments in these pages. Therefore, I propose to *simply
-accepting it*, or *just replace* the :math:`∂_μ` symbols with the
+calculations or arguments presented in this work. Therefore, I propose to
+*simply accept*, or *just replace* the :math:`∂_μ` symbols with the
 :math:`\mathbf{e}_μ` symbols. For a deeper understanding, I recommend video
 `Vectors as directional derivatives
 <https://youtu.be/vtPiROQUMhQ?si=_ZLQbP6nifSsGXYC>`_ by `Robert Davie

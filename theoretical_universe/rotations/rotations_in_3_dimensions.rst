@@ -16,16 +16,24 @@ The Free Matrix Representation of Rotations
 
 .. {{{
 
-:ref:`the free matrix representation` is powerfull when using a bivector basis,
-since the elements of the matrix can be re-ordered at will. In three dimensions,
-rotations are possible on the three planes. A rotation is expressed as a linear
-combination of the three associated basis bivectors:
+On this page, we systematically explore the representation of infinitesimal
+rotations in 3-dimensional Euclidean space using the language of differential
+forms. We establish the relation to matrix multiplication rules, as well as the
+direct relation to the cross product. In preparation for the analysis of
+rotations in 4-dimensional Minkowski spacetime, we determine the symmetries of
+the exterior product in mixed form, which, in this case, are found to be
+trivial.
+
+:ref:`the free matrix representation` is intuitive when using a bivector basis,
+since the elements can be organized and re-ordered at will. With three
+dimensions, rotations are possible on the three planes and can be expressed as
+a linear combinations the three basis bivectors:
 
 .. math::
 
-   R = a \; ∂_y ∧ ∂_z + b \; ∂_z ∧ ∂_x + c \; ∂_x ∧ ∂_y
+   R^{♯♯} = a \; ∂_y ∧ ∂_z + b \; ∂_z ∧ ∂_x + c \; ∂_x ∧ ∂_y
 
-With free matrix representation, the bivector can be written as a single column:
+We can rewrite as a single column:
 
 .. topic:: Representation of rotations as a single column of bivectors
 
@@ -37,7 +45,7 @@ With free matrix representation, the bivector can be written as a single column:
         c \; ∂_x ∧ ∂_y \\
       \end{bmatrix}
 
-Or alternatively with a row/column matrix notation:
+We could also represent the rotation with a row/column notation:
 
 .. math::
 
@@ -47,16 +55,28 @@ Or alternatively with a row/column matrix notation:
      b \; ∂_z ∧ ∂_x &                &                \\
    \end{alignedat} \right]
 
-The anti-symmetric property of the wedge product :math:`∂_i ∧ ∂_j = - ∂_j ∧ ∂_i`
-permit to split the terms:
+However there is a more natural representation. The exterior product is
+anti-symmetric :math:`∂_i ∧ ∂_j = - ∂_j ∧ ∂_i` and strictly equivalent to
+:math:`∂_i ∧ ∂_j = \frac{1}{2} (∂_i ∧ ∂_j - ∂_j ∧ ∂_i)`, which permits to
+rewrite:
 
 .. math::
 
-   ∂_i ∧ ∂_j = \frac{1}{2} (∂_i ∧ ∂_j - ∂_j ∧ ∂_i)
+   R^{♯♯} = \begin{bmatrix}
+     a \; ∂_y ∧ ∂_z \\
+     b \; ∂_z ∧ ∂_x \\
+     c \; ∂_x ∧ ∂_y \\
+   \end{bmatrix} =
+   \begin{bmatrix}
+     a \; ∂_y ∧ ∂_z - a \; ∂_z ∧ ∂_y \\
+     b \; ∂_z ∧ ∂_x - b \; ∂_x ∧ ∂_z \\
+     c \; ∂_x ∧ ∂_y - c \; ∂_y ∧ ∂_x \\
+   \end{bmatrix}
 
-With a row/column representation, we obtain:
+With a row/column representation, we obtain a fully anti-symmetric and doubly
+contravariant representation:
 
-.. topic:: The matrix representation of rotations
+.. topic:: The doubly contravariant row/column representation of rotations
 
    .. math::
 
@@ -66,10 +86,12 @@ With a row/column representation, we obtain:
       - b \; ∂_x ∧ ∂_z & + a \; ∂_y ∧ ∂_z &               \\
       \end{bmatrix}
 
-The doubly contravariant rotation object under consideration exclusively
-operates on covectors. To fall back to matrix multiplication, we require a mixed
-tensor that takes vectors as input, necessating the flattening of one of the
-components.
+The doubly contravariant rotation obtained exclusively operates on covectors.
+Falling back to matrix multiplication rules requires a mixed tensor that takes
+a vector as input, and output a vector as output. Specifically, we need to
+flatten the first component in oder to obtain the :math:`♯♭` tensor
+representation, which corresponds exactly to the matrix representation commonly
+encountered in linear algebra.
 
 .. }}}
 
@@ -100,7 +122,7 @@ Flattening the first index of of the doubly contravariant form of the rotation
 
    .. math:: R^{♭♯} = (R^{♯♯})^{♭♯}
 
-   .. rubric:: Take the rotation in its matrix form
+   .. rubric:: Take the doubly contravariant row/column representation
 
    .. math::
 
@@ -120,7 +142,7 @@ Flattening the first index of of the doubly contravariant form of the rotation
       - b \; (∂_x ∧ ∂_z)^{♭♯} & + a \; (∂_y ∧ ∂_z)^{♭♯} &                         \\
       \end{bmatrix}
 
-   .. rubric:: Apply musical operators using the euclidean metric
+   .. rubric:: Apply the musical operators, using the euclidean metric
 
    .. math::
 
@@ -130,23 +152,7 @@ Flattening the first index of of the doubly contravariant form of the rotation
       - b \; δ_{xi} dx^i ∧ ∂_z & + a \; δ_{yi} dx^i ∧ ∂_z &                          \\
       \end{bmatrix}
 
-   .. rubric:: Identify the non-zero components
-
-   .. math::
-
-      R^{♭♯} = \frac{1}{2} \begin{bmatrix}
-                        & - c \; dx^y ∧ ∂_x & + b \; dx^z ∧ ∂_x \\
-      + c \; dx^x ∧ ∂_y &                   & - a \; dx^z ∧ ∂_y \\
-      - b \; dx^x ∧ ∂_z & + a \; dx^y ∧ ∂_z &                   \\
-      \end{bmatrix}
-
-   .. rubric:: Replace the covectors by their expressions and conclude
-
-   .. math::
-
-      dx^x = dx \\
-      dx^y = dy \\
-      dx^z = dz \\
+   .. rubric:: Identify the non-zero components and conclude
 
    .. math::
 
@@ -158,8 +164,8 @@ Flattening the first index of of the doubly contravariant form of the rotation
 
    .. }}}
 
-Expanding the wedge product to its tensor form and simplifying, we find the
-explicit expression of the mixed wedge products.
+Expanding the exterior product to its tensor form and simplifying, we find the
+explicit expression in terms of tensor products :math:`⊗`:
 
 .. math::
 
@@ -172,7 +178,7 @@ explicit expression of the mixed wedge products.
 
    .. {{{
 
-   .. rubric:: Expand the wedge product into tensor product
+   .. rubric:: Expand the exterior product into tensor products
 
    .. math::
 
@@ -188,7 +194,7 @@ explicit expression of the mixed wedge products.
       (∂_y ∧ ∂_z)^{♭♯} &= ∂_y^♭ ⊗ ∂_z^♯ - ∂_z^♭ ⊗ ∂_y^♯ \\
       (∂_z ∧ ∂_x)^{♭♯} &= ∂_z^♭ ⊗ ∂_x^♯ - ∂_x^♭ ⊗ ∂_z^♯ \\
 
-   .. rubric:: Apply musical operators using the euclidean metric:
+   .. rubric:: Apply musical operators using the Euclidean metric:
 
    .. math::
 
@@ -200,25 +206,11 @@ explicit expression of the mixed wedge products.
 
    .. math::
 
-      (∂_x ∧ ∂_y)^{♭♯} &= δ_{xx} dx^x ⊗ ∂_y - δ_{yy} dx^y ⊗ ∂_x \\
-      (∂_y ∧ ∂_z)^{♭♯} &= δ_{yy} dx^y ⊗ ∂_z - δ_{zz} dx^z ⊗ ∂_y \\
-      (∂_z ∧ ∂_x)^{♭♯} &= δ_{zz} dx^z ⊗ ∂_x - δ_{xx} dx^x ⊗ ∂_z \\
+      (∂_x ∧ ∂_y)^{♭♯} &= δ_{xx} dx ⊗ ∂_y - δ_{yy} dy ⊗ ∂_x \\
+      (∂_y ∧ ∂_z)^{♭♯} &= δ_{yy} dy ⊗ ∂_z - δ_{zz} dz ⊗ ∂_y \\
+      (∂_z ∧ ∂_x)^{♭♯} &= δ_{zz} dz ⊗ ∂_x - δ_{xx} dx ⊗ ∂_z \\
 
-   .. rubric: Apply numerical values
-
-   .. math::
-
-      (∂_x ∧ ∂_y)^{♭♯} &= dx^x ⊗ ∂_y - dx^y ⊗ ∂_x \\
-      (∂_y ∧ ∂_z)^{♭♯} &= dx^y ⊗ ∂_z - dx^z ⊗ ∂_y \\
-      (∂_z ∧ ∂_x)^{♭♯} &= dx^z ⊗ ∂_x - dx^x ⊗ ∂_z \\
-
-   .. rubric:: Replace covectors by their expressions and conclude
-
-   .. math::
-
-      dx^x = dx \\
-      dx^y = dy \\
-      dx^z = dz \\
+   .. rubric:: Conclude
 
    .. math::
 

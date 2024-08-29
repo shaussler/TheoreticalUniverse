@@ -9,8 +9,6 @@ setup(
     packages=find_packages(),
     install_requires=[
         'sphinx',
-        'myst_parser',
-        'furo',
         'sphinx-book-theme',
         'sphinxcontrib-googleanalytics',
         'sphinx_sitemap',
