@@ -27,23 +27,20 @@ partial derivative symbol :math:`∂_μ`:
    \mathbf{e}_z & = ∂_z \\
 
 If you have never seen or thought of partial derivatives as basis vectors, you
-may be rightfully unsettled. However this *notation* is not central to any
-calculations or arguments presented in this work. Therefore, I propose to
-*simply accept*, or *just replace* the :math:`∂_μ` symbols with the
-:math:`\mathbf{e}_μ` symbols. For a deeper understanding, I recommend video
-`Vectors as directional derivatives
-<https://youtu.be/vtPiROQUMhQ?si=_ZLQbP6nifSsGXYC>`_ by `Robert Davie
-<https://www.youtube.com/@TensorCalculusRobertDavie>`_, and video `Manifolds 22
-| Coordinate Basis
+may be rightfully unsettled. However this is not central to any calculations or
+arguments presented in this work. Therefore, I propose to *simply accept*, or
+*just replace* the :math:`∂_μ` symbols with the :math:`\mathbf{e}_μ` symbols.
+For learning and a deeper understanding, I recommend video `Vectors as
+directional derivatives <https://youtu.be/vtPiROQUMhQ?si=_ZLQbP6nifSsGXYC>`_ by
+`Robert Davie <https://www.youtube.com/@TensorCalculusRobertDavie>`_, and video
+`Manifolds 22 | Coordinate Basis
 <https://www.youtube.com/watch?v=BjU8-n4ixqo&list=PLHlTqVYmqunWXBoO3xZhQOAoc8oqd-2Su&index=48>`_
 by `The Bright Side of Mathematics
-<https://www.youtube.com/@brightsideofmaths>`_.
-
-As very broad justification and without systematically laying down the
-properties of a vector space, notice how partial derivatives indeed fulfill the
-definition for a `vector space
-<https://en.m.wikipedia.org/wiki/Vector_space>`_. They behave linearly like
-vectors and the following examplary relations hold:
+<https://www.youtube.com/@brightsideofmaths>`_. As very broad justification and
+without systematically laying down the properties of a vector space, notice how
+partial derivatives indeed fulfill the definition for a `vector space
+<https://en.m.wikipedia.org/wiki/Vector_space>`_. They behave like vectors; the
+following linear relations hold:
 
 .. math::
 
@@ -68,14 +65,88 @@ associated covectors :math:`\mathbf{e}^ν` are the differential operators:
    \mathbf{e}^z & = dz \\
 
 With :math:`δ` being the Kronecher-delta, the differential operators
-:math:`dx^ν` fullfill the definition for covectors, i.e. :math:`\mathbf{e}^μ
-\mathbf{e}_ν = δ^μ_ν`. We have:
+:math:`dx^ν` fulfill the definition for covectors, i.e. :math:`\mathbf{e}^μ
+\mathbf{e}_ν = δ^μ_ν`:
 
 .. math::
 
    dx^μ ∂_ν = δ^μ_ν
 
+.. }}}
+
+Indexing
+--------
+
+.. {{{
+
+We adopt the Einstein summation convention, where any repeated indices imply
+summation. In 3-dimensional Euclidean space, we use Latin letters for indices,
+while in 4-dimensional Minkowski space, we use Greek letters. For example, the
+following expression represents a vector in spacetime:
+
+.. math::
+
+   V^{♯} = V^μ ∂_μ = \sum_{μ} V^μ ∂_μ
+
+The indices are :math:`(t,x,y,z)`, or equivalently :math:`0,1,2,3`. For the
+basis vectors, we have:
+
+.. math::
+
+   ∂_t &= ∂_0  \\
+   ∂_x &= ∂_1  \\
+   ∂_y &= ∂_2  \\
+   ∂_z &= ∂_3  \\
+
+For the basis covectors, we have:
+
+.. math::
+
+   \begin{alignedat}{1}
+   dt &= dx^0 &= dx^t \\
+   dx &= dx^1 &= dx^x \\
+   dy &= dx^2 &= dx^y \\
+   dz &= dx^3 &= dx^z \\
+   \end{alignedat}
+
+.. }}}
+
 .. _orientation_of_space:
+
+Basis elements
+--------------
+
+.. {{{
+
+.. figure:: _static/hodge_dual_coordinates.png
+   :align: center
+   :width: 60%
+
+   Basis elements and orientation of space
+
+In 3-dimensional Euclidean space, we define more than *just* three directions:
+
+* :math:`∂_x`
+* :math:`∂_y`
+* :math:`∂_z`
+
+We notice we have also defined three planes:
+
+* :math:`∂_y ∧ ∂_z`
+* :math:`∂_z ∧ ∂_x`
+* :math:`∂_x ∧ ∂_z`
+
+Where the wedge symbol :math:`∧` denotes the surface spanned by two directions
+:math:`∂_i ∧ ∂_j`. The naming of the surfaces is carefully chosen counterclock
+wise. Taking this one step further, we notice that we have defined the volume
+element as well:
+
+* :math:`∂_x ∧ ∂_y ∧ ∂_z`
+
+Indeed, the Euclidean space necessitate the dot product, which permits to not
+only determine the projection of a vector onto another :math:`V^♯ \cdot W^♯ =
+V^i W^j δ_{ji} cos(θ)`, but also the surface of the parallelogram defined by
+these two vectors :math:`|V^♯ ∧ W^♯| = V^i W^j δ_{ji} sin(θ)`.
 
 .. }}}
 
@@ -84,14 +155,8 @@ Orientation of space
 
 .. {{{
 
-.. figure:: _static/hodge_dual_coordinates.png
-   :align: center
-   :width: 60%
-
-   Basis directions and surfaces
-
-We order vectors and bivectors by the letters :math:`x`, :math:`y`, and
-:math:`z`. Cycling directions counterclockwise, we can go from:
+We label and order vectors by the letters :math:`x`, :math:`y`, and :math:`z`.
+Cycling counterclockwise, the sequences are:
 
 * :math:`x` to :math:`y` to :math:`z`, or
 * :math:`y` to :math:`z` to :math:`x`, or
@@ -106,24 +171,11 @@ Direction   Surface           Permutation
 =========== ================= =============
 
 Traversing the table above from left to right or top to bottom, we cycle
-exactly through the permutations of the spatial directions. I personally had
-difficulties with respect to :math:`∂_z ∧ ∂_x`. For a long time, as my natural
-inclination was to always order the elements of the basis surfaces
-alphabetically and thus take :math:`∂_x ∧ ∂_z`, which result in a negative sign
-when flipping the surface :math:`-∂_z ∧ ∂_x`. Taking :math:`∂_z ∧ ∂_x` is the
-superior choice.
-
-.. }}}
-
-The Equal Things
-----------------
-
-.. {{{
-
-Directions, vectors, and dual covectors are representation of the same thing.
-
-Sufaces, bivectors, and the dual or mixed tensor are representations of the
-same object. Rotation matrices with :math:`A=A^T` are the same object as mixed
-tensors and without explicit basis.
+through all permutations of the spatial directions. For a long time, I had
+difficulties with the term :math:`∂_z ∧ ∂_x`. My instinct was to order the
+elements of the basis bivectors alphabetically and thus take :math:`∂_x ∧ ∂_z`,
+but requires a negative sign when flipping the surface to :math:`-∂_z ∧ ∂_x`.
+Both conventions are correct but as can be read from the table, taking
+:math:`∂_z ∧ ∂_x` is ultimately the superior choice.
 
 .. }}}
