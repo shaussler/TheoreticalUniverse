@@ -9,7 +9,7 @@ Contribute
 
 (or reproduce/check results)
 
-Running calculations
+Running Calculations
 --------------------
 
 You can install all dependencies by running:

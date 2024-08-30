@@ -13,7 +13,7 @@ Rotations in Minkowski Space
 
    by Stéphane Haussler
 
-In this page, I systematically explore the geometric differential
+On this page, I systematically explore the geometric differential
 representation of rotations in minkowski spacetime. Rotations are first
 expressed as linear combination of rotation planes with bivectors. The dual
 differential 2-forms are then derived, as well as the mixed tensor

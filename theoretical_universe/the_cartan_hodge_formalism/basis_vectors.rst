@@ -11,7 +11,7 @@ Basis vectors
 
    by Stéphane Haussler
 
-Partial derivatives
+Partial Derivatives
 -------------------
 
 .. {{{
@@ -113,7 +113,7 @@ For the basis covectors, we have:
 
 .. _orientation_of_space:
 
-Basis elements
+Basis Elements
 --------------
 
 .. {{{
@@ -150,7 +150,7 @@ these two vectors :math:`|V^♯ ∧ W^♯| = V^i W^j δ_{ji} sin(θ)`.
 
 .. }}}
 
-Orientation of space
+Orientation of Space
 --------------------
 
 .. {{{

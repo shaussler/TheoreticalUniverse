@@ -11,18 +11,18 @@ Rotations in 3 Dimensions
 
    by Stéphane Haussler
 
-The Free Matrix Representation of Rotations
--------------------------------------------
-
-.. {{{
-
-On this page, we systematically explore the representation of infinitesimal
+On this page, I systematically explore the representation of infinitesimal
 rotations in 3-dimensional Euclidean space using the language of differential
 forms. We establish the relation to matrix multiplication rules, as well as the
 direct relation to the cross product. In preparation for the analysis of
 rotations in 4-dimensional Minkowski spacetime, we determine the symmetries of
 the exterior product in mixed form, which, in this case, are found to be
 trivial.
+
+The Free Matrix Representation of Rotations
+-------------------------------------------
+
+.. {{{
 
 :ref:`the free matrix representation` is intuitive when using a bivector basis,
 since the elements can be organized and re-ordered at will. With three
