@@ -255,7 +255,7 @@ as well as provide a way to organize tensors of any rank into matrices in order
 to facilitate practical calculations. This comes at the cost of having to
 explicitely write the basis, which arguably improves on readability and is more
 explicit. We could have written a covector in the same explicit manner. This
-notation is very conveniant when performing calculations in the Cartan-Hodge
+notation is very convenient when performing calculations in the Cartan-Hodge
 formalism as it permits to identify and organize terms for practical
 calculations, and if needed fall back to regular matrix multiplication.
 
