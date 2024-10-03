@@ -139,7 +139,7 @@ index notation <https://en.m.wikipedia.org/wiki/Electromagnetic_tensor>`_
 
 .. math::
 
-   F^{μν} = \begin{bmatrix}
+   F_{μν} = \begin{bmatrix}
             & + \E^x & + \E^y & + \E^z \\
      - \E^x &        & -  B^z & +  B^y \\
      - \E^y & +  B^z &        & -  B^x \\
