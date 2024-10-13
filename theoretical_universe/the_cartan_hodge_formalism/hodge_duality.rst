@@ -16,26 +16,23 @@ Hodge Duality
 
 .. {{{
 
-The Hodge dual is, in my opinion, often presented with unnecessary complexity,
+The Hodge dual is in my opinion often presented with unnecessary complexity,
 frequently involving from the outset a number of dimensions beyond three,
 varying metric signatures, and a formal mathematical approach. However, the
-concept is intuitive in the familiar three-dimensional space we live in, and
-from there, extending it to four-dimensional Minkowski space may become easier.
+concept is very intuitive in the familiar three-dimensional space we live in,
+and from there, extending to four-dimensional Minkowski space may then be
+easier.
 
-In the first part of this article, I aim to simplify the presentation of the
-Hodge dual by focusing initially on three dimensions, making the concept more
-accessible. This discussion assumes the reader has a solid understanding of
-vector calculus and is familiar with Élie Cartan's differential forms.
+In the first part of this article, I tentatively simplify the concept of the
+Hodge dual by focusing on three dimensions. The second part presents the
+systematical calculation of the Hodge duals in Minkowski spacetime. This
+discussion assumes you, the reader, to have a solid understanding of vector
+calculus and familiarity with Élie Cartan's differential forms.
 
-The second part presents a practical method for calculating the Hodge dual
-using the Clifford product, which is then used to systematically calculated the
-Hodge duals in Minkowski spacetime.
-
-This article can be read independently, provided you are familiar with the
-prerequisites above. In this work, I use a toolbox of concepts and notation
-that I dub the Cartan-Hodge formalism. In this page the relevant bit of
-notation from this formalism is that basis vectors :math:`\mathbf{e}_μ` are
-noted with the partial derivative symbol :math:`∂_μ`:
+I generally use a toolbox of concepts and notation that I dub the Cartan-Hodge
+formalism. This article can however be read independently. In this page the
+relevant bit of notation from this Cartan-Hodge formalism is that basis vectors
+:math:`\mathbf{e}_μ` are noted with the partial derivative symbol :math:`∂_μ`:
 
 .. math::
 
@@ -44,9 +41,9 @@ noted with the partial derivative symbol :math:`∂_μ`:
    \mathbf{e}_y & = ∂_y \\
    \mathbf{e}_z & = ∂_z \\
 
-For our purpose, this is simply a matter of using a notation (that is both
-widespread and standard). However, I don't necessarily expect all readers to
-have ever considered partial derivatives as basis vectors.
+I don't necessarily expect all readers to have ever considered partial
+derivatives as basis vectors. For our purpose, this is simply a matter of using
+a notation, which is both widespread and standard.
 
 .. }}}
 
@@ -134,7 +131,7 @@ expressed as a linear combination of :math:`1`.
 
 .. _pseudo_vectors_and_pseudo_scalars:
 
-Pseudo-vectors and Pseudo-scalars
+Pseudo-Vectors and Pseudo-Scalars
 ---------------------------------
 
 .. {{{
@@ -143,8 +140,8 @@ From the vector basis, we have obtained the following objects:
 
 * Scalars.
 * Vectors.
-* Bivectors corresponding to surfaces, often called pseudo-vectors.
-* Trivectors corresponding to volumes, often called pseudo-scalars.
+* Bivectors corresponding to surfaces, and also called pseudo-vectors.
+* Trivectors corresponding to volumes, and also called pseudo-scalars.
 
 Placing the objects in front of a mirror:
 
@@ -165,61 +162,110 @@ flip their signs with the image of the oriented volume.
 
 .. }}}
 
-Practical Caculations with the Clifford Product
------------------------------------------------
+The inner product on multivectors
+---------------------------------
 
-.. warning:: Under Construction
+.. {{{
 
-Here, we map to the Clifford algebra. We have seen with that we can, through
-the Hodge dual, associate a vector to all oriented surfaces. In particular this
-is true when considering basis vectors and bivectors.
+.. warning:: Under construction
 
-.. math::
-
-   ∂_x ∧ ∂_y \rightarrow ∂_z \\
-   ∂_y ∧ ∂_z \rightarrow ∂_x \\
-   ∂_z ∧ ∂_x \rightarrow ∂_y \\
-
-We map to the corresponding Clifford algebra. For Euclidean space, we have:
+The inner product in 3-dimensional Euclidean space of basis vectors is:
 
 .. math::
 
-   ∂_i ∨ ∂_i = 1
+   \braket{∂_i, ∂_j} = δ_{ij}
 
-And is fully antisymmetric:
-
-.. math::
-
-   ∂_i ∨ ∂_j = - ∂_j ∨ ∂_i
-
-From there, we note that the Hodge dual of a basis number :math:`\mathbf{1}`
-is:
+Fully expanded, with a notation that I hope obvious, we have:
 
 .. math::
 
-   ⋆ \mathbf{1} = \mathbf{1} ∨ (∂_x ∨ ∂_y ∨ ∂_z) = ∂_x ∨ ∂_y ∨ ∂_z
+   \begin{matrix}
+           & ∂_x & ∂_y & ∂_z \\
+       ∂_x & 1   & 0   & 0   \\
+       ∂_y & 0   & 1   & 0   \\
+       ∂_z & 0   & 0   & 1   \\
+   \end{matrix}
 
-We can either take the product with :math:`(∂_x ∨ ∂_y ∨ ∂_z)` or :math:`(∂_z ∨
-∂_y ∨ ∂_x)`. To obtain the Hodge dual of a 3-vector, we apply the Clifford
-product with:
-
-.. math::
-
-   ⋆ (∂_x ∨ ∂_y ∨ ∂_z) = (∂_x ∨ ∂_y ∨ ∂_z) ∨ (∂_z ∨ ∂_y ∨ ∂_x) = \mathbf{1}
-
-The Hodge dual can then be calculated with:
+Since we associate through the Hodge dual in 3-dimensional Euclidean space we
+can relate the inner product from vector to bivectors:
 
 .. math::
 
-   ⋆ (∂_x ∨ ∂_y) = (∂_x ∨ ∂_y) ∨ (∂_z ∨ ∂_y ∨ ∂_x) = ∂_z \\
-   ⋆ (∂_y ∨ ∂_z) = (∂_y ∨ ∂_z) ∨ (∂_z ∨ ∂_y ∨ ∂_x) = ∂_x \\
-   ⋆ (∂_z ∨ ∂_x) = (∂_z ∨ ∂_x) ∨ (∂_z ∨ ∂_y ∨ ∂_x) = ∂_y \\
+   \begin{matrix}
+                   & ⋆ ∂_y ∧ ∂_z & ⋆ ∂_z ∧ ∂_x & ⋆ ∂_x ∧ ∂_y \\
+       ⋆ ∂_y ∧ ∂_z & 1           & 0           & 0           \\
+       ⋆ ∂_z ∧ ∂_x & 0           & 1           & 0           \\
+       ⋆ ∂_x ∧ ∂_y & 0           & 0           & 1           \\
+   \end{matrix}
+
+With :math:`α^♯ = a \, ∂_x + b \, ∂_y + c \, ∂_z` and :math:`β^♯ = u \, ∂_x + v
+\, ∂_y + w \, ∂_z`, the magnitude of the surface along the :math:`∂_x ∧ ∂_y` is
+the determinant. With
+
+* :math:`∂_x ∧ ∂_y` the plane along the :math:`∂_x` abd :math:`∂_y` unit
+  vectors.
+* :math:`α^♯_{∂_x ∧ ∂_y} = a \, ∂_x + b \, ∂_y` the :math:`α^♯` vector on the
+  :math:`∂_x ∧ ∂_y` plane.
+* :math:`β^♯_{∂_x ∧ ∂_y} = u \, ∂_x + v \, ∂_y` the :math:`β^♯` vector on the
+  :math:`∂_x ∧ ∂_y` plane.
 
 .. math::
 
-   ⋆ ∂_x = ∂_x ∨ (∂_x ∨ ∂_y ∨ ∂_z) = ∂_y ∨ ∂_z \\
-   ⋆ ∂_y = ∂_y ∨ (∂_x ∨ ∂_y ∨ ∂_z) = ∂_z ∨ ∂_x \\
-   ⋆ ∂_z = ∂_z ∨ (∂_x ∨ ∂_y ∨ ∂_z) = ∂_x ∨ ∂_y \\
+   \|α^♯ ∧ β^♯\|_{∂_x ∧ ∂_y} =
+   \begin{vmatrix}
+       a & u \\
+       b & v \\
+   \end{vmatrix}
+   = av - ub
+
+So what we would like to have for the inner product of two vectors is the
+projection of a vector onto another. In the same manner, the inner product of
+two bivectors is the projection of a surface onto another.
+
+.. image:: https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Area_parallellogram_as_determinant.svg/891px-Area_parallellogram_as_determinant.svg.png
+   :width: 250px
+   :align: center
+
+Now rewrite slightly to be able to generalize. The surface covered by
+:math:`α^♯` and :math:`β^♯` in the :math:`∂_x ∧ ∂_y` unit plane is the inner
+product on surfaces (or 2-forms) :math:`\braket{α^♯ ∧ β^♯|∂_x ∧ ∂_y}`:
+
+.. math::
+
+   \braket{α^♯ ∧ β^♯ | ∂_x ∧ ∂_y}
+   \begin{vmatrix}
+       a & u \\
+       b & v \\
+   \end{vmatrix}
+   =
+   \begin{vmatrix}
+       α^♯ \cdot ∂_x & β^♯ \cdot ∂_x \\
+       α^♯ \cdot ∂_y & β^♯ \cdot ∂_y \\
+   \end{vmatrix}
+
+We now have a technique to generalize and calculate the inner product to
+2-forms. In 3-dimensional Euclidean space, we substitute :math:`α^♯` by
+:math:`∂_i` and :math:`β^♯` by :math:`∂_j`
+
+.. math::
+
+   \braket{α^♯ ∧ β^♯ | ∂_x ∧ ∂_y}
+   =
+   \begin{vmatrix}
+       α^♯ \cdot ∂_x & β^♯ \cdot ∂_x \\
+       α^♯ \cdot ∂_y & β^♯ \cdot ∂_y \\
+   \end{vmatrix}
+
+.. math::
+
+   \begin{matrix}
+                 & ∂_y ∧ ∂_z & ∂_z ∧ ∂_x & ∂_x ∧ ∂_y \\
+       ∂_y ∧ ∂_z & 1         & 0         & 0         \\
+       ∂_z ∧ ∂_x & 0         & 1         & 0         \\
+       ∂_x ∧ ∂_y & 0         & 0         & 1         \\
+   \end{matrix}
+
+.. }}}
 
 .. _duality_in_minkowski_space:
 .. _Duality in Minkowski Space:
@@ -227,17 +273,7 @@ The Hodge dual can then be calculated with:
 Duality in Minkowski Space
 --------------------------
 
-.. math::
-
-   ⋆ (∂_x ∨ ∂_y) = (∂_x ∨ ∂_y) ∨ (∂_t ∨ ∂_x ∨ ∂_y ∨ ∂_z) = - ∂_t ∨ ∂_z \\
-   ⋆ (∂_y ∨ ∂_z) = (∂_y ∨ ∂_z) ∨ (∂_t ∨ ∂_x ∨ ∂_y ∨ ∂_z) = - ∂_t ∨ ∂_x \\
-   ⋆ (∂_z ∨ ∂_x) = (∂_z ∨ ∂_x) ∨ (∂_t ∨ ∂_x ∨ ∂_y ∨ ∂_z) = - ∂_t ∨ ∂_y \\
-
-.. math::
-
-   ⋆ (∂_x ∨ ∂_y) = (∂_x ∨ ∂_y) ∨ (∂_z ∨ ∂_y ∨ ∂_x ∨ ∂_t) = ∂_z ∨ ∂_t \\
-   ⋆ (∂_y ∨ ∂_z) = (∂_y ∨ ∂_z) ∨ (∂_z ∨ ∂_y ∨ ∂_x ∨ ∂_t) = ∂_x ∨ ∂_t \\
-   ⋆ (∂_z ∨ ∂_x) = (∂_z ∨ ∂_x) ∨ (∂_z ∨ ∂_y ∨ ∂_x ∨ ∂_t) = ∂_y ∨ ∂_t \\
+.. {{{
 
 .. math::
 
@@ -271,4 +307,6 @@ Duality in Minkowski Space
 To double-check the results, I recommend the video `Differential Forms | The
 Minkowski metric and the Hodge operator
 <https://m.youtube.com/watch?v=vDRfADusqYQ>`_ by Michale Penn.
+
+.. }}}
 
