@@ -399,11 +399,20 @@ And also to trivectors:
 
 .. }}}
 
+Formalizing the definition the Hodge dual
+-----------------------------------------
+
+.. {{{
+
+.. warning:: Under construction, last modified |today|
+
+.. }}}
+
 .. _duality_in_minkowski_space:
 .. _Duality in Minkowski Space:
 
-Duality in Minkowski Space
---------------------------
+Hodge duality in Minkowski space
+--------------------------------
 
 .. {{{
 
