@@ -169,24 +169,29 @@ Inner product of bivectors in 3-dimensional Euclidean space
 
 .. warning:: Under construction, last modified |today|
 
-In a nutshell, the inner product is the concept of a shadow. The inner product
-of two vectors is the one dimensional shadow of one onto the other. The surface
-can be calculated from the determinant of a 2 by 2 matrix. This permits to
-generalize to 3 dimensions (volumes) and above. I show a meaningfull way to
-*lift* the inner product from vectors to bivectors, trivectors, and k-vectors.
-This permits to generalize the definition of the Hodge dual and apply to
-4-dimensional Minkowski space. The inner product in 3-dimensional Euclidean
-space of the basis vectors is:
+In essence, the inner product can be understood as the concept of shadow. The
+inner product between vectors is the one dimensional shadow of one onto the
+other. The inner product between bivectors is the surface shadow of one surface
+onto the other. The 2-dimensional surface can be calculated from the
+determinant of a 2 by 2 matrix. This will permit to generalize to 3-dimensional
+shadows, which can be calculated as the determinant of a 3 by 3 matrix, and
+above. A k-dimensional shadow is then calculated using a k by k matrix. This
+permits to find a meaningfull way to *lift* the inner product from vectors to
+bivectors, trivectors, and k-vectors. This approach will finally lead to
+generalizing the definition of the Hodge dual, applicable Minkowski space, and
+here with metric signature :math:`(+,-,-,-)`. The inner product in
+3-dimensional Euclidean space of the basis vectors is:
 
 .. math::
 
    \braket{∂_i|∂_j} = δ_{ij}
 
-Fully expanded, with a notation that I hope obvious, we have:
+Consequently, we obtain the following dot products:
 
 .. math::
 
    \begin{array}{c|rrr}
+       \hline
            & ∂_x & ∂_y & ∂_z \\
        ∂_x & 1   & 0   & 0   \\
        ∂_y & 0   & 1   & 0   \\
@@ -194,27 +199,18 @@ Fully expanded, with a notation that I hope obvious, we have:
    \end{array}
 
 A hint that the inner product can be generalized to surfaces is that in 3
-dimensions, we can associate a basis surface to each basis vectors. it would
-then *feel* natural, that since :math:`∂_x` is associated to :math:`∂_y ∧ ∂_z`
-through Hodge duality, we could expect that the inner product of
-:math:`\braket{∂_x|∂_x}=1` would imply that :math:`\braket{∂_y ∧ ∂_z | ∂_y ∧
-∂_z}=1`. Consider two arbitrary vectors :math:`a^♯` and :math:`b^♯` in
-3-dimensional Euclidean space:
+dimensions, we can associate a basis surface to each of the basis vectors
+through the Hodge dual, as argued above. It may then *feels natural,* since
+:math:`∂_x` is associated to :math:`∂_y ∧ ∂_z`, to expect that the inner
+product of :math:`\braket{∂_x|∂_x}=1` implies that :math:`\braket{∂_y ∧ ∂_z |
+∂_y ∧ ∂_z}=1`. Let us consider two vectors :math:`a^♯` and :math:`b^♯` in
+3-dimensional Euclidean space, written in component form as:
 
 * :math:`a^♯ = p \, ∂_x + q \, ∂_y + r \, ∂_z`
 * :math:`b^♯ = u \, ∂_x + v \, ∂_y + w \, ∂_z`
 
-Now consider the subspace determined by the unit vectors:
-
-* :math:`∂_x`
-* :math:`∂_y`
-
-And the plane along these :math:`∂_x` and :math:`∂_y` unit vectors:
-
-* :math:`∂_x ∧ ∂_y`
-
-The components of :math:`a^♯` and :math:`b^♯` on the :math:`∂_x ∧ ∂_y` plane
-are:
+Now consider the components of :math:`a^♯` and :math:`b^♯` along the unit
+vectors :math:`∂_x` and :math:`∂_y`:
 
 * :math:`p \, ∂_x + q \, ∂_y`
 * :math:`u \, ∂_x + v \, ∂_y`
@@ -223,13 +219,11 @@ are:
    :width: 250px
    :align: right
 
-   This figure needs to be replaced by a better depiction
+   Surfaces and the determinant of 2x2 matrices.
 
-The magnitude of the surface determined by :math:`a^♯` and :math:`b^♯` along
-the :math:`∂_x ∧ ∂_y` plane is the inner product on bivectors. This generalizes
-the inner product of vectors. The inner product of vectors correspond to the
-projection of vectors onto another, and the inner product of bivectors
-correspond to the projection of surfaces onto another.
+The magnitude of the surface shadow determined by :math:`a^♯` and :math:`b^♯`
+on the :math:`∂_x ∧ ∂_y` plane is the inner product on bivectors. This lifts
+the inner product from vectors to bivectors through the determinant:
 
 .. math::
 
@@ -238,48 +232,97 @@ correspond to the projection of surfaces onto another.
        p & u \\
        q & v \\
    \end{vmatrix}
-   = pv - uq
+   = pv - qu
 
-With this quantity, we measure the amount of shadow from the surface determined
-by :math:`a^♯` and :math:`b^♯` onto the plane determined by :math:`∂_x` and
-:math:`∂_y` in term of the unit surface :math:`∂_x ∧ ∂_y`. So what we would
-like to have for the inner product of two vectors is the projection of a vector
-onto another. In the same manner, the inner product of two bivectors is the
-projection of a surface onto another. We rewrite slightly in order to
-generalize. The surface covered by :math:`a^♯` and :math:`b^♯` in the
-:math:`∂_x ∧ ∂_y` unit plane is the inner product of surfaces (or 2-vectors)
-:math:`\braket{a^♯ ∧ b^♯|∂_x ∧ ∂_y}`:
+In the same manner we obtain:
 
 .. math::
 
-   \braket{a^♯ ∧ b^♯ | ∂_x ∧ ∂_y}
-   =
+   \braket{α^♯ ∧ β^♯ | ∂_y ∧ ∂_z} =
+   \begin{vmatrix}
+       q & v \\
+       r & w \\
+   \end{vmatrix}
+   = qw - rv
+
+.. math::
+
+   \braket{α^♯ ∧ β^♯ | ∂_z ∧ ∂_x} =
+   \begin{vmatrix}
+       r & w \\
+       p & u \\
+   \end{vmatrix}
+   = ru - pw
+
+With this quantities, we measure the amount of shadow from the surface
+determined by :math:`a^♯` and :math:`b^♯` onto the unit surface :math:`∂_y ∧
+∂_z`, :math:`∂_z ∧ ∂_x`, and :math:`∂_x ∧ ∂_y`, . We can modify the expression
+slightly in order to express the inner product of bivectors in terms of the
+inner products of vectors:
+
+.. math::
+
+   \braket{a^♯ ∧ b^♯ | ∂_y ∧ ∂_z} =
+   \begin{vmatrix}
+       q & v \\
+       r & w \\
+   \end{vmatrix} =
+   \begin{vmatrix}
+       \braket{a^♯ | ∂_y} & \braket{b^♯ | ∂_y} \\
+       \braket{a^♯ | ∂_z} & \braket{b^♯ | ∂_z} \\
+   \end{vmatrix}
+
+.. math::
+
+   \braket{a^♯ ∧ b^♯ | ∂_z ∧ ∂_x} =
+   \begin{vmatrix}
+       r & w \\
+       p & u \\
+   \end{vmatrix} =
+   \begin{vmatrix}
+       \braket{a^♯ | ∂_z} & \braket{b^♯ | ∂_z} \\
+       \braket{a^♯ | ∂_x} & \braket{b^♯ | ∂_x} \\
+   \end{vmatrix}
+
+.. math::
+
+   \braket{a^♯ ∧ b^♯ | ∂_x ∧ ∂_y} =
    \begin{vmatrix}
        p & u \\
        q & v \\
-   \end{vmatrix}
-   =
+   \end{vmatrix} =
    \begin{vmatrix}
        \braket{a^♯ | ∂_x} & \braket{b^♯ | ∂_x} \\
        \braket{a^♯ | ∂_y} & \braket{b^♯ | ∂_y} \\
    \end{vmatrix}
 
-We now have a technique to generalize and calculate the inner product to
-2-forms. In 3-dimensional Euclidean space, we substitute :math:`a^♯` by
-:math:`∂_i` and :math:`b^♯` by :math:`∂_j`:
+Or in other words:
 
 .. math::
 
-   \braket{a^♯ ∧ b^♯ | ∂_x ∧ ∂_y}
-   =
+   \braket{a^♯ ∧ b^♯ | ∂_k ∧ ∂_l} =
    \begin{vmatrix}
-       \braket{a^♯ | ∂_x} & \braket{b^♯ | ∂_x} \\
-       \braket{a^♯ | ∂_y} & \braket{b^♯ | ∂_y} \\
+       \braket{a^♯ | ∂_k} & \braket{b^♯ | ∂_k} \\
+       \braket{a^♯ | ∂_l} & \braket{b^♯ | ∂_l} \\
    \end{vmatrix}
 
 With this, we have determined the surface of any arbitrary vector onto the
 basis surfaces. We can replace :math:`a^♯` and :math:`b^♯` with any of the
 basis vectors. For example, with :math:`a^♯=∂_y`  and :math:`b^♯=∂_z`, we get:
+We now have a technique to determine the inner product of all 2-forms. In
+3-dimensional Euclidean space, we substitute :math:`a^♯` by :math:`∂_i` and
+:math:`b^♯` by :math:`∂_j` to obtain:
+
+.. math::
+
+   \braket{∂_i ∧ ∂_j | ∂_k ∧ ∂_l} =
+   \begin{vmatrix}
+       \braket{∂_i | ∂_k} & \braket{∂_j | ∂_k} \\
+       \braket{∂_i | ∂_l} & \braket{∂_j | ∂_l} \\
+   \end{vmatrix}
+
+
+Which permits to perform calculations:
 
 .. math::
 
@@ -296,8 +339,6 @@ basis vectors. For example, with :math:`a^♯=∂_y`  and :math:`b^♯=∂_z`, w
    \end{vmatrix}
    =0
 
-with :math:`a^♯=∂_x`  and :math:`b^♯=∂_y`, we get:
-
 .. math::
 
    \braket{∂_x ∧ ∂_y | ∂_x ∧ ∂_y}
@@ -313,18 +354,19 @@ with :math:`a^♯=∂_x`  and :math:`b^♯=∂_y`, we get:
    \end{vmatrix}
    =1
 
-Doing this for all possible bivector basis pairs, we obtain:
+Doing this for all 9 possible bivector basis combinations, we obtain:
 
 .. math::
 
-   \begin{matrix}
+   \begin{array}{c|lll}
                  & ∂_y ∧ ∂_z & ∂_z ∧ ∂_x & ∂_x ∧ ∂_y \\
+      \hline
        ∂_y ∧ ∂_z & 1         & 0         & 0         \\
        ∂_z ∧ ∂_x & 0         & 1         & 0         \\
        ∂_x ∧ ∂_y & 0         & 0         & 1         \\
-   \end{matrix}
+   \end{array}
 
-With this, we can generalize and lift the inner product to trivectors. In
+Finally, we can generalize by lifting the inner product to trivectors. In
 3-dimensional Euclidean space, we get:
 
 .. math::
@@ -382,20 +424,118 @@ We can use our formulation for lifting the inner product to bivectors:
    \braket{∂_μ ∧ ∂_ν | ∂_ρ ∧ ∂_σ}
    =
    \begin{vmatrix}
-       \braket{∂_μ | ∂_ρ} & \braket{∂_ν | ∂_ρ} \\
-       \braket{∂_μ | ∂_σ} & \braket{∂_ν | ∂_σ} \\
+       ∂_μ \cdot ∂_ρ & ∂_ν \cdot ∂_ρ \\
+       ∂_μ \cdot ∂_σ & ∂_ν \cdot ∂_σ \\
    \end{vmatrix}
 
 And also to trivectors:
 
 .. math::
 
-   \braket{∂_μ ∧ ∂_ν | ∂_ρ ∧ ∂_σ}
+   \braket{∂_μ ∧ ∂_ν ∧ ∂_λ | ∂_ρ ∧ ∂_σ ∧ τ}
    =
    \begin{vmatrix}
-       \braket{∂_μ | ∂_ρ} & \braket{∂_ν | ∂_ρ} \\
-       \braket{∂_μ | ∂_σ} & \braket{∂_ν | ∂_σ} \\
+       ∂_μ \cdot ∂_ρ & ∂_ν \cdot ∂_ρ & ∂_λ \cdot ∂_ρ \\
+       ∂_μ \cdot ∂_σ & ∂_ν \cdot ∂_σ & ∂_λ \cdot ∂_σ \\
+       ∂_μ \cdot ∂_τ & ∂_ν \cdot ∂_τ & ∂_λ \cdot ∂_τ \\
    \end{vmatrix}
+
+We get:
+
+.. math::
+
+   \begin{array}{c|ccrrrr}
+             & ∂_t ∧ ∂_x & ∂_t ∧ ∂_y & ∂_t ∧ ∂_z & ∂_y ∧ ∂_z & ∂_z ∧ ∂_x & ∂_x ∧ ∂_y \\
+             \hline
+   ∂_t ∧ ∂_x & -1        &  0        &  0        &   0       &  0        &  0        \\
+   ∂_t ∧ ∂_y &  0        & -1        &  0        &   0       &  0        &  0        \\
+   ∂_t ∧ ∂_z &  0        &  0        & -1        &   0       &  0        &  0        \\
+   ∂_y ∧ ∂_z &  0        &  0        &  0        &  +1       &  0        &  0        \\
+   ∂_z ∧ ∂_x &  0        &  0        &  0        &   0       & +1        &  0        \\
+   ∂_x ∧ ∂_y &  0        &  0        &  0        &   0       &  0        & +1        \\
+   \end{array}
+
+
+.. admonition:: Systematic calculations of the inner product of basis bivectors
+   :class: dropdown
+
+   .. math::
+
+      \braket{∂_t ∧ ∂_x | ∂_t ∧ ∂_x} =
+      \begin{vmatrix}
+          ∂_t \cdot ∂_t & ∂_x \cdot ∂_t \\
+          ∂_t \cdot ∂_x & ∂_x \cdot ∂_x \\
+      \end{vmatrix}
+      =  \begin{vmatrix}
+          +1 & 0 \\
+           0 & -1 \\
+      \end{vmatrix}
+      = -1
+
+   .. math::
+
+      \braket{∂_t ∧ ∂_y | ∂_t ∧ ∂_y} =
+      \begin{vmatrix}
+          ∂_t \cdot ∂_t & ∂_y \cdot ∂_t \\
+          ∂_t \cdot ∂_y & ∂_y \cdot ∂_y \\
+      \end{vmatrix}
+      =  \begin{vmatrix}
+          +1 & 0 \\
+           0 & -1 \\
+      \end{vmatrix}
+      = -1
+
+   .. math::
+
+      \braket{∂_t ∧ ∂_z | ∂_t ∧ ∂_z} =
+      \begin{vmatrix}
+          ∂_t \cdot ∂_t & ∂_z \cdot ∂_t \\
+          ∂_t \cdot ∂_z & ∂_z \cdot ∂_z \\
+      \end{vmatrix}
+      =  \begin{vmatrix}
+          +1 & 0 \\
+           0 & -1 \\
+      \end{vmatrix}
+      = -1
+
+   .. math::
+
+      \braket{∂_y ∧ ∂_z | ∂_y ∧ ∂_z} =
+      \begin{vmatrix}
+          ∂_y \cdot ∂_y & ∂_z \cdot ∂_y \\
+          ∂_y \cdot ∂_z & ∂_z \cdot ∂_z \\
+      \end{vmatrix}
+      =  \begin{vmatrix}
+          +1 &  0 \\
+           0 & +1 \\
+      \end{vmatrix}
+      = +1
+
+   .. math::
+
+      \braket{∂_z ∧ ∂_x | ∂_z ∧ ∂_x} =
+      \begin{vmatrix}
+          ∂_z \cdot ∂_z & ∂_x \cdot ∂_z \\
+          ∂_z \cdot ∂_x & ∂_x \cdot ∂_x \\
+      \end{vmatrix}
+      =  \begin{vmatrix}
+          +1 &  0 \\
+           0 & +1 \\
+      \end{vmatrix}
+      = +1
+
+   .. math::
+
+      \braket{∂_x ∧ ∂_y | ∂_x ∧ ∂_y} =
+      \begin{vmatrix}
+          ∂_x \cdot ∂_x & ∂_y \cdot ∂_x \\
+          ∂_x \cdot ∂_y & ∂_y \cdot ∂_y \\
+      \end{vmatrix}
+      =  \begin{vmatrix}
+          +1 &  0 \\
+           0 & +1 \\
+      \end{vmatrix}
+      = +1
 
 .. }}}
 
@@ -405,6 +545,36 @@ Formalizing the definition the Hodge dual
 .. {{{
 
 .. warning:: Under construction, last modified |today|
+
+The Hodge dual writen with the Hodge star symbol :math:`⋆` is defined based on
+the property that for all k-vectors :math:`α` and :math:`β`:
+
+For 3-dimensional euclidean space:
+
+.. math::
+
+   α ∧ ⋆ β = ∂_x ∧ ∂_y ∧ ∂_z
+
+But really this is a way to say: Given a m-vector, which k-vector completes the
+space. To generalize to any metric signature, we use the dot product:
+
+.. math::
+
+   α ∧ ⋆ β = \braket{α | β} ∂_x ∧ ∂_y ∧ ∂_z
+
+Which is equivalent to 3-dimensional Euclidean space.
+
+.. math::
+
+   α ∧ ⋆ β = \braket{α | β} ∂_x ∧ ∂_y ∧ ∂_z
+
+As an example, if we are looking for the Hodge dual :math:`⋆ ∂_t ∧ ∂_x`, we
+know it will be :math:`∂_y ∧ ∂_z` to complete the space, and up to a sign
+determined by :math:`\braket{∂_t ∧ ∂_x | ∂_t ∧ ∂_x} = -1`. Hence we have:
+
+.. math::
+
+   ⋆ ∂_t ∧ ∂_x = ∂_y ∧ ∂_z
 
 .. }}}
 

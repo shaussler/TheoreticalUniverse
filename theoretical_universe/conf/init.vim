@@ -68,7 +68,7 @@ imap \eta       η
 imap \theta     θ
 imap \iota      ι
 imap \kappa     κ
-imap \lamda     λ
+imap \lambda    λ
 imap \mu        μ
 imap \nu        ν
 imap \xi        ξ
