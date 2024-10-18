@@ -47,7 +47,7 @@ a notation, which is both widespread and standard.
 
 .. }}}
 
-Duality in Three Dimensions
+Duality in three dimensions
 ---------------------------
 
 .. {{{
@@ -131,7 +131,7 @@ expressed as a linear combination of :math:`1`.
 
 .. _pseudo_vectors_and_pseudo_scalars:
 
-Pseudo-Vectors and Pseudo-Scalars
+Pseudo-vectors and pseudo-scalars
 ---------------------------------
 
 .. {{{
@@ -162,99 +162,158 @@ flip their signs with the image of the oriented volume.
 
 .. }}}
 
-The inner product on multivectors
----------------------------------
+Inner product of bivectors in 3-dimensional Euclidean space
+-----------------------------------------------------------
 
 .. {{{
 
-.. warning:: Under construction
+.. warning:: Under construction, last modified |today|
 
-The inner product in 3-dimensional Euclidean space of basis vectors is:
+In a nutshell, the inner product is the concept of a shadow. The inner product
+of two vectors is the one dimensional shadow of one onto the other. The surface
+can be calculated from the determinant of a 2 by 2 matrix. This permits to
+generalize to 3 dimensions (volumes) and above. I show a meaningfull way to
+*lift* the inner product from vectors to bivectors, trivectors, and k-vectors.
+This permits to generalize the definition of the Hodge dual and apply to
+4-dimensional Minkowski space. The inner product in 3-dimensional Euclidean
+space of the basis vectors is:
 
 .. math::
 
-   \braket{∂_i, ∂_j} = δ_{ij}
+   \braket{∂_i|∂_j} = δ_{ij}
 
 Fully expanded, with a notation that I hope obvious, we have:
 
 .. math::
 
-   \begin{matrix}
+   \begin{array}{c|rrr}
            & ∂_x & ∂_y & ∂_z \\
        ∂_x & 1   & 0   & 0   \\
        ∂_y & 0   & 1   & 0   \\
        ∂_z & 0   & 0   & 1   \\
-   \end{matrix}
+   \end{array}
 
-Since we associate through the Hodge dual in 3-dimensional Euclidean space we
-can relate the inner product from vector to bivectors:
+A hint that the inner product can be generalized to surfaces is that in 3
+dimensions, we can associate a basis surface to each basis vectors. it would
+then *feel* natural, that since :math:`∂_x` is associated to :math:`∂_y ∧ ∂_z`
+through Hodge duality, we could expect that the inner product of
+:math:`\braket{∂_x|∂_x}=1` would imply that :math:`\braket{∂_y ∧ ∂_z | ∂_y ∧
+∂_z}=1`. Consider two arbitrary vectors :math:`a^♯` and :math:`b^♯` in
+3-dimensional Euclidean space:
 
-.. math::
+* :math:`a^♯ = p \, ∂_x + q \, ∂_y + r \, ∂_z`
+* :math:`b^♯ = u \, ∂_x + v \, ∂_y + w \, ∂_z`
 
-   \begin{matrix}
-                   & ⋆ ∂_y ∧ ∂_z & ⋆ ∂_z ∧ ∂_x & ⋆ ∂_x ∧ ∂_y \\
-       ⋆ ∂_y ∧ ∂_z & 1           & 0           & 0           \\
-       ⋆ ∂_z ∧ ∂_x & 0           & 1           & 0           \\
-       ⋆ ∂_x ∧ ∂_y & 0           & 0           & 1           \\
-   \end{matrix}
+Now consider the subspace determined by the unit vectors:
 
-With :math:`α^♯ = a \, ∂_x + b \, ∂_y + c \, ∂_z` and :math:`β^♯ = u \, ∂_x + v
-\, ∂_y + w \, ∂_z`, the magnitude of the surface along the :math:`∂_x ∧ ∂_y` is
-the determinant. With
+* :math:`∂_x`
+* :math:`∂_y`
 
-* :math:`∂_x ∧ ∂_y` the plane along the :math:`∂_x` abd :math:`∂_y` unit
-  vectors.
-* :math:`α^♯_{∂_x ∧ ∂_y} = a \, ∂_x + b \, ∂_y` the :math:`α^♯` vector on the
-  :math:`∂_x ∧ ∂_y` plane.
-* :math:`β^♯_{∂_x ∧ ∂_y} = u \, ∂_x + v \, ∂_y` the :math:`β^♯` vector on the
-  :math:`∂_x ∧ ∂_y` plane.
+And the plane along these :math:`∂_x` and :math:`∂_y` unit vectors:
 
-.. math::
+* :math:`∂_x ∧ ∂_y`
 
-   \|α^♯ ∧ β^♯\|_{∂_x ∧ ∂_y} =
-   \begin{vmatrix}
-       a & u \\
-       b & v \\
-   \end{vmatrix}
-   = av - ub
+The components of :math:`a^♯` and :math:`b^♯` on the :math:`∂_x ∧ ∂_y` plane
+are:
 
-So what we would like to have for the inner product of two vectors is the
-projection of a vector onto another. In the same manner, the inner product of
-two bivectors is the projection of a surface onto another.
+* :math:`p \, ∂_x + q \, ∂_y`
+* :math:`u \, ∂_x + v \, ∂_y`
 
-.. image:: https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Area_parallellogram_as_determinant.svg/891px-Area_parallellogram_as_determinant.svg.png
+.. figure:: https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Area_parallellogram_as_determinant.svg/891px-Area_parallellogram_as_determinant.svg.png
    :width: 250px
-   :align: center
+   :align: right
 
-Now rewrite slightly to be able to generalize. The surface covered by
-:math:`α^♯` and :math:`β^♯` in the :math:`∂_x ∧ ∂_y` unit plane is the inner
-product on surfaces (or 2-forms) :math:`\braket{α^♯ ∧ β^♯|∂_x ∧ ∂_y}`:
+   This figure needs to be replaced by a better depiction
+
+The magnitude of the surface determined by :math:`a^♯` and :math:`b^♯` along
+the :math:`∂_x ∧ ∂_y` plane is the inner product on bivectors. This generalizes
+the inner product of vectors. The inner product of vectors correspond to the
+projection of vectors onto another, and the inner product of bivectors
+correspond to the projection of surfaces onto another.
 
 .. math::
 
-   \braket{α^♯ ∧ β^♯ | ∂_x ∧ ∂_y}
+   \braket{α^♯ ∧ β^♯ | ∂_x ∧ ∂_y} =
    \begin{vmatrix}
-       a & u \\
-       b & v \\
+       p & u \\
+       q & v \\
+   \end{vmatrix}
+   = pv - uq
+
+With this quantity, we measure the amount of shadow from the surface determined
+by :math:`a^♯` and :math:`b^♯` onto the plane determined by :math:`∂_x` and
+:math:`∂_y` in term of the unit surface :math:`∂_x ∧ ∂_y`. So what we would
+like to have for the inner product of two vectors is the projection of a vector
+onto another. In the same manner, the inner product of two bivectors is the
+projection of a surface onto another. We rewrite slightly in order to
+generalize. The surface covered by :math:`a^♯` and :math:`b^♯` in the
+:math:`∂_x ∧ ∂_y` unit plane is the inner product of surfaces (or 2-vectors)
+:math:`\braket{a^♯ ∧ b^♯|∂_x ∧ ∂_y}`:
+
+.. math::
+
+   \braket{a^♯ ∧ b^♯ | ∂_x ∧ ∂_y}
+   =
+   \begin{vmatrix}
+       p & u \\
+       q & v \\
    \end{vmatrix}
    =
    \begin{vmatrix}
-       α^♯ \cdot ∂_x & β^♯ \cdot ∂_x \\
-       α^♯ \cdot ∂_y & β^♯ \cdot ∂_y \\
+       \braket{a^♯ | ∂_x} & \braket{b^♯ | ∂_x} \\
+       \braket{a^♯ | ∂_y} & \braket{b^♯ | ∂_y} \\
    \end{vmatrix}
 
 We now have a technique to generalize and calculate the inner product to
-2-forms. In 3-dimensional Euclidean space, we substitute :math:`α^♯` by
-:math:`∂_i` and :math:`β^♯` by :math:`∂_j`
+2-forms. In 3-dimensional Euclidean space, we substitute :math:`a^♯` by
+:math:`∂_i` and :math:`b^♯` by :math:`∂_j`:
 
 .. math::
 
-   \braket{α^♯ ∧ β^♯ | ∂_x ∧ ∂_y}
+   \braket{a^♯ ∧ b^♯ | ∂_x ∧ ∂_y}
    =
    \begin{vmatrix}
-       α^♯ \cdot ∂_x & β^♯ \cdot ∂_x \\
-       α^♯ \cdot ∂_y & β^♯ \cdot ∂_y \\
+       \braket{a^♯ | ∂_x} & \braket{b^♯ | ∂_x} \\
+       \braket{a^♯ | ∂_y} & \braket{b^♯ | ∂_y} \\
    \end{vmatrix}
+
+With this, we have determined the surface of any arbitrary vector onto the
+basis surfaces. We can replace :math:`a^♯` and :math:`b^♯` with any of the
+basis vectors. For example, with :math:`a^♯=∂_y`  and :math:`b^♯=∂_z`, we get:
+
+.. math::
+
+   \braket{∂_y ∧ ∂_z | ∂_x ∧ ∂_y}
+   =
+   \begin{vmatrix}
+       \braket{∂_y | ∂_x} & \braket{∂_z | ∂_x} \\
+       \braket{∂_y | ∂_y} & \braket{∂_z | ∂_y} \\
+   \end{vmatrix}
+   =
+   \begin{vmatrix}
+       0 & 0 \\
+       0 & 0 \\
+   \end{vmatrix}
+   =0
+
+with :math:`a^♯=∂_x`  and :math:`b^♯=∂_y`, we get:
+
+.. math::
+
+   \braket{∂_x ∧ ∂_y | ∂_x ∧ ∂_y}
+   =
+   \begin{vmatrix}
+       \braket{∂_x | ∂_x} & \braket{∂_y | ∂_x} \\
+       \braket{∂_x | ∂_y} & \braket{∂_y | ∂_y} \\
+   \end{vmatrix}
+   =
+   \begin{vmatrix}
+       1 & 0 \\
+       0 & 1 \\
+   \end{vmatrix}
+   =1
+
+Doing this for all possible bivector basis pairs, we obtain:
 
 .. math::
 
@@ -265,6 +324,79 @@ We now have a technique to generalize and calculate the inner product to
        ∂_x ∧ ∂_y & 0         & 0         & 1         \\
    \end{matrix}
 
+With this, we can generalize and lift the inner product to trivectors. In
+3-dimensional Euclidean space, we get:
+
+.. math::
+
+   \braket{∂_x ∧ ∂_y ∧ ∂_z | ∂_x ∧ ∂_y ∧ ∂_z}
+   =
+   \begin{vmatrix}
+       \braket{∂_x | ∂_x} & \braket{∂_y | ∂_x} & \braket{∂_z | ∂_x}\\
+       \braket{∂_x | ∂_y} & \braket{∂_y | ∂_y} & \braket{∂_z | ∂_y}\\
+       \braket{∂_x | ∂_z} & \braket{∂_y | ∂_z} & \braket{∂_z | ∂_z}\\
+   \end{vmatrix}
+   =
+   \begin{vmatrix}
+       1 & 0 & 0\\
+       0 & 1 & 0\\
+       0 & 0 & 1\\
+   \end{vmatrix}
+   =1
+
+Also, with this, we can see how we can reasonably lift the innner product on
+k-forms in Minkowski space in a manner that makes sense.
+
+.. }}}
+
+Inner product of k-forms in Minkowski space
+-------------------------------------------
+
+.. {{{
+
+.. warning:: Under construction, last modified |today|
+
+The inner product in Minkowski space of the basis vectors is:
+
+.. math::
+
+   \braket{∂_μ|∂_ν} = η_{μν}
+
+Fully expanded, with a notation that I hope obvious, we have:
+
+.. math::
+
+   \begin{array}{c|rrr}
+           & ∂_t & ∂_x & ∂_y & ∂_z \\
+       \hline
+       ∂_t & +1  &  0  &  0  &  0  \\
+       ∂_x &  0  & -1  &  0  &  0  \\
+       ∂_y &  0  &  0  & -1  &  0  \\
+       ∂_z &  0  &  0  &  0  & -1  \\
+   \end{array}
+
+We can use our formulation for lifting the inner product to bivectors:
+
+.. math::
+
+   \braket{∂_μ ∧ ∂_ν | ∂_ρ ∧ ∂_σ}
+   =
+   \begin{vmatrix}
+       \braket{∂_μ | ∂_ρ} & \braket{∂_ν | ∂_ρ} \\
+       \braket{∂_μ | ∂_σ} & \braket{∂_ν | ∂_σ} \\
+   \end{vmatrix}
+
+And also to trivectors:
+
+.. math::
+
+   \braket{∂_μ ∧ ∂_ν | ∂_ρ ∧ ∂_σ}
+   =
+   \begin{vmatrix}
+       \braket{∂_μ | ∂_ρ} & \braket{∂_ν | ∂_ρ} \\
+       \braket{∂_μ | ∂_σ} & \braket{∂_ν | ∂_σ} \\
+   \end{vmatrix}
+
 .. }}}
 
 .. _duality_in_minkowski_space:
@@ -274,6 +406,8 @@ Duality in Minkowski Space
 --------------------------
 
 .. {{{
+
+.. warning:: Under construction, last modified |today|
 
 .. math::
 
