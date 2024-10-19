@@ -16,14 +16,6 @@ Hodge Duality
 
 .. {{{
 
-I had not anticipated that this article would attract any attention, but it
-seems to be read regularly. When I say *attract attention*, I do not mean
-Taylor Swift level of popular, but certainly W.V.D Hodge level of popular.
-Anyway, I am at the moment revisiting this article and adding material,
-especially with respect to Minkowski splace. Be aware there are typos and
-likely mistakes, even though I try to keep everything correct. This page was
-last modified |today|.
-
 The Hodge dual is in my opinion often presented with unnecessary complexity,
 frequently involving from the outset a number of dimensions beyond three,
 varying metric signatures, and a formal mathematical approach. However, the
@@ -52,6 +44,14 @@ relevant bit of notation from this Cartan-Hodge formalism is that basis vectors
 I don't necessarily expect all readers to have ever considered partial
 derivatives as basis vectors. For our purpose, this is simply a matter of using
 a notation, which is both widespread and standard.
+
+I had not anticipated that this article would attract any attention, but it
+seems to be read regularly. When I say *attract attention*, I do not mean
+Taylor Swift level of popular, but certainly W.V.D Hodge level of popular.
+Anyway, I am at the moment revisiting this article and adding material,
+especially with respect to Minkowski space. Be aware there are typos and likely
+mistakes, even though I try to keep everything correct. This page was last
+modified |today|.
 
 .. }}}
 
@@ -694,6 +694,75 @@ Hodge duals of k-vectors in Minkowski space
 With this, we can conclude and fully determine the Hodge dual of all k-vectors
 in Minkowski space:
 
+.. rubric:: vectors
+
+.. math::
+
+   ⋆ ∂_t & = ∂_x ∧ ∂_y ∧ ∂_z \\
+   ⋆ ∂_x & = ∂_t ∧ ∂_y ∧ ∂_z \\
+   ⋆ ∂_y & = ∂_t ∧ ∂_z ∧ ∂_x \\
+   ⋆ ∂_z & = ∂_t ∧ ∂_x ∧ ∂_y \\
+
+.. admonition:: Full calculations of the Hodge dual of vectors
+   :class: dropdown
+
+   To obtain the volume element :math:`∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z`, the Hodge duals
+   must be proportional to:
+
+   .. math::
+
+      ⋆ ∂_t &\propto   & ∂_x ∧ ∂_y ∧ ∂_z \\
+      ⋆ ∂_x &\propto - & ∂_t ∧ ∂_y ∧ ∂_z \\
+      ⋆ ∂_y &\propto - & ∂_t ∧ ∂_z ∧ ∂_x \\
+      ⋆ ∂_z &\propto - & ∂_t ∧ ∂_x ∧ ∂_y \\
+
+   Checking for all entries:
+
+   .. math::
+
+      ⋆ ∂_t \propto ∂_x ∧ ∂_y ∧ ∂_z \rightarrow ∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z \\
+
+   .. math::
+
+      ⋆ ∂_x \propto ∂_t ∧ ∂_y ∧ ∂_z \rightarrow &   & ∂_x ∧ ∂_t ∧ ∂_y ∧ ∂_z \\
+                                                & - & ∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z \\
+   .. math::
+
+      ⋆ ∂_y \propto ∂_t ∧ ∂_z ∧ ∂_x \rightarrow &   & ∂_y ∧ ∂_t ∧ ∂_z ∧ ∂_x \\
+                                                & - & ∂_t ∧ ∂_y ∧ ∂_z ∧ ∂_x \\
+                                                &   & ∂_t ∧ ∂_y ∧ ∂_x ∧ ∂_z \\
+                                                & - & ∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z \\
+   .. math::
+
+      ⋆ ∂_z \propto ∂_t ∧ ∂_x ∧ ∂_y \rightarrow &   & ∂_z ∧ ∂_t ∧ ∂_x ∧ ∂_y \\
+                                                & - & ∂_t ∧ ∂_z ∧ ∂_x ∧ ∂_y \\
+                                                &   & ∂_t ∧ ∂_x ∧ ∂_z ∧ ∂_y \\
+                                                & - & ∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z \\
+
+   Using the definition of the Hodge dual:
+
+   .. math::
+
+      ⋆ ∂_t & = \braket{∂_t | ∂_t} & (+1) & ∂_x ∧ ∂_y ∧ ∂_z \\
+      ⋆ ∂_x & = \braket{∂_x | ∂_x} & (-1) & ∂_t ∧ ∂_y ∧ ∂_z \\
+      ⋆ ∂_y & = \braket{∂_y | ∂_y} & (-1) & ∂_t ∧ ∂_z ∧ ∂_x \\
+      ⋆ ∂_z & = \braket{∂_z | ∂_z} & (-1) & ∂_t ∧ ∂_x ∧ ∂_y \\
+
+   .. math::
+
+      ⋆ ∂_t & = (+1) & (+1) & ∂_x ∧ ∂_y ∧ ∂_z \\
+      ⋆ ∂_x & = (-1) & (-1) & ∂_t ∧ ∂_y ∧ ∂_z \\
+      ⋆ ∂_y & = (-1) & (-1) & ∂_t ∧ ∂_z ∧ ∂_x \\
+      ⋆ ∂_z & = (-1) & (-1) & ∂_t ∧ ∂_x ∧ ∂_y \\
+
+   .. math::
+
+      ⋆ ∂_t & = ∂_x ∧ ∂_y ∧ ∂_z \\
+      ⋆ ∂_x & = ∂_t ∧ ∂_y ∧ ∂_z \\
+      ⋆ ∂_y & = ∂_t ∧ ∂_z ∧ ∂_x \\
+      ⋆ ∂_z & = ∂_t ∧ ∂_x ∧ ∂_y \\
+
+
 .. rubric:: bivectors
 
 .. math::
@@ -755,13 +824,13 @@ in Minkowski space:
 
 .. math::
 
-   ⋆ ∂_x ∧ ∂_y ∧ ∂_z &\propto ∂_t \\
-   ⋆ ∂_t ∧ ∂_y ∧ ∂_z &\propto ∂_x \\
-   ⋆ ∂_t ∧ ∂_z ∧ ∂_x &\propto ∂_y \\
-   ⋆ ∂_t ∧ ∂_x ∧ ∂_y &\propto ∂_z \\
+   ⋆ ∂_x ∧ ∂_y ∧ ∂_z &= ∂_t \\
+   ⋆ ∂_t ∧ ∂_y ∧ ∂_z &= ∂_x \\
+   ⋆ ∂_t ∧ ∂_z ∧ ∂_x &= ∂_y \\
+   ⋆ ∂_t ∧ ∂_x ∧ ∂_y &= ∂_z \\
 
 .. admonition:: Full calculations of the Hodge dual of trivectors
-   :class: dropdown,toggle-shown
+   :class: dropdown
 
    To obtain the volume element :math:`∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z`, the Hodge duals
    must be proportional to:
@@ -810,10 +879,10 @@ in Minkowski space:
 
    .. math::
 
-      ⋆ ∂_x ∧ ∂_y ∧ ∂_z &=   ∂_t \\
-      ⋆ ∂_t ∧ ∂_y ∧ ∂_z &= tbd ∂_x \\
-      ⋆ ∂_t ∧ ∂_z ∧ ∂_x &= tbd ∂_y \\
-      ⋆ ∂_t ∧ ∂_x ∧ ∂_y &= tbd ∂_z \\
+      ⋆ ∂_x ∧ ∂_y ∧ ∂_z &= ∂_t \\
+      ⋆ ∂_t ∧ ∂_y ∧ ∂_z &= ∂_x \\
+      ⋆ ∂_t ∧ ∂_z ∧ ∂_x &= ∂_y \\
+      ⋆ ∂_t ∧ ∂_x ∧ ∂_y &= ∂_z \\
 
 To double-check the results, I recommend the video `Differential Forms | The
 Minkowski metric and the Hodge operator

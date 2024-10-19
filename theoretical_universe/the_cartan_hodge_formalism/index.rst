@@ -114,4 +114,50 @@ also valid in the free matrix representation:
 The Hodge duality assumes a central role, transitioning tensors between spaces
 and their dual complements. Additionally, I introduce the free matrix notation
 to streamline calculations, often allowing a straightforward return to matrix
-multiplication.
+multiplication. The inner product of k-forms in Minkowski space are calculated.
+For vectors, we have:
+
+.. math::
+
+   \begin{array}{c|rrr}
+           & ∂_t & ∂_x & ∂_y & ∂_z \\
+       \hline
+       ∂_t & +1  &  0  &  0  &  0  \\
+       ∂_x &  0  & -1  &  0  &  0  \\
+       ∂_y &  0  &  0  & -1  &  0  \\
+       ∂_z &  0  &  0  &  0  & -1  \\
+   \end{array}
+
+For bivectors, we have:
+
+.. math::
+
+   \begin{array}{c|rrrrrr}
+             & ∂_t ∧ ∂_x & ∂_t ∧ ∂_y & ∂_t ∧ ∂_z & ∂_y ∧ ∂_z & ∂_z ∧ ∂_x & ∂_x ∧ ∂_y \\
+             \hline
+   ∂_t ∧ ∂_x & -1        &  0        &  0        &   0       &  0        &  0        \\
+   ∂_t ∧ ∂_y &  0        & -1        &  0        &   0       &  0        &  0        \\
+   ∂_t ∧ ∂_z &  0        &  0        & -1        &   0       &  0        &  0        \\
+   ∂_y ∧ ∂_z &  0        &  0        &  0        &  +1       &  0        &  0        \\
+   ∂_z ∧ ∂_x &  0        &  0        &  0        &   0       & +1        &  0        \\
+   ∂_x ∧ ∂_y &  0        &  0        &  0        &   0       &  0        & +1        \\
+   \end{array}
+
+For trivectors, we have:
+
+.. math::
+
+   \begin{array}{c|rrrr}
+                   & ∂_x ∧ ∂_y ∧ ∂_z & ∂_t ∧ ∂_y ∧ ∂_z & ∂_t ∧ ∂_z ∧ ∂_x & ∂_t ∧ ∂_x ∧ ∂_y \\
+                   \hline
+   ∂_x ∧ ∂_y ∧ ∂_z & -1              &  0              &   0             &   0             \\
+   ∂_t ∧ ∂_y ∧ ∂_z &  0              & +1              &   0             &   0             \\
+   ∂_t ∧ ∂_z ∧ ∂_x &  0              &  0              &  +1             &   0             \\
+   ∂_t ∧ ∂_x ∧ ∂_y &  0              &  0              &   0             &  +1             \\
+   \end{array}
+
+For quadvectors, we have:
+
+.. math::
+
+   \braket{∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z | ∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z} = -1
