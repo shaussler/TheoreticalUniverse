@@ -45,15 +45,6 @@ I don't necessarily expect all readers to have ever considered partial
 derivatives as basis vectors. For our purpose, this is simply a matter of using
 a notation, which is both widespread and standard.
 
-I had not anticipated that this article would attract any attention, but it
-seems to be read regularly. When I say *attract attention*, I do not mean
-Taylor-Swift-level-of-popular, but more like W.-V.-D.-Hodge-level-of-popular.
-Anyway, I am at the moment revisiting this article and adding material,
-especially with respect to Minkowski space. Please note that parts of the
-article are still in rough draft form, and there certainly are typos and
-mistakes despige my efforts to keep everything accurate. This page was last
-modified |today|.
-
 Finally, I would like to point out the exceptional work of `Michael Penn
 <https://www.michael-penn.net>`_ for the quality of his content. In particular,
 I recommend the following:
@@ -65,6 +56,15 @@ These videos provide an alternative, yet equivalent, approach to the
 conclusions presented in this article. There is also the added bonus that he
 uses the same metric signature :math:`(+,-,-,-)` as me. I prefer my way, but I
 learned and understood first his way.
+
+I had not anticipated that this article would attract any attention, but it
+seems to be read regularly. When I say *attract attention*, I do not mean
+Taylor-Swift-level-of-popular, but more like W.-V.-D.-Hodge-level-of-popular.
+Anyway, I am at the moment revisiting this article and adding material,
+especially with respect to Minkowski space. Please note that parts of the
+article are still in rough draft form, and there certainly are typos and
+mistakes despite my efforts to keep everything accurate. This page was last
+modified |today|.
 
 .. }}}
 
@@ -323,7 +323,7 @@ terms of the inner products of vectors:
        \braket{a^♯ | ∂_y} & \braket{b^♯ | ∂_y} \\
    \end{vmatrix}
 
-Or put together in a condensed form:
+Or put together in condensed form:
 
 .. math::
 
@@ -334,11 +334,9 @@ Or put together in a condensed form:
    \end{vmatrix}
 
 With this, we have determined the surface of any arbitrary vector onto the
-basis surfaces. We can replace :math:`a^♯` and :math:`b^♯` with any of the
-basis vectors. For example, with :math:`a^♯=∂_y`  and :math:`b^♯=∂_z`, we get:
-We now have a technique to determine the inner product of all 2-forms. In
-3-dimensional Euclidean space, we substitute :math:`a^♯` by :math:`∂_i` and
-:math:`b^♯` by :math:`∂_j` to obtain:
+basis surfaces. We can replace vectors :math:`a^♯` and :math:`b^♯` with any of
+the basis vectors :math:`∂_x`, :math:`∂_y`, or :math:`∂_z`. We now have a
+technique to determine the inner product of all 2-forms:
 
 .. math::
 
@@ -456,9 +454,9 @@ Finally, we can generalize lifting the inner product to trivectors. In
 
    \braket{∂_x ∧ ∂_y ∧ ∂_z | ∂_x ∧ ∂_y ∧ ∂_z} = 1
 
-With this, we remakr that we have found a reasonable way to extend the inner
-product on k-forms in Minkowski space. This approach is meaningful, as the
-inner product of the basis vectors inherently incorporates the metric
+With this, we remark we have found a meaningfull and reasonable way to extend
+the inner product to k-forms in Minkowski space. This approach is meaningful,
+as the inner product of the basis vectors inherently incorporates the metric
 signature.
 
 .. }}}
