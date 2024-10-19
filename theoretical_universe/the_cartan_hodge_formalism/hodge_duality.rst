@@ -47,11 +47,24 @@ a notation, which is both widespread and standard.
 
 I had not anticipated that this article would attract any attention, but it
 seems to be read regularly. When I say *attract attention*, I do not mean
-Taylor Swift level of popular, but certainly W.V.D Hodge level of popular.
+Taylor-Swift-level-of-popular, but more like W.-V.-D.-Hodge-level-of-popular.
 Anyway, I am at the moment revisiting this article and adding material,
-especially with respect to Minkowski space. Be aware there are typos and likely
-mistakes, even though I try to keep everything correct. This page was last
+especially with respect to Minkowski space. Please note that parts of the
+article are still in rough draft form, and there certainly are typos and
+mistakes despige my efforts to keep everything accurate. This page was last
 modified |today|.
+
+Finally, I would like to point out the exceptional work of `Michael Penn
+<https://www.michael-penn.net>`_ for the quality of his content. In particular,
+I recommend the following:
+
+* `Differential Forms | The Hodge operator via an inner product <https://m.youtube.com/watch?v=iLlaFBMk_Bs&list=PLHlTqVYmqunWXBoO3xZhQOAoc8oqd-2Su&index=58&t=225s&pp=gAQBiAQB>`_.
+* `Differential Forms | The Minkowski metric and the Hodge operator <https://m.youtube.com/watch?v=vDRfADusqYQ>`_.
+
+These videos provide an alternative, yet equivalent, approach to the
+conclusions presented in this article. There is also the added bonus that he
+uses the same metric signature :math:`(+,-,-,-)` as me. I prefer my way, but I
+learned and understood first his way.
 
 .. }}}
 
@@ -170,34 +183,39 @@ flip their signs with the image of the oriented volume.
 
 .. }}}
 
-Inner product of bivectors in 3-dimensional Euclidean space
------------------------------------------------------------
+Inner product of k-vectors
+--------------------------
+
+bivectors in 3-dimensional Euclidean space
+''''''''''''''''''''''''''''''''''''''''''
 
 .. {{{
 
-In essence, the inner product can be understood as the concept of shadow. The
-inner product between vectors is the one dimensional shadow of one onto the
-other. The inner product between bivectors is the surface shadow of one surface
-onto the other. The 2-dimensional surface can be calculated from the
-determinant of a 2 by 2 matrix. This permit to generalize to 3-dimensions by
-calculating the determinant of a 3 by 3 matrix, corresponding to the volume
-covered by three vectors. A k-dimensional shadow can then calculated using a k
-by k matrix, corresponding to hypervolumes of dimension k. This permits to find
-a meaningfull way to *lift* the inner product from vectors to bivectors,
+In essence, the inner product can be understood as the concept of measuring a
+shadow. The inner product between two vectors is the measure of the
+1-dimensional shadow of one vector onto the other. Similarly, the inner product
+between bivectors is the measure of the surface shadow of one surface onto the
+other. This 2-dimensional surface can be calculated from the determinant of a
+:math:`2 ⨯ 2` matrix. We then generalize to 3-dimensions by calculating the
+determinant of :math:`3 ⨯ 3` matrices, corresponding to the volumes covered by
+3-vectors. A k-dimensional shadow measure can then be calculated using :math:`k
+⨯ k` matrices, corresponding to hypervolumes of dimension k. This permits to
+find a meaningfull way to *lift* the inner product from vectors to bivectors,
 trivectors, and k-vectors. Lifting the inner product will finally permit to
 generalize the the Hodge dual to any metric signature, and apply to Minkowski
-space (here with metric signature :math:`(+,-,-,-)`). The inner product in
-3-dimensional Euclidean space of the basis vectors is:
+space with metric signature :math:`(+,-,-,-)`. In 3-dimensional Euclidean
+space, the inner product of the basis vectors, denoted with with either the dot
+symbol :math:`\cdot` or the bracket symbol :math:`\braket{|}` is given by:
 
 .. math::
 
-   \braket{∂_i|∂_j} = δ_{ij}
+   ∂_i \cdot ∂_j = \braket{∂_i|∂_j} = δ_{ij}
 
 Consequently, we obtain the following dot products:
 
 .. math::
 
-   \begin{array}{c|rrr}
+   \begin{array}{c|ccc}
            & ∂_x & ∂_y & ∂_z \\
        \hline
        ∂_x & 1   & 0   & 0   \\
@@ -207,11 +225,12 @@ Consequently, we obtain the following dot products:
 
 A hint that the inner product can be generalized to surfaces is that in 3
 dimensions, we can associate a basis surface to each of the basis vectors
-through the Hodge dual, as argued above. It may then *feels natural,* since
-:math:`∂_x` is associated to :math:`∂_y ∧ ∂_z`, to expect that the inner
-product of :math:`\braket{∂_x|∂_x}=1` implies that :math:`\braket{∂_y ∧ ∂_z |
-∂_y ∧ ∂_z}=1`. Let us consider two vectors :math:`a^♯` and :math:`b^♯` in
-3-dimensional Euclidean space, written in component form as:
+through the Hodge dual, as argued at the beginning of this article. It may then
+*feel natural,* since :math:`∂_x` is associated to :math:`∂_y ∧ ∂_z`, to expect
+that the inner product :math:`\braket{∂_x|∂_x}=1` implies that
+:math:`\braket{∂_y ∧ ∂_z | ∂_y ∧ ∂_z}=1`. Let us consider two vectors
+:math:`a^♯` and :math:`b^♯` in 3-dimensional Euclidean space, written in
+component form as:
 
 * :math:`a^♯ = p \, ∂_x + q \, ∂_y + r \, ∂_z`
 * :math:`b^♯ = u \, ∂_x + v \, ∂_y + w \, ∂_z`
@@ -228,9 +247,10 @@ vectors :math:`∂_x` and :math:`∂_y`:
 
    Surfaces and the determinant of 2x2 matrices.
 
-The magnitude of the surface shadow determined by :math:`a^♯` and :math:`b^♯`
-on the :math:`∂_x ∧ ∂_y` plane is the inner product on bivectors. This lifts
-the inner product from vectors to bivectors through the determinant:
+The measure of the amount of shadow of the surface determined by vectors
+:math:`a^♯` and :math:`b^♯` on the :math:`∂_x ∧ ∂_y` plane is the inner product
+on bivectors. This lifts the inner product from vectors to bivectors through
+the determinant:
 
 .. math::
 
@@ -261,11 +281,11 @@ In the same manner we obtain:
    \end{vmatrix}
    = ru - pw
 
-With this quantities, we measure the amount of shadow from the surface
-determined by :math:`a^♯` and :math:`b^♯` onto the unit surface :math:`∂_y ∧
-∂_z`, :math:`∂_z ∧ ∂_x`, and :math:`∂_x ∧ ∂_y`, . We can modify the expression
-slightly in order to express the inner product of bivectors in terms of the
-inner products of vectors:
+With this quantities, we have measured the amount of shadow from the surface
+determined by vectors :math:`a^♯` and :math:`b^♯` onto the unit surface
+:math:`∂_y ∧ ∂_z`, :math:`∂_z ∧ ∂_x`, and :math:`∂_x ∧ ∂_y`, . We can modify
+the expression slightly in order to express the inner product of bivectors in
+terms of the inner products of vectors:
 
 .. math::
 
@@ -303,7 +323,7 @@ inner products of vectors:
        \braket{a^♯ | ∂_y} & \braket{b^♯ | ∂_y} \\
    \end{vmatrix}
 
-Or in other words:
+Or put together in a condensed form:
 
 .. math::
 
@@ -328,22 +348,37 @@ We now have a technique to determine the inner product of all 2-forms. In
        \braket{∂_i | ∂_l} & \braket{∂_j | ∂_l} \\
    \end{vmatrix}
 
-Which permits to perform calculations:
+Which permits to obtain:
 
 .. math::
 
-   \braket{∂_y ∧ ∂_z | ∂_x ∧ ∂_y}
+   \braket{∂_y ∧ ∂_z | ∂_y ∧ ∂_z}
    =
    \begin{vmatrix}
-       \braket{∂_y | ∂_x} & \braket{∂_z | ∂_x} \\
        \braket{∂_y | ∂_y} & \braket{∂_z | ∂_y} \\
+       \braket{∂_y | ∂_z} & \braket{∂_z | ∂_z} \\
    \end{vmatrix}
    =
    \begin{vmatrix}
-       0 & 0 \\
-       0 & 0 \\
+       1 & 0 \\
+       0 & 1 \\
    \end{vmatrix}
-   =0
+   =1
+
+.. math::
+
+   \braket{∂_z ∧ ∂_x | ∂_z ∧ ∂_x}
+   =
+   \begin{vmatrix}
+       \braket{∂_z | ∂_z} & \braket{∂_x | ∂_z} \\
+       \braket{∂_z | ∂_x} & \braket{∂_x | ∂_x} \\
+   \end{vmatrix}
+   =
+   \begin{vmatrix}
+       1 & 0 \\
+       0 & 1 \\
+   \end{vmatrix}
+   =1
 
 .. math::
 
@@ -360,7 +395,25 @@ Which permits to perform calculations:
    \end{vmatrix}
    =1
 
-Doing this for all 9 possible bivector basis combinations, we obtain:
+All other inner products are zero. For example:
+
+.. math::
+
+   \braket{∂_y ∧ ∂_z | ∂_x ∧ ∂_y}
+   =
+   \begin{vmatrix}
+       \braket{∂_y | ∂_x} & \braket{∂_z | ∂_x} \\
+       \braket{∂_y | ∂_y} & \braket{∂_z | ∂_y} \\
+   \end{vmatrix}
+   =
+   \begin{vmatrix}
+       0 & 0 \\
+       0 & 0 \\
+   \end{vmatrix}
+   =0
+
+Doing this systematically for all 9 possible combinations bivector basis, we
+obtain:
 
 .. math::
 
@@ -372,33 +425,46 @@ Doing this for all 9 possible bivector basis combinations, we obtain:
        ∂_x ∧ ∂_y & 0         & 0         & 1         \\
    \end{array}
 
-Finally, we can generalize by lifting the inner product to trivectors. In
-3-dimensional Euclidean space, we get:
+.. figure:: https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Determinant_parallelepiped.svg/912px-Determinant_parallelepiped.svg.png
+   :width: 250px
+   :align: right
+
+   Volumes and the determinant of 3x3 matrices.
+
+Finally, we can generalize lifting the inner product to trivectors. In
+3-dimensional Euclidean space, we get for the unit trivector:
 
 .. math::
 
-   \braket{∂_x ∧ ∂_y ∧ ∂_z | ∂_x ∧ ∂_y ∧ ∂_z}
-   =
+   \braket{∂_x ∧ ∂_y ∧ ∂_z | ∂_x ∧ ∂_y ∧ ∂_z} =
    \begin{vmatrix}
        \braket{∂_x | ∂_x} & \braket{∂_y | ∂_x} & \braket{∂_z | ∂_x}\\
        \braket{∂_x | ∂_y} & \braket{∂_y | ∂_y} & \braket{∂_z | ∂_y}\\
        \braket{∂_x | ∂_z} & \braket{∂_y | ∂_z} & \braket{∂_z | ∂_z}\\
    \end{vmatrix}
-   =
+
+.. math::
+
+   \braket{∂_x ∧ ∂_y ∧ ∂_z | ∂_x ∧ ∂_y ∧ ∂_z} =
    \begin{vmatrix}
        1 & 0 & 0\\
        0 & 1 & 0\\
        0 & 0 & 1\\
    \end{vmatrix}
-   =1
 
-Also, with this, we can see how we can reasonably lift the innner product on
-k-forms in Minkowski space in a manner that makes sense.
+.. math::
+
+   \braket{∂_x ∧ ∂_y ∧ ∂_z | ∂_x ∧ ∂_y ∧ ∂_z} = 1
+
+With this, we remakr that we have found a reasonable way to extend the inner
+product on k-forms in Minkowski space. This approach is meaningful, as the
+inner product of the basis vectors inherently incorporates the metric
+signature.
 
 .. }}}
 
-Inner product of k-vectors in Minkowski space
----------------------------------------------
+k-vectors in Minkowski space
+''''''''''''''''''''''''''''
 
 .. {{{
 
@@ -685,11 +751,13 @@ product :math:`\braket{∂_t ∧ ∂_x | ∂_t ∧ ∂_x} = -1`. Thus, we obtain
 .. _duality_in_minkowski_space:
 .. _Duality in Minkowski Space:
 
-Hodge duals of k-vectors in Minkowski space
--------------------------------------------
+Duality in Minkowski space
+--------------------------
+
+k-vectors
+'''''''''
 
 .. {{{
-
 
 With this, we can conclude and fully determine the Hodge dual of all k-vectors
 in Minkowski space:
@@ -884,21 +952,15 @@ in Minkowski space:
       ⋆ ∂_t ∧ ∂_z ∧ ∂_x &= ∂_y \\
       ⋆ ∂_t ∧ ∂_x ∧ ∂_y &= ∂_z \\
 
-To double-check the results, I recommend the video `Differential Forms | The
-Minkowski metric and the Hodge operator
-<https://m.youtube.com/watch?v=vDRfADusqYQ>`_ by Michael Penn.
-
 .. }}}
 
-Hodge duals of k-forms in Minkowski space
------------------------------------------
+k-forms
+'''''''
 
 .. {{{
 
-.. warning:: Under construction, last modified |today|
-
-As a final note, we can repeat the definition of the Hodge dual of k-vectors
-to k-forms. Indeed the inner product is:
+As a final note, we can repeat the definition of the Hodge dual of k-vectors to
+k-forms. Indeed the inner product is:
 
 .. math::
 
