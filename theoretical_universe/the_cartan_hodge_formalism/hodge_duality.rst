@@ -167,19 +167,18 @@ Inner product of bivectors in 3-dimensional Euclidean space
 
 .. {{{
 
-.. warning:: Under construction, last modified |today|
-
 In essence, the inner product can be understood as the concept of shadow. The
 inner product between vectors is the one dimensional shadow of one onto the
 other. The inner product between bivectors is the surface shadow of one surface
 onto the other. The 2-dimensional surface can be calculated from the
-determinant of a 2 by 2 matrix. This will permit to generalize to 3-dimensional
-shadows, which can be calculated as the determinant of a 3 by 3 matrix, and
-above. A k-dimensional shadow is then calculated using a k by k matrix. This
-permits to find a meaningfull way to *lift* the inner product from vectors to
-bivectors, trivectors, and k-vectors. This approach will finally lead to
-generalizing the definition of the Hodge dual, applicable Minkowski space, and
-here with metric signature :math:`(+,-,-,-)`. The inner product in
+determinant of a 2 by 2 matrix. This permit to generalize to 3-dimensions by
+calculating the determinant of a 3 by 3 matrix, corresponding to the volume
+covered by three vectors. A k-dimensional shadow can then calculated using a k
+by k matrix, corresponding to hypervolumes of dimension k. This permits to find
+a meaningfull way to *lift* the inner product from vectors to bivectors,
+trivectors, and k-vectors. Lifting the inner product will finally permit to
+generalize the the Hodge dual to any metric signature, and apply to Minkowski
+space (here with metric signature :math:`(+,-,-,-)`). The inner product in
 3-dimensional Euclidean space of the basis vectors is:
 
 .. math::
@@ -394,8 +393,6 @@ Inner product of k-vectors in Minkowski space
 ---------------------------------------------
 
 .. {{{
-
-.. warning:: Under construction, last modified |today|
 
 The inner product in Minkowski space of the basis vectors is:
 

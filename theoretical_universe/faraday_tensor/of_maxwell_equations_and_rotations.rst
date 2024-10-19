@@ -228,7 +228,7 @@ A Single Equation
 
 With the explicit component form of the Cartan-Hodge formalism, it may now be
 obvious that since :math:`⋆\:d\:F` is a 1-form and :math:`d⋆F` a 3-form, we can
-unambiguously merge inhomogenous and homogenous equations [note1]_.
+unambiguously merge inhomogeneous and homogeneous equations [note1]_.
 
 .. math::
 
@@ -293,7 +293,7 @@ proportional to the 4-current.
 
    Since :math:`d\:\mathbf{F}` is a 3-form, its Hodge dual
    :math:`⋆\:d\:\mathbf{F}` is a 1-form. We can thus rewrite the homogenous
-   equation as acting on 1-forms, and the inhomogenous equations as acting on
+   equation as acting on 1-forms, and the inhomogeneous equations as acting on
    3-forms:
 
    .. math::
@@ -308,8 +308,8 @@ proportional to the 4-current.
       ⋆ \: d \: \mathbf{F} =& \: 0\:dt + 0\:dx + 0\:dy + 0\:dz                                             \\
       d⋆\mathbf{F}         =& \: \mu_0 ρ dx∧dy∧dz - μ_0 J^x dt∧dy∧dz - μ_0 J^y dt∧dz∧dx - μ_0 J^z dt∧dx∧dy \\
 
-   Therefore, the differential geometric formulation can be unambigously reduced
-   to a single equation involving both 3-forms and 1-forms:
+   Therefore, the differential geometric formulation can be unambiguously
+   reduced to a single equation involving both 3-forms and 1-forms:
 
    .. math::
 

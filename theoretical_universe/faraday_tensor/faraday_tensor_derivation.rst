@@ -55,7 +55,7 @@ Indeed in 1865, the concept of vectors had not yet been introduced.
 of the Maxwell equations. <https://youtu.be/M12CJIuX8D4?si=nuOUEFmRu5Jx4jHJ>`_
 This is the most widespread formulation today. I therefore start from there and
 unpack into a form closer in spirit to the 1865 equation. The equations consist
-of two inhomogenous (Gauss's law and Ampère'circuital law) and two homogenous
+of two inhomogeneous (Gauss's law and Ampère'circuital law) and two homogeneous
 vector equations (Gauss's law for magnetism and Faraday's law of induction),
 which is how I organize the equations.
 
@@ -264,7 +264,7 @@ to:
    = \begin{bmatrix} 0 & 0 & 0 & 0 \end{bmatrix}
 
 We have thus obtained the Faraday tensor (inhomogenous equations) and its dual
-(homogenous equations).
+(homogeneous equations).
 
 .. }}}
 
