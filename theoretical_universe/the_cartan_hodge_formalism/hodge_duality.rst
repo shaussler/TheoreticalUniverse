@@ -191,8 +191,8 @@ Consequently, we obtain the following dot products:
 .. math::
 
    \begin{array}{c|rrr}
-       \hline
            & ∂_x & ∂_y & ∂_z \\
+       \hline
        ∂_x & 1   & 0   & 0   \\
        ∂_y & 0   & 1   & 0   \\
        ∂_z & 0   & 0   & 1   \\
@@ -321,7 +321,6 @@ We now have a technique to determine the inner product of all 2-forms. In
        \braket{∂_i | ∂_l} & \braket{∂_j | ∂_l} \\
    \end{vmatrix}
 
-
 Which permits to perform calculations:
 
 .. math::
@@ -358,7 +357,7 @@ Doing this for all 9 possible bivector basis combinations, we obtain:
 
 .. math::
 
-   \begin{array}{c|lll}
+   \begin{array}{c|cccc}
                  & ∂_y ∧ ∂_z & ∂_z ∧ ∂_x & ∂_x ∧ ∂_y \\
       \hline
        ∂_y ∧ ∂_z & 1         & 0         & 0         \\
@@ -391,8 +390,8 @@ k-forms in Minkowski space in a manner that makes sense.
 
 .. }}}
 
-Inner product of k-forms in Minkowski space
--------------------------------------------
+Inner product of k-vectors in Minkowski space
+---------------------------------------------
 
 .. {{{
 
@@ -404,7 +403,7 @@ The inner product in Minkowski space of the basis vectors is:
 
    \braket{∂_μ|∂_ν} = η_{μν}
 
-Fully expanded, with a notation that I hope obvious, we have:
+Fully expanded in table form we have:
 
 .. math::
 
@@ -428,19 +427,8 @@ We can use our formulation for lifting the inner product to bivectors:
        ∂_μ \cdot ∂_σ & ∂_ν \cdot ∂_σ \\
    \end{vmatrix}
 
-And also to trivectors:
 
-.. math::
-
-   \braket{∂_μ ∧ ∂_ν ∧ ∂_λ | ∂_ρ ∧ ∂_σ ∧ τ}
-   =
-   \begin{vmatrix}
-       ∂_μ \cdot ∂_ρ & ∂_ν \cdot ∂_ρ & ∂_λ \cdot ∂_ρ \\
-       ∂_μ \cdot ∂_σ & ∂_ν \cdot ∂_σ & ∂_λ \cdot ∂_σ \\
-       ∂_μ \cdot ∂_τ & ∂_ν \cdot ∂_τ & ∂_λ \cdot ∂_τ \\
-   \end{vmatrix}
-
-We get:
+We get in table form:
 
 .. math::
 
@@ -537,63 +525,126 @@ We get:
       \end{vmatrix}
       = +1
 
+As well as for trivectors:
+
+.. math::
+
+   \braket{∂_μ ∧ ∂_ν ∧ ∂_λ | ∂_ρ ∧ ∂_σ ∧ τ}
+   =
+   \begin{vmatrix}
+       ∂_μ \cdot ∂_ρ & ∂_ν \cdot ∂_ρ & ∂_λ \cdot ∂_ρ \\
+       ∂_μ \cdot ∂_σ & ∂_ν \cdot ∂_σ & ∂_λ \cdot ∂_σ \\
+       ∂_μ \cdot ∂_τ & ∂_ν \cdot ∂_τ & ∂_λ \cdot ∂_τ \\
+   \end{vmatrix}
+
 .. }}}
 
-Formalizing the definition the Hodge dual
------------------------------------------
+Formal and natural definition
+-----------------------------
 
 .. {{{
 
 .. warning:: Under construction, last modified |today|
 
-The Hodge dual writen with the Hodge star symbol :math:`⋆` is defined based on
-the property that for all k-vectors :math:`α` and :math:`β`:
-
-For 3-dimensional euclidean space:
+In 3-dimensional Euclidean space, the Hodge dual is defined by the property
+that for all k-vectors :math:`α` and :math:`β`, the following holds:
 
 .. math::
 
    α ∧ ⋆ β = ∂_x ∧ ∂_y ∧ ∂_z
 
-But really this is a way to say: Given a m-vector, which k-vector completes the
-space. To generalize to any metric signature, we use the dot product:
+In essence, this asks: Given an m-vector, which k-vector fills the remaining
+space to complete the full volume, as discussed at the beginning of this
+article? I refer to this as the natural definition. To generalize this concept
+to any metric signature, we utilize the dot product:
 
 .. math::
 
    α ∧ ⋆ β = \braket{α | β} ∂_x ∧ ∂_y ∧ ∂_z
 
-Which is equivalent to 3-dimensional Euclidean space.
+This reduces to the initial definition in 3-dimensional Euclidean space. In
+Minkowski space, however, we seek the dual k-vector that fills the
+4-dimensional space:
 
 .. math::
 
-   α ∧ ⋆ β = \braket{α | β} ∂_x ∧ ∂_y ∧ ∂_z
+   α ∧ ⋆ β = \braket{α | β} ∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z
 
-As an example, if we are looking for the Hodge dual :math:`⋆ ∂_t ∧ ∂_x`, we
-know it will be :math:`∂_y ∧ ∂_z` to complete the space, and up to a sign
-determined by :math:`\braket{∂_t ∧ ∂_x | ∂_t ∧ ∂_x} = -1`. Hence we have:
+For example, if we seek the Hodge dual :math:`⋆(∂_t ∧ ∂_x)`, we know it will be
+:math:`∂_y ∧ ∂_z` to complete the space, with the sign determined by the inner
+product :math:`\braket{∂_t ∧ ∂_x | ∂_t ∧ ∂_x} = -1`. Thus, we obtain:
 
 .. math::
 
-   ⋆ ∂_t ∧ ∂_x = ∂_y ∧ ∂_z
+   ⋆ ∂_t ∧ ∂_x = - ∂_y ∧ ∂_z
 
 .. }}}
 
 .. _duality_in_minkowski_space:
 .. _Duality in Minkowski Space:
 
-Hodge duality in Minkowski space
---------------------------------
+Hodge duality of k-vectors in Minkowski space
+---------------------------------------------
 
 .. {{{
 
 .. warning:: Under construction, last modified |today|
 
+With this, we can conclude and fully determine the Hodge dual of all k-vectors
+in Minkowski space:
+
 .. math::
 
-   ⋆ dt &= - dx ∧ dy ∧ dz \\
-   ⋆ dx &= - dt ∧ dy ∧ dz \\
-   ⋆ dy &= - dt ∧ dz ∧ dx \\
-   ⋆ dz &= - dt ∧ dx ∧ dy \\
+   ⋆ (∂_t ∧ ∂_x) &= -& ∂_y ∧ ∂_z \\
+   ⋆ (∂_t ∧ ∂_y) &= -& ∂_z ∧ ∂_x \\
+   ⋆ (∂_t ∧ ∂_z) &= -& ∂_x ∧ ∂_y \\
+   ⋆ (∂_y ∧ ∂_z) &=  & ∂_t ∧ ∂_x \\
+   ⋆ (∂_z ∧ ∂_x) &=  & ∂_t ∧ ∂_y \\
+   ⋆ (∂_x ∧ ∂_y) &=  & ∂_t ∧ ∂_z \\
+
+.. admonition:: Full calculations
+   :class: dropdown
+
+   In order to obtain the volume element :math:`∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z`, the Hodge
+   duals are proportional to:
+
+   .. math::
+
+      ⋆ (∂_t ∧ ∂_x) \propto ∂_y ∧ ∂_z \\
+      ⋆ (∂_t ∧ ∂_y) \propto ∂_z ∧ ∂_x \\
+      ⋆ (∂_t ∧ ∂_z) \propto ∂_x ∧ ∂_y \\
+      ⋆ (∂_y ∧ ∂_z) \propto ∂_t ∧ ∂_x \\
+      ⋆ (∂_z ∧ ∂_x) \propto ∂_t ∧ ∂_y \\
+      ⋆ (∂_x ∧ ∂_y) \propto ∂_t ∧ ∂_z \\
+
+   Indeed, taking the second entry as an example :math:`⋆ (∂_t ∧ ∂_y) \propto
+   ∂_z ∧ ∂_x`, we have:
+
+   .. math::
+
+      ⋆ (∂_t ∧ ∂_y) \propto ∂_z ∧ ∂_x  & \rightarrow   & ∂_t ∧ ∂_y ∧ ∂_z ∧ ∂_x \\
+                                       & \rightarrow - & ∂_t ∧ ∂_y ∧ ∂_x ∧ ∂_z \\
+                                       & \rightarrow   & ∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z \\
+
+   Taken all together and with the inner product:
+
+   .. math::
+
+      ⋆ (∂_t ∧ ∂_x) &= \braket{∂_t ∧ ∂_x|∂_t ∧ ∂_x} \, ∂_y ∧ ∂_z \\
+      ⋆ (∂_t ∧ ∂_y) &= \braket{∂_t ∧ ∂_y|∂_t ∧ ∂_y} \, ∂_z ∧ ∂_x \\
+      ⋆ (∂_t ∧ ∂_z) &= \braket{∂_t ∧ ∂_z|∂_t ∧ ∂_z} \, ∂_x ∧ ∂_y \\
+      ⋆ (∂_y ∧ ∂_z) &= \braket{∂_y ∧ ∂_z|∂_y ∧ ∂_z} \, ∂_t ∧ ∂_x \\
+      ⋆ (∂_z ∧ ∂_x) &= \braket{∂_z ∧ ∂_x|∂_z ∧ ∂_x} \, ∂_t ∧ ∂_y \\
+      ⋆ (∂_x ∧ ∂_y) &= \braket{∂_x ∧ ∂_y|∂_x ∧ ∂_y} \, ∂_t ∧ ∂_z \\
+
+   .. math::
+
+      ⋆ (∂_t ∧ ∂_x) &= -& ∂_y ∧ ∂_z \\
+      ⋆ (∂_t ∧ ∂_y) &= -& ∂_z ∧ ∂_x \\
+      ⋆ (∂_t ∧ ∂_z) &= -& ∂_x ∧ ∂_y \\
+      ⋆ (∂_y ∧ ∂_z) &=  & ∂_t ∧ ∂_x \\
+      ⋆ (∂_z ∧ ∂_x) &=  & ∂_t ∧ ∂_y \\
+      ⋆ (∂_x ∧ ∂_y) &=  & ∂_t ∧ ∂_z \\
 
 .. math::
 
@@ -604,22 +655,41 @@ Hodge duality in Minkowski space
    ⋆ (dz ∧ dx) &=  & dt ∧ dy \\
    ⋆ (dx ∧ dy) &=  & dt ∧ dz \\
 
-.. ifconfig:: draft in ('yes')
+.. math::
 
-   .. warning:: Draft
+   ⋆ dt &= - dx ∧ dy ∧ dz \\
+   ⋆ dx &= - dt ∧ dy ∧ dz \\
+   ⋆ dy &= - dt ∧ dz ∧ dx \\
+   ⋆ dz &= - dt ∧ dx ∧ dy \\
 
-   .. math::
-
-      ⋆ (∂_t ∧ ∂_x) &= -& ∂_y ∧ ∂_z \\
-      ⋆ (∂_t ∧ ∂_y) &= -& ∂_z ∧ ∂_x \\
-      ⋆ (∂_t ∧ ∂_z) &= -& ∂_x ∧ ∂_y \\
-      ⋆ (∂_x ∧ ∂_y) &=  & ∂_t ∧ ∂_z \\
-      ⋆ (∂_y ∧ ∂_z) &=  & ∂_t ∧ ∂_x \\
-      ⋆ (∂_z ∧ ∂_x) &=  & ∂_t ∧ ∂_y \\
 
 To double-check the results, I recommend the video `Differential Forms | The
 Minkowski metric and the Hodge operator
 <https://m.youtube.com/watch?v=vDRfADusqYQ>`_ by Michale Penn.
+
+.. }}}
+
+Hodge duality of k-forms in Minkowski space
+-------------------------------------------
+
+.. {{{
+
+.. warning:: Under construction, last modified |today|
+
+As a final note, we can repeat the definition of the Hodge dual of k-vectors
+to k-forms. Indeed the inner product is:
+
+.. math::
+
+   \braket{∂_μ | ∂_ν} = \braket{dx^μ | dx^ν}
+
+We seek the dual k-form that fills the 4-dimensional space: the Hodge dual is
+defined by the property that for all k-forms :math:`α` and :math:`β`, the
+following holds:
+
+.. math::
+
+   α ∧ ⋆ β = \braket{α | β} dt ∧ dx ∧ dy ∧ dz
 
 .. }}}
 
