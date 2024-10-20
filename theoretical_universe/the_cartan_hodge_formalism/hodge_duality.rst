@@ -49,22 +49,21 @@ Finally, I would like to point out the exceptional work of `Michael Penn
 <https://www.michael-penn.net>`_ for the quality of his content. In particular,
 I recommend the following:
 
-* `Differential Forms | The Hodge operator via an inner product <https://m.youtube.com/watch?v=iLlaFBMk_Bs&list=PLHlTqVYmqunWXBoO3xZhQOAoc8oqd-2Su&index=58&t=225s&pp=gAQBiAQB>`_.
-* `Differential Forms | The Minkowski metric and the Hodge operator <https://m.youtube.com/watch?v=vDRfADusqYQ>`_.
+* `Differential Forms | The Hodge operator via an inner product
+  <https://m.youtube.com/watch?v=iLlaFBMk_Bs&list=PLHlTqVYmqunWXBoO3xZhQOAoc8oq
+  d-2Su&index=58&t=225s&pp=gAQBiAQB>`_.
+* `Differential Forms | The Minkowski metric and the Hodge operator
+  <https://m.youtube.com/watch?v=vDRfADusqYQ>`_.
 
 These videos provide an alternative, yet equivalent, approach to the
 conclusions presented in this article. There is also the added bonus that he
 uses the same metric signature :math:`(+,-,-,-)` as me. I prefer my way, but I
 learned and understood first his way.
 
-I had not anticipated that this article would attract any attention, but it
-seems to be read regularly. When I say *attract attention*, I do not mean
-Taylor-Swift-level-of-popular, but more like W.-V.-D.-Hodge-level-of-popular.
-Anyway, I am at the moment revisiting this article and adding material,
-especially with respect to Minkowski space. Please note that parts of the
-article are still in rough draft form, and there certainly are typos and
-mistakes despite my efforts to keep everything accurate. This page was last
-modified |today|.
+I am currently revisiting this article and expanding its content, particularly
+in relation to Minkowski space. As a result, some sections are still in draft
+form, and despite my best efforts to ensure accuracy, there may be typos and
+errors. This page was last updated on |today|.
 
 .. }}}
 
@@ -241,7 +240,9 @@ vectors :math:`∂_x` and :math:`∂_y`:
 * :math:`p \, ∂_x + q \, ∂_y`
 * :math:`u \, ∂_x + v \, ∂_y`
 
-.. figure:: https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Area_parallellogram_as_determinant.svg/891px-Area_parallellogram_as_determinant.svg.png
+.. figure:: https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/
+   Area_parallellogram_as_determinant.svg/
+   891px-Area_parallellogram_as_determinant.svg.png
    :width: 250px
    :align: right
 
@@ -423,7 +424,8 @@ obtain:
        ∂_x ∧ ∂_y & 0         & 0         & 1         \\
    \end{array}
 
-.. figure:: https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Determinant_parallelepiped.svg/912px-Determinant_parallelepiped.svg.png
+.. figure:: https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/
+   Determinant_parallelepiped.svg/912px-Determinant_parallelepiped.svg.png
    :width: 250px
    :align: right
 
@@ -712,33 +714,28 @@ Formal and natural definition
 
 .. {{{
 
-In 3-dimensional Euclidean space, the Hodge dual is defined by the property
-that for all k-vectors :math:`α` and :math:`β`, the following holds:
+In 3-dimensional Euclidean space, the Hodge dual of a k-vector :math:`β` is
+uniquely defined by the property that for any other k-vector :math:`α`, the
+following property holds:
 
 .. math::
 
-   α ∧ ⋆ β = ∂_x ∧ ∂_y ∧ ∂_z
+   α ∧ ⋆ β = \braket{α | β} \; ∂_x ∧ ∂_y ∧ ∂_z
 
-In essence, this asks: Given an m-vector, which k-vector fills the remaining
-space to complete the full volume, as discussed at the beginning of this
-article? I refer to this as the natural definition. To generalize this concept
-to any metric signature, we utilize the dot product:
-
-.. math::
-
-   α ∧ ⋆ β = \braket{α | β} ∂_x ∧ ∂_y ∧ ∂_z
-
-This reduces to the initial definition in 3-dimensional Euclidean space. In
-Minkowski space, however, we seek the dual k-vector that fills the
-4-dimensional space:
+In essence, this asks: Given a k-vector, which m-vector fills the remaining
+space? Where the inner product :math:`\braket{α | β}` ensures that :math:`⋆ β`
+is unique. This question can be viewed as a *natural definition*  and be used
+for practical calculations. For 4-dimensional Minkowski space, the definition
+is:
 
 .. math::
 
-   α ∧ ⋆ β = \braket{α | β} ∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z
+   α ∧ ⋆ β = \braket{α | β} \; ∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z
 
-For example, if we seek the Hodge dual :math:`⋆(∂_t ∧ ∂_x)`, we know it will be
-:math:`∂_y ∧ ∂_z` to complete the space, with the sign determined by the inner
-product :math:`\braket{∂_t ∧ ∂_x | ∂_t ∧ ∂_x} = -1`. Thus, we obtain:
+For instance, when seeking the Hodge dual :math:`⋆(∂_t ∧ ∂_x)`, we know that it
+must be :math:`∂_y ∧ ∂_z` to complete the space, with the sign determined by
+the inner product :math:`\braket{∂_t ∧ ∂_x | ∂_t ∧ ∂_x} = -1`. Therefore, in
+this example, we obtain:
 
 .. math::
 
@@ -769,43 +766,60 @@ in Minkowski space:
    ⋆ ∂_y & = ∂_t ∧ ∂_z ∧ ∂_x \\
    ⋆ ∂_z & = ∂_t ∧ ∂_x ∧ ∂_y \\
 
-.. admonition:: Full calculations of the Hodge dual of vectors
+.. admonition:: Full calculation
    :class: dropdown
+
+   .. rubric:: Determine the Hodge duals up to the sign
 
    To obtain the volume element :math:`∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z`, the Hodge duals
    must be proportional to:
 
    .. math::
 
-      ⋆ ∂_t &\propto   & ∂_x ∧ ∂_y ∧ ∂_z \\
-      ⋆ ∂_x &\propto - & ∂_t ∧ ∂_y ∧ ∂_z \\
-      ⋆ ∂_y &\propto - & ∂_t ∧ ∂_z ∧ ∂_x \\
-      ⋆ ∂_z &\propto - & ∂_t ∧ ∂_x ∧ ∂_y \\
+      ⋆ ∂_t &\propto & ∂_x ∧ ∂_y ∧ ∂_z \\
+      ⋆ ∂_x &\propto & ∂_t ∧ ∂_z ∧ ∂_y \\
+      ⋆ ∂_y &\propto & ∂_t ∧ ∂_x ∧ ∂_z \\
+      ⋆ ∂_z &\propto & ∂_t ∧ ∂_y ∧ ∂_x \\
 
-   Checking for all entries:
+   .. rubric:: Check the sign
+
+   Since the above was mentally determined, we check by wedging the left part
+   to the right part of the equations above in order to make sure the sign is
+   positive when reordered into the volume element :math:`∂_t ∧ ∂_x ∧ ∂_y ∧
+   ∂_z`.
 
    .. math::
 
-      ⋆ ∂_t \propto ∂_x ∧ ∂_y ∧ ∂_z \rightarrow ∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z \\
+      ⋆ ∂_t \propto ∂_x ∧ ∂_y ∧ ∂_z \rightarrow & \phantom{-}& ∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z \\
 
    .. math::
 
-      ⋆ ∂_x \propto ∂_t ∧ ∂_y ∧ ∂_z \rightarrow &   & ∂_x ∧ ∂_t ∧ ∂_y ∧ ∂_z \\
+      ⋆ ∂_x \propto ∂_t ∧ ∂_z ∧ ∂_y \rightarrow &   & ∂_x ∧ ∂_t ∧ ∂_z ∧ ∂_y \\
+                                                & - & ∂_t ∧ ∂_x ∧ ∂_z ∧ ∂_y \\
+                                                &   & ∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z \\
+   .. math::
+
+      ⋆ ∂_y \propto ∂_t ∧ ∂_x ∧ ∂_z \rightarrow &   & ∂_y ∧ ∂_t ∧ ∂_x ∧ ∂_z \\
+                                                & - & ∂_t ∧ ∂_y ∧ ∂_x ∧ ∂_z \\
                                                 & - & ∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z \\
    .. math::
 
-      ⋆ ∂_y \propto ∂_t ∧ ∂_z ∧ ∂_x \rightarrow &   & ∂_y ∧ ∂_t ∧ ∂_z ∧ ∂_x \\
-                                                & - & ∂_t ∧ ∂_y ∧ ∂_z ∧ ∂_x \\
-                                                &   & ∂_t ∧ ∂_y ∧ ∂_x ∧ ∂_z \\
-                                                & - & ∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z \\
+      ⋆ ∂_z \propto ∂_t ∧ ∂_y ∧ ∂_x \rightarrow &   & ∂_z ∧ ∂_t ∧ ∂_y ∧ ∂_x \\
+                                                & - & ∂_t ∧ ∂_z ∧ ∂_y ∧ ∂_x \\
+                                                &   & ∂_t ∧ ∂_y ∧ ∂_z ∧ ∂_x \\
+                                                & - & ∂_t ∧ ∂_y ∧ ∂_x ∧ ∂_z \\
+                                                &   & ∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z \\
+
+   .. rubric:: Use the definition of the Hodge dual
+
    .. math::
 
-      ⋆ ∂_z \propto ∂_t ∧ ∂_x ∧ ∂_y \rightarrow &   & ∂_z ∧ ∂_t ∧ ∂_x ∧ ∂_y \\
-                                                & - & ∂_t ∧ ∂_z ∧ ∂_x ∧ ∂_y \\
-                                                &   & ∂_t ∧ ∂_x ∧ ∂_z ∧ ∂_y \\
-                                                & - & ∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z \\
+      ⋆ ∂_t & = \braket{∂_t | ∂_t} & ∂_x ∧ ∂_y ∧ ∂_z \\
+      ⋆ ∂_x & = \braket{∂_x | ∂_x} & ∂_t ∧ ∂_z ∧ ∂_y \\
+      ⋆ ∂_y & = \braket{∂_y | ∂_y} & ∂_t ∧ ∂_x ∧ ∂_z \\
+      ⋆ ∂_z & = \braket{∂_z | ∂_z} & ∂_t ∧ ∂_y ∧ ∂_x \\
 
-   Using the definition of the Hodge dual:
+   .. rubric:: Reorder
 
    .. math::
 
@@ -814,12 +828,16 @@ in Minkowski space:
       ⋆ ∂_y & = \braket{∂_y | ∂_y} & (-1) & ∂_t ∧ ∂_z ∧ ∂_x \\
       ⋆ ∂_z & = \braket{∂_z | ∂_z} & (-1) & ∂_t ∧ ∂_x ∧ ∂_y \\
 
+   .. rubric:: Apply the values of the inner products
+
    .. math::
 
       ⋆ ∂_t & = (+1) & (+1) & ∂_x ∧ ∂_y ∧ ∂_z \\
       ⋆ ∂_x & = (-1) & (-1) & ∂_t ∧ ∂_y ∧ ∂_z \\
       ⋆ ∂_y & = (-1) & (-1) & ∂_t ∧ ∂_z ∧ ∂_x \\
       ⋆ ∂_z & = (-1) & (-1) & ∂_t ∧ ∂_x ∧ ∂_y \\
+
+   .. rubric:: Conclude
 
    .. math::
 
@@ -828,6 +846,9 @@ in Minkowski space:
       ⋆ ∂_y & = ∂_t ∧ ∂_z ∧ ∂_x \\
       ⋆ ∂_z & = ∂_t ∧ ∂_x ∧ ∂_y \\
 
+   If you feel more comfortable with a more *mechanical approach* I redirect
+   you to the video by Michael Penn: `Differential Forms | The Minkowski metric
+   and the Hodge operator <https://m.youtube.com/watch?v=vDRfADusqYQ>`_.
 
 .. rubric:: bivectors
 
