@@ -90,7 +90,6 @@ results in wave equations.
 
 .. rubric:: Laplace-De Rham on Rotations in Differential Form
 
-
 .. math::
 
    (d ⋆ d ⋆ + ⋆ d ⋆ d) \left[ \begin{aligned}

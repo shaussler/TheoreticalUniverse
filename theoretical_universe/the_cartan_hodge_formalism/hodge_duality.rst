@@ -31,7 +31,7 @@ calculus and familiarity with Élie Cartan's differential forms.
 
 I generally use a toolbox of concepts and notation that I dub the Cartan-Hodge
 formalism. This article can however be read independently. In this page the
-relevant bit of notation from this Cartan-Hodge formalism is that basis vectors
+relevant bit of notation from the Cartan-Hodge formalism is that basis vectors
 :math:`\mathbf{e}_μ` are noted with the partial derivative symbol :math:`∂_μ`:
 
 .. math::
@@ -43,9 +43,12 @@ relevant bit of notation from this Cartan-Hodge formalism is that basis vectors
 
 I don't necessarily expect all readers to have ever considered partial
 derivatives as basis vectors. For our purpose, this is simply a matter of using
-a notation, which is both widespread and standard.
+a notation, which is both widespread and standard. For readability, I use for
+the inner product either the dot notation :math:`\cdot`, or the bra-ket
+notation from quantum mechanics :math:`\braket{|}`, both of which are standard
+and widely recognized.
 
-Finally, I would like to point out the exceptional work of `Michael Penn
+I would here like to point out the work of `Michael Penn
 <https://www.michael-penn.net>`_ for the quality of his content. In particular,
 I recommend the following:
 
@@ -57,7 +60,7 @@ I recommend the following:
 
 These videos provide an alternative, yet equivalent, approach to the
 conclusions presented in this article. There is also the added bonus that he
-uses the same metric signature :math:`(+,-,-,-)` as me. I prefer my way, but I
+uses the same metric signature :math:`(+,-,-,-)`. I prefer my way, but I
 learned and understood first his way.
 
 I am currently revisiting this article and expanding its content, particularly
@@ -185,6 +188,166 @@ flip their signs with the image of the oriented volume.
 Inner product of k-vectors
 --------------------------
 
+Surfaces, volumes, hypervolumes and the determinant of matrices
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+I expect you are very familiar with linear algebra, since you are interested in
+the topic of the Hodge dual. I nonetheless recall the relationship between the
+determinant of matrices and surfaces, volumes, and hypervolumes in k
+dimensions, as it is central to understanding the procedure for lifting the
+inner product on vectors to the innner product on bivectors, trivectos,
+quadvectors, and in all generality on k-vectors.
+
+.. figure:: https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/
+   Area_parallellogram_as_determinant.svg/
+   891px-Area_parallellogram_as_determinant.svg.png
+   :width: 250px
+
+   Surfaces and the determinant of 2x2 matrices.
+
+The area of the surface :math:`S` spanned by a parallelogram defined by two
+vectors :math:`a ∂_x + b ∂_y` and :math:`c ∂_x + d ∂_y` corresponds
+to the determinant of the :math:`2 \times 2` matrice, where each column are the
+entries of the components of the vectors.
+
+.. math::
+
+   S = \begin{vmatrix}
+     a & c \\
+     b & d \\
+   \end{vmatrix}
+
+Or in other words the magnitude of the bivector:
+
+.. math::
+
+   S ∂_x ∧ ∂_y &= a ∂_x + b ∂_y) ∧ (c ∂_x + d ∂_y) \\
+               &= a ∂_x ∧ (c ∂_x + d ∂_y) + b ∂_y ∧ (c ∂_x + d ∂_y) \\
+               &= a ∂_x ∧ c ∂_x + a ∂_x ∧ d ∂_y + b ∂_y ∧ c ∂_x + b ∂_y ∧ d ∂_y \\
+               &= a ∂_x ∧ d ∂_y + b ∂_y ∧ c ∂_x \\
+               &= a d ∂_x ∧ ∂_y + b c ∂_y ∧ ∂_x \\
+               &= a d ∂_x ∧ ∂_y - b c ∂_x ∧ ∂_y \\
+               &= (ad - bc) ∂_x ∧ ∂_y\\
+
+Using the free matrix representation from the Cartan-Hodge formalism helps
+organize the terms. The same calculation yields:
+
+.. math::
+
+   S ∂_x ∧ ∂_y
+   &= \begin{bmatrix} a ∂_x \\ b ∂_y \end{bmatrix} ∧ \begin{bmatrix} c ∂_x \\ d ∂_y \\ \end{bmatrix} \\
+   &= \begin{bmatrix} a ∂_x ∧ d∂_y \\ b ∂_y ∧ c ∂_x \end{bmatrix} \\
+   &= \begin{bmatrix} + a d ∂_x ∧ ∂_y \\ - b c ∂_x ∧ ∂_y \end{bmatrix} \\
+   &= (ad - bc) ∂_x ∧ ∂_y\\
+
+The same can be done in three dimensions to calculate the volume of a
+parallelepiped defined by three vectors in three dimensions.
+
+.. figure:: https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/
+   Determinant_parallelepiped.svg/912px-Determinant_parallelepiped.svg.png
+   :width: 250px
+
+   Volumes and the determinant of 3x3 matrices.
+
+* :math:`r_1 = a ∂_x + b ∂_y + c ∂_z`
+* :math:`r_2 = u ∂_x + v ∂_y + w ∂_z`
+* :math:`r_3 = p ∂_x + q ∂_y + r ∂_z`
+
+where each columns are the entry of the components of the vectors.
+
+.. math::
+
+   V &= \begin{vmatrix}
+     a & u & p \\
+     b & v & q \\
+     c & w & r \\
+   \end{vmatrix}
+
+.. math::
+
+   v= + a \begin{vmatrix}
+     v & q \\
+     w & r \\
+   \end{vmatrix}
+   - b \begin{vmatrix}
+      u & p \\
+      w & r \\
+   \end{vmatrix}
+   + c \begin{vmatrix}
+      u & p \\
+      v & q \\
+     \end{vmatrix}
+
+.. math::
+   V = + avr - awq - bur + bwp + cuq - cvp
+
+Using the free matrix representation of the Cartan-Hodge formalism, we reach
+the same result. I like to think this approach replaces the algorithmic
+structure of the previous calculation with meaningful computations. Although
+the Cartan-Hodge formalism introduces additional notation, this is balanced by
+the clarity ofthe operations.
+
+First, we wedge the three vectors that define the volume:
+
+.. math::
+
+   V ∂_x ∧ ∂_y ∧ ∂_z = \begin{bmatrix} a ∂_x \\ b ∂_y \\ c ∂_z \end{bmatrix} ∧
+                       \begin{bmatrix} u ∂_x \\ v ∂_y \\ w ∂_z \end{bmatrix} ∧
+                       \begin{bmatrix} p ∂_x \\ q ∂_y \\ r ∂_z \end{bmatrix}
+
+Expand the first two vectors:
+
+.. math::
+
+   V ∂_x ∧ ∂_y ∧ ∂_z = \begin{bmatrix}
+                            av ∂_x ∧ ∂_y \\
+                            aw ∂_x ∧ ∂_z \\
+                            bu ∂_y ∧ ∂_x \\
+                            bw ∂_y ∧ ∂_z \\
+                            cu ∂_z ∧ ∂_x \\
+                            cv ∂_z ∧ ∂_y
+                        \end{bmatrix}
+                        ∧ \begin{bmatrix}
+                              p ∂_x \\
+                              q ∂_y \\
+                              r ∂_z
+                          \end{bmatrix}
+
+Expand with the third vector:
+
+.. math::
+
+   V ∂_x ∧ ∂_y ∧ ∂_z = \begin{bmatrix}
+                            avr ∂_x ∧ ∂_y ∧ ∂_z \\
+                            awq ∂_x ∧ ∂_z ∧ ∂_y \\
+                            bur ∂_y ∧ ∂_x ∧ ∂_z \\
+                            bwp ∂_y ∧ ∂_z ∧ ∂_x \\
+                            cuq ∂_z ∧ ∂_x ∧ ∂_y \\
+                            cvp ∂_z ∧ ∂_y ∧ ∂_x
+                        \end{bmatrix}
+
+Reorder the terms:
+
+.. math::
+
+   V ∂_x ∧ ∂_y ∧ ∂_z = \begin{bmatrix}
+                            +avr ∂_x ∧ ∂_y ∧ ∂_z \\
+                            -awq ∂_x ∧ ∂_y ∧ ∂_z \\
+                            -bur ∂_x ∧ ∂_y ∧ ∂_z \\
+                            +bwp ∂_x ∧ ∂_y ∧ ∂_z \\
+                            +cuq ∂_x ∧ ∂_y ∧ ∂_z \\
+                            -cvp ∂_x ∧ ∂_y ∧ ∂_z
+                        \end{bmatrix}
+
+And obtain the expected conclusion:
+
+.. math::
+
+   V ∂_x ∧ ∂_y ∧ ∂_z = (+avr -awq -bur +bwp +cuq -cvp) ∂_x ∧ ∂_y ∧ ∂_z
+
+This can be generalized to hypervolumes constructed from k-vectors, where the
+hypervolume is calculated with the determinant of a :math:`k \times k` matrice.
+
 bivectors in 3-dimensional Euclidean space
 ''''''''''''''''''''''''''''''''''''''''''
 
@@ -239,14 +402,6 @@ vectors :math:`∂_x` and :math:`∂_y`:
 
 * :math:`p \, ∂_x + q \, ∂_y`
 * :math:`u \, ∂_x + v \, ∂_y`
-
-.. figure:: https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/
-   Area_parallellogram_as_determinant.svg/
-   891px-Area_parallellogram_as_determinant.svg.png
-   :width: 250px
-   :align: right
-
-   Surfaces and the determinant of 2x2 matrices.
 
 The measure of the amount of shadow of the surface determined by vectors
 :math:`a^♯` and :math:`b^♯` on the :math:`∂_x ∧ ∂_y` plane is the inner product
@@ -424,14 +579,7 @@ obtain:
        ∂_x ∧ ∂_y & 0         & 0         & 1         \\
    \end{array}
 
-.. figure:: https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/
-   Determinant_parallelepiped.svg/912px-Determinant_parallelepiped.svg.png
-   :width: 250px
-   :align: right
-
-   Volumes and the determinant of 3x3 matrices.
-
-Finally, we can generalize lifting the inner product to trivectors. In
+Finally, we generalize lifting the inner product to trivectors. In
 3-dimensional Euclidean space, we get for the unit trivector:
 
 .. math::
@@ -517,19 +665,28 @@ We get in table form:
    ∂_x ∧ ∂_y &  0        &  0        &  0        &   0       &  0        & +1        \\
    \end{array}
 
-.. admonition:: Systematic calculations of the inner product of basis bivectors
+.. admonition:: Derivation of the inner product of all basis bivectors
    :class: dropdown
+
+   .. {{{
+
+   In this dropdown section, I extend the inner product to all non-zero
+   bivector combinations and provide an example of a zero combination.
+
+   .. rubric:: Basis bivectors involving the temporal dimension
 
    .. math::
 
-      \braket{∂_t ∧ ∂_x | ∂_t ∧ ∂_x} =
-      \begin{vmatrix}
+      \braket{∂_t ∧ ∂_x | ∂_t ∧ ∂_x}
+      = \begin{vmatrix}
           ∂_t \cdot ∂_t & ∂_x \cdot ∂_t \\
           ∂_t \cdot ∂_x & ∂_x \cdot ∂_x \\
       \end{vmatrix}
-      =  \begin{vmatrix}
-          +1 & 0 \\
-           0 & -1 \\
+      = \begin{vmatrix}
+            \begin{alignedat}{1}
+              + & 1 & \;   & 0 \\
+                & 0 & \; - & 1 \\
+             \end{alignedat}
       \end{vmatrix}
       = -1
 
@@ -540,9 +697,11 @@ We get in table form:
           ∂_t \cdot ∂_t & ∂_y \cdot ∂_t \\
           ∂_t \cdot ∂_y & ∂_y \cdot ∂_y \\
       \end{vmatrix}
-      =  \begin{vmatrix}
-          +1 & 0 \\
-           0 & -1 \\
+      = \begin{vmatrix}
+            \begin{alignedat}{1}
+              + & 1 & \;   & 0 \\
+                & 0 & \; - & 1 \\
+             \end{alignedat}
       \end{vmatrix}
       = -1
 
@@ -553,11 +712,15 @@ We get in table form:
           ∂_t \cdot ∂_t & ∂_z \cdot ∂_t \\
           ∂_t \cdot ∂_z & ∂_z \cdot ∂_z \\
       \end{vmatrix}
-      =  \begin{vmatrix}
-          +1 & 0 \\
-           0 & -1 \\
+      = \begin{vmatrix}
+            \begin{alignedat}{1}
+              + & 1 & \;   & 0 \\
+                & 0 & \; - & 1 \\
+             \end{alignedat}
       \end{vmatrix}
       = -1
+
+   .. rubric:: Basis bivectors involving the spatial dimensions
 
    .. math::
 
@@ -566,9 +729,11 @@ We get in table form:
           ∂_y \cdot ∂_y & ∂_z \cdot ∂_y \\
           ∂_y \cdot ∂_z & ∂_z \cdot ∂_z \\
       \end{vmatrix}
-      =  \begin{vmatrix}
-          +1 &  0 \\
-           0 & +1 \\
+      = \begin{vmatrix}
+            \begin{alignedat}{1}
+              - & 1 & \;   & 0 \\
+                & 0 & \; - & 1 \\
+             \end{alignedat}
       \end{vmatrix}
       = +1
 
@@ -579,9 +744,11 @@ We get in table form:
           ∂_z \cdot ∂_z & ∂_x \cdot ∂_z \\
           ∂_z \cdot ∂_x & ∂_x \cdot ∂_x \\
       \end{vmatrix}
-      =  \begin{vmatrix}
-          +1 &  0 \\
-           0 & +1 \\
+      = \begin{vmatrix}
+            \begin{alignedat}{1}
+              - & 1 & \;   & 0 \\
+                & 0 & \; - & 1 \\
+             \end{alignedat}
       \end{vmatrix}
       = +1
 
@@ -592,11 +759,35 @@ We get in table form:
           ∂_x \cdot ∂_x & ∂_y \cdot ∂_x \\
           ∂_x \cdot ∂_y & ∂_y \cdot ∂_y \\
       \end{vmatrix}
-      =  \begin{vmatrix}
-          +1 &  0 \\
-           0 & +1 \\
+      = \begin{vmatrix}
+            \begin{alignedat}{1}
+              - & 1 & \;   & 0 \\
+                & 0 & \; - & 1 \\
+             \end{alignedat}
       \end{vmatrix}
       = +1
+
+   .. rubric:: Basis vectors resulting in zero inner products
+
+   All other inner products are zero. I demonstrate one example calculation,
+   assuming the remaining cases will be clear to the reader.
+
+   .. math::
+
+      \braket{∂_t ∧ ∂_x | ∂_x ∧ ∂_y} =
+      \begin{vmatrix}
+          ∂_t \cdot ∂_x & ∂_x \cdot ∂_x \\
+          ∂_t \cdot ∂_y & ∂_x \cdot ∂_y \\
+      \end{vmatrix}
+      = \begin{vmatrix}
+            \begin{alignedat}{1}
+                & 0 & \; + & 1 \\
+                & 0 & \;   & 0 \\
+             \end{alignedat}
+      \end{vmatrix}
+      = 0
+
+   .. }}}
 
 .. rubric:: Inner product of trivectors
 
