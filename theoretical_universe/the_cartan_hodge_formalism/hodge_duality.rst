@@ -17,22 +17,31 @@ Hodge Duality
 .. {{{
 
 The Hodge dual is in my opinion often presented with unnecessary complexity,
-frequently involving from the outset a number of dimensions beyond three,
+frequently involving from the start a number of dimensions beyond three,
 varying metric signatures, and a formal mathematical approach. However, the
-concept is very intuitive in the familiar three-dimensional space we live in,
-and from there, extending to four-dimensional Minkowski space may then be
-easier.
+concept is intuitive in the familiar 3-dimensional Euclidean space we
+experience daily. From there, generalizing the concept to 4-dimensional
+Minkowski space is natural.
 
-In the first part of this article, I tentatively simplify the concept of the
-Hodge dual by focusing on three dimensions. The second part presents the
-systematical calculation of the Hodge duals in Minkowski spacetime. This
-discussion assumes you, the reader, to have a solid understanding of vector
-calculus and familiarity with Élie Cartan's differential forms.
+The first part of this article presents the core intuitive and idea behind
+Hodge duality and is meant to be quite easy to follow. Next comes a shaping
+operation, preparing the generalization to any metric signature. I recall from
+linear algebra the relation between matrices determinant, surfaces, volumes and
+hypervolumes, and lay out the link to the exterior product. This leads to
+generalizing the inner product to k-vectors. Finally, I systematically
+calculate of the Hodge dual of vectors, bivectors, trivectors and quadvectors
+in Minkowski spacetime with metric signature :math:`(+,-,-,-)`. All
+calculations are performed with k-vectors, which in my opinion permits to take
+advantage of geometric intuition. The very last part brings us to Hodge duality
+on k-forms based on vector/covector duality. This discussion assumes you, the
+reader, have a solid understanding of vector and tensor calculus, as well as
+familiarity with the exterior product and Élie Cartan's differential forms.
 
-I generally use a toolbox of concepts and notation that I dub the Cartan-Hodge
-formalism. This article can however be read independently. In this page the
-relevant bit of notation from the Cartan-Hodge formalism is that basis vectors
-:math:`\mathbf{e}_μ` are noted with the partial derivative symbol :math:`∂_μ`:
+With respect to notations, I systematically use a toolbox that I dub the
+Cartan-Hodge formalism. This article can however be read independently as the
+notation should be wildely recognized. In this page, the relevant bit is that
+basis vectors :math:`\mathbf{e}_μ` are noted with the partial derivative symbol
+:math:`∂_μ`:
 
 .. math::
 
