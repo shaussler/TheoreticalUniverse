@@ -19,29 +19,27 @@ Hodge Duality
 The Hodge dual is in my opinion often presented with unnecessary complexity,
 frequently involving from the start a number of dimensions beyond three,
 varying metric signatures, and a formal mathematical approach. However, the
-concept is intuitive in the familiar 3-dimensional Euclidean space we
+concept is intuitive in the familiar 3-dimensional Euclidean space that we
 experience daily. From there, generalizing the concept to 4-dimensional
 Minkowski space is natural.
 
-The first part of this article presents the core intuitive and idea behind
-Hodge duality and is meant to be quite easy to follow. Next comes a shaping
-operation, preparing the generalization to any metric signature. I recall from
-linear algebra the relation between matrices determinant, surfaces, volumes and
-hypervolumes, and lay out the link to the exterior product. This leads to
-generalizing the inner product to k-vectors. Finally, I systematically
-calculate of the Hodge dual of vectors, bivectors, trivectors and quadvectors
-in Minkowski spacetime with metric signature :math:`(+,-,-,-)`. All
-calculations are performed with k-vectors, which in my opinion permits to take
-advantage of geometric intuition. The very last part brings us to Hodge duality
-on k-forms based on vector/covector duality. This discussion assumes you, the
-reader, have a solid understanding of vector and tensor calculus, as well as
-familiarity with the exterior product and Élie Cartan's differential forms.
+The first part of this article presents the core intuition behind Hodge duality
+and is meant to be quite easy to follow. Next comes a shaping operation:
+Preparing the generalization to any number of dimensions and metric signatures.
+I lay out the relation between the exterior product, matrix determinant,
+surface, volume and hypervolume. This will permit to generalize the inner
+product to k-vectors. Finally, I systematically calculate of the Hodge duals of
+vectors, bivectors, trivectors and quadvectors in Minkowski spacetime with
+metric signature :math:`(+,-,-,-)`. The very last step brings us to Hodge
+duality on k-forms based on vector/covector duality. This discussion assumes
+you, the reader, have a solid understanding of vector and tensor calculus, as
+well as familiarity with the exterior product and Élie Cartan's differential
+forms.
 
-With respect to notations, I systematically use a toolbox that I dub the
-Cartan-Hodge formalism. This article can however be read independently as the
-notation should be wildely recognized. In this page, the relevant bit is that
-basis vectors :math:`\mathbf{e}_μ` are noted with the partial derivative symbol
-:math:`∂_μ`:
+I systematically use within this pages a toolbox of concepts and notations that
+I dub the Cartan-Hodge formalism. The notation is quite standard and should be
+widely recognized. In this page, basis vectors :math:`\mathbf{e}_μ` are noted
+with the partial derivative symbol :math:`∂_μ`:
 
 .. math::
 
@@ -51,15 +49,16 @@ basis vectors :math:`\mathbf{e}_μ` are noted with the partial derivative symbol
    \mathbf{e}_z & = ∂_z \\
 
 I don't necessarily expect all readers to have ever considered partial
-derivatives as basis vectors. For our purpose, this is simply a matter of using
-a notation, which is both widespread and standard. For readability, I use for
-the inner product either the dot notation :math:`\cdot`, or the bra-ket
-notation from quantum mechanics :math:`\braket{|}`, both of which are standard
-and widely recognized.
+derivatives as basis vectors. For our purpose, this is simply a matter of a
+notation. I use for the inner product either the dot notation :math:`\cdot`, or
+the bra-ket notation from quantum mechanics :math:`\braket{|}` when it helps
+readability.
 
-I would here like to point out the work of `Michael Penn
-<https://www.michael-penn.net>`_ for the quality of his content. In particular,
-I recommend the following:
+I point out the work of `Michael Penn <https://www.michael-penn.net>`_  on
+`Differential Forms
+<https://m.youtube.com/playlist?list=PL22w63XsKjqzQZtDZO_9s2HEMRJnaOTX7>`_ . In
+particular, the following videos intersect greatly with the content of this
+page:
 
 * `Differential Forms | The Hodge operator via an inner product
   <https://m.youtube.com/watch?v=iLlaFBMk_Bs&list=PLHlTqVYmqunWXBoO3xZhQOAoc8oq
@@ -68,9 +67,8 @@ I recommend the following:
   <https://m.youtube.com/watch?v=vDRfADusqYQ>`_.
 
 These videos provide an alternative, yet equivalent, approach to the
-conclusions presented in this article. There is also the added bonus that he
-uses the same metric signature :math:`(+,-,-,-)`. I prefer my way, but I
-learned and understood first his way.
+conclusions presented here. There is also the added bonus that he
+uses the same metric signature :math:`(+,-,-,-)`.
 
 I am currently revisiting this article and expanding its content, particularly
 in relation to Minkowski space. As a result, some sections are still in draft
@@ -84,13 +82,13 @@ Duality in three dimensions
 
 .. {{{
 
-First consider a coordinate basis in 3 dimensions corresponding to our
-intuitive understanding of space :math:`∂_x`, :math:`∂_y` and :math:`∂_z`.
-Observe that we did not merely define three unit vectors, but also three *unit
-surfaces* that we name using the wedge symbol :math:`∧`. The surface along the
-:math:`x` and :math:`y` axis is named :math:`∂_x ∧ ∂_y`, along the :math:`y`
-and :math:`z` axis :math:`∂_y ∧ ∂_z`, and along the :math:`z` and :math:`x`
-axis, :math:`∂_z ∧ ∂_x`:
+First consider a coordinate basis :math:`∂_x`, :math:`∂_y` and :math:`∂_z` in 3
+dimensions corresponding to our intuitive understanding of space. Observe that
+we did not merely define three unit vectors, but also three *unit surfaces*,
+which we name using the wedge symbol :math:`∧`. The surface along the :math:`x`
+and :math:`y` axis is named :math:`∂_x ∧ ∂_y`, along the :math:`y` and
+:math:`z` axis :math:`∂_y ∧ ∂_z`, and along the :math:`z` and :math:`x` axis,
+:math:`∂_z ∧ ∂_x`:
 
 .. image:: _static/hodge_dual_coordinates.png
    :align: center
@@ -199,6 +197,8 @@ Inner product of k-vectors
 
 Surfaces, volumes, hypervolumes and the determinant of matrices
 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+
+.. {{{
 
 I expect you are very familiar with linear algebra, since you are interested in
 the topic of the Hodge dual. I nonetheless recall the relationship between the
@@ -356,6 +356,8 @@ And obtain the expected conclusion:
 
 This can be generalized to hypervolumes constructed from k-vectors, where the
 hypervolume is calculated with the determinant of a :math:`k \times k` matrice.
+
+.. }}}
 
 bivectors in 3-dimensional Euclidean space
 ''''''''''''''''''''''''''''''''''''''''''
