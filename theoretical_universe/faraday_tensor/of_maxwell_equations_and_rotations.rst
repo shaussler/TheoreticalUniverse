@@ -68,7 +68,7 @@ electromagnetic field equations using geometric differential forms.
 .. math::
    :label: M1
 
-   \begin{alignedat}{1}
+   \begin{alignedat}{5}
                 & + ∂_x \E^x & + ∂_y \E^y & + ∂_z \E^z & = & + μ_0 c ρ \\
      + ∂_t \E^x &            & - ∂_y  B^z & + ∂_z  B^y & = & - μ_0 J^x \\
      + ∂_t \E^y & + ∂_x  B^z &            & - ∂_z  B^x & = & - μ_0 J^y \\
@@ -83,7 +83,7 @@ be formulated in this manner:
 .. math::
    :label: M2
 
-   \begin{alignedat}{1}
+   \begin{alignedat}{4}
                 & + ∂_x  B^x & + ∂_y  B^y & + ∂_z  B^z & = 0 \\
      + ∂_t  B^x &            & + ∂_y \E^z & - ∂_z \E^y & = 0 \\
      + ∂_t  B^y & - ∂_x \E^z &            & + ∂_z \E^x & = 0 \\
@@ -121,7 +121,7 @@ rotations and their Hodge dual, obtaining the following expressions:
 .. math::
    :label: dR1
 
-   d ⋆ R^{♭♭} = \left[ \begin{alignedat}{1}
+   d ⋆ R^{♭♭} = \left[ \begin{alignedat}{5}
      (&         & + ∂_x a & + ∂_y b & + ∂_z c \:&) \; dx ∧ dy ∧ dz \\
      (& + ∂_t a &         & - ∂_y f & + ∂_z e \:&) \; dt ∧ dy ∧ dz \\
      (& + ∂_t b & + ∂_x f &         & - ∂_z d \:&) \; dt ∧ dz ∧ dx \\
@@ -134,7 +134,7 @@ rotations and their Hodge dual, obtaining the following expressions:
 .. math::
    :label: dR2
 
-   ⋆\:d\:R^{♭♭} = \left[ \begin{alignedat}{1}
+   ⋆\:d\:R^{♭♭} = \left[ \begin{alignedat}{5}
      (&       \;   & - ∂_x \; d & - ∂_y \; e & - ∂_z \; f \:&) \; dt \\
      (& - ∂_t \; d &       \;   & - ∂_y \; c & + ∂_z \; b \:&) \; dx \\
      (& - ∂_t \; e & + ∂_x \; c &       \;   & - ∂_z \; a \:&) \; dy \\
@@ -220,8 +220,8 @@ the field 2-form and :math:`\mathbf{J}` is the current 3-form.
 
 .. math::
 
-   d\:\mathbf{F} &=& 0          \\
-   d⋆ \mathbf{F} &=& \mathbf{J} \\
+   d\:\mathbf{F} &= 0          \\
+   d⋆ \mathbf{F} &= \mathbf{J} \\
 
 A Single Equation
 -----------------
@@ -298,8 +298,10 @@ proportional to the 4-current.
 
    .. math::
 
-      ⋆ \: d \: \mathbf{F} &= 0          && \qquad\text{1-forms} \\
-      d⋆\mathbf{F}         &= \mathbf{J} && \qquad\text{3-forms} \\
+      \begin{alignedat}{2}
+      ⋆ \: d \: \mathbf{F} &= 0          & \qquad\text{1-forms} \\
+      d⋆\mathbf{F}         &= \mathbf{J} & \qquad\text{3-forms} \\
+      \end{alignedat}
 
    Expanding the right hand side of both equations for the argument, we have:
 

@@ -148,7 +148,7 @@ Gathering and reordering the terms, a clear structures becomes apparent:
 
 .. math::
 
-   \begin{alignedat}{1}
+   \begin{alignedat}{4}
                                        & + \frac{∂E^x}{∂x} & + \frac{∂E^y}{∂y} & + \frac{∂E^z}{∂z} & = + ρ/ε_0   \\
        + \frac{1}{c^2} \frac{∂E^x}{∂t} &                   & - \frac{∂B^z}{∂y} & + \frac{∂B^y}{∂z} & = - μ_0 J^x \\
        + \frac{1}{c^2} \frac{∂E^y}{∂t} & + \frac{∂B^z}{∂x} &                   & - \frac{∂B^x}{∂z} & = - μ_0 J^y \\
@@ -159,7 +159,7 @@ Gathering and reordering the terms, a clear structures becomes apparent:
 
 .. math::
 
-   \begin{alignedat}{1}
+   \begin{alignedat}{4}
                         & + \frac{∂B^x}{∂x} & + \frac{∂B^y}{∂y} & + \frac{∂B^z}{∂z} &= 0 \\
       + \frac{∂B^x}{∂t} &                   & + \frac{∂E^z}{y∂} & - \frac{∂E^y}{∂z} &= 0 \\
       + \frac{∂B^y}{∂t} & - \frac{∂E^z}{∂x} &                   & + \frac{∂E^x}{∂z} &= 0 \\
@@ -189,7 +189,7 @@ and for the spatial dimensions :math:`∂_x = \frac{∂}{∂ x}`, :math:`∂_y =
 
 .. math::
 
-   \begin{alignedat}{1}
+   \begin{alignedat}{4}
                 & + ∂_x \E^x & + ∂_y \E^y & + ∂_z \E^z & = + μ_0 c ρ \\
      + ∂_t \E^x &            & - ∂_y  B^z & + ∂_z  B^y & = - μ_0 J^x \\
      + ∂_t \E^y & + ∂_x  B^z &            & - ∂_z  B^x & = - μ_0 J^y \\
@@ -200,7 +200,7 @@ and for the spatial dimensions :math:`∂_x = \frac{∂}{∂ x}`, :math:`∂_y =
 
 .. math::
 
-   \begin{alignedat}{1}
+   \begin{alignedat}{4}
                 & + ∂_x  B^x & + ∂_y  B^y & + ∂_z  B^z & = 0 \\
      + ∂_t  B^x &            & + ∂_y \E^z & - ∂_z \E^y & = 0 \\
      + ∂_t  B^y & - ∂_x \E^z &            & + ∂_z \E^x & = 0 \\

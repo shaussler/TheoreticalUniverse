@@ -102,7 +102,7 @@ For the basis covectors, we have:
 
 .. math::
 
-   \begin{alignedat}{1}
+   \begin{alignedat}{2}
    dt &= dx^0 &= dx^t \\
    dx &= dx^1 &= dx^x \\
    dy &= dx^2 &= dx^y \\
