@@ -87,21 +87,36 @@ dimensions corresponding to our intuitive understanding of space. Observe that
 we did not merely define three unit vectors, but also three *unit surfaces*,
 which we name using the wedge symbol :math:`∧`. The surface along the :math:`x`
 and :math:`y` axis is named :math:`∂_x ∧ ∂_y`, along the :math:`y` and
-:math:`z` axis :math:`∂_y ∧ ∂_z`, and along the :math:`z` and :math:`x` axis,
+:math:`z` axis :math:`∂_y ∧ ∂_z`, and along the :math:`z` and :math:`x` axis
 :math:`∂_z ∧ ∂_x`:
 
 .. image:: _static/hodge_dual_coordinates.png
    :align: center
    :width: 60%
 
-The naming of the surfaces is carefully chosen counterclock wise. The reason is
-that not only we can define a surface (a number) from two vectors but also
-given a vector together with a surface, we can uniquely determine the second
-vector needed to obtain that surface. The surface need be oriented and a sign
-convention chosen (counterclockwise is positive). For example, :math:`∂_z ∧ ∂_x
-= - ∂_x ∧ ∂_z`.
+The naming of the surfaces is carefully chosen counterclock-wise. The reason is
+that we have not defined a mere surface from two vectors, but an oriented
+surface: The surface magnitude can be negative, depending on the chosen
+orientation. Here, we take the convention that surfaces oriented
+counterclockwise are positive. For example: :math:`∂_z ∧ ∂_x = - ∂_x ∧ ∂_z`.
 
-Each basis surface can be associated with a unique basis vector:
+Remark that we have not only decided on a naming convention, but created new
+mathematical objects built from two vectors and a new product denoted with the
+wedge symbol :math:`∧`. We call these objects *bivectors*, and the new product
+denoted with the wedge symbol :math:`∧` *exterior product*. The fundamental
+property of these objects is that they are antisymmetric, and is already given
+by the discussion about the surface orientation:
+
+.. math::
+
+   ∂_i ∧ ∂_j = - ∂_j ∧ ∂_i
+
+Necessarily, :math:`∂_i ∧ ∂_i = 0` since two copies of the same vectors cannot
+generate a surface. This can also be determined from the antisymmetric property
+above.
+
+In 3 dimensions, we note that each basis bivector can be associated with a
+unique basis vector:
 
 .. math::
 
