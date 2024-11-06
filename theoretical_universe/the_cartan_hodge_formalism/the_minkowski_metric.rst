@@ -27,7 +27,7 @@ for both contravariant and covariant forms:
 
 .. math::
 
-   η = \left[ \begin{alignedat}{1}
+   η = \left[ \begin{alignedat}{6}
      + & 1 \quad&   & 0 \quad &  & 0 \quad  &   & 0 \\
        & 0 \quad& - & 1 \quad &  & 0 \quad  &   & 0 \\
        & 0 \quad&   & 0 \quad & -& 1 \quad  &   & 0 \\
@@ -51,7 +51,7 @@ the zero elements unnecessary:
 
 .. math::
 
-   η^{♯♯} = \left[ \begin{alignedat}{1}
+   η^{♯♯} = \left[ \begin{alignedat}{3}
      + ∂_t ⊗ ∂_t &             &             &             \\
                  & - ∂_x ⊗ ∂_x &             &             \\
                  &             & - ∂_y ⊗ ∂_y &             \\

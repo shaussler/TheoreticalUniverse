@@ -119,7 +119,7 @@ For vectors, we have:
 
 .. math::
 
-   \begin{array}{c|rrr}
+   \begin{array}{c|rrrr}
            & ∂_t & ∂_x & ∂_y & ∂_z \\
        \hline
        ∂_t & +1  &  0  &  0  &  0  \\
@@ -161,3 +161,4 @@ For quadvectors, we have:
 .. math::
 
    \braket{∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z | ∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z} = -1
+

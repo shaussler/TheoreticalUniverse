@@ -639,7 +639,7 @@ Fully expanded in table form we have:
 
 .. math::
 
-   \begin{array}{c|rrr}
+   \begin{array}{c|rrrr}
            & ∂_t & ∂_x & ∂_y & ∂_z \\
        \hline
        ∂_t & +1  &  0  &  0  &  0  \\
@@ -694,7 +694,7 @@ We get in table form:
           ∂_t \cdot ∂_x & ∂_x \cdot ∂_x \\
       \end{vmatrix}
       = \begin{vmatrix}
-            \begin{alignedat}{1}
+            \begin{alignedat}{3}
               + & 1 & \;   & 0 \\
                 & 0 & \; - & 1 \\
              \end{alignedat}
@@ -709,7 +709,7 @@ We get in table form:
           ∂_t \cdot ∂_y & ∂_y \cdot ∂_y \\
       \end{vmatrix}
       = \begin{vmatrix}
-            \begin{alignedat}{1}
+            \begin{alignedat}{3}
               + & 1 & \;   & 0 \\
                 & 0 & \; - & 1 \\
              \end{alignedat}
@@ -724,7 +724,7 @@ We get in table form:
           ∂_t \cdot ∂_z & ∂_z \cdot ∂_z \\
       \end{vmatrix}
       = \begin{vmatrix}
-            \begin{alignedat}{1}
+            \begin{alignedat}{3}
               + & 1 & \;   & 0 \\
                 & 0 & \; - & 1 \\
              \end{alignedat}
@@ -741,7 +741,7 @@ We get in table form:
           ∂_y \cdot ∂_z & ∂_z \cdot ∂_z \\
       \end{vmatrix}
       = \begin{vmatrix}
-            \begin{alignedat}{1}
+            \begin{alignedat}{3}
               - & 1 & \;   & 0 \\
                 & 0 & \; - & 1 \\
              \end{alignedat}
@@ -756,7 +756,7 @@ We get in table form:
           ∂_z \cdot ∂_x & ∂_x \cdot ∂_x \\
       \end{vmatrix}
       = \begin{vmatrix}
-            \begin{alignedat}{1}
+            \begin{alignedat}{3}
               - & 1 & \;   & 0 \\
                 & 0 & \; - & 1 \\
              \end{alignedat}
@@ -771,7 +771,7 @@ We get in table form:
           ∂_x \cdot ∂_y & ∂_y \cdot ∂_y \\
       \end{vmatrix}
       = \begin{vmatrix}
-            \begin{alignedat}{1}
+            \begin{alignedat}{3}
               - & 1 & \;   & 0 \\
                 & 0 & \; - & 1 \\
              \end{alignedat}
@@ -791,7 +791,7 @@ We get in table form:
           ∂_t \cdot ∂_y & ∂_x \cdot ∂_y \\
       \end{vmatrix}
       = \begin{vmatrix}
-            \begin{alignedat}{1}
+            \begin{alignedat}{3}
                 & 0 & \; + & 1 \\
                 & 0 & \;   & 0 \\
              \end{alignedat}
@@ -978,10 +978,12 @@ in Minkowski space:
 
    .. math::
 
-      ⋆ ∂_t &\propto & ∂_x ∧ ∂_y ∧ ∂_z \\
-      ⋆ ∂_x &\propto & ∂_t ∧ ∂_z ∧ ∂_y \\
-      ⋆ ∂_y &\propto & ∂_t ∧ ∂_x ∧ ∂_z \\
-      ⋆ ∂_z &\propto & ∂_t ∧ ∂_y ∧ ∂_x \\
+      \begin{alignedat}{2}
+      ⋆ ∂_t & \propto & ∂_x ∧ ∂_y ∧ ∂_z \\
+      ⋆ ∂_x & \propto & ∂_t ∧ ∂_z ∧ ∂_y \\
+      ⋆ ∂_y & \propto & ∂_t ∧ ∂_x ∧ ∂_z \\
+      ⋆ ∂_z & \propto & ∂_t ∧ ∂_y ∧ ∂_x \\
+      \end{alignedat}
 
    .. rubric:: Check the sign
 
@@ -992,52 +994,65 @@ in Minkowski space:
 
    .. math::
 
-      ⋆ ∂_t \propto ∂_x ∧ ∂_y ∧ ∂_z \rightarrow & \phantom{-}& ∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z \\
+      ⋆ ∂_t \propto ∂_x ∧ ∂_y ∧ ∂_z \rightarrow \phantom{-} ∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z \\
 
    .. math::
 
+      \begin{alignedat}{2}
       ⋆ ∂_x \propto ∂_t ∧ ∂_z ∧ ∂_y \rightarrow &   & ∂_x ∧ ∂_t ∧ ∂_z ∧ ∂_y \\
                                                 & - & ∂_t ∧ ∂_x ∧ ∂_z ∧ ∂_y \\
                                                 &   & ∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z \\
+      \end{alignedat}
    .. math::
 
+      \begin{alignedat}{2}
       ⋆ ∂_y \propto ∂_t ∧ ∂_x ∧ ∂_z \rightarrow &   & ∂_y ∧ ∂_t ∧ ∂_x ∧ ∂_z \\
                                                 & - & ∂_t ∧ ∂_y ∧ ∂_x ∧ ∂_z \\
                                                 & - & ∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z \\
+      \end{alignedat}
+
    .. math::
 
+      \begin{alignedat}{2}
       ⋆ ∂_z \propto ∂_t ∧ ∂_y ∧ ∂_x \rightarrow &   & ∂_z ∧ ∂_t ∧ ∂_y ∧ ∂_x \\
                                                 & - & ∂_t ∧ ∂_z ∧ ∂_y ∧ ∂_x \\
                                                 &   & ∂_t ∧ ∂_y ∧ ∂_z ∧ ∂_x \\
                                                 & - & ∂_t ∧ ∂_y ∧ ∂_x ∧ ∂_z \\
                                                 &   & ∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z \\
+      \end{alignedat}
 
    .. rubric:: Use the definition of the Hodge dual
 
    .. math::
 
+      \begin{alignedat}{2}
       ⋆ ∂_t & = \braket{∂_t | ∂_t} & ∂_x ∧ ∂_y ∧ ∂_z \\
       ⋆ ∂_x & = \braket{∂_x | ∂_x} & ∂_t ∧ ∂_z ∧ ∂_y \\
       ⋆ ∂_y & = \braket{∂_y | ∂_y} & ∂_t ∧ ∂_x ∧ ∂_z \\
       ⋆ ∂_z & = \braket{∂_z | ∂_z} & ∂_t ∧ ∂_y ∧ ∂_x \\
+      \end{alignedat}
 
    .. rubric:: Reorder
 
    .. math::
 
+      \begin{alignedat}{3}
       ⋆ ∂_t & = \braket{∂_t | ∂_t} & (+1) & ∂_x ∧ ∂_y ∧ ∂_z \\
       ⋆ ∂_x & = \braket{∂_x | ∂_x} & (-1) & ∂_t ∧ ∂_y ∧ ∂_z \\
       ⋆ ∂_y & = \braket{∂_y | ∂_y} & (-1) & ∂_t ∧ ∂_z ∧ ∂_x \\
       ⋆ ∂_z & = \braket{∂_z | ∂_z} & (-1) & ∂_t ∧ ∂_x ∧ ∂_y \\
+      \end{alignedat}
 
    .. rubric:: Apply the values of the inner products
 
    .. math::
 
+      \begin{alignedat}{3}
       ⋆ ∂_t & = (+1) & (+1) & ∂_x ∧ ∂_y ∧ ∂_z \\
       ⋆ ∂_x & = (-1) & (-1) & ∂_t ∧ ∂_y ∧ ∂_z \\
       ⋆ ∂_y & = (-1) & (-1) & ∂_t ∧ ∂_z ∧ ∂_x \\
       ⋆ ∂_z & = (-1) & (-1) & ∂_t ∧ ∂_x ∧ ∂_y \\
+      \end{alignedat}
 
    .. rubric:: Conclude
 
@@ -1056,12 +1071,14 @@ in Minkowski space:
 
 .. math::
 
+   \begin{alignedat}{2}
    ⋆ (∂_t ∧ ∂_x) &= -& ∂_y ∧ ∂_z \\
    ⋆ (∂_t ∧ ∂_y) &= -& ∂_z ∧ ∂_x \\
    ⋆ (∂_t ∧ ∂_z) &= -& ∂_x ∧ ∂_y \\
    ⋆ (∂_y ∧ ∂_z) &=  & ∂_t ∧ ∂_x \\
    ⋆ (∂_z ∧ ∂_x) &=  & ∂_t ∧ ∂_y \\
    ⋆ (∂_x ∧ ∂_y) &=  & ∂_t ∧ ∂_z \\
+   \end{alignedat}
 
 .. admonition:: Full calculations of the Hodge dual of bivectors
    :class: dropdown
@@ -1083,9 +1100,11 @@ in Minkowski space:
 
    .. math::
 
+      \begin{alignedat}{2}
       ⋆ (∂_t ∧ ∂_y) \propto ∂_z ∧ ∂_x  & \rightarrow   & ∂_t ∧ ∂_y ∧ ∂_z ∧ ∂_x \\
                                        & \rightarrow - & ∂_t ∧ ∂_y ∧ ∂_x ∧ ∂_z \\
                                        & \rightarrow   & ∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z \\
+      \end{alignedat}
 
    Taken all together and with the inner product, we have:
 
@@ -1102,12 +1121,14 @@ in Minkowski space:
 
    .. math::
 
+      \begin{alignedat}{2}
       ⋆ (∂_t ∧ ∂_x) &= -& ∂_y ∧ ∂_z \\
       ⋆ (∂_t ∧ ∂_y) &= -& ∂_z ∧ ∂_x \\
       ⋆ (∂_t ∧ ∂_z) &= -& ∂_x ∧ ∂_y \\
       ⋆ (∂_y ∧ ∂_z) &=  & ∂_t ∧ ∂_x \\
       ⋆ (∂_z ∧ ∂_x) &=  & ∂_t ∧ ∂_y \\
       ⋆ (∂_x ∧ ∂_y) &=  & ∂_t ∧ ∂_z \\
+      \end{alignedat}
 
 .. rubric:: trivectors
 
@@ -1126,45 +1147,54 @@ in Minkowski space:
 
    .. math::
 
+      \begin{alignedat}{2}
       ⋆ ∂_x ∧ ∂_y ∧ ∂_z &\propto - & ∂_t \\
       ⋆ ∂_t ∧ ∂_y ∧ ∂_z &\propto   & ∂_x \\
       ⋆ ∂_t ∧ ∂_z ∧ ∂_x &\propto   & ∂_y \\
       ⋆ ∂_t ∧ ∂_x ∧ ∂_y &\propto   & ∂_z \\
+      \end{alignedat}
 
    Indeed, we check this for all entries:
 
    .. math::
 
+      \begin{alignedat}{2}
       ⋆ ∂_x ∧ ∂_y ∧ ∂_z \propto ∂_t & \rightarrow   & ∂_x ∧ ∂_y ∧ ∂_z ∧ ∂_t \\
                                     & \rightarrow - & ∂_x ∧ ∂_y ∧ ∂_t ∧ ∂_z \\
                                     & \rightarrow   & ∂_x ∧ ∂_t ∧ ∂_y ∧ ∂_z \\
                                     & \rightarrow - & ∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z \\
+      \end{alignedat}
 
    .. math::
 
+      \begin{alignedat}{2}
       ⋆ ∂_t ∧ ∂_y ∧ ∂_z \propto ∂_x & \rightarrow   & ∂_t ∧ ∂_y ∧ ∂_z ∧ ∂_x \\
                                     & \rightarrow - & ∂_t ∧ ∂_y ∧ ∂_x ∧ ∂_z \\
                                     & \rightarrow   & ∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z \\
+      \end{alignedat}
 
    .. math::
 
+      \begin{alignedat}{2}
       ⋆ ∂_t ∧ ∂_z ∧ ∂_x \propto ∂_y & \rightarrow   & ∂_t ∧ ∂_z ∧ ∂_x ∧ ∂_y \\
                                     & \rightarrow - & ∂_t ∧ ∂_x ∧ ∂_z ∧ ∂_y \\
                                     & \rightarrow   & ∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z \\
+      \end{alignedat}
 
    .. math::
 
-      ⋆ ∂_t ∧ ∂_x ∧ ∂_y \propto ∂_z & \rightarrow \phantom{-} & ∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z \\
-
+      ⋆ ∂_t ∧ ∂_x ∧ ∂_y \propto ∂_z \rightarrow \phantom{-} ∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z \\
 
    Taken all together and with the inner product:
 
    .. math::
 
+      \begin{alignedat}{2}
       ⋆ ∂_x ∧ ∂_y ∧ ∂_z &= \braket{∂_x ∧ ∂_y ∧ ∂_z | ∂_x ∧ ∂_y ∧ ∂_z}- & ∂_t \\
       ⋆ ∂_t ∧ ∂_y ∧ ∂_z &= \braket{∂_t ∧ ∂_y ∧ ∂_z | ∂_t ∧ ∂_y ∧ ∂_z}  & ∂_x \\
       ⋆ ∂_t ∧ ∂_z ∧ ∂_x &= \braket{∂_t ∧ ∂_z ∧ ∂_x | ∂_t ∧ ∂_z ∧ ∂_x}  & ∂_y \\
       ⋆ ∂_t ∧ ∂_x ∧ ∂_y &= \braket{∂_t ∧ ∂_x ∧ ∂_y | ∂_t ∧ ∂_x ∧ ∂_y}  & ∂_z \\
+      \end{alignedat}
 
    .. math::
 
@@ -1197,12 +1227,14 @@ following holds:
 
 .. math::
 
+   \begin{alignedat}{2}
    ⋆ (dt ∧ dx) &= -& dy ∧ dz \\
    ⋆ (dt ∧ dy) &= -& dz ∧ dx \\
    ⋆ (dt ∧ dz) &= -& dx ∧ dy \\
    ⋆ (dy ∧ dz) &=  & dt ∧ dx \\
    ⋆ (dz ∧ dx) &=  & dt ∧ dy \\
    ⋆ (dx ∧ dy) &=  & dt ∧ dz \\
+   \end{alignedat}
 
 .. math::
 

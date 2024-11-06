@@ -49,9 +49,22 @@ redirects = {
 #     'contribute.rst',
 #     'licence.rst',
 #     'resources.rst',
+#     'the_cartan_hodge_formalism/index.rst',
+#     'the_cartan_hodge_formalism/basis_vectors.rst',
+#     'the_cartan_hodge_formalism/hodge_duality.rst',
+#     'the_cartan_hodge_formalism/musicality.rst',
+#     'the_cartan_hodge_formalism/the_free_matrix_representation.rst',
+#     'the_cartan_hodge_formalism/the_minkowski_metric.rst',
+#     'differential_operators/index.rst',
+#     'differential_operators/differential_operators.rst',
+#     'differential_operators/the_exterior_derivative_of_rotations.rst',
+#     'rotations/index.rst',
+#     'rotations/rotations_in_3_dimensions.rst',
+#     'rotations/rotations_in_minkowski_space.rst',
 #     'faraday_tensor/index.rst',
 #     'faraday_tensor/faraday_tensor_derivation.rst',
 #     'faraday_tensor/of_maxwell_equations_and_rotations.rst',
+#     'faraday_tensor/all_electromagnetic_field_tensors.rst',
 # ]
 
 # Link checks

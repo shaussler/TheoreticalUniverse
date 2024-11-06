@@ -49,7 +49,7 @@ We could also represent the rotation with a row/column notation:
 
 .. math::
 
-   R^{♯♯} = \left[ \begin{alignedat}{1}
+   R^{♯♯} = \left[ \begin{alignedat}{2}
                     & c \; ∂_x ∧ ∂_y &                \\
                     &                & a \; ∂_y ∧ ∂_z \\
      b \; ∂_z ∧ ∂_x &                &                \\
@@ -424,17 +424,17 @@ electromagnetic tensor. Choosing the implicit basis :math:`\mathbf{e}_i \wedge
      + c &     & - a \\
      - b & + a &     \\
    \end{bmatrix} \\
-   &= a \left[ \begin{alignedat}{1}
+   &= a \left[ \begin{alignedat}{4}
      \; 0 & \;   & 0 & \;  & 0 \\
      \; 0 & \;   & 0 & \;- & 1 \\
      \; 0 & \; + & 1 & \;  & 0 \\
    \end{alignedat} \right]
-   + b \left[ \begin{alignedat}{1}
+   + b \left[ \begin{alignedat}{4}
        & 0 & \quad 0 & \; + & 1 \\
        & 0 & \quad 0 & \;   & 0 \\
      - & 1 & \quad 0 & \;   & 0 \\
    \end{alignedat} \right]
-   + c \left[ \begin{alignedat}{1}
+   + c \left[ \begin{alignedat}{4}
        & 0 & - & 1 & \quad 0 \\
      + & 1 &   & 0 & \quad 0 \\
        & 0 &   & 0 & \quad 0 \\

@@ -238,7 +238,7 @@ Expanded, we obtain:
 
    .. math::
 
-     G^{♭♭} = \left[ \begin{alignedat}{1}
+     G^{♭♭} = \left[ \begin{alignedat}{2}
        - & \E^x \; (-1) & dy ∧ dz \\
        - & \E^y \; (-1) & dz ∧ dx \\
        - & \E^z \; (-1) & dx ∧ dy \\

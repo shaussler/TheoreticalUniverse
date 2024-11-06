@@ -269,7 +269,7 @@ obtain:
 
    .. math::
 
-      ⋆ (dR^{♭♭}) = \left[ \begin{alignedat}{1}
+      ⋆ (dR^{♭♭}) = \left[ \begin{alignedat}{5}
         (&         & - ∂_x d & - ∂_y e & - ∂_z f &\:) \; dt \\
         (& - ∂_t d &         & - ∂_y c & + ∂_z b &\:) \; dx \\
         (& - ∂_t e & + ∂_x c &         & - ∂_z a &\:) \; dy \\
@@ -346,7 +346,7 @@ obtain:
 
    .. math::
 
-      dR = \left[ \begin{alignedat}{1}
+      dR = \left[ \begin{alignedat}{5}
         (&         & + ∂_x d & + ∂_y e & + ∂_z f &\:) \; dx^x ∧ dx^y ∧ dx^z \\
         (& + ∂_t d &         & + ∂_y c & - ∂_z b &\:) \; dx^t ∧ dx^y ∧ dx^z \\
         (& + ∂_t e & - ∂_x c &         & + ∂_z a &\:) \; dx^t ∧ dx^z ∧ dx^x \\
@@ -357,7 +357,7 @@ obtain:
 
    .. math::
 
-      ⋆(dR) = \left[ \begin{alignedat}{1}
+      ⋆(dR) = \left[ \begin{alignedat}{5}
         (&         & + ∂_x d & + ∂_y e & + ∂_z f &\:) \; (-dt) \\
         (& + ∂_t d &         & + ∂_y c & - ∂_z b &\:) \; (-dx) \\
         (& + ∂_t e & - ∂_x c &         & + ∂_z a &\:) \; (-dy) \\
@@ -368,7 +368,7 @@ obtain:
 
    .. math::
 
-      ⋆ (dR) = \left[ \begin{alignedat}{1}
+      ⋆ (dR) = \left[ \begin{alignedat}{5}
         (&         & - ∂_x d & - ∂_y e & - ∂_z f &\:) \; dt \\
         (& - ∂_t d &         & - ∂_y c & + ∂_z b &\:) \; dx \\
         (& - ∂_t e & + ∂_x c &         & - ∂_z a &\:) \; dy \\
@@ -393,7 +393,7 @@ R^{♭♭}`, we obtain:
 
    .. math::
 
-      d( ⋆ R^{♭♭} ) = \left[ \begin{alignedat}{1}
+      d( ⋆ R^{♭♭} ) = \left[ \begin{alignedat}{5}
         (&         & + ∂_x a & + ∂_y b & + ∂_z c &\:) \; dx ∧ dy ∧ dz \\
         (& + ∂_t a &         & - ∂_y f & + ∂_z e &\:) \; dt ∧ dy ∧ dz \\
         (& + ∂_t b & + ∂_x f &         & - ∂_z d &\:) \; dt ∧ dz ∧ dx \\
@@ -483,7 +483,7 @@ R^{♭♭}`, we obtain:
 
    .. math::
 
-      d( ⋆ R^{♭♭} ) = \left[ \begin{alignedat}{1}
+      d( ⋆ R^{♭♭} ) = \left[ \begin{alignedat}{5}
         (&         & + ∂_x a & + ∂_y b & + ∂_z c &\:) \; dx ∧ dy ∧ dz \\
         (& + ∂_t a &         & - ∂_y f & + ∂_z e &\:) \; dt ∧ dy ∧ dz \\
         (& + ∂_t b & + ∂_x f &         & - ∂_z d &\:) \; dt ∧ dz ∧ dx \\
@@ -512,7 +512,7 @@ Applied to a rotation in spacetime, we obtain the wave equations:
           & e \; dz ∧ dx \\
           & f \; dx ∧ dy \\
    \end{aligned} \right]
-   &= \left[ \begin{alignedat}{1}
+   &= \left[ \begin{alignedat}{6}
      (&- ∂_t^2 a & + ∂_x^2 a & + ∂_y^2 a & + ∂_z^2 a &\:)&\: dt∧dx \\
      (&- ∂_t^2 b & + ∂_x^2 b & + ∂_y^2 b & + ∂_z^2 b &\:)&\: dt∧dy \\
      (&- ∂_t^2 c & + ∂_x^2 c & + ∂_y^2 c & + ∂_z^2 c &\:)&\: dt∧dz \\
