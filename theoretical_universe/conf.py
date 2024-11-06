@@ -42,6 +42,18 @@ redirects = {
     "differential_rotations": "differential_operators/the_exterior_derivative_of_rotations.html",
 }
 
+
+# include_patterns = [
+#     'index.rst',
+#     'cite.rst',
+#     'contribute.rst',
+#     'licence.rst',
+#     'resources.rst',
+#     'faraday_tensor/index.rst',
+#     'faraday_tensor/faraday_tensor_derivation.rst',
+#     'faraday_tensor/of_maxwell_equations_and_rotations.rst',
+# ]
+
 # Link checks
 # -----------
 
@@ -74,7 +86,11 @@ epub_language = 'en'
 autosectionlabel_prefix_document = True
 
 templates_path = ['_templates']
-exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
+exclude_patterns = [
+    '_build',
+    'Thumbs.db',
+    '.DS_Store',
+]
 
 # Options for HTML output
 # -----------------------
@@ -108,6 +124,16 @@ todo_include_todos = True
 
 # Math configuration
 # ------------------
+
+latex_elements = {
+    'preamble': r'''
+\usepackage[utf8]{inputenc}    % Enable UTF-8 support
+\usepackage{fontspec}          % Use fontspec for modern font handling (XeLaTeX or LuaLaTeX required)
+\usepackage{unicode-math}      % Unicode math for direct UTF-8 math symbols
+\usepackage{braket}
+\newcommand{\E}{\tilde{E}}     % Define \E if you still need it
+'''
+}
 
 mathjax3_config = {
     'chtml': {
