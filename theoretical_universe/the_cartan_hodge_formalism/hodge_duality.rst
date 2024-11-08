@@ -132,9 +132,9 @@ We note this relation with the star symbol :math:`⋆`:
    ⋆ ∂_y ∧ ∂_z = ∂_x \\
    ⋆ ∂_z ∧ ∂_x = ∂_y \\
 
-This association defines a dual vector to every oriented surfaces and is called
-the Hodge dual, noted with the star operator :math:`⋆` operator. The relation
-holds in both direction:
+This association defines a unique vector dual to every oriented surfaces called
+the Hodge dual. Hodge duality is noted with the star symbol :math:`⋆`, called
+the *Hodge star operator*. The relation holds in both direction:
 
 .. math::
 
@@ -181,46 +181,100 @@ Pseudo-vectors and pseudo-scalars
 
 .. {{{
 
-From the vector basis, we have obtained the following objects:
+As a side quest which may be of particular interest to particle physicist, I
+discuss the naming *pseudo-vector* and *pseudo-scalar*. From the vector basis,
+we have constructed with the following objects:
 
-* Scalars.
-* Vectors.
-* Bivectors corresponding to surfaces, and also called pseudo-vectors.
-* Trivectors corresponding to volumes, and also called pseudo-scalars.
+* scalars,
+* vectors,
+* bivectors corresponding to oriented surfaces, and
+* trivectors corresponding to oriented volumes.
 
-Placing the objects in front of a mirror:
+Place these objects in front of a mirror as a *Gedankenexperiment*. Observe the
+image of these objects and notice that:
 
-* Scalars look the same.
-* Vectors look the same.
-* Surfaces are flipped and the sign changes.
-* Volumes are flipped and the sign changes.
+* scalars are unchanged,
+* vectors are unchanged,
+* oriented surfaces defined from two vectors are flipped with a change of sign,
+  and
+* oriented volumes defined as trivectors (i.e. from an oriented surface and a
+  vector) are also flipped with a change of sign.
 
-This is the reason behind the naming *pseudo-vector*. When placed in front of a
-mirror, the sign of a positive oriented surface goes to negative. These objects
-are associated to vectors through the hodge dual. These dual vectors flip their
-directions with the image of the oriented surface.
+This is the reason for the name *pseudo-vector*. These objects look like and
+nearly behave like the vectors they are associated to through Hodge duality.
+However and contrary to vectors, the sign of the image of a positive oriented
+surface goes to negative when placed in front of a mirror. The image of the
+Hodge dual vector is flipped.
 
-This is also the reason behind the name *pseudo-scalar*. When placed in front
-of a mirror, the sign of a positive oriented volume goes to negative. These
-objects are associated to scalars through the hodge dual. This dual scalars
-flip their signs with the image of the oriented volume.
+This is also the reason for the name *pseudo-scalar*. These objects look like
+and nearly behave like the scalars they are associated to through Hodge
+duality. However and contrary to scalars, the sign of the image of a positive
+oriented volume goes to negative when placed in front of a mirror. The image of
+the Hodge dual scalar is flipped.
 
 .. }}}
 
 Inner product of k-vectors
 --------------------------
 
+.. {{{
+
+The object of this section is to generalize the inner product from vectors to
+multivectors. This will be needed to generalize Hodge duality to any number of
+dimensions and metric signatures. Indeed, Minkowski space is characterized not
+only by 4 dimension, but also by the mixed metric signature :math:`(+,-,-,-)`.
+Intuitively, we can guess that the inner product on multivectors should be
+influence by the metric signature. In turn, we can then also expect that the
+metric signature will play a role for Hodge duality in Minkowski space. We will
+see that the concept of the inner product is akin to measuring the size of
+shadows in one dimension, two dimensions, three dimensions, and k-dimensions in
+all generality.
+
+.. }}}
+
+Vectors
+'''''''
+
+.. {{{
+
+I expect you are very familiar with linear algebra, since you are interested in
+the more *advanced* topic of Hodge duality. I nonethelss recall what you may
+find obvious. The inner product of one vector onto another corresponds to the
+projection of one vector onto the other. In that sense, the inner product can
+be understood as a one-dimensional shadow:
+
+.. figure:: https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/
+   Dot_Product.svg/600px-Dot_Product.svg.png
+   :width: 250px
+
+   Inner product on vectors.
+
+For the basis vectors in flat euclidean space, we obtain:
+
+.. math::
+
+   ∂_i \cdot ∂_j = \braket{∂_i | ∂_j} = δ_{ij}
+
+For the basis 4-vectors in flat Minkowski space, we obtain:
+
+.. math::
+
+   ∂_μ \cdot ∂_ν = \braket{∂_μ | ∂_ν} = η_{μν}
+
+This is the starting point for a procedure which permits to meaningfully lift
+the inner product on vectors to the inner products on bivectors, trivectors,
+quadvectors, and in all generality to k-vectors.
+
+.. }}}
+
 Surfaces, volumes, hypervolumes and the determinant of matrices
 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 .. {{{
 
-I expect you are very familiar with linear algebra, since you are interested in
-the topic of the Hodge dual. I nonetheless recall the relationship between the
-determinant of matrices and surfaces, volumes, and hypervolumes in k
-dimensions, as it is central to understanding the procedure for lifting the
-inner product on vectors to the innner product on bivectors, trivectos,
-quadvectors, and in all generality on k-vectors.
+The next step is to highlight the link between the inner product and the
+determinant of matrices. I recall the relationship between the determinant,
+surfaces, volumes, and hypervolumes.
 
 .. figure:: https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/
    Area_parallellogram_as_determinant.svg/
@@ -229,10 +283,10 @@ quadvectors, and in all generality on k-vectors.
 
    Surfaces and the determinant of 2x2 matrices.
 
-The area of the surface :math:`S` spanned by a parallelogram defined by two
-vectors :math:`a ∂_x + b ∂_y` and :math:`c ∂_x + d ∂_y` corresponds
-to the determinant of the :math:`2 \times 2` matrice, where each column are the
-entries of the components of the vectors.
+The area of the surface :math:`S` spanned by the parallelogram defined by a
+vector :math:`a ∂_x + b ∂_y` and a vector :math:`c ∂_x + d ∂_y` corresponds to
+the determinant of the :math:`2 \times 2` matrice, where each column entries
+are the the components of the vectors.
 
 .. math::
 
@@ -240,32 +294,72 @@ entries of the components of the vectors.
      a & c \\
      b & d \\
    \end{vmatrix}
+   = ad - cb
 
-Or in other words the magnitude of the bivector:
+This can equivalently be achieved by calculating the exterior product of these
+two vectors:
 
 .. math::
 
-   S ∂_x ∧ ∂_y &= a ∂_x + b ∂_y) ∧ (c ∂_x + d ∂_y) \\
-               &= a ∂_x ∧ (c ∂_x + d ∂_y) + b ∂_y ∧ (c ∂_x + d ∂_y) \\
+   S ∂_x ∧ ∂_y = (a ∂_x + b ∂_y) ∧ (c ∂_x + d ∂_y)
+
+Distribute:
+
+.. math::
+
+   S ∂_x ∧ ∂_y &= a ∂_x ∧ (c ∂_x + d ∂_y) + b ∂_y ∧ (c ∂_x + d ∂_y) \\
                &= a ∂_x ∧ c ∂_x + a ∂_x ∧ d ∂_y + b ∂_y ∧ c ∂_x + b ∂_y ∧ d ∂_y \\
-               &= a ∂_x ∧ d ∂_y + b ∂_y ∧ c ∂_x \\
+
+Remove zero terms and take the factors in front of the expression:
+
+.. math::
+
+   S ∂_x ∧ ∂_y &= a ∂_x ∧ d ∂_y + b ∂_y ∧ c ∂_x \\
                &= a d ∂_x ∧ ∂_y + b c ∂_y ∧ ∂_x \\
-               &= a d ∂_x ∧ ∂_y - b c ∂_x ∧ ∂_y \\
-               &= (ad - bc) ∂_x ∧ ∂_y\\
+
+Reorganize the exterior products :math:`∧` and conclude:
+
+.. math::
+
+   S ∂_x ∧ ∂_y &= a d ∂_x ∧ ∂_y - b c ∂_x ∧ ∂_y \\
+               &= (ad - bc) ∂_x ∧ ∂_y \\
 
 Using the free matrix representation from the Cartan-Hodge formalism helps
-organize the terms. The same calculation yields:
+organize calculations and yields the same result. Take the wedge product of the two vectors:
 
 .. math::
 
-   S ∂_x ∧ ∂_y
-   &= \begin{bmatrix} a ∂_x \\ b ∂_y \end{bmatrix} ∧ \begin{bmatrix} c ∂_x \\ d ∂_y \\ \end{bmatrix} \\
-   &= \begin{bmatrix} a ∂_x ∧ d∂_y \\ b ∂_y ∧ c ∂_x \end{bmatrix} \\
-   &= \begin{bmatrix} + a d ∂_x ∧ ∂_y \\ - b c ∂_x ∧ ∂_y \end{bmatrix} \\
-   &= (ad - bc) ∂_x ∧ ∂_y\\
+   S ∂_x ∧ ∂_y =
+   \begin{bmatrix} a ∂_x \\ b ∂_y \end{bmatrix}
+   ∧ \begin{bmatrix} c ∂_x \\ d ∂_y \\ \end{bmatrix}
 
-The same can be done in three dimensions to calculate the volume of a
-parallelepiped defined by three vectors in three dimensions.
+Distribute and remove zero terms:
+
+.. math::
+
+   S ∂_x ∧ ∂_y = \begin{bmatrix}
+      a ∂_x ∧ d ∂_y \\
+      a ∂_x ∧ c ∂_x \\
+      b ∂_y ∧ c ∂_x \\
+      b ∂_y ∧ d ∂_y
+   \end{bmatrix}
+   = \begin{bmatrix}
+       a ∂_x ∧ d ∂_y \\
+       b ∂_y ∧ c ∂_x \\
+   \end{bmatrix}
+
+Reorganize and conclude:
+
+.. math::
+
+   S ∂_x ∧ ∂_y = \begin{bmatrix}
+       + a d ∂_x ∧ ∂_y \\
+       - b c ∂_x ∧ ∂_y \\
+   \end{bmatrix}
+   = (ad - bc) ∂_x ∧ ∂_y\\
+
+Which indeed returns the expected result. The same can be done to calculate the
+volume :math:`V` of a parallelepiped defined by three vectors.
 
 .. figure:: https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/
    Determinant_parallelepiped.svg/912px-Determinant_parallelepiped.svg.png
@@ -374,7 +468,7 @@ hypervolume is calculated with the determinant of a :math:`k \times k` matrice.
 
 .. }}}
 
-bivectors in 3-dimensional Euclidean space
+Bivectors in 3-dimensional Euclidean space
 ''''''''''''''''''''''''''''''''''''''''''
 
 .. {{{
