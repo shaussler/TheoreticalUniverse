@@ -267,8 +267,8 @@ quadvectors, and in all generality to k-vectors.
 
 .. }}}
 
-Surfaces, volumes, hypervolumes and the determinant of matrices
-'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+Surfaces, volumes, hypervolumes, and the determinant of matrices
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 .. {{{
 
@@ -301,65 +301,85 @@ two vectors:
 
 .. math::
 
-   S ∂_x ∧ ∂_y = (a ∂_x + b ∂_y) ∧ (c ∂_x + d ∂_y)
+   S ∂_x ∧ ∂_y &= (a ∂_x + b ∂_y) ∧ (c ∂_x + d ∂_y) \\
+               &= (ad - bc) ∂_x ∧ ∂_y
 
-Distribute:
+.. admonition:: Calculation
+   :class: dropdown
 
-.. math::
+   .. rubric:: Take the exterior product
 
-   S ∂_x ∧ ∂_y &= a ∂_x ∧ (c ∂_x + d ∂_y) + b ∂_y ∧ (c ∂_x + d ∂_y) \\
-               &= a ∂_x ∧ c ∂_x + a ∂_x ∧ d ∂_y + b ∂_y ∧ c ∂_x + b ∂_y ∧ d ∂_y \\
+   .. math::
 
-Remove zero terms and take the factors in front of the expression:
+      S ∂_x ∧ ∂_y &= (a ∂_x + b ∂_y) ∧ (c ∂_x + d ∂_y) \\
 
-.. math::
+   .. rubric:: Distribute
 
-   S ∂_x ∧ ∂_y &= a ∂_x ∧ d ∂_y + b ∂_y ∧ c ∂_x \\
-               &= a d ∂_x ∧ ∂_y + b c ∂_y ∧ ∂_x \\
+   .. math::
 
-Reorganize the exterior products :math:`∧` and conclude:
+      S ∂_x ∧ ∂_y &= a ∂_x ∧ (c ∂_x + d ∂_y) + b ∂_y ∧ (c ∂_x + d ∂_y) \\
+                  &= a ∂_x ∧ c ∂_x + a ∂_x ∧ d ∂_y + b ∂_y ∧ c ∂_x + b ∂_y ∧ d ∂_y \\
 
-.. math::
+   .. rubric:: Remove zero terms and take the factors in front of expression
 
-   S ∂_x ∧ ∂_y &= a d ∂_x ∧ ∂_y - b c ∂_x ∧ ∂_y \\
-               &= (ad - bc) ∂_x ∧ ∂_y \\
+   .. math::
 
-Using the free matrix representation from the Cartan-Hodge formalism helps
-organize calculations and yields the same result. Take the wedge product of the two vectors:
+      S ∂_x ∧ ∂_y &= a ∂_x ∧ d ∂_y + b ∂_y ∧ c ∂_x \\
+                  &= a d ∂_x ∧ ∂_y + b c ∂_y ∧ ∂_x \\
 
-.. math::
+   .. rubric:: Reorganize and conclude
 
-   S ∂_x ∧ ∂_y =
-   \begin{bmatrix} a ∂_x \\ b ∂_y \end{bmatrix}
-   ∧ \begin{bmatrix} c ∂_x \\ d ∂_y \\ \end{bmatrix}
+   .. math::
 
-Distribute and remove zero terms:
+      S ∂_x ∧ ∂_y &= a d ∂_x ∧ ∂_y - b c ∂_x ∧ ∂_y \\
+                  &= (ad - bc) ∂_x ∧ ∂_y \\
 
-.. math::
+.. admonition:: Calculation in free matrix representation
+   :class: dropdown
 
-   S ∂_x ∧ ∂_y = \begin{bmatrix}
-      a ∂_x ∧ d ∂_y \\
-      a ∂_x ∧ c ∂_x \\
-      b ∂_y ∧ c ∂_x \\
-      b ∂_y ∧ d ∂_y
-   \end{bmatrix}
-   = \begin{bmatrix}
-       a ∂_x ∧ d ∂_y \\
-       b ∂_y ∧ c ∂_x \\
-   \end{bmatrix}
+   Using the free matrix representation from the Cartan-Hodge formalism helps
+   organize calculations and yields the same result.
 
-Reorganize and conclude:
+   .. rubric:: Take the exterior product
 
-.. math::
+   .. math::
 
-   S ∂_x ∧ ∂_y = \begin{bmatrix}
-       + a d ∂_x ∧ ∂_y \\
-       - b c ∂_x ∧ ∂_y \\
-   \end{bmatrix}
-   = (ad - bc) ∂_x ∧ ∂_y\\
+      S ∂_x ∧ ∂_y = \begin{bmatrix}
+          a ∂_x \\
+          b ∂_y \\
+      \end{bmatrix}
+      ∧ \begin{bmatrix}
+          c ∂_x \\
+          d ∂_y \\
+      \end{bmatrix}
 
-Which indeed returns the expected result. The same can be done to calculate the
-volume :math:`V` of a parallelepiped defined by three vectors.
+   .. rubric:: Distribute and remove zero terms
+
+   .. math::
+
+      S ∂_x ∧ ∂_y = \begin{bmatrix}
+         a ∂_x ∧ d ∂_y \\
+         a ∂_x ∧ c ∂_x \\
+         b ∂_y ∧ c ∂_x \\
+         b ∂_y ∧ d ∂_y
+      \end{bmatrix}
+      = \begin{bmatrix}
+          a ∂_x ∧ d ∂_y \\
+          b ∂_y ∧ c ∂_x \\
+      \end{bmatrix}
+
+   .. rubric:: Reorganize and conclude
+
+   .. math::
+
+      S ∂_x ∧ ∂_y = \begin{bmatrix}
+          + a d ∂_x ∧ ∂_y \\
+          - b c ∂_x ∧ ∂_y \\
+      \end{bmatrix}
+      = (ad - bc) ∂_x ∧ ∂_y\\
+
+The same can be done to calculate the volume :math:`V` of a parallelepiped
+defined by three vectors.
 
 .. figure:: https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/
    Determinant_parallelepiped.svg/912px-Determinant_parallelepiped.svg.png
@@ -371,7 +391,7 @@ volume :math:`V` of a parallelepiped defined by three vectors.
 * :math:`r_2 = u ∂_x + v ∂_y + w ∂_z`
 * :math:`r_3 = p ∂_x + q ∂_y + r ∂_z`
 
-where each columns are the entry of the components of the vectors.
+The entries of each columns are the vector components:
 
 .. math::
 
@@ -383,7 +403,7 @@ where each columns are the entry of the components of the vectors.
 
 .. math::
 
-   v= + a \begin{vmatrix}
+   V = + a \begin{vmatrix}
      v & q \\
      w & r \\
    \end{vmatrix}
@@ -397,74 +417,80 @@ where each columns are the entry of the components of the vectors.
      \end{vmatrix}
 
 .. math::
+
    V = + avr - awq - bur + bwp + cuq - cvp
 
-Using the free matrix representation of the Cartan-Hodge formalism, we reach
-the same result. I like to think this approach replaces the algorithmic
-structure of the previous calculation with meaningful computations. Although
-the Cartan-Hodge formalism introduces additional notation, this is balanced by
-the clarity ofthe operations.
-
-First, we wedge the three vectors that define the volume:
-
-.. math::
-
-   V ∂_x ∧ ∂_y ∧ ∂_z = \begin{bmatrix} a ∂_x \\ b ∂_y \\ c ∂_z \end{bmatrix} ∧
-                       \begin{bmatrix} u ∂_x \\ v ∂_y \\ w ∂_z \end{bmatrix} ∧
-                       \begin{bmatrix} p ∂_x \\ q ∂_y \\ r ∂_z \end{bmatrix}
-
-Expand the first two vectors:
-
-.. math::
-
-   V ∂_x ∧ ∂_y ∧ ∂_z = \begin{bmatrix}
-                            av ∂_x ∧ ∂_y \\
-                            aw ∂_x ∧ ∂_z \\
-                            bu ∂_y ∧ ∂_x \\
-                            bw ∂_y ∧ ∂_z \\
-                            cu ∂_z ∧ ∂_x \\
-                            cv ∂_z ∧ ∂_y
-                        \end{bmatrix}
-                        ∧ \begin{bmatrix}
-                              p ∂_x \\
-                              q ∂_y \\
-                              r ∂_z
-                          \end{bmatrix}
-
-Expand with the third vector:
-
-.. math::
-
-   V ∂_x ∧ ∂_y ∧ ∂_z = \begin{bmatrix}
-                            avr ∂_x ∧ ∂_y ∧ ∂_z \\
-                            awq ∂_x ∧ ∂_z ∧ ∂_y \\
-                            bur ∂_y ∧ ∂_x ∧ ∂_z \\
-                            bwp ∂_y ∧ ∂_z ∧ ∂_x \\
-                            cuq ∂_z ∧ ∂_x ∧ ∂_y \\
-                            cvp ∂_z ∧ ∂_y ∧ ∂_x
-                        \end{bmatrix}
-
-Reorder the terms:
-
-.. math::
-
-   V ∂_x ∧ ∂_y ∧ ∂_z = \begin{bmatrix}
-                            +avr ∂_x ∧ ∂_y ∧ ∂_z \\
-                            -awq ∂_x ∧ ∂_y ∧ ∂_z \\
-                            -bur ∂_x ∧ ∂_y ∧ ∂_z \\
-                            +bwp ∂_x ∧ ∂_y ∧ ∂_z \\
-                            +cuq ∂_x ∧ ∂_y ∧ ∂_z \\
-                            -cvp ∂_x ∧ ∂_y ∧ ∂_z
-                        \end{bmatrix}
-
-And obtain the expected conclusion:
+The above result can be equivalently achieved by taking the exterior product of
+these three vectors:
 
 .. math::
 
    V ∂_x ∧ ∂_y ∧ ∂_z = (+avr -awq -bur +bwp +cuq -cvp) ∂_x ∧ ∂_y ∧ ∂_z
 
-This can be generalized to hypervolumes constructed from k-vectors, where the
-hypervolume is calculated with the determinant of a :math:`k \times k` matrice.
+.. admonition:: Calculation
+   :class: dropdown
+
+   .. rubric:: Wedge the three vectors defining the volume
+
+   .. math::
+
+      V ∂_x ∧ ∂_y ∧ ∂_z = \begin{bmatrix} a ∂_x \\ b ∂_y \\ c ∂_z \end{bmatrix} ∧
+                          \begin{bmatrix} u ∂_x \\ v ∂_y \\ w ∂_z \end{bmatrix} ∧
+                          \begin{bmatrix} p ∂_x \\ q ∂_y \\ r ∂_z \end{bmatrix}
+
+   .. rubric:: Expand the first two vectors
+
+   .. math::
+
+      V ∂_x ∧ ∂_y ∧ ∂_z = \begin{bmatrix}
+                               av ∂_x ∧ ∂_y \\
+                               aw ∂_x ∧ ∂_z \\
+                               bu ∂_y ∧ ∂_x \\
+                               bw ∂_y ∧ ∂_z \\
+                               cu ∂_z ∧ ∂_x \\
+                               cv ∂_z ∧ ∂_y
+                           \end{bmatrix}
+                           ∧ \begin{bmatrix}
+                                 p ∂_x \\
+                                 q ∂_y \\
+                                 r ∂_z
+                             \end{bmatrix}
+
+   .. rubric:: Expand with the third vector
+
+   .. math::
+
+      V ∂_x ∧ ∂_y ∧ ∂_z = \begin{bmatrix}
+                               avr ∂_x ∧ ∂_y ∧ ∂_z \\
+                               awq ∂_x ∧ ∂_z ∧ ∂_y \\
+                               bur ∂_y ∧ ∂_x ∧ ∂_z \\
+                               bwp ∂_y ∧ ∂_z ∧ ∂_x \\
+                               cuq ∂_z ∧ ∂_x ∧ ∂_y \\
+                               cvp ∂_z ∧ ∂_y ∧ ∂_x
+                           \end{bmatrix}
+
+   .. rubric:: Reorder
+
+   .. math::
+
+      V ∂_x ∧ ∂_y ∧ ∂_z = \begin{bmatrix}
+                               +avr ∂_x ∧ ∂_y ∧ ∂_z \\
+                               -awq ∂_x ∧ ∂_y ∧ ∂_z \\
+                               -bur ∂_x ∧ ∂_y ∧ ∂_z \\
+                               +bwp ∂_x ∧ ∂_y ∧ ∂_z \\
+                               +cuq ∂_x ∧ ∂_y ∧ ∂_z \\
+                               -cvp ∂_x ∧ ∂_y ∧ ∂_z
+                           \end{bmatrix}
+
+   .. rubric:: Conclude
+
+   .. math::
+
+      V ∂_x ∧ ∂_y ∧ ∂_z = (+avr -awq -bur +bwp +cuq -cvp) ∂_x ∧ ∂_y ∧ ∂_z
+
+This procedure can be generalized to hypervolumes constructed from k-vectors/
+The hypervolume is calculated with the determinant of a :math:`k \times k`
+matrice, or equivalently by taking the exterior product of k k-vectors.
 
 .. }}}
 
