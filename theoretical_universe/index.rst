@@ -7,13 +7,15 @@
 Theoretical Universe
 ====================
 
-.. rst-class:: custom-title
+.. only:: not latex
 
-   Maxwell Field Equations via Differential Forms
+   .. rst-class:: custom-title
 
-.. rst-class:: custom-author
+      Maxwell Field Equations via Differential Forms
 
-   by Stéphane Haussler
+   .. rst-class:: custom-author
+
+      by Stéphane Haussler
 
 Within these pages, you will find the formulation of electromagnetism in terms
 of Élie Cartan's differential forms, along with a systematic analysis of this
@@ -157,29 +159,42 @@ Symmetries are systematically analyzed. In this section, we get the first
 insight about the deep connection between the electromagnetism and rotations in
 spacetime.
 
-.. toctree::
-   :maxdepth: 1
-   :caption: Table of Contents:
+.. only:: latex
 
-   licence.rst
-   cite.rst
-   contribute.rst
-   resources.rst
-   the_cartan_hodge_formalism/index.rst
-   rotations/index.rst
-   differential_operators/index.rst
-   faraday_tensor/index.rst
-   miscellaneous/index.rst
+   .. toctree::
+      :maxdepth: 1
+      :caption: Table of Contents:
 
-LINKS:
+      the_cartan_hodge_formalism/index.rst
+      rotations/index.rst
+      differential_operators/index.rst
+      faraday_tensor/index.rst
 
-.. table::
-   :align: left
+.. only:: not latex
 
-   ============= =======================================================
+   .. toctree::
+      :maxdepth: 1
+      :caption: Table of Contents:
 
-   ============= =======================================================
-   Documentation https://shaussler.github.io/TheoreticalUniverse
-   Repository    https://github.com/shaussler/TheoreticalUniverse
-   Issues        https://github.com/shaussler/TheoreticalUniverse/issues
-   ============= =======================================================
+      licence.rst
+      cite.rst
+      contribute.rst
+      resources.rst
+      the_cartan_hodge_formalism/index.rst
+      rotations/index.rst
+      differential_operators/index.rst
+      faraday_tensor/index.rst
+      miscellaneous/index.rst
+
+   LINKS:
+
+   .. table::
+      :align: left
+
+      ============= =======================================================
+
+      ============= =======================================================
+      Documentation https://shaussler.github.io/TheoreticalUniverse
+      Repository    https://github.com/shaussler/TheoreticalUniverse
+      Issues        https://github.com/shaussler/TheoreticalUniverse/issues
+      ============= =======================================================

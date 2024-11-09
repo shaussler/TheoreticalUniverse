@@ -140,11 +140,40 @@ todo_include_todos = True
 
 latex_elements = {
     'preamble': r'''
-\usepackage[utf8]{inputenc}    % Enable UTF-8 support
-\usepackage{fontspec}          % Use fontspec for modern font handling (XeLaTeX or LuaLaTeX required)
-\usepackage{unicode-math}      % Unicode math for direct UTF-8 math symbols
+\usepackage{titling}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage{fontspec}
+\usepackage{unicode-math}
 \usepackage{braket}
-\newcommand{\E}{\tilde{E}}     % Define \E if you still need it
+
+\newcommand{\E}{\tilde{E}}
+''',
+'fontpkg': r'\usepackage{lmodern}',
+'pointsize': '10pt',
+'maketitle': r'''
+
+\newcommand{\subtitle}[1]{%
+  \posttitle{
+    \par\end{center}
+    \begin{center}\large#1\end{center}
+    \vskip0.5em
+
+    % \begin{center}
+    %     \includegraphics[width=0.2\textwidth]{
+    %         ../../_static/title_pic.png}
+    %     \par\vspace{1em}
+    % \end{center}
+
+  }
+}
+
+\title{\Huge Theoretical Universe}
+\subtitle{\huge Maxwell Field Equations via Differential Forms}
+\author{by Stéphane Haussler}
+\date{\today}
+
+\maketitle
 '''
 }
 
