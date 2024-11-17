@@ -159,42 +159,29 @@ Symmetries are systematically analyzed. In this section, we get the first
 insight about the deep connection between the electromagnetism and rotations in
 spacetime.
 
-.. only:: latex
+.. toctree::
+   :maxdepth: 1
+   :caption: Table of Contents:
 
-   .. toctree::
-      :maxdepth: 1
-      :caption: Table of Contents:
+   licence.rst
+   cite.rst
+   contribute.rst
+   resources.rst
+   the_cartan_hodge_formalism/index.rst
+   rotations/index.rst
+   differential_operators/index.rst
+   faraday_tensor/index.rst
+   miscellaneous/index.rst
 
-      the_cartan_hodge_formalism/index.rst
-      rotations/index.rst
-      differential_operators/index.rst
-      faraday_tensor/index.rst
+LINKS:
 
-.. only:: not latex
+.. table::
+   :align: left
 
-   .. toctree::
-      :maxdepth: 1
-      :caption: Table of Contents:
+   ============= =======================================================
 
-      licence.rst
-      cite.rst
-      contribute.rst
-      resources.rst
-      the_cartan_hodge_formalism/index.rst
-      rotations/index.rst
-      differential_operators/index.rst
-      faraday_tensor/index.rst
-      miscellaneous/index.rst
-
-   LINKS:
-
-   .. table::
-      :align: left
-
-      ============= =======================================================
-
-      ============= =======================================================
-      Documentation https://shaussler.github.io/TheoreticalUniverse
-      Repository    https://github.com/shaussler/TheoreticalUniverse
-      Issues        https://github.com/shaussler/TheoreticalUniverse/issues
-      ============= =======================================================
+   ============= =======================================================
+   Documentation https://shaussler.github.io/TheoreticalUniverse
+   Repository    https://github.com/shaussler/TheoreticalUniverse
+   Issues        https://github.com/shaussler/TheoreticalUniverse/issues
+   ============= =======================================================

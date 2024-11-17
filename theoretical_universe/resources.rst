@@ -26,6 +26,42 @@ In her `Gravitational Physics Lecture of January 8, 2024
 <https://en.m.wikipedia.org/wiki/Ruth_Gregory>`_ gives a rushed overview of
 Manifold basics. This is not learning material though, but review material.
 
+.. rubric:: Gravitational Physics Lecture by Ruth Gregory
+
+There is great content from the Perimeter Institute Recorded Seminar Archive
+that I am going through. Here is a list of videos, which I have not watched
+yet.
+
+* `Gravitational Physics Lecture 1 <https://pirsa.org/24010048>`_
+* `Gravitational Physics Lecture 2 <https://pirsa.org/24010049>`_
+* `Gravitational Physics Lecture 3 <https://pirsa.org/24010050>`_
+* `Gravitational Physics Lecture 4 <https://pirsa.org/24010051>`_
+
+* `PSI 2018/2019 - Gravitational Physics - Lecture 3 - Cartan's formalism:
+  connection & curvature <https://pirsa.org/19010053>`_
+
+* `PSI 2017/2018 - Gravitational Physics - Lecture 3: Applying Cartan:
+  Spherically Symmetric Spacetimes -- Schwarzschild, Relativistic Stars.
+  <https://pirsa.org/18010023>`_
+
+.. rubric:: Relativity and Cosmology II
+
+I am yet to watch the serie `Relativity and Cosmology II
+<https://www.thp.uni-koeln.de/gravitation/courses/rcii21.html>`_ by Claus
+Kiefer.
+
+I am interested in Cartan connections and Cartan structure equations and the
+following content:
+
+* `10.1 - 3. Vectors, covectors and tensors.
+  <https://www.youtube.com/watch?v=OvPFnLgtI7g&list=PLelGJJV9hME1I04Cd8pbXd5GuN-qw1les&index=9>`_
+* `10.4 - 5. The exterior algebra and exterior 𝑝-forms.
+  <https://www.youtube.com/watch?v=OK6p9N4jyik&list=PLelGJJV9hME1I04Cd8pbXd5GuN-qw1les&index=11>`_
+* `10.6. Connections and Cartan equations.
+  <https://www.youtube.com/watch?v=lJFjFyXiZD4&list=PLelGJJV9hME1I04Cd8pbXd5GuN-qw1les&index=11>`_
+* `10.7 - 8. Metricity, applications, integration, Maxwell and Einstein equations.
+  <https://www.youtube.com/watch?v=eWpm6FXKC7Q&list=PLelGJJV9hME1I04Cd8pbXd5GuN-qw1les&index=12>`_
+
 Q&A
 ---
 
