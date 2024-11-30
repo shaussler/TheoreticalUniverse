@@ -232,8 +232,8 @@ all generality.
 
 .. }}}
 
-Vectors
-'''''''
+Inner product of vectors
+''''''''''''''''''''''''
 
 .. {{{
 
@@ -494,51 +494,56 @@ matrice, or equivalently by taking the exterior product of k k-vectors.
 
 .. }}}
 
-Bivectors in 3-dimensional Euclidean space
-''''''''''''''''''''''''''''''''''''''''''
+Inner product of vectors, bivectors, and trivectors in 3-dimensional Euclidean space
+''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
 
 .. {{{
 
-In essence, the inner product can be understood as the concept of measuring a
-shadow. The inner product between two vectors is the measure of the
+In essence, the inner product can be understood as the concept of measuring
+shadows. The inner product between two vectors is the measure of the
 1-dimensional shadow of one vector onto the other. Similarly, the inner product
 between bivectors is the measure of the surface shadow of one surface onto the
 other. This 2-dimensional surface can be calculated from the determinant of a
 :math:`2 ⨯ 2` matrix. We then generalize to 3-dimensions by calculating the
 determinant of :math:`3 ⨯ 3` matrices, corresponding to the volumes covered by
-3-vectors. A k-dimensional shadow measure can then be calculated using :math:`k
-⨯ k` matrices, corresponding to hypervolumes of dimension k. This permits to
-find a meaningfull way to *lift* the inner product from vectors to bivectors,
-trivectors, and k-vectors. Lifting the inner product will finally permit to
-generalize the the Hodge dual to any metric signature, and apply to Minkowski
-space with metric signature :math:`(+,-,-,-)`. In 3-dimensional Euclidean
-space, the inner product of the basis vectors, denoted with with either the dot
-symbol :math:`\cdot` or the bracket symbol :math:`\braket{|}` is given by:
+3-vectors. One step further, a k-dimensional shadow measure can then be
+calculated using :math:`k ⨯ k` matrices, corresponding to hypervolumes of
+dimension k. This permits to find a meaningfull way to *lift* the inner product
+from vectors to bivectors, trivectors, and k-vectors. Lifting the inner product
+permits to generalize the the Hodge dual to any metric signature, and apply to
+Minkowski space with metric signature :math:`(+,-,-,-)`. In 3-dimensional
+Euclidean space, the inner product of the basis vectors, denoted with either
+the dot symbol :math:`\cdot` or the bracket symbol :math:`\braket{|}` is given
+by:
 
 .. math::
 
    ∂_i \cdot ∂_j = \braket{∂_i|∂_j} = δ_{ij}
 
-Consequently, we obtain the following dot products:
+Fully expanded, we have the following dot products for each basis vector
+combination:
 
-.. math::
+.. topic:: Inner product of vectors
 
-   \begin{array}{c|ccc}
-           & ∂_x & ∂_y & ∂_z \\
-       \hline
-       ∂_x & 1   & 0   & 0   \\
-       ∂_y & 0   & 1   & 0   \\
-       ∂_z & 0   & 0   & 1   \\
-   \end{array}
+   .. math::
 
-A hint that the inner product can be generalized to surfaces is that in 3
-dimensions, we can associate a basis surface to each of the basis vectors
-through the Hodge dual, as argued at the beginning of this article. It may then
-*feel natural,* since :math:`∂_x` is associated to :math:`∂_y ∧ ∂_z`, to expect
-that the inner product :math:`\braket{∂_x|∂_x}=1` implies that
-:math:`\braket{∂_y ∧ ∂_z | ∂_y ∧ ∂_z}=1`. Let us consider two vectors
-:math:`a^♯` and :math:`b^♯` in 3-dimensional Euclidean space, written in
-component form as:
+      \begin{array}{c|ccc}
+              & ∂_x & ∂_y & ∂_z \\
+          \hline
+          ∂_x &   1 &   0 &   0 \\
+          ∂_y &   0 &   1 &   0 \\
+          ∂_z &   0 &   0 &   1 \\
+      \end{array}
+
+A first hint that the inner product can be naturally generalized to surfaces,
+is that in 3 dimensions, we can associate a basis surface to each of the basis
+vectors through the Hodge dual, as argued at the beginning of this article. It
+may then *feel natural,* since :math:`∂_x` is associated to :math:`∂_y ∧ ∂_z`,
+to expect that the inner product :math:`\braket{∂_x|∂_x}=1` implies that
+:math:`\braket{∂_y ∧ ∂_z | ∂_y ∧ ∂_z}=1`.
+
+Let us consider two vectors :math:`a^♯` and :math:`b^♯` in 3-dimensional
+Euclidean space, written in component form as:
 
 * :math:`a^♯ = p \, ∂_x + q \, ∂_y + r \, ∂_z`
 * :math:`b^♯ = u \, ∂_x + v \, ∂_y + w \, ∂_z`
@@ -584,10 +589,11 @@ In the same manner we obtain:
    = ru - pw
 
 With this quantities, we have measured the amount of shadow from the surface
-determined by vectors :math:`a^♯` and :math:`b^♯` onto the unit surface
+determined by vectors :math:`a^♯` and :math:`b^♯` onto the unit bivectors
 :math:`∂_y ∧ ∂_z`, :math:`∂_z ∧ ∂_x`, and :math:`∂_x ∧ ∂_y`, . We can modify
-the expression slightly in order to express the inner product of bivectors in
-terms of the inner products of vectors:
+the expressions slightly in order to relate the vector components to the inner
+product of vectors. Vector components can be obtained by doting the vectors
+with the basis vectors:
 
 .. math::
 
@@ -625,7 +631,7 @@ terms of the inner products of vectors:
        \braket{a^♯ | ∂_y} & \braket{b^♯ | ∂_y} \\
    \end{vmatrix}
 
-Or put together in condensed form:
+Put together in condensed form:
 
 .. math::
 
@@ -635,10 +641,11 @@ Or put together in condensed form:
        \braket{a^♯ | ∂_l} & \braket{b^♯ | ∂_l} \\
    \end{vmatrix}
 
-With this, we have determined the surface of any arbitrary vector onto the
-basis surfaces. We can replace vectors :math:`a^♯` and :math:`b^♯` with any of
-the basis vectors :math:`∂_x`, :math:`∂_y`, or :math:`∂_z`. We now have a
-technique to determine the inner product of all 2-forms:
+With this, we can determine the surface of any arbitrary bivector compared to
+the basis bivectors. In particular We can replace vectors :math:`a^♯` and
+:math:`b^♯` with any of the basis vectors :math:`∂_x`, :math:`∂_y`, or
+:math:`∂_z`. We now have a technique to determine the inner product of basis
+bivectors:
 
 .. math::
 
@@ -668,62 +675,57 @@ Which permits to obtain:
 .. math::
 
    \braket{∂_z ∧ ∂_x | ∂_z ∧ ∂_x}
-   =
-   \begin{vmatrix}
+   = \begin{vmatrix}
        \braket{∂_z | ∂_z} & \braket{∂_x | ∂_z} \\
        \braket{∂_z | ∂_x} & \braket{∂_x | ∂_x} \\
    \end{vmatrix}
-   =
-   \begin{vmatrix}
+   = \begin{vmatrix}
        1 & 0 \\
        0 & 1 \\
    \end{vmatrix}
-   =1
+   = 1
 
 .. math::
 
    \braket{∂_x ∧ ∂_y | ∂_x ∧ ∂_y}
-   =
-   \begin{vmatrix}
+   = \begin{vmatrix}
        \braket{∂_x | ∂_x} & \braket{∂_y | ∂_x} \\
        \braket{∂_x | ∂_y} & \braket{∂_y | ∂_y} \\
    \end{vmatrix}
-   =
-   \begin{vmatrix}
+   = \begin{vmatrix}
        1 & 0 \\
        0 & 1 \\
    \end{vmatrix}
-   =1
+   = 1
 
 All other inner products are zero. For example:
 
 .. math::
 
    \braket{∂_y ∧ ∂_z | ∂_x ∧ ∂_y}
-   =
-   \begin{vmatrix}
+   = \begin{vmatrix}
        \braket{∂_y | ∂_x} & \braket{∂_z | ∂_x} \\
        \braket{∂_y | ∂_y} & \braket{∂_z | ∂_y} \\
    \end{vmatrix}
-   =
-   \begin{vmatrix}
+   = \begin{vmatrix}
        0 & 0 \\
        0 & 0 \\
    \end{vmatrix}
-   =0
+   = 0
 
-Doing this systematically for all 9 possible combinations bivector basis, we
-obtain:
+In summary, we obtain:
 
-.. math::
+.. topic:: Inner product of bivectors
 
-   \begin{array}{c|cccc}
-                 & ∂_y ∧ ∂_z & ∂_z ∧ ∂_x & ∂_x ∧ ∂_y \\
-      \hline
-       ∂_y ∧ ∂_z & 1         & 0         & 0         \\
-       ∂_z ∧ ∂_x & 0         & 1         & 0         \\
-       ∂_x ∧ ∂_y & 0         & 0         & 1         \\
-   \end{array}
+   .. math::
+
+      \begin{array}{c|cccc}
+                    & ∂_y ∧ ∂_z & ∂_z ∧ ∂_x & ∂_x ∧ ∂_y \\
+         \hline
+          ∂_y ∧ ∂_z & 1         & 0         & 0         \\
+          ∂_z ∧ ∂_x & 0         & 1         & 0         \\
+          ∂_x ∧ ∂_y & 0         & 0         & 1         \\
+      \end{array}
 
 Finally, we generalize lifting the inner product to trivectors. In
 3-dimensional Euclidean space, we get for the unit trivector:
@@ -750,6 +752,18 @@ Finally, we generalize lifting the inner product to trivectors. In
 
    \braket{∂_x ∧ ∂_y ∧ ∂_z | ∂_x ∧ ∂_y ∧ ∂_z} = 1
 
+In table form, we have:
+
+.. topic:: Inner product of trivectors
+
+   .. math::
+
+      \begin{array}{c|c}
+                         & ∂_x ∧ ∂_y ∧ ∂_z \\
+         \hline
+         ∂_x ∧ ∂_y ∧ ∂_z &               1 \\
+      \end{array}
+
 With this, we remark we have found a meaningfull and reasonable way to extend
 the inner product to k-forms in Minkowski space. This approach is meaningful,
 as the inner product of the basis vectors inherently incorporates the metric
@@ -757,61 +771,60 @@ signature.
 
 .. }}}
 
-k-vectors in Minkowski space
-''''''''''''''''''''''''''''
+Inner product of k-vectors in Minkowski space
+'''''''''''''''''''''''''''''''''''''''''''''
 
 .. {{{
-
-.. rubric:: Inner product of vectors
 
 The inner product in Minkowski space of the basis vectors is:
 
 .. math::
 
-   \braket{∂_μ|∂_ν} = η_{μν}
+   ∂_μ \cdot ∂_ν = \braket{∂_μ|∂_ν} = η_{μν}
 
 Fully expanded in table form we have:
 
-.. math::
+.. topic:: Inner product of vectors in Minkowski space
 
-   \begin{array}{c|rrrr}
-           & ∂_t & ∂_x & ∂_y & ∂_z \\
-       \hline
-       ∂_t & +1  &  0  &  0  &  0  \\
-       ∂_x &  0  & -1  &  0  &  0  \\
-       ∂_y &  0  &  0  & -1  &  0  \\
-       ∂_z &  0  &  0  &  0  & -1  \\
-   \end{array}
+   .. math::
 
-.. rubric:: Inner product of bivectors
+      \begin{array}{c|rrrr}
+              & ∂_t & ∂_x & ∂_y & ∂_z \\
+          \hline
+          ∂_t & +1  &  0  &  0  &  0  \\
+          ∂_x &  0  & -1  &  0  &  0  \\
+          ∂_y &  0  &  0  & -1  &  0  \\
+          ∂_z &  0  &  0  &  0  & -1  \\
+      \end{array}
 
-We can use our formulation for lifting the inner product to bivectors:
+We use our procedure for lifting the inner product to bivectors:
 
 .. math::
 
    \braket{∂_μ ∧ ∂_ν | ∂_ρ ∧ ∂_σ}
-   =
-   \begin{vmatrix}
+   = \begin{vmatrix}
        ∂_μ \cdot ∂_ρ & ∂_ν \cdot ∂_ρ \\
        ∂_μ \cdot ∂_σ & ∂_ν \cdot ∂_σ \\
    \end{vmatrix}
 
 We get in table form:
 
-.. math::
+.. topic:: Inner product of bivectors in Minkowski space
 
-   \begin{array}{c|rrrrrr}
-             & ∂_t ∧ ∂_x & ∂_t ∧ ∂_y & ∂_t ∧ ∂_z & ∂_y ∧ ∂_z & ∂_z ∧ ∂_x & ∂_x ∧ ∂_y \\
-             \hline
-   ∂_t ∧ ∂_x & -1        &  0        &  0        &   0       &  0        &  0        \\
-   ∂_t ∧ ∂_y &  0        & -1        &  0        &   0       &  0        &  0        \\
-   ∂_t ∧ ∂_z &  0        &  0        & -1        &   0       &  0        &  0        \\
-   ∂_y ∧ ∂_z &  0        &  0        &  0        &  +1       &  0        &  0        \\
-   ∂_z ∧ ∂_x &  0        &  0        &  0        &   0       & +1        &  0        \\
-   ∂_x ∧ ∂_y &  0        &  0        &  0        &   0       &  0        & +1        \\
-   \end{array}
+   .. math::
 
-.. admonition:: Derivation of the inner product of all basis bivectors
+      \begin{array}{c|rrrrrr}
+                & ∂_t ∧ ∂_x & ∂_t ∧ ∂_y & ∂_t ∧ ∂_z & ∂_y ∧ ∂_z & ∂_z ∧ ∂_x & ∂_x ∧ ∂_y \\
+                \hline
+      ∂_t ∧ ∂_x & -1        &  0        &  0        &   0       &  0        &  0        \\
+      ∂_t ∧ ∂_y &  0        & -1        &  0        &   0       &  0        &  0        \\
+      ∂_t ∧ ∂_z &  0        &  0        & -1        &   0       &  0        &  0        \\
+      ∂_y ∧ ∂_z &  0        &  0        &  0        &  +1       &  0        &  0        \\
+      ∂_z ∧ ∂_x &  0        &  0        &  0        &   0       & +1        &  0        \\
+      ∂_x ∧ ∂_y &  0        &  0        &  0        &   0       &  0        & +1        \\
+      \end{array}
+
+.. admonition:: Calculations
    :class: dropdown
 
    .. {{{
@@ -935,8 +948,6 @@ We get in table form:
 
    .. }}}
 
-.. rubric:: Inner product of trivectors
-
 As well as for trivectors:
 
 .. math::
@@ -949,13 +960,26 @@ As well as for trivectors:
        ∂_μ \cdot ∂_τ & ∂_ν \cdot ∂_τ & ∂_λ \cdot ∂_τ \\
    \end{vmatrix}
 
-.. admonition:: Systematic calculations of the inner product of basis trivectors
+.. topic:: Inner product of trivectors in Minkowski space
+
+   .. math::
+
+      \begin{array}{c|rrrr}
+                      & ∂_x ∧ ∂_y ∧ ∂_z & ∂_t ∧ ∂_y ∧ ∂_z & ∂_t ∧ ∂_z ∧ ∂_x & ∂_t ∧ ∂_x ∧ ∂_y \\
+                      \hline
+      ∂_x ∧ ∂_y ∧ ∂_z & -1              &  0              &   0             &   0             \\
+      ∂_t ∧ ∂_y ∧ ∂_z &  0              & +1              &   0             &   0             \\
+      ∂_t ∧ ∂_z ∧ ∂_x &  0              &  0              &  +1             &   0             \\
+      ∂_t ∧ ∂_x ∧ ∂_y &  0              &  0              &   0             &  +1             \\
+      \end{array}
+
+.. admonition:: Calculations
    :class: dropdown
 
    .. math::
 
-      \braket{∂_x ∧ ∂_y ∧ ∂_z | ∂_x ∧ ∂_y ∧ ∂_z} =
-      \begin{vmatrix}
+      \braket{∂_x ∧ ∂_y ∧ ∂_z | ∂_x ∧ ∂_y ∧ ∂_z}
+      = \begin{vmatrix}
           ∂_x \cdot ∂_x & ∂_y \cdot ∂_x & ∂_z \cdot ∂_x \\
           ∂_x \cdot ∂_y & ∂_y \cdot ∂_y & ∂_z \cdot ∂_y \\
           ∂_x \cdot ∂_z & ∂_y \cdot ∂_z & ∂_z \cdot ∂_z \\
@@ -969,13 +993,13 @@ As well as for trivectors:
 
    .. math::
 
-      \braket{∂_t ∧ ∂_y ∧ ∂_z | ∂_t ∧ ∂_y ∧ ∂_z} =
-      \begin{vmatrix}
+      \braket{∂_t ∧ ∂_y ∧ ∂_z | ∂_t ∧ ∂_y ∧ ∂_z}
+      = \begin{vmatrix}
           ∂_t \cdot ∂_t & ∂_y \cdot ∂_t & ∂_z \cdot ∂_t \\
           ∂_t \cdot ∂_y & ∂_y \cdot ∂_y & ∂_z \cdot ∂_y \\
           ∂_t \cdot ∂_z & ∂_y \cdot ∂_z & ∂_z \cdot ∂_z \\
       \end{vmatrix}
-      =  \begin{vmatrix}
+      = \begin{vmatrix}
           +1 &  0 &  0 \\
            0 & -1 &  0 \\
            0 &  0 & -1 \\
@@ -984,13 +1008,13 @@ As well as for trivectors:
 
    .. math::
 
-      \braket{∂_t ∧ ∂_z ∧ ∂_x | ∂_t ∧ ∂_z ∧ ∂_x} =
-      \begin{vmatrix}
+      \braket{∂_t ∧ ∂_z ∧ ∂_x | ∂_t ∧ ∂_z ∧ ∂_x}
+      = \begin{vmatrix}
           ∂_t \cdot ∂_t & ∂_z \cdot ∂_t & ∂_x \cdot ∂_t \\
           ∂_t \cdot ∂_z & ∂_z \cdot ∂_z & ∂_x \cdot ∂_z \\
           ∂_t \cdot ∂_x & ∂_z \cdot ∂_x & ∂_x \cdot ∂_x \\
       \end{vmatrix}
-      =  \begin{vmatrix}
+      = \begin{vmatrix}
           +1 &  0 &  0 \\
            0 & -1 &  0 \\
            0 &  0 & -1 \\
@@ -999,8 +1023,8 @@ As well as for trivectors:
 
    .. math::
 
-      \braket{∂_t ∧ ∂_x ∧ ∂_y | ∂_t ∧ ∂_x ∧ ∂_y} =
-      \begin{vmatrix}
+      \braket{∂_t ∧ ∂_x ∧ ∂_y | ∂_t ∧ ∂_x ∧ ∂_y}
+      = \begin{vmatrix}
           ∂_t \cdot ∂_t & ∂_x \cdot ∂_t & ∂_y \cdot ∂_t \\
           ∂_t \cdot ∂_x & ∂_x \cdot ∂_x & ∂_y \cdot ∂_x \\
           ∂_t \cdot ∂_y & ∂_x \cdot ∂_y & ∂_y \cdot ∂_y \\
@@ -1012,37 +1036,42 @@ As well as for trivectors:
       \end{vmatrix}
       = 1
 
-.. math::
-
-   \begin{array}{c|rrrr}
-                   & ∂_x ∧ ∂_y ∧ ∂_z & ∂_t ∧ ∂_y ∧ ∂_z & ∂_t ∧ ∂_z ∧ ∂_x & ∂_t ∧ ∂_x ∧ ∂_y \\
-                   \hline
-   ∂_x ∧ ∂_y ∧ ∂_z & -1              &  0              &   0             &   0             \\
-   ∂_t ∧ ∂_y ∧ ∂_z &  0              & +1              &   0             &   0             \\
-   ∂_t ∧ ∂_z ∧ ∂_x &  0              &  0              &  +1             &   0             \\
-   ∂_t ∧ ∂_x ∧ ∂_y &  0              &  0              &   0             &  +1             \\
-   \end{array}
-
-.. rubric:: Inner product of quadvectors
-
 In Minkowski space, all quadvectors are proportional to :math:`∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z`:
 
 .. math::
 
    \braket{∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z | ∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z}
-   &= \begin{vmatrix}
+   = \begin{vmatrix}
        ∂_t \cdot ∂_t & ∂_x \cdot ∂_t & ∂_y \cdot ∂_t & ∂_y \cdot ∂_t \\
        ∂_t \cdot ∂_x & ∂_x \cdot ∂_x & ∂_y \cdot ∂_x & ∂_y \cdot ∂_x \\
        ∂_t \cdot ∂_y & ∂_x \cdot ∂_y & ∂_y \cdot ∂_y & ∂_y \cdot ∂_y \\
        ∂_t \cdot ∂_z & ∂_x \cdot ∂_z & ∂_y \cdot ∂_z & ∂_y \cdot ∂_z \\
-   \end{vmatrix} \\
-   &=  \begin{vmatrix}
+   \end{vmatrix}
+
+.. math::
+
+   \braket{∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z | ∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z}
+   = \begin{vmatrix}
        +1 &  0 &  0 &  0 \\
         0 & -1 &  0 &  0 \\
         0 &  0 & -1 &  0 \\
         0 &  0 &  0 & -1 \\
-   \end{vmatrix} \\
-   &= -1
+   \end{vmatrix}
+
+.. math::
+
+   \braket{∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z | ∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z}
+   = -1
+
+.. topic:: Inner product of quadvectors in Minkowski space
+
+   .. math::
+
+      \begin{array}{c|c}
+                            & ∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z \\
+      \hline
+      ∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z &                    -1 \\
+      \end{array}
 
 .. }}}
 
