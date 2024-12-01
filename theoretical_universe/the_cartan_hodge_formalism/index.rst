@@ -27,8 +27,8 @@ The Cartan-Hodge Formalism
 Summary
 -------
 
-In this serie of articles, I introduce the Cartan-Hodge formalism, which bundles
-the notions of *tensor calculus*, *musical operators*, *Hodge duality*,
+In this serie of articles, I introduce the Cartan-Hodge formalism, which
+bundles the notions of *tensor calculus*, *musical operators*, *Hodge duality*,
 *exterior derivative*, and the *free matrix representation* into a unified
 framework for performing calculations and highlighting symmetries. Practical
 computations follow clear and concise rules, with each step presented in a
@@ -109,13 +109,11 @@ also valid in the free matrix representation:
 
    V^♯ = \begin{bmatrix} a \; ∂_x & b \; ∂_y & c \; ∂_z \end{bmatrix}
 
-.. rubric:: Hodge Duality
+.. rubric:: Inner product of k-forms in Minkowski space
 
-The Hodge duality assumes a central role, transitioning tensors between spaces
-and their dual complements. Additionally, I introduce the free matrix notation
-to streamline calculations, often allowing a straightforward return to matrix
-multiplication. The inner product of k-forms in Minkowski space are calculated.
-For vectors, we have:
+The inner product of k-forms in Minkowski space are calculated for the basis
+vectors, bivectors, trivectors and quadvectors and summarized here in table
+form.
 
 .. math::
 
@@ -127,8 +125,6 @@ For vectors, we have:
        ∂_y &  0  &  0  & -1  &  0  \\
        ∂_z &  0  &  0  &  0  & -1  \\
    \end{array}
-
-For bivectors, we have:
 
 .. math::
 
@@ -143,8 +139,6 @@ For bivectors, we have:
    ∂_x ∧ ∂_y &  0        &  0        &  0        &   0       &  0        & +1        \\
    \end{array}
 
-For trivectors, we have:
-
 .. math::
 
    \begin{array}{c|rrrr}
@@ -156,9 +150,46 @@ For trivectors, we have:
    ∂_t ∧ ∂_x ∧ ∂_y &  0              &  0              &   0             &  +1             \\
    \end{array}
 
-For quadvectors, we have:
+.. math::
+
+   \begin{array}{c|c}
+                             & ∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z \\
+       \hline
+       ∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z &                    -1 \\
+   \end{array}
+
+.. rubric:: Hodge Duality
+
+The Hodge duality assumes a central role, transitioning tensors between spaces
+and their dual complements.
 
 .. math::
 
-   \braket{∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z | ∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z} = -1
+   ⋆ dt & = dx ∧ dy ∧ dz \\
+   ⋆ dx & = dt ∧ dy ∧ dz \\
+   ⋆ dy & = dt ∧ dz ∧ dx \\
+   ⋆ dz & = dt ∧ dx ∧ dy \\
+
+.. math::
+
+   \begin{alignedat}{2}
+   ⋆ dt ∧ dx &= -& dy ∧ dz \\
+   ⋆ dt ∧ dy &= -& dz ∧ dx \\
+   ⋆ dt ∧ dz &= -& dx ∧ dy \\
+   ⋆ dy ∧ dz &=  & dt ∧ dx \\
+   ⋆ dz ∧ dx &=  & dt ∧ dy \\
+   ⋆ dx ∧ dy &=  & dt ∧ dz \\
+   \end{alignedat}
+
+.. math::
+
+   ⋆ dx ∧ dy ∧ dz &= dt \\
+   ⋆ dt ∧ dy ∧ dz &= dx \\
+   ⋆ dt ∧ dz ∧ dx &= dy \\
+   ⋆ dt ∧ dx ∧ dy &= dz \\
+
+.. math::
+
+   ⋆ dt ∧ dx ∧ dy ∧ dz = - 1
+
 

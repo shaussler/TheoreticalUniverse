@@ -52,7 +52,7 @@ I don't necessarily expect all readers to have ever considered partial
 derivatives as basis vectors. For our purpose, this is simply a matter of a
 notation. I use for the inner product either the dot notation :math:`\cdot`, or
 the bra-ket notation from quantum mechanics :math:`\braket{|}` when it helps
-readability.
+readability [note1]_.
 
 I point out the work of `Michael Penn <https://www.michael-penn.net>`_  on
 `Differential Forms
@@ -952,9 +952,7 @@ As well as for trivectors:
 
 .. math::
 
-   \braket{∂_μ ∧ ∂_ν ∧ ∂_λ | ∂_ρ ∧ ∂_σ ∧ ∂_τ}
-   =
-   \begin{vmatrix}
+   \braket{∂_μ ∧ ∂_ν ∧ ∂_λ | ∂_ρ ∧ ∂_σ ∧ ∂_τ} = \begin{vmatrix}
        ∂_μ \cdot ∂_ρ & ∂_ν \cdot ∂_ρ & ∂_λ \cdot ∂_ρ \\
        ∂_μ \cdot ∂_σ & ∂_ν \cdot ∂_σ & ∂_λ \cdot ∂_σ \\
        ∂_μ \cdot ∂_τ & ∂_ν \cdot ∂_τ & ∂_λ \cdot ∂_τ \\
@@ -975,6 +973,8 @@ As well as for trivectors:
 
 .. admonition:: Calculations
    :class: dropdown
+
+   .. {{{
 
    .. math::
 
@@ -1036,12 +1036,13 @@ As well as for trivectors:
       \end{vmatrix}
       = 1
 
+   .. }}}
+
 In Minkowski space, all quadvectors are proportional to :math:`∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z`:
 
 .. math::
 
-   \braket{∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z | ∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z}
-   = \begin{vmatrix}
+   \braket{∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z | ∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z} = \begin{vmatrix}
        ∂_t \cdot ∂_t & ∂_x \cdot ∂_t & ∂_y \cdot ∂_t & ∂_y \cdot ∂_t \\
        ∂_t \cdot ∂_x & ∂_x \cdot ∂_x & ∂_y \cdot ∂_x & ∂_y \cdot ∂_x \\
        ∂_t \cdot ∂_y & ∂_x \cdot ∂_y & ∂_y \cdot ∂_y & ∂_y \cdot ∂_y \\
@@ -1050,8 +1051,7 @@ In Minkowski space, all quadvectors are proportional to :math:`∂_t ∧ ∂_x �
 
 .. math::
 
-   \braket{∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z | ∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z}
-   = \begin{vmatrix}
+   \braket{∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z | ∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z} = \begin{vmatrix}
        +1 &  0 &  0 &  0 \\
         0 & -1 &  0 &  0 \\
         0 &  0 & -1 &  0 \\
@@ -1060,17 +1060,16 @@ In Minkowski space, all quadvectors are proportional to :math:`∂_t ∧ ∂_x �
 
 .. math::
 
-   \braket{∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z | ∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z}
-   = -1
+   \braket{∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z | ∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z} = -1
 
 .. topic:: Inner product of quadvectors in Minkowski space
 
    .. math::
 
       \begin{array}{c|c}
-                            & ∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z \\
-      \hline
-      ∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z &                    -1 \\
+                                & ∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z \\
+          \hline
+          ∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z &                    -1 \\
       \end{array}
 
 .. }}}
@@ -1123,17 +1122,19 @@ k-vectors
 With this, we can conclude and fully determine the Hodge dual of all k-vectors
 in Minkowski space:
 
-.. rubric:: vectors
+.. topic:: Hodge duals of vectors in Minkowski Space
 
-.. math::
+   .. math::
 
-   ⋆ ∂_t & = ∂_x ∧ ∂_y ∧ ∂_z \\
-   ⋆ ∂_x & = ∂_t ∧ ∂_y ∧ ∂_z \\
-   ⋆ ∂_y & = ∂_t ∧ ∂_z ∧ ∂_x \\
-   ⋆ ∂_z & = ∂_t ∧ ∂_x ∧ ∂_y \\
+      ⋆ ∂_t & = ∂_x ∧ ∂_y ∧ ∂_z \\
+      ⋆ ∂_x & = ∂_t ∧ ∂_y ∧ ∂_z \\
+      ⋆ ∂_y & = ∂_t ∧ ∂_z ∧ ∂_x \\
+      ⋆ ∂_z & = ∂_t ∧ ∂_x ∧ ∂_y \\
 
-.. admonition:: Full calculation
+.. admonition:: Calculations
    :class: dropdown
+
+   .. {{{
 
    .. rubric:: Determine the Hodge duals up to the sign
 
@@ -1231,21 +1232,25 @@ in Minkowski space:
    you to the video by Michael Penn: `Differential Forms | The Minkowski metric
    and the Hodge operator <https://m.youtube.com/watch?v=vDRfADusqYQ>`_.
 
-.. rubric:: bivectors
+   .. }}}
 
-.. math::
+.. topic:: Hodge duals of bivectors in Minkowski space
 
-   \begin{alignedat}{2}
-   ⋆ (∂_t ∧ ∂_x) &= -& ∂_y ∧ ∂_z \\
-   ⋆ (∂_t ∧ ∂_y) &= -& ∂_z ∧ ∂_x \\
-   ⋆ (∂_t ∧ ∂_z) &= -& ∂_x ∧ ∂_y \\
-   ⋆ (∂_y ∧ ∂_z) &=  & ∂_t ∧ ∂_x \\
-   ⋆ (∂_z ∧ ∂_x) &=  & ∂_t ∧ ∂_y \\
-   ⋆ (∂_x ∧ ∂_y) &=  & ∂_t ∧ ∂_z \\
-   \end{alignedat}
+   .. math::
 
-.. admonition:: Full calculations of the Hodge dual of bivectors
+      \begin{alignedat}{2}
+      ⋆ (∂_t ∧ ∂_x) &= -& ∂_y ∧ ∂_z \\
+      ⋆ (∂_t ∧ ∂_y) &= -& ∂_z ∧ ∂_x \\
+      ⋆ (∂_t ∧ ∂_z) &= -& ∂_x ∧ ∂_y \\
+      ⋆ (∂_y ∧ ∂_z) &=  & ∂_t ∧ ∂_x \\
+      ⋆ (∂_z ∧ ∂_x) &=  & ∂_t ∧ ∂_y \\
+      ⋆ (∂_x ∧ ∂_y) &=  & ∂_t ∧ ∂_z \\
+      \end{alignedat}
+
+.. admonition:: Calculations
    :class: dropdown
+
+   .. {{{
 
    To obtain the volume element :math:`∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z`, the Hodge duals
    must be proportional to:
@@ -1294,17 +1299,21 @@ in Minkowski space:
       ⋆ (∂_x ∧ ∂_y) &=  & ∂_t ∧ ∂_z \\
       \end{alignedat}
 
-.. rubric:: trivectors
+      .. }}}
 
-.. math::
+.. topic:: Hodge duals of trivectors in Minkowski space
 
-   ⋆ ∂_x ∧ ∂_y ∧ ∂_z &= ∂_t \\
-   ⋆ ∂_t ∧ ∂_y ∧ ∂_z &= ∂_x \\
-   ⋆ ∂_t ∧ ∂_z ∧ ∂_x &= ∂_y \\
-   ⋆ ∂_t ∧ ∂_x ∧ ∂_y &= ∂_z \\
+   .. math::
 
-.. admonition:: Full calculations of the Hodge dual of trivectors
+      ⋆ ∂_x ∧ ∂_y ∧ ∂_z &= ∂_t \\
+      ⋆ ∂_t ∧ ∂_y ∧ ∂_z &= ∂_x \\
+      ⋆ ∂_t ∧ ∂_z ∧ ∂_x &= ∂_y \\
+      ⋆ ∂_t ∧ ∂_x ∧ ∂_y &= ∂_z \\
+
+.. admonition:: Calculations
    :class: dropdown
+
+   .. {{{
 
    To obtain the volume element :math:`∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z`, the Hodge duals
    must be proportional to:
@@ -1367,15 +1376,43 @@ in Minkowski space:
       ⋆ ∂_t ∧ ∂_z ∧ ∂_x &= ∂_y \\
       ⋆ ∂_t ∧ ∂_x ∧ ∂_y &= ∂_z \\
 
-.. }}}
+   .. }}}
+
+.. topic:: Hodge duals of quadvectors in Minkowski space
+
+   .. math::
+
+      ⋆ ∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z = - 1
+
+.. admonition:: Calculations
+   :class: dropdown
+
+   .. {{{
+
+   To obtain the volume element :math:`∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z`, the Hodge duals
+   must be proportional to:
+
+   .. math::
+
+      ⋆ ∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z \propto 1
+
+   Taken all together and with the inner product:
+
+   .. math::
+
+      ⋆ ∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z = \braket{∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z | ∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z} - 1
+
+   .. math::
+
+      ⋆ ∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z = -1
+
+   .. }}}
 
 k-forms
 '''''''
 
-.. {{{
-
-As a final note, we can repeat the definition of the Hodge dual of k-vectors to
-k-forms. Indeed the inner product is:
+We repeat the definition of the Hodge dual of k-vectors to k-forms. Indeed the
+inner product is:
 
 .. math::
 
@@ -1389,23 +1426,55 @@ following holds:
 
    α ∧ ⋆ β = \braket{α | β} dt ∧ dx ∧ dy ∧ dz
 
-.. math::
+.. topic:: Hodge duals of 1-forms in Minkowski space
 
-   \begin{alignedat}{2}
-   ⋆ (dt ∧ dx) &= -& dy ∧ dz \\
-   ⋆ (dt ∧ dy) &= -& dz ∧ dx \\
-   ⋆ (dt ∧ dz) &= -& dx ∧ dy \\
-   ⋆ (dy ∧ dz) &=  & dt ∧ dx \\
-   ⋆ (dz ∧ dx) &=  & dt ∧ dy \\
-   ⋆ (dx ∧ dy) &=  & dt ∧ dz \\
-   \end{alignedat}
+   .. math::
 
-.. math::
+      ⋆ dt & = dx ∧ dy ∧ dz \\
+      ⋆ dx & = dt ∧ dy ∧ dz \\
+      ⋆ dy & = dt ∧ dz ∧ dx \\
+      ⋆ dz & = dt ∧ dx ∧ dy \\
 
-   ⋆ dt &= - dx ∧ dy ∧ dz \\
-   ⋆ dx &= - dt ∧ dy ∧ dz \\
-   ⋆ dy &= - dt ∧ dz ∧ dx \\
-   ⋆ dz &= - dt ∧ dx ∧ dy \\
+.. topic:: Hodge duals of 2-forms in Minkowski space
+
+   .. math::
+
+      \begin{alignedat}{2}
+      ⋆ dt ∧ dx &= -& dy ∧ dz \\
+      ⋆ dt ∧ dy &= -& dz ∧ dx \\
+      ⋆ dt ∧ dz &= -& dx ∧ dy \\
+      ⋆ dy ∧ dz &=  & dt ∧ dx \\
+      ⋆ dz ∧ dx &=  & dt ∧ dy \\
+      ⋆ dx ∧ dy &=  & dt ∧ dz \\
+      \end{alignedat}
+
+.. topic:: Hodge duals of 3-forms in Minkowski space
+
+   .. math::
+
+      ⋆ dx ∧ dy ∧ dz &= dt \\
+      ⋆ dt ∧ dy ∧ dz &= dx \\
+      ⋆ dt ∧ dz ∧ dx &= dy \\
+      ⋆ dt ∧ dx ∧ dy &= dz \\
+
+.. topic:: Hodge duals of 4-forms in Minkowski space
+
+   .. math::
+
+      ⋆ dt ∧ dx ∧ dy ∧ dz = - 1
+
+.. }}}
+
+Notes
+-----
+
+.. {{{
+
+.. [note1] The bra :math:`\bra{}` notation corresponds to the musical flat
+   operator :math:`♭`, whereas the :math:`\ket{}` notation corresponds to the
+   musical sharp operator :math:`♯`. Hence we have :math:`dx^i = ∂_i^♭ =
+   \bra{∂_i} = \bra{∂_i^♭} = \bra{dx^i}`, and :math:`∂_i = (dx^i)^♯ = \ket{∂_i}
+   = \ket{(dx^i)^♯} = \ket{∂_i}`
 
 .. }}}
 
