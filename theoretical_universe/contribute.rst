@@ -4,50 +4,57 @@
 .. International License. You should have received a copy of the license along
 .. with this work. If not, see <https://creativecommons.org/licenses/by/4.0/>.
 
-Contribute
-==========
+How to Contribute
+=================
 
-(or reproduce/check results)
+I welcome contributions! To get started:
+
+1. Fork the repository on GitHub and clone it locally.
+2. Create a new branch for your changes.
+3. Make your modifications, ensuring they align with the project's goals.
+4. Push the branch to your fork on GitHub.
+5. Submit a pull request with a detailed description of your changes.
+
+You can find the repository here: https://github.com/shaussler/TheoreticalUniverse
+
+Once your pull request is reviewed and accepted, an automated pipeline 
+will run, and your contribution will be deployed.
 
 Running Calculations
 --------------------
 
-You can install all dependencies by running:
+Some of the calculations were performed using symbolic computation software. I
+found only one library capable of performing symbolic calculations with
+differential forms: `pycartan <https://github.com/TUD-RST/pycartan>`_. However,
+this library has not been updated since 2017 and is limited to Euclidean
+geometries.
+
+To extend its functionality to Minkowski space, I monkey-patched the library.
+You can install all required dependencies by running:
 
 .. code:: bash
 
    # Install build dependencies
+   # --------------------------
+
    pip install wheel setuptools
 
    # Install pycartan and dependencies
+   # ---------------------------------
+
    pip install numpy sympy scipy
    pip install symbtools
    pip install pycartan
 
    # Build theoretical_python
+   # ------------------------
+
    python setup.py bdist_wheel
 
    # Install theoretical_python
+   # --------------------------
+
    pip install dist/theoretical_python*.whl
-
-git
----
-
-Clone repository:
-
-.. code:: bash
-
-   https://shaussler.github.io/TheoreticalUniverse/
-
-``cd`` and create your branch:
-
-.. code:: bash
-
-   cd TheoreticalUniverse
-   git checkout -b your_contribution
-
-Do your changes and send a merge request. Upon acceptance, an automated
-pipeline is started and your contribution rolled out.
 
 Build locally
 -------------
@@ -94,8 +101,8 @@ draft content should be shown. To hide content, use:
 Dropdown
 --------
 
-You can keep a dropdown amdonition while working by setting the ``:class:``
-to ``toggle-shown``.
+You can keep a dropdown admonition while working by setting the ``:class:`` to
+``toggle-shown``.
 
 .. code::
 
@@ -114,7 +121,7 @@ neovim plugins:
    curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
         https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-And use the configuration included in the repository:
+My configuration is included in the repository:
 
 .. literalinclude:: conf/init.vim
    :language: vim

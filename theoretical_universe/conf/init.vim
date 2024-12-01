@@ -1,14 +1,16 @@
-" Set custom fold markers
-set foldmethod=marker
-set foldmarker={{{,}}}
 
 " Set color scheme to 'desert'
+" ----------------------------
 colorscheme desert
 
 " Set textwidth to 100 characters
-" set textwidth=80
+" -------------------------------
+
+" set textwidth=100
 
 " Tab settings
+" ------------
+
 set tabstop=2
 set softtabstop=0
 set shiftwidth=2
@@ -41,23 +43,42 @@ if has("nvim")
 endif
 
 " Use vim-plug as the plugin manager
+" ----------------------------------
+
 call plug#begin('~/.vim/plugged')
 
 " Add the reStructuredText syntax highlighting plugin
+" ---------------------------------------------------
+
 Plug 'marshallward/vim-restructuredtext'
+Plug 'habamax/vim-rst'
 
 call plug#end()
 
+" Set custom fold markers
+" -----------------------
+
+set foldmethod=marker
+set foldmarker={{{,}}}
+
 " Enable filetype plugins and indentation
+" ---------------------------------------
+
 filetype plugin indent on
 
 " Enable syntax highlighting
+" --------------------------
+
 syntax on
 
 " Auto-apply filetype and syntax highlighting for .rst files
+" ----------------------------------------------------------
+
 autocmd BufRead,BufNewFile *.rst set filetype=rst
 
 " Shortcuts to UTF-8 characters
+" -----------------------------
+
 imap \alpha     α
 imap \beta      β
 imap \gamma     γ
