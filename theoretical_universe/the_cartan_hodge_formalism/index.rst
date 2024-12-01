@@ -191,5 +191,3 @@ and their dual complements.
 .. math::
 
    ⋆ dt ∧ dx ∧ dy ∧ dz = - 1
-
-
