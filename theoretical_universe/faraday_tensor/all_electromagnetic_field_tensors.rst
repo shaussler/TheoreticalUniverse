@@ -156,10 +156,10 @@ For sanity, I refer to Wikipedia for a quick double check of `the link between
 the Faraday 2-Form and the Faraday tensor
 <https://en.m.wikipedia.org/wiki/Mathematical_descriptions_of_the_electromagnetic_field#Field_2-form>`_.
 
-:math:`F^{♯♯}`
+:math:`F^{♭♯}`
 --------------
 
-:math:`F^{♭♯}`
+:math:`F^{♯♯}`
 --------------
 
 :math:`F^{♯♭}`
