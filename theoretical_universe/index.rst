@@ -21,7 +21,7 @@ Within these pages, you will find the formulation of electromagnetism in terms
 of Élie Cartan's differential forms, along with a systematic analysis of this
 formulation.
 
-In 1865, James Cleck Maxwell presented his groundbreaking work, `A Dynamical
+In 1865, James Clerck Maxwell presented his groundbreaking work, `A Dynamical
 Theory of the Electromagnetic Field
 <https://en.m.wikipedia.org/wiki/A_Dynamical_Theory_of_the_Electromagnetic_Field>`_
 (`pdf <https://www.jstor.org/stable/108892>`_). This seminal paper united
@@ -69,7 +69,7 @@ Subsequent articles assumes you, the reader, have a working understanding of
 concept of vector/covector duality, `differential forms
 <https://en.m.wikipedia.org/wiki/Differential_form>`_, `musicality
 <https://en.m.wikipedia.org/wiki/Musical_isomorphism>`_, `the exterior product
-<https://en.m.wikipedia.org/wiki/Exterior_algebra>`_ and `hodge duality
+<https://en.m.wikipedia.org/wiki/Exterior_algebra>`_, as well as `hodge duality
 <https://en.m.wikipedia.org/wiki/Hodge_star_operator>`_. I gather all these
 *tools* into what I call the :ref:`the Cartan-Hodge formalism <The Cartan-Hodge
 Formalism>`. There you will find a personal overview of these concepts, which
