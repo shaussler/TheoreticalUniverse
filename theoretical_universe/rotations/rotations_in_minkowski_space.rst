@@ -666,7 +666,9 @@ terms of tensor products:
 
 Taken together, we get:
 
-.. topic:: Symmetries of the :math:`♭♯` Mixed Exterior Product
+.. _symmetries_of_the_flat_sharp_mixed_exterior_product:
+
+.. topic:: Symmetries of the :math:`♭♯` mixed exterior product
 
    ============ =============================
    Symmetry     Basis elements
