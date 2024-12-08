@@ -42,7 +42,6 @@ redirects = {
     "differential_rotations": "differential_operators/the_exterior_derivative_of_rotations.html",
 }
 
-
 # include_patterns = [
 #     'index.rst',
 #     'cite.rst',
@@ -149,32 +148,32 @@ latex_elements = {
 
 \newcommand{\E}{\tilde{E}}
 ''',
-'fontpkg': r'\usepackage{lmodern}',
-'pointsize': '10pt',
-'maketitle': r'''
-
-\newcommand{\subtitle}[1]{%
-  \posttitle{
-    \par\end{center}
-    \begin{center}\large#1\end{center}
-    \vskip0.5em
-
-    % \begin{center}
-    %     \includegraphics[width=0.2\textwidth]{
-    %         ../../_static/title_pic.png}
-    %     \par\vspace{1em}
-    % \end{center}
-
-  }
-}
-
-\title{\Huge Theoretical Universe}
-\subtitle{\huge Maxwell Field Equations via Differential Forms}
-\author{by Stéphane Haussler}
-\date{\today}
-
-\maketitle
-'''
+# 'fontpkg': r'\usepackage{lmodern}',
+'papersize': r'a4paper',
+'pointsize': '11pt',
+# 'maketitle': r'''
+#
+#  \newcommand{\subtitle}[1]{%
+#     \posttitle{
+#     \par\end{center}
+#     \begin{center}\large#1\end{center}
+#     \vskip0.5em
+#
+#     % \begin{center}
+#     %     \includegraphics[width=0.2\textwidth]{
+#     %         ../../_static/title_pic.png}
+#     %     \par\vspace{1em}
+#     % \end{center}
+#     }
+# }
+#
+# \title{\Huge Theoretical Universe}
+# \subtitle{\huge Maxwell Field Equations via Differential Forms}
+# \author{by Stéphane Haussler}
+# \date{\today}
+#
+# \maketitle
+# '''
 }
 
 mathjax3_config = {
