@@ -140,6 +140,7 @@ row/column representation of the doubly covariant Faraday tensor.
 
    .. }}}
 
+
 With implicit bivector basis, we have the `standard representation with abstract
 index notation <https://en.m.wikipedia.org/wiki/Electromagnetic_tensor>`_
 
@@ -169,7 +170,7 @@ the Faraday 2-Form and the Faraday tensor
 
 .. {{{
 
-The starting point is the doubly flattened Faraday tensor :math:`F^{♭♭}` to
+The starting point is the twice flattened Faraday tensor :math:`F^{♭♭}` to
 which we apply the ♭♯ operator :math:`F^{♭♯}=\left(F^{♭♭}\right)^{♭♯}` and
 obtain:
 
@@ -189,7 +190,7 @@ obtain:
 
    .. {{{
 
-   .. rubric:: Start from the double flattened Faraday tensor
+   .. rubric:: Start from the Faraday 2-form
 
    .. math::
 
@@ -232,12 +233,12 @@ obtain:
    .. math::
 
       F^{♭♯} = \left[ \begin{aligned}
-        - & \E^x \; dt ∧ η_{xμ} ∂_μ \\
-        - & \E^y \; dt ∧ η_{yμ} ∂_μ \\
-        - & \E^z \; dt ∧ η_{zμ} ∂_μ \\
-          &  B^x \; dy ∧ η_{zμ} ∂_μ \\
-          &  B^y \; dz ∧ η_{xμ} ∂_μ \\
-          &  B^z \; dx ∧ η_{yμ} ∂_μ \\
+        - & \E^x \; dt ∧ η^{xμ} ∂_μ \\
+        - & \E^y \; dt ∧ η^{yμ} ∂_μ \\
+        - & \E^z \; dt ∧ η^{zμ} ∂_μ \\
+          &  B^x \; dy ∧ η^{zμ} ∂_μ \\
+          &  B^y \; dz ∧ η^{xμ} ∂_μ \\
+          &  B^z \; dx ∧ η^{yμ} ∂_μ \\
       \end{aligned} \right]
 
    .. rubric:: Identify the non-zero terms
@@ -245,12 +246,12 @@ obtain:
    .. math::
 
       F^{♭♯} = \left[ \begin{aligned}
-        - & \E^x \; dt ∧ η_{xx} ∂_x \\
-        - & \E^y \; dt ∧ η_{yy} ∂_y \\
-        - & \E^z \; dt ∧ η_{zz} ∂_z \\
-          &  B^x \; dy ∧ η_{zz} ∂_z \\
-          &  B^y \; dz ∧ η_{xx} ∂_x \\
-          &  B^z \; dx ∧ η_{yy} ∂_y \\
+        - & \E^x \; dt ∧ η^{xx} ∂_x \\
+        - & \E^y \; dt ∧ η^{yy} ∂_y \\
+        - & \E^z \; dt ∧ η^{zz} ∂_z \\
+          &  B^x \; dy ∧ η^{zz} ∂_z \\
+          &  B^y \; dz ∧ η^{xx} ∂_x \\
+          &  B^z \; dx ∧ η^{yy} ∂_y \\
       \end{aligned} \right]
 
    .. rubric:: Apply numerical values
@@ -275,7 +276,7 @@ obtain:
 
    .. }}}
 
-We derive the row/column representation of the :math:`F^♭♯` Faraday tensor:
+We derive the row/column representation of the :math:`F^{♭♯}` Faraday tensor:
 
 .. math::
 
@@ -363,7 +364,8 @@ With implicit bivector basis, we have :
        + \E^z & -  B^y & +  B^x &        \\
    \end{bmatrix}
 
-Where the field mixed form-vector is related to the Faraday tensor with:
+Where the mixed electromagnetic field is related to the covariant-contravariant
+Faraday tensor through:
 
 .. math::
 
@@ -373,6 +375,208 @@ Where the field mixed form-vector is related to the Faraday tensor with:
 
 :math:`F^{♯♯}`
 --------------
+
+The starting point is the twice flattened Faraday tensor :math:`F^{♭♭}` to
+which we apply the ♭♯ operator :math:`F^{♭♯}=\left(F^{♭♭}\right)^{♭♯}` and
+obtain:
+
+.. math::
+
+   F^{♯♯} = \left[ \begin{aligned}
+       \E^x \; ∂_t ∧ ∂_x \\
+       \E^y \; ∂_t ∧ ∂_y \\
+       \E^z \; ∂_t ∧ ∂_z \\
+        B^x \; ∂_y ∧ ∂_z \\
+        B^y \; ∂_z ∧ ∂_x \\
+        B^z \; ∂_x ∧ ∂_y \\
+   \end{aligned} \right]
+
+.. admonition:: Calculations
+   :class: dropdown
+
+   .. {{{
+
+   .. rubric:: Start from the Faraday 2-form
+
+   .. math::
+
+      F^{♭♭} = \left[ \begin{aligned}
+          - & \E^x \; dt ∧ dx \\
+          - & \E^y \; dt ∧ dy \\
+          - & \E^z \; dt ∧ dz \\
+            &  B^x \; dy ∧ dz \\
+            &  B^y \; dz ∧ dx \\
+            &  B^z \; dx ∧ dy \\
+      \end{aligned} \right]
+
+   .. rubric:: Apply the musical sharp-sharp ♯♯ operator
+
+   .. math::
+
+      F^{♯♯} = \left(F^{♭♭} \right)^{♯♯}
+      = \left[ \begin{aligned}
+          - & \E^x \; dt ∧ dx \\
+          - & \E^y \; dt ∧ dy \\
+          - & \E^z \; dt ∧ dz \\
+            &  B^x \; dy ∧ dz \\
+            &  B^y \; dz ∧ dx \\
+            &  B^z \; dx ∧ dy \\
+      \end{aligned} \right]^{♯♯}
+
+   .. rubric:: Distribute the musical operators
+
+   .. math::
+
+      F^{♯♯} = \left[ \begin{aligned}
+          - & \E^x \; (dt ∧ dx)^{♯♯} \\
+          - & \E^y \; (dt ∧ dy)^{♯♯} \\
+          - & \E^z \; (dt ∧ dz)^{♯♯} \\
+            &  B^x \; (dy ∧ dz)^{♯♯} \\
+            &  B^y \; (dz ∧ dx)^{♯♯} \\
+            &  B^z \; (dx ∧ dy)^{♯♯} \\
+      \end{aligned} \right]
+
+   .. rubric:: Distribute the musical operators
+
+   .. math::
+
+      F^{♯♯} = \left[ \begin{aligned}
+          - & \E^x \; dt^♯ ∧ dx^♯ \\
+          - & \E^y \; dt^♯ ∧ dy^♯ \\
+          - & \E^z \; dt^♯ ∧ dz^♯ \\
+            &  B^x \; dy^♯ ∧ dz^♯ \\
+            &  B^y \; dz^♯ ∧ dx^♯ \\
+            &  B^z \; dx^♯ ∧ dy^♯ \\
+      \end{aligned} \right]
+
+   .. rubric:: Apply
+
+   .. math::
+
+      F^{♯♯} = \left[ \begin{aligned}
+          - & \E^x \; η^{tμ} ∂_μ ∧ η^{xμ} ∂_μ \\
+          - & \E^y \; η^{tμ} ∂_μ ∧ η^{yμ} ∂_μ \\
+          - & \E^z \; η^{tμ} ∂_μ ∧ η^{zμ} ∂_μ \\
+            &  B^x \; η^{yμ} ∂_μ ∧ η^{zμ} ∂_μ \\
+            &  B^y \; η^{zμ} ∂_μ ∧ η^{xμ} ∂_μ \\
+            &  B^z \; η^{xμ} ∂_μ ∧ η^{yμ} ∂_μ \\
+      \end{aligned} \right]
+
+   .. rubric:: Identify non-zero terms
+
+   .. math::
+
+      F^{♯♯} = \left[ \begin{aligned}
+          - & \E^x \; η^{tt} ∂_t ∧ η^{xx} ∂_x \\
+          - & \E^y \; η^{tt} ∂_t ∧ η^{yy} ∂_y \\
+          - & \E^z \; η^{tt} ∂_t ∧ η^{zz} ∂_z \\
+            &  B^x \; η^{yy} ∂_y ∧ η^{zz} ∂_z \\
+            &  B^y \; η^{zz} ∂_z ∧ η^{xx} ∂_x \\
+            &  B^z \; η^{xx} ∂_x ∧ η^{yy} ∂_y \\
+      \end{aligned} \right]
+
+   .. rubric:: Apply numerical values
+
+   .. math::
+
+      F^{♯♯} = \left[ \begin{aligned}
+          - & \E^x \; (+1) ∂_t ∧ (-1) ∂_x \\
+          - & \E^y \; (+1) ∂_t ∧ (-1) ∂_y \\
+          - & \E^z \; (+1) ∂_t ∧ (-1) ∂_z \\
+            &  B^x \; (-1) ∂_y ∧ (-1) ∂_z \\
+            &  B^y \; (-1) ∂_z ∧ (-1) ∂_x \\
+            &  B^z \; (-1) ∂_x ∧ (-1) ∂_y \\
+      \end{aligned} \right]
+
+   .. rubric:: Conclude
+
+   .. math::
+
+      F^{♯♯} = \left[ \begin{aligned}
+          \E^x \; ∂_t ∧ ∂_x \\
+          \E^y \; ∂_t ∧ ∂_y \\
+          \E^z \; ∂_t ∧ ∂_z \\
+           B^x \; ∂_y ∧ ∂_z \\
+           B^y \; ∂_z ∧ ∂_x \\
+           B^z \; ∂_x ∧ ∂_y \\
+      \end{aligned} \right]
+
+   .. }}}
+
+We derive the row/column representation of the :math:`F^{♭♯}` Faraday tensor:
+
+.. math::
+
+   F^{♯♯} = \frac{1}{2} \begin{bmatrix}
+                         & - \E^x \; ∂_x ∧ ∂_t & - \E^y \; ∂_y ∧ ∂_t & - \E^z \; ∂_z ∧ ∂_t \\
+       \E^x \; ∂_t ∧ ∂_x &                     & -  B^z \; ∂_y ∧ ∂_x & +  B^y \; ∂_z ∧ ∂_x \\
+       \E^y \; ∂_t ∧ ∂_y & + B^z \; ∂_x ∧ ∂_y  &                     & -  B^x \; ∂_z ∧ ∂_y \\
+       \E^z \; ∂_t ∧ ∂_z & -  B^y \; ∂_x ∧ ∂_z & +  B^x \; ∂_y ∧ ∂_z &                     \\
+   \end{bmatrix}
+
+.. admonition:: Calculations
+   :class: dropdown
+
+   .. {{{
+
+   .. rubric:: Start from
+
+   .. math::
+
+      F^{♯♯} = \left[ \begin{aligned}
+          \E^x \; ∂_t ∧ ∂_x \\
+          \E^y \; ∂_t ∧ ∂_y \\
+          \E^z \; ∂_t ∧ ∂_z \\
+           B^x \; ∂_y ∧ ∂_z \\
+           B^y \; ∂_z ∧ ∂_x \\
+           B^z \; ∂_x ∧ ∂_y \\
+      \end{aligned} \right]
+
+   .. rubric:: Apply the symmetries of the exterior product
+
+   .. math::
+
+      F^{♯♯} = \left[ \begin{aligned}
+          \E^x \; \frac{1}{2} & (∂_t ∧ ∂_x - ∂_x ∧ ∂_t) \\
+          \E^y \; \frac{1}{2} & (∂_t ∧ ∂_y - ∂_y ∧ ∂_t) \\
+          \E^z \; \frac{1}{2} & (∂_t ∧ ∂_z - ∂_z ∧ ∂_t) \\
+           B^x \; \frac{1}{2} & (∂_y ∧ ∂_z - ∂_z ∧ ∂_y) \\
+           B^y \; \frac{1}{2} & (∂_z ∧ ∂_x - ∂_x ∧ ∂_z) \\
+           B^z \; \frac{1}{2} & (∂_x ∧ ∂_y - ∂_y ∧ ∂_x) \\
+      \end{aligned} \right]
+
+   .. rubric:: Reorder
+
+   .. math::
+
+      F^{♯♯} = \frac{1}{2} \left[ \begin{aligned}
+          \E^x \; ∂_t ∧ ∂_x & - \E^x \; ∂_x ∧ ∂_t \\
+          \E^y \; ∂_t ∧ ∂_y & - \E^y \; ∂_y ∧ ∂_t \\
+          \E^z \; ∂_t ∧ ∂_z & - \E^z \; ∂_z ∧ ∂_t \\
+           B^x \; ∂_y ∧ ∂_z & -  B^x \; ∂_z ∧ ∂_y \\
+           B^y \; ∂_z ∧ ∂_x & -  B^y \; ∂_x ∧ ∂_z \\
+           B^z \; ∂_x ∧ ∂_y & -  B^z \; ∂_y ∧ ∂_x \\
+      \end{aligned} \right]
+
+   .. rubric:: Reorder and conclude
+
+   .. math::
+
+      F^{♯♯} = \frac{1}{2} \begin{bmatrix}
+                            & - \E^x \; ∂_x ∧ ∂_t & - \E^y \; ∂_y ∧ ∂_t & - \E^z \; ∂_z ∧ ∂_t \\
+          \E^x \; ∂_t ∧ ∂_x &                     & -  B^z \; ∂_y ∧ ∂_x & +  B^y \; ∂_z ∧ ∂_x \\
+          \E^y \; ∂_t ∧ ∂_y & + B^z \; ∂_x ∧ ∂_y  &                     & -  B^x \; ∂_z ∧ ∂_y \\
+          \E^z \; ∂_t ∧ ∂_z & -  B^y \; ∂_x ∧ ∂_z & +  B^x \; ∂_y ∧ ∂_z &                     \\
+      \end{bmatrix}
+
+   .. }}}
+
+Where the electromagnetic field is related to the doubly contravariant Faraday
+tensor through:
+
+.. math::
+
+   F^{♯♯} = \frac{1}{2} \: F^{μν} \: ∂_μ ∧ ∂_ν
 
 :math:`F^{♯♭}`
 --------------
