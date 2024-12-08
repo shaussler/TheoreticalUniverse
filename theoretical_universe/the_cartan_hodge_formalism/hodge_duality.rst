@@ -1290,7 +1290,7 @@ in Minkowski space:
 
    .. math::
 
-      \begin{alignedat}{2}
+      \begin{alignedat}{3}
       ⋆ (∂_t ∧ ∂_x) &= -& ∂_y ∧ ∂_z \\
       ⋆ (∂_t ∧ ∂_y) &= -& ∂_z ∧ ∂_x \\
       ⋆ (∂_t ∧ ∂_z) &= -& ∂_x ∧ ∂_y \\
@@ -1299,7 +1299,7 @@ in Minkowski space:
       ⋆ (∂_x ∧ ∂_y) &=  & ∂_t ∧ ∂_z \\
       \end{alignedat}
 
-      .. }}}
+   .. }}}
 
 .. topic:: Hodge duals of trivectors in Minkowski space
 
