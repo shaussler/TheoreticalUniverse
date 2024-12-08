@@ -376,6 +376,8 @@ Faraday tensor through:
 :math:`F^{♯♯}`
 --------------
 
+.. {{{
+
 The starting point is the twice flattened Faraday tensor :math:`F^{♭♭}` to
 which we apply the ♭♯ operator :math:`F^{♭♯}=\left(F^{♭♭}\right)^{♭♯}` and
 obtain:
@@ -508,10 +510,10 @@ We derive the row/column representation of the :math:`F^{♭♯}` Faraday tensor
 .. math::
 
    F^{♯♯} = \frac{1}{2} \begin{bmatrix}
-                         & - \E^x \; ∂_x ∧ ∂_t & - \E^y \; ∂_y ∧ ∂_t & - \E^z \; ∂_z ∧ ∂_t \\
-       \E^x \; ∂_t ∧ ∂_x &                     & -  B^z \; ∂_y ∧ ∂_x & +  B^y \; ∂_z ∧ ∂_x \\
-       \E^y \; ∂_t ∧ ∂_y & + B^z \; ∂_x ∧ ∂_y  &                     & -  B^x \; ∂_z ∧ ∂_y \\
-       \E^z \; ∂_t ∧ ∂_z & -  B^y \; ∂_x ∧ ∂_z & +  B^x \; ∂_y ∧ ∂_z &                     \\
+                          & - \E^x \; ∂_x ∧ ∂_t & - \E^y \; ∂_y ∧ ∂_t & - \E^z \; ∂_z ∧ ∂_t \\
+      + \E^x \; ∂_t ∧ ∂_x &                     & -  B^z \; ∂_y ∧ ∂_x & +  B^y \; ∂_z ∧ ∂_x \\
+      + \E^y \; ∂_t ∧ ∂_y & +  B^z \; ∂_x ∧ ∂_y &                     & -  B^x \; ∂_z ∧ ∂_y \\
+      + \E^z \; ∂_t ∧ ∂_z & -  B^y \; ∂_x ∧ ∂_z & +  B^x \; ∂_y ∧ ∂_z &                     \\
    \end{bmatrix}
 
 .. admonition:: Calculations
@@ -571,12 +573,28 @@ We derive the row/column representation of the :math:`F^{♭♯}` Faraday tensor
 
    .. }}}
 
+With implicit bivector basis, we have the `standard representation with
+abstract index notation
+<https://en.m.wikipedia.org/wiki/Electromagnetic_tensor>`_, which also permits
+to verify the calculations here:
+
+.. math::
+
+   F_{μν} = \begin{bmatrix}
+             & - \E^x  & - \E^y & - \E^z  \\
+      + \E^x &         & -  B^z & +  B^y  \\
+      + \E^y & +  B^z  &        & -  B^x  \\
+      + \E^z & -  B^y  & +  B^x &         \\
+   \end{bmatrix}
+
 Where the electromagnetic field is related to the doubly contravariant Faraday
 tensor through:
 
 .. math::
 
    F^{♯♯} = \frac{1}{2} \: F^{μν} \: ∂_μ ∧ ∂_ν
+
+.. }}}
 
 :math:`F^{♯♭}`
 --------------
@@ -595,12 +613,12 @@ Expanded, we obtain:
 .. math::
 
   G^{♭♭} = \left[ \begin{alignedat}{1}
-     B^x \; & dt ∧ dx \\
-     B^y \; & dt ∧ dy \\
-     B^z \; & dt ∧ dz \\
-    \E^x \; & dy ∧ dz \\
-    \E^y \; & dz ∧ dx \\
-    \E^z \; & dx ∧ dy \\
+       B^x \; & dt ∧ dx \\
+       B^y \; & dt ∧ dy \\
+       B^z \; & dt ∧ dz \\
+      \E^x \; & dy ∧ dz \\
+      \E^y \; & dz ∧ dx \\
+      \E^z \; & dx ∧ dy \\
   \end{alignedat} \right]
 
 .. admonition:: Calculations
@@ -697,10 +715,10 @@ the row/column representation of the doubly covariant dual Faraday tensor.
 .. math::
 
   G^{♭♭} = \begin{bmatrix}
-                   & -  B^x \; dx ∧ dt & -  B^y \; dy ∧ dt & -  B^z \; dz ∧ dt \\
-    B^x \; dt ∧ dx &                   & - \E^z \; dy ∧ dx & + \E^y \; dz ∧ dx \\
-    B^y \; dt ∧ dy & + \E^z \; dx ∧ dy &                   & - \E^x \; dz ∧ dy \\
-    B^z \; dt ∧ dz & - \E^y \; dx ∧ dz & + \E^x \; dy ∧ dz &                   \\
+                       & -  B^x \; dx ∧ dt & -  B^y \; dy ∧ dt & -  B^z \; dz ∧ dt \\
+      + B^x \; dt ∧ dx &                   & - \E^z \; dy ∧ dx & + \E^y \; dz ∧ dx \\
+      + B^y \; dt ∧ dy & + \E^z \; dx ∧ dy &                   & - \E^x \; dz ∧ dy \\
+      + B^z \; dt ∧ dz & - \E^y \; dx ∧ dz & + \E^x \; dy ∧ dz &                   \\
   \end{bmatrix}
 
 .. admonition:: Calculations
