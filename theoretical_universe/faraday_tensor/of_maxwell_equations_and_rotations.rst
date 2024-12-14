@@ -223,8 +223,12 @@ the field 2-form and :math:`\mathbf{J}` is the current 3-form.
    d\:\mathbf{F} &= 0          \\
    d⋆ \mathbf{F} &= \mathbf{J} \\
 
+.. }}}
+
 A Single Equation
 -----------------
+
+.. {{{
 
 With the explicit component form of the Cartan-Hodge formalism, it may now be
 obvious that since :math:`⋆\:d\:F` is a 1-form and :math:`d⋆F` a 3-form, we can
@@ -233,19 +237,19 @@ unambiguously merge inhomogeneous and homogeneous equations [note1]_.
 .. math::
 
    d ⋆ \left[ \begin{aligned}
-     - & \E^x \; dt ∧ dx \\
-     - & \E^y \; dt ∧ dy \\
-     - & \E^z \; dt ∧ dz \\
-       &  B^x \; dy ∧ dz \\
-       &  B^y \; dz ∧ dx \\
-       &  B^z \; dx ∧ dy \\
+       - & \E^x \; dt ∧ dx \\
+       - & \E^y \; dt ∧ dy \\
+       - & \E^z \; dt ∧ dz \\
+         &  B^x \; dy ∧ dz \\
+         &  B^y \; dz ∧ dx \\
+         &  B^z \; dx ∧ dy \\
    \end{aligned} \right] + ⋆\:d \left[ \begin{aligned}
-     - & \E^x \; dt ∧ dx \\
-     - & \E^y \; dt ∧ dy \\
-     - & \E^z \; dt ∧ dz \\
-       &  B^x \; dy ∧ dz \\
-       &  B^y \; dz ∧ dx \\
-       &  B^z \; dx ∧ dy \\
+       - & \E^x \; dt ∧ dx \\
+       - & \E^y \; dt ∧ dy \\
+       - & \E^z \; dt ∧ dz \\
+         &  B^x \; dy ∧ dz \\
+         &  B^y \; dz ∧ dx \\
+         &  B^z \; dx ∧ dy \\
    \end{aligned} \right] = \begin{bmatrix}
        + μ_0 c ρ \; dx ∧ dy ∧ dz\\
        - μ_0 J^x \; dt ∧ dy ∧ dz\\
@@ -258,17 +262,17 @@ unambiguously merge inhomogeneous and homogeneous equations [note1]_.
 .. math::
 
    (d ⋆ + ⋆ d ) \left[ \begin{aligned}
-     \E^x \; dt ∧ dx \\
-     \E^y \; dt ∧ dy \\
-     \E^z \; dt ∧ dz \\
-      B^x \; dy ∧ dz \\
-      B^y \; dz ∧ dx \\
-      B^z \; dx ∧ dy \\
+       - & \E^x \; dt ∧ dx \\
+       - & \E^y \; dt ∧ dy \\
+       - & \E^z \; dt ∧ dz \\
+         &  B^x \; dy ∧ dz \\
+         &  B^y \; dz ∧ dx \\
+         &  B^z \; dx ∧ dy \\
    \end{aligned} \right] = \left[ \begin{aligned}
-     + μ_0 c ρ \; dx ∧ dy ∧ dz\\
-     - μ_0 J^x \; dt ∧ dy ∧ dz\\
-     - μ_0 J^y \; dt ∧ dz ∧ dx\\
-     - μ_0 J^z \; dt ∧ dx ∧ dy\\
+       + μ_0 c ρ \; dx ∧ dy ∧ dz\\
+       - μ_0 J^x \; dt ∧ dy ∧ dz\\
+       - μ_0 J^y \; dt ∧ dz ∧ dx\\
+       - μ_0 J^z \; dt ∧ dx ∧ dy\\
    \end{aligned} \right]
 
 With a shorthand :math:`F^{♭♭}` for the electromagnetic field 2-form and

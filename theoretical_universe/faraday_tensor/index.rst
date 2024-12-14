@@ -17,6 +17,7 @@ The Electromagnetic Field Tensor
 
    faraday_tensor_derivation.rst
    of_maxwell_equations_and_rotations.rst
+   potential_formulation.rst
    all_electromagnetic_field_tensors.rst
 
 Summary
