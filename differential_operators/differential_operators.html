@@ -1,0 +1,772 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9HQ1J8VKRB"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-9HQ1J8VKRB');
+    </script>
+    
+    <title>Differential Operators &#8212; Theoretical Universe</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=c1fb35df" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>window.MathJax = {"chtml": {"displayAlign": "left", "displayIndent": "2em"}, "tex": {"packages": {"[+]": ["ams"]}, "macros": {"E": "\\tilde{E}"}}, "tex2jax": {"ignoreClass": ".*", "processClass": "math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'differential_operators/differential_operators';</script>
+    <link rel="canonical" href="https://shaussler.github.io/TheoreticalUniverse/differential_operators/differential_operators.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="The Exterior Derivative of Rotations in Spacetime" href="the_exterior_derivative_of_rotations.html" />
+    <link rel="prev" title="Differential Operators in Differential Form" href="index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="0.1" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Theoretical Universe</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Table of Contents:</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../licence.html">Licence</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cite.html">How to Cite</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">How to Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../resources.html">Resources</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../the_cartan_hodge_formalism/index.html">The Cartan-Hodge Formalism</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../the_cartan_hodge_formalism/basis_vectors.html">Basis vectors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../the_cartan_hodge_formalism/musicality.html">Musicality</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../the_cartan_hodge_formalism/hodge_duality.html">Hodge Duality</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../the_cartan_hodge_formalism/the_free_matrix_representation.html">The Free Matrix Representation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../the_cartan_hodge_formalism/the_minkowski_metric.html">The Minkowski Metric</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../rotations/index.html">Rotations in Differential Form</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../rotations/rotations_in_3_dimensions.html">Rotations in 3 Dimensions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rotations/rotations_in_minkowski_space.html">Rotations in Minkowski Space</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Differential Operators in Differential Form</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Differential Operators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="the_exterior_derivative_of_rotations.html">The Exterior Derivative of Rotations in Spacetime</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../faraday_tensor/index.html">The Electromagnetic Field Tensor</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../faraday_tensor/faraday_tensor_derivation.html">Deriving the Faraday Tensor from the 1865 Maxwell’s Equations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faraday_tensor/of_maxwell_equations_and_rotations.html">Maxwell’s Equations via Differential Forms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faraday_tensor/potential_formulation.html">Potential Formulation via Differential Forms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faraday_tensor/all_electromagnetic_field_tensors.html">All Electromagnetic Field Tensors</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../miscellaneous/index.html">Random Thoughts</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../miscellaneous/de_guas_theorem.html">Proving De Gua’s Theorem with Clifford Algebra</a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/differential_operators/differential_operators.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Differential Operators</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#derivative">Derivative</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#differential">Differential</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gradient">Gradient</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#divergence">Divergence</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#curl">Curl</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#laplacian">Laplacian</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d-alembertian">d’Alembertian</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-laplace-de-rham-operator">The Laplace-De Rham Operator</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="differential-operators">
+<h1>Differential Operators<a class="headerlink" href="#differential-operators" title="Link to this heading">#</a></h1>
+<p class="custom-author">by Stéphane Haussler</p>
+<p>In this article, I use the language of differential forms to systematically
+express the derivative, the differential, the gradient, the divergence, the curl
+and the laplacian in 3-dimensional Euclidean space.</p>
+<p>I assume the reader possesses a strong grasp of vector calculus, a working
+understanding of differential forms, the exterior product, musical operators, as
+well as <a class="reference internal" href="../the_cartan_hodge_formalism/hodge_duality.html#hodge-duality"><span class="std std-ref">the Hoddge dual</span></a>. To learn about differential
+forms, <a class="reference external" href="https://youtube.com/playlist?list=PL22w63XsKjqzQZtDZO_9s2HEMRJnaOTX7&amp;si=4dDrAZ-oKa1rI7B8">see yet another great video serie by Michael Penn</a>.
+Implicitely assumed with the above requisites is a basic understanding of tensor
+calculus, and in particular the concept of vector and covector. Some familiarity
+with the concepts of of either Grassman Algebra, Clifford Algebra (AKA Geometric
+Algebra), or Lie Algebra is not necessary but certainly welcome for a deeper
+understanding of the antisymmetries at hand.</p>
+<section id="derivative">
+<h2>Derivative<a class="headerlink" href="#derivative" title="Link to this heading">#</a></h2>
+<p>The partial derivatives are the basis vectors. I am personally still wrapping
+my head around it and refer for details to <a class="reference external" href="https://www.youtube.com/watch?v=rWSoPR8j6Gg">Tangent Space Basis</a> and <a class="reference external" href="https://www.youtube.com/watch?v=rWSoPR8j6Gg&amp;t">Constructing Tangent
+Vectors</a> by <a class="reference external" href="https://www.youtube.com/&#64;qncubed3">qncubed3</a>, or <a class="reference external" href="https://www.youtube.com/watch?v=BjU8-n4ixqo&amp;list=PLBh2i93oe2qvRGAtgkTszX7szZDVd6jh1&amp;index=22">Coordinate Basis</a>
+by <a class="reference external" href="https://www.youtube.com/&#64;brightsideofmaths">brightsideofmaths</a>.</p>
+<aside class="topic">
+<p class="topic-title">Proposition</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{e}_i = \partial_i\]</div>
+</aside>
+</section>
+<section id="differential">
+<h2>Differential<a class="headerlink" href="#differential" title="Link to this heading">#</a></h2>
+<p>The differential applied to the partial derivative results in:</p>
+<div class="math notranslate nohighlight">
+\[dx^i ∂_j = δ^i_j\]</div>
+<p>This is the definition for a covector, and we conclude that the differential
+operator is a covector.</p>
+<aside class="topic">
+<p class="topic-title">Proposition</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{e}^i = dx^i\]</div>
+</aside>
+</section>
+<section id="gradient">
+<h2>Gradient<a class="headerlink" href="#gradient" title="Link to this heading">#</a></h2>
+<aside class="topic">
+<p class="topic-title">Proposition</p>
+<div class="math notranslate nohighlight">
+\[(df)^{♯} = \mathbf{∇} f\]</div>
+</aside>
+<p>Expand <span class="math notranslate nohighlight">\(df\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[(df)^♯ = ( dx ∂_x f + dy ∂_y f + dz ∂_z f)^♯\]</div>
+<p>Distribute the sharp operator <span class="math notranslate nohighlight">\(♯\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[(df)^♯ = (dx)^♯ ∂_x f + (dy)^♯ ∂_y f + (dz)^♯ ∂_z f\]</div>
+<p>Which permits to conclude:</p>
+<div class="math notranslate nohighlight">
+\[(df)^♯ = ∂_x f ∂_x + ∂_y f ∂_y + ∂_z f ∂_z\]</div>
+<p>In other words and for clarity:</p>
+<div class="math notranslate nohighlight">
+\[(df)^♯ = ∂_x f \mathbf{e}_x + ∂_y f \mathbf{e}_y + ∂_z f \mathbf{e}_z\]</div>
+</section>
+<section id="divergence">
+<h2>Divergence<a class="headerlink" href="#divergence" title="Link to this heading">#</a></h2>
+<aside class="topic">
+<p class="topic-title">Proposition</p>
+<div class="math notranslate nohighlight">
+\[⋆ d ⋆ F^♭ = \mathbf{∇} \cdot \mathbf{F}\]</div>
+</aside>
+<p>We begin with <span class="math notranslate nohighlight">\(F\)</span> as a vector <span class="math notranslate nohighlight">\(\mathbf{F} = F^\sharp = F^i
+\partial_i\)</span> and flatten:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}F^♭ = \begin{bmatrix}
+    F^x ∂_x \\
+    F^y ∂_y \\
+    F^z ∂_z \\
+\end{bmatrix}^♭
+= \begin{bmatrix}
+    F^x (∂_x)^♭ \\
+    F^y (∂_y)^♭ \\
+    F^z (∂_z)^♭ \\
+\end{bmatrix}
+= \begin{bmatrix}
+    F^x dx \\
+    F^y dy \\
+    F^z dz \\
+\end{bmatrix}\end{split}\]</div>
+<p>Apply the <span class="math notranslate nohighlight">\(\star\)</span> operator:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}⋆ F^♭ = ⋆ \begin{bmatrix}
+    F^x   dx \\
+    F^y   dy \\
+    F^z   dz \\
+\end{bmatrix}
+= \begin{bmatrix}
+    F^x ⋆ dx \\
+    F^y ⋆ dy \\
+    F^z ⋆ dz \\
+\end{bmatrix}
+= \begin{bmatrix}
+    F^x dy ∧ dz \\
+    F^y dz ∧ dx \\
+    F^z dx ∧ dy \\
+\end{bmatrix}\end{split}\]</div>
+<p>Apply the <span class="math notranslate nohighlight">\(d\)</span> operator:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}d ⋆ F^♭ = d
+\begin{bmatrix}
+  F^x dy ∧ dz \\
+  F^y dz ∧ dx \\
+  F^z dx ∧ dy \\
+\end{bmatrix}
+=
+\begin{bmatrix}
+  ∂_x F^x dx ∧ dy ∧ dz \\
+  ∂_y F^y dy ∧ dz ∧ dx \\
+  ∂_z F^z dz ∧ dx ∧ dy \\
+\end{bmatrix}
+=
+\begin{bmatrix}
+∂_x F^x dx ∧ dy ∧ dz \\
+∂_y F^y dx ∧ dy ∧ dz \\
+∂_z F^z dx ∧ dy ∧ dz \\
+\end{bmatrix}\end{split}\]</div>
+<p>Which can be brought back to a zero form by applying yet again the Hodge star
+<span class="math notranslate nohighlight">\(⋆\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}⋆ d ⋆ F^♭ = \begin{bmatrix}
+  ∂_x F^x ⋆ dx ∧ dy ∧ dz \\
+  ∂_y F^y ⋆ dx ∧ dy ∧ dz \\
+  ∂_z F^z ⋆ dx ∧ dy ∧ dz \\
+\end{bmatrix}
+= \begin{bmatrix}
+  ∂_x F^x \mathbf{1} \\
+  ∂_y F^y \mathbf{1} \\
+  ∂_z F^z \mathbf{1} \\
+\end{bmatrix}
+= ∂_x F^x + ∂_y F^y + ∂_z F^z\end{split}\]</div>
+</section>
+<section id="curl">
+<h2>Curl<a class="headerlink" href="#curl" title="Link to this heading">#</a></h2>
+<aside class="topic">
+<p class="topic-title">Proposition</p>
+<div class="math notranslate nohighlight">
+\[(⋆(dF^♭))^♯ = ∇^♯ ⨯ F^♯\]</div>
+</aside>
+<p>The vector field is:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}F^♯ = \begin{bmatrix}
+    F^x ∂_x \\
+    F^y ∂_y \\
+    F^z ∂_z \\
+\end{bmatrix}
+= F^x ∂_x + F^y ∂_y + F^z ∂_z\end{split}\]</div>
+<p>Flattening the vector field result in:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}F^\flat = \begin{bmatrix}
+    F^x \; dx \\
+    F^y \; dy \\
+    F^z \; dz \\
+\end{bmatrix}
+= F^x dx + F^y dy + F^z dz\end{split}\]</div>
+<p>Taking the differential, we have:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}dF^♭ = \begin{bmatrix}
+    ∂_x F^x dx ∧ dx &amp; ∂_y F^x dy ∧ dx &amp; ∂_z F^x dz ∧ dx \\
+    ∂_x F^y dx ∧ dy &amp; ∂_y F^y dy ∧ dy &amp; ∂_z F^y dz ∧ dy \\
+    ∂_x F^z dx ∧ dz &amp; ∂_y F^z dy ∧ dy &amp; ∂_z F^z dz ∧ dz \\
+\end{bmatrix}\end{split}\]</div>
+<p>Or with more natural row/column convention:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}dF^♭ = \begin{bmatrix}
+    ∂_x F^x dx ∧ dx &amp; ∂_x F^y dx ∧ dy &amp; ∂_x F^z dx ∧ dz \\
+    ∂_y F^x dy ∧ dx &amp; ∂_y F^y dy ∧ dy &amp; ∂_y F^z dy ∧ dy \\
+    ∂_z F^x dz ∧ dx &amp; ∂_z F^y dz ∧ dy &amp; ∂_z F^z dz ∧ dz \\
+\end{bmatrix}\end{split}\]</div>
+<p>Where <span class="math notranslate nohighlight">\(dx^i ∧ dx^i = 0\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}dF^♭ = \begin{bmatrix}
+                    &amp; ∂_x F^y dx ∧ dy &amp; ∂_x F^z dx ∧ dz \\
+    ∂_y F^x dy ∧ dx &amp;                 &amp; ∂_y F^z dy ∧ dy \\
+    ∂_z F^x dz ∧ dx &amp; ∂_z F^y dz ∧ dy &amp;                 \\
+\end{bmatrix}\end{split}\]</div>
+<p>And <span class="math notranslate nohighlight">\(dx^i ∧ dx^j = -dx^j ∧ dx^i\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}dF^♭ = \begin{bmatrix}
+                      &amp; + ∂_x F^y dx ∧ dy &amp; - ∂_x F^z dz ∧ dx \\
+    - ∂_y F^x dx ∧ dy &amp;                   &amp; + ∂_y F^z dy ∧ dy \\
+    + ∂_z F^x dz ∧ dx &amp; - ∂_z F^y dy ∧ dz &amp;                   \\
+\end{bmatrix}\end{split}\]</div>
+<p>That we reorder to:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}dF^♭ = \begin{bmatrix}
+    + ∂_y F^z dy ∧ dy - ∂_z F^y \; dy ∧ dz \\
+    + ∂_z F^x dz ∧ dx - ∂_x F^z \; dz ∧ dx \\
+    + ∂_x F^y dx ∧ dy - ∂_y F^x \; dx ∧ dy \\
+\end{bmatrix}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}dF^♭ = \begin{bmatrix}
+    (∂_y F^z - ∂_z F^y) \; dy ∧ dz \\
+    (∂_z F^x - ∂_x F^z) \; dz ∧ dx \\
+    (∂_x F^y - ∂_y F^x) \; dx ∧ dy \\
+\end{bmatrix}\end{split}\]</div>
+<p>Where we can now take the star operator:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}⋆ dF^♭ = \begin{bmatrix}
+    (∂_y F^z - ∂_z F^y) ⋆ dy ∧ dz \\
+    (∂_z F^x - ∂_x F^z) ⋆ dz ∧ dx \\
+    (∂_x F^y - ∂_y F^x) ⋆ dx ∧ dy \\
+\end{bmatrix}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}⋆ dF^♭ = \begin{bmatrix}
+    (∂_y F^z - ∂_z F^y) \; dx \\
+    (∂_z F^x - ∂_x F^z) \; dy \\
+    (∂_x F^y - ∂_y F^x) \; dz \\
+\end{bmatrix}\end{split}\]</div>
+<p>We can then sharpen the covector to its vector form:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}(⋆ dF^♭)^♯ = \begin{bmatrix}
+    (∂_y F^z - ∂_z F^y) \; dx^♯ \\
+    (∂_z F^x - ∂_x F^z) \; dy^♯ \\
+    (∂_x F^y - ∂_y F^x) \; dz^♯ \\
+\end{bmatrix}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}(⋆ dF^♭)^♯ = \begin{bmatrix}
+    (∂_y F^z - ∂_z F^y) \; ∂_x \\
+    (∂_z F^x - ∂_x F^z) \; ∂_y \\
+    (∂_x F^y - ∂_y F^x) \; ∂_t \\
+\end{bmatrix}\end{split}\]</div>
+<p>Where we have recovered the expression of the curl of a vector field:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}∇^♯ ⨯ F^♯ = \begin{bmatrix}
+    (∂_y F^z - ∂ F^y) \; ∂_x \\
+    (∂_z F^x - ∂ F^z) \; ∂_y \\
+    (∂_x F^y - ∂ F^x) \; ∂_z \\
+\end{bmatrix}\end{split}\]</div>
+</section>
+<section id="laplacian">
+<h2>Laplacian<a class="headerlink" href="#laplacian" title="Link to this heading">#</a></h2>
+<aside class="topic">
+<p class="topic-title">Proposition</p>
+<div class="math notranslate nohighlight">
+\[⋆ d ⋆ d f = \mathbf{∇}^2 f\]</div>
+</aside>
+<p>The differential of a function (zero form) is:</p>
+<div class="math notranslate nohighlight">
+\[df = ∂_x f dx + ∂_y f dy + ∂_z f dz\]</div>
+<p>Taking the Hodge dual:</p>
+<div class="math notranslate nohighlight">
+\[⋆ df = ∂_x f dy ∧ dz + ∂_y dz ∧ dx + ∂_z f dx ∧ dy\]</div>
+<p>Taking the differential</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}d ⋆ df &amp;= \frac{∂^2 f}{∂ x^2} dx ∧ dy ∧ dz + \frac{∂^2 f}{∂ y^2} dy ∧ dz ∧ dx + \frac{∂^2 f}{∂ z^2} dz ∧ dx ∧ dy \\
+       &amp;= \frac{∂^2 f}{∂ x^2} dx ∧ dy ∧ dz + \frac{∂^2 f}{∂ y^2} dx ∧ dy ∧ dz + \frac{∂^2 f}{∂ z^2} dx ∧ dy ∧ dz \\
+       &amp;= \left( \frac{∂^2 f}{∂ x^2} + \frac{∂^2 f}{∂ y^2} + \frac{∂^2 f}{∂ z^2} \right) \; dx ∧ dy ∧ dz         \\\end{split}\]</div>
+<p>Taking the Hodge dual, we tranform volumes to functions and obtain the
+expression for the laplacian:</p>
+<div class="math notranslate nohighlight">
+\[⋆ d ⋆ df = \left( \frac{∂^2 f}{∂ x^2} + \frac{∂^2 f}{∂ y^2} + \frac{∂^2 f}{∂ z^2} \right)\]</div>
+<p>The Laplacian in vector calculus is the divergence <span class="math notranslate nohighlight">\(\mathbf{∇} \cdot\)</span>
+applied to the gradiant of a function <span class="math notranslate nohighlight">\(\mathbf{∇} f\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{∇} \cdot \mathbf{∇} f\]</div>
+<p>Where the divergence is <span class="math notranslate nohighlight">\(⋆ d ⋆\)</span> and the gradient of a function is
+<span class="math notranslate nohighlight">\(df\)</span> brings the zero-form to a zero form.</p>
+</section>
+<section id="d-alembertian">
+<h2>d’Alembertian<a class="headerlink" href="#d-alembertian" title="Link to this heading">#</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Under construction</p>
+</div>
+</section>
+<section id="the-laplace-de-rham-operator">
+<span id="id1"></span><h2>The Laplace-De Rham Operator<a class="headerlink" href="#the-laplace-de-rham-operator" title="Link to this heading">#</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Under construction</p>
+</div>
+<p>The Laplacian is only valid for functions (zero-forms). The Laplacian can be
+generalized to n-forms with the Laplace-de Rham operator.</p>
+<div class="math notranslate nohighlight">
+\[∆ = dδ + δd = (d + δ)^2\]</div>
+<p>Considering a k-form in a space with dimension <span class="math notranslate nohighlight">\(n\)</span> and parity <cite>s</cite>, the
+<a class="reference external" href="https://en.m.wikipedia.org/wiki/Hodge_star_operator#Codifferential">general expression for codifferential</a> is:</p>
+<div class="math notranslate nohighlight">
+\[δ = (-1)^{n(k+1)+1} s  ⋆ d ⋆\]</div>
+<p>In Euclidean space with <span class="math notranslate nohighlight">\(n=3\)</span>, the metric signature is <span class="math notranslate nohighlight">\((+,+,+)\)</span> and
+the parity therefore <span class="math notranslate nohighlight">\((1)⨯(1)⨯(1)=1\)</span>. The codifferential is then:</p>
+<div class="math notranslate nohighlight">
+\[\delta = (-1)^k ⋆ d ⋆\]</div>
+<aside class="topic">
+<p class="topic-title">Laplace-De Rham Operator in Euclidean Space</p>
+<div class="math notranslate nohighlight">
+\[dδ + δd = d ⋆ d ⋆ + (-1)^k ⋆ d ⋆ d\]</div>
+</aside>
+<p>In Minkowski space with <span class="math notranslate nohighlight">\(n=4\)</span>, the metric signature is <span class="math notranslate nohighlight">\((+,-,-,-)\)</span>
+and the parity therefore <span class="math notranslate nohighlight">\((+1)⨯(-1)⨯(-1)⨯(-1)=-1\)</span>. The codifferential is
+then:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}δ &amp; = (-1)^{n(k+1)+1}   s  ⋆ d ⋆ \\
+  &amp; = (-1)^{4(k+1)+1} (-1) ⋆ d ⋆ \\
+  &amp; = (-1)^{4(k+1)+2}      ⋆ d ⋆ \\
+  &amp; =                      ⋆ d ⋆ \\\end{split}\]</div>
+<aside class="topic">
+<p class="topic-title">Laplace-De Rham Operator in Minkowski Space</p>
+<div class="math notranslate nohighlight">
+\[dδ + δd = d ⋆ d ⋆ + ⋆ d ⋆ d\]</div>
+</aside>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="index.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Differential Operators in Differential Form</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="the_exterior_derivative_of_rotations.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">The Exterior Derivative of Rotations in Spacetime</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#derivative">Derivative</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#differential">Differential</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#gradient">Gradient</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#divergence">Divergence</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#curl">Curl</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#laplacian">Laplacian</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d-alembertian">d’Alembertian</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-laplace-de-rham-operator">The Laplace-De Rham Operator</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Stéphane Haussler
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024, Stéphane Haussler.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

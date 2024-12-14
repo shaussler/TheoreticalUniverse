@@ -1,0 +1,1195 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9HQ1J8VKRB"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-9HQ1J8VKRB');
+    </script>
+    
+    <title>Rotations in Minkowski Space &#8212; Theoretical Universe</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=c1fb35df" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>window.MathJax = {"chtml": {"displayAlign": "left", "displayIndent": "2em"}, "tex": {"packages": {"[+]": ["ams"]}, "macros": {"E": "\\tilde{E}"}}, "tex2jax": {"ignoreClass": ".*", "processClass": "math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'rotations/rotations_in_minkowski_space';</script>
+    <link rel="canonical" href="https://shaussler.github.io/TheoreticalUniverse/rotations/rotations_in_minkowski_space.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Differential Operators in Differential Form" href="../differential_operators/index.html" />
+    <link rel="prev" title="Rotations in 3 Dimensions" href="rotations_in_3_dimensions.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="0.1" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Theoretical Universe</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Table of Contents:</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../licence.html">Licence</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cite.html">How to Cite</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">How to Contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../resources.html">Resources</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../the_cartan_hodge_formalism/index.html">The Cartan-Hodge Formalism</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../the_cartan_hodge_formalism/basis_vectors.html">Basis vectors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../the_cartan_hodge_formalism/musicality.html">Musicality</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../the_cartan_hodge_formalism/hodge_duality.html">Hodge Duality</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../the_cartan_hodge_formalism/the_free_matrix_representation.html">The Free Matrix Representation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../the_cartan_hodge_formalism/the_minkowski_metric.html">The Minkowski Metric</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Rotations in Differential Form</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="rotations_in_3_dimensions.html">Rotations in 3 Dimensions</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Rotations in Minkowski Space</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../differential_operators/index.html">Differential Operators in Differential Form</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../differential_operators/differential_operators.html">Differential Operators</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../differential_operators/the_exterior_derivative_of_rotations.html">The Exterior Derivative of Rotations in Spacetime</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../faraday_tensor/index.html">The Electromagnetic Field Tensor</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../faraday_tensor/faraday_tensor_derivation.html">Deriving the Faraday Tensor from the 1865 Maxwell’s Equations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faraday_tensor/of_maxwell_equations_and_rotations.html">Maxwell’s Equations via Differential Forms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faraday_tensor/potential_formulation.html">Potential Formulation via Differential Forms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faraday_tensor/all_electromagnetic_field_tensors.html">All Electromagnetic Field Tensors</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../miscellaneous/index.html">Random Thoughts</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../miscellaneous/de_guas_theorem.html">Proving De Gua’s Theorem with Clifford Algebra</a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/rotations/rotations_in_minkowski_space.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Rotations in Minkowski Space</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-rotation-tensor">The <span class="math notranslate nohighlight">\(♯♯\)</span> Rotation Tensor</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">The <span class="math notranslate nohighlight">\(♭♭\)</span> Rotation Tensor</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">The <span class="math notranslate nohighlight">\(♭♯\)</span> Rotation Tensor</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">The <span class="math notranslate nohighlight">\(♯♭\)</span> Rotation Tensor</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#symmetries-of-rotations-in-form">Symmetries of Rotations in <span class="math notranslate nohighlight">\(♭♯\)</span> Form</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Symmetries of Rotations in <span class="math notranslate nohighlight">\(♯♭\)</span> Form</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mathfrak-so-1-3-lie-algebra-of-the-lorentz-group"><span class="math notranslate nohighlight">\(\mathfrak{so}(1,3)\)</span> Lie Algebra of the Lorentz Group</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="rotations-in-minkowski-space">
+<span id="id1"></span><h1>Rotations in Minkowski Space<a class="headerlink" href="#rotations-in-minkowski-space" title="Link to this heading">#</a></h1>
+<p class="custom-author">by Stéphane Haussler</p>
+<p>On this page, I systematically explore the geometric differential
+representation of rotations in minkowski spacetime. Rotations are first
+expressed as linear combination of rotation planes with bivectors. The dual
+differential 2-forms are then derived, as well as the mixed tensor
+representation in form of matrices.</p>
+<p>We work out the Lie algebra of the Lorentz group as well as the full matrix
+representation of rotations. The mixed wedge products are fully expressed in
+terms of tensor products and their symmetries highlighted.</p>
+<section id="the-rotation-tensor">
+<h2>The <span class="math notranslate nohighlight">\(♯♯\)</span> Rotation Tensor<a class="headerlink" href="#the-rotation-tensor" title="Link to this heading">#</a></h2>
+<p>General rotations can be expressed as linear combinations of rotations in each
+planes. For Minkowski space with 4 dimensions, this result in 6 planes of
+rotations. Each plance is expressed as the wedge product <span class="math notranslate nohighlight">\(∧\)</span> of basis
+vectors as <span class="math notranslate nohighlight">\(∂_x ∧ ∂_y\)</span>. A rotation in spacetime is represented by the
+linear combination of all basis rotations in all six available planes.</p>
+<aside class="topic">
+<p class="topic-title">Rotations in Minkowski Space</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}R^{♯♯} = \begin{bmatrix}
+  a \; ∂_t ∧ ∂_x \\
+  b \; ∂_t ∧ ∂_y \\
+  c \; ∂_t ∧ ∂_z \\
+  d \; ∂_y ∧ ∂_z \\
+  e \; ∂_z ∧ ∂_x \\
+  f \; ∂_x ∧ ∂_y \\
+\end{bmatrix}\end{split}\]</div>
+</aside>
+<p>The sharp symbol <span class="math notranslate nohighlight">\(\sharp\)</span> indicates that the components are doubly
+contravariant tensor components. Using the antisymmetric property of the
+exterior product <span class="math notranslate nohighlight">\(∂_μ ∧ ∂_ν = - ∂_ν ∧ ∂_μ\)</span>, all terms can be rewritten as
+<span class="math notranslate nohighlight">\(∂_μ ∧ ∂_ν = \frac{1}{2}( ∂_μ ∧ ∂_ν - ∂_ν ∧ ∂_μ)\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}R^{♯♯} = \begin{bmatrix}
+  a \; \frac{1}{2} (∂_t ∧ ∂_x - ∂_x ∧ ∂_t) \\
+  b \; \frac{1}{2} (∂_t ∧ ∂_y - ∂_y ∧ ∂_t) \\
+  c \; \frac{1}{2} (∂_t ∧ ∂_z - ∂_z ∧ ∂_t) \\
+  d \; \frac{1}{2} (∂_y ∧ ∂_z - ∂_z ∧ ∂_y) \\
+  e \; \frac{1}{2} (∂_z ∧ ∂_x - ∂_x ∧ ∂_z) \\
+  f \; \frac{1}{2} (∂_x ∧ ∂_y - ∂_y ∧ ∂_x) \\
+\end{bmatrix}\end{split}\]</div>
+<p>With minor rearangement, we get:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}R^{♯♯} = \frac{1}{2} \begin{bmatrix}
+  a \; ∂_t ∧ ∂_x - a \; ∂_x ∧ ∂_t) \\
+  b \; ∂_t ∧ ∂_y - b \; ∂_y ∧ ∂_t) \\
+  c \; ∂_t ∧ ∂_z - c \; ∂_z ∧ ∂_t) \\
+  d \; ∂_y ∧ ∂_z - d \; ∂_z ∧ ∂_y) \\
+  e \; ∂_z ∧ ∂_x - e \; ∂_x ∧ ∂_z) \\
+  f \; ∂_x ∧ ∂_y - f \; ∂_y ∧ ∂_x) \\
+\end{bmatrix}\end{split}\]</div>
+<p>The free matrix representation permits to state the obvious, in that we can
+rewrite the rotation above utilizing a row/column matrix representation:</p>
+<aside class="topic">
+<p class="topic-title">The Doubly Contravariant Rotation in Matrix Form</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}R^{♯♯}= \frac{1}{2} \begin{bmatrix}
+                   &amp; + a \; ∂_t ∧ ∂_x &amp; + b \; ∂_t ∧ ∂_y &amp; + c \; ∂_t ∧ ∂_z \\
+  - a \; ∂_x ∧ ∂_t &amp;                  &amp; + f \; ∂_x ∧ ∂_y &amp; - e \; ∂_x ∧ ∂_z \\
+  - b \; ∂_y ∧ ∂_t &amp; - f \; ∂_y ∧ ∂_x &amp;                  &amp; + d \; ∂_y ∧ ∂_z \\
+  - c \; ∂_z ∧ ∂_t &amp; + e \; ∂_z ∧ ∂_x &amp; - d \; ∂_z ∧ ∂_y &amp;                  \\
+\end{bmatrix}\end{split}\]</div>
+</aside>
+</section>
+<section id="id2">
+<h2>The <span class="math notranslate nohighlight">\(♭♭\)</span> Rotation Tensor<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<p>Using the Minkowski metric, we flatten a basis vector with the flat operator
+<span class="math notranslate nohighlight">\(♭\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[(∂_μ)^♭ = η_{μν} dx^ν\]</div>
+<p>Likewise any index of the doubly contravariant exterior product can be
+flattened:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{matrix}
+  (∂_μ ∧ ∂_ν)^{♭♯} &amp;= η_{γμ} dx^γ ∧ ∂_ν         \\
+  (∂_μ ∧ ∂_ν)^{♯♭} &amp;= η_{γν} ∂_μ ∧ dx^γ         \\
+  (∂_μ ∧ ∂_ν)^{♭♭} &amp;= η_{δμ} η_{γν} dx^δ ∧ dx^γ \\
+\end{matrix}\end{split}\]</div>
+<p>To obtain the doubly covariant representation of rotations in spacetime, we
+apply the flat operators <span class="math notranslate nohighlight">\(♭♭\)</span> to each components <span class="math notranslate nohighlight">\(R^{♭♭} =
+(R^{♯♯})^{♭♭}\)</span>:</p>
+<aside class="topic">
+<p class="topic-title">Doubly Covariant Representation of Rotations in Minkowski Space</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}R^{♭♭} = \left[ \begin{aligned}
+  - &amp; a \; dt ∧ dx \\
+  - &amp; b \; dt ∧ dy \\
+  - &amp; c \; dt ∧ dz \\
+    &amp; d \; dy ∧ dz \\
+    &amp; e \; dz ∧ dx \\
+    &amp; f \; dx ∧ dy \\
+\end{aligned} \right]\end{split}\]</div>
+</aside>
+<div class="dropdown admonition">
+<p class="admonition-title">Calculations</p>
+<p class="rubric">Apply the flat operators</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}R^{♭♭} = \begin{bmatrix}
+  a \; ∂_t ∧ ∂_x \\
+  b \; ∂_t ∧ ∂_y \\
+  c \; ∂_t ∧ ∂_z \\
+  d \; ∂_y ∧ ∂_z \\
+  e \; ∂_z ∧ ∂_x \\
+  f \; ∂_x ∧ ∂_y \\
+\end{bmatrix}^{♭♭}\end{split}\]</div>
+<p class="rubric">Distribute the musical operators</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}R^{♭♭} = \begin{bmatrix}
+  a \; ∂_t^♭ ∧ ∂_x^♭ \\
+  b \; ∂_t^♭ ∧ ∂_y^♭ \\
+  c \; ∂_t^♭ ∧ ∂_z^♭ \\
+  d \; ∂_y^♭ ∧ ∂_z^♭ \\
+  e \; ∂_z^♭ ∧ ∂_x^♭ \\
+  f \; ∂_x^♭ ∧ ∂_y^♭ \\
+\end{bmatrix}\end{split}\]</div>
+<p class="rubric">Expand</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}R^{♭♭} = \begin{bmatrix}
+  a \; η_{tμ} d^μ ∧ η_{xμ} d^μ \\
+  b \; η_{tμ} d^μ ∧ η_{yμ} d^μ \\
+  c \; η_{tμ} d^μ ∧ η_{zμ} d^μ \\
+  d \; η_{yμ} d^μ ∧ η_{zμ} d^μ \\
+  e \; η_{zμ} d^μ ∧ η_{xμ} d^μ \\
+  f \; η_{xμ} d^μ ∧ η_{yμ} d^μ \\
+\end{bmatrix}\end{split}\]</div>
+<p class="rubric">Identify non-zero terms</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}R^{♭♭} = \begin{bmatrix}
+  a \; η_{tt} dt ∧ η_{xx} dx \\
+  b \; η_{tt} dt ∧ η_{yy} dy \\
+  c \; η_{tt} dt ∧ η_{zz} dz \\
+  d \; η_{yy} dy ∧ η_{zz} dz \\
+  e \; η_{zz} dz ∧ η_{xx} dx \\
+  f \; η_{xx} dx ∧ η_{yy} dy \\
+\end{bmatrix}\end{split}\]</div>
+<p class="rubric">Apply numerical values</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}R^{♭♭} = \left[ \begin{aligned}
+  - &amp; a \; dt ∧ dx \\
+  - &amp; b \; dt ∧ dy \\
+  - &amp; c \; dt ∧ dz \\
+    &amp; d \; dy ∧ dz \\
+    &amp; e \; dz ∧ dx \\
+    &amp; f \; dx ∧ dy \\
+\end{aligned} \right]\end{split}\]</div>
+</div>
+</section>
+<section id="id3">
+<h2>The <span class="math notranslate nohighlight">\(♭♯\)</span> Rotation Tensor<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<p>In this section, I flattne the first component using the <a class="reference internal" href="../the_cartan_hodge_formalism/the_free_matrix_representation.html#the-free-matrix-representation"><span class="std std-ref">free matrix
+representation</span></a>. The mixed tensor is obtained
+by applying the flatternig operator <span class="math notranslate nohighlight">\(\flat\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}R^{♭♯} = \begin{bmatrix}
+    a \; ∂_t ∧ ∂_x \\
+    b \; ∂_t ∧ ∂_y \\
+    c \; ∂_t ∧ ∂_z \\
+    d \; ∂_y ∧ ∂_z \\
+    e \; ∂_z ∧ ∂_x \\
+    f \; ∂_x ∧ ∂_y \\
+\end{bmatrix}^{♭♯}
+= \begin{bmatrix}
+    + a \; dx^x ∧ ∂_t \\
+    + b \; dx^y ∧ ∂_t \\
+    + c \; dx^z ∧ ∂_t \\
+    - d \; dx^z ∧ ∂_y \\
+    - e \; dx^x ∧ ∂_z \\
+    - f \; dx^y ∧ ∂_x \\
+\end{bmatrix}\end{split}\]</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Calculations</p>
+<p class="rubric">Apply the musical operators</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}B^{♭♯} = \begin{bmatrix}
+    a \; ∂_t ∧ ∂_x \\
+    b \; ∂_t ∧ ∂_y \\
+    c \; ∂_t ∧ ∂_z \\
+    d \; ∂_y ∧ ∂_z \\
+    e \; ∂_z ∧ ∂_x \\
+    f \; ∂_x ∧ ∂_y \\
+\end{bmatrix}^{♭♯}\end{split}\]</div>
+<p class="rubric">Distribute the musical operators to each matrix elements</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}B^{♭♯} = \begin{bmatrix}
+  a \; (∂_t ∧ ∂_x)^{♭♯} \\
+  b \; (∂_t ∧ ∂_y)^{♭♯} \\
+  c \; (∂_t ∧ ∂_z)^{♭♯} \\
+  d \; (∂_y ∧ ∂_z)^{♭♯} \\
+  e \; (∂_z ∧ ∂_x)^{♭♯} \\
+  f \; (∂_x ∧ ∂_y)^{♭♯} \\
+\end{bmatrix}\end{split}\]</div>
+<p class="rubric">Distribute the musical operators</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}B^{♭♯} = \begin{bmatrix}
+  a \; (∂_t^♭ ∧ ∂_x^♯) \\
+  b \; (∂_t^♭ ∧ ∂_y^♯) \\
+  c \; (∂_t^♭ ∧ ∂_z^♯) \\
+  d \; (∂_y^♭ ∧ ∂_z^♯) \\
+  e \; (∂_z^♭ ∧ ∂_x^♯) \\
+  f \; (∂_x^♭ ∧ ∂_y^♯) \\
+\end{bmatrix}\end{split}\]</div>
+<p class="rubric">Apply the musical operators</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}B^{♭♯} = \begin{bmatrix}
+  a \; η_{tγ} dx^γ ∧ ∂_x^♯ \\
+  b \; η_{tγ} dx^γ ∧ ∂_y^♯ \\
+  c \; η_{tγ} dx^γ ∧ ∂_z^♯ \\
+  d \; η_{yγ} dx^γ ∧ ∂_z^♯ \\
+  e \; η_{zγ} dx^γ ∧ ∂_x^♯ \\
+  f \; η_{xγ} dx^γ ∧ ∂_y^♯ \\
+\end{bmatrix}\end{split}\]</div>
+<p class="rubric">Identify the non-zero terms of the Minkowski metric</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}B^{♭♯} = \begin{bmatrix}
+  a \; η_{tt} dx^t ∧ ∂_x \\
+  b \; η_{tt} dx^t ∧ ∂_y \\
+  c \; η_{tt} dx^t ∧ ∂_z \\
+  d \; η_{yy} dx^y ∧ ∂_z \\
+  e \; η_{zz} dx^z ∧ ∂_x \\
+  f \; η_{xx} dx^x ∧ ∂_y \\
+\end{bmatrix}\end{split}\]</div>
+<p class="rubric">Use the numerical values of the Minkowski metric</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}B^{♭♯} = \begin{bmatrix}
+  + a \; dx^t ∧ ∂_x \\
+  + b \; dx^t ∧ ∂_y \\
+  + c \; dx^t ∧ ∂_z \\
+  - d \; dx^y ∧ ∂_z \\
+  - e \; dx^z ∧ ∂_x \\
+  - f \; dx^x ∧ ∂_y \\
+\end{bmatrix}\end{split}\]</div>
+</div>
+<p>Taking into account the symetric property of <span class="math notranslate nohighlight">\(dx^t ∧ ∂_x\)</span>, <span class="math notranslate nohighlight">\(dx^t
+∧ ∂_y\)</span>, and <span class="math notranslate nohighlight">\(dx^t ∧ ∂_z\)</span>, as well the antisymetric property of
+<span class="math notranslate nohighlight">\(dx^x ∧ ∂_y\)</span>, <span class="math notranslate nohighlight">\(dx^y ∧ ∂_z\)</span>, and <span class="math notranslate nohighlight">\(dx^z ∧ ∂_x\)</span>
+demonstrated above, this results in:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}R^{♭♯} = \frac{1}{2} \begin{bmatrix}
+                    &amp; + a \; dx^t ∧ ∂_x &amp; + b \; dx^t ∧ ∂_y &amp; + c \; dx^t ∧ ∂_z \\
+  + a \; dx^x ∧ ∂_t &amp;                   &amp; + f \; dx^x ∧ ∂_y &amp; - e \; dx^x ∧ ∂_z \\
+  + b \; dx^y ∧ ∂_t &amp; - f \; dx^y ∧ ∂_x &amp;                   &amp; + d \; dx^y ∧ ∂_z \\
+  + c \; dx^z ∧ ∂_t &amp; + e \; dx^z ∧ ∂_x &amp; - d \; dx^z ∧ ∂_y &amp;                   \\
+\end{bmatrix}\end{split}\]</div>
+</section>
+<section id="id4">
+<h2>The <span class="math notranslate nohighlight">\(♯♭\)</span> Rotation Tensor<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
+<p>In this section, I raise the indice using the free matrix notaion. The mixed
+tensor is obtained by applying the flatternig operator <span class="math notranslate nohighlight">\(\flat\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}R^{♯♭} = \begin{bmatrix}
+  a \; ∂_t ∧ ∂_x \\
+  b \; ∂_t ∧ ∂_y \\
+  c \; ∂_t ∧ ∂_z \\
+  d \; ∂_y ∧ ∂_z \\
+  e \; ∂_z ∧ ∂_x \\
+  f \; ∂_x ∧ ∂_y \\
+\end{bmatrix}^{♯♭}
+= \begin{bmatrix}
+  - a \; ∂_t ∧ dx \\
+  - b \; ∂_t ∧ dy \\
+  - c \; ∂_t ∧ dz \\
+  - d \; ∂_y ∧ dz \\
+  - e \; ∂_z ∧ dx \\
+  - f \; ∂_x ∧ dy \\
+\end{bmatrix}\end{split}\]</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Calculations</p>
+<p class="rubric">Apply the musical operators</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}B^{♯♭} = \begin{bmatrix}
+  a \; ∂_t ∧ ∂_x \\
+  b \; ∂_t ∧ ∂_y \\
+  c \; ∂_t ∧ ∂_z \\
+  d \; ∂_y ∧ ∂_z \\
+  e \; ∂_z ∧ ∂_x \\
+  f \; ∂_x ∧ ∂_y \\
+\end{bmatrix}^{♯♭}\end{split}\]</div>
+<p class="rubric">Distribute the musical operators to each matrix elements</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}B^{♯♭} = \begin{bmatrix}
+  a \; (∂_t ∧ ∂_x)^{♯♭} \\
+  b \; (∂_t ∧ ∂_y)^{♯♭} \\
+  c \; (∂_t ∧ ∂_z)^{♯♭} \\
+  d \; (∂_y ∧ ∂_z)^{♯♭} \\
+  e \; (∂_z ∧ ∂_x)^{♯♭} \\
+  f \; (∂_x ∧ ∂_y)^{♯♭} \\
+\end{bmatrix}\end{split}\]</div>
+<p class="rubric">Distribute the musical operators</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}B^{♯♭} = \begin{bmatrix}
+  a \; (∂_t^♯ ∧ ∂_x^♭) \\
+  b \; (∂_t^♯ ∧ ∂_y^♭) \\
+  c \; (∂_t^♯ ∧ ∂_z^♭) \\
+  d \; (∂_y^♯ ∧ ∂_z^♭) \\
+  e \; (∂_z^♯ ∧ ∂_x^♭) \\
+  f \; (∂_x^♯ ∧ ∂_y^♭) \\
+\end{bmatrix}\end{split}\]</div>
+<p class="rubric">Apply and expand</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}B^{♯♭} = \begin{bmatrix}
+  a \; ∂_t ∧ η_{xγ} dx^γ \\
+  b \; ∂_t ∧ η_{yγ} dx^γ \\
+  c \; ∂_t ∧ η_{zγ} dx^γ \\
+  d \; ∂_y ∧ η_{zγ} dx^γ \\
+  e \; ∂_z ∧ η_{xγ} dx^γ \\
+  f \; ∂_x ∧ η_{yγ} dx^γ \\
+\end{bmatrix}\end{split}\]</div>
+<p class="rubric">The metric tensor can be taken out due to mulilinearity</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}B^{♯♭} = \begin{bmatrix}
+  a \; η_{xγ} ∂_t ∧ dx^γ \\
+  b \; η_{yγ} ∂_t ∧ dx^γ \\
+  c \; η_{zγ} ∂_t ∧ dx^γ \\
+  d \; η_{zγ} ∂_y ∧ dx^γ \\
+  e \; η_{xγ} ∂_z ∧ dx^γ \\
+  f \; η_{yγ} ∂_x ∧ dx^γ \\
+\end{bmatrix}\end{split}\]</div>
+<p class="rubric">Most terms of the Minkowski metric are zero</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}R^{♯♭} = \begin{bmatrix}
+  a \; η_{xx} ∂_t ∧ dx^x \\
+  b \; η_{yy} ∂_t ∧ dx^y \\
+  c \; η_{zz} ∂_t ∧ dx^z \\
+  d \; η_{zz} ∂_y ∧ dx^z \\
+  e \; η_{xx} ∂_z ∧ dx^x \\
+  f \; η_{yy} ∂_x ∧ dx^y \\
+\end{bmatrix}\end{split}\]</div>
+<p class="rubric">Use the numerical values of the Minkowski metric</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}R^{♯♭} = \begin{bmatrix}
+  - a \; ∂_t ∧ dx^x \\
+  - b \; ∂_t ∧ dx^y \\
+  - c \; ∂_t ∧ dx^z \\
+  - d \; ∂_y ∧ dx^z \\
+  - e \; ∂_z ∧ dx^x \\
+  - f \; ∂_x ∧ dx^y \\
+\end{bmatrix}\end{split}\]</div>
+</div>
+<p>Taking into account the symetric property of <span class="math notranslate nohighlight">\(∂_t ∧ dx^x\)</span>, <span class="math notranslate nohighlight">\(∂_t ∧
+dx^y\)</span>, and <span class="math notranslate nohighlight">\(∂_t ∧ dx^z\)</span>, as well the antisymetric property of <span class="math notranslate nohighlight">\(∂_x ∧
+dx^y\)</span>, <span class="math notranslate nohighlight">\(∂_ey ∧ dx^z\)</span>, and <span class="math notranslate nohighlight">\(∂_z ∧ dx^x\)</span> demonstrated above, this
+results in:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}R^{♯♭} = \frac{1}{2} \begin{bmatrix}
+                  &amp; - a \; ∂_t ∧ dx &amp; - b \; ∂_t ∧ dy &amp; - c \; ∂_t ∧ dz \\
+  - a \; ∂_x ∧ dt &amp;                 &amp; - f \; ∂_x ∧ dy &amp; + e \; ∂_x ∧ dz \\
+  - b \; ∂_y ∧ dt &amp; + f \; ∂_y ∧ dx &amp;                 &amp; - d \; ∂_y ∧ dz \\
+  - c \; ∂_z ∧ dt &amp; - e \; ∂_z ∧ dx &amp; + d \; ∂_z ∧ dy &amp;                 \\
+\end{bmatrix}\end{split}\]</div>
+</section>
+<section id="symmetries-of-rotations-in-form">
+<h2>Symmetries of Rotations in <span class="math notranslate nohighlight">\(♭♯\)</span> Form<a class="headerlink" href="#symmetries-of-rotations-in-form" title="Link to this heading">#</a></h2>
+<p>The purpose here is to determine the symmetries of the mixed exterior product.
+Calculations are tedious, but permit to verify that everything works as it
+should as the quantities are encountered when <a class="reference internal" href="../faraday_tensor/faraday_tensor_derivation.html#id1"><span class="std std-ref">Deriving the Faraday Tensor from the 1865 Maxwell’s Equations</span></a>. The discussion is often avoided, but it is
+nice to settle it. This is important when performing matrix multiplications
+since per convention, matrices are <span class="math notranslate nohighlight">\(♯♭\)</span> tensors organized in tables
+following the row-column convention. This is not critical when using <a class="reference internal" href="../the_cartan_hodge_formalism/the_free_matrix_representation.html#id1"><span class="std std-ref">The Free Matrix Representation</span></a>, but permits to fall back to this familiar
+framework.</p>
+<p>Applying the <span class="math notranslate nohighlight">\(♭♯\)</span> operators to flatten the first index of each basis
+bivectors, we obtain:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{alignedat}{4}
+(∂_t ∧ ∂_x)^{♭♯} =&amp; + dt ∧ ∂_x &amp;\qquad&amp; (∂_x ∧ ∂_t)^{♭♯} =&amp; - dx ∧ ∂_t \\
+(∂_t ∧ ∂_y)^{♭♯} =&amp; + dt ∧ ∂_y &amp;\qquad&amp; (∂_y ∧ ∂_t)^{♭♯} =&amp; - dy ∧ ∂_t \\
+(∂_t ∧ ∂_z)^{♭♯} =&amp; + dt ∧ ∂_z &amp;\qquad&amp; (∂_z ∧ ∂_t)^{♭♯} =&amp; - dz ∧ ∂_t \\
+(∂_y ∧ ∂_z)^{♭♯} =&amp; - dy ∧ ∂_z &amp;\qquad&amp; (∂_y ∧ ∂_x)^{♭♯} =&amp; - dy ∧ ∂_x \\
+(∂_z ∧ ∂_x)^{♭♯} =&amp; - dz ∧ ∂_x &amp;\qquad&amp; (∂_z ∧ ∂_y)^{♭♯} =&amp; - dz ∧ ∂_y \\
+(∂_x ∧ ∂_y)^{♭♯} =&amp; - dx ∧ ∂_y &amp;\qquad&amp; (∂_x ∧ ∂_z)^{♭♯} =&amp; - dx ∧ ∂_z \\
+\end{alignedat}\end{split}\]</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Calculations</p>
+<p class="rubric">Distribute musical operators</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{alignedat}{5}
+(∂_t ∧ ∂_x)^{♭♯} &amp;= (∂_t^♭ ∧ ∂_x^♯) &amp;\qquad&amp; (∂_x ∧ ∂_t)^{♭♯} &amp;=&amp; (∂_x^♭ ∧ ∂_t^♯) \\
+(∂_t ∧ ∂_y)^{♭♯} &amp;= (∂_t^♭ ∧ ∂_y^♯) &amp;\qquad&amp; (∂_y ∧ ∂_t)^{♭♯} &amp;=&amp; (∂_y^♭ ∧ ∂_t^♯) \\
+(∂_t ∧ ∂_z)^{♭♯} &amp;= (∂_t^♭ ∧ ∂_z^♯) &amp;\qquad&amp; (∂_z ∧ ∂_t)^{♭♯} &amp;=&amp; (∂_z^♭ ∧ ∂_t^♯) \\
+(∂_x ∧ ∂_y)^{♭♯} &amp;= (∂_x^♭ ∧ ∂_y^♯) &amp;\qquad&amp; (∂_y ∧ ∂_x)^{♭♯} &amp;=&amp; (∂_y^♭ ∧ ∂_x^♯) \\
+(∂_y ∧ ∂_z)^{♭♯} &amp;= (∂_y^♭ ∧ ∂_z^♯) &amp;\qquad&amp; (∂_z ∧ ∂_y)^{♭♯} &amp;=&amp; (∂_z^♭ ∧ ∂_y^♯) \\
+(∂_z ∧ ∂_x)^{♭♯} &amp;= (∂_z^♭ ∧ ∂_x^♯) &amp;\qquad&amp; (∂_x ∧ ∂_z)^{♭♯} &amp;=&amp; (∂_x^♭ ∧ ∂_z^♯) \\
+\end{alignedat}\end{split}\]</div>
+<p class="rubric">Apply musical operators</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{alignedat}{5}
+(∂_t ∧ ∂_x)^{♭♯} &amp;= η_{tγ} dx^γ ∧ ∂_x &amp;\qquad&amp; (∂_x ∧ ∂_t)^{♭♯} &amp;=&amp; η_{xγ} dx^γ ∧ ∂_t \\
+(∂_t ∧ ∂_y)^{♭♯} &amp;= η_{tγ} dx^γ ∧ ∂_y &amp;\qquad&amp; (∂_y ∧ ∂_t)^{♭♯} &amp;=&amp; η_{yγ} dx^γ ∧ ∂_t \\
+(∂_t ∧ ∂_z)^{♭♯} &amp;= η_{tγ} dx^γ ∧ ∂_z &amp;\qquad&amp; (∂_z ∧ ∂_t)^{♭♯} &amp;=&amp; η_{zγ} dx^γ ∧ ∂_t \\
+(∂_x ∧ ∂_y)^{♭♯} &amp;= η_{xγ} dx^γ ∧ ∂_y &amp;\qquad&amp; (∂_y ∧ ∂_x)^{♭♯} &amp;=&amp; η_{yγ} dx^γ ∧ ∂_x \\
+(∂_y ∧ ∂_z)^{♭♯} &amp;= η_{yγ} dx^γ ∧ ∂_z &amp;\qquad&amp; (∂_z ∧ ∂_y)^{♭♯} &amp;=&amp; η_{zγ} dx^γ ∧ ∂_y \\
+(∂_z ∧ ∂_x)^{♭♯} &amp;= η_{zγ} dx^γ ∧ ∂_x &amp;\qquad&amp; (∂_x ∧ ∂_z)^{♭♯} &amp;=&amp; η_{xγ} dx^γ ∧ ∂_z \\
+\end{alignedat}\end{split}\]</div>
+<p class="rubric">Identify non-zero elements</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{alignedat}{5}
+(∂_t ∧ ∂_x)^{♭♯} &amp;= η_{tt} dx^t ∧ ∂_x &amp;\qquad&amp; (∂_x ∧ ∂_t)^{♭♯} &amp;=&amp; η_{xx} dx^x ∧ ∂_t \\
+(∂_t ∧ ∂_y)^{♭♯} &amp;= η_{tt} dx^t ∧ ∂_y &amp;\qquad&amp; (∂_y ∧ ∂_t)^{♭♯} &amp;=&amp; η_{yy} dx^y ∧ ∂_t \\
+(∂_t ∧ ∂_z)^{♭♯} &amp;= η_{tt} dx^t ∧ ∂_z &amp;\qquad&amp; (∂_z ∧ ∂_t)^{♭♯} &amp;=&amp; η_{zz} dx^z ∧ ∂_t \\
+(∂_x ∧ ∂_y)^{♭♯} &amp;= η_{xx} dx^x ∧ ∂_y &amp;\qquad&amp; (∂_y ∧ ∂_x)^{♭♯} &amp;=&amp; η_{yy} dx^y ∧ ∂_x \\
+(∂_y ∧ ∂_z)^{♭♯} &amp;= η_{yy} dx^y ∧ ∂_z &amp;\qquad&amp; (∂_z ∧ ∂_y)^{♭♯} &amp;=&amp; η_{zz} dx^z ∧ ∂_y \\
+(∂_z ∧ ∂_x)^{♭♯} &amp;= η_{zz} dx^z ∧ ∂_x &amp;\qquad&amp; (∂_x ∧ ∂_z)^{♭♯} &amp;=&amp; η_{xx} dx^x ∧ ∂_z \\
+\end{alignedat}\end{split}\]</div>
+<p class="rubric">Apply numerical values</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{alignedat}{5}
+(∂_t ∧ ∂_x)^{♭♯} &amp;= + dt ∧ ∂_x &amp;\qquad&amp; (∂_x ∧ ∂_t)^{♭♯} &amp;=&amp; - dx ∧ ∂_t \\
+(∂_t ∧ ∂_y)^{♭♯} &amp;= + dt ∧ ∂_y &amp;\qquad&amp; (∂_y ∧ ∂_t)^{♭♯} &amp;=&amp; - dy ∧ ∂_t \\
+(∂_t ∧ ∂_z)^{♭♯} &amp;= + dt ∧ ∂_z &amp;\qquad&amp; (∂_z ∧ ∂_t)^{♭♯} &amp;=&amp; - dz ∧ ∂_t \\
+(∂_x ∧ ∂_y)^{♭♯} &amp;= - dx ∧ ∂_y &amp;\qquad&amp; (∂_y ∧ ∂_x)^{♭♯} &amp;=&amp; - dy ∧ ∂_x \\
+(∂_y ∧ ∂_z)^{♭♯} &amp;= - dy ∧ ∂_z &amp;\qquad&amp; (∂_z ∧ ∂_y)^{♭♯} &amp;=&amp; - dz ∧ ∂_y \\
+(∂_z ∧ ∂_x)^{♭♯} &amp;= - dz ∧ ∂_x &amp;\qquad&amp; (∂_x ∧ ∂_z)^{♭♯} &amp;=&amp; - dx ∧ ∂_z \\
+\end{alignedat}\end{split}\]</div>
+</div>
+<p>We can then identify the expressions for the mixed wedge product explicitely in
+terms of tensor products:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{alignedat}{8}
+(∂_t ∧ ∂_x)^{♭♯} =&amp; + dt ⊗ ∂_x &amp;+&amp; dx ⊗ ∂_t &amp;\qquad&amp; (∂_x ∧ ∂_t)^{♭♯} =&amp; - dx ⊗ ∂_t &amp;-&amp; dt ⊗ ∂_x \\
+(∂_t ∧ ∂_y)^{♭♯} =&amp; + dt ⊗ ∂_y &amp;+&amp; dy ⊗ ∂_t &amp;\qquad&amp; (∂_y ∧ ∂_t)^{♭♯} =&amp; - dy ⊗ ∂_t &amp;-&amp; dt ⊗ ∂_y \\
+(∂_t ∧ ∂_z)^{♭♯} =&amp; + dt ⊗ ∂_z &amp;+&amp; dz ⊗ ∂_t &amp;\qquad&amp; (∂_z ∧ ∂_t)^{♭♯} =&amp; - dz ⊗ ∂_t &amp;-&amp; dt ⊗ ∂_z \\
+(∂_y ∧ ∂_z)^{♭♯} =&amp; - dy ⊗ ∂_z &amp;+&amp; dz ⊗ ∂_y &amp;\qquad&amp; (∂_z ∧ ∂_y)^{♭♯} =&amp; - dz ⊗ ∂_y &amp;+&amp; dy ⊗ ∂_z \\
+(∂_z ∧ ∂_x)^{♭♯} =&amp; - dz ⊗ ∂_x &amp;+&amp; dx ⊗ ∂_z &amp;\qquad&amp; (∂_x ∧ ∂_z)^{♭♯} =&amp; - dx ⊗ ∂_z &amp;+&amp; dz ⊗ ∂_x \\
+(∂_x ∧ ∂_y)^{♭♯} =&amp; - dx ⊗ ∂_y &amp;+&amp; dy ⊗ ∂_x &amp;\qquad&amp; (∂_y ∧ ∂_x)^{♭♯} =&amp; - dy ⊗ ∂_x &amp;+&amp; dx ⊗ ∂_y \\
+\end{alignedat}\end{split}\]</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Calculations</p>
+<p class="rubric">Expand exterior products to their tensor expressions</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{alignedat}{7}
+(∂_t ∧ ∂_x)^{♭♯} =&amp; (∂_t ⊗ ∂_x &amp;-&amp; ∂_x ⊗ ∂_t)^{♭♯} &amp;\qquad&amp; (∂_x ∧ ∂_t)^{♭♯} &amp;=&amp; (∂_x ⊗ ∂_t &amp;-&amp; ∂_t ⊗ ∂_x)^{♭♯} \\
+(∂_t ∧ ∂_y)^{♭♯} =&amp; (∂_t ⊗ ∂_y &amp;-&amp; ∂_y ⊗ ∂_t)^{♭♯} &amp;\qquad&amp; (∂_y ∧ ∂_t)^{♭♯} &amp;=&amp; (∂_y ⊗ ∂_t &amp;-&amp; ∂_t ⊗ ∂_y)^{♭♯} \\
+(∂_t ∧ ∂_z)^{♭♯} =&amp; (∂_t ⊗ ∂_z &amp;-&amp; ∂_z ⊗ ∂_t)^{♭♯} &amp;\qquad&amp; (∂_z ∧ ∂_t)^{♭♯} &amp;=&amp; (∂_z ⊗ ∂_t &amp;-&amp; ∂_t ⊗ ∂_z)^{♭♯} \\
+(∂_y ∧ ∂_z)^{♭♯} =&amp; (∂_y ⊗ ∂_z &amp;-&amp; ∂_z ⊗ ∂_y)^{♭♯} &amp;\qquad&amp; (∂_z ∧ ∂_y)^{♭♯} &amp;=&amp; (∂_z ⊗ ∂_y &amp;-&amp; ∂_y ⊗ ∂_z)^{♭♯} \\
+(∂_z ∧ ∂_x)^{♭♯} =&amp; (∂_z ⊗ ∂_x &amp;-&amp; ∂_x ⊗ ∂_z)^{♭♯} &amp;\qquad&amp; (∂_x ∧ ∂_z)^{♭♯} &amp;=&amp; (∂_x ⊗ ∂_z &amp;-&amp; ∂_z ⊗ ∂_x)^{♭♯} \\
+(∂_x ∧ ∂_y)^{♭♯} =&amp; (∂_x ⊗ ∂_y &amp;-&amp; ∂_y ⊗ ∂_x)^{♭♯} &amp;\qquad&amp; (∂_y ∧ ∂_x)^{♭♯} &amp;=&amp; (∂_y ⊗ ∂_x &amp;-&amp; ∂_x ⊗ ∂_y)^{♭♯} \\
+\end{alignedat}\end{split}\]</div>
+<p class="rubric">Distribute musical operators</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{alignedat}{7}
+(∂_t ∧ ∂_x)^{♭♯} =&amp; ∂_t^♭ ⊗ ∂_x^♯ - ∂_x^♭ ⊗ ∂_t^♯ &amp;\qquad&amp; (∂_x ∧ ∂_t)^{♭♯} &amp;=&amp; ∂_x^♭ ⊗ ∂_t^♯ - ∂_t^♭ ⊗ ∂_x^♯ \\
+(∂_t ∧ ∂_y)^{♭♯} =&amp; ∂_t^♭ ⊗ ∂_y^♯ - ∂_y^♭ ⊗ ∂_t^♯ &amp;\qquad&amp; (∂_y ∧ ∂_t)^{♭♯} &amp;=&amp; ∂_y^♭ ⊗ ∂_t^♯ - ∂_t^♭ ⊗ ∂_y^♯ \\
+(∂_t ∧ ∂_z)^{♭♯} =&amp; ∂_t^♭ ⊗ ∂_z^♯ - ∂_z^♭ ⊗ ∂_t^♯ &amp;\qquad&amp; (∂_z ∧ ∂_t)^{♭♯} &amp;=&amp; ∂_z^♭ ⊗ ∂_t^♯ - ∂_t^♭ ⊗ ∂_z^♯ \\
+(∂_y ∧ ∂_z)^{♭♯} =&amp; ∂_y^♭ ⊗ ∂_z^♯ - ∂_z^♭ ⊗ ∂_y^♯ &amp;\qquad&amp; (∂_z ∧ ∂_y)^{♭♯} &amp;=&amp; ∂_z^♭ ⊗ ∂_y^♯ - ∂_y^♭ ⊗ ∂_z^♯ \\
+(∂_z ∧ ∂_x)^{♭♯} =&amp; ∂_z^♭ ⊗ ∂_x^♯ - ∂_x^♭ ⊗ ∂_z^♯ &amp;\qquad&amp; (∂_x ∧ ∂_z)^{♭♯} &amp;=&amp; ∂_x^♭ ⊗ ∂_z^♯ - ∂_z^♭ ⊗ ∂_x^♯ \\
+(∂_x ∧ ∂_y)^{♭♯} =&amp; ∂_x^♭ ⊗ ∂_y^♯ - ∂_y^♭ ⊗ ∂_x^♯ &amp;\qquad&amp; (∂_y ∧ ∂_x)^{♭♯} &amp;=&amp; ∂_y^♭ ⊗ ∂_x^♯ - ∂_x^♭ ⊗ ∂_y^♯ \\
+\end{alignedat}\end{split}\]</div>
+<p class="rubric">Apply musical operators</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{alignedat}{7}
+(∂_t ∧ ∂_x)^{♭♯} &amp;= η_{tγ} dx^γ ⊗ ∂_x - η_{xγ} dx^γ ⊗ ∂_t &amp;\qquad&amp; (∂_x ∧ ∂_t)^{♭♯} &amp;=&amp; η_{xγ} dx^γ ⊗ ∂_t - η_{tγ} dx^γ ⊗ ∂_x \\
+(∂_t ∧ ∂_y)^{♭♯} &amp;= η_{tγ} dx^γ ⊗ ∂_y - η_{yγ} dx^γ ⊗ ∂_t &amp;\qquad&amp; (∂_y ∧ ∂_t)^{♭♯} &amp;=&amp; η_{yγ} dx^γ ⊗ ∂_t - η_{tγ} dx^γ ⊗ ∂_y \\
+(∂_t ∧ ∂_z)^{♭♯} &amp;= η_{tγ} dx^γ ⊗ ∂_z - η_{zγ} dx^γ ⊗ ∂_t &amp;\qquad&amp; (∂_z ∧ ∂_t)^{♭♯} &amp;=&amp; η_{zγ} dx^γ ⊗ ∂_t - η_{tγ} dx^γ ⊗ ∂_z \\
+(∂_y ∧ ∂_z)^{♭♯} &amp;= η_{yγ} dx^γ ⊗ ∂_z - η_{zγ} dx^γ ⊗ ∂_y &amp;\qquad&amp; (∂_z ∧ ∂_y)^{♭♯} &amp;=&amp; η_{zγ} dx^γ ⊗ ∂_y - η_{yγ} dx^γ ⊗ ∂_z \\
+(∂_z ∧ ∂_x)^{♭♯} &amp;= η_{zγ} dx^γ ⊗ ∂_x - η_{xγ} dx^γ ⊗ ∂_z &amp;\qquad&amp; (∂_x ∧ ∂_z)^{♭♯} &amp;=&amp; η_{xγ} dx^γ ⊗ ∂_z - η_{zγ} dx^γ ⊗ ∂_x \\
+(∂_x ∧ ∂_y)^{♭♯} &amp;= η_{xγ} dx^γ ⊗ ∂_y - η_{yγ} dx^γ ⊗ ∂_x &amp;\qquad&amp; (∂_y ∧ ∂_x)^{♭♯} &amp;=&amp; η_{yγ} dx^γ ⊗ ∂_x - η_{xγ} dx^γ ⊗ ∂_y \\
+\end{alignedat}\end{split}\]</div>
+<p class="rubric">Identify non-zero metric elements</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{alignedat}{7}
+(∂_t ∧ ∂_x)^{♭♯} &amp;= η_{tt} dx^t ⊗ ∂_x - η_{xx} dx^x ⊗ ∂_t &amp;\qquad&amp; (∂_x ∧ ∂_t)^{♭♯} &amp;=&amp; η_{xx} dx^x ⊗ ∂_t - η_{tt} dx^t ⊗ ∂_x \\
+(∂_t ∧ ∂_y)^{♭♯} &amp;= η_{tt} dx^t ⊗ ∂_y - η_{yy} dx^y ⊗ ∂_t &amp;\qquad&amp; (∂_y ∧ ∂_t)^{♭♯} &amp;=&amp; η_{yy} dx^y ⊗ ∂_t - η_{tt} dx^t ⊗ ∂_y \\
+(∂_t ∧ ∂_z)^{♭♯} &amp;= η_{tt} dx^t ⊗ ∂_z - η_{zz} dx^z ⊗ ∂_t &amp;\qquad&amp; (∂_z ∧ ∂_t)^{♭♯} &amp;=&amp; η_{zz} dx^z ⊗ ∂_t - η_{tt} dx^t ⊗ ∂_z \\
+(∂_y ∧ ∂_z)^{♭♯} &amp;= η_{yy} dx^y ⊗ ∂_z - η_{zz} dx^z ⊗ ∂_y &amp;\qquad&amp; (∂_z ∧ ∂_y)^{♭♯} &amp;=&amp; η_{zz} dx^z ⊗ ∂_y - η_{yy} dx^y ⊗ ∂_z \\
+(∂_z ∧ ∂_x)^{♭♯} &amp;= η_{zz} dx^z ⊗ ∂_x - η_{xx} dx^x ⊗ ∂_z &amp;\qquad&amp; (∂_x ∧ ∂_z)^{♭♯} &amp;=&amp; η_{xx} dx^x ⊗ ∂_z - η_{zz} dx^z ⊗ ∂_x \\
+(∂_x ∧ ∂_y)^{♭♯} &amp;= η_{xx} dx^x ⊗ ∂_y - η_{yy} dx^y ⊗ ∂_x &amp;\qquad&amp; (∂_y ∧ ∂_x)^{♭♯} &amp;=&amp; η_{yy} dx^y ⊗ ∂_x - η_{xx} dx^x ⊗ ∂_y \\
+\end{alignedat}\end{split}\]</div>
+<p class="rubric">Apply numerical values</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{alignedat}{6}
+(∂_t ∧ ∂_x)^{♭♯} &amp; = + dt ⊗ ∂_x &amp; + dx ⊗ ∂_t &amp; \qquad &amp; (∂_x ∧ ∂_t)^{♭♯} &amp; = &amp; - dx ⊗ ∂_t &amp;-&amp; dt ⊗ ∂_x \\
+(∂_t ∧ ∂_y)^{♭♯} &amp; = + dt ⊗ ∂_y &amp; + dy ⊗ ∂_t &amp; \qquad &amp; (∂_y ∧ ∂_t)^{♭♯} &amp; = &amp; - dy ⊗ ∂_t &amp;-&amp; dt ⊗ ∂_y \\
+(∂_t ∧ ∂_z)^{♭♯} &amp; = + dt ⊗ ∂_z &amp; + dz ⊗ ∂_t &amp; \qquad &amp; (∂_z ∧ ∂_t)^{♭♯} &amp; = &amp; - dz ⊗ ∂_t &amp;-&amp; dt ⊗ ∂_z \\
+(∂_y ∧ ∂_z)^{♭♯} &amp; = - dy ⊗ ∂_z &amp; + dz ⊗ ∂_y &amp; \qquad &amp; (∂_z ∧ ∂_y)^{♭♯} &amp; = &amp; - dz ⊗ ∂_y &amp;+&amp; dy ⊗ ∂_z \\
+(∂_z ∧ ∂_x)^{♭♯} &amp; = - dz ⊗ ∂_x &amp; + dx ⊗ ∂_z &amp; \qquad &amp; (∂_x ∧ ∂_z)^{♭♯} &amp; = &amp; - dx ⊗ ∂_z &amp;+&amp; dz ⊗ ∂_x \\
+(∂_x ∧ ∂_y)^{♭♯} &amp; = - dx ⊗ ∂_y &amp; + dy ⊗ ∂_x &amp; \qquad &amp; (∂_y ∧ ∂_x)^{♭♯} &amp; = &amp; - dy ⊗ ∂_x &amp;+&amp; dx ⊗ ∂_y \\
+\end{alignedat}\end{split}\]</div>
+</div>
+<p>We can then identify the expressions for the mixed wedge product explicitely in
+terms of tensor products:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{alignedat}{9}
+dt ∧ ∂_x = &amp; + dt ⊗ ∂_x &amp; + &amp; dx ⊗ ∂_t &amp; \qquad &amp; dx ∧ ∂_t &amp; = &amp; + dt ⊗ ∂_x &amp; + &amp; dx ⊗ ∂_t \\
+dt ∧ ∂_y = &amp; + dt ⊗ ∂_y &amp; + &amp; dy ⊗ ∂_t &amp; \qquad &amp; dy ∧ ∂_t &amp; = &amp; + dt ⊗ ∂_y &amp; + &amp; dy ⊗ ∂_t \\
+dt ∧ ∂_z = &amp; + dt ⊗ ∂_z &amp; + &amp; dz ⊗ ∂_t &amp; \qquad &amp; dz ∧ ∂_t &amp; = &amp; + dt ⊗ ∂_z &amp; + &amp; dz ⊗ ∂_t \\
+dy ∧ ∂_z = &amp; + dy ⊗ ∂_z &amp; - &amp; dz ⊗ ∂_y &amp; \qquad &amp; dz ∧ ∂_y &amp; = &amp; - dy ⊗ ∂_z &amp; + &amp; dz ⊗ ∂_y \\
+dz ∧ ∂_x = &amp; + dz ⊗ ∂_x &amp; - &amp; dx ⊗ ∂_z &amp; \qquad &amp; dx ∧ ∂_z &amp; = &amp; - dz ⊗ ∂_x &amp; + &amp; dx ⊗ ∂_z \\
+dx ∧ ∂_y = &amp; + dx ⊗ ∂_y &amp; - &amp; dy ⊗ ∂_x &amp; \qquad &amp; dy ∧ ∂_x &amp; = &amp; - dx ⊗ ∂_y &amp; + &amp; dy ⊗ ∂_x \\
+\end{alignedat}\end{split}\]</div>
+<p>Taken together, we get:</p>
+<aside class="topic" id="symmetries-of-the-flat-sharp-mixed-exterior-product">
+<p class="topic-title">Symmetries of the <span class="math notranslate nohighlight">\(♭♯\)</span> mixed exterior product</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Symmetry</p></th>
+<th class="head"><p>Basis elements</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Symetric</p></td>
+<td><p><span class="math notranslate nohighlight">\(dt ∧ ∂_x = + dx ∧ ∂_t\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Symetric</p></td>
+<td><p><span class="math notranslate nohighlight">\(dt ∧ ∂_y = + dy ∧ ∂_t\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Symetric</p></td>
+<td><p><span class="math notranslate nohighlight">\(dt ∧ ∂_z = + dz ∧ ∂_t\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Antisymetric</p></td>
+<td><p><span class="math notranslate nohighlight">\(dy ∧ ∂_z = - dz ∧ ∂_y\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Antisymetric</p></td>
+<td><p><span class="math notranslate nohighlight">\(dz ∧ ∂_x = - dx ∧ ∂_z\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Antisymetric</p></td>
+<td><p><span class="math notranslate nohighlight">\(dx ∧ ∂_y = - dy ∧ ∂_x\)</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</aside>
+</section>
+<section id="id5">
+<h2>Symmetries of Rotations in <span class="math notranslate nohighlight">\(♯♭\)</span> Form<a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
+<p>The calculations in this section repeat the calculations of the previous
+sections. The results servers as a test with respect to the former calculations
+as the results should be fully consistent. We show this is indeed the case. We
+apply the <span class="math notranslate nohighlight">\(♯♭\)</span> operators to flatten the second index of each basis
+bivectors and obtain:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{alignedat}{5}
+(∂_t ∧ ∂_x)^{♯♭} &amp; = - ∂_t ∧ dx &amp; \qquad &amp; (∂_x ∧ ∂_t)^{♯♭} &amp; = &amp; + ∂_x ∧ dt \\
+(∂_t ∧ ∂_y)^{♯♭} &amp; = - ∂_t ∧ dy &amp; \qquad &amp; (∂_y ∧ ∂_t)^{♯♭} &amp; = &amp; + ∂_y ∧ dt \\
+(∂_t ∧ ∂_z)^{♯♭} &amp; = - ∂_t ∧ dz &amp; \qquad &amp; (∂_z ∧ ∂_t)^{♯♭} &amp; = &amp; + ∂_z ∧ dt \\
+(∂_y ∧ ∂_z)^{♯♭} &amp; = - ∂_y ∧ dz &amp; \qquad &amp; (∂_z ∧ ∂_y)^{♯♭} &amp; = &amp; - ∂_z ∧ dy \\
+(∂_z ∧ ∂_x)^{♯♭} &amp; = - ∂_z ∧ dx &amp; \qquad &amp; (∂_x ∧ ∂_z)^{♯♭} &amp; = &amp; - ∂_x ∧ dz \\
+(∂_x ∧ ∂_y)^{♯♭} &amp; = - ∂_x ∧ dy &amp; \qquad &amp; (∂_y ∧ ∂_x)^{♯♭} &amp; = &amp; - ∂_y ∧ dx \\
+\end{alignedat}\end{split}\]</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Calculations</p>
+<p class="rubric">Distribute the musical operators</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{alignedat}{5}
+(∂_t ∧ ∂_x)^{♯♭} &amp;= ∂_t^♯ ∧ ∂_x^♭ &amp;\qquad&amp; (∂_x ∧ ∂_t)^{♯♭} &amp;=&amp; ∂_x^♯ ∧ ∂_t^♭ \\
+(∂_t ∧ ∂_y)^{♯♭} &amp;= ∂_t^♯ ∧ ∂_y^♭ &amp;\qquad&amp; (∂_y ∧ ∂_t)^{♯♭} &amp;=&amp; ∂_y^♯ ∧ ∂_t^♭ \\
+(∂_t ∧ ∂_z)^{♯♭} &amp;= ∂_t^♯ ∧ ∂_z^♭ &amp;\qquad&amp; (∂_z ∧ ∂_t)^{♯♭} &amp;=&amp; ∂_z^♯ ∧ ∂_t^♭ \\
+(∂_y ∧ ∂_z)^{♯♭} &amp;= ∂_y^♯ ∧ ∂_z^♭ &amp;\qquad&amp; (∂_z ∧ ∂_y)^{♯♭} &amp;=&amp; ∂_z^♯ ∧ ∂_y^♭ \\
+(∂_z ∧ ∂_x)^{♯♭} &amp;= ∂_z^♯ ∧ ∂_x^♭ &amp;\qquad&amp; (∂_x ∧ ∂_z)^{♯♭} &amp;=&amp; ∂_x^♯ ∧ ∂_z^♭ \\
+(∂_x ∧ ∂_y)^{♯♭} &amp;= ∂_x^♯ ∧ ∂_y^♭ &amp;\qquad&amp; (∂_y ∧ ∂_x)^{♯♭} &amp;=&amp; ∂_y^♯ ∧ ∂_x^♭ \\
+\end{alignedat}\end{split}\]</div>
+<p class="rubric">Apply the musical operators</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{alignedat}{5}
+(∂_t ∧ ∂_x)^{♯♭} &amp;= ∂_t ∧ η_{xγ} dx^γ &amp;\qquad&amp; (∂_x ∧ ∂_t)^{♯♭} &amp;=&amp; ∂_x ∧ η_{γt} dx^γ \\
+(∂_t ∧ ∂_y)^{♯♭} &amp;= ∂_t ∧ η_{yγ} dx^γ &amp;\qquad&amp; (∂_y ∧ ∂_t)^{♯♭} &amp;=&amp; ∂_y ∧ η_{γt} dx^γ \\
+(∂_t ∧ ∂_z)^{♯♭} &amp;= ∂_t ∧ η_{zγ} dx^γ &amp;\qquad&amp; (∂_z ∧ ∂_t)^{♯♭} &amp;=&amp; ∂_z ∧ η_{γt} dx^γ \\
+(∂_y ∧ ∂_z)^{♯♭} &amp;= ∂_y ∧ η_{zγ} dx^γ &amp;\qquad&amp; (∂_z ∧ ∂_y)^{♯♭} &amp;=&amp; ∂_z ∧ η_{γy} dx^γ \\
+(∂_z ∧ ∂_x)^{♯♭} &amp;= ∂_z ∧ η_{xγ} dx^γ &amp;\qquad&amp; (∂_x ∧ ∂_z)^{♯♭} &amp;=&amp; ∂_x ∧ η_{γz} dx^γ \\
+(∂_x ∧ ∂_y)^{♯♭} &amp;= ∂_x ∧ η_{yγ} dx^γ &amp;\qquad&amp; (∂_y ∧ ∂_x)^{♯♭} &amp;=&amp; ∂_y ∧ η_{γx} dx^γ \\
+\end{alignedat}\end{split}\]</div>
+<p class="rubric">Identify the non-zero metric components:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{alignedat}{5}
+(∂_t ∧ ∂_x)^{♯♭} &amp;= η_{xx} ∂_t ∧ dx^x &amp;\qquad&amp; (∂_x ∧ ∂_t)^{♯♭} &amp;=&amp; ∂_x ∧ η_{tt} dx^t \\
+(∂_t ∧ ∂_y)^{♯♭} &amp;= η_{yy} ∂_t ∧ dx^y &amp;\qquad&amp; (∂_y ∧ ∂_t)^{♯♭} &amp;=&amp; ∂_y ∧ η_{tt} dx^t \\
+(∂_t ∧ ∂_z)^{♯♭} &amp;= η_{zz} ∂_t ∧ dx^z &amp;\qquad&amp; (∂_z ∧ ∂_t)^{♯♭} &amp;=&amp; ∂_z ∧ η_{tt} dx^t \\
+(∂_y ∧ ∂_z)^{♯♭} &amp;= η_{zz} ∂_y ∧ dx^z &amp;\qquad&amp; (∂_z ∧ ∂_y)^{♯♭} &amp;=&amp; ∂_z ∧ η_{yy} dx^y \\
+(∂_z ∧ ∂_x)^{♯♭} &amp;= η_{xx} ∂_z ∧ dx^x &amp;\qquad&amp; (∂_x ∧ ∂_z)^{♯♭} &amp;=&amp; ∂_x ∧ η_{zz} dx^z \\
+(∂_x ∧ ∂_y)^{♯♭} &amp;= η_{yy} ∂_x ∧ dx^y &amp;\qquad&amp; (∂_y ∧ ∂_x)^{♯♭} &amp;=&amp; ∂_y ∧ η_{xx} dx^x \\
+\end{alignedat}\end{split}\]</div>
+<p class="rubric">Simplify</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{alignedat}{5}
+(∂_t ∧ ∂_x)^{♯♭} &amp;= η_{xx} ∂_t ∧ dx &amp;\qquad&amp; (∂_x ∧ ∂_t)^{♯♭} &amp;=&amp; η_{tt} ∂_x ∧ dt \\
+(∂_t ∧ ∂_y)^{♯♭} &amp;= η_{yy} ∂_t ∧ dy &amp;\qquad&amp; (∂_y ∧ ∂_t)^{♯♭} &amp;=&amp; η_{tt} ∂_y ∧ dt \\
+(∂_t ∧ ∂_z)^{♯♭} &amp;= η_{zz} ∂_t ∧ dz &amp;\qquad&amp; (∂_z ∧ ∂_t)^{♯♭} &amp;=&amp; η_{tt} ∂_z ∧ dt \\
+(∂_y ∧ ∂_z)^{♯♭} &amp;= η_{zz} ∂_y ∧ dz &amp;\qquad&amp; (∂_z ∧ ∂_y)^{♯♭} &amp;=&amp; η_{yy} ∂_z ∧ dy \\
+(∂_z ∧ ∂_x)^{♯♭} &amp;= η_{xx} ∂_z ∧ dx &amp;\qquad&amp; (∂_x ∧ ∂_z)^{♯♭} &amp;=&amp; η_{zz} ∂_x ∧ dz \\
+(∂_x ∧ ∂_y)^{♯♭} &amp;= η_{yy} ∂_x ∧ dy &amp;\qquad&amp; (∂_y ∧ ∂_x)^{♯♭} &amp;=&amp; η_{xx} ∂_y ∧ dx \\
+\end{alignedat}\end{split}\]</div>
+<p class="rubric">Apply numerical values:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{alignedat}{5}
+(∂_t ∧ ∂_x)^{♯♭} &amp; = - ∂_t ∧ dx &amp; \qquad &amp; (∂_x ∧ ∂_t)^{♯♭} &amp; = &amp; + ∂_x ∧ dt \\
+(∂_t ∧ ∂_y)^{♯♭} &amp; = - ∂_t ∧ dy &amp; \qquad &amp; (∂_y ∧ ∂_t)^{♯♭} &amp; = &amp; + ∂_y ∧ dt \\
+(∂_t ∧ ∂_z)^{♯♭} &amp; = - ∂_t ∧ dz &amp; \qquad &amp; (∂_z ∧ ∂_t)^{♯♭} &amp; = &amp; + ∂_z ∧ dt \\
+(∂_y ∧ ∂_z)^{♯♭} &amp; = - ∂_y ∧ dz &amp; \qquad &amp; (∂_z ∧ ∂_y)^{♯♭} &amp; = &amp; - ∂_z ∧ dy \\
+(∂_z ∧ ∂_x)^{♯♭} &amp; = - ∂_z ∧ dx &amp; \qquad &amp; (∂_x ∧ ∂_z)^{♯♭} &amp; = &amp; - ∂_x ∧ dz \\
+(∂_x ∧ ∂_y)^{♯♭} &amp; = - ∂_x ∧ dy &amp; \qquad &amp; (∂_y ∧ ∂_x)^{♯♭} &amp; = &amp; - ∂_y ∧ dx \\
+\end{alignedat}\end{split}\]</div>
+</div>
+<p>We can then identify the expressions for the mixed wedge product explicitely in
+terms of tensor products:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{alignedat}{5}
+(∂_t ∧ ∂_x)^{♯♭} &amp; = - ∂_t ⊗ dx - ∂_x ⊗ dt &amp; \qquad &amp; (∂_x ∧ ∂_t)^{♯♭} &amp; = &amp; + ∂_x ⊗ dt + ∂_t ⊗ dx \\
+(∂_t ∧ ∂_y)^{♯♭} &amp; = - ∂_t ⊗ dy - ∂_y ⊗ dt &amp; \qquad &amp; (∂_y ∧ ∂_t)^{♯♭} &amp; = &amp; + ∂_y ⊗ dt + ∂_t ⊗ dy \\
+(∂_t ∧ ∂_z)^{♯♭} &amp; = - ∂_t ⊗ dz - ∂_z ⊗ dt &amp; \qquad &amp; (∂_z ∧ ∂_t)^{♯♭} &amp; = &amp; + ∂_z ⊗ dt + ∂_t ⊗ dz \\
+(∂_y ∧ ∂_z)^{♯♭} &amp; = - ∂_y ⊗ dz + ∂_z ⊗ dy &amp; \qquad &amp; (∂_z ∧ ∂_y)^{♯♭} &amp; = &amp; - ∂_z ⊗ dy + ∂_y ⊗ dz \\
+(∂_z ∧ ∂_x)^{♯♭} &amp; = - ∂_z ⊗ dx + ∂_x ⊗ dz &amp; \qquad &amp; (∂_x ∧ ∂_z)^{♯♭} &amp; = &amp; - ∂_x ⊗ dz + ∂_z ⊗ dx \\
+(∂_x ∧ ∂_y)^{♯♭} &amp; = - ∂_x ⊗ dy + ∂_y ⊗ dx &amp; \qquad &amp; (∂_y ∧ ∂_x)^{♯♭} &amp; = &amp; - ∂_y ⊗ dx + ∂_x ⊗ dy \\
+\end{alignedat}\end{split}\]</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Calculations</p>
+<p class="rubric">Expand in terms of tensor product</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{alignedat}{5}
+(∂_t ∧ ∂_x)^{♯♭} &amp;= (∂_t ⊗ ∂_x - ∂_x ⊗ ∂_t)^{♯♭} &amp;\qquad&amp; (∂_x ∧ ∂_t)^{♯♭} &amp;=&amp; (∂_x ⊗ ∂_t - ∂_t ⊗ ∂_x)^{♯♭} \\
+(∂_t ∧ ∂_y)^{♯♭} &amp;= (∂_t ⊗ ∂_y - ∂_y ⊗ ∂_t)^{♯♭} &amp;\qquad&amp; (∂_y ∧ ∂_t)^{♯♭} &amp;=&amp; (∂_y ⊗ ∂_t - ∂_t ⊗ ∂_y)^{♯♭} \\
+(∂_t ∧ ∂_z)^{♯♭} &amp;= (∂_t ⊗ ∂_z - ∂_z ⊗ ∂_t)^{♯♭} &amp;\qquad&amp; (∂_z ∧ ∂_t)^{♯♭} &amp;=&amp; (∂_z ⊗ ∂_t - ∂_t ⊗ ∂_z)^{♯♭} \\
+(∂_y ∧ ∂_z)^{♯♭} &amp;= (∂_y ⊗ ∂_z - ∂_z ⊗ ∂_y)^{♯♭} &amp;\qquad&amp; (∂_z ∧ ∂_y)^{♯♭} &amp;=&amp; (∂_z ⊗ ∂_y - ∂_y ⊗ ∂_z)^{♯♭} \\
+(∂_z ∧ ∂_x)^{♯♭} &amp;= (∂_z ⊗ ∂_x - ∂_x ⊗ ∂_z)^{♯♭} &amp;\qquad&amp; (∂_x ∧ ∂_z)^{♯♭} &amp;=&amp; (∂_x ⊗ ∂_z - ∂_z ⊗ ∂_x)^{♯♭} \\
+(∂_x ∧ ∂_y)^{♯♭} &amp;= (∂_x ⊗ ∂_y - ∂_y ⊗ ∂_x)^{♯♭} &amp;\qquad&amp; (∂_y ∧ ∂_x)^{♯♭} &amp;=&amp; (∂_y ⊗ ∂_x - ∂_x ⊗ ∂_y)^{♯♭} \\
+\end{alignedat}\end{split}\]</div>
+<p class="rubric">Distribute the musical operators</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{alignedat}{5}
+(∂_t ∧ ∂_x)^{♯♭} &amp;= ∂_t^♯ ⊗ ∂_x^♭ - ∂_x^♯ ⊗ ∂_t^♭ &amp;\qquad&amp; (∂_x ∧ ∂_t)^{♯♭} &amp;=&amp; ∂_x^♯ ⊗ ∂_t^♭ - ∂_t^♯ ⊗ ∂_x^♭ \\
+(∂_t ∧ ∂_y)^{♯♭} &amp;= ∂_t^♯ ⊗ ∂_y^♭ - ∂_y^♯ ⊗ ∂_t^♭ &amp;\qquad&amp; (∂_y ∧ ∂_t)^{♯♭} &amp;=&amp; ∂_y^♯ ⊗ ∂_t^♭ - ∂_t^♯ ⊗ ∂_y^♭ \\
+(∂_t ∧ ∂_z)^{♯♭} &amp;= ∂_t^♯ ⊗ ∂_z^♭ - ∂_z^♯ ⊗ ∂_t^♭ &amp;\qquad&amp; (∂_z ∧ ∂_t)^{♯♭} &amp;=&amp; ∂_z^♯ ⊗ ∂_t^♭ - ∂_t^♯ ⊗ ∂_z^♭ \\
+(∂_y ∧ ∂_z)^{♯♭} &amp;= ∂_y^♯ ⊗ ∂_z^♭ - ∂_z^♯ ⊗ ∂_y^♭ &amp;\qquad&amp; (∂_z ∧ ∂_y)^{♯♭} &amp;=&amp; ∂_z^♯ ⊗ ∂_y^♭ - ∂_y^♯ ⊗ ∂_z^♭ \\
+(∂_z ∧ ∂_x)^{♯♭} &amp;= ∂_z^♯ ⊗ ∂_x^♭ - ∂_x^♯ ⊗ ∂_z^♭ &amp;\qquad&amp; (∂_x ∧ ∂_z)^{♯♭} &amp;=&amp; ∂_x^♯ ⊗ ∂_z^♭ - ∂_z^♯ ⊗ ∂_x^♭ \\
+(∂_x ∧ ∂_y)^{♯♭} &amp;= ∂_x^♯ ⊗ ∂_y^♭ - ∂_y^♯ ⊗ ∂_x^♭ &amp;\qquad&amp; (∂_y ∧ ∂_x)^{♯♭} &amp;=&amp; ∂_y^♯ ⊗ ∂_x^♭ - ∂_x^♯ ⊗ ∂_y^♭ \\
+\end{alignedat}\end{split}\]</div>
+<p class="rubric">Apply musical operators</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{alignedat}{5}
+(∂_t ∧ ∂_x)^{♯♭} &amp;= ∂_t ⊗ η_{xγ} dx^γ - η_{tγ} ∂_x ⊗ dx^γ &amp;\qquad&amp; (∂_x ∧ ∂_t)^{♯♭} &amp;=&amp; ∂_x ⊗ η_{γt} dx^γ - ∂_t ⊗ η_{γx} dx^γ \\
+(∂_t ∧ ∂_y)^{♯♭} &amp;= ∂_t ⊗ η_{yγ} dx^γ - η_{tγ} ∂_y ⊗ dx^γ &amp;\qquad&amp; (∂_y ∧ ∂_t)^{♯♭} &amp;=&amp; ∂_y ⊗ η_{γt} dx^γ - ∂_t ⊗ η_{γy} dx^γ \\
+(∂_t ∧ ∂_z)^{♯♭} &amp;= ∂_t ⊗ η_{zγ} dx^γ - η_{tγ} ∂_z ⊗ dx^γ &amp;\qquad&amp; (∂_z ∧ ∂_t)^{♯♭} &amp;=&amp; ∂_z ⊗ η_{γt} dx^γ - ∂_t ⊗ η_{γz} dx^γ \\
+(∂_y ∧ ∂_z)^{♯♭} &amp;= ∂_y ⊗ η_{zγ} dx^γ - η_{yγ} ∂_z ⊗ dx^γ &amp;\qquad&amp; (∂_z ∧ ∂_y)^{♯♭} &amp;=&amp; ∂_z ⊗ η_{γy} dx^γ - ∂_y ⊗ η_{γz} dx^γ \\
+(∂_z ∧ ∂_x)^{♯♭} &amp;= ∂_z ⊗ η_{xγ} dx^γ - η_{zγ} ∂_x ⊗ dx^γ &amp;\qquad&amp; (∂_x ∧ ∂_z)^{♯♭} &amp;=&amp; ∂_x ⊗ η_{γz} dx^γ - ∂_z ⊗ η_{γx} dx^γ \\
+(∂_x ∧ ∂_y)^{♯♭} &amp;= ∂_x ⊗ η_{yγ} dx^γ - η_{xγ} ∂_y ⊗ dx^γ &amp;\qquad&amp; (∂_y ∧ ∂_x)^{♯♭} &amp;=&amp; ∂_y ⊗ η_{γx} dx^γ - ∂_x ⊗ η_{γy} dx^γ \\
+\end{alignedat}\end{split}\]</div>
+<p class="rubric">Identify the non-zero components</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{alignedat}{5}
+(∂_t ∧ ∂_x)^{♯♭} &amp;= ∂_t ⊗ η_{xx} dx - ∂_x ⊗ η_{tt} dt &amp;\qquad&amp; (∂_x ∧ ∂_t)^{♯♭} &amp;=&amp; ∂_x ⊗ η_{tt} dt - ∂_t ⊗ η_{xx} dx \\
+(∂_t ∧ ∂_y)^{♯♭} &amp;= ∂_t ⊗ η_{yy} dy - ∂_y ⊗ η_{tt} dt &amp;\qquad&amp; (∂_y ∧ ∂_t)^{♯♭} &amp;=&amp; ∂_y ⊗ η_{tt} dt - ∂_t ⊗ η_{yy} dy \\
+(∂_t ∧ ∂_z)^{♯♭} &amp;= ∂_t ⊗ η_{zz} dz - ∂_z ⊗ η_{tt} dt &amp;\qquad&amp; (∂_z ∧ ∂_t)^{♯♭} &amp;=&amp; ∂_z ⊗ η_{tt} dt - ∂_t ⊗ η_{zz} dz \\
+(∂_y ∧ ∂_z)^{♯♭} &amp;= ∂_y ⊗ η_{zz} dz - ∂_z ⊗ η_{yy} dy &amp;\qquad&amp; (∂_z ∧ ∂_y)^{♯♭} &amp;=&amp; ∂_z ⊗ η_{yy} dy - ∂_y ⊗ η_{zz} dz \\
+(∂_z ∧ ∂_x)^{♯♭} &amp;= ∂_z ⊗ η_{xx} dx - ∂_x ⊗ η_{zz} dz &amp;\qquad&amp; (∂_x ∧ ∂_z)^{♯♭} &amp;=&amp; ∂_x ⊗ η_{zz} dz - ∂_z ⊗ η_{xx} dx \\
+(∂_x ∧ ∂_y)^{♯♭} &amp;= ∂_x ⊗ η_{yy} dy - ∂_y ⊗ η_{xx} dx &amp;\qquad&amp; (∂_y ∧ ∂_x)^{♯♭} &amp;=&amp; ∂_y ⊗ η_{xx} dx - ∂_x ⊗ η_{yy} dy \\
+\end{alignedat}\end{split}\]</div>
+<p class="rubric">Apply numerical values</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{alignedat}{5}
+(∂_t ∧ ∂_x)^{♯♭} &amp;= - ∂_t ⊗ dx - ∂_x ⊗ dt &amp;\qquad&amp; (∂_x ∧ ∂_t)^{♯♭} &amp;=&amp; + ∂_x ⊗ dt + ∂_t ⊗ dx \\
+(∂_t ∧ ∂_y)^{♯♭} &amp;= - ∂_t ⊗ dy - ∂_y ⊗ dt &amp;\qquad&amp; (∂_y ∧ ∂_t)^{♯♭} &amp;=&amp; + ∂_y ⊗ dt + ∂_t ⊗ dy \\
+(∂_t ∧ ∂_z)^{♯♭} &amp;= - ∂_t ⊗ dz - ∂_z ⊗ dt &amp;\qquad&amp; (∂_z ∧ ∂_t)^{♯♭} &amp;=&amp; + ∂_z ⊗ dt + ∂_t ⊗ dz \\
+(∂_y ∧ ∂_z)^{♯♭} &amp;= - ∂_y ⊗ dz + ∂_z ⊗ dy &amp;\qquad&amp; (∂_z ∧ ∂_y)^{♯♭} &amp;=&amp; - ∂_z ⊗ dy + ∂_y ⊗ dz \\
+(∂_z ∧ ∂_x)^{♯♭} &amp;= - ∂_z ⊗ dx + ∂_x ⊗ dz &amp;\qquad&amp; (∂_x ∧ ∂_z)^{♯♭} &amp;=&amp; - ∂_x ⊗ dz + ∂_z ⊗ dx \\
+(∂_x ∧ ∂_y)^{♯♭} &amp;= - ∂_x ⊗ dy + ∂_y ⊗ dx &amp;\qquad&amp; (∂_y ∧ ∂_x)^{♯♭} &amp;=&amp; - ∂_y ⊗ dx + ∂_x ⊗ dy \\
+\end{alignedat}\end{split}\]</div>
+</div>
+<p>We can then identify the expressions for the mixed wedge product explicitely in
+terms of tensor products:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{alignedat}{4}
+∂_t ∧ dx &amp; = + ∂_t ⊗ dx + ∂_x ⊗ dt &amp; \qquad &amp; ∂_x ∧ dt &amp; = + ∂_x ⊗ dt + ∂_t ⊗ dx \\
+∂_t ∧ dy &amp; = + ∂_t ⊗ dy + ∂_y ⊗ dt &amp; \qquad &amp; ∂_y ∧ dt &amp; = + ∂_y ⊗ dt + ∂_t ⊗ dy \\
+∂_t ∧ dz &amp; = + ∂_t ⊗ dz + ∂_z ⊗ dt &amp; \qquad &amp; ∂_z ∧ dt &amp; = + ∂_z ⊗ dt + ∂_t ⊗ dz \\
+∂_y ∧ dz &amp; = + ∂_y ⊗ dz - ∂_z ⊗ dy &amp; \qquad &amp; ∂_z ∧ dy &amp; = + ∂_z ⊗ dy - ∂_y ⊗ dz \\
+∂_z ∧ dx &amp; = + ∂_z ⊗ dx - ∂_x ⊗ dz &amp; \qquad &amp; ∂_x ∧ dz &amp; = + ∂_x ⊗ dz - ∂_z ⊗ dx \\
+∂_x ∧ dy &amp; = + ∂_x ⊗ dy - ∂_y ⊗ dx &amp; \qquad &amp; ∂_y ∧ dx &amp; = + ∂_y ⊗ dx - ∂_x ⊗ dy \\
+\end{alignedat}\end{split}\]</div>
+<p>Taken together, we get the result consistent with the symmetries obtained for
+the <span class="math notranslate nohighlight">\(♭♯\)</span>, thus strongly suggesting the results regarding the symmetries of
+the mixeed exterior product are correct.</p>
+<aside class="topic">
+<p class="topic-title">Symmetries of the <span class="math notranslate nohighlight">\(♯♭\)</span> Mixed Exterior Product</p>
+<div class="pst-scrollable-table-container"><table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Symmetry</p></th>
+<th class="head"><p>Basis elements</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Symetric</p></td>
+<td><p><span class="math notranslate nohighlight">\(∂_t ∧ dx = + ∂_x ∧ dt\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Symetric</p></td>
+<td><p><span class="math notranslate nohighlight">\(∂_t ∧ dy = + ∂_y ∧ dt\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Symetric</p></td>
+<td><p><span class="math notranslate nohighlight">\(∂_t ∧ dz = + ∂_z ∧ dt\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Antisymetric</p></td>
+<td><p><span class="math notranslate nohighlight">\(∂_y ∧ dz = - ∂_z ∧ dy\)</span></p></td>
+</tr>
+<tr class="row-even"><td><p>Antisymetric</p></td>
+<td><p><span class="math notranslate nohighlight">\(∂_z ∧ dx = - ∂_x ∧ dz\)</span></p></td>
+</tr>
+<tr class="row-odd"><td><p>Antisymetric</p></td>
+<td><p><span class="math notranslate nohighlight">\(∂_x ∧ dy = - ∂_y ∧ dx\)</span></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</aside>
+</section>
+<section id="mathfrak-so-1-3-lie-algebra-of-the-lorentz-group">
+<h2><span class="math notranslate nohighlight">\(\mathfrak{so}(1,3)\)</span> Lie Algebra of the Lorentz Group<a class="headerlink" href="#mathfrak-so-1-3-lie-algebra-of-the-lorentz-group" title="Link to this heading">#</a></h2>
+<p>Matrices are organized in column of vectors and therefore type <span class="math notranslate nohighlight">\(♯♭\)</span>
+tensors, written <span class="math notranslate nohighlight">\(M_μ{}^ν\)</span> in abstract index notation. The objects can
+take vectors <span class="math notranslate nohighlight">\(v^ν\)</span> as input and output transformed vectors <span class="math notranslate nohighlight">\(M_γ{}^ν
+\: v^γ\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}M = \begin{pmatrix}
+\vdots &amp; \vdots &amp; \vdots &amp; \vdots \\
+v_0^ν &amp; v_1^ν &amp; v_2^ν &amp; v_3^{ν}   \\
+\vdots &amp; \vdots &amp; \vdots &amp; \vdots \\
+\end{pmatrix}\end{split}\]</div>
+<p>The type <span class="math notranslate nohighlight">\(♯♭\)</span> row/column matrix representation of rotations is:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}R^{♭♯} = \frac{1}{2} \begin{bmatrix}
+                    &amp; + a \; dx^t ∧ ∂_x &amp; + b \; dx^t ∧ ∂_y &amp; + c \; dx^t ∧ ∂_z \\
+  + a \; dx^x ∧ ∂_t &amp;                   &amp; + f \; dx^x ∧ ∂_y &amp; - e \; dx^x ∧ ∂_z \\
+  + b \; dx^y ∧ ∂_t &amp; - f \; dx^y ∧ ∂_x &amp;                   &amp; + d \; dx^y ∧ ∂_z \\
+  + c \; dx^z ∧ ∂_t &amp; + e \; dx^z ∧ ∂_x &amp; - d \; dx^z ∧ ∂_y &amp;                   \\
+\end{bmatrix}\end{split}\]</div>
+<p>Taking out the basis bivectors from <a class="reference internal" href="../the_cartan_hodge_formalism/the_free_matrix_representation.html#id1"><span class="std std-ref">The Free Matrix Representation</span></a>, we
+trivially obtain the representation of the <a class="reference external" href="https://en.m.wikipedia.org/wiki/Lorentz_group#Lie_algebra">Lorentz group</a>, as well as the
+interpretation as a rotation in spacetime:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}R^{♭♯} = \frac{1}{2} \begin{bmatrix}
+        &amp; + a &amp; + b &amp; + c \\
+    + a &amp;     &amp; + f &amp; - e \\
+    + b &amp; - f &amp;     &amp; + d \\
+    + c &amp; + e &amp; - d &amp;     \\
+\end{bmatrix}\end{split}\]</div>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="rotations_in_3_dimensions.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Rotations in 3 Dimensions</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="../differential_operators/index.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Differential Operators in Differential Form</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-rotation-tensor">The <span class="math notranslate nohighlight">\(♯♯\)</span> Rotation Tensor</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">The <span class="math notranslate nohighlight">\(♭♭\)</span> Rotation Tensor</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">The <span class="math notranslate nohighlight">\(♭♯\)</span> Rotation Tensor</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">The <span class="math notranslate nohighlight">\(♯♭\)</span> Rotation Tensor</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#symmetries-of-rotations-in-form">Symmetries of Rotations in <span class="math notranslate nohighlight">\(♭♯\)</span> Form</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">Symmetries of Rotations in <span class="math notranslate nohighlight">\(♯♭\)</span> Form</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mathfrak-so-1-3-lie-algebra-of-the-lorentz-group"><span class="math notranslate nohighlight">\(\mathfrak{so}(1,3)\)</span> Lie Algebra of the Lorentz Group</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Stéphane Haussler
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024, Stéphane Haussler.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="../_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
