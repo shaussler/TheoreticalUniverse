@@ -374,8 +374,8 @@ d'Alembertian
 
 .. _the_laplace_de_rham_operator:
 
-The Laplace-De Rham Operator
-----------------------------
+Laplace-De Rham Operator
+------------------------
 
 .. {{{
 
@@ -401,8 +401,8 @@ the parity therefore :math:`(1)⨯(1)⨯(1)=1`. The codifferential is then:
 
    .. math:: dδ + δd = d ⋆ d ⋆ + (-1)^k ⋆ d ⋆ d
 
-In Minkowski space with :math:`n=4`, the metric signature is :math:`(+,-,-,-)`
-and the parity therefore :math:`(+1)⨯(-1)⨯(-1)⨯(-1)=-1`. The codifferential is
+In Minkowski space we have 4 dimensions :math:`n=4`, the metric signature is :math:`(+,-,-,-)`,
+and the parity :math:`(+1)⨯(-1)⨯(-1)⨯(-1)=-1`. The codifferential is
 then:
 
 .. math::
@@ -412,43 +412,8 @@ then:
      & = (-1)^{4(k+1)+2}      ⋆ d ⋆ \\
      & =                      ⋆ d ⋆ \\
 
-.. topic:: Laplace-De Rham Operator in Minkowski Space
+.. topic:: Laplace-De Rham
 
    .. math:: dδ + δd = d ⋆ d ⋆ + ⋆ d ⋆ d
 
 .. }}}
-
-.. 3-Forms
-.. -------
-.. 
-.. .. warning:: Under Construction
-.. 
-.. .. math::
-.. 
-..    d ⋆ d ⋆ + ⋆ d ⋆ d F3
-..    &= d ⋆ d ⋆ + ⋆ d ⋆ d \begin{bmatrix}
-..    -a \; dx ∧ dy ∧ dz \\
-..    +b \; dt ∧ dy ∧ dz \\
-..    +c \; dt ∧ dz ∧ dx \\
-..    +d \; dt ∧ dx ∧ dy \\
-..    \end{bmatrix} \\
-.. 
-.. .. math::
-.. 
-..    \begin{bmatrix}
-..              & + ∂_x^2 a & + ∂_y^2 a & + ∂_z^2 a & + ∂_x ∂_t b & + ∂_y ∂_t c & + ∂_z ∂_t d & dx∧dy∧dz \\
-..    + ∂_t^2 b &           & - ∂_y^2 b & - ∂_z^2 b & + ∂_x ∂_t a & + ∂_y ∂_x c & + ∂_z ∂_x d & dt∧dy∧dz \\
-..    + ∂_t^2 c & - ∂_x^2 c &           & - ∂_z^2 c & + ∂_y ∂_t a & + ∂_y ∂_x b & + ∂_z ∂_y d & dt∧dz∧dx \\
-..    + ∂_t^2 d & - ∂_x^2 d & - ∂_y^2 d &           & + ∂_z ∂_t a & + ∂_z ∂_x b & + ∂_z ∂_y c & dt∧dx∧dy \\
-..    \end{bmatrix}
-.. 
-.. .. math::
-.. 
-..    \begin{bmatrix}
-..              & + ∂_x^2 a & + ∂_y^2 a & + ∂_z^2 a & + ∂_t ∂_x b & + ∂_t ∂_y c & + ∂_t ∂_z d & dx∧dy∧dz \\
-..    + ∂_t^2 b &           & - ∂_y^2 b & - ∂_z^2 b & + ∂_t ∂_x a & + ∂_x ∂_y c & + ∂_x ∂_z d & dt∧dy∧dz \\
-..    + ∂_t^2 c & - ∂_x^2 c &           & - ∂_z^2 c & + ∂_t ∂_y a & + ∂_x ∂_y b & + ∂_y ∂_z d & dt∧dz∧dx \\
-..    + ∂_t^2 d & - ∂_x^2 d & - ∂_y^2 d &           & + ∂_t ∂_z a & + ∂_x ∂_z b & + ∂_y ∂_z c & dt∧dx∧dy \\
-..    \end{bmatrix}
-
-

@@ -53,7 +53,15 @@ call plug#begin('~/.vim/plugged')
 Plug 'marshallward/vim-restructuredtext'
 Plug 'habamax/vim-rst'
 
+" Linting with ALE
+Plug 'dense-analysis/ale'
+
 call plug#end()
+
+let g:ale_linters = {'python': ['flake8']}
+let g:ale_fixers = {'python': ['autopep8']}
+let g:ale_python_flake8_executable = 'flake8'
+let g:ale_fix_on_save = 1
 
 " Set custom fold markers
 " -----------------------
@@ -103,6 +111,7 @@ imap \phi       φ
 imap \chi       χ
 imap \psi       ψ
 imap \omega     ω
+imap \Pi        Π
 imap \Delta     Δ
 imap \Lambda    Λ
 imap \nabla     ∇

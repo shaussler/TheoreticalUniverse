@@ -19,6 +19,7 @@ Differential Operators in Differential Form
 
    differential_operators.rst
    the_exterior_derivative_of_rotations.rst
+   the_exterior_derivative_of_translations.rst
 
 The following pages systematically explore the application of the exterior
 derivative in both Euclidean space and Minkowski spacetime. Traditional

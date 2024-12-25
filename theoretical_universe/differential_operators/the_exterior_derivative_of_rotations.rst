@@ -6,8 +6,8 @@
 
 .. _The Exterior Derivative of Rotations in Spacetime:
 
-The Exterior Derivative of Rotations in Spacetime
-=================================================
+Exterior Derivative of Rotations in Spacetime
+=============================================
 
 .. rst-class:: custom-author
 
@@ -270,13 +270,13 @@ obtain:
    .. math::
 
       ⋆ (dR^{♭♭}) = \left[ \begin{alignedat}{5}
-        (&         & - ∂_x d & - ∂_y e & - ∂_z f &\:) \; dt \\
-        (& - ∂_t d &         & - ∂_y c & + ∂_z b &\:) \; dx \\
-        (& - ∂_t e & + ∂_x c &         & - ∂_z a &\:) \; dy \\
-        (& - ∂_t f & - ∂_x b & + ∂_y a &         &\:) \; dz \\
+          (&         & - ∂_x d & - ∂_y e & - ∂_z f &\:) \; dt \\
+          (& - ∂_t d &         & - ∂_y c & + ∂_z b &\:) \; dx \\
+          (& - ∂_t e & + ∂_x c &         & - ∂_z a &\:) \; dy \\
+          (& - ∂_t f & - ∂_x b & + ∂_y a &         &\:) \; dz \\
       \end{alignedat} \right]
 
-.. admonition:: Calculation steps
+.. admonition:: Calculations
    :class: dropdown
 
    .. {{{
