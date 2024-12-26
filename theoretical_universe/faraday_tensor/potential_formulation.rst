@@ -4,10 +4,6 @@
 .. International License. You should have received a copy of the license along
 .. with this work. If not, see <https://creativecommons.org/licenses/by/4.0/>.
 
-.. _of_maxwell_equations_and_rotations:
-.. _Of Maxwell Equations and Rotations:
-.. _Maxwell's Equations via Differential Forms:
-
 Potential Formulation via Differential Forms
 ============================================
 
