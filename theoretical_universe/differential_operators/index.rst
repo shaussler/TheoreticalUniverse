@@ -73,13 +73,19 @@ results in wave equations.
 
    ⋆ f = - \; f \; dt ∧ dx ∧ dy ∧ dz
 
+----
+
 .. math::
 
    d f = ∂_t f dt + ∂_x f dx + ∂_y f dy + ∂_z f dz
 
+----
+
 .. math::
 
    d ⋆ f = 0
+
+----
 
 .. math::
 
@@ -90,13 +96,19 @@ results in wave equations.
        ∂_z f dt ∧ dx ∧ dy \\
    \end{aligned} \right]
 
+----
+
 .. math::
 
    ⋆ d ⋆ f = 0
 
+----
+
 .. math::
 
    d ⋆ d f = (∂_t^2 - ∂_x^2 - ∂_y^2 - ∂_z^2) \; f \; dz ∧ dt ∧ dx ∧ dy
+
+----
 
 .. rubric:: Exterior derivative of rotations in spacetime
 
@@ -117,6 +129,8 @@ results in wave equations.
      ( & - ∂_t f & - ∂_x b & + ∂_y a &         & \: ) \; dz \\
    \end{alignedat} \right]
 
+----
+
 .. math::
 
    d ⋆ \left[ \begin{aligned}
@@ -133,6 +147,8 @@ results in wave equations.
      ( & + ∂_t b &+ ∂_x f &         & - ∂_z d & \: ) \; dt ∧ dz ∧ dx \\
      ( & + ∂_t c &- ∂_x e & + ∂_y d &         & \: ) \; dt ∧ dx ∧ dy \\
    \end{alignedat} \right]
+
+----
 
 .. math::
 
