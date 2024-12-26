@@ -28,7 +28,7 @@ either open an issue, or directly submit corrections via a merge request to my
 GitHub repository: `Theoretical Universe
 <https://github.com/shaussler/TheoreticalUniverse/>`_.
 
-Spacetime Rotations
+Spacetime rotations
 -------------------
 
 .. {{{
@@ -51,7 +51,7 @@ decomposed into a linear combination of basis rotations within each plane:
 
 .. }}}
 
-Spacetime Rotations in Differential Forms
+Spacetime rotations in differential Forms
 -----------------------------------------
 
 .. {{{
@@ -265,7 +265,7 @@ The hodge dual is:
 
 .. }}}
 
-Exterior Derivative of a Rotation
+Exterior derivative of a rotation
 ---------------------------------
 
 .. {{{
@@ -389,7 +389,7 @@ obtain:
 
 .. }}}
 
-Exterior Derivative of the Hodge Dual of a Rotation
+Exterior derivative of the Hodge dual of a rotation
 ---------------------------------------------------
 
 .. {{{
@@ -410,7 +410,7 @@ R^{♭♭}`, we obtain:
         (& + ∂_t c & - ∂_x e & + ∂_y d &         &\:) \; dt ∧ dx ∧ dy \\
       \end{alignedat} \right]
 
-.. admonition:: Calculation steps
+.. admonition:: Calculations
    :class: dropdown
 
    .. {{{
@@ -504,7 +504,7 @@ R^{♭♭}`, we obtain:
 
 .. }}}
 
-Applying the Laplace-De Rham Operator
+Applying the Laplace-De Rham operator
 -------------------------------------
 
 .. {{{

@@ -18,8 +18,10 @@ Differential Operators in Differential Form
    :caption: Table of Contents:
 
    differential_operators.rst
+   the_exterior_derivative_of_functions.rst
    the_exterior_derivative_of_translations.rst
    the_exterior_derivative_of_rotations.rst
+   the_exterior_derivative_of_volume_forms.rst
 
 The following pages systematically explore the application of the exterior
 derivative in both Euclidean space and Minkowski spacetime. Traditional
@@ -30,8 +32,8 @@ central focus lies in the analysis of 2-forms, as the primary objective of this
 work is to highlight the profound connection between electromagnetism and
 rotations.
 
-Differential Operators
-----------------------
+Differential operators in Euclidean space
+-----------------------------------------
 
 All standard differential operators commonly encountered in vector calculus are
 expressed in the framework of differential forms, musicality, and Hodge duality:
@@ -52,8 +54,8 @@ expressed in the framework of differential forms, musicality, and Hodge duality:
 
 .. math:: ⋆ d ⋆ d f = \mathbf{∇}^2 f
 
-Rotations in Minkowski Spacetime
---------------------------------
+Differential operators in Minkowski Spacetime
+---------------------------------------------
 
 At the heart of this work lies the exploration of the exterior derivative
 applied to :ref:`rotations expressed in differential form <Rotations in
@@ -65,31 +67,72 @@ in the formulation of electromagnetism will readily recognize the Faraday
 tensor, its dual, and the Maxwell equations. The Laplace-De Rham operator
 results in wave equations.
 
-.. rubric:: Hodge Dual of the Exterior Derivative of Rotations in Differential
-   Form
+.. rubric:: Exterior derivative of functions in spacetime
 
 .. math::
 
-   ⋆ (dR^{♭♭}) = \left[ \begin{alignedat}{5}
+   ⋆ f = - \; f \; dt ∧ dx ∧ dy ∧ dz
+
+.. math::
+
+   d f = ∂_t f dt + ∂_x f dx + ∂_y f dy + ∂_z f dz
+
+.. math::
+
+   d ⋆ f = 0
+
+.. math::
+
+   ⋆ d f = \left[ \begin{aligned}
+       ∂_t f dx ∧ dy ∧ dz \\
+       ∂_x f dt ∧ dy ∧ dz \\
+       ∂_y f dt ∧ dz ∧ dx \\
+       ∂_z f dt ∧ dx ∧ dy \\
+   \end{aligned} \right]
+
+.. math::
+
+   ⋆ d ⋆ f = 0
+
+.. math::
+
+   d ⋆ d f = (∂_t^2 - ∂_x^2 - ∂_y^2 - ∂_z^2) \; f \; dz ∧ dt ∧ dx ∧ dy
+
+.. rubric:: Exterior derivative of rotations in spacetime
+
+.. math::
+
+   ⋆ d \left[ \begin{aligned}
+     - & a \; dt ∧ dx \\
+     - & b \; dt ∧ dy \\
+     - & c \; dt ∧ dz \\
+       & d \; dy ∧ dz \\
+       & e \; dz ∧ dx \\
+       & f \; dx ∧ dy \\
+   \end{aligned} \right]
+   = \left[ \begin{alignedat}{5}
      ( &         & - ∂_x d & - ∂_y e & - ∂_z f & \: ) \; dt \\
      ( & - ∂_t d &         & - ∂_y c & + ∂_z b & \: ) \; dx \\
      ( & - ∂_t e & + ∂_x c &         & - ∂_z a & \: ) \; dy \\
      ( & - ∂_t f & - ∂_x b & + ∂_y a &         & \: ) \; dz \\
    \end{alignedat} \right]
 
-.. rubric:: Exterior Derivative of the Hodge Dual of Rotations in Differential
-   Form
-
 .. math::
 
-   d( ⋆ R^{♭♭} ) = \left[ \begin{alignedat}{5}
+   d ⋆ \left[ \begin{aligned}
+     - & a \; dt ∧ dx \\
+     - & b \; dt ∧ dy \\
+     - & c \; dt ∧ dz \\
+       & d \; dy ∧ dz \\
+       & e \; dz ∧ dx \\
+       & f \; dx ∧ dy \\
+   \end{aligned} \right]
+   = \left[ \begin{alignedat}{5}
      ( &         &+ ∂_x a & + ∂_y b & + ∂_z c & \: ) \; dx ∧ dy ∧ dz \\
      ( & + ∂_t a &        & - ∂_y f & + ∂_z e & \: ) \; dt ∧ dy ∧ dz \\
      ( & + ∂_t b &+ ∂_x f &         & - ∂_z d & \: ) \; dt ∧ dz ∧ dx \\
      ( & + ∂_t c &- ∂_x e & + ∂_y d &         & \: ) \; dt ∧ dx ∧ dy \\
    \end{alignedat} \right]
-
-.. rubric:: Laplace-De Rham on Rotations in Differential Form
 
 .. math::
 

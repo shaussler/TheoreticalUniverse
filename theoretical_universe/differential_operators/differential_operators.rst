@@ -317,7 +317,6 @@ Where we have recovered the expression of the curl of a vector field:
        (∂_x F^y - ∂ F^x) \; ∂_z \\
    \end{bmatrix}
 
-
 .. }}}
 
 Laplacian
@@ -359,16 +358,6 @@ applied to the gradiant of a function :math:`\mathbf{∇} f`:
 
 Where the divergence is :math:`⋆ d ⋆` and the gradient of a function is
 :math:`df` brings the zero-form to a zero form.
-
-.. }}}
-
-
-d'Alembertian
--------------
-
-.. {{{
-
-.. warning:: Under construction
 
 .. }}}
 
