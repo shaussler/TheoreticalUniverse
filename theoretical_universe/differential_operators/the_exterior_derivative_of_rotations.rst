@@ -41,12 +41,12 @@ decomposed into a linear combination of basis rotations within each plane:
    .. math::
 
       R^{♯♯} = \begin{bmatrix}
-        a \; ∂_t ∧ ∂_x \\
-        b \; ∂_t ∧ ∂_y \\
-        c \; ∂_t ∧ ∂_z \\
-        d \; ∂_y ∧ ∂_z \\
-        e \; ∂_z ∧ ∂_x \\
-        f \; ∂_x ∧ ∂_y \\
+          a \; ∂_t ∧ ∂_x \\
+          b \; ∂_t ∧ ∂_y \\
+          c \; ∂_t ∧ ∂_z \\
+          d \; ∂_y ∧ ∂_z \\
+          e \; ∂_z ∧ ∂_x \\
+          f \; ∂_x ∧ ∂_y \\
       \end{bmatrix}
 
 .. }}}
@@ -66,12 +66,12 @@ differential 2-form representative of the rotation:
    .. math::
 
       R^{♭♭} = \left[ \begin{aligned}
-        - & a \; dt ∧ dx \\
-        - & b \; dt ∧ dy \\
-        - & c \; dt ∧ dz \\
-          & d \; dy ∧ dz \\
-          & e \; dz ∧ dx \\
-          & f \; dx ∧ dy \\
+          - & a \; dt ∧ dx \\
+          - & b \; dt ∧ dy \\
+          - & c \; dt ∧ dz \\
+            & d \; dy ∧ dz \\
+            & e \; dz ∧ dx \\
+            & f \; dx ∧ dy \\
       \end{aligned} \right]
 
 .. admonition:: All Calculation Steps
@@ -79,21 +79,24 @@ differential 2-form representative of the rotation:
 
    .. {{{
 
-   Apply the flat operator :math:`flat` to each components of the doubly
-   contravariant rotation tensor :math:`R^{♯♯}`:
+   .. rubric:: Flatten the rotation
 
    .. math:: R^{♭♭} = (R^{♯♯})^{♭♭}
 
-   Expand the full expression and distribute the flat operators :math:`♭`:
+   .. rubric:: Expand and distribute the flat operator
 
    .. math::
 
       R^{♭♭} = \begin{bmatrix}
-        a \; ∂_t^♭ ∧ ∂_x^♭ \\ b \; ∂_t^♭ ∧ ∂_y^♭ \\ c \; ∂_t^♭ ∧ ∂_z^♭ \\
-        d \; ∂_y^♭ ∧ ∂_z^♭ \\ e \; ∂_z^♭ ∧ ∂_x^♭ \\ f \; ∂_x^♭ ∧ ∂_y^♭ \\
+          a \; ∂_t^♭ ∧ ∂_x^♭ \\
+          b \; ∂_t^♭ ∧ ∂_y^♭ \\
+          c \; ∂_t^♭ ∧ ∂_z^♭ \\
+          d \; ∂_y^♭ ∧ ∂_z^♭ \\
+          e \; ∂_z^♭ ∧ ∂_x^♭ \\
+          f \; ∂_x^♭ ∧ ∂_y^♭ \\
       \end{bmatrix}
 
-   Expand with the Minkowski metric:
+   .. rubric:: Expand with the Minkowski metric
 
    .. math::
 
@@ -106,52 +109,59 @@ differential 2-form representative of the rotation:
         f \; η_{αx} \; dx^α ∧ η_{βy} \; dx^β \\
       \end{bmatrix}
 
-   The wedge product :math:`∧` is bilinear and the Minkowski metric components
+   The exterior product :math:`∧` is bilinear. The Minkowski metric components
    :math:`η`'s can be taken in front of the expression:
 
    .. math::
 
       R^{♭♭} = \begin{bmatrix}
-        a \; η_{αt} η_{βx} \; dx^α ∧ dx^β \\
-        b \; η_{αt} η_{βy} \; dx^α ∧ dx^β \\
-        c \; η_{αt} η_{βz} \; dx^α ∧ dx^β \\
-        d \; η_{αy} η_{βz} \; dx^α ∧ dx^β \\
-        e \; η_{αz} η_{βx} \; dx^α ∧ dx^β \\
-        f \; η_{αx} η_{βy} \; dx^α ∧ dx^β \\
+          a \; η_{αt} η_{βx} \; dx^α ∧ dx^β \\
+          b \; η_{αt} η_{βy} \; dx^α ∧ dx^β \\
+          c \; η_{αt} η_{βz} \; dx^α ∧ dx^β \\
+          d \; η_{αy} η_{βz} \; dx^α ∧ dx^β \\
+          e \; η_{αz} η_{βx} \; dx^α ∧ dx^β \\
+          f \; η_{αx} η_{βy} \; dx^α ∧ dx^β \\
       \end{bmatrix}
 
-   Identify the non-zero components of the Minkowski metric :math:`η_{μν}`:
+   .. rubric:: Identify the non-zero components of the Minkowski metric
 
    .. math::
 
       R^{♭♭} = \begin{bmatrix}
-        a \; η_{tt} η_{xx} \; dx^t ∧ dx^x \\
-        b \; η_{tt} η_{yy} \; dx^t ∧ dx^y \\
-        c \; η_{tt} η_{zz} \; dx^t ∧ dx^z \\
-        d \; η_{yy} η_{zz} \; dx^y ∧ dx^z \\
-        e \; η_{zz} η_{xx} \; dx^z ∧ dx^x \\
-        f \; η_{xx} η_{yy} \; dx^x ∧ dx^y \\
+          a \; η_{tt} η_{xx} \; dx^t ∧ dx^x \\
+          b \; η_{tt} η_{yy} \; dx^t ∧ dx^y \\
+          c \; η_{tt} η_{zz} \; dx^t ∧ dx^z \\
+          d \; η_{yy} η_{zz} \; dx^y ∧ dx^z \\
+          e \; η_{zz} η_{xx} \; dx^z ∧ dx^x \\
+          f \; η_{xx} η_{yy} \; dx^x ∧ dx^y \\
       \end{bmatrix}
+
+   .. rubric:: Rewrite
 
    For readability, replace the :math:`dx^μ` symbols by their explicit
    expressions:
 
-   .. math:: dx^t &= dt \\ dx^x &= dx \\ dx^y &= dy \\ dx^z &= dz
+   .. math::
+
+      dx^t &= dt \\
+      dx^x &= dx \\
+      dx^y &= dy \\
+      dx^z &= dz
 
    We obtain:
 
    .. math::
 
       R^{♭♭} = \begin{bmatrix}
-        a \; η_{tt} η_{xx} \; dt ∧ dx \\
-        b \; η_{tt} η_{yy} \; dt ∧ dy \\
-        c \; η_{tt} η_{zz} \; dt ∧ dz \\
-        d \; η_{yy} η_{zz} \; dy ∧ dz \\
-        e \; η_{zz} η_{xx} \; dz ∧ dx \\
-        f \; η_{xx} η_{yy} \; dx ∧ dy \\
+          a \; η_{tt} η_{xx} \; dt ∧ dx \\
+          b \; η_{tt} η_{yy} \; dt ∧ dy \\
+          c \; η_{tt} η_{zz} \; dt ∧ dz \\
+          d \; η_{yy} η_{zz} \; dy ∧ dz \\
+          e \; η_{zz} η_{xx} \; dz ∧ dx \\
+          f \; η_{xx} η_{yy} \; dx ∧ dy \\
       \end{bmatrix}
 
-   Apply the numerical values of the Minkowski metric components :math:`η_{μν}`:
+   .. rubric:: Apply the numerical values of the Minkowski metric components
 
    .. math::
 
@@ -164,17 +174,17 @@ differential 2-form representative of the rotation:
           f \; (-1) (-1) \; dx ∧ dy \\
       \end{bmatrix}
 
-   Conclude:
+   .. rubric:: Conclude
 
    .. math::
 
       R^{♭♭} = \left[ \begin{aligned}
-        - & a \; dt ∧ dx \\
-        - & b \; dt ∧ dy \\
-        - & c \; dt ∧ dz \\
-          & d \; dy ∧ dz \\
-          & e \; dz ∧ dx \\
-          & f \; dx ∧ dy \\
+          - & a \; dt ∧ dx \\
+          - & b \; dt ∧ dy \\
+          - & c \; dt ∧ dz \\
+            & d \; dy ∧ dz \\
+            & e \; dz ∧ dx \\
+            & f \; dx ∧ dy \\
       \end{aligned} \right]
 
    .. }}}
@@ -298,40 +308,40 @@ obtain:
 
    .. math::
 
-      dR^{♭♭} = \begin{bmatrix}
-                                &                         & ∂_y (-a)\; dy ∧ dt ∧ dx & ∂_z (-a)\; dz ∧ dt ∧ dx \\
-                                & ∂_x (-b)\; dx ∧ dt ∧ dy &                         & ∂_z (-b)\; dz ∧ dt ∧ dy \\
-                                & ∂_x (-c)\; dx ∧ dt ∧ dz & ∂_y (-c)\; dy ∧ dt ∧ dz &                         \\
-        ∂_t (+d)\; dt ∧ dy ∧ dz & ∂_x (+d)\; dx ∧ dy ∧ dz &                         &                         \\
-        ∂_t (+e)\; dt ∧ dz ∧ dx &                         & ∂_y (+e)\; dy ∧ dz ∧ dx &                         \\
-        ∂_t (+f)\; dt ∧ dx ∧ dy &                         &                         & ∂_z (+f)\; dz ∧ dx ∧ dy \\
-      \end{bmatrix}
+      dR^{♭♭} = \left[ \begin{alignedat}{3}
+          ∂_y (-a) \; & dy ∧ dt ∧ dx & + & ∂_z (-a) \; & dz ∧ dt ∧ dx \\
+          ∂_x (-b) \; & dx ∧ dt ∧ dy & + & ∂_z (-b) \; & dz ∧ dt ∧ dy \\
+          ∂_x (-c) \; & dx ∧ dt ∧ dz & + & ∂_y (-c) \; & dy ∧ dt ∧ dz \\
+          ∂_t (+d) \; & dt ∧ dy ∧ dz & + & ∂_x (+d) \; & dx ∧ dy ∧ dz \\
+          ∂_t (+e) \; & dt ∧ dz ∧ dx & + & ∂_y (+e) \; & dy ∧ dz ∧ dx \\
+          ∂_t (+f) \; & dt ∧ dx ∧ dy & + & ∂_z (+f) \; & dz ∧ dx ∧ dy \\
+      \end{alignedat} \right]
 
-   .. rubric:: Reorder exterior products, flipping the sign for every odd permutations
+   .. rubric:: Reorder exterior products
 
    .. math::
 
-      dR^{♭♭} = \begin{bmatrix}
-                                 &                         & ∂_y (-a)(+1)\; dt∧dx∧dy & ∂_z (-a)(-1)\; dt∧dz∧dx \\
-                                 & ∂_x (-b)(-1)\; dt∧dx∧dy &                         & ∂_z (-b)(+1)\; dt∧dy∧dz \\
-                                 & ∂_x (-c)(+1)\; dt∧dz∧dx & ∂_y (-c)(-1)\; dt∧dy∧dz &                         \\
-        ∂_t (+d)(+1)\; dt∧dy∧ dz & ∂_x (+d)(+1)\; dx∧dy∧dz &                         &                         \\
-        ∂_t (+e)(+1)\; dt∧dz∧ dx &                         & ∂_y (+e)(+1)\; dx∧dy∧dz &                         \\
-        ∂_t (+f)(+1)\; dt∧dx∧ dy &                         &                         & ∂_z (+f)(+1)\; dx∧dy∧dz \\
-      \end{bmatrix}
+      dR^{♭♭} = \left[ \begin{alignedat}{3}
+          ∂_y (-a)(+1) \; & dt ∧ dx ∧ dy & + & ∂_z (-a)(-1) \; & dt ∧ dz ∧ dx \\
+          ∂_x (-b)(-1) \; & dt ∧ dx ∧ dy & + & ∂_z (-b)(+1) \; & dt ∧ dy ∧ dz \\
+          ∂_x (-c)(+1) \; & dt ∧ dz ∧ dx & + & ∂_y (-c)(-1) \; & dt ∧ dy ∧ dz \\
+          ∂_t (+d)(+1) \; & dt ∧ dy ∧ dz & + & ∂_x (+d)(+1) \; & dx ∧ dy ∧ dz \\
+          ∂_t (+e)(+1) \; & dt ∧ dz ∧ dx & + & ∂_y (+e)(+1) \; & dx ∧ dy ∧ dz \\
+          ∂_t (+f)(+1) \; & dt ∧ dx ∧ dy & + & ∂_z (+f)(+1) \; & dx ∧ dy ∧ dz \\
+      \end{alignedat} \right]
 
    .. rubric:: Simplify
 
    .. math::
 
-      dR^{♭♭} = \begin{bmatrix}
-                               &                         & ∂_y (-a)\; dt ∧ dx ∧ dy & ∂_z (+a)\; dt ∧ dz ∧ dx \\
-                               & ∂_x (+b)\; dt ∧ dx ∧ dy &                         & ∂_z (-b)\; dt ∧ dy ∧ dz \\
-                               & ∂_x (-c)\; dt ∧ dz ∧ dx & ∂_y (+c)\; dt ∧ dy ∧ dz &                         \\
-        ∂_t (+d)\; dt ∧ dy∧ dz & ∂_x (+d)\; dx ∧ dy ∧ dz &                         &                         \\
-        ∂_t (+e)\; dt ∧ dz∧ dx &                         & ∂_y (+e)\; dx ∧ dy ∧ dz &                         \\
-        ∂_t (+f)\; dt ∧ dx∧ dy &                         &                         & ∂_z (+f)\; dx ∧ dy ∧ dz \\
-      \end{bmatrix}
+      dR^{♭♭} = \left[ \begin{alignedat}{3}
+          ∂_y (-a) \; & dt ∧ dx ∧ dy & + & ∂_z (+a) \; & dt ∧ dz ∧ dx \\
+          ∂_x (+b) \; & dt ∧ dx ∧ dy & + & ∂_z (-b) \; & dt ∧ dy ∧ dz \\
+          ∂_x (-c) \; & dt ∧ dz ∧ dx & + & ∂_y (+c) \; & dt ∧ dy ∧ dz \\
+          ∂_t (+d) \; & dt ∧ dy ∧ dz & + & ∂_x (+d) \; & dx ∧ dy ∧ dz \\
+          ∂_t (+e) \; & dt ∧ dz ∧ dx & + & ∂_y (+e) \; & dx ∧ dy ∧ dz \\
+          ∂_t (+f) \; & dt ∧ dx ∧ dy & + & ∂_z (+f) \; & dx ∧ dy ∧ dz \\
+      \end{alignedat} \right]
 
    .. rubric:: Organize the terms into a single column
 
@@ -410,12 +420,12 @@ R^{♭♭}`, we obtain:
    .. math::
 
       d(⋆R^{♭♭}) = d \begin{bmatrix}
-        a \; dy ∧ dz \\
-        b \; dz ∧ dx \\
-        c \; dx ∧ dy \\
-        d \; dt ∧ dx \\
-        e \; dt ∧ dy \\
-        f \; dt ∧ dz \\
+          a \; dy ∧ dz \\
+          b \; dz ∧ dx \\
+          c \; dx ∧ dy \\
+          d \; dt ∧ dx \\
+          e \; dt ∧ dy \\
+          f \; dt ∧ dz \\
       \end{bmatrix}
 
    .. rubric:: Distribute the exterior derivative
@@ -423,52 +433,52 @@ R^{♭♭}`, we obtain:
    .. math::
 
       d(⋆R^{♭♭}) = \begin{bmatrix}
-        d(a \; dy ∧ dz) \\
-        d(b \; dz ∧ dx) \\
-        d(c \; dx ∧ dy) \\
-        d(d \; dt ∧ dx) \\
-        d(e \; dt ∧ dy) \\
-        d(f \; dt ∧ dz) \\
+          d(a \; dy ∧ dz) \\
+          d(b \; dz ∧ dx) \\
+          d(c \; dx ∧ dy) \\
+          d(d \; dt ∧ dx) \\
+          d(e \; dt ∧ dy) \\
+          d(f \; dt ∧ dz) \\
       \end{bmatrix}
 
    .. rubric:: Apply
 
    .. math::
 
-      d(⋆R^{♭♭}) = \begin{bmatrix}
-        ∂_t (+a)\; dt ∧ dy ∧ dz) & ∂_x (+a)\; dx ∧ dy ∧ dz &                         &                         \\
-        ∂_t (+b)\; dt ∧ dz ∧ dx) &                         & ∂_y (+b)\; dy ∧ dz ∧ dx &                         \\
-        ∂_t (+c)\; dt ∧ dx ∧ dy) &                         &                         & ∂_z (+c)\; dz ∧ dx ∧ dy \\
-                                 &                         & ∂_y (+d)\; dy ∧ dt ∧ dx & ∂_z (+d)\; dz ∧ dt ∧ dx \\
-                                 & ∂_x (+e)\; dx ∧ dt ∧ dy &                         & ∂_z (+e)\; dz ∧ dt ∧ dy \\
-                                 & ∂_x (+f)\; dx ∧ dt ∧ dz & ∂_y (+f)\; dy ∧ dt ∧ dz &                         \\
-      \end{bmatrix}
+      d(⋆R^{♭♭}) = \left[ \begin{alignedat}{5}
+          ∂_t (+a) \; & dt ∧ dy ∧ dz & + & ∂_x (+a) \; & dx ∧ dy ∧ dz \\
+          ∂_t (+b) \; & dt ∧ dz ∧ dx & + & ∂_y (+b) \; & dy ∧ dz ∧ dx \\
+          ∂_t (+c) \; & dt ∧ dx ∧ dy & + & ∂_z (+c) \; & dz ∧ dx ∧ dy \\
+          ∂_y (+d) \; & dy ∧ dt ∧ dx & + & ∂_z (+d) \; & dz ∧ dt ∧ dx \\
+          ∂_x (+e) \; & dx ∧ dt ∧ dy & + & ∂_z (+e) \; & dz ∧ dt ∧ dy \\
+          ∂_x (+f) \; & dx ∧ dt ∧ dz & + & ∂_y (+f) \; & dy ∧ dt ∧ dz \\
+      \end{alignedat} \right]
 
-   .. rubric:: Reorder the 3-forms
+   .. rubric:: Reorder
 
    .. math::
 
-      d(⋆R^{♭♭}) = \begin{bmatrix}
-        ∂_t (+a)(+1)\; dt ∧ dy ∧ dz & ∂_x (+a)(+1)\; dx ∧ dy ∧ dz &                             &                             \\
-        ∂_t (+b)(+1)\; dt ∧ dz ∧ dx &                             & ∂_y (+b)(+1)\; dx ∧ dy ∧ dz &                             \\
-        ∂_t (+c)(+1)\; dt ∧ dx ∧ dy &                             &                             & ∂_z (+c)(+1)\; dx ∧ dy ∧ dz \\
-                                    &                             & ∂_y (+d)(+1)\; dt ∧ dx ∧ dy & ∂_z (+d)(-1)\; dt ∧ dz ∧ dx \\
-                                    & ∂_x (+e)(-1)\; dt ∧ dx ∧ dy &                             & ∂_z (+e)(+1)\; dt ∧ dy ∧ dz \\
-                                    & ∂_x (+f)(+1)\; dt ∧ dz ∧ dx & ∂_y (+f)(-1)\; dt ∧ dy ∧ dz &                             \\
-      \end{bmatrix}
+      d(⋆R^{♭♭}) = \left[ \begin{alignedat}{5}
+          ∂_t (+a)(+1) \; & dt ∧ dy ∧ dz & + & ∂_x (+a)(+1) \; & dx ∧ dy ∧ dz \\
+          ∂_t (+b)(+1) \; & dt ∧ dz ∧ dx & + & ∂_y (+b)(+1) \; & dx ∧ dy ∧ dz \\
+          ∂_t (+c)(+1) \; & dt ∧ dx ∧ dy & + & ∂_z (+c)(+1) \; & dx ∧ dy ∧ dz \\
+          ∂_y (+d)(+1) \; & dt ∧ dx ∧ dy & + & ∂_z (+d)(-1) \; & dt ∧ dz ∧ dx \\
+          ∂_x (+e)(-1) \; & dt ∧ dx ∧ dy & + & ∂_z (+e)(+1) \; & dt ∧ dy ∧ dz \\
+          ∂_x (+f)(+1) \; & dt ∧ dz ∧ dx & + & ∂_y (+f)(-1) \; & dt ∧ dy ∧ dz \\
+      \end{alignedat} \right]
 
    .. rubric:: Apply values
 
    .. math::
 
-      d(⋆R^{♭♭}) = \begin{bmatrix}
-        ∂_t (+a)\; dt ∧ dy ∧ dz & ∂_x (+a)\; dx ∧ dy ∧ dz &                         &                         \\
-        ∂_t (+b)\; dt ∧ dz ∧ dx &                         & ∂_y (+b)\; dx ∧ dy ∧ dz &                         \\
-        ∂_t (+c)\; dt ∧ dx ∧ dy &                         &                         & ∂_z (+c)\; dx ∧ dy ∧ dz \\
-                                &                         & ∂_y (+d)\; dt ∧ dx ∧ dy & ∂_z (-d)\; dt ∧ dz ∧ dx \\
-                                & ∂_x (-e)\; dt ∧ dx ∧ dy &                         & ∂_z (+e)\; dt ∧ dy ∧ dz \\
-                                & ∂_x (+f)\; dt ∧ dz ∧ dx & ∂_y (-f)\; dt ∧ dy ∧ dz &                         \\
-      \end{bmatrix}
+      d(⋆R^{♭♭}) = \left[ \begin{alignedat}{5}
+          ∂_t (+a) \; & dt ∧ dy ∧ dz & + & ∂_x (+a) \; & dx ∧ dy ∧ dz \\
+          ∂_t (+b) \; & dt ∧ dz ∧ dx & + & ∂_y (+b) \; & dx ∧ dy ∧ dz \\
+          ∂_t (+c) \; & dt ∧ dx ∧ dy & + & ∂_z (+c) \; & dx ∧ dy ∧ dz \\
+          ∂_y (+d) \; & dt ∧ dx ∧ dy & + & ∂_z (-d) \; & dt ∧ dz ∧ dx \\
+          ∂_x (-e) \; & dt ∧ dx ∧ dy & + & ∂_z (+e) \; & dt ∧ dy ∧ dz \\
+          ∂_x (+f) \; & dt ∧ dz ∧ dx & + & ∂_y (-f) \; & dt ∧ dy ∧ dz \\
+      \end{alignedat} \right]
 
    .. rubric:: Organize the terms into a single column
 
@@ -484,10 +494,10 @@ R^{♭♭}`, we obtain:
    .. math::
 
       d( ⋆ R^{♭♭} ) = \left[ \begin{alignedat}{5}
-        (&         & + ∂_x a & + ∂_y b & + ∂_z c &\:) \; dx ∧ dy ∧ dz \\
-        (& + ∂_t a &         & - ∂_y f & + ∂_z e &\:) \; dt ∧ dy ∧ dz \\
-        (& + ∂_t b & + ∂_x f &         & - ∂_z d &\:) \; dt ∧ dz ∧ dx \\
-        (& + ∂_t c & - ∂_x e & + ∂_y d &         &\:) \; dt ∧ dx ∧ dy \\
+          (&         & + ∂_x a & + ∂_y b & + ∂_z c & \: ) \; & dx ∧ dy ∧ dz \\
+          (& + ∂_t a &         & - ∂_y f & + ∂_z e & \: ) \; & dt ∧ dy ∧ dz \\
+          (& + ∂_t b & + ∂_x f &         & - ∂_z d & \: ) \; & dt ∧ dz ∧ dx \\
+          (& + ∂_t c & - ∂_x e & + ∂_y d &         & \: ) \; & dt ∧ dx ∧ dy \\
       \end{alignedat} \right]
 
    .. }}}
