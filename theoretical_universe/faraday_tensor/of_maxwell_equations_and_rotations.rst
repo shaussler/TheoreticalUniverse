@@ -232,7 +232,7 @@ A Single Equation
 
 With the explicit component form of the Cartan-Hodge formalism, it may now be
 obvious that since :math:`⋆\:d\:F` is a 1-form and :math:`d⋆F` a 3-form, we can
-unambiguously merge inhomogeneous and homogeneous equations [note1]_.
+unambiguously merge inhomogeneous and homogeneous equations [note2]_.
 
 .. math::
 
@@ -277,7 +277,7 @@ unambiguously merge inhomogeneous and homogeneous equations [note1]_.
 
 With a shorthand :math:`F^{♭♭}` for the electromagnetic field 2-form and
 :math:`J^{♭♭♭}` for the current 3-form, we conclude with the compact form
-[note2]_:
+[note3]_:
 
 .. topic:: Maxwell equations
 
@@ -328,7 +328,7 @@ Notes
 
 .. {{{
 
-.. [note1] An equation containing 3-forms and 2-forms indeed cannot be reduced.
+.. [note2] An equation containing 3-forms and 2-forms indeed cannot be reduced.
    For example, the following equation: :math:`a \; dx ∧ dy + b \; dx ∧ dy ∧ dz
    = c \; dx ∧ dy` cannot be simplified. Surface 2-forms and volume 3-forms are
    distinct objects, but they can be represented in the same equation using the
@@ -339,6 +339,6 @@ Notes
    0`. This is how we can write the Maxwell equations via differential forms
    into a single equation.
 
-.. [note2] Flipping the sign of :math:`⋆ d` is equally valid.
+.. [note3] Flipping the sign of :math:`⋆ d` is equally valid.
 
 .. }}}
