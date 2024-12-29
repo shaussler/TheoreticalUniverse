@@ -6,7 +6,7 @@
 
 .. _Rotations in Minkowski Space:
 
-Rotations in Minkowski Space
+Rotations in Minkowski space
 ============================
 
 .. rst-class:: custom-author
@@ -23,7 +23,7 @@ We work out the Lie algebra of the Lorentz group as well as the full matrix
 representation of rotations. The mixed wedge products are fully expressed in
 terms of tensor products and their symmetries highlighted.
 
-The :math:`♯♯` Rotation Tensor
+The :math:`♯♯` rotation tensor
 ------------------------------
 
 .. {{{
@@ -92,7 +92,7 @@ rewrite the rotation above utilizing a row/column matrix representation:
 
 .. }}}
 
-The :math:`♭♭` Rotation Tensor
+The :math:`♭♭` rotation tensor
 ------------------------------
 
 .. {{{
@@ -206,7 +206,7 @@ apply the flat operators :math:`♭♭` to each components :math:`R^{♭♭} =
 
 .. }}}
 
-The :math:`♭♯` Rotation Tensor
+The :math:`♭♯` rotation tensor
 ------------------------------
 
 .. {{{
@@ -335,7 +335,7 @@ demonstrated above, this results in:
 
 .. }}}
 
-The :math:`♯♭` Rotation Tensor
+The :math:`♯♭` rotation tensor
 ------------------------------
 
 .. {{{
@@ -476,7 +476,7 @@ results in:
 
 .. }}}
 
-Symmetries of Rotations in :math:`♭♯` Form
+Symmetries of rotations in :math:`♭♯` form
 ------------------------------------------
 
 .. {{{
@@ -683,7 +683,7 @@ Taken together, we get:
 
 .. }}}
 
-Symmetries of Rotations in :math:`♯♭` Form
+Symmetries of rotations in :math:`♯♭` form
 ------------------------------------------
 
 .. {{{
@@ -896,7 +896,7 @@ the mixeed exterior product are correct.
 
 .. }}}
 
-:math:`\mathfrak{so}(1,3)` Lie Algebra of the Lorentz Group
+:math:`\mathfrak{so}(1,3)` Lie algebra of the Lorentz group
 -----------------------------------------------------------
 
 .. {{{

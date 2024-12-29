@@ -6,8 +6,8 @@
 
 .. _The Exterior Derivative of Rotations in Spacetime:
 
-Exterior Derivative of Rotations in Spacetime
-=============================================
+Rotations in Minkowski space
+============================
 
 .. rst-class:: custom-author
 
@@ -28,56 +28,45 @@ either open an issue, or directly submit corrections via a merge request to my
 GitHub repository: `Theoretical Universe
 <https://github.com/shaussler/TheoreticalUniverse/>`_.
 
-Spacetime rotations
--------------------
+Rotations
+---------
 
 .. {{{
 
 Rotations in spacetime can occur in six independent planes. Any rotation can be
 decomposed into a linear combination of basis rotations within each plane:
 
-.. topic:: Rotation in Minkowski Space
+.. math::
 
-   .. math::
-
-      R^{♯♯} = \begin{bmatrix}
-          a \; ∂_t ∧ ∂_x \\
-          b \; ∂_t ∧ ∂_y \\
-          c \; ∂_t ∧ ∂_z \\
-          d \; ∂_y ∧ ∂_z \\
-          e \; ∂_z ∧ ∂_x \\
-          f \; ∂_x ∧ ∂_y \\
-      \end{bmatrix}
-
-.. }}}
-
-Spacetime rotations in differential Forms
------------------------------------------
-
-.. {{{
+   R^{♯♯} = \begin{bmatrix}
+       Q^x \; ∂_t ∧ ∂_x \\
+       Q^y \; ∂_t ∧ ∂_y \\
+       Q^z \; ∂_t ∧ ∂_z \\
+       R^x \; ∂_y ∧ ∂_z \\
+       R^y \; ∂_z ∧ ∂_x \\
+       R^z \; ∂_x ∧ ∂_y \\
+   \end{bmatrix}
 
 The generic rotation above is doubly contravariant, given in terms of the wedge
 product :math:`∧` of vectors corresponding to our physical understanding of
-space (and time). By fully flattening, we obtain the associated doubly covariant
-differential 2-form representative of the rotation:
+space (and time). By fully flattening, we obtain the associated doubly
+covariant differential 2-form representative of the rotation:
 
-.. topic:: Rotation in Differential Form
+.. math::
 
-   .. math::
+   R^{♭♭} = \left[ \begin{aligned}
+       - & Q^x \; dt ∧ dx \\
+       - & Q^y \; dt ∧ dy \\
+       - & Q^z \; dt ∧ dz \\
+         & R^x \; dy ∧ dz \\
+         & R^y \; dz ∧ dx \\
+         & R^z \; dx ∧ dy \\
+   \end{aligned} \right]
 
-      R^{♭♭} = \left[ \begin{aligned}
-          - & a \; dt ∧ dx \\
-          - & b \; dt ∧ dy \\
-          - & c \; dt ∧ dz \\
-            & d \; dy ∧ dz \\
-            & e \; dz ∧ dx \\
-            & f \; dx ∧ dy \\
-      \end{aligned} \right]
-
-.. admonition:: All Calculation Steps
+.. admonition:: Calculations
    :class: dropdown
 
-   .. {{{
+   .. {{{za
 
    .. rubric:: Flatten the rotation
 
@@ -88,12 +77,12 @@ differential 2-form representative of the rotation:
    .. math::
 
       R^{♭♭} = \begin{bmatrix}
-          a \; ∂_t^♭ ∧ ∂_x^♭ \\
-          b \; ∂_t^♭ ∧ ∂_y^♭ \\
-          c \; ∂_t^♭ ∧ ∂_z^♭ \\
-          d \; ∂_y^♭ ∧ ∂_z^♭ \\
-          e \; ∂_z^♭ ∧ ∂_x^♭ \\
-          f \; ∂_x^♭ ∧ ∂_y^♭ \\
+          Q^x \; ∂_t^♭ ∧ ∂_x^♭ \\
+          Q^y \; ∂_t^♭ ∧ ∂_y^♭ \\
+          Q^z \; ∂_t^♭ ∧ ∂_z^♭ \\
+          R^x \; ∂_y^♭ ∧ ∂_z^♭ \\
+          R^y \; ∂_z^♭ ∧ ∂_x^♭ \\
+          R^z \; ∂_x^♭ ∧ ∂_y^♭ \\
       \end{bmatrix}
 
    .. rubric:: Expand with the Minkowski metric
@@ -101,12 +90,12 @@ differential 2-form representative of the rotation:
    .. math::
 
       R^{♭♭} = \begin{bmatrix}
-        a \; η_{αt} \; dx^α ∧ η_{βx} \; dx^β \\
-        b \; η_{αt} \; dx^α ∧ η_{βy} \; dx^β \\
-        c \; η_{αt} \; dx^α ∧ η_{βz} \; dx^β \\
-        d \; η_{αy} \; dx^α ∧ η_{βz} \; dx^β \\
-        e \; η_{αz} \; dx^α ∧ η_{βx} \; dx^β \\
-        f \; η_{αx} \; dx^α ∧ η_{βy} \; dx^β \\
+        Q^x \; η_{αt} \; dx^α ∧ η_{βx} \; dx^β \\
+        Q^y \; η_{αt} \; dx^α ∧ η_{βy} \; dx^β \\
+        Q^z \; η_{αt} \; dx^α ∧ η_{βz} \; dx^β \\
+        R^x \; η_{αy} \; dx^α ∧ η_{βz} \; dx^β \\
+        R^y \; η_{αz} \; dx^α ∧ η_{βx} \; dx^β \\
+        R^z \; η_{αx} \; dx^α ∧ η_{βy} \; dx^β \\
       \end{bmatrix}
 
    The exterior product :math:`∧` is bilinear. The Minkowski metric components
@@ -115,12 +104,12 @@ differential 2-form representative of the rotation:
    .. math::
 
       R^{♭♭} = \begin{bmatrix}
-          a \; η_{αt} η_{βx} \; dx^α ∧ dx^β \\
-          b \; η_{αt} η_{βy} \; dx^α ∧ dx^β \\
-          c \; η_{αt} η_{βz} \; dx^α ∧ dx^β \\
-          d \; η_{αy} η_{βz} \; dx^α ∧ dx^β \\
-          e \; η_{αz} η_{βx} \; dx^α ∧ dx^β \\
-          f \; η_{αx} η_{βy} \; dx^α ∧ dx^β \\
+          Q^x \; η_{αt} η_{βx} \; dx^α ∧ dx^β \\
+          Q^y \; η_{αt} η_{βy} \; dx^α ∧ dx^β \\
+          Q^z \; η_{αt} η_{βz} \; dx^α ∧ dx^β \\
+          R^x \; η_{αy} η_{βz} \; dx^α ∧ dx^β \\
+          R^y \; η_{αz} η_{βx} \; dx^α ∧ dx^β \\
+          R^z \; η_{αx} η_{βy} \; dx^α ∧ dx^β \\
       \end{bmatrix}
 
    .. rubric:: Identify the non-zero components of the Minkowski metric
@@ -128,12 +117,12 @@ differential 2-form representative of the rotation:
    .. math::
 
       R^{♭♭} = \begin{bmatrix}
-          a \; η_{tt} η_{xx} \; dx^t ∧ dx^x \\
-          b \; η_{tt} η_{yy} \; dx^t ∧ dx^y \\
-          c \; η_{tt} η_{zz} \; dx^t ∧ dx^z \\
-          d \; η_{yy} η_{zz} \; dx^y ∧ dx^z \\
-          e \; η_{zz} η_{xx} \; dx^z ∧ dx^x \\
-          f \; η_{xx} η_{yy} \; dx^x ∧ dx^y \\
+          Q^x \; η_{tt} η_{xx} \; dx^t ∧ dx^x \\
+          Q^y \; η_{tt} η_{yy} \; dx^t ∧ dx^y \\
+          Q^z \; η_{tt} η_{zz} \; dx^t ∧ dx^z \\
+          R^x \; η_{yy} η_{zz} \; dx^y ∧ dx^z \\
+          R^y \; η_{zz} η_{xx} \; dx^z ∧ dx^x \\
+          R^z \; η_{xx} η_{yy} \; dx^x ∧ dx^y \\
       \end{bmatrix}
 
    .. rubric:: Rewrite
@@ -153,12 +142,12 @@ differential 2-form representative of the rotation:
    .. math::
 
       R^{♭♭} = \begin{bmatrix}
-          a \; η_{tt} η_{xx} \; dt ∧ dx \\
-          b \; η_{tt} η_{yy} \; dt ∧ dy \\
-          c \; η_{tt} η_{zz} \; dt ∧ dz \\
-          d \; η_{yy} η_{zz} \; dy ∧ dz \\
-          e \; η_{zz} η_{xx} \; dz ∧ dx \\
-          f \; η_{xx} η_{yy} \; dx ∧ dy \\
+          Q^x \; η_{tt} η_{xx} \; dt ∧ dx \\
+          Q^y \; η_{tt} η_{yy} \; dt ∧ dy \\
+          Q^z \; η_{tt} η_{zz} \; dt ∧ dz \\
+          R^x \; η_{yy} η_{zz} \; dy ∧ dz \\
+          R^y \; η_{zz} η_{xx} \; dz ∧ dx \\
+          R^z \; η_{xx} η_{yy} \; dx ∧ dy \\
       \end{bmatrix}
 
    .. rubric:: Apply the numerical values of the Minkowski metric components
@@ -166,12 +155,12 @@ differential 2-form representative of the rotation:
    .. math::
 
       R^{♭♭} = \begin{bmatrix}
-          a \; (+1) (-1) \; dt ∧ dx \\
-          b \; (+1) (-1) \; dt ∧ dy \\
-          c \; (+1) (-1) \; dt ∧ dz \\
-          d \; (-1) (-1) \; dy ∧ dz \\
-          e \; (-1) (-1) \; dz ∧ dx \\
-          f \; (-1) (-1) \; dx ∧ dy \\
+          Q^x \; (+1) (-1) \; dt ∧ dx \\
+          Q^y \; (+1) (-1) \; dt ∧ dy \\
+          Q^z \; (+1) (-1) \; dt ∧ dz \\
+          R^x \; (-1) (-1) \; dy ∧ dz \\
+          R^y \; (-1) (-1) \; dz ∧ dx \\
+          R^z \; (-1) (-1) \; dx ∧ dy \\
       \end{bmatrix}
 
    .. rubric:: Conclude
@@ -179,112 +168,96 @@ differential 2-form representative of the rotation:
    .. math::
 
       R^{♭♭} = \left[ \begin{aligned}
-          - & a \; dt ∧ dx \\
-          - & b \; dt ∧ dy \\
-          - & c \; dt ∧ dz \\
-            & d \; dy ∧ dz \\
-            & e \; dz ∧ dx \\
-            & f \; dx ∧ dy \\
+          - & Q^x \; dt ∧ dx \\
+          - & Q^y \; dt ∧ dy \\
+          - & Q^z \; dt ∧ dz \\
+            & R^x \; dy ∧ dz \\
+            & R^y \; dz ∧ dx \\
+            & R^z \; dx ∧ dy \\
       \end{aligned} \right]
-
-   .. }}}
-
-The hodge dual is:
-
-.. topic:: Hodge Dual of a Rotation in Differential Form
-
-   .. math::
-
-      ⋆ R^{♭♭} = \begin{bmatrix}
-        a \; dy ∧ dz \\
-        b \; dz ∧ dx \\
-        c \; dx ∧ dy \\
-        d \; dt ∧ dx \\
-        e \; dt ∧ dy \\
-        f \; dt ∧ dz \\
-      \end{bmatrix}
-
-.. admonition:: Calculation steps
-   :class: dropdown
-
-   .. {{{
-
-   .. rubric:: Take the Hodge dual
-
-   .. math::
-
-      ⋆ R^{♭♭} = ⋆ \left[ \begin{aligned}
-        - a \; dt ∧ dx \\
-        - b \; dt ∧ dy \\
-        - c \; dt ∧ dz \\
-          d \; dy ∧ dz \\
-          e \; dz ∧ dx \\
-          f \; dx ∧ dy \\
-      \end{aligned} \right]
-
-   .. rubric:: Distribute the Hodge operator
-
-   .. math::
-
-      ⋆ R^{♭♭} = \left[ \begin{aligned}
-        - a \; ⋆ (dt ∧ dx) \\
-        - b \; ⋆ (dt ∧ dy) \\
-        - c \; ⋆ (dt ∧ dz) \\
-          d \; ⋆ (dy ∧ dz) \\
-          e \; ⋆ (dz ∧ dx) \\
-          f \; ⋆ (dx ∧ dy) \\
-      \end{aligned} \right]
-
-   .. rubric:: Apply Hodge dual to each basis elements
-
-   .. math::
-
-      ⋆ R^{♭♭} = \left[ \begin{aligned}
-        - a \; (-1) \; dy ∧ dz \\
-        - b \; (-1) \; dz ∧ dx \\
-        - c \; (-1) \; dx ∧ dy \\
-          d \; (+1) \; dt ∧ dx \\
-          e \; (+1) \; dt ∧ dy \\
-          f \; (+1) \; dt ∧ dz \\
-      \end{aligned} \right]
-
-   .. rubric:: Conclude
-
-   .. math::
-
-      ⋆ R^{♭♭} = \begin{bmatrix}
-        a \; dy ∧ dz \\
-        b \; dz ∧ dx \\
-        c \; dx ∧ dy \\
-        d \; dt ∧ dx \\
-        e \; dt ∧ dy \\
-        f \; dt ∧ dz \\
-      \end{bmatrix}
 
    .. }}}
 
 .. }}}
 
-Exterior derivative of a rotation
----------------------------------
+:math:`⋆R^{♭♭}`
+---------------
 
 .. {{{
 
-Applying in sequence the exterior derivative operator :math:`d` and the Hodge
-dual operator :math:`⋆` to the doubly covariant rotation :math:`⋆ d R^{♭♭}`, we
-obtain:
+Applying the Hodge star to the rotation 2-form, we obtain:
 
-.. topic:: Hodge Dual of the Exterior Derivative of Rotations in Differential
-   Form
+.. math::
+
+   ⋆ R^{♭♭} = \left[ \begin{aligned}
+       & Q^x \; dy ∧ dz \\
+       & Q^y \; dz ∧ dx \\
+       & Q^z \; dx ∧ dy \\
+       & R^x \; dt ∧ dx \\
+       & R^y \; dt ∧ dy \\
+       & R^z \; dt ∧ dz \\
+   \end{aligned} \right]
+
+.. admonition:: Calculations
+   :class: dropdown
+
+   .. {{{
+
+   .. rubric:: Apply the Hodge star by linearity
 
    .. math::
 
-      ⋆ (dR^{♭♭}) = \left[ \begin{alignedat}{5}
-          (&         & - ∂_x d & - ∂_y e & - ∂_z f &\:) \; dt \\
-          (& - ∂_t d &         & - ∂_y c & + ∂_z b &\:) \; dx \\
-          (& - ∂_t e & + ∂_x c &         & - ∂_z a &\:) \; dy \\
-          (& - ∂_t f & - ∂_x b & + ∂_y a &         &\:) \; dz \\
-      \end{alignedat} \right]
+      ⋆ R^{♭♭} = ⋆ \left[ \begin{aligned}
+          - & Q^x \; dt ∧ dx \\
+          - & Q^y \; dt ∧ dy \\
+          - & Q^z \; dt ∧ dz \\
+            & R^x \; dy ∧ dz \\
+            & R^y \; dz ∧ dx \\
+            & R^z \; dx ∧ dy \\
+      \end{aligned} \right]
+      = \left[ \begin{aligned}
+          - & Q^x \; ⋆ dt ∧ dx \\
+          - & Q^y \; ⋆ dt ∧ dy \\
+          - & Q^z \; ⋆ dt ∧ dz \\
+            & R^x \; ⋆ dy ∧ dz \\
+            & R^y \; ⋆ dz ∧ dx \\
+            & R^z \; ⋆ dx ∧ dy \\
+      \end{aligned} \right]
+
+   .. rubric:: Apply the Hodge star to the basis 2-Forms
+
+   Using the :ref:`tables for the Hodge dual <Hodge dual tables>`:
+
+   .. math::
+
+      ⋆ R^{♭♭} = \left[ \begin{aligned}
+          & Q^x \; dy ∧ dz \\
+          & Q^y \; dz ∧ dx \\
+          & Q^z \; dx ∧ dy \\
+          & R^x \; dt ∧ dx \\
+          & R^y \; dt ∧ dy \\
+          & R^z \; dt ∧ dz \\
+      \end{aligned} \right]
+
+   .. }}}
+
+.. }}}
+
+:math:`dR^{♭♭}`
+---------------
+
+.. {{{
+
+Apply the exterior derivative to the rotation 2-form, we obtain:
+
+.. math::
+
+   dR^{♭♭} = \left[ \begin{alignedat}{5}
+     (&         & + ∂_x R^x & + ∂_y R^y & + ∂_z R^z &\:) \; dx^x ∧ dx^y ∧ dx^z \\
+     (& + ∂_t R^x &         & + ∂_y Q^z & - ∂_z Q^y &\:) \; dx^t ∧ dx^y ∧ dx^z \\
+     (& + ∂_t R^y & - ∂_x Q^z &         & + ∂_z Q^x &\:) \; dx^t ∧ dx^z ∧ dx^x \\
+     (& + ∂_t R^z & + ∂_x Q^y & - ∂_y Q^x &         &\:) \; dx^t ∧ dx^x ∧ dx^y \\
+   \end{alignedat} \right]
 
 .. admonition:: Calculations
    :class: dropdown
@@ -296,12 +269,12 @@ obtain:
    .. math::
 
       dR^{♭♭} = \begin{bmatrix}
-         d( - a \; dt ∧ dx ) \\
-         d( - b \; dt ∧ dy ) \\
-         d( - c \; dt ∧ dz ) \\
-         d( + d \; dy ∧ dz ) \\
-         d( + e \; dz ∧ dx ) \\
-         d( + f \; dx ∧ dy ) \\
+         d( - Q^x \; dt ∧ dx ) \\
+         d( - Q^y \; dt ∧ dy ) \\
+         d( - Q^z \; dt ∧ dz ) \\
+         d( + R^x \; dy ∧ dz ) \\
+         d( + R^y \; dz ∧ dx ) \\
+         d( + R^z \; dx ∧ dy ) \\
       \end{bmatrix}
 
    .. rubric:: Apply the exterior derivative
@@ -309,25 +282,25 @@ obtain:
    .. math::
 
       dR^{♭♭} = \left[ \begin{alignedat}{3}
-          ∂_y (-a) \; & dy ∧ dt ∧ dx & + & ∂_z (-a) \; & dz ∧ dt ∧ dx \\
-          ∂_x (-b) \; & dx ∧ dt ∧ dy & + & ∂_z (-b) \; & dz ∧ dt ∧ dy \\
-          ∂_x (-c) \; & dx ∧ dt ∧ dz & + & ∂_y (-c) \; & dy ∧ dt ∧ dz \\
-          ∂_t (+d) \; & dt ∧ dy ∧ dz & + & ∂_x (+d) \; & dx ∧ dy ∧ dz \\
-          ∂_t (+e) \; & dt ∧ dz ∧ dx & + & ∂_y (+e) \; & dy ∧ dz ∧ dx \\
-          ∂_t (+f) \; & dt ∧ dx ∧ dy & + & ∂_z (+f) \; & dz ∧ dx ∧ dy \\
+          ∂_y (- Q^x ) \; & dy ∧ dt ∧ dx & + & ∂_z (- Q^x ) \; & dz ∧ dt ∧ dx \\
+          ∂_x (- Q^y ) \; & dx ∧ dt ∧ dy & + & ∂_z (- Q^y ) \; & dz ∧ dt ∧ dy \\
+          ∂_x (- Q^z ) \; & dx ∧ dt ∧ dz & + & ∂_y (- Q^z ) \; & dy ∧ dt ∧ dz \\
+          ∂_t (+ R^x ) \; & dt ∧ dy ∧ dz & + & ∂_x (+ R^x ) \; & dx ∧ dy ∧ dz \\
+          ∂_t (+ R^y ) \; & dt ∧ dz ∧ dx & + & ∂_y (+ R^y ) \; & dy ∧ dz ∧ dx \\
+          ∂_t (+ R^z ) \; & dt ∧ dx ∧ dy & + & ∂_z (+ R^z ) \; & dz ∧ dx ∧ dy \\
       \end{alignedat} \right]
 
-   .. rubric:: Reorder exterior products
+   .. rubric:: Reorder the exterior products
 
    .. math::
 
       dR^{♭♭} = \left[ \begin{alignedat}{3}
-          ∂_y (-a)(+1) \; & dt ∧ dx ∧ dy & + & ∂_z (-a)(-1) \; & dt ∧ dz ∧ dx \\
-          ∂_x (-b)(-1) \; & dt ∧ dx ∧ dy & + & ∂_z (-b)(+1) \; & dt ∧ dy ∧ dz \\
-          ∂_x (-c)(+1) \; & dt ∧ dz ∧ dx & + & ∂_y (-c)(-1) \; & dt ∧ dy ∧ dz \\
-          ∂_t (+d)(+1) \; & dt ∧ dy ∧ dz & + & ∂_x (+d)(+1) \; & dx ∧ dy ∧ dz \\
-          ∂_t (+e)(+1) \; & dt ∧ dz ∧ dx & + & ∂_y (+e)(+1) \; & dx ∧ dy ∧ dz \\
-          ∂_t (+f)(+1) \; & dt ∧ dx ∧ dy & + & ∂_z (+f)(+1) \; & dx ∧ dy ∧ dz \\
+          ∂_y (- Q^x )(+1) \; & dt ∧ dx ∧ dy & + & ∂_z (- Q^x )(-1) \; & dt ∧ dz ∧ dx \\
+          ∂_x (- Q^y )(-1) \; & dt ∧ dx ∧ dy & + & ∂_z (- Q^y )(+1) \; & dt ∧ dy ∧ dz \\
+          ∂_x (- Q^z )(+1) \; & dt ∧ dz ∧ dx & + & ∂_y (- Q^z )(-1) \; & dt ∧ dy ∧ dz \\
+          ∂_t (+ R^x )(+1) \; & dt ∧ dy ∧ dz & + & ∂_x (+ R^x )(+1) \; & dx ∧ dy ∧ dz \\
+          ∂_t (+ R^y )(+1) \; & dt ∧ dz ∧ dx & + & ∂_y (+ R^y )(+1) \; & dx ∧ dy ∧ dz \\
+          ∂_t (+ R^z )(+1) \; & dt ∧ dx ∧ dy & + & ∂_z (+ R^z )(+1) \; & dx ∧ dy ∧ dz \\
       \end{alignedat} \right]
 
    .. rubric:: Simplify
@@ -335,80 +308,45 @@ obtain:
    .. math::
 
       dR^{♭♭} = \left[ \begin{alignedat}{3}
-          ∂_y (-a) \; & dt ∧ dx ∧ dy & + & ∂_z (+a) \; & dt ∧ dz ∧ dx \\
-          ∂_x (+b) \; & dt ∧ dx ∧ dy & + & ∂_z (-b) \; & dt ∧ dy ∧ dz \\
-          ∂_x (-c) \; & dt ∧ dz ∧ dx & + & ∂_y (+c) \; & dt ∧ dy ∧ dz \\
-          ∂_t (+d) \; & dt ∧ dy ∧ dz & + & ∂_x (+d) \; & dx ∧ dy ∧ dz \\
-          ∂_t (+e) \; & dt ∧ dz ∧ dx & + & ∂_y (+e) \; & dx ∧ dy ∧ dz \\
-          ∂_t (+f) \; & dt ∧ dx ∧ dy & + & ∂_z (+f) \; & dx ∧ dy ∧ dz \\
+          ∂_y (- Q^x ) \; & dt ∧ dx ∧ dy & + & ∂_z (+ Q^x ) \; & dt ∧ dz ∧ dx \\
+          ∂_x (+ Q^y ) \; & dt ∧ dx ∧ dy & + & ∂_z (- Q^y ) \; & dt ∧ dy ∧ dz \\
+          ∂_x (- Q^z ) \; & dt ∧ dz ∧ dx & + & ∂_y (+ Q^z ) \; & dt ∧ dy ∧ dz \\
+          ∂_t (+ R^x ) \; & dt ∧ dy ∧ dz & + & ∂_x (+ R^x ) \; & dx ∧ dy ∧ dz \\
+          ∂_t (+ R^y ) \; & dt ∧ dz ∧ dx & + & ∂_y (+ R^y ) \; & dx ∧ dy ∧ dz \\
+          ∂_t (+ R^z ) \; & dt ∧ dx ∧ dy & + & ∂_z (+ R^z ) \; & dx ∧ dy ∧ dz \\
       \end{alignedat} \right]
 
-   .. rubric:: Organize the terms into a single column
-
-   Although the specific ordering is not mandatory. However, for clarity, the
-   free matrix representation allows us to arrange the terms in a logical
-   manner. Note that:
-
-   * The first row excludes the terms with :math:`dt`
-   * The second row excludes the terms with :math:`dx`
-   * The third row excludes the terms with :math:`dy`
-   * The fourth row excludes the terms with :math:`dz`
+   .. rubric:: Rearange
 
    .. math::
 
-      dR = \left[ \begin{alignedat}{5}
-        (&         & + ∂_x d & + ∂_y e & + ∂_z f &\:) \; dx^x ∧ dx^y ∧ dx^z \\
-        (& + ∂_t d &         & + ∂_y c & - ∂_z b &\:) \; dx^t ∧ dx^y ∧ dx^z \\
-        (& + ∂_t e & - ∂_x c &         & + ∂_z a &\:) \; dx^t ∧ dx^z ∧ dx^x \\
-        (& + ∂_t f & + ∂_x b & - ∂_y a &         &\:) \; dx^t ∧ dx^x ∧ dx^y \\
-      \end{alignedat} \right]
-
-   .. rubric:: Apply the Hodge dual, thereby converting 3-forms to 1-forms:
-
-   .. math::
-
-      ⋆(dR) = \left[ \begin{alignedat}{5}
-        (&         & + ∂_x d & + ∂_y e & + ∂_z f &\:) \; (-dt) \\
-        (& + ∂_t d &         & + ∂_y c & - ∂_z b &\:) \; (-dx) \\
-        (& + ∂_t e & - ∂_x c &         & + ∂_z a &\:) \; (-dy) \\
-        (& + ∂_t f & + ∂_x b & - ∂_y a &         &\:) \; (-dz) \\
-      \end{alignedat} \right]
-
-   .. rubric:: Conclude
-
-   .. math::
-
-      ⋆ (dR) = \left[ \begin{alignedat}{5}
-        (&         & - ∂_x d & - ∂_y e & - ∂_z f &\:) \; dt \\
-        (& - ∂_t d &         & - ∂_y c & + ∂_z b &\:) \; dx \\
-        (& - ∂_t e & + ∂_x c &         & - ∂_z a &\:) \; dy \\
-        (& - ∂_t f & - ∂_x b & + ∂_y a &         &\:) \; dz \\
+      dR^{♭♭} = \left[ \begin{alignedat}{5}
+        (&         & + ∂_x R^x & + ∂_y R^y & + ∂_z R^z &\:) \; dx^x ∧ dx^y ∧ dx^z \\
+        (& + ∂_t R^x &         & + ∂_y Q^z & - ∂_z Q^y &\:) \; dx^t ∧ dx^y ∧ dx^z \\
+        (& + ∂_t R^y & - ∂_x Q^z &         & + ∂_z Q^x &\:) \; dx^t ∧ dx^z ∧ dx^x \\
+        (& + ∂_t R^z & + ∂_x Q^y & - ∂_y Q^x &         &\:) \; dx^t ∧ dx^x ∧ dx^y \\
       \end{alignedat} \right]
 
    .. }}}
 
 .. }}}
 
-Exterior derivative of the Hodge dual of a rotation
----------------------------------------------------
+:math:`d⋆R^{♭♭}`
+----------------
 
 .. {{{
 
-Applying in sequence the Hodge dual operator :math:`⋆` and the exterior
-derivative operator :math:`d` to the doubly covariant rotation :math:`d ⋆
-R^{♭♭}`, we obtain:
+Applying in sequence the exterior derivative and the Hodge star operator to the
+rotation 2-form, we obtain:
 
-.. topic:: Exterior Derivative of the Hodge Dual of Rotations in Differential
-   Form
+.. math::
 
-   .. math::
-
-      d( ⋆ R^{♭♭} ) = \left[ \begin{alignedat}{5}
-        (&         & + ∂_x a & + ∂_y b & + ∂_z c &\:) \; dx ∧ dy ∧ dz \\
-        (& + ∂_t a &         & - ∂_y f & + ∂_z e &\:) \; dt ∧ dy ∧ dz \\
-        (& + ∂_t b & + ∂_x f &         & - ∂_z d &\:) \; dt ∧ dz ∧ dx \\
-        (& + ∂_t c & - ∂_x e & + ∂_y d &         &\:) \; dt ∧ dx ∧ dy \\
-      \end{alignedat} \right]
+   d( ⋆ R^{♭♭} ) = \left[ \begin{alignedat}{5}
+     (&         & + ∂_x Q^x & + ∂_y Q^y & + ∂_z Q^z &\:) \; dx ∧ dy ∧ dz \\
+     (& + ∂_t Q^x &         & - ∂_y R^z & + ∂_z R^y &\:) \; dt ∧ dy ∧ dz \\
+     (& + ∂_t Q^y & + ∂_x R^z &         & - ∂_z R^x &\:) \; dt ∧ dz ∧ dx \\
+     (& + ∂_t Q^z & - ∂_x R^y & + ∂_y R^x &         &\:) \; dt ∧ dx ∧ dy \\
+   \end{alignedat} \right]
 
 .. admonition:: Calculations
    :class: dropdown
@@ -419,52 +357,52 @@ R^{♭♭}`, we obtain:
 
    .. math::
 
-      d(⋆R^{♭♭}) = d \begin{bmatrix}
-          a \; dy ∧ dz \\
-          b \; dz ∧ dx \\
-          c \; dx ∧ dy \\
-          d \; dt ∧ dx \\
-          e \; dt ∧ dy \\
-          f \; dt ∧ dz \\
+      d⋆R^{♭♭} = d \begin{bmatrix}
+          Q^x \; dy ∧ dz \\
+          Q^y \; dz ∧ dx \\
+          Q^z \; dx ∧ dy \\
+          R^x \; dt ∧ dx \\
+          R^y \; dt ∧ dy \\
+          R^z \; dt ∧ dz \\
       \end{bmatrix}
 
    .. rubric:: Distribute the exterior derivative
 
    .. math::
 
-      d(⋆R^{♭♭}) = \begin{bmatrix}
-          d(a \; dy ∧ dz) \\
-          d(b \; dz ∧ dx) \\
-          d(c \; dx ∧ dy) \\
-          d(d \; dt ∧ dx) \\
-          d(e \; dt ∧ dy) \\
-          d(f \; dt ∧ dz) \\
+      d⋆R^{♭♭} = \begin{bmatrix}
+          d( Q^x \; dy ∧ dz) \\
+          d( Q^y \; dz ∧ dx) \\
+          d( Q^z \; dx ∧ dy) \\
+          d( R^x \; dt ∧ dx) \\
+          d( R^y \; dt ∧ dy) \\
+          d( R^z \; dt ∧ dz) \\
       \end{bmatrix}
 
    .. rubric:: Apply
 
    .. math::
 
-      d(⋆R^{♭♭}) = \left[ \begin{alignedat}{5}
-          ∂_t (+a) \; & dt ∧ dy ∧ dz & + & ∂_x (+a) \; & dx ∧ dy ∧ dz \\
-          ∂_t (+b) \; & dt ∧ dz ∧ dx & + & ∂_y (+b) \; & dy ∧ dz ∧ dx \\
-          ∂_t (+c) \; & dt ∧ dx ∧ dy & + & ∂_z (+c) \; & dz ∧ dx ∧ dy \\
-          ∂_y (+d) \; & dy ∧ dt ∧ dx & + & ∂_z (+d) \; & dz ∧ dt ∧ dx \\
-          ∂_x (+e) \; & dx ∧ dt ∧ dy & + & ∂_z (+e) \; & dz ∧ dt ∧ dy \\
-          ∂_x (+f) \; & dx ∧ dt ∧ dz & + & ∂_y (+f) \; & dy ∧ dt ∧ dz \\
+      d⋆R^{♭♭})= \left[ \begin{alignedat}{5}
+          ∂_t (+ Q^x ) \; & dt ∧ dy ∧ dz & + & ∂_x (+ Q^x ) \; & dx ∧ dy ∧ dz \\
+          ∂_t (+ Q^y ) \; & dt ∧ dz ∧ dx & + & ∂_y (+ Q^y ) \; & dy ∧ dz ∧ dx \\
+          ∂_t (+ Q^z ) \; & dt ∧ dx ∧ dy & + & ∂_z (+ Q^z ) \; & dz ∧ dx ∧ dy \\
+          ∂_y (+ R^x ) \; & dy ∧ dt ∧ dx & + & ∂_z (+ R^x ) \; & dz ∧ dt ∧ dx \\
+          ∂_x (+ R^y ) \; & dx ∧ dt ∧ dy & + & ∂_z (+ R^y ) \; & dz ∧ dt ∧ dy \\
+          ∂_x (+ R^z ) \; & dx ∧ dt ∧ dz & + & ∂_y (+ R^z ) \; & dy ∧ dt ∧ dz \\
       \end{alignedat} \right]
 
    .. rubric:: Reorder
 
    .. math::
 
-      d(⋆R^{♭♭}) = \left[ \begin{alignedat}{5}
-          ∂_t (+a)(+1) \; & dt ∧ dy ∧ dz & + & ∂_x (+a)(+1) \; & dx ∧ dy ∧ dz \\
-          ∂_t (+b)(+1) \; & dt ∧ dz ∧ dx & + & ∂_y (+b)(+1) \; & dx ∧ dy ∧ dz \\
-          ∂_t (+c)(+1) \; & dt ∧ dx ∧ dy & + & ∂_z (+c)(+1) \; & dx ∧ dy ∧ dz \\
-          ∂_y (+d)(+1) \; & dt ∧ dx ∧ dy & + & ∂_z (+d)(-1) \; & dt ∧ dz ∧ dx \\
-          ∂_x (+e)(-1) \; & dt ∧ dx ∧ dy & + & ∂_z (+e)(+1) \; & dt ∧ dy ∧ dz \\
-          ∂_x (+f)(+1) \; & dt ∧ dz ∧ dx & + & ∂_y (+f)(-1) \; & dt ∧ dy ∧ dz \\
+      d⋆R^{♭♭} = \left[ \begin{alignedat}{5}
+          ∂_t (+ Q^x )(+1) \; & dt ∧ dy ∧ dz & + & ∂_x (+ Q^x )(+1) \; & dx ∧ dy ∧ dz \\
+          ∂_t (+ Q^y )(+1) \; & dt ∧ dz ∧ dx & + & ∂_y (+ Q^y )(+1) \; & dx ∧ dy ∧ dz \\
+          ∂_t (+ Q^z )(+1) \; & dt ∧ dx ∧ dy & + & ∂_z (+ Q^z )(+1) \; & dx ∧ dy ∧ dz \\
+          ∂_y (+ R^x )(+1) \; & dt ∧ dx ∧ dy & + & ∂_z (+ R^x )(-1) \; & dt ∧ dz ∧ dx \\
+          ∂_x (+ R^y )(-1) \; & dt ∧ dx ∧ dy & + & ∂_z (+ R^y )(+1) \; & dt ∧ dy ∧ dz \\
+          ∂_x (+ R^z )(+1) \; & dt ∧ dz ∧ dx & + & ∂_y (+ R^z )(-1) \; & dt ∧ dy ∧ dz \\
       \end{alignedat} \right]
 
    .. rubric:: Apply values
@@ -472,40 +410,117 @@ R^{♭♭}`, we obtain:
    .. math::
 
       d(⋆R^{♭♭}) = \left[ \begin{alignedat}{5}
-          ∂_t (+a) \; & dt ∧ dy ∧ dz & + & ∂_x (+a) \; & dx ∧ dy ∧ dz \\
-          ∂_t (+b) \; & dt ∧ dz ∧ dx & + & ∂_y (+b) \; & dx ∧ dy ∧ dz \\
-          ∂_t (+c) \; & dt ∧ dx ∧ dy & + & ∂_z (+c) \; & dx ∧ dy ∧ dz \\
-          ∂_y (+d) \; & dt ∧ dx ∧ dy & + & ∂_z (-d) \; & dt ∧ dz ∧ dx \\
-          ∂_x (-e) \; & dt ∧ dx ∧ dy & + & ∂_z (+e) \; & dt ∧ dy ∧ dz \\
-          ∂_x (+f) \; & dt ∧ dz ∧ dx & + & ∂_y (-f) \; & dt ∧ dy ∧ dz \\
+          ∂_t (+ Q^x ) \; & dt ∧ dy ∧ dz & + & ∂_x (+ Q^x ) \; & dx ∧ dy ∧ dz \\
+          ∂_t (+ Q^y ) \; & dt ∧ dz ∧ dx & + & ∂_y (+ Q^y ) \; & dx ∧ dy ∧ dz \\
+          ∂_t (+ Q^z ) \; & dt ∧ dx ∧ dy & + & ∂_z (+ Q^z ) \; & dx ∧ dy ∧ dz \\
+          ∂_y (+ R^x ) \; & dt ∧ dx ∧ dy & + & ∂_z (- R^x ) \; & dt ∧ dz ∧ dx \\
+          ∂_x (- R^y ) \; & dt ∧ dx ∧ dy & + & ∂_z (+ R^y ) \; & dt ∧ dy ∧ dz \\
+          ∂_x (+ R^z ) \; & dt ∧ dz ∧ dx & + & ∂_y (- R^z ) \; & dt ∧ dy ∧ dz \\
       \end{alignedat} \right]
 
-   .. rubric:: Organize the terms into a single column
-
-   Although the specific ordering is not mandatory. However, for clarity, the
-   free matrix representation allows us to arrange the terms in a logical
-   manner. Note that:
-
-   * The first row excludes the terms with :math:`dt`
-   * The second row excludes the terms with :math:`dx`
-   * The third row excludes the terms with :math:`dy`
-   * The fourth row excludes the terms with :math:`dz`
+   .. rubric:: Rearange
 
    .. math::
 
-      d( ⋆ R^{♭♭} ) = \left[ \begin{alignedat}{5}
-          (&         & + ∂_x a & + ∂_y b & + ∂_z c & \: ) \; & dx ∧ dy ∧ dz \\
-          (& + ∂_t a &         & - ∂_y f & + ∂_z e & \: ) \; & dt ∧ dy ∧ dz \\
-          (& + ∂_t b & + ∂_x f &         & - ∂_z d & \: ) \; & dt ∧ dz ∧ dx \\
-          (& + ∂_t c & - ∂_x e & + ∂_y d &         & \: ) \; & dt ∧ dx ∧ dy \\
+      d ⋆ R^{♭♭} = \left[ \begin{alignedat}{5}
+          (&         & + ∂_x Q^x & + ∂_y Q^y & + ∂_z Q^z & \: ) \; & dx ∧ dy ∧ dz \\
+          (& + ∂_t Q^x &         & - ∂_y R^z & + ∂_z R^y & \: ) \; & dt ∧ dy ∧ dz \\
+          (& + ∂_t Q^y & + ∂_x R^z &         & - ∂_z R^x & \: ) \; & dt ∧ dz ∧ dx \\
+          (& + ∂_t Q^z & - ∂_x R^y & + ∂_y R^x &         & \: ) \; & dt ∧ dx ∧ dy \\
       \end{alignedat} \right]
 
    .. }}}
 
 .. }}}
 
-Applying the Laplace-De Rham operator
--------------------------------------
+:math:`⋆dR^{♭♭}`
+----------------
+
+.. {{{
+
+Applying in sequence the Hodge star and the exterior derivative operator
+:math:`d` to the rotation 2-form, we obtain:
+
+.. math::
+
+   ⋆ dR^{♭♭} = \left[ \begin{alignedat}{5}
+       (&         & - ∂_x R^x & - ∂_y R^y & - ∂_z R^z &\:) \; dt \\
+       (& - ∂_t R^x &         & - ∂_y Q^z & + ∂_z Q^y &\:) \; dx \\
+       (& - ∂_t R^y & + ∂_x Q^z &         & - ∂_z Q^x &\:) \; dy \\
+       (& - ∂_t R^z & - ∂_x Q^y & + ∂_y Q^x &         &\:) \; dz \\
+   \end{alignedat} \right]
+
+.. admonition:: Calculations
+   :class: dropdown
+
+   .. {{{
+
+   .. rubric:: Apply the Hodge star
+
+   Apply the Hodge star to :math:`dR^{♭♭}`:
+
+   .. math::
+
+      ⋆dR^{♭♭} = ⋆\left[ \begin{alignedat}{5}
+        (&         & + ∂_x R^x & + ∂_y R^y & + ∂_z R^z &\:) \; dx^x ∧ dx^y ∧ dx^z \\
+        (& + ∂_t R^x &         & + ∂_y Q^z & - ∂_z Q^y &\:) \; dx^t ∧ dx^y ∧ dx^z \\
+        (& + ∂_t R^y & - ∂_x Q^z &         & + ∂_z Q^x &\:) \; dx^t ∧ dx^z ∧ dx^x \\
+        (& + ∂_t R^z & + ∂_x Q^y & - ∂_y Q^x &         &\:) \; dx^t ∧ dx^x ∧ dx^y \\
+      \end{alignedat} \right]
+
+   .. rubric:: Distribute the Hodge star
+
+   .. math::
+
+      ⋆dR^{♭♭} = \left[ \begin{alignedat}{5}
+        (&         & + ∂_x R^x & + ∂_y R^y & + ∂_z R^z &\:) \; ⋆ dx^x ∧ dx^y ∧ dx^z \\
+        (& + ∂_t R^x &         & + ∂_y Q^z & - ∂_z Q^y &\:) \; ⋆ dx^t ∧ dx^y ∧ dx^z \\
+        (& + ∂_t R^y & - ∂_x Q^z &         & + ∂_z Q^x &\:) \; ⋆ dx^t ∧ dx^z ∧ dx^x \\
+        (& + ∂_t R^z & + ∂_x Q^y & - ∂_y Q^x &         &\:) \; ⋆ dx^t ∧ dx^x ∧ dx^y \\
+      \end{alignedat} \right]
+
+   .. rubric:: Apply the Hodge star to the basis 1-forms
+
+   Using the :ref:`tables for the Hodge dual <Hodge dual tables>`:
+
+   .. math::
+
+      ⋆dR^{♭♭} = \left[ \begin{alignedat}{5}
+        (&         & + ∂_x R^x & + ∂_y R^y & + ∂_z R^z &\:) \; (-dt) \\
+        (& + ∂_t R^x &         & + ∂_y Q^z & - ∂_z Q^y &\:) \; (-dx) \\
+        (& + ∂_t R^y & - ∂_x Q^z &         & + ∂_z Q^x &\:) \; (-dy) \\
+        (& + ∂_t R^z & + ∂_x Q^y & - ∂_y Q^x &         &\:) \; (-dz) \\
+      \end{alignedat} \right]
+
+   .. rubric:: Conclude
+
+   .. math::
+
+      ⋆dR^{♭♭} = \left[ \begin{alignedat}{5}
+        (&         & - ∂_x R^x & - ∂_y R^y & - ∂_z R^z &\:) \; dt \\
+        (& - ∂_t R^x &         & - ∂_y Q^z & + ∂_z Q^y &\:) \; dx \\
+        (& - ∂_t R^y & + ∂_x Q^z &         & - ∂_z Q^x &\:) \; dy \\
+        (& - ∂_t R^z & - ∂_x Q^y & + ∂_y Q^x &         &\:) \; dz \\
+      \end{alignedat} \right]
+
+   .. }}}
+
+.. }}}
+
+:math:`⋆d⋆R^{♭♭}`
+-----------------
+
+:math:`d⋆dR^{♭♭}`
+-----------------
+
+:math:`d⋆d⋆R^{♭♭}`
+------------------
+
+:math:`⋆d⋆dR^{♭♭}`
+------------------
+
+Laplace-De Rham
+---------------
 
 .. {{{
 
@@ -514,21 +529,21 @@ Applied to a rotation in spacetime, we obtain the wave equations:
 
 .. math::
 
-   (d ⋆ d ⋆ + ⋆ d ⋆ d) \left[ \begin{aligned}
-        - & a \; dt ∧ dx \\
-        - & b \; dt ∧ dy \\
-        - & c \; dt ∧ dz \\
-          & d \; dy ∧ dz \\
-          & e \; dz ∧ dx \\
-          & f \; dx ∧ dy \\
+   (d ⋆ R^x ⋆ + ⋆ R^x ⋆ d) \left[ \begin{aligned}
+        - & Q^x \; dt ∧ dx \\
+        - & Q^y \; dt ∧ dy \\
+        - & Q^z \; dt ∧ dz \\
+          & R^x \; dy ∧ dz \\
+          & R^y \; dz ∧ dx \\
+          & R^z \; dx ∧ dy \\
    \end{aligned} \right]
    &= \left[ \begin{alignedat}{6}
-     (&- ∂_t^2 a & + ∂_x^2 a & + ∂_y^2 a & + ∂_z^2 a &\:)&\: dt∧dx \\
-     (&- ∂_t^2 b & + ∂_x^2 b & + ∂_y^2 b & + ∂_z^2 b &\:)&\: dt∧dy \\
-     (&- ∂_t^2 c & + ∂_x^2 c & + ∂_y^2 c & + ∂_z^2 c &\:)&\: dt∧dz \\
-     (&+ ∂_t^2 d & - ∂_x^2 d & - ∂_y^2 d & - ∂_z^2 d &\:)&\: dy∧dz \\
-     (&+ ∂_t^2 f & - ∂_x^2 f & - ∂_y^2 f & - ∂_z^2 f &\:)&\: dx∧dy \\
-     (&+ ∂_t^2 e & - ∂_x^2 e & - ∂_y^2 e & - ∂_z^2 e &\:)&\: dz∧dx \\
+     (&- ∂_t^2 Q^x & + ∂_x^2 Q^x & + ∂_y^2 Q^x & + ∂_z^2 Q^x &\:)&\: dt∧dx \\
+     (&- ∂_t^2 Q^y & + ∂_x^2 Q^y & + ∂_y^2 Q^y & + ∂_z^2 Q^y &\:)&\: dt∧dy \\
+     (&- ∂_t^2 Q^z & + ∂_x^2 Q^z & + ∂_y^2 Q^z & + ∂_z^2 Q^z &\:)&\: dt∧dz \\
+     (&+ ∂_t^2 R^x & - ∂_x^2 R^x & - ∂_y^2 R^x & - ∂_z^2 R^x &\:)&\: dy∧dz \\
+     (&+ ∂_t^2 R^z & - ∂_x^2 R^z & - ∂_y^2 R^z & - ∂_z^2 R^z &\:)&\: dx∧dy \\
+     (&+ ∂_t^2 R^y & - ∂_x^2 R^y & - ∂_y^2 R^y & - ∂_z^2 R^y &\:)&\: dz∧dx \\
    \end{alignedat} \right]
 
 Calculations were performed with `pycartan

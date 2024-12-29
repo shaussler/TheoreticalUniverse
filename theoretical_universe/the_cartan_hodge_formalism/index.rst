@@ -22,6 +22,7 @@ The Cartan-Hodge Formalism
    musicality.rst
    hodge_duality.rst
    the_free_matrix_representation.rst
+   permutation_operator.rst
    the_minkowski_metric.rst
 
 Summary
@@ -115,6 +116,8 @@ The inner product of k-forms in Minkowski space are calculated for the basis
 vectors, bivectors, trivectors and quadvectors and summarized here in table
 form.
 
+----
+
 .. math::
 
    \begin{array}{c|rrrr}
@@ -125,6 +128,8 @@ form.
        ∂_y &  0  &  0  & -1  &  0  \\
        ∂_z &  0  &  0  &  0  & -1  \\
    \end{array}
+
+----
 
 .. math::
 
@@ -139,6 +144,8 @@ form.
    ∂_x ∧ ∂_y &  0        &  0        &  0        &   0       &  0        & +1        \\
    \end{array}
 
+----
+
 .. math::
 
    \begin{array}{c|rrrr}
@@ -150,6 +157,8 @@ form.
    ∂_t ∧ ∂_x ∧ ∂_y &  0              &  0              &   0             &  +1             \\
    \end{array}
 
+----
+
 .. math::
 
    \begin{array}{c|c}
@@ -158,7 +167,12 @@ form.
        ∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z &                    -1 \\
    \end{array}
 
-.. rubric:: Hodge Duality
+
+----
+
+.. _Hodge dual tables:
+
+.. rubric:: Hodge duals
 
 The Hodge duality assumes a central role, transitioning tensors between spaces
 and their dual complements.
@@ -169,6 +183,8 @@ and their dual complements.
    ⋆ dx & = dt ∧ dy ∧ dz \\
    ⋆ dy & = dt ∧ dz ∧ dx \\
    ⋆ dz & = dt ∧ dx ∧ dy \\
+
+----
 
 .. math::
 
@@ -181,6 +197,8 @@ and their dual complements.
    ⋆ dx ∧ dy &=  & dt ∧ dz \\
    \end{alignedat}
 
+----
+
 .. math::
 
    ⋆ dx ∧ dy ∧ dz &= dt \\
@@ -188,6 +206,9 @@ and their dual complements.
    ⋆ dt ∧ dz ∧ dx &= dy \\
    ⋆ dt ∧ dx ∧ dy &= dz \\
 
+----
+
 .. math::
 
    ⋆ dt ∧ dx ∧ dy ∧ dz = - 1
+----

@@ -7,8 +7,8 @@
 .. _the_free_matrix_representation:
 .. _the free matrix representation:
 
-The Free Matrix Representation
-==============================
+Free matrix representation
+==========================
 
 .. rst-class:: custom-author
 
@@ -183,7 +183,7 @@ All above matrix representations merely mean:
 
 .. }}}
 
-Matrix Multiplication
+Matrix multiplication
 ---------------------
 
 .. {{{

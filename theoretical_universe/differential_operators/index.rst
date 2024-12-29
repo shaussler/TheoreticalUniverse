@@ -64,8 +64,44 @@ formalism>`, and within the context of Minkowski spacetime. I identify in a
 further article :ref:`Of Maxwell Equations and Rotations` that a twist in
 spacetime leads to the equations governing electromagnetism. Readers well versed
 in the formulation of electromagnetism will readily recognize the Faraday
-tensor, its dual, and the Maxwell equations. The Laplace-De Rham operator
-results in wave equations.
+tensor, its dual, and the Maxwell equations.
+
+The most generic possible form in Minkowski space is:
+
+.. math::
+   f
+   + \left[ \begin{alignedat}{1}
+       & A^t dt                \\
+       & A^x dx                \\
+       & A^y dy                \\
+       & A^z dz                \\
+   \end{alignedat} \right]
+   + \left[ \begin{alignedat}{1}
+       & Q^x dt ∧ dx           \\
+       & Q^y dt ∧ dy           \\
+       & Q^z dt ∧ dz           \\
+       & R^x dy ∧ dz           \\
+       & R^y dz ∧ dx           \\
+       & R^z dx ∧ dy           \\
+   \end{alignedat} \right]
+   + \left[ \begin{alignedat}{1}
+       & D^t dx ∧ dy ∧ dz      \\
+       & D^x dt ∧ dy ∧ dz      \\
+       & D^y dt ∧ dz ∧ dx      \\
+       & D^z dt ∧ dy ∧ dz      \\
+   \end{alignedat} \right]
+   + G   dt ∧ dx ∧ dy ∧ dz
+
+The primal differential operator available is the exterior derivative
+:math:`d`. Since :math:`d d F = 0`, to avoid obtaining zero, the Hodge star
+operator :math:`⋆` must be applied before any further application of the
+exterior derivative. Consequently, all differential operators are formed as
+combinations of the exterior derivative and the Hodge star operator.
+
+Observe that the number of distinct differential operators is inherently
+limited. The non-zero combinations are at most :math:`d ⋆ d ⋆` and :math:`⋆ d ⋆
+d`. With these, we can systematically compute all differential operators for
+the most general form in Minkowski space.
 
 .. rubric:: Exterior derivative of functions in spacetime
 
@@ -115,18 +151,18 @@ results in wave equations.
 .. math::
 
    ⋆ d \left[ \begin{aligned}
-     - & a \; dt ∧ dx \\
-     - & b \; dt ∧ dy \\
-     - & c \; dt ∧ dz \\
-       & d \; dy ∧ dz \\
-       & e \; dz ∧ dx \\
-       & f \; dx ∧ dy \\
+     - & Q^x\; dt ∧ dx \\
+     - & Q^y\; dt ∧ dy \\
+     - & Q^z\; dt ∧ dz \\
+       & R^x\; dy ∧ dz \\
+       & R^y\; dz ∧ dx \\
+       & R^z\; dx ∧ dy \\
    \end{aligned} \right]
    = \left[ \begin{alignedat}{5}
-     ( &         & - ∂_x d & - ∂_y e & - ∂_z f & \: ) \; dt \\
-     ( & - ∂_t d &         & - ∂_y c & + ∂_z b & \: ) \; dx \\
-     ( & - ∂_t e & + ∂_x c &         & - ∂_z a & \: ) \; dy \\
-     ( & - ∂_t f & - ∂_x b & + ∂_y a &         & \: ) \; dz \\
+     ( &         & - ∂_x R^x & - ∂_y R^y & - ∂_z R^z & \: ) \; dt \\
+     ( & - ∂_t R^x &         & - ∂_y Q^z & + ∂_z Q^y & \: ) \; dx \\
+     ( & - ∂_t R^y & + ∂_x Q^z &         & - ∂_z Q^x & \: ) \; dy \\
+     ( & - ∂_t R^z & - ∂_x Q^y & + ∂_y Q^x &         & \: ) \; dz \\
    \end{alignedat} \right]
 
 ----
@@ -134,18 +170,18 @@ results in wave equations.
 .. math::
 
    d ⋆ \left[ \begin{aligned}
-     - & a \; dt ∧ dx \\
-     - & b \; dt ∧ dy \\
-     - & c \; dt ∧ dz \\
-       & d \; dy ∧ dz \\
-       & e \; dz ∧ dx \\
-       & f \; dx ∧ dy \\
+     - & Q^x \; dt ∧ dx \\
+     - & Q^y \; dt ∧ dy \\
+     - & Q^z \; dt ∧ dz \\
+       & R^x \; dy ∧ dz \\
+       & R^y \; dz ∧ dx \\
+       & R^z \; dx ∧ dy \\
    \end{aligned} \right]
    = \left[ \begin{alignedat}{5}
-     ( &         &+ ∂_x a & + ∂_y b & + ∂_z c & \: ) \; dx ∧ dy ∧ dz \\
-     ( & + ∂_t a &        & - ∂_y f & + ∂_z e & \: ) \; dt ∧ dy ∧ dz \\
-     ( & + ∂_t b &+ ∂_x f &         & - ∂_z d & \: ) \; dt ∧ dz ∧ dx \\
-     ( & + ∂_t c &- ∂_x e & + ∂_y d &         & \: ) \; dt ∧ dx ∧ dy \\
+     ( &           &+ ∂_x Q^x & + ∂_y Q^y & + ∂_z Q^z & \: ) \; dx ∧ dy ∧ dz \\
+     ( & + ∂_t Q^x &          & - ∂_y R^z & + ∂_z R^y & \: ) \; dt ∧ dy ∧ dz \\
+     ( & + ∂_t Q^y &+ ∂_x R^z &           & - ∂_z R^x & \: ) \; dt ∧ dz ∧ dx \\
+     ( & + ∂_t Q^z &- ∂_x R^y & + ∂_y R^x &           & \: ) \; dt ∧ dx ∧ dy \\
    \end{alignedat} \right]
 
 ----
@@ -153,18 +189,18 @@ results in wave equations.
 .. math::
 
    (d ⋆ d ⋆ + ⋆ d ⋆ d) \left[ \begin{aligned}
-     - & a \; dt ∧ dx \\
-     - & b \; dt ∧ dy \\
-     - & c \; dt ∧ dz \\
-       & d \; dy ∧ dz \\
-       & e \; dz ∧ dx \\
-       & f \; dx ∧ dy \\
+     - & Q^x \; dt ∧ dx \\
+     - & Q^y \; dt ∧ dy \\
+     - & Q^z \; dt ∧ dz \\
+       & R^x \; dy ∧ dz \\
+       & R^y \; dz ∧ dx \\
+       & R^z \; dx ∧ dy \\
    \end{aligned} \right]
    &= \left[ \begin{alignedat}{5}
-     ( & - ∂_t^2 a & + ∂_x^2 a & + ∂_y^2 a & + ∂_z^2 a & \: ) \; dt∧dx \\
-     ( & - ∂_t^2 b & + ∂_x^2 b & + ∂_y^2 b & + ∂_z^2 b & \: ) \; dt∧dy \\
-     ( & - ∂_t^2 c & + ∂_x^2 c & + ∂_y^2 c & + ∂_z^2 c & \: ) \; dt∧dz \\
-     ( & + ∂_t^2 d & - ∂_x^2 d & - ∂_y^2 d & - ∂_z^2 d & \: ) \; dy∧dz \\
-     ( & + ∂_t^2 f & - ∂_x^2 f & - ∂_y^2 f & - ∂_z^2 f & \: ) \; dx∧dy \\
-     ( & + ∂_t^2 e & - ∂_x^2 e & - ∂_y^2 e & - ∂_z^2 e & \: ) \; dz∧dx \\
+     ( & - ∂_t^2 Q^x & + ∂_x^2 Q^x & + ∂_y^2 Q^x & + ∂_z^2 Q^x & \: ) \; dt∧dx \\
+     ( & - ∂_t^2 Q^y & + ∂_x^2 Q^y & + ∂_y^2 Q^y & + ∂_z^2 Q^y & \: ) \; dt∧dy \\
+     ( & - ∂_t^2 Q^z & + ∂_x^2 Q^z & + ∂_y^2 Q^z & + ∂_z^2 Q^z & \: ) \; dt∧dz \\
+     ( & + ∂_t^2 R^x & - ∂_x^2 R^x & - ∂_y^2 R^x & - ∂_z^2 R^x & \: ) \; dy∧dz \\
+     ( & + ∂_t^2 R^y & - ∂_x^2 R^y & - ∂_y^2 R^y & - ∂_z^2 R^y & \: ) \; dz∧dx \\
+     ( & + ∂_t^2 R^z & - ∂_x^2 R^z & - ∂_y^2 R^z & - ∂_z^2 R^z & \: ) \; dx∧dy \\
    \end{alignedat} \right]

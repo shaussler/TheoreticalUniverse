@@ -4,8 +4,8 @@
 .. International License. You should have received a copy of the license along
 .. with this work. If not, see <https://creativecommons.org/licenses/by/4.0/>.
 
-Rotations in 3 Dimensions
-=========================
+Rotations in Euclidean space
+============================
 
 .. rst-class:: custom-author
 
@@ -19,8 +19,8 @@ rotations in 4-dimensional Minkowski spacetime, we determine the symmetries of
 the exterior product in mixed form, which, in this case, are found to be
 trivial.
 
-The Free Matrix Representation of Rotations
--------------------------------------------
+Free matrix representation of rotations
+---------------------------------------
 
 .. {{{
 
@@ -97,7 +97,7 @@ encountered in linear algebra.
 
 .. _♭♯ representation:
 
-:math:`♭♯` Representation
+:math:`♭♯` representation
 -------------------------
 
 .. {{{
@@ -222,7 +222,7 @@ explicit expression in terms of tensor products :math:`⊗`:
 
 .. }}}
 
-:math:`♯♭` Representation
+:math:`♯♭` representation
 -------------------------
 
 .. {{{
@@ -387,8 +387,8 @@ explicit expression of the mixed wedge products.
 
 .. }}}
 
-Symmetries of the Mixed Wedge Product
--------------------------------------
+Symmetries of the mixed exterior product
+----------------------------------------
 
 .. {{{
 
@@ -405,7 +405,7 @@ Basis element      Expression                  Row/column matrix symmetry
 
 .. }}}
 
-The :math:`\mathfrak{so}(3)` Rotation Group
+The :math:`\mathfrak{so}(3)` rotation group
 -------------------------------------------
 
 .. {{{
@@ -447,7 +447,7 @@ Which is `a regular choice for the basis
 
 .. }}}
 
-The Cross Product
+The cross product
 -----------------
 
 .. {{{

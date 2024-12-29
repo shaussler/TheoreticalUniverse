@@ -177,12 +177,12 @@ obtain:
 .. math::
 
    F^{♭♯} = \left[ \begin{aligned}
-       & \E^x \; dt ∧ ∂_x \\
-       & \E^y \; dt ∧ ∂_y \\
-       & \E^z \; dt ∧ ∂_z \\
-     - &  B^x \; dy ∧ ∂_z \\
-     - &  B^y \; dz ∧ ∂_x \\
-     - &  B^z \; dx ∧ ∂_y \\
+         & \E^x \; dt ∧ ∂_x \\
+         & \E^y \; dt ∧ ∂_y \\
+         & \E^z \; dt ∧ ∂_z \\
+       - &  B^x \; dy ∧ ∂_z \\
+       - &  B^y \; dz ∧ ∂_x \\
+       - &  B^z \; dx ∧ ∂_y \\
    \end{aligned} \right]
 
 .. admonition:: Calculations
@@ -195,50 +195,51 @@ obtain:
    .. math::
 
       F^{♭♭} = \left[ \begin{aligned}
-        - & \E^x \; dt ∧ dx \\
-        - & \E^y \; dt ∧ dy \\
-        - & \E^z \; dt ∧ dz \\
-          &  B^x \; dy ∧ dz \\
-          &  B^y \; dz ∧ dx \\
-          &  B^z \; dx ∧ dy \\
+          - & \E^x \; dt ∧ dx \\
+          - & \E^y \; dt ∧ dy \\
+          - & \E^z \; dt ∧ dz \\
+            &  B^x \; dy ∧ dz \\
+            &  B^y \; dz ∧ dx \\
+            &  B^z \; dx ∧ dy \\
       \end{aligned} \right] \\
 
    .. rubric:: Distribute the flat ♭ and sharp ♯ operators
 
    .. math::
 
-      F^{♭♯} = \left(F^{♭♭}\right)^{♭♯} = \left[ \begin{aligned}
-        - & \E^x \; dt ∧ dx \\
-        - & \E^y \; dt ∧ dy \\
-        - & \E^z \; dt ∧ dz \\
-          &  B^x \; dy ∧ dz \\
-          &  B^y \; dz ∧ dx \\
-          &  B^z \; dx ∧ dy \\
+      F^{♭♯} = \left(F^{♭♭}\right)^{♭♯}
+      = \left[ \begin{aligned}
+          - & \E^x \; dt ∧ dx \\
+          - & \E^y \; dt ∧ dy \\
+          - & \E^z \; dt ∧ dz \\
+            &  B^x \; dy ∧ dz \\
+            &  B^y \; dz ∧ dx \\
+            &  B^z \; dx ∧ dy \\
       \end{aligned} \right]^{♭♯}
       = \left[ \begin{aligned}
-        - & \E^x \; dt^♭ ∧ dx^♯ \\
-        - & \E^y \; dt^♭ ∧ dy^♯ \\
-        - & \E^z \; dt^♭ ∧ dz^♯ \\
-          &  B^x \; dy^♭ ∧ dz^♯ \\
-          &  B^y \; dz^♭ ∧ dx^♯ \\
-          &  B^z \; dx^♭ ∧ dy^♯ \\
+          - & \E^x \; dt^♭ ∧ dx^♯ \\
+          - & \E^y \; dt^♭ ∧ dy^♯ \\
+          - & \E^z \; dt^♭ ∧ dz^♯ \\
+            &  B^x \; dy^♭ ∧ dz^♯ \\
+            &  B^y \; dz^♭ ∧ dx^♯ \\
+            &  B^z \; dx^♭ ∧ dy^♯ \\
       \end{aligned} \right]
 
    .. rubric:: Expand the sharpened basis covectors
 
    The :math:`dx^μ` terms are already flattened, and applying the flattening
-   operator twice does not modify these terms: :math:`(dx^μ)^♭=dx^μ`. The sharpened terms
-   are expanded with the metric: :math:`(dx^ν)^♯ = η_{νμ} ∂_μ`.
+   operator twice does not modify these terms: :math:`(dx^μ)^♭=dx^μ`. The
+   sharpened terms are expanded with the metric: :math:`(dx^ν)^♯ = η_{νμ} ∂_μ`.
 
    .. math::
 
       F^{♭♯} = \left[ \begin{aligned}
-        - & \E^x \; dt ∧ η^{xμ} ∂_μ \\
-        - & \E^y \; dt ∧ η^{yμ} ∂_μ \\
-        - & \E^z \; dt ∧ η^{zμ} ∂_μ \\
-          &  B^x \; dy ∧ η^{zμ} ∂_μ \\
-          &  B^y \; dz ∧ η^{xμ} ∂_μ \\
-          &  B^z \; dx ∧ η^{yμ} ∂_μ \\
+          - & \E^x \; dt ∧ η^{xμ} ∂_μ \\
+          - & \E^y \; dt ∧ η^{yμ} ∂_μ \\
+          - & \E^z \; dt ∧ η^{zμ} ∂_μ \\
+            &  B^x \; dy ∧ η^{zμ} ∂_μ \\
+            &  B^y \; dz ∧ η^{xμ} ∂_μ \\
+            &  B^z \; dx ∧ η^{yμ} ∂_μ \\
       \end{aligned} \right]
 
    .. rubric:: Identify the non-zero terms
@@ -246,12 +247,12 @@ obtain:
    .. math::
 
       F^{♭♯} = \left[ \begin{aligned}
-        - & \E^x \; dt ∧ η^{xx} ∂_x \\
-        - & \E^y \; dt ∧ η^{yy} ∂_y \\
-        - & \E^z \; dt ∧ η^{zz} ∂_z \\
-          &  B^x \; dy ∧ η^{zz} ∂_z \\
-          &  B^y \; dz ∧ η^{xx} ∂_x \\
-          &  B^z \; dx ∧ η^{yy} ∂_y \\
+          - & \E^x \; dt ∧ η^{xx} ∂_x \\
+          - & \E^y \; dt ∧ η^{yy} ∂_y \\
+          - & \E^z \; dt ∧ η^{zz} ∂_z \\
+            &  B^x \; dy ∧ η^{zz} ∂_z \\
+            &  B^y \; dz ∧ η^{xx} ∂_x \\
+            &  B^z \; dx ∧ η^{yy} ∂_y \\
       \end{aligned} \right]
 
    .. rubric:: Apply numerical values
@@ -280,12 +281,12 @@ We derive the row/column representation of the :math:`F^{♭♯}` Faraday tensor
 
 .. math::
 
-   F^{♭♯} = \frac{1}{2} \left[ \begin{aligned}
+   F^{♭♯} = \frac{1}{2} \begin{bmatrix}
                           & + \E^x \; dt ∧ ∂_x & + \E^y \; dt ∧ ∂_y & + \E^z \; dt ∧ ∂_z \\
        + \E^x \; dx ∧ ∂_t &                    & -  B^z \; dx ∧ ∂_y & +  B^y \; dx ∧ ∂_z \\
        + \E^y \; dy ∧ ∂_t & +  B^z \; dy ∧ ∂_x &                    & -  B^x \; dy ∧ ∂_z \\
        + \E^z \; dz ∧ ∂_t & -  B^y \; dz ∧ ∂_x & +  B^x \; dz ∧ ∂_y &                    \\
-   \end{aligned} \right]
+   \end{bmatrix}
 
 .. admonition:: Calculations
    :class: dropdown
@@ -510,10 +511,10 @@ We derive the row/column representation of the :math:`F^{♭♯}` Faraday tensor
 .. math::
 
    F^{♯♯} = \frac{1}{2} \begin{bmatrix}
-                          & - \E^x \; ∂_x ∧ ∂_t & - \E^y \; ∂_y ∧ ∂_t & - \E^z \; ∂_z ∧ ∂_t \\
-      + \E^x \; ∂_t ∧ ∂_x &                     & -  B^z \; ∂_y ∧ ∂_x & +  B^y \; ∂_z ∧ ∂_x \\
-      + \E^y \; ∂_t ∧ ∂_y & +  B^z \; ∂_x ∧ ∂_y &                     & -  B^x \; ∂_z ∧ ∂_y \\
-      + \E^z \; ∂_t ∧ ∂_z & -  B^y \; ∂_x ∧ ∂_z & +  B^x \; ∂_y ∧ ∂_z &                     \\
+                           & - \E^x \; ∂_x ∧ ∂_t & - \E^y \; ∂_y ∧ ∂_t & - \E^z \; ∂_z ∧ ∂_t \\
+       + \E^x \; ∂_t ∧ ∂_x &                     & -  B^z \; ∂_y ∧ ∂_x & +  B^y \; ∂_z ∧ ∂_x \\
+       + \E^y \; ∂_t ∧ ∂_y & +  B^z \; ∂_x ∧ ∂_y &                     & -  B^x \; ∂_z ∧ ∂_y \\
+       + \E^z \; ∂_t ∧ ∂_z & -  B^y \; ∂_x ∧ ∂_z & +  B^x \; ∂_y ∧ ∂_z &                     \\
    \end{bmatrix}
 
 .. admonition:: Calculations
@@ -581,10 +582,10 @@ to verify the calculations here:
 .. math::
 
    F_{μν} = \begin{bmatrix}
-             & - \E^x  & - \E^y & - \E^z  \\
-      + \E^x &         & -  B^z & +  B^y  \\
-      + \E^y & +  B^z  &        & -  B^x  \\
-      + \E^z & -  B^y  & +  B^x &         \\
+              & - \E^x  & - \E^y & - \E^z  \\
+       + \E^x &         & -  B^z & +  B^y  \\
+       + \E^y & +  B^z  &        & -  B^x  \\
+       + \E^z & -  B^y  & +  B^x &         \\
    \end{bmatrix}
 
 Where the electromagnetic field is related to the doubly contravariant Faraday
@@ -731,29 +732,28 @@ the row/column representation of the doubly covariant dual Faraday tensor.
    .. math::
 
      G^{♭♭} = \begin{bmatrix}
-        B^x \; dt ∧ dx \\
-        B^y \; dt ∧ dy \\
-        B^z \; dt ∧ dz \\
-       \E^x \; dy ∧ dz \\
-       \E^y \; dz ∧ dx \\
-       \E^z \; dx ∧ dy \\
+          B^x \; dt ∧ dx \\
+          B^y \; dt ∧ dy \\
+          B^z \; dt ∧ dz \\
+         \E^x \; dy ∧ dz \\
+         \E^y \; dz ∧ dx \\
+         \E^z \; dx ∧ dy \\
      \end{bmatrix}
 
    .. rubric:: Duplicate each 2-form
 
-   The following line is so obvious that the prospective reader may be confused.
    I am; indeed; really writing that :math:`A = \frac{1}{2} (A+A)`.
 
    .. math::
 
-     G^{♭♭} = \begin{bmatrix}
-        B^x \; dt ∧ dx & +  B^x \; dt ∧ dx \\
-        B^y \; dt ∧ dy & +  B^y \; dt ∧ dy \\
-        B^z \; dt ∧ dz & +  B^z \; dt ∧ dz \\
-       \E^x \; dy ∧ dz & + \E^x \; dy ∧ dz \\
-       \E^y \; dz ∧ dx & + \E^y \; dz ∧ dx \\
-       \E^z \; dx ∧ dy & + \E^z \; dx ∧ dy \\
-     \end{bmatrix}
+     G^{♭♭} = \frac{1}{2} \left[ \begin{alignedat}{2}
+          B^x \; dt ∧ dx & \, + &  B^x \; dt ∧ dx \\
+          B^y \; dt ∧ dy & \, + &  B^y \; dt ∧ dy \\
+          B^z \; dt ∧ dz & \, + &  B^z \; dt ∧ dz \\
+         \E^x \; dy ∧ dz & \, + & \E^x \; dy ∧ dz \\
+         \E^y \; dz ∧ dx & \, + & \E^y \; dz ∧ dx \\
+         \E^z \; dx ∧ dy & \, + & \E^z \; dx ∧ dy \\
+     \end{alignedat} \right]
 
    .. rubric:: Flip the exterior product
 
@@ -763,18 +763,17 @@ the row/column representation of the doubly covariant dual Faraday tensor.
 
    .. math::
 
-     G^{♭♭} = \begin{bmatrix}
-        B^x \; dt ∧ dx & -  B^x \; dx ∧ dt \\
-        B^y \; dt ∧ dy & -  B^y \; dy ∧ dt \\
-        B^z \; dt ∧ dz & -  B^z \; dz ∧ dt \\
-       \E^x \; dy ∧ dz & - \E^x \; dz ∧ dy \\
-       \E^y \; dz ∧ dx & - \E^y \; dx ∧ dz \\
-       \E^z \; dx ∧ dy & - \E^z \; dy ∧ dx \\
-     \end{bmatrix}
+     G^{♭♭} = \frac{1}{2} \left[ \begin{alignedat}{2}
+        B^x \; dt ∧ dx & \, - &  B^x \; dx ∧ dt \\
+        B^y \; dt ∧ dy & \, - &  B^y \; dy ∧ dt \\
+        B^z \; dt ∧ dz & \, - &  B^z \; dz ∧ dt \\
+       \E^x \; dy ∧ dz & \, - & \E^x \; dz ∧ dy \\
+       \E^y \; dz ∧ dx & \, - & \E^y \; dx ∧ dz \\
+       \E^z \; dx ∧ dy & \, - & \E^z \; dy ∧ dx \\
+     \end{alignedat} \right]
 
-   The purpose of this operation is to switch the representation of the dual
-   Faraday 2-Form as a single row of basis 2-Forms, to a row/column
-   representation.
+   We can now switch the representation of the dual Faraday 2-Form from a
+   single row of basis 2-Forms, to a row/column representation.
 
    .. rubric:: Reorder into rows/column representation
 
