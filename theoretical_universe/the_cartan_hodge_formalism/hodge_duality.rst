@@ -7,7 +7,7 @@
 .. _hodge_duality:
 .. _hodge duality:
 
-Hodge Duality
+Hodge duality
 =============
 
 .. rst-class:: custom-author
