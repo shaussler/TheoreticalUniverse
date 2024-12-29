@@ -737,6 +737,98 @@ Applying the exterior derivative to :math:`d⋆dR^{♭♭}`, we obtain:
 :math:`d⋆d⋆R^{♭♭}`
 ------------------
 
+Applying the exterior derivative to :math:`⋆d⋆R^{♭♭}`, we obtain:
+
+.. rubric:: Apply the exterior derivative
+
+.. math::
+
+   d⋆d⋆R^{♭♭} = d \left[ \begin{alignedat}{5}
+     (&         & + ∂_x Q^x & + ∂_y Q^y & + ∂_z Q^z &\:) \; dt \\
+     (& + ∂_t Q^x &         & - ∂_y R^z & + ∂_z R^y &\:) \; dx \\
+     (& + ∂_t Q^y & + ∂_x R^z &         & - ∂_z R^x &\:) \; dy \\
+     (& + ∂_t Q^z & - ∂_x R^y & + ∂_y R^x &         &\:) \; dz \\
+   \end{alignedat} \right]
+
+.. rubric:: Simplify with the permutation operator
+
+.. math::
+
+   d⋆d⋆R^{♭♭} = d \left[ \begin{alignedat}{5}
+         & (&         & + ∂_x Q^x & + ∂_y Q^y & + ∂_z Q^z & \: & ) \; dt &   \\
+     Π [ & (& + ∂_t Q^x &         & - ∂_y R^z & + ∂_z R^y & \: & ) \; dx & ] \\
+   \end{alignedat} \right]
+
+.. rubric:: Apply the exterior derivative
+
+.. math::
+
+   d⋆d⋆R^{♭♭} = d \left[ \begin{alignedat}{5}
+         & (& + ∂_x ∂_x Q^x & + ∂_x ∂_y Q^y & + ∂_x ∂_z Q^z & \: & ) \; dx ∧ dt &   \\
+         & (& + ∂_y ∂_x Q^x & + ∂_y ∂_y Q^y & + ∂_y ∂_z Q^z & \: & ) \; dy ∧ dt &   \\
+         & (& + ∂_z ∂_x Q^x & + ∂_z ∂_y Q^y & + ∂_z ∂_z Q^z & \: & ) \; dz ∧ dt &   \\[2mm]
+     Π [ & (& + ∂_t ∂_t Q^x & - ∂_t ∂_y R^z & + ∂_t ∂_z R^y & \: & ) \; dt ∧ dx & ] \\
+     Π [ & (& + ∂_y ∂_t Q^x & - ∂_y ∂_y R^z & + ∂_y ∂_z R^y & \: & ) \; dy ∧ dx & ] \\
+     Π [ & (& + ∂_z ∂_t Q^x & - ∂_z ∂_y R^z & + ∂_z ∂_z R^y & \: & ) \; dz ∧ dx & ] \\
+   \end{alignedat} \right]
+
+.. rubric:: Expand the permutation operator
+
+.. math::
+
+   d⋆d⋆R^{♭♭} = d \left[ \begin{alignedat}{5}
+       (& + ∂_x ∂_x Q^x & + ∂_x ∂_y Q^y & + ∂_x ∂_z Q^z & \: & ) \; dx ∧ dt \\
+       (& + ∂_y ∂_x Q^x & + ∂_y ∂_y Q^y & + ∂_y ∂_z Q^z & \: & ) \; dy ∧ dt \\
+       (& + ∂_z ∂_x Q^x & + ∂_z ∂_y Q^y & + ∂_z ∂_z Q^z & \: & ) \; dz ∧ dt \\[2mm]
+       (& + ∂_t ∂_t Q^x & - ∂_t ∂_y R^z & + ∂_t ∂_z R^y & \: & ) \; dt ∧ dx \\
+       (& + ∂_t ∂_t Q^y & - ∂_t ∂_z R^x & + ∂_t ∂_x R^z & \: & ) \; dt ∧ dy \\
+       (& + ∂_t ∂_t Q^z & - ∂_t ∂_x R^y & + ∂_t ∂_y R^x & \: & ) \; dt ∧ dz \\[2mm]
+       (& + ∂_y ∂_t Q^x & - ∂_y ∂_y R^z & + ∂_y ∂_z R^y & \: & ) \; dy ∧ dx \\
+       (& + ∂_z ∂_t Q^y & - ∂_z ∂_z R^x & + ∂_z ∂_x R^z & \: & ) \; dz ∧ dy \\
+       (& + ∂_x ∂_t Q^z & - ∂_x ∂_x R^y & + ∂_x ∂_y R^x & \: & ) \; dx ∧ dz \\[2mm]
+       (& + ∂_z ∂_t Q^x & - ∂_z ∂_y R^z & + ∂_z ∂_z R^y & \: & ) \; dz ∧ dx \\
+       (& + ∂_x ∂_t Q^y & - ∂_x ∂_z R^x & + ∂_x ∂_x R^z & \: & ) \; dx ∧ dy \\
+       (& + ∂_y ∂_t Q^z & - ∂_y ∂_x R^y & + ∂_y ∂_y R^x & \: & ) \; dy ∧ dz \\
+   \end{alignedat} \right]
+
+.. rubric:: Reorder the exterior products
+
+.. math::
+
+   d⋆d⋆R^{♭♭} = d \left[ \begin{alignedat}{5}
+       (& - ∂_x ∂_x Q^x & - ∂_x ∂_y Q^y & - ∂_x ∂_z Q^z & \: & ) \; dt ∧ dx \\
+       (& - ∂_y ∂_x Q^x & - ∂_y ∂_y Q^y & - ∂_y ∂_z Q^z & \: & ) \; dt ∧ dy \\
+       (& - ∂_z ∂_x Q^x & - ∂_z ∂_y Q^y & - ∂_z ∂_z Q^z & \: & ) \; dt ∧ dz \\[2mm]
+       (& + ∂_t ∂_t Q^x & - ∂_t ∂_y R^z & + ∂_t ∂_z R^y & \: & ) \; dt ∧ dx \\
+       (& + ∂_t ∂_t Q^y & - ∂_t ∂_z R^x & + ∂_t ∂_x R^z & \: & ) \; dt ∧ dy \\
+       (& + ∂_t ∂_t Q^z & - ∂_t ∂_x R^y & + ∂_t ∂_y R^x & \: & ) \; dt ∧ dz \\[2mm]
+       (& - ∂_y ∂_t Q^x & + ∂_y ∂_y R^z & - ∂_y ∂_z R^y & \: & ) \; dx ∧ dy \\
+       (& - ∂_z ∂_t Q^y & + ∂_z ∂_z R^x & - ∂_z ∂_x R^z & \: & ) \; dy ∧ dz \\
+       (& - ∂_x ∂_t Q^z & + ∂_x ∂_x R^y & - ∂_x ∂_y R^x & \: & ) \; dz ∧ dx \\[2mm]
+       (& + ∂_z ∂_t Q^x & - ∂_z ∂_y R^z & + ∂_z ∂_z R^y & \: & ) \; dz ∧ dx \\
+       (& + ∂_x ∂_t Q^y & - ∂_x ∂_z R^x & + ∂_x ∂_x R^z & \: & ) \; dx ∧ dy \\
+       (& + ∂_y ∂_t Q^z & - ∂_y ∂_x R^y & + ∂_y ∂_y R^x & \: & ) \; dy ∧ dz \\
+   \end{alignedat} \right]
+
+.. rubric:: Reorder
+
+.. math::
+
+   d⋆d⋆R^{♭♭} = d \left[ \begin{alignedat}{5}
+       (& - ∂_x ∂_x Q^x & - ∂_x ∂_y Q^y & - ∂_x ∂_z Q^z & \: & ) \; dt ∧ dx \\
+       (& + ∂_t ∂_t Q^x & - ∂_t ∂_y R^z & + ∂_t ∂_z R^y & \: & ) \; dt ∧ dx \\[2mm]
+       (& - ∂_y ∂_x Q^x & - ∂_y ∂_y Q^y & - ∂_y ∂_z Q^z & \: & ) \; dt ∧ dy \\
+       (& + ∂_t ∂_t Q^y & - ∂_t ∂_z R^x & + ∂_t ∂_x R^z & \: & ) \; dt ∧ dy \\[2mm]
+       (& - ∂_z ∂_x Q^x & - ∂_z ∂_y Q^y & - ∂_z ∂_z Q^z & \: & ) \; dt ∧ dz \\
+       (& + ∂_t ∂_t Q^z & - ∂_t ∂_x R^y & + ∂_t ∂_y R^x & \: & ) \; dt ∧ dz \\[2mm]
+       (& - ∂_z ∂_t Q^y & + ∂_z ∂_z R^x & - ∂_z ∂_x R^z & \: & ) \; dy ∧ dz \\
+       (& + ∂_y ∂_t Q^z & - ∂_y ∂_x R^y & + ∂_y ∂_y R^x & \: & ) \; dy ∧ dz \\[2mm]
+       (& - ∂_x ∂_t Q^z & + ∂_x ∂_x R^y & - ∂_x ∂_y R^x & \: & ) \; dz ∧ dx \\
+       (& + ∂_z ∂_t Q^x & - ∂_z ∂_y R^z & + ∂_z ∂_z R^y & \: & ) \; dz ∧ dx \\[2mm]
+       (& - ∂_y ∂_t Q^x & + ∂_y ∂_y R^z & - ∂_y ∂_z R^y & \: & ) \; dx ∧ dy \\
+       (& + ∂_x ∂_t Q^y & - ∂_x ∂_z R^x & + ∂_x ∂_x R^z & \: & ) \; dx ∧ dy \\
+   \end{alignedat} \right]
+
 :math:`⋆d⋆dR^{♭♭}`
 ------------------
 
@@ -750,7 +842,7 @@ Applied to a rotation in spacetime, we obtain the wave equations:
 
 .. math::
 
-   (d ⋆ R^x ⋆ + ⋆ R^x ⋆ d) \left[ \begin{aligned}
+   (d ⋆ d ⋆ + ⋆ d ⋆ d) \left[ \begin{aligned}
         - & Q^x \; dt ∧ dx \\
         - & Q^y \; dt ∧ dy \\
         - & Q^z \; dt ∧ dz \\
