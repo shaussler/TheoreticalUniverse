@@ -16,7 +16,7 @@ Translations
 
 .. {{{
 
-A generic translation in spacetime expressed as a vector is:
+A generic translation in spacetime is expressed with a 4-vector:
 
 .. math::
 
@@ -42,6 +42,11 @@ Flattened, the translation expressed in differential form is:
    :class: dropdown
 
    .. {{{
+
+   .. rubric:: References
+
+   * :ref:`basis vectors`
+   * :ref:`musicality`
 
    .. rubric:: Flatten the translation vector
 
@@ -98,13 +103,13 @@ Flattened, the translation expressed in differential form is:
    .. math::
 
       T^♭ = \left[ \begin{alignedat}{2}
-          & A^t & dx^t \\
-        - & A^x & dx^x \\
-        - & A^y & dx^y \\
-        - & A^z & dx^z \\
+          A^t &     & dx^t \\
+          A^x & (-) & dx^x \\
+          A^y & (-) & dx^y \\
+          A^z & (-) & dx^z \\
       \end{alignedat} \right]
 
-   .. rubric:: Conclude
+   .. rubric:: Rearange and conclude
 
    .. math::
 
@@ -138,6 +143,10 @@ Flattened, the translation expressed in differential form is:
 
    .. {{{
 
+   .. rubric:: References
+
+   * :ref:`Hodge dual tables`
+
    .. rubric:: Apply the Hodge star to all
 
    .. math::
@@ -153,11 +162,11 @@ Flattened, the translation expressed in differential form is:
 
    .. math::
 
-      ⋆ T^♭ = \left[ \begin{alignedat}{2}
-            & A^t & ⋆ dt \\
-          - & A^x & ⋆ dx \\
-          - & A^y & ⋆ dy \\
-          - & A^z & ⋆ dz \\
+      ⋆ T^♭ = \left[ \begin{alignedat}{3}
+            & A^t & ⋆ & dt \\
+          - & A^x & ⋆ & dx \\
+          - & A^y & ⋆ & dy \\
+          - & A^z & ⋆ & dz \\
       \end{alignedat} \right]
 
    .. rubric:: Apply the Hodge star and conclude
@@ -175,26 +184,28 @@ Flattened, the translation expressed in differential form is:
 
 .. }}}
 
-:math:`dT^♭`
-------------
+:math:`d T^♭`
+-------------
 
 .. {{{
 
 .. math::
 
-  d T^♭ = \left[ \begin{alignedat}{2}
-     + ∂_x A^t dx ∧ dt & + & ∂_y A^t dy ∧ dt & + & ∂_z A^t dz ∧ dt \\
-     - ∂_t A^x dt ∧ dx & - & ∂_y A^x dy ∧ dx & - & ∂_z A^x dz ∧ dx \\
-     - ∂_t A^y dt ∧ dy & - & ∂_z A^y dz ∧ dx & - & ∂_x A^x dx ∧ dy \\
-     - ∂_t A^z dt ∧ dz & - & ∂_x A^z dx ∧ dx & - & ∂_y A^x dy ∧ dz \\
-  \end{alignedat} \right]
+   d T^♭ = \left[ \begin{alignedat}{1}
+       ( & - & ∂_t A^x & - & ∂_x A^t) & \; dt ∧ dx \\
+       ( & - & ∂_t A^y & - & ∂_y A^t) & \; dt ∧ dy \\
+       ( & - & ∂_t A^z & - & ∂_z A^t) & \; dt ∧ dz \\
+       ( & - & ∂_y A^z & + & ∂_z A^y) & \; dy ∧ dz \\
+       ( & - & ∂_z A^x & + & ∂_x A^z) & \; dz ∧ dx \\
+       ( & - & ∂_x A^y & + & ∂_y A^x) & \; dx ∧ dy \\
+   \end{alignedat} \right]
 
 .. admonition:: Calculations
    :class: dropdown
 
    .. {{{
 
-   .. rubric:: Apply the exterior derivative
+   .. rubric:: Take the exterior derivative
 
    .. math::
 
@@ -205,41 +216,36 @@ Flattened, the translation expressed in differential form is:
           - & A^z & dz \\
       \end{alignedat} \right]
 
-   .. rubric:: Apply the permutation operator
+   .. rubric:: Apply the exterior derivative
 
    .. math::
 
-      d T^♭ = d \left[ \begin{alignedat}{2}
-               & A^t & dt & \\
-          Π (- & A^x & dx &) \\
+      d T^♭ = \begin{bmatrix}
+          + ∂_x A^t dx ∧ dt & + ∂_y A^t dy ∧ dt & + ∂_z A^t dz ∧ dt \\
+          - ∂_t A^x dt ∧ dx & - ∂_y A^x dy ∧ dx & - ∂_z A^x dz ∧ dx \\
+          - ∂_t A^y dt ∧ dy & - ∂_z A^y dz ∧ dy & - ∂_x A^y dx ∧ dy \\
+          - ∂_t A^z dt ∧ dz & - ∂_x A^z dx ∧ dz & - ∂_y A^z dy ∧ dz \\
+      \end{bmatrix}
+
+   .. rubric:: Rearrange and conclude
+
+   .. math::
+
+      d T^♭ = \left[ \begin{alignedat}{1}
+          ( & - & ∂_t A^x & - & ∂_x A^t) & \; dt ∧ dx \\
+          ( & - & ∂_t A^y & - & ∂_y A^t) & \; dt ∧ dy \\
+          ( & - & ∂_t A^z & - & ∂_z A^t) & \; dt ∧ dz \\
+          ( & - & ∂_y A^z & + & ∂_z A^y) & \; dy ∧ dz \\
+          ( & - & ∂_z A^x & + & ∂_x A^z) & \; dz ∧ dx \\
+          ( & - & ∂_x A^y & + & ∂_y A^x) & \; dx ∧ dy \\
       \end{alignedat} \right]
-
-   .. rubric:: Expand the exterior derivative
-
-   .. math::
-
-     d T^♭ = \left[ \begin{alignedat}{3}
-            + & ∂_x A^t dx ∧ dt & + ∂_y A^t dy ∧ dt & + ∂_z A^t dz ∧ dt &  \\
-        Π ( - & ∂_t A^x dt ∧ dx & - ∂_y A^x dy ∧ dx & - ∂_z A^x dz ∧ dx &) \\
-     \end{alignedat} \right]
-
-   .. rubric:: Expand the permutation operator
-
-   .. math::
-
-     d T^♭ = \left[ \begin{alignedat}{2}
-        + ∂_x A^t dx ∧ dt & + ∂_y A^t dy ∧ dt & + ∂_z A^t dz ∧ dt \\
-        - ∂_t A^x dt ∧ dx & - ∂_y A^x dy ∧ dx & - ∂_z A^x dz ∧ dx \\
-        - ∂_t A^y dt ∧ dy & - ∂_z A^y dz ∧ dx & - ∂_x A^x dx ∧ dy \\
-        - ∂_t A^z dt ∧ dz & - ∂_x A^z dx ∧ dx & - ∂_y A^x dy ∧ dz \\
-     \end{alignedat} \right]
 
    .. }}}
 
 .. }}}
 
-:math:`d⋆T^♭`
--------------
+:math:`d⋆ T^♭`
+--------------
 
 .. {{{
 
@@ -251,6 +257,10 @@ Flattened, the translation expressed in differential form is:
    :class: dropdown
 
    .. {{{
+
+   .. rubric:: References
+
+   * :ref:`Hodge dual tables`
 
    .. rubric:: Apply the exterior derivative
 
@@ -295,20 +305,20 @@ Flattened, the translation expressed in differential form is:
 
 .. }}}
 
-:math:`⋆dT^♭`
--------------
+:math:`⋆d T^♭`
+--------------
 
 .. {{{
 
 .. math::
 
   ⋆ d T^♭ = \left[ \begin{alignedat}{4}
-     (+ & ∂_z A^y & - & ∂_y A^z &) \; dt ∧ dx \\
-     (+ & ∂_x A^z & - & ∂_z A^x &) \; dt ∧ dy \\
-     (+ & ∂_y A^x & - & ∂_x A^y &) \; dt ∧ dz \\
-     (+ & ∂_x A^t & + & ∂_t A^x &) \; dy ∧ dz \\
-     (+ & ∂_y A^t & + & ∂_t A^y &) \; dz ∧ dx \\
-     (+ & ∂_z A^t & + & ∂_t A^z &) \; dx ∧ dy \\
+     (+ & ∂_z A^y & - & ∂_y A^z & ) & \; dt ∧ dx \\
+     (+ & ∂_x A^z & - & ∂_z A^x & ) & \; dt ∧ dy \\
+     (+ & ∂_y A^x & - & ∂_x A^y & ) & \; dt ∧ dz \\
+     (+ & ∂_x A^t & + & ∂_t A^x & ) & \; dy ∧ dz \\
+     (+ & ∂_y A^t & + & ∂_t A^y & ) & \; dz ∧ dx \\
+     (+ & ∂_z A^t & + & ∂_t A^z & ) & \; dx ∧ dy \\
   \end{alignedat} \right]
 
 .. admonition:: Calculations
@@ -316,53 +326,74 @@ Flattened, the translation expressed in differential form is:
 
    .. {{{
 
-   .. rubric:: Apply the Hodge star to all
+   .. rubric:: References
+
+   * :ref:`Hodge dual tables`
+
+   .. rubric:: Take the Hodge star
 
    .. math::
 
-     ⋆ d T^♭ = ⋆ \left[ \begin{alignedat}{5}
-        + & ∂_x A^t dx ∧ dt & + & ∂_y A^t dy ∧ dt & + & ∂_z A^t dz ∧ dt \\
-        - & ∂_t A^x dt ∧ dx & - & ∂_y A^x dy ∧ dx & - & ∂_z A^x dz ∧ dx \\
-        - & ∂_t A^y dt ∧ dy & - & ∂_z A^y dz ∧ dy & - & ∂_x A^y dx ∧ dy \\
-        - & ∂_t A^z dt ∧ dz & - & ∂_x A^z dx ∧ dz & - & ∂_y A^z dy ∧ dz \\
-     \end{alignedat} \right]
+      ⋆ d T^♭ = ⋆ \left[ \begin{alignedat}{1}
+          ( & - & ∂_t A^x & - & ∂_x A^t & ) & \; dt ∧ dx \\
+          ( & - & ∂_t A^y & - & ∂_y A^t & ) & \; dt ∧ dy \\
+          ( & - & ∂_t A^z & - & ∂_z A^t & ) & \; dt ∧ dz \\
+          ( & - & ∂_y A^z & + & ∂_z A^y & ) & \; dy ∧ dz \\
+          ( & - & ∂_z A^x & + & ∂_x A^z & ) & \; dz ∧ dx \\
+          ( & - & ∂_x A^y & + & ∂_y A^x & ) & \; dx ∧ dy \\
+      \end{alignedat} \right]
 
-   .. rubric:: Apply the Hodge star to each
+   .. rubric:: Distribute the Hodge star
 
    .. math::
 
-    ⋆ d T^♭ = \left[ \begin{alignedat}{5}
-        + & ∂_x A^t dy ∧ dz & + & ∂_y A^t dz ∧ dx & + & ∂_z A^t dx ∧ dy \\
-        + & ∂_t A^x dy ∧ dz & + & ∂_y A^x dt ∧ dz & - & ∂_z A^x dt ∧ dy \\
-        + & ∂_t A^y dz ∧ dx & + & ∂_z A^y dt ∧ dx & - & ∂_x A^y dt ∧ dz \\
-        + & ∂_t A^z dx ∧ dy & + & ∂_x A^z dt ∧ dy & - & ∂_y A^z dt ∧ dx \\
-     \end{alignedat} \right]
+      ⋆ d T^♭ = \left[ \begin{alignedat}{1}
+          ( & - & ∂_t A^x & - & ∂_x A^t) & \; ⋆ \left( dt ∧ dx \right) \\
+          ( & - & ∂_t A^y & - & ∂_y A^t) & \; ⋆ \left( dt ∧ dy \right) \\
+          ( & - & ∂_t A^z & - & ∂_z A^t) & \; ⋆ \left( dt ∧ dz \right) \\
+          ( & - & ∂_y A^z & + & ∂_z A^y) & \; ⋆ \left( dy ∧ dz \right) \\
+          ( & - & ∂_z A^x & + & ∂_x A^z) & \; ⋆ \left( dz ∧ dx \right) \\
+          ( & - & ∂_x A^y & + & ∂_y A^x) & \; ⋆ \left( dx ∧ dy \right) \\
+      \end{alignedat} \right]
+
+   .. rubric:: Apply the Hodge star
+
+   .. math::
+
+      ⋆ d T^♭ = \left[ \begin{alignedat}{1}
+          ( & - & ∂_t A^x & - & ∂_x A^t) & \; & - & \left( dy ∧ dz \right) \\
+          ( & - & ∂_t A^y & - & ∂_y A^t) & \; & - & \left( dz ∧ dx \right) \\
+          ( & - & ∂_t A^z & - & ∂_z A^t) & \; & - & \left( dx ∧ dy \right) \\
+          ( & - & ∂_y A^z & + & ∂_z A^y) & \; &   & \left( dt ∧ dx \right) \\
+          ( & - & ∂_z A^x & + & ∂_x A^z) & \; &   & \left( dt ∧ dy \right) \\
+          ( & - & ∂_x A^y & + & ∂_y A^x) & \; &   & \left( dt ∧ dz \right) \\
+      \end{alignedat} \right]
 
    .. rubric:: Reorder and conclude
 
    .. math::
 
      ⋆ d T^♭ = \left[ \begin{alignedat}{4}
-        (+ & ∂_z A^y & - & ∂_y A^z &) \; dt ∧ dx \\
-        (+ & ∂_x A^z & - & ∂_z A^x &) \; dt ∧ dy \\
-        (+ & ∂_y A^x & - & ∂_x A^y &) \; dt ∧ dz \\
-        (+ & ∂_x A^t & + & ∂_t A^x &) \; dy ∧ dz \\
-        (+ & ∂_y A^t & + & ∂_t A^y &) \; dz ∧ dx \\
-        (+ & ∂_z A^t & + & ∂_t A^z &) \; dx ∧ dy \\
+        ( + & ∂_z A^y & - & ∂_y A^z & ) & \; dt ∧ dx \\
+        ( + & ∂_x A^z & - & ∂_z A^x & ) & \; dt ∧ dy \\
+        ( + & ∂_y A^x & - & ∂_x A^y & ) & \; dt ∧ dz \\
+        ( + & ∂_x A^t & + & ∂_t A^x & ) & \; dy ∧ dz \\
+        ( + & ∂_y A^t & + & ∂_t A^y & ) & \; dz ∧ dx \\
+        ( + & ∂_z A^t & + & ∂_t A^z & ) & \; dx ∧ dy \\
      \end{alignedat} \right]
 
    .. }}}
 
 .. }}}
 
-:math:`⋆d⋆T^♭`
---------------
+:math:`⋆d⋆ T^♭`
+---------------
 
 .. {{{
 
 .. math::
 
-   ⋆ d ⋆ T^♭ = ∂_t A^t + ∂_x A^x + ∂_y A^y + ∂_z A^z
+   ⋆d⋆ T^♭ = ∂_t A^t + ∂_x A^x + ∂_y A^y + ∂_z A^z
 
 .. admonition:: Calculations
    :class: dropdown
@@ -385,14 +416,14 @@ Flattened, the translation expressed in differential form is:
 
 .. }}}
 
-:math:`d⋆dT^♭`
---------------
+:math:`d⋆d T^♭`
+---------------
 
 .. {{{
 
 .. math::
 
-  d ⋆ d T^♭ = \left[ \begin{alignedat}{7}
+  d⋆d T^♭ = \left[ \begin{alignedat}{7}
      ( & + ∂_x^2 A^t & + ∂_y^2 A^t & + ∂_z^2 A^t & + ∂_t ∂_x A^x & + ∂_t ∂_y A^y & + ∂_t ∂_z A^z & ) \; dx ∧ dx ∧ dy \\
      ( & + ∂_t^2 A^x & - ∂_y^2 A^x & - ∂_z^2 A^x & + ∂_t ∂_x A^t & + ∂_x ∂_y A^y & + ∂_z ∂_x A^z & ) \; dt ∧ dy ∧ dz \\
      ( & + ∂_t^2 A^y & - ∂_x^2 A^y & - ∂_z^2 A^y & + ∂_t ∂_y A^t & + ∂_y ∂_z A^z & + ∂_x ∂_y A^x & ) \; dt ∧ dz ∧ dx \\
@@ -496,14 +527,14 @@ Flattened, the translation expressed in differential form is:
 
 .. }}}
 
-:math:`d⋆d⋆T^♭`
----------------
+:math:`d⋆d⋆ T^♭`
+----------------
 
 .. {{{
 
 .. math::
 
-   d ⋆ d ⋆ T^♭ = \left[ \begin{alignedat}{7}
+   d⋆d⋆ T^♭ = \left[ \begin{alignedat}{7}
        ( & ∂_t ∂_x A^x & + & ∂_t ∂_y A^y & + & ∂_t ∂_z A^z & ) & \; dt \\
        ( & ∂_t ∂_x A^t & + & ∂_x ∂_y A^y & + & ∂_z ∂_z A^z & ) & \; dx \\
        ( & ∂_t ∂_y A^t & + & ∂_y ∂_z A^z & + & ∂_x ∂_y A^x & ) & \; dy \\
@@ -558,14 +589,14 @@ Flattened, the translation expressed in differential form is:
 
 .. }}}
 
-:math:`⋆d⋆dT^♭`
----------------
+:math:`⋆d⋆d T^♭`
+----------------
 
 .. {{{
 
 .. math::
 
-  ⋆ d ⋆ d T^♭ = \left[ \begin{alignedat}{7}
+  ⋆d⋆d T^♭ = \left[ \begin{alignedat}{7}
      ( & + ∂_x^2 A^t & + ∂_y^2 A^t & + ∂_z^2 A^t & + ∂_t ∂_x A^x & + ∂_t ∂_y A^y & + ∂_t ∂_z A^z & ) \; dt \\
      ( & + ∂_t^2 A^x & - ∂_y^2 A^x & - ∂_z^2 A^x & + ∂_t ∂_x A^t & + ∂_x ∂_y A^y & + ∂_z ∂_x A^z & ) \; dx \\
      ( & + ∂_t^2 A^y & - ∂_x^2 A^y & - ∂_z^2 A^y & + ∂_t ∂_y A^t & + ∂_y ∂_z A^z & + ∂_x ∂_y A^x & ) \; dy \\
@@ -614,8 +645,8 @@ Flattened, the translation expressed in differential form is:
 
 .. }}}
 
-:math:`(⋆d⋆d - d⋆d⋆)T^♭`
-------------------------
+:math:`(⋆d⋆d - d⋆d⋆) T^♭`
+-------------------------
 
 .. {{{
 

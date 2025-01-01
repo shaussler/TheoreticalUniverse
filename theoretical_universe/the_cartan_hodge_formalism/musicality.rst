@@ -4,7 +4,7 @@
 .. International License. You should have received a copy of the license along
 .. with this work. If not, see <https://creativecommons.org/licenses/by/4.0/>.
 
-.. _Musicality:
+.. _musicality:
 
 Musicality
 ==========
@@ -35,7 +35,7 @@ Whereas the dual covariant three-covector is declared with the flat symbol
 .. rubric:: Musical operations
 
 Considering a vector in 3 dimensional Euclidean space expressed as a linear
-combination of th basis vectors :math:`∂_i`:
+combination of the basis vectors :math:`∂_i`:
 
 .. math::
 

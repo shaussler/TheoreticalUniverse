@@ -170,9 +170,9 @@ form.
 
 ----
 
-.. _Hodge dual tables:
+.. _hodge dual tables:
 
-.. rubric:: Hodge duals
+.. rubric:: Hodge dual tables
 
 The Hodge duality assumes a central role, transitioning tensors between spaces
 and their dual complements.
