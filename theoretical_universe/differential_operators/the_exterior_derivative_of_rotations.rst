@@ -184,8 +184,8 @@ covariant differential 2-form representative of the rotation:
 
 .. }}}
 
-:math:`⋆R^{♭♭}`
----------------
+:math:`⋆ R^{♭♭}`
+----------------
 
 .. {{{
 
@@ -247,8 +247,8 @@ Applying the Hodge star to the rotation 2-form, we obtain:
 
 .. }}}
 
-:math:`dR^{♭♭}`
----------------
+:math:`d R^{♭♭}`
+----------------
 
 .. {{{
 
@@ -335,8 +335,8 @@ Apply the exterior derivative to the rotation 2-form, we obtain:
 
 .. }}}
 
-:math:`d⋆R^{♭♭}`
-----------------
+:math:`d⋆ R^{♭♭}`
+-----------------
 
 .. {{{
 
@@ -437,8 +437,8 @@ rotation 2-form, we obtain:
 
 .. }}}
 
-:math:`⋆dR^{♭♭}`
-----------------
+:math:`⋆d R^{♭♭}`
+-----------------
 
 .. {{{
 
@@ -511,8 +511,8 @@ Applying in sequence the Hodge star and the exterior derivative operator
 
 .. }}}
 
-:math:`⋆d⋆R^{♭♭}`
------------------
+:math:`⋆d⋆ R^{♭♭}`
+------------------
 
 .. {{{
 
@@ -574,16 +574,16 @@ Applying the Hodge star to :math:`d⋆R^{♭♭}`, we obtain:
 
 .. }}}
 
-:math:`d⋆dR^{♭♭}`
------------------
+:math:`d⋆d R^{♭♭}`
+------------------
 
 .. {{{
 
-Applying the exterior derivative to :math:`d⋆dR^{♭♭}`, we obtain:
+Applying the exterior derivative to :math:`⋆d R^{♭♭}`, we obtain:
 
 .. math::
 
-   d⋆dR^{♭♭} &= \left[ \begin{alignedat}{4}
+   d⋆d R^{♭♭} &= \left[ \begin{alignedat}{4}
        ( & ∂_x ∂_x & \; R^x & \, + \, & ∂_x ∂_y & \; R^y & \, + \, & ∂_x ∂_z & \; R^z & \; ) & \; dt ∧ dx \\
        ( & ∂_x ∂_y & \; R^x & \, + \, & ∂_y ∂_y & \; R^y & \, + \, & ∂_y ∂_z & \; R^z & \; ) & \; dt ∧ dy \\
        ( & ∂_x ∂_z & \; R^x & \, + \, & ∂_y ∂_z & \; R^y & \, + \, & ∂_z ∂_z & \; R^z & \; ) & \; dt ∧ dz \\
@@ -609,7 +609,7 @@ Applying the exterior derivative to :math:`d⋆dR^{♭♭}`, we obtain:
        & (+ ∂_x^2 Q^z & + ∂_y^2 Q^z &             & ) & \; dx ∧ dy \\
    \end{alignedat} \right] \\[2mm]
    &+ \left[ \begin{alignedat}{4}
-       & (               & - ∂_z ∂_x Q^y & - ∂_x ∂_y Q^y & ) & \; dy ∧ dz \\
+       & (               & - ∂_z ∂_x Q^z & - ∂_x ∂_y Q^y & ) & \; dy ∧ dz \\
        & ( - ∂_y ∂_z Q^z &               & - ∂_x ∂_y Q^x & ) & \; dz ∧ dx \\
        & ( - ∂_y ∂_z Q^y & - ∂_z ∂_x Q^x &               & ) & \; dx ∧ dy \\
    \end{alignedat} \right]
@@ -753,7 +753,7 @@ Applying the exterior derivative to :math:`d⋆dR^{♭♭}`, we obtain:
           & (+ ∂_x^2 Q^z & + ∂_y^2 Q^z &             & ) & \; dx ∧ dy \\
       \end{alignedat} \right] \\[2mm]
       &+ \left[ \begin{alignedat}{4}
-          & (               & - ∂_z ∂_x Q^y & - ∂_x ∂_y Q^y & ) & \; dy ∧ dz \\
+          & (               & - ∂_z ∂_x Q^z & - ∂_x ∂_y Q^y & ) & \; dy ∧ dz \\
           & ( - ∂_y ∂_z Q^z &               & - ∂_x ∂_y Q^x & ) & \; dz ∧ dx \\
           & ( - ∂_y ∂_z Q^y & - ∂_z ∂_x Q^x &               & ) & \; dx ∧ dy \\
       \end{alignedat} \right]
@@ -772,14 +772,9 @@ Applying the exterior derivative to :math:`⋆d⋆R^{♭♭}`, we obtain:
 .. math::
 
    d⋆d⋆ R^{♭♭} &= \left[ \begin{alignedat}{4}
-       ( & - & ∂_x ∂_x Q^x & - & ∂_x ∂_y Q^y & - & ∂_x ∂_z Q^z & ) & \; & dt ∧ dx \\
-       ( & - & ∂_x ∂_y Q^x & - & ∂_y ∂_y Q^y & - & ∂_y ∂_z Q^z & ) & \; & dt ∧ dy \\
-       ( & - & ∂_x ∂_z Q^x & - & ∂_z ∂_y Q^y & - & ∂_z ∂_z Q^z & ) & \; & dt ∧ dx \\
-   \end{alignedat} \right] \\[2mm]
-   &+ \left[ \begin{alignedat}{4}
-       & + & ∂_t^2 Q^x & \; & dt ∧ dx \\
-       & + & ∂_t^2 Q^y & \; & dt ∧ dy \\
-       & + & ∂_t^2 Q^z & \; & dt ∧ dz \\
+       ( & + & ∂_t^2 Q^x & - & ∂_x ∂_x Q^x & - & ∂_x ∂_y Q^y & - & ∂_x ∂_z Q^z & ) & \; & dt ∧ dx \\
+       ( & + & ∂_t^2 Q^y & - & ∂_x ∂_y Q^x & - & ∂_y ∂_y Q^y & - & ∂_y ∂_z Q^z & ) & \; & dt ∧ dy \\
+       ( & + & ∂_t^2 Q^z & - & ∂_x ∂_z Q^x & - & ∂_z ∂_y Q^y & - & ∂_z ∂_z Q^z & ) & \; & dt ∧ dx \\
    \end{alignedat} \right] \\[2mm]
    &+ \left[ \begin{alignedat}{4}
        ( &   \; &             & \; -  \; & ∂_t ∂_y R^z & \; + \; & ∂_t ∂_z R^y & ) & \; & dt ∧ dx \\
@@ -914,14 +909,9 @@ Applying the exterior derivative to :math:`⋆d⋆R^{♭♭}`, we obtain:
    .. math::
 
       d⋆d⋆ R^{♭♭} &= \left[ \begin{alignedat}{4}
-          ( & - & ∂_x ∂_x Q^x & - & ∂_x ∂_y Q^y & - & ∂_x ∂_z Q^z & ) & \; & dt ∧ dx \\
-          ( & - & ∂_x ∂_y Q^x & - & ∂_y ∂_y Q^y & - & ∂_y ∂_z Q^z & ) & \; & dt ∧ dy \\
-          ( & - & ∂_x ∂_z Q^x & - & ∂_z ∂_y Q^y & - & ∂_z ∂_z Q^z & ) & \; & dt ∧ dx \\
-      \end{alignedat} \right] \\[2mm]
-      &+ \left[ \begin{alignedat}{4}
-          & + & ∂_t^2 Q^x & \; & dt ∧ dx \\
-          & + & ∂_t^2 Q^y & \; & dt ∧ dy \\
-          & + & ∂_t^2 Q^z & \; & dt ∧ dz \\
+          ( & + & ∂_t^2 Q^x & - & ∂_x ∂_x Q^x & - & ∂_x ∂_y Q^y & - & ∂_x ∂_z Q^z & ) & \; & dt ∧ dx \\
+          ( & + & ∂_t^2 Q^y & - & ∂_x ∂_y Q^x & - & ∂_y ∂_y Q^y & - & ∂_y ∂_z Q^z & ) & \; & dt ∧ dy \\
+          ( & + & ∂_t^2 Q^z & - & ∂_x ∂_z Q^x & - & ∂_z ∂_y Q^y & - & ∂_z ∂_z Q^z & ) & \; & dt ∧ dx \\
       \end{alignedat} \right] \\[2mm]
       &+ \left[ \begin{alignedat}{4}
           ( &   \; &             & \; -  \; & ∂_t ∂_y R^z & \; + \; & ∂_t ∂_z R^y & ) & \; & dt ∧ dx \\
@@ -948,8 +938,141 @@ Applying the exterior derivative to :math:`⋆d⋆R^{♭♭}`, we obtain:
 
 .. }}}
 
-:math:`⋆d⋆dR^{♭♭}`
-------------------
+:math:`⋆d⋆d R^{♭♭}`
+-------------------
+
+.. {{{
+
+.. math::
+
+   ⋆d⋆d R^{♭♭} &= \left[ \begin{alignedat}{4}
+       ( & + ∂_t^2 R^x & - \, & ∂_x ∂_x & \; R^x & \, - \, & ∂_y ∂_x & \; R^y & \, - \, & ∂_x ∂_z & \; R^z & \; ) & \; dy ∧ dz \\
+       ( & + ∂_t^2 R^y & - \, & ∂_x ∂_y & \; R^x & \, - \, & ∂_y ∂_y & \; R^y & \, - \, & ∂_y ∂_z & \; R^z & \; ) & \; dy ∧ dx \\
+       ( & + ∂_t^2 R^z & - \, & ∂_x ∂_z & \; R^x & \, - \, & ∂_y ∂_z & \; R^y & \, - \, & ∂_z ∂_z & \; R^z & \; ) & \; dy ∧ dy \\
+   \end{alignedat} \right] \\[2mm]
+   &+ \left[ \begin{alignedat}{4}
+       & (               & + ∂_t ∂_y Q^z & - ∂_t ∂_z Q^y & ) & \; dy ∧ dz \\
+       & ( - ∂_t ∂_x Q^z &               & + ∂_t ∂_z Q^x & ) & \; dy ∧ dx \\
+       & ( + ∂_t ∂_x Q^y & - ∂_t ∂_y Q^x &               & ) & \; dy ∧ dy \\
+   \end{alignedat} \right] \\[2mm]
+   &+ \left[ \begin{alignedat}{4}
+       & (               & - ∂_t ∂_y R^z & + ∂_t ∂_z R^y & ) & \; dt ∧ dx \\
+       & ( + ∂_t ∂_x R^z &               & - ∂_t ∂_z R^x & ) & \; dt ∧ dy \\
+       & ( - ∂_t ∂_x R^y & + ∂_t ∂_y R^x &               & ) & \; dt ∧ dz \\
+   \end{alignedat} \right] \\[2mm]
+   &+ \left[ \begin{alignedat}{4}
+       & (            & + ∂_y^2 Q^x & + ∂_z^2 Q^x & ) & \; dt ∧ dx \\
+       & (+ ∂_x^2 Q^y &             & + ∂_z^2 Q^y & ) & \; dt ∧ dy \\
+       & (+ ∂_x^2 Q^z & + ∂_y^2 Q^z &             & ) & \; dt ∧ dz \\
+   \end{alignedat} \right] \\[2mm]
+   &+ \left[ \begin{alignedat}{4}
+       & (               & - ∂_z ∂_x Q^z & - ∂_x ∂_y Q^y & ) & \; dt ∧ dx \\
+       & ( - ∂_y ∂_z Q^z &               & - ∂_x ∂_y Q^x & ) & \; dt ∧ dy \\
+       & ( - ∂_y ∂_z Q^y & - ∂_z ∂_x Q^x &               & ) & \; dt ∧ dz \\
+   \end{alignedat} \right]
+
+.. admonition:: Calculations
+   :class: dropdown
+
+   .. {{{
+
+   .. rubric:: References
+
+   * :ref:`Hodge dual tables`
+
+   .. rubric:: Take the Hodge star
+
+   .. math::
+
+      ⋆d⋆d R^{♭♭} &= ⋆ \left[ \begin{alignedat}{4}
+          ( & - ∂_t^2 R^x & ∂_x ∂_x & \; R^x & \, + \, & ∂_y ∂_x & \; R^y & \, + \, & ∂_x ∂_z & \; R^z & \; ) & \; dt ∧ dx \\
+          ( & - ∂_t^2 R^y & ∂_x ∂_y & \; R^x & \, + \, & ∂_y ∂_y & \; R^y & \, + \, & ∂_y ∂_z & \; R^z & \; ) & \; dt ∧ dy \\
+          ( & - ∂_t^2 R^z & ∂_x ∂_z & \; R^x & \, + \, & ∂_y ∂_z & \; R^y & \, + \, & ∂_z ∂_z & \; R^z & \; ) & \; dt ∧ dz \\
+      \end{alignedat} \right] \\[2mm]
+      &+ ⋆ \left[ \begin{alignedat}{4}
+          & (               & - ∂_t ∂_y Q^z & + ∂_t ∂_z Q^y & ) & \; dt ∧ dx \\
+          & ( + ∂_t ∂_x Q^z &               & - ∂_t ∂_z Q^x & ) & \; dt ∧ dy \\
+          & ( - ∂_t ∂_x Q^y & + ∂_t ∂_y Q^x &               & ) & \; dt ∧ dz \\
+      \end{alignedat} \right] \\[2mm]
+      &+ ⋆ \left[ \begin{alignedat}{4}
+          & (               & - ∂_t ∂_y R^z & + ∂_t ∂_z R^y & ) & \; dy ∧ dz \\
+          & ( + ∂_t ∂_x R^z &               & - ∂_t ∂_z R^x & ) & \; dz ∧ dx \\
+          & ( - ∂_t ∂_x R^y & + ∂_t ∂_y R^x &               & ) & \; dx ∧ dy \\
+      \end{alignedat} \right] \\[2mm]
+      &+ ⋆ \left[ \begin{alignedat}{4}
+          & (            & + ∂_y^2 Q^x & + ∂_z^2 Q^x & ) & \; dy ∧ dz \\
+          & (+ ∂_x^2 Q^y &             & + ∂_z^2 Q^y & ) & \; dz ∧ dx \\
+          & (+ ∂_x^2 Q^z & + ∂_y^2 Q^z &             & ) & \; dx ∧ dy \\
+      \end{alignedat} \right] \\[2mm]
+      &+ ⋆ \left[ \begin{alignedat}{4}
+          & (               & - ∂_z ∂_x Q^z & - ∂_x ∂_y Q^y & ) & \; dy ∧ dz \\
+          & ( - ∂_y ∂_z Q^z &               & - ∂_x ∂_y Q^x & ) & \; dz ∧ dx \\
+          & ( - ∂_y ∂_z Q^y & - ∂_z ∂_x Q^x &               & ) & \; dx ∧ dy \\
+      \end{alignedat} \right]
+
+   .. rubric:: Distribute the Hodge star
+
+   .. math::
+
+      ⋆d⋆d R^{♭♭} &= \left[ \begin{alignedat}{4}
+          ( & - ∂_t^2 R^x & ∂_x ∂_x & \; R^x & \, + \, & ∂_y ∂_x & \; R^y & \, + \, & ∂_x ∂_z & \; R^z & \; ) & \; ⋆ dt ∧ dx \\
+          ( & - ∂_t^2 R^y & ∂_x ∂_y & \; R^x & \, + \, & ∂_y ∂_y & \; R^y & \, + \, & ∂_y ∂_z & \; R^z & \; ) & \; ⋆ dt ∧ dy \\
+          ( & - ∂_t^2 R^z & ∂_x ∂_z & \; R^x & \, + \, & ∂_y ∂_z & \; R^y & \, + \, & ∂_z ∂_z & \; R^z & \; ) & \; ⋆ dt ∧ dz \\
+      \end{alignedat} \right] \\[2mm]
+      &+ \left[ \begin{alignedat}{4}
+          & (               & - ∂_t ∂_y Q^z & + ∂_t ∂_z Q^y & ) & \; ⋆ dt ∧ dx \\
+          & ( + ∂_t ∂_x Q^z &               & - ∂_t ∂_z Q^x & ) & \; ⋆ dt ∧ dy \\
+          & ( - ∂_t ∂_x Q^y & + ∂_t ∂_y Q^x &               & ) & \; ⋆ dt ∧ dz \\
+      \end{alignedat} \right] \\[2mm]
+      &+ \left[ \begin{alignedat}{4}
+          & (               & - ∂_t ∂_y R^z & + ∂_t ∂_z R^y & ) & \; ⋆ dy ∧ dz \\
+          & ( + ∂_t ∂_x R^z &               & - ∂_t ∂_z R^x & ) & \; ⋆ dz ∧ dx \\
+          & ( - ∂_t ∂_x R^y & + ∂_t ∂_y R^x &               & ) & \; ⋆ dx ∧ dy \\
+      \end{alignedat} \right] \\[2mm]
+      &+ \left[ \begin{alignedat}{4}
+          & (            & + ∂_y^2 Q^x & + ∂_z^2 Q^x & ) & \; ⋆ dy ∧ dz \\
+          & (+ ∂_x^2 Q^y &             & + ∂_z^2 Q^y & ) & \; ⋆ dz ∧ dx \\
+          & (+ ∂_x^2 Q^z & + ∂_y^2 Q^z &             & ) & \; ⋆ dx ∧ dy \\
+      \end{alignedat} \right] \\[2mm]
+      &+ \left[ \begin{alignedat}{4}
+          & (               & - ∂_z ∂_x Q^z & - ∂_x ∂_y Q^y & ) & \; ⋆ dy ∧ dz \\
+          & ( - ∂_y ∂_z Q^z &               & - ∂_x ∂_y Q^x & ) & \; ⋆ dz ∧ dx \\
+          & ( - ∂_y ∂_z Q^y & - ∂_z ∂_x Q^x &               & ) & \; ⋆ dx ∧ dy \\
+      \end{alignedat} \right]
+
+   .. rubric:: Apply the Hodge star
+
+   .. math::
+
+      ⋆d⋆d R^{♭♭} &= \left[ \begin{alignedat}{4}
+          ( & + ∂_t^2 R^x & - \, & ∂_x ∂_x & \; R^x & \, - \, & ∂_y ∂_x & \; R^y & \, - \, & ∂_x ∂_z & \; R^z & \; ) & \; dy ∧ dz \\
+          ( & + ∂_t^2 R^y & - \, & ∂_x ∂_y & \; R^x & \, - \, & ∂_y ∂_y & \; R^y & \, - \, & ∂_y ∂_z & \; R^z & \; ) & \; dy ∧ dx \\
+          ( & + ∂_t^2 R^z & - \, & ∂_x ∂_z & \; R^x & \, - \, & ∂_y ∂_z & \; R^y & \, - \, & ∂_z ∂_z & \; R^z & \; ) & \; dy ∧ dy \\
+      \end{alignedat} \right] \\[2mm]
+      &+ \left[ \begin{alignedat}{4}
+          & (               & + ∂_t ∂_y Q^z & - ∂_t ∂_z Q^y & ) & \; dy ∧ dz \\
+          & ( - ∂_t ∂_x Q^z &               & + ∂_t ∂_z Q^x & ) & \; dy ∧ dx \\
+          & ( + ∂_t ∂_x Q^y & - ∂_t ∂_y Q^x &               & ) & \; dy ∧ dy \\
+      \end{alignedat} \right] \\[2mm]
+      &+ \left[ \begin{alignedat}{4}
+          & (               & - ∂_t ∂_y R^z & + ∂_t ∂_z R^y & ) & \; dt ∧ dx \\
+          & ( + ∂_t ∂_x R^z &               & - ∂_t ∂_z R^x & ) & \; dt ∧ dy \\
+          & ( - ∂_t ∂_x R^y & + ∂_t ∂_y R^x &               & ) & \; dt ∧ dz \\
+      \end{alignedat} \right] \\[2mm]
+      &+ \left[ \begin{alignedat}{4}
+          & (            & + ∂_y^2 Q^x & + ∂_z^2 Q^x & ) & \; dt ∧ dx \\
+          & (+ ∂_x^2 Q^y &             & + ∂_z^2 Q^y & ) & \; dt ∧ dy \\
+          & (+ ∂_x^2 Q^z & + ∂_y^2 Q^z &             & ) & \; dt ∧ dz \\
+      \end{alignedat} \right] \\[2mm]
+      &+ \left[ \begin{alignedat}{4}
+          & (               & - ∂_z ∂_x Q^z & - ∂_x ∂_y Q^y & ) & \; dt ∧ dx \\
+          & ( - ∂_y ∂_z Q^z &               & - ∂_x ∂_y Q^x & ) & \; dt ∧ dy \\
+          & ( - ∂_y ∂_z Q^y & - ∂_z ∂_x Q^x &               & ) & \; dt ∧ dz \\
+      \end{alignedat} \right]
+
+   .. }}}
+
+.. }}}
 
 Laplace-De Rham
 ---------------

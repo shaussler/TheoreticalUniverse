@@ -21,7 +21,7 @@ Differential Operators in Differential Form
    the_exterior_derivative_of_functions.rst
    the_exterior_derivative_of_translations.rst
    the_exterior_derivative_of_rotations.rst
-   the_exterior_derivative_of_volume_forms.rst
+   the_exterior_derivative_of_3volume_forms.rst
    the_exterior_derivative_of_4volume_forms.rst
 
 The following pages systematically explore the application of the exterior
@@ -406,14 +406,9 @@ the most general form in Minkowski space.
        & R^z\; dx ∧ dy \\
    \end{aligned} \right]
    &= \left[ \begin{alignedat}{4}
-       ( & - & ∂_x ∂_x Q^x & - & ∂_x ∂_y Q^y & - & ∂_x ∂_z Q^z & ) & \; & dt ∧ dx \\
-       ( & - & ∂_x ∂_y Q^x & - & ∂_y ∂_y Q^y & - & ∂_y ∂_z Q^z & ) & \; & dt ∧ dy \\
-       ( & - & ∂_x ∂_z Q^x & - & ∂_z ∂_y Q^y & - & ∂_z ∂_z Q^z & ) & \; & dt ∧ dx \\
-   \end{alignedat} \right] \\[2mm]
-   &+ \left[ \begin{alignedat}{4}
-       & + & ∂_t^2 Q^x & \; & dt ∧ dx \\
-       & + & ∂_t^2 Q^y & \; & dt ∧ dy \\
-       & + & ∂_t^2 Q^z & \; & dt ∧ dz \\
+       ( & + & ∂_t^2 Q^x & - & ∂_x ∂_x Q^x & - & ∂_x ∂_y Q^y & - & ∂_x ∂_z Q^z & ) & \; & dt ∧ dx \\
+       ( & + & ∂_t^2 Q^y & - & ∂_x ∂_y Q^x & - & ∂_y ∂_y Q^y & - & ∂_y ∂_z Q^z & ) & \; & dt ∧ dy \\
+       ( & + & ∂_t^2 Q^z & - & ∂_x ∂_z Q^x & - & ∂_z ∂_y Q^y & - & ∂_z ∂_z Q^z & ) & \; & dt ∧ dx \\
    \end{alignedat} \right] \\[2mm]
    &+ \left[ \begin{alignedat}{4}
        ( &   \; &             & \; -  \; & ∂_t ∂_y R^z & \; + \; & ∂_t ∂_z R^y & ) & \; & dt ∧ dx \\
@@ -431,7 +426,7 @@ the most general form in Minkowski space.
        ( & + \; & ∂_x^2 R^z & \; + \; & ∂_y^2 R^z & \;   \; &           & ) & \; & dx ∧ dy \\
    \end{alignedat} \right] \\[2mm]
    &+ \left[ \begin{alignedat}{4}
-       ( &   \; &             & \; - \; & ∂_y ∂_x R^y & \; - \; & ∂_z ∂_x R^z & ) & \; & dy ∧ dz \\
+       ( &   \; &             & \; - \; & ∂_y ∂_x R^z & \; - \; & ∂_z ∂_x R^z & ) & \; & dy ∧ dz \\
        ( & - \; & ∂_x ∂_y R^x & \;   \; &             & \; - \; & ∂_z ∂_y R^z & ) & \; & dz ∧ dx \\
        ( & - \; & ∂_x ∂_z R^x & \; - \; & ∂_y ∂_z R^y & \;   \; &             & ) & \; & dx ∧ dy \\
    \end{alignedat} \right]
@@ -440,7 +435,45 @@ the most general form in Minkowski space.
 
 .. math::
 
-   (d ⋆ d ⋆ + ⋆ d ⋆ d) \left[ \begin{aligned}
+   ⋆d⋆d \left[ \begin{aligned}
+     - & Q^x\; dt ∧ dx \\
+     - & Q^y\; dt ∧ dy \\
+     - & Q^z\; dt ∧ dz \\
+       & R^x\; dy ∧ dz \\
+       & R^y\; dz ∧ dx \\
+       & R^z\; dx ∧ dy \\
+   \end{aligned} \right]
+   &= \left[ \begin{alignedat}{4}
+       ( & + ∂_t^2 R^x & - \, & ∂_x ∂_x & \; R^x & \, - \, & ∂_y ∂_x & \; R^y & \, - \, & ∂_x ∂_z & \; R^z & \; ) & \; dy ∧ dz \\
+       ( & + ∂_t^2 R^y & - \, & ∂_x ∂_y & \; R^x & \, - \, & ∂_y ∂_y & \; R^y & \, - \, & ∂_y ∂_z & \; R^z & \; ) & \; dy ∧ dx \\
+       ( & + ∂_t^2 R^z & - \, & ∂_x ∂_z & \; R^x & \, - \, & ∂_y ∂_z & \; R^y & \, - \, & ∂_z ∂_z & \; R^z & \; ) & \; dy ∧ dy \\
+   \end{alignedat} \right] \\[2mm]
+   &+ \left[ \begin{alignedat}{4}
+       & (               & + ∂_t ∂_y Q^z & - ∂_t ∂_z Q^y & ) & \; dy ∧ dz \\
+       & ( - ∂_t ∂_x Q^z &               & + ∂_t ∂_z Q^x & ) & \; dy ∧ dx \\
+       & ( + ∂_t ∂_x Q^y & - ∂_t ∂_y Q^x &               & ) & \; dy ∧ dy \\
+   \end{alignedat} \right] \\[2mm]
+   &+ \left[ \begin{alignedat}{4}
+       & (               & - ∂_t ∂_y R^z & + ∂_t ∂_z R^y & ) & \; dt ∧ dx \\
+       & ( + ∂_t ∂_x R^z &               & - ∂_t ∂_z R^x & ) & \; dt ∧ dy \\
+       & ( - ∂_t ∂_x R^y & + ∂_t ∂_y R^x &               & ) & \; dt ∧ dz \\
+   \end{alignedat} \right] \\[2mm]
+   &+ \left[ \begin{alignedat}{4}
+       & (            & + ∂_y^2 Q^x & + ∂_z^2 Q^x & ) & \; dt ∧ dx \\
+       & (+ ∂_x^2 Q^y &             & + ∂_z^2 Q^y & ) & \; dt ∧ dy \\
+       & (+ ∂_x^2 Q^z & + ∂_y^2 Q^z &             & ) & \; dt ∧ dz \\
+   \end{alignedat} \right] \\[2mm]
+   &+ \left[ \begin{alignedat}{4}
+       & (               & - ∂_z ∂_x Q^z & - ∂_x ∂_y Q^y & ) & \; dt ∧ dx \\
+       & ( - ∂_y ∂_z Q^z &               & - ∂_x ∂_y Q^x & ) & \; dt ∧ dy \\
+       & ( - ∂_y ∂_z Q^y & - ∂_z ∂_x Q^x &               & ) & \; dt ∧ dz \\
+   \end{alignedat} \right]
+
+----
+
+.. math::
+
+   (d⋆d⋆ - ⋆d⋆d) \left[ \begin{aligned}
      - & Q^x \; dt ∧ dx \\
      - & Q^y \; dt ∧ dy \\
      - & Q^z \; dt ∧ dz \\
