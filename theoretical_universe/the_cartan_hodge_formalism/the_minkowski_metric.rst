@@ -6,34 +6,35 @@
 
 .. _the_minkowski_metric:
 
-The Minkowski Metric
-====================
+Minkowski metric
+================
 
 .. rst-class:: custom-author
 
    by Stéphane Haussler
 
+.. {{{
+
 The Minkowski metric describes a four-dimensional flat spacetime, in contrast
-to the curved spacetime described by general relativity. Concretely, the doubly
-contravariant metric tensor is calculated using the dot product of all basis
-vectors :math:`∂_μ \cdot ∂_ν = g_{μν}`. It is described by a matrix where
-temporal and spatial components are distinguished by their signs. For flat
-spacetime the metric tensor :math:`g` is noted :math:`η`. In that case, the
-only non-zero components of the matrix representation are the diagonal
-elements. The components are either :math:`1` for time, or :math:`-1` for
-space, thereby using metric signature :math:`(+, -, -, -)`. The metric tensor
-for four-dimensional Minkowski space is often represented by the same matrix
-for both contravariant and covariant forms:
+to the curved spacetime of general relativity. Concretely, the doubly covariant
+metric tensor is calculated using the dot product of all basis vectors
+:math:`∂_μ \cdot ∂_ν = g_{μν}`. It is described by a matrix where temporal and
+spatial components are distinguished by their signs. For flat spacetime the
+metric tensor :math:`g` is noted :math:`η`. In that case, the only non-zero
+components of the matrix representation are the diagonal elements. The
+components are either :math:`+1` for time, or :math:`-1` for space, thereby
+using metric signature :math:`(+, -, -, -)`. The metric tensor for
+four-dimensional Minkowski space is often represented by the same matrix for
+both contravariant and covariant forms:
 
 .. math::
 
    η = \left[ \begin{alignedat}{6}
-     + & 1 \quad&   & 0 \quad &  & 0 \quad  &   & 0 \\
-       & 0 \quad& - & 1 \quad &  & 0 \quad  &   & 0 \\
-       & 0 \quad&   & 0 \quad & -& 1 \quad  &   & 0 \\
-       & 0 \quad&   & 0 \quad &  & 0 \quad  & - & 1 \\
+       + & 1 \quad&   & 0 \quad &  & 0 \quad  &   & 0 \\
+         & 0 \quad& - & 1 \quad &  & 0 \quad  &   & 0 \\
+         & 0 \quad&   & 0 \quad & -& 1 \quad  &   & 0 \\
+         & 0 \quad&   & 0 \quad &  & 0 \quad  & - & 1 \\
    \end{alignedat} \right]
-
 
 The drawback of this notation is that the metric tensor is given either in
 doubly covariant form :math:`η_{μν}`, or doubly contravariant form
@@ -42,9 +43,9 @@ convention <https://en.m.wikipedia.org/wiki/Row-_and_column-major_order>`_.
 This row/column representation does not necessarily adhere to standard matrix
 multiplication rules but often does because the non-diagonal elements are zero!
 To strictly follow matrix multiplication rules, we need an object that takes in
-a covariant vector :math:`v_{μ}` and outputs a contravariant vector
+a contravariant vector :math:`v^{μ}` and outputs a contravariant vector
 :math:`v^{μ}`. Concretely, we would need a mixed covariant-contravariant
-:math:`η^{μ}_{ν}` tensor. Using :ref:`musical notation<Musicality>` and
+:math:`η^{μ}{}_{ν}` tensor. Using :ref:`musical notation<Musicality>` and
 :ref:`the free matrix representation <The Free Matrix Representation>`, we can
 resolve this by explicitly expressing the metric tensor with its basis, making
 the zero elements unnecessary:
@@ -62,24 +63,24 @@ We can then reduce the representation to the much more compact form:
 
 .. math::
 
-   η^{♯♯} = \begin{bmatrix}
-     + ∂_t ⊗ ∂_t \\
-     - ∂_x ⊗ ∂_x \\
-     - ∂_y ⊗ ∂_y \\
-     - ∂_z ⊗ ∂_z \\
-   \end{bmatrix}
+   η^{♯♯} = \left[ \begin{alignedat}{3}
+       + & \, ∂_t & \, ⊗ & \, ∂_t \\
+       - & \, ∂_x & \, ⊗ & \, ∂_x \\
+       - & \, ∂_y & \, ⊗ & \, ∂_y \\
+       - & \, ∂_z & \, ⊗ & \, ∂_z \\
+   \end{alignedat} \right]
 
 Equivalently and with the same procedure, we express the doubly covariant
 metric tensor with:
 
 .. math::
 
-   η^{♭♭} = \begin{bmatrix}
-     + dt ⊗ dt \\
-     - dx ⊗ dx \\
-     - dy ⊗ dy \\
-     - dz ⊗ dz \\
-   \end{bmatrix}
+   η^{♭♭} = \left[ \begin{alignedat}{3}
+       + & \, dt & \, ⊗ & \, dt \\
+       - & \, dx & \, ⊗ & \, dx \\
+       - & \, dy & \, ⊗ & \, dy \\
+       - & \, dz & \, ⊗ & \, dz \\
+   \end{alignedat} \right]
 
 .. rubric:: Applying the metric to a vectors and covectors
 
@@ -140,3 +141,5 @@ tensor product can also be sharpened or flattend:
    (∂_μ ⊗ ∂_ν)^{♭♭} = (∂_μ)^♭ ⊗ (∂_ν)^♭
                     = (η_{δμ} dx^δ) ⊗ (η_{γν} dx^γ)
                     = η_{δμ} η_{γν} dx^δ ⊗ dx^γ
+
+.. }}}

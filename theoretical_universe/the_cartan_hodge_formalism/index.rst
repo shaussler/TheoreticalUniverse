@@ -22,7 +22,6 @@ The Cartan-Hodge Formalism
    musicality.rst
    hodge_duality.rst
    the_free_matrix_representation.rst
-   permutation_operator.rst
    the_minkowski_metric.rst
 
 Summary
