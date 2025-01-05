@@ -381,7 +381,7 @@ the most general form in Minkowski space.
        & (               & - ∂_z ∂_x Q^y & - ∂_x ∂_y Q^y & ) \; dy ∧ dz \\
        & ( - ∂_y ∂_z Q^z &               & - ∂_x ∂_y Q^x & ) \; dz ∧ dx \\
        & ( - ∂_y ∂_z Q^y & - ∂_z ∂_x Q^x &               & ) \; dx ∧ dy \\
-   \end{alignedat} \right]
+   \end{alignedat} \right] \\[2mm]
    &+ \left[ \begin{alignedat}{4}
        & (               & + ∂_x ∂_y R^y & + ∂_x ∂_z R^z & ) \; dt ∧ dx \\
        & ( + ∂_y ∂_x R^x &               & + ∂_y ∂_z R^z & ) \; dt ∧ dy \\
@@ -405,31 +405,31 @@ the most general form in Minkowski space.
          & R^y\; dz ∧ dx \\
          & R^z\; dx ∧ dy \\
    \end{aligned} \right]
-   &+ \left[ \begin{alignedat}{4}
+   &= \left[ \begin{alignedat}{4}
        & ( + ∂_t^2 Q^x & - ∂_x^2 Q^x &             &             & ) \; dt ∧ dx \\
        & ( + ∂_t^2 Q^y &             & - ∂_y^2 Q^y &             & ) \; dt ∧ dy \\
        & ( + ∂_t^2 Q^z &             &             & - ∂_z^2 Q^z & ) \; dt ∧ dx \\
-   \end{alignedat} \right] \\[-3mm]
+   \end{alignedat} \right] \\[-2mm]
    &+ \left[ \begin{alignedat}{4}
        & (               & + ∂_y^2 R^x   & + ∂_z^2 R^x   & ) \; dy ∧ dz \\
        & ( + ∂_x^2 R^y   &               & + ∂_z^2 R^y   & ) \; dz ∧ dx \\
        & ( + ∂_x^2 R^z   & + ∂_y^2 R^z   &               & ) \; dx ∧ dy \\
-   \end{alignedat} \right] \\[3mm]
+   \end{alignedat} \right] \\[2mm]
    &+ \left[ \begin{alignedat}{4}
        & (               & - ∂_x ∂_y Q^y & - ∂_z ∂_x Q^z & ) \; dt ∧ dx \\
        & ( - ∂_x ∂_y Q^x &               & - ∂_y ∂_z Q^z & ) \; dt ∧ dy \\
        & ( - ∂_z ∂_x Q^x & - ∂_z ∂_y Q^y & -             & ) \; dt ∧ dx \\
-   \end{alignedat} \right] \\[3mm]
+   \end{alignedat} \right] \\[2mm]
    &+ \left[ \begin{alignedat}{4}
        & (               & + ∂_t ∂_y Q^z & - ∂_t ∂_z Q^y & ) \; dy ∧ dz \\
        & ( - ∂_t ∂_x Q^z &               & + ∂_t ∂_z Q^x & ) \; dz ∧ dx \\
        & ( + ∂_t ∂_x Q^y & - ∂_t ∂_y Q^x &               & ) \; dx ∧ dy \\
-   \end{alignedat} \right] \\[3mm]
+   \end{alignedat} \right] \\[2mm]
    &+ \left[ \begin{alignedat}{4}
        & (               & - ∂_t ∂_y R^z & + ∂_t ∂_z R^y & ) \; dt ∧ dx \\
        & ( + ∂_t ∂_x R^z &               & - ∂_t ∂_z R^x & ) \; dt ∧ dy \\
        & ( - ∂_t ∂_x R^y & + ∂_t ∂_y R^x &               & ) \; dt ∧ dz \\
-   \end{alignedat} \right] \\[3mm]
+   \end{alignedat} \right] \\[2mm]
    &+ \left[ \begin{alignedat}{4}
        & (               & - ∂_x ∂_y R^y & - ∂_x ∂_z R^z & ) \; dy ∧ dz \\
        & ( - ∂_y ∂_x R^x &               & - ∂_y ∂_z R^z & ) \; dz ∧ dx \\
@@ -452,32 +452,32 @@ the most general form in Minkowski space.
        & ( + ∂_t^2 R^x & - ∂_x^2 R^x &             &             & ) \; dy ∧ dz \\
        & ( + ∂_t^2 R^y &             & - ∂_y^2 R^y &             & ) \; dy ∧ dx \\
        & ( + ∂_t^2 R^z &             &             & - ∂_z^2 R^z & ) \; dy ∧ dy \\
-   \end{alignedat} \right] \\[-3mm]
+   \end{alignedat} \right] \\[-2mm]
    &+ \left[ \begin{alignedat}{4}
        & (               & + ∂_y^2 Q^x & + ∂_z^2 Q^x & ) \; dt ∧ dx \\
        & ( + ∂_x^2 Q^y   &             & + ∂_z^2 Q^y & ) \; dt ∧ dy \\
        & ( + ∂_x^2 Q^z   & + ∂_y^2 Q^z &             & ) \; dt ∧ dz \\
-   \end{alignedat} \right] \\[3mm]
+   \end{alignedat} \right] \\[2mm]
    &+ \left[ \begin{alignedat}{4}
        & (               & - ∂_x ∂_y Q^y & - ∂_z ∂_x Q^z & ) \; dt ∧ dx \\
        & ( - ∂_x ∂_y Q^x &               & - ∂_y ∂_z Q^z & ) \; dt ∧ dy \\
        & ( - ∂_z ∂_x Q^x & - ∂_y ∂_z Q^y &               & ) \; dt ∧ dz \\
-   \end{alignedat} \right] \\[3mm]
+   \end{alignedat} \right] \\[2mm]
    &+ \left[ \begin{alignedat}{4}
        & (               & + ∂_t ∂_y Q^z & - ∂_t ∂_z Q^y & ) \; dy ∧ dz \\
        & ( - ∂_t ∂_x Q^z &               & + ∂_t ∂_z Q^x & ) \; dy ∧ dx \\
        & ( + ∂_t ∂_x Q^y & - ∂_t ∂_y Q^x &               & ) \; dy ∧ dy \\
-   \end{alignedat} \right] \\[3mm]
+   \end{alignedat} \right] \\[2mm]
    &+ \left[ \begin{alignedat}{4}
        & (               & - ∂_t ∂_y R^z & + ∂_t ∂_z R^y & ) \; dt ∧ dx \\
        & ( + ∂_t ∂_x R^z &               & - ∂_t ∂_z R^x & ) \; dt ∧ dy \\
        & ( - ∂_t ∂_x R^y & + ∂_t ∂_y R^x &               & ) \; dt ∧ dz \\
-   \end{alignedat} \right] \\[3mm]
+   \end{alignedat} \right] \\[2mm]
    &+ \left[ \begin{alignedat}{4}
        & (               & - ∂_x ∂_y R^y & - ∂_x ∂_z R^z & ) \; dy ∧ dz \\
        & ( - ∂_y ∂_x R^x &               & - ∂_y ∂_z R^z & ) \; dz ∧ dx \\
        & ( - ∂_z ∂_x R^x & - ∂_z ∂_y R^y &               & ) \; dx ∧ dy \\
-   \end{alignedat} \right] \\[3mm]
+   \end{alignedat} \right]
 
 ----
 
