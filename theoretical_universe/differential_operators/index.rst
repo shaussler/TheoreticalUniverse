@@ -298,18 +298,18 @@ the most general form in Minkowski space.
 .. math::
 
    d⋆ \left[ \begin{aligned}
-     - & Q^x \; dt ∧ dx \\
-     - & Q^y \; dt ∧ dy \\
-     - & Q^z \; dt ∧ dz \\
-       & R^x \; dy ∧ dz \\
-       & R^y \; dz ∧ dx \\
-       & R^z \; dx ∧ dy \\
+       - & Q^x \; dt ∧ dx \\
+       - & Q^y \; dt ∧ dy \\
+       - & Q^z \; dt ∧ dz \\
+         & R^x \; dy ∧ dz \\
+         & R^y \; dz ∧ dx \\
+         & R^z \; dx ∧ dy \\
    \end{aligned} \right]
    = \left[ \begin{alignedat}{5}
-     ( &           &+ ∂_x Q^x & + ∂_y Q^y & + ∂_z Q^z & \: ) \; dx ∧ dy ∧ dz \\
-     ( & + ∂_t Q^x &          & - ∂_y R^z & + ∂_z R^y & \: ) \; dt ∧ dy ∧ dz \\
-     ( & + ∂_t Q^y &+ ∂_x R^z &           & - ∂_z R^x & \: ) \; dt ∧ dz ∧ dx \\
-     ( & + ∂_t Q^z &- ∂_x R^y & + ∂_y R^x &           & \: ) \; dt ∧ dx ∧ dy \\
+       & (           & + ∂_x Q^x & + ∂_y Q^y & + ∂_z Q^z & ) \; dx ∧ dy ∧ dz \\
+       & ( + ∂_t Q^x &           & - ∂_y R^z & + ∂_z R^y & ) \; dt ∧ dy ∧ dz \\
+       & ( + ∂_t Q^y & + ∂_x R^z &           & - ∂_z R^x & ) \; dt ∧ dz ∧ dx \\
+       & ( + ∂_t Q^z & - ∂_x R^y & + ∂_y R^x &           & ) \; dt ∧ dx ∧ dy \\
    \end{alignedat} \right]
 
 ----
@@ -317,18 +317,18 @@ the most general form in Minkowski space.
 .. math::
 
    ⋆d \left[ \begin{aligned}
-     - & Q^x\; dt ∧ dx \\
-     - & Q^y\; dt ∧ dy \\
-     - & Q^z\; dt ∧ dz \\
-       & R^x\; dy ∧ dz \\
-       & R^y\; dz ∧ dx \\
-       & R^z\; dx ∧ dy \\
+       - & Q^x\; dt ∧ dx \\
+       - & Q^y\; dt ∧ dy \\
+       - & Q^z\; dt ∧ dz \\
+         & R^x\; dy ∧ dz \\
+         & R^y\; dz ∧ dx \\
+         & R^z\; dx ∧ dy \\
    \end{aligned} \right]
    = \left[ \begin{alignedat}{5}
-     ( &         & - ∂_x R^x & - ∂_y R^y & - ∂_z R^z & \: ) \; dt \\
-     ( & - ∂_t R^x &         & - ∂_y Q^z & + ∂_z Q^y & \: ) \; dx \\
-     ( & - ∂_t R^y & + ∂_x Q^z &         & - ∂_z Q^x & \: ) \; dy \\
-     ( & - ∂_t R^z & - ∂_x Q^y & + ∂_y Q^x &         & \: ) \; dz \\
+       & (           & - ∂_x R^x & - ∂_y R^y & - ∂_z R^z & ) \; dt \\
+       & ( - ∂_t R^x &           & - ∂_y Q^z & + ∂_z Q^y & ) \; dx \\
+       & ( - ∂_t R^y & + ∂_x Q^z &           & - ∂_z Q^x & ) \; dy \\
+       & ( - ∂_t R^z & - ∂_x Q^y & + ∂_y Q^x &           & ) \; dz \\
    \end{alignedat} \right]
 
 ----
@@ -336,18 +336,18 @@ the most general form in Minkowski space.
 .. math::
 
    ⋆d⋆ \left[ \begin{aligned}
-     - & Q^x \; dt ∧ dx \\
-     - & Q^y \; dt ∧ dy \\
-     - & Q^z \; dt ∧ dz \\
-       & R^x \; dy ∧ dz \\
-       & R^y \; dz ∧ dx \\
-       & R^z \; dx ∧ dy \\
+       - & Q^x \; dt ∧ dx \\
+       - & Q^y \; dt ∧ dy \\
+       - & Q^z \; dt ∧ dz \\
+         & R^x \; dy ∧ dz \\
+         & R^y \; dz ∧ dx \\
+         & R^z \; dx ∧ dy \\
    \end{aligned} \right]
    \left[ \begin{alignedat}{5}
-     (&         & + ∂_x Q^x & + ∂_y Q^y & + ∂_z Q^z &\:) \; dt \\
-     (& + ∂_t Q^x &         & - ∂_y R^z & + ∂_z R^y &\:) \; dx \\
-     (& + ∂_t Q^y & + ∂_x R^z &         & - ∂_z R^x &\:) \; dy \\
-     (& + ∂_t Q^z & - ∂_x R^y & + ∂_y R^x &         &\:) \; dz \\
+       & (           & + ∂_x Q^x & + ∂_y Q^y & + ∂_z Q^z & ) \; dt \\
+       & ( + ∂_t Q^x &           & - ∂_y R^z & + ∂_z R^y & ) \; dx \\
+       & ( + ∂_t Q^y & + ∂_x R^z &           & - ∂_z R^x & ) \; dy \\
+       & ( + ∂_t Q^z & - ∂_x R^y & + ∂_y R^x &           & ) \; dz \\
    \end{alignedat} \right]
 
 ----
@@ -355,80 +355,85 @@ the most general form in Minkowski space.
 .. math::
 
    d⋆d \left[ \begin{aligned}
-     - & Q^x\; dt ∧ dx \\
-     - & Q^y\; dt ∧ dy \\
-     - & Q^z\; dt ∧ dz \\
-       & R^x\; dy ∧ dz \\
-       & R^y\; dz ∧ dx \\
-       & R^z\; dx ∧ dy \\
+       - & Q^x\; dt ∧ dx \\
+       - & Q^y\; dt ∧ dy \\
+       - & Q^z\; dt ∧ dz \\
+         & R^x\; dy ∧ dz \\
+         & R^y\; dz ∧ dx \\
+         & R^z\; dx ∧ dy \\
    \end{aligned} \right]
    &= \left[ \begin{alignedat}{4}
-       ( & ∂_x ∂_x & \; R^x & \, + \, & ∂_x ∂_y & \; R^y & \, + \, & ∂_x ∂_z & \; R^z & \; ) & \; dt ∧ dx \\
-       ( & ∂_x ∂_y & \; R^x & \, + \, & ∂_y ∂_y & \; R^y & \, + \, & ∂_y ∂_z & \; R^z & \; ) & \; dt ∧ dy \\
-       ( & ∂_x ∂_z & \; R^x & \, + \, & ∂_y ∂_z & \; R^y & \, + \, & ∂_z ∂_z & \; R^z & \; ) & \; dt ∧ dz \\
+       & ( - ∂_t^2 R^x & + ∂_x^2 R^x &             &             & ) \; dt ∧ dx \\
+       & ( - ∂_t^2 R^y &             & + ∂_y^2 R^y &             & ) \; dt ∧ dy \\
+       & ( - ∂_t^2 R^z &             &             & + ∂_z^2 R^z & ) \; dt ∧ dz \\
    \end{alignedat} \right] \\[2mm]
    &+ \left[ \begin{alignedat}{4}
-       & - ∂_t^2 R^x & \; dt ∧ dx \\
-       & - ∂_t^2 R^y & \; dt ∧ dy \\
-       & - ∂_t^2 R^z & \; dt ∧ dz \\
+       & (            & + ∂_y^2 Q^x & + ∂_z^2 Q^x & ) \; dy ∧ dz \\
+       & (+ ∂_x^2 Q^y &             & + ∂_z^2 Q^y & ) \; dz ∧ dx \\
+       & (+ ∂_x^2 Q^z & + ∂_y^2 Q^z &             & ) \; dx ∧ dy \\
    \end{alignedat} \right] \\[2mm]
    &+ \left[ \begin{alignedat}{4}
-       & (               & - ∂_t ∂_y Q^z & + ∂_t ∂_z Q^y & ) & \; dt ∧ dx \\
-       & ( + ∂_t ∂_x Q^z &               & - ∂_t ∂_z Q^x & ) & \; dt ∧ dy \\
-       & ( - ∂_t ∂_x Q^y & + ∂_t ∂_y Q^x &               & ) & \; dt ∧ dz \\
+       & (               & - ∂_t ∂_y Q^z & + ∂_t ∂_z Q^y & ) \; dt ∧ dx \\
+       & ( + ∂_t ∂_x Q^z &               & - ∂_t ∂_z Q^x & ) \; dt ∧ dy \\
+       & ( - ∂_t ∂_x Q^y & + ∂_t ∂_y Q^x &               & ) \; dt ∧ dz \\
    \end{alignedat} \right] \\[2mm]
    &+ \left[ \begin{alignedat}{4}
-       & (               & - ∂_t ∂_y R^z & + ∂_t ∂_z R^y & ) & \; dy ∧ dz \\
-       & ( + ∂_t ∂_x R^z &               & - ∂_t ∂_z R^x & ) & \; dz ∧ dx \\
-       & ( - ∂_t ∂_x R^y & + ∂_t ∂_y R^x &               & ) & \; dx ∧ dy \\
-   \end{alignedat} \right] \\[2mm]
-   &+ \left[ \begin{alignedat}{4}
-       & (            & + ∂_y^2 Q^x & + ∂_z^2 Q^x & ) & \; dy ∧ dz \\
-       & (+ ∂_x^2 Q^y &             & + ∂_z^2 Q^y & ) & \; dz ∧ dx \\
-       & (+ ∂_x^2 Q^z & + ∂_y^2 Q^z &             & ) & \; dx ∧ dy \\
-   \end{alignedat} \right] \\[2mm]
-   &+ \left[ \begin{alignedat}{4}
-       & (               & - ∂_z ∂_x Q^y & - ∂_x ∂_y Q^y & ) & \; dy ∧ dz \\
-       & ( - ∂_y ∂_z Q^z &               & - ∂_x ∂_y Q^x & ) & \; dz ∧ dx \\
-       & ( - ∂_y ∂_z Q^y & - ∂_z ∂_x Q^x &               & ) & \; dx ∧ dy \\
+       & (               & - ∂_z ∂_x Q^y & - ∂_x ∂_y Q^y & ) \; dy ∧ dz \\
+       & ( - ∂_y ∂_z Q^z &               & - ∂_x ∂_y Q^x & ) \; dz ∧ dx \\
+       & ( - ∂_y ∂_z Q^y & - ∂_z ∂_x Q^x &               & ) \; dx ∧ dy \\
    \end{alignedat} \right]
+   &+ \left[ \begin{alignedat}{4}
+       & (               & + ∂_x ∂_y R^y & + ∂_x ∂_z R^z & ) \; dt ∧ dx \\
+       & ( + ∂_y ∂_x R^x &               & + ∂_y ∂_z R^z & ) \; dt ∧ dy \\
+       & ( + ∂_z ∂_x R^x & + ∂_z ∂_y R^y &               & ) \; dt ∧ dz \\
+   \end{alignedat} \right] \\[2mm]
+   &+ \left[ \begin{alignedat}{4}
+       & (               & - ∂_t ∂_y R^z & + ∂_t ∂_z R^y & ) \; dy ∧ dz \\
+       & ( + ∂_t ∂_x R^z &               & - ∂_t ∂_z R^x & ) \; dz ∧ dx \\
+       & ( - ∂_t ∂_x R^y & + ∂_t ∂_y R^x &               & ) \; dx ∧ dy \\
+   \end{alignedat} \right] \\[2mm]
 
 ----
 
 .. math::
 
    d⋆d⋆ \left[ \begin{aligned}
-     - & Q^x\; dt ∧ dx \\
-     - & Q^y\; dt ∧ dy \\
-     - & Q^z\; dt ∧ dz \\
-       & R^x\; dy ∧ dz \\
-       & R^y\; dz ∧ dx \\
-       & R^z\; dx ∧ dy \\
+       - & Q^x\; dt ∧ dx \\
+       - & Q^y\; dt ∧ dy \\
+       - & Q^z\; dt ∧ dz \\
+         & R^x\; dy ∧ dz \\
+         & R^y\; dz ∧ dx \\
+         & R^z\; dx ∧ dy \\
    \end{aligned} \right]
-   &= \left[ \begin{alignedat}{4}
-       ( & + & ∂_t^2 Q^x & - & ∂_x ∂_x Q^x & - & ∂_x ∂_y Q^y & - & ∂_x ∂_z Q^z & ) & \; & dt ∧ dx \\
-       ( & + & ∂_t^2 Q^y & - & ∂_x ∂_y Q^x & - & ∂_y ∂_y Q^y & - & ∂_y ∂_z Q^z & ) & \; & dt ∧ dy \\
-       ( & + & ∂_t^2 Q^z & - & ∂_x ∂_z Q^x & - & ∂_z ∂_y Q^y & - & ∂_z ∂_z Q^z & ) & \; & dt ∧ dx \\
-   \end{alignedat} \right] \\[2mm]
    &+ \left[ \begin{alignedat}{4}
-       ( &   \; &             & \; -  \; & ∂_t ∂_y R^z & \; + \; & ∂_t ∂_z R^y & ) & \; & dt ∧ dx \\
-       ( & + \; & ∂_t ∂_x R^z & \;    \; &             & \; - \; & ∂_t ∂_z R^x & ) & \; & dt ∧ dy \\
-       ( & - \; & ∂_t ∂_x R^y & \; +  \; & ∂_t ∂_y R^x & \;   \; &             & ) & \; & dt ∧ dz \\
-   \end{alignedat} \right] \\[2mm]
+       & ( + ∂_t^2 Q^x & - ∂_x^2 Q^x &             &             & ) \; dt ∧ dx \\
+       & ( + ∂_t^2 Q^y &             & - ∂_y^2 Q^y &             & ) \; dt ∧ dy \\
+       & ( + ∂_t^2 Q^z &             &             & - ∂_z^2 Q^z & ) \; dt ∧ dx \\
+   \end{alignedat} \right] \\[-3mm]
    &+ \left[ \begin{alignedat}{4}
-       ( &   \; &             & \; + \; & ∂_y ∂_t Q^z & \; - \; & ∂_z ∂_t Q^y & ) & \; & dy ∧ dz \\
-       ( & - \; & ∂_x ∂_t Q^z & \;   \; &             & \; + \; & ∂_z ∂_t Q^x & ) & \; & dz ∧ dx \\
-       ( & + \; & ∂_x ∂_t Q^y & \; - \; & ∂_y ∂_t Q^x & \;   \; &             & ) & \; & dx ∧ dy \\
-   \end{alignedat} \right] \\[2mm]
+       & (               & + ∂_y^2 R^x   & + ∂_z^2 R^x   & ) \; dy ∧ dz \\
+       & ( + ∂_x^2 R^y   &               & + ∂_z^2 R^y   & ) \; dz ∧ dx \\
+       & ( + ∂_x^2 R^z   & + ∂_y^2 R^z   &               & ) \; dx ∧ dy \\
+   \end{alignedat} \right] \\[3mm]
    &+ \left[ \begin{alignedat}{4}
-       ( &   \; &           & \; + \; & ∂_y^2 R^x & \; + \; & ∂_z^2 R^x & ) & \; & dy ∧ dz \\
-       ( & + \; & ∂_x^2 R^y & \;   \; &           & \; + \; & ∂_z^2 R^y & ) & \; & dz ∧ dx \\
-       ( & + \; & ∂_x^2 R^z & \; + \; & ∂_y^2 R^z & \;   \; &           & ) & \; & dx ∧ dy \\
-   \end{alignedat} \right] \\[2mm]
+       & (               & - ∂_x ∂_y Q^y & - ∂_z ∂_x Q^z & ) \; dt ∧ dx \\
+       & ( - ∂_x ∂_y Q^x &               & - ∂_y ∂_z Q^z & ) \; dt ∧ dy \\
+       & ( - ∂_z ∂_x Q^x & - ∂_z ∂_y Q^y & -             & ) \; dt ∧ dx \\
+   \end{alignedat} \right] \\[3mm]
    &+ \left[ \begin{alignedat}{4}
-       ( &   \; &             & \; - \; & ∂_y ∂_x R^z & \; - \; & ∂_z ∂_x R^z & ) & \; & dy ∧ dz \\
-       ( & - \; & ∂_x ∂_y R^x & \;   \; &             & \; - \; & ∂_z ∂_y R^z & ) & \; & dz ∧ dx \\
-       ( & - \; & ∂_x ∂_z R^x & \; - \; & ∂_y ∂_z R^y & \;   \; &             & ) & \; & dx ∧ dy \\
+       & (               & + ∂_t ∂_y Q^z & - ∂_t ∂_z Q^y & ) \; dy ∧ dz \\
+       & ( - ∂_t ∂_x Q^z &               & + ∂_t ∂_z Q^x & ) \; dz ∧ dx \\
+       & ( + ∂_t ∂_x Q^y & - ∂_t ∂_y Q^x &               & ) \; dx ∧ dy \\
+   \end{alignedat} \right] \\[3mm]
+   &+ \left[ \begin{alignedat}{4}
+       & (               & - ∂_t ∂_y R^z & + ∂_t ∂_z R^y & ) \; dt ∧ dx \\
+       & ( + ∂_t ∂_x R^z &               & - ∂_t ∂_z R^x & ) \; dt ∧ dy \\
+       & ( - ∂_t ∂_x R^y & + ∂_t ∂_y R^x &               & ) \; dt ∧ dz \\
+   \end{alignedat} \right] \\[3mm]
+   &+ \left[ \begin{alignedat}{4}
+       & (               & - ∂_x ∂_y R^y & - ∂_x ∂_z R^z & ) \; dy ∧ dz \\
+       & ( - ∂_y ∂_x R^x &               & - ∂_y ∂_z R^z & ) \; dz ∧ dx \\
+       & ( - ∂_z ∂_x R^x & - ∂_z ∂_y R^y &               & ) \; dx ∧ dy \\
    \end{alignedat} \right]
 
 ----
@@ -436,58 +441,63 @@ the most general form in Minkowski space.
 .. math::
 
    ⋆d⋆d \left[ \begin{aligned}
-     - & Q^x\; dt ∧ dx \\
-     - & Q^y\; dt ∧ dy \\
-     - & Q^z\; dt ∧ dz \\
-       & R^x\; dy ∧ dz \\
-       & R^y\; dz ∧ dx \\
-       & R^z\; dx ∧ dy \\
+       - & Q^x\; dt ∧ dx \\
+       - & Q^y\; dt ∧ dy \\
+       - & Q^z\; dt ∧ dz \\
+         & R^x\; dy ∧ dz \\
+         & R^y\; dz ∧ dx \\
+         & R^z\; dx ∧ dy \\
    \end{aligned} \right]
    &= \left[ \begin{alignedat}{4}
-       ( & + ∂_t^2 R^x & - \, & ∂_x ∂_x & \; R^x & \, - \, & ∂_y ∂_x & \; R^y & \, - \, & ∂_x ∂_z & \; R^z & \; ) & \; dy ∧ dz \\
-       ( & + ∂_t^2 R^y & - \, & ∂_x ∂_y & \; R^x & \, - \, & ∂_y ∂_y & \; R^y & \, - \, & ∂_y ∂_z & \; R^z & \; ) & \; dy ∧ dx \\
-       ( & + ∂_t^2 R^z & - \, & ∂_x ∂_z & \; R^x & \, - \, & ∂_y ∂_z & \; R^y & \, - \, & ∂_z ∂_z & \; R^z & \; ) & \; dy ∧ dy \\
-   \end{alignedat} \right] \\[2mm]
+       & ( + ∂_t^2 R^x & - ∂_x^2 R^x &             &             & ) \; dy ∧ dz \\
+       & ( + ∂_t^2 R^y &             & - ∂_y^2 R^y &             & ) \; dy ∧ dx \\
+       & ( + ∂_t^2 R^z &             &             & - ∂_z^2 R^z & ) \; dy ∧ dy \\
+   \end{alignedat} \right] \\[-3mm]
    &+ \left[ \begin{alignedat}{4}
-       & (               & + ∂_t ∂_y Q^z & - ∂_t ∂_z Q^y & ) & \; dy ∧ dz \\
-       & ( - ∂_t ∂_x Q^z &               & + ∂_t ∂_z Q^x & ) & \; dy ∧ dx \\
-       & ( + ∂_t ∂_x Q^y & - ∂_t ∂_y Q^x &               & ) & \; dy ∧ dy \\
-   \end{alignedat} \right] \\[2mm]
+       & (               & + ∂_y^2 Q^x & + ∂_z^2 Q^x & ) \; dt ∧ dx \\
+       & ( + ∂_x^2 Q^y   &             & + ∂_z^2 Q^y & ) \; dt ∧ dy \\
+       & ( + ∂_x^2 Q^z   & + ∂_y^2 Q^z &             & ) \; dt ∧ dz \\
+   \end{alignedat} \right] \\[3mm]
    &+ \left[ \begin{alignedat}{4}
-       & (               & - ∂_t ∂_y R^z & + ∂_t ∂_z R^y & ) & \; dt ∧ dx \\
-       & ( + ∂_t ∂_x R^z &               & - ∂_t ∂_z R^x & ) & \; dt ∧ dy \\
-       & ( - ∂_t ∂_x R^y & + ∂_t ∂_y R^x &               & ) & \; dt ∧ dz \\
-   \end{alignedat} \right] \\[2mm]
+       & (               & - ∂_x ∂_y Q^y & - ∂_z ∂_x Q^z & ) \; dt ∧ dx \\
+       & ( - ∂_x ∂_y Q^x &               & - ∂_y ∂_z Q^z & ) \; dt ∧ dy \\
+       & ( - ∂_z ∂_x Q^x & - ∂_y ∂_z Q^y &               & ) \; dt ∧ dz \\
+   \end{alignedat} \right] \\[3mm]
    &+ \left[ \begin{alignedat}{4}
-       & (            & + ∂_y^2 Q^x & + ∂_z^2 Q^x & ) & \; dt ∧ dx \\
-       & (+ ∂_x^2 Q^y &             & + ∂_z^2 Q^y & ) & \; dt ∧ dy \\
-       & (+ ∂_x^2 Q^z & + ∂_y^2 Q^z &             & ) & \; dt ∧ dz \\
-   \end{alignedat} \right] \\[2mm]
+       & (               & + ∂_t ∂_y Q^z & - ∂_t ∂_z Q^y & ) \; dy ∧ dz \\
+       & ( - ∂_t ∂_x Q^z &               & + ∂_t ∂_z Q^x & ) \; dy ∧ dx \\
+       & ( + ∂_t ∂_x Q^y & - ∂_t ∂_y Q^x &               & ) \; dy ∧ dy \\
+   \end{alignedat} \right] \\[3mm]
    &+ \left[ \begin{alignedat}{4}
-       & (               & - ∂_z ∂_x Q^z & - ∂_x ∂_y Q^y & ) & \; dt ∧ dx \\
-       & ( - ∂_y ∂_z Q^z &               & - ∂_x ∂_y Q^x & ) & \; dt ∧ dy \\
-       & ( - ∂_y ∂_z Q^y & - ∂_z ∂_x Q^x &               & ) & \; dt ∧ dz \\
-   \end{alignedat} \right]
+       & (               & - ∂_t ∂_y R^z & + ∂_t ∂_z R^y & ) \; dt ∧ dx \\
+       & ( + ∂_t ∂_x R^z &               & - ∂_t ∂_z R^x & ) \; dt ∧ dy \\
+       & ( - ∂_t ∂_x R^y & + ∂_t ∂_y R^x &               & ) \; dt ∧ dz \\
+   \end{alignedat} \right] \\[3mm]
+   &+ \left[ \begin{alignedat}{4}
+       & (               & - ∂_x ∂_y R^y & - ∂_x ∂_z R^z & ) \; dy ∧ dz \\
+       & ( - ∂_y ∂_x R^x &               & - ∂_y ∂_z R^z & ) \; dz ∧ dx \\
+       & ( - ∂_z ∂_x R^x & - ∂_z ∂_y R^y &               & ) \; dx ∧ dy \\
+   \end{alignedat} \right] \\[3mm]
 
 ----
 
 .. math::
 
    (d⋆d⋆ - ⋆d⋆d) \left[ \begin{aligned}
-     - & Q^x \; dt ∧ dx \\
-     - & Q^y \; dt ∧ dy \\
-     - & Q^z \; dt ∧ dz \\
-       & R^x \; dy ∧ dz \\
-       & R^y \; dz ∧ dx \\
-       & R^z \; dx ∧ dy \\
+       - & Q^x \; dt ∧ dx \\
+       - & Q^y \; dt ∧ dy \\
+       - & Q^z \; dt ∧ dz \\
+         & R^x \; dy ∧ dz \\
+         & R^y \; dz ∧ dx \\
+         & R^z \; dx ∧ dy \\
    \end{aligned} \right]
    &= \left[ \begin{alignedat}{5}
-     ( & - ∂_t^2 Q^x & + ∂_x^2 Q^x & + ∂_y^2 Q^x & + ∂_z^2 Q^x & \: ) \; dt∧dx \\
-     ( & - ∂_t^2 Q^y & + ∂_x^2 Q^y & + ∂_y^2 Q^y & + ∂_z^2 Q^y & \: ) \; dt∧dy \\
-     ( & - ∂_t^2 Q^z & + ∂_x^2 Q^z & + ∂_y^2 Q^z & + ∂_z^2 Q^z & \: ) \; dt∧dz \\
-     ( & + ∂_t^2 R^x & - ∂_x^2 R^x & - ∂_y^2 R^x & - ∂_z^2 R^x & \: ) \; dy∧dz \\
-     ( & + ∂_t^2 R^y & - ∂_x^2 R^y & - ∂_y^2 R^y & - ∂_z^2 R^y & \: ) \; dz∧dx \\
-     ( & + ∂_t^2 R^z & - ∂_x^2 R^z & - ∂_y^2 R^z & - ∂_z^2 R^z & \: ) \; dx∧dy \\
+       & ( + ∂_t^2 Q^x & - ∂_x^2 Q^x & - ∂_y^2 Q^x & - ∂_z^2 Q^x & \: ) \; dt∧dx \\
+       & ( + ∂_t^2 Q^y & - ∂_x^2 Q^y & - ∂_y^2 Q^y & - ∂_z^2 Q^y & \: ) \; dt∧dy \\
+       & ( + ∂_t^2 Q^z & - ∂_x^2 Q^z & - ∂_y^2 Q^z & - ∂_z^2 Q^z & \: ) \; dt∧dz \\
+       & ( - ∂_t^2 R^x & + ∂_x^2 R^x & + ∂_y^2 R^x & + ∂_z^2 R^x & \: ) \; dy∧dz \\
+       & ( - ∂_t^2 R^y & + ∂_x^2 R^y & + ∂_y^2 R^y & + ∂_z^2 R^y & \: ) \; dz∧dx \\
+       & ( - ∂_t^2 R^z & + ∂_x^2 R^z & + ∂_y^2 R^z & + ∂_z^2 R^z & \: ) \; dx∧dy \\
    \end{alignedat} \right]
 
 .. }}}
