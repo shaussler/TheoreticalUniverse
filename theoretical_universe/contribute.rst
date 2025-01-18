@@ -29,7 +29,7 @@ Running calculations
 
 .. {{{
 
-.. tip::
+.. warning::
 
    This is not used anymore, I found a way to simplify calculations with a
    permutation operator. Also the work to be put in writing symbolic
@@ -75,7 +75,7 @@ Build locally
 
 .. {{{
 
-The site is serverd on ``localhost:8000``. From the
+The site is served on ``localhost:8000``. From the
 ``TheoreticalUniverse/theoretical_universe`` directory, run:
 
 .. code:: bash

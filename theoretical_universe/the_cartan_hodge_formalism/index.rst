@@ -24,21 +24,21 @@ The Cartan-Hodge Formalism
    the_free_matrix_representation.rst
    the_minkowski_metric.rst
 
-Summary
--------
-
 In this serie of articles, I introduce the Cartan-Hodge formalism, which
 bundles the notions of *tensor calculus*, *musical operators*, *Hodge duality*,
 *exterior derivative*, and the *free matrix representation* into a unified
 framework for performing calculations and highlighting symmetries. Practical
 computations follow clear and concise rules, with each step presented in a
-compact and comprehensible manner. This section is not a comprehensive
-introduction into these subjects, but recalls basic definitions and properties
-necessary to perform calculations. I assume the reader possesses a solid
-understanding of vector and tensor calculus, as well as a working familiarity
-with differential forms and the exterior derivative.
+compact and comprehensible manner. This section is not necessarily a
+comprehensive introduction into these subjects, but recalls basic definitions
+and properties necessary to perform calculations. I assume the reader possesses
+a solid understanding of vector and tensor calculus, as well as a working
+familiarity with differential forms and the exterior derivative.
 
-.. rubric:: Basis Vectors and Covectors
+Basis vectors
+-------------
+
+.. {{{
 
 The Euclidean basis vectors are traditionally noted :math:`\mathbf{e}_x`,
 :math:`\mathbf{e}_y`, and :math:`\mathbf{e}_z`. It can be demonstrated that the
@@ -66,7 +66,12 @@ covectors:
 
 .. math:: a \; dx + b \; dy + c \; dz
 
-.. rubric:: Musical Operators
+.. }}}
+
+Musicality
+----------
+
+.. {{{
 
 With the musical flat :math:`♭` and sharp :math:`♯` symbols, covectors and
 vectors are explicetely declared. For example, a contravariant three-vector is
@@ -86,7 +91,12 @@ with:
          &= a \; δ_{xi} \; dx^i + b \; δ_{yi} \; dx^i + c \; δ_{zi} \; dx^i \\
          &= a \; dx + b \; dy + c \; dz                                     \\
 
-.. rubric:: The Free Matrix Representation
+.. }}}
+
+The free matrix representation
+------------------------------
+
+.. {{{
 
 With the *free matrix representation*, vectors can be ordered into arbitray
 matrix, while keeping the tensor basis is explicitly included. A vector can the
@@ -109,7 +119,15 @@ also valid in the free matrix representation:
 
    V^♯ = \begin{bmatrix} a \; ∂_x & b \; ∂_y & c \; ∂_z \end{bmatrix}
 
-.. rubric:: Inner product of k-forms in Minkowski space
+.. }}}
+
+Hodge duality
+-------------
+
+Inner product of k-forms in Minkowski space
+'''''''''''''''''''''''''''''''''''''''''''
+
+.. {{{
 
 The inner product of k-forms in Minkowski space are calculated for the basis
 vectors, bivectors, trivectors and quadvectors and summarized here in table
@@ -169,9 +187,14 @@ form.
 
 ----
 
+.. }}}
+
 .. _hodge dual tables:
 
-.. rubric:: Hodge dual tables
+Hodge dual tables
+'''''''''''''''''
+
+.. {{{
 
 The Hodge duality assumes a central role, transitioning tensors between spaces
 and their dual complements.
@@ -211,3 +234,4 @@ and their dual complements.
 
    ⋆ dt ∧ dx ∧ dy ∧ dz = - 1
 
+.. }}}
