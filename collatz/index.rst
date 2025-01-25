@@ -11,7 +11,6 @@ Ideas
    :caption: Contents:
 
    wave_equation.rst
-   lagrangian.rst
    collatz/index.rst
 
 Indices and tables
