@@ -70,11 +70,6 @@ These videos provide an alternative, yet equivalent, approach to the
 conclusions presented here. There is also the added bonus that he
 uses the same metric signature :math:`(+,-,-,-)`.
 
-I am currently revisiting this article and expanding its content, particularly
-in relation to Minkowski space. As a result, some sections are still in draft
-form, and despite my best efforts to ensure accuracy, there may be typos and
-errors. This page was last updated on |today|.
-
 .. }}}
 
 Duality in three dimensions

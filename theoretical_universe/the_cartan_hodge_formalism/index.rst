@@ -24,16 +24,24 @@ The Cartan-Hodge Formalism
    the_free_matrix_representation.rst
    the_minkowski_metric.rst
 
-In this serie of articles, I introduce the Cartan-Hodge formalism, which
-bundles the notions of *tensor calculus*, *musical operators*, *Hodge duality*,
-*exterior derivative*, and the *free matrix representation* into a unified
-framework for performing calculations and highlighting symmetries. Practical
-computations follow clear and concise rules, with each step presented in a
-compact and comprehensible manner. This section is not necessarily a
-comprehensive introduction into these subjects, but recalls basic definitions
-and properties necessary to perform calculations. I assume the reader possesses
-a solid understanding of vector and tensor calculus, as well as a working
-familiarity with differential forms and the exterior derivative.
+This part introduces the Cartan-Hodge formalism, which bundles the notions of
+*tensor calculus*, *musical operators*, *Hodge duality*, *exterior derivative*,
+and the *free matrix representation* into a comprehensive framework of notation
+and mathematical tools. Practical computations follow clear and concise rules,
+with each step presented in a compact and comprehensible manner. The objective
+is also to depart from the abstract index notation of tensor calculus,
+eliminate the need for the Levi-Civita symbol, and expand tensor equations to
+their component from, all while adhering to standard and widespread notations.
+
+This is not a comprehensive introduction into these subjects, but recalls basic
+definitions and properties necessary to perform calculations. I assume the
+reader possesses a solid understanding of vector and tensor calculus, as well
+as a working familiarity with Cartan's differential forms and the exterior
+derivative.
+
+I also here highlight and point out :ref:`the article on Hodge duality <hodge
+duality>` can be read as a self-contained article and may be of interest to the
+reader on its own.
 
 Basis vectors
 -------------
