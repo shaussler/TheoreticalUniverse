@@ -4,7 +4,7 @@
 .. international license. you should have received a copy of the license along
 .. with this work. if not, see <https://creativecommons.org/licenses/by/4.0/>.
 
-Proving De Gua's Theorem with Clifford Algebra
+Proving De Gua's theorem with Clifford algebra
 ==============================================
 
 .. rst-class:: custom-author

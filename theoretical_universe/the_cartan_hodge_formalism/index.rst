@@ -7,7 +7,7 @@
 .. _the_cartan_hodge_formalism:
 .. _the Cartan-Hodge formalism:
 
-The Cartan-Hodge Formalism
+The Cartan-Hodge formalism
 ==========================
 
 .. rst-class:: custom-author

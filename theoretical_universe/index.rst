@@ -17,6 +17,8 @@ Theoretical Universe
 
       by Stéphane Haussler
 
+.. {{{
+
 Within these pages, you will find the formulation of electromagnetism in terms
 of Élie Cartan's differential forms, along with a systematic analysis of this
 formulation.
@@ -83,7 +85,8 @@ about differential forms, `I loved the excellent video serie by Michael Penn
 The pivotal aspects the present study lie in three articles:
 
 * :ref:`Rotations in Minkowski Space`.
-* :ref:`The Exterior Derivative of Rotations in Spacetime`
+* :ref:`The Exterior Derivative of Rotations in Spacetime <the exterior
+  derivative of rotations in spacetime>`
 * :ref:`Maxwell's Equations via Differential Forms`
 
 In the first article, differential forms are presented as a simple yet
@@ -106,22 +109,38 @@ into something more comprehensive.
 
 .. topic:: Maxwell Equations in the Cartan-Hodge Formalism
 
+   .. rubric:: Inhomogenous Maxwell equations via differential forms
+
    .. math::
 
-      (d ⋆ - ⋆ d ) \begin{bmatrix}
-        \E^x \; dx ∧ dt \\
-        \E^y \; dy ∧ dt \\
-        \E^z \; dz ∧ dt \\
-         B^x \; dy ∧ dz \\
-         B^y \; dz ∧ dx \\
-         B^z \; dx ∧ dy \\
-      \end{bmatrix}
+      d ⋆ \left[ \begin{aligned}
+          - & \E^x \; dt ∧ dx \\
+          - & \E^y \; dt ∧ dy \\
+          - & \E^z \; dt ∧ dz \\
+            &  B^x \; dy ∧ dz \\
+            &  B^y \; dz ∧ dx \\
+            &  B^z \; dx ∧ dy \\
+      \end{aligned} \right]
       = \begin{bmatrix}
-        + μ_0 c ρ \; dx ∧ dy ∧ dz\\
-        - μ_0 J^x \; dt ∧ dy ∧ dz\\
-        - μ_0 J^y \; dt ∧ dz ∧ dx\\
-        - μ_0 J^z \; dt ∧ dx ∧ dy\\
+          + μ_0 c ρ \; dx ∧ dy ∧ dz\\
+          - μ_0 J^x \; dt ∧ dy ∧ dz\\
+          - μ_0 J^y \; dt ∧ dz ∧ dx\\
+          - μ_0 J^z \; dt ∧ dx ∧ dy\\
       \end{bmatrix}
+
+   .. rubric:: Homogenous Maxwell equations via differential forms
+
+   .. math::
+
+      ⋆ d \left[ \begin{aligned}
+          - & \E^x \; dt ∧ dx \\
+          - & \E^y \; dt ∧ dy \\
+          - & \E^z \; dt ∧ dz \\
+            &  B^x \; dy ∧ dz \\
+            &  B^y \; dz ∧ dx \\
+            &  B^z \; dx ∧ dy \\
+      \end{aligned} \right]
+      = 0
 
    Where :math:`d` is the exterior derivative, :math:`⋆` the Hodge star, and
    :math:`∧` the exterior product. :math:`\E^x`, :math:`\E^y` and :math:`\E^z`
@@ -132,7 +151,11 @@ into something more comprehensive.
    density, and :math:`J^x`, :math:`J^y`, :math:`J^z` the components of the
    conventional current density.
 
+.. }}}
+
 .. rubric:: :ref:`The Cartan-Hodge Formalism`
+
+.. {{{
 
 This section reviews the mathematical objects used in this work. Basis vectors
 are identified as partial derivatives :math:`\mathbf{e_μ} = ∂_μ`, which in
@@ -148,7 +171,11 @@ comprehensive framework facilitates the systematic analysis of rotation
 representation in differential form and a thorough examination of differential
 operators within this context.
 
+.. }}}
+
 .. rubric:: :ref:`Rotations in Differential Form`
+
+.. {{{
 
 This section contains a systematic analyis of the representation of rotations
 in Euclidean three-dimensional space, as well as its generalization to
@@ -158,6 +185,8 @@ covariant tensors, double contravariant tensors, and mixed tensors are derived.
 Symmetries are systematically analyzed. In this section, we get the first
 insight about the deep connection between the electromagnetism and rotations in
 spacetime.
+
+.. }}}
 
 .. toctree::
    :maxdepth: 1

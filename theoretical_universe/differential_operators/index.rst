@@ -6,7 +6,7 @@
 
 .. _differential_operators_in_differential_form:
 
-Differential Operators in Differential Form
+Differential operators in differential form
 ===========================================
 
 .. rst-class:: custom-author

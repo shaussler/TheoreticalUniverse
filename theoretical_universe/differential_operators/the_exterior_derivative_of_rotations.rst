@@ -5,6 +5,7 @@
 .. with this work. If not, see <https://creativecommons.org/licenses/by/4.0/>.
 
 .. _The Exterior Derivative of Rotations in Spacetime:
+.. _the exterior derivative or rotations in spacetime:
 
 Rotations in Minkowski space
 ============================
