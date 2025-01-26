@@ -7,8 +7,8 @@
 .. _The Exterior Derivative of Rotations in Spacetime:
 .. _the exterior derivative or rotations in spacetime:
 
-Differential operators in Minkowski space on 2-forms (rotations)
-================================================================
+2--forms (rotations) in Minkowski space
+=======================================
 
 .. rst-class:: custom-author
 
