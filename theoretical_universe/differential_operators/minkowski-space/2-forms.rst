@@ -7,8 +7,8 @@
 .. _The Exterior Derivative of Rotations in Spacetime:
 .. _the exterior derivative or rotations in spacetime:
 
-2--forms (rotations) in Minkowski space
-=======================================
+2--forms (rotations)
+====================
 
 .. rst-class:: custom-author
 

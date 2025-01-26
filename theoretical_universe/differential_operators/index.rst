@@ -17,12 +17,8 @@ Differential operators expressed as exterior derivatives
    :maxdepth: 1
    :caption: Table of Contents:
 
-   differential_operators.rst
-   the_exterior_derivative_of_functions.rst
-   the_exterior_derivative_of_translations.rst
-   the_exterior_derivative_of_rotations.rst
-   the_exterior_derivative_of_3volume_forms.rst
-   the_exterior_derivative_of_4volume_forms.rst
+   3-dimensional-euclidean-space/index.rst
+   minkowski-space/index.rst
 
 .. {{{
 
