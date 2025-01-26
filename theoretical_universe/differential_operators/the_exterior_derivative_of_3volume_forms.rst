@@ -4,8 +4,8 @@
 .. International License. You should have received a copy of the license along
 .. with this work. If not, see <https://creativecommons.org/licenses/by/4.0/>.
 
-3-volume forms in Minkowski space
-=================================
+Differential operators in Minkowski space on 3-forms forms (3-volumes)
+======================================================================
 
 .. rst-class:: custom-author
 
