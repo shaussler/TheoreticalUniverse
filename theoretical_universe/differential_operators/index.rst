@@ -33,8 +33,8 @@ electromagnetism and rotations.
 
 .. }}}
 
-Exterior derivative in 3-dimensional Euclidean space
-----------------------------------------------------
+Exterior derivative in 3D Euclidean space
+-----------------------------------------
 
 .. {{{
 
@@ -77,27 +77,27 @@ The most generic possible form in Minkowski space is:
 
 .. math::
    f
-   + \left[ \begin{alignedat}{1}
-       & A^t dt                \\
-       & A^x dx                \\
-       & A^y dy                \\
-       & A^z dz                \\
+   + \left[ \begin{alignedat}{2}
+       & A^t & \: dt \\
+       & A^x & \: dx \\
+       & A^y & \: dy \\
+       & A^z & \: dz \\
    \end{alignedat} \right]
-   + \left[ \begin{alignedat}{1}
-       & Q^x dt ∧ dx           \\
-       & Q^y dt ∧ dy           \\
-       & Q^z dt ∧ dz           \\
-       & R^x dy ∧ dz           \\
-       & R^y dz ∧ dx           \\
-       & R^z dx ∧ dy           \\
+   + \left[ \begin{alignedat}{2}
+       & Q^x & \: dt ∧ dx \\
+       & Q^y & \: dt ∧ dy \\
+       & Q^z & \: dt ∧ dz \\
+       & R^x & \: dy ∧ dz \\
+       & R^y & \: dz ∧ dx \\
+       & R^z & \: dx ∧ dy \\
    \end{alignedat} \right]
-   + \left[ \begin{alignedat}{1}
-       & D^t dx ∧ dy ∧ dz      \\
-       & D^x dt ∧ dy ∧ dz      \\
-       & D^y dt ∧ dz ∧ dx      \\
-       & D^z dt ∧ dy ∧ dz      \\
+   + \left[ \begin{alignedat}{2}
+       & D^t & \: dx ∧ dy ∧ dz \\
+       & D^x & \: dt ∧ dy ∧ dz \\
+       & D^y & \: dt ∧ dz ∧ dx \\
+       & D^z & \: dt ∧ dy ∧ dz \\
    \end{alignedat} \right]
-   + G   dt ∧ dx ∧ dy ∧ dz
+   + G \: dt ∧ dx ∧ dy ∧ dz
 
 The differential operator available is the exterior derivative :math:`d`. Since
 :math:`d d F = 0`, to avoid obtaining zero, the Hodge star operator :math:`⋆`

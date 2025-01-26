@@ -535,10 +535,10 @@ Flattened, the translation expressed in differential form is:
 .. math::
 
    d⋆d⋆ T^♭ = \left[ \begin{alignedat}{7}
-       ( & ∂_t ∂_x A^x & + & ∂_t ∂_y A^y & + & ∂_t ∂_z A^z & ) & \; dt \\
-       ( & ∂_t ∂_x A^t & + & ∂_x ∂_y A^y & + & ∂_z ∂_z A^z & ) & \; dx \\
-       ( & ∂_t ∂_y A^t & + & ∂_y ∂_z A^z & + & ∂_x ∂_y A^x & ) & \; dy \\
-       ( & ∂_t ∂_z A^t & + & ∂_z ∂_x A^x & + & ∂_y ∂_z A^y & ) & \; dz \\
+       ( & ∂_t ∂_x A^x & \: + \: & ∂_t ∂_y A^y & \: + \: & ∂_t ∂_z A^z & ) & \; dt \\
+       ( & ∂_t ∂_x A^t & \: + \: & ∂_x ∂_y A^y & \: + \: & ∂_z ∂_x A^z & ) & \; dx \\
+       ( & ∂_t ∂_y A^t & \: + \: & ∂_y ∂_z A^z & \: + \: & ∂_x ∂_y A^x & ) & \; dy \\
+       ( & ∂_t ∂_z A^t & \: + \: & ∂_z ∂_x A^x & \: + \: & ∂_y ∂_z A^y & ) & \; dz \\
   \end{alignedat} \right]
 
 .. admonition:: Calculations
@@ -557,10 +557,10 @@ Flattened, the translation expressed in differential form is:
    .. math::
 
       d ⋆ d ⋆ T^♭ = \left[ \begin{alignedat}{7}
-          d (∂_t A^t) \\
-          d (∂_x A^x) \\
-          d (∂_y A^y) \\
-          d (∂_z A^z) \\
+          d \: & (∂_t A^t & ) \\
+          d \: & (∂_x A^x & ) \\
+          d \: & (∂_y A^y & ) \\
+          d \: & (∂_z A^z & ) \\
      \end{alignedat} \right]
 
    .. rubric:: Apply the exterior derivative
@@ -568,10 +568,10 @@ Flattened, the translation expressed in differential form is:
    .. math::
 
       d ⋆ d ⋆ T^♭ = \left[ \begin{alignedat}{7}
-          ∂_x ∂_t A^t dx & + & ∂_y ∂_t A^t dy & + & ∂_z ∂_t A^t dz \\
-          ∂_t ∂_x A^x dt & + & ∂_y ∂_x A^x dy & + & ∂_z ∂_x A^x dz \\
-          ∂_t ∂_y A^y dt & + & ∂_x ∂_y A^y dx & + & ∂_z ∂_y A^y dz \\
-          ∂_t ∂_z A^z dt & + & ∂_x ∂_z A^z dx & + & ∂_y ∂_z A^z dy \\
+          ∂_x ∂_t A^t dx & \: + \: & ∂_y ∂_t A^t dy & \: + \: & ∂_z ∂_t A^t dz \\
+          ∂_t ∂_x A^x dt & \: + \: & ∂_y ∂_x A^x dy & \: + \: & ∂_z ∂_x A^x dz \\
+          ∂_t ∂_y A^y dt & \: + \: & ∂_x ∂_y A^y dx & \: + \: & ∂_z ∂_y A^y dz \\
+          ∂_t ∂_z A^z dt & \: + \: & ∂_x ∂_z A^z dx & \: + \: & ∂_y ∂_z A^z dy \\
      \end{alignedat} \right]
 
    .. rubric:: Reorder, simplify and conclude
@@ -579,10 +579,10 @@ Flattened, the translation expressed in differential form is:
    .. math::
 
       d ⋆ d ⋆ T^♭ = \left[ \begin{alignedat}{7}
-          ( & ∂_t ∂_x A^x & + & ∂_t ∂_y A^y & + & ∂_t ∂_z A^z & ) & \; dt \\
-          ( & ∂_x ∂_t A^t & + & ∂_x ∂_y A^y & + & ∂_x ∂_z A^z & ) & \; dx \\
-          ( & ∂_y ∂_t A^t & + & ∂_y ∂_z A^z & + & ∂_y ∂_x A^x & ) & \; dy \\
-          ( & ∂_z ∂_t A^t & + & ∂_z ∂_x A^x & + & ∂_z ∂_y A^y & ) & \; dz \\
+          ( & ∂_t ∂_x A^x & \: + \: & ∂_t ∂_y A^y & \: + \: & ∂_t ∂_z A^z & ) & \; dt \\
+          ( & ∂_x ∂_t A^t & \: + \: & ∂_x ∂_y A^y & \: + \: & ∂_x ∂_z A^z & ) & \; dx \\
+          ( & ∂_y ∂_t A^t & \: + \: & ∂_y ∂_z A^z & \: + \: & ∂_y ∂_x A^x & ) & \; dy \\
+          ( & ∂_z ∂_t A^t & \: + \: & ∂_z ∂_x A^x & \: + \: & ∂_z ∂_y A^y & ) & \; dz \\
      \end{alignedat} \right]
 
    .. }}}
