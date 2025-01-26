@@ -6,6 +6,7 @@
 
 .. _of_maxwell_equations_and_rotations:
 .. _Of Maxwell Equations and Rotations:
+.. _of maxwell equations and rotations:
 .. _Maxwell's Equations via Differential Forms:
 
 Maxwell's Equations via Differential Forms
@@ -19,14 +20,16 @@ Maxwell's Equations via Differential Forms
 
    by Stéphane Haussler
 
-The present page presents a derivation of the geometric differential formulation
-of electromagnetism, emphasizing the direct connection between Maxwell's
-equations and :ref:`Rotations in Differential Form`. The mathematical
-expressions are based on previous investigations, where I utilize :ref:`The
-Cartan-Hodge Formalism` to calculate :ref:`The Exterior Derivative of Rotations
-in Spacetime`. Through a straightforward identification process, we will see
-that the equations governing electromagnetism are, in fact, spacetime rotations
-with the exterior derivative applied. In layman's terms, we can think of
+The present page presents a derivation of the geometric differential
+formulation of electromagnetism, emphasizing the direct connection between
+Maxwell's equations and :ref:`rotations in differential form <rotations in
+differential form>`. The mathematical expressions are based on previous
+investigations, where I utilize :ref:`the Cartan-Hodge formalism <the
+cartan-hodge formalism>` to calculate :ref:`the exterior derivative of
+rotations in spacetime <the exterior derivative of rotations in spacetime>`.
+Through a straightforward identification process, we will see that the
+equations governing electromagnetism are, in fact, spacetime rotations with the
+exterior derivative applied. In layman's terms, we can think of
 electromagnetism as a twist in spacetime.
 
 My approach should feel more intuitive than the conventional method where the
