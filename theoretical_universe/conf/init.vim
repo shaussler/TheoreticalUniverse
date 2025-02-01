@@ -35,33 +35,31 @@ set backspace=2
 set encoding=utf-8
 
 " Color column
-if has("nvim")
-  set colorcolumn=4,81,101,121
-  highlight ColorColumn guibg=green
-  highlight ColorColumn ctermbg=235 guibg=#2c2d27
-  highlight ColorColumn ctermbg=237
-endif
+set colorcolumn=4,81,101,121
+highlight ColorColumn guibg=green
+highlight ColorColumn ctermbg=235 guibg=#2c2d27
+highlight ColorColumn ctermbg=237
 
 " Use vim-plug as the plugin manager
 " ----------------------------------
 
-call plug#begin('~/.vim/plugged')
-
-" Add the reStructuredText syntax highlighting plugin
-" ---------------------------------------------------
-
-Plug 'marshallward/vim-restructuredtext'
-Plug 'habamax/vim-rst'
-
-" Linting with ALE
-Plug 'dense-analysis/ale'
-
-call plug#end()
-
-let g:ale_linters = {'python': ['flake8']}
-let g:ale_fixers = {'python': ['autopep8']}
-let g:ale_python_flake8_executable = 'flake8'
-let g:ale_fix_on_save = 1
+" call plug#begin('~/.vim/plugged')
+" 
+" " Add the reStructuredText syntax highlighting plugin
+" " ---------------------------------------------------
+" 
+" Plug 'marshallward/vim-restructuredtext'
+" Plug 'habamax/vim-rst'
+" 
+" " Linting with ALE
+" Plug 'dense-analysis/ale'
+" 
+" call plug#end()
+" 
+" let g:ale_linters = {'python': ['flake8']}
+" let g:ale_fixers = {'python': ['autopep8']}
+" let g:ale_python_flake8_executable = 'flake8'
+" let g:ale_fix_on_save = 1
 
 " Set custom fold markers
 " -----------------------
@@ -82,7 +80,7 @@ syntax on
 " Auto-apply filetype and syntax highlighting for .rst files
 " ----------------------------------------------------------
 
-autocmd BufRead,BufNewFile *.rst set filetype=rst
+" autocmd BufRead,BufNewFile *.rst set filetype=rst
 
 " Shortcuts to UTF-8 characters
 " -----------------------------
