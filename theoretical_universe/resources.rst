@@ -16,8 +16,8 @@ Maxwell's equations via differential forms introduced.
 .. rubric:: Maxwell's Theory in Relativistic Notations by Neil Turok
 
 In `14/15 PSI - Relativity - Lecture 1 <https://pirsa.org/14090007>`_, `Neil
-Turok <https://en.m.wikipedia.org/wiki/Neil_Turok>`_ gives a concise and precise
-presentation of Maxwell's equations in tensor notation.
+Turok <https://en.m.wikipedia.org/wiki/Neil_Turok>`_ gives a concise and
+precise presentation of Maxwell's equations in tensor notation.
 
 .. rubric:: Review of Manifold Basics by Ruth Gregory
 
