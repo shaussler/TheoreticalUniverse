@@ -183,7 +183,7 @@ the musical ♭♯ operator :math:`F^{♭♯}=\left(F^{♭♭}\right)^{♭♯}` 
    \end{aligned} \right]
 
 .. admonition:: Calculations
-   :class: dropdown,toggle-shown
+   :class: dropdown
 
    .. {{{
 
@@ -291,9 +291,8 @@ We derive the row/column representation of the :math:`F^{♭♯}` Faraday tensor
 
    .. {{{
 
-   In this version of the calculation, we expand to matrix form using the
-   :ref:`symmetries of the mixed exterior product in Minkowski
-   <symmetries_of_the_flat_sharp_mixed_exterior_product>`:
+   We expand to matrix form using the :ref:`symmetries of the mixed exterior
+   product in Minkowski <symmetries_of_the_flat_sharp_mixed_exterior_product>`:
 
    ============ =============================
    Symmetry     Basis elements
@@ -378,7 +377,7 @@ Faraday tensor through:
 .. {{{
 
 The starting point is the twice flattened Faraday tensor :math:`F^{♭♭}` to
-which we apply the ♭♯ operator :math:`F^{♭♯}=\left(F^{♭♭}\right)^{♭♯}` and
+which we apply the ♯♯ operator :math:`F^{♯♯}=\left(F^{♭♭}\right)^{♯♯}` and
 obtain:
 
 .. math::
@@ -597,6 +596,188 @@ tensor through:
 
 :math:`F^{♯♭}`
 --------------
+
+.. {{{
+
+The starting point is the twice flattened Faraday tensor :math:`F^{♭♭}` to
+which we apply the ♯♭ operator :math:`F^{♯♭}=\left(F^{♭♭}\right)^{♯♭}` and
+obtain:
+
+.. math::
+
+   F^{♯♭} = \left[ \begin{aligned}
+       - & \E^x \: ∂_t ∧ dx \\
+       - & \E^y \: ∂_t ∧ dy \\
+       - & \E^z \: ∂_t ∧ dz \\
+       - &  B^x \: ∂_y ∧ dz \\
+       - &  B^y \: ∂_z ∧ dx \\
+       - &  B^z \: ∂_x ∧ dy \\
+   \end{aligned} \right]
+
+.. admonition:: Calculations
+   :class: dropdown
+
+   .. {{{
+
+   .. rubric:: Start from the Faraday 2--form
+
+   .. math::
+
+      F^{♭♭} = \left[ \begin{aligned}
+          - & \E^x \: dt ∧ dx \\
+          - & \E^y \: dt ∧ dy \\
+          - & \E^z \: dt ∧ dz \\
+            &  B^x \: dy ∧ dz \\
+            &  B^y \: dz ∧ dx \\
+            &  B^z \: dx ∧ dy \\
+      \end{aligned} \right]
+
+   .. rubric:: Apply the musical sharp-sharp ♯♭ operator
+
+   .. math::
+
+      F^{♯♭} = \left(F^{♭♭} \right)^{♯♭}
+      = \left[ \begin{aligned}
+          - & \E^x \: dt ∧ dx \\
+          - & \E^y \: dt ∧ dy \\
+          - & \E^z \: dt ∧ dz \\
+            &  B^x \: dy ∧ dz \\
+            &  B^y \: dz ∧ dx \\
+            &  B^z \: dx ∧ dy \\
+      \end{aligned} \right]^{♯♭}
+
+   .. rubric:: Distribute the musical operators to basis 2--forms
+
+   .. math::
+
+      F^{♯♭} = \left[ \begin{aligned}
+          - & \E^x \: \left(dt ∧ dx\right)^{♯♭} \\
+          - & \E^y \: \left(dt ∧ dy\right)^{♯♭} \\
+          - & \E^z \: \left(dt ∧ dz\right)^{♯♭} \\
+            &  B^x \: \left(dy ∧ dz\right)^{♯♭} \\
+            &  B^y \: \left(dz ∧ dx\right)^{♯♭} \\
+            &  B^z \: \left(dx ∧ dy\right)^{♯♭} \\
+      \end{aligned} \right]
+
+   .. rubric:: Distribute the musical operators to basis 1--forms
+
+   .. math::
+
+      F^{♯♭} = \left[ \begin{aligned}
+          - & \E^x \: dt^♯ ∧ dx^♭ \\
+          - & \E^y \: dt^♯ ∧ dy^♭ \\
+          - & \E^z \: dt^♯ ∧ dz^♭ \\
+            &  B^x \: dy^♯ ∧ dz^♭ \\
+            &  B^y \: dz^♯ ∧ dx^♭ \\
+            &  B^z \: dx^♯ ∧ dy^♭ \\
+      \end{aligned} \right]
+
+   .. rubric:: Apply the musical operators to basis 1--forms
+
+   .. math::
+
+      F^{♯♭} = \left[ \begin{aligned}
+          - & \E^x \: η^{tμ} \: ∂_μ ∧ dx \\
+          - & \E^y \: η^{tμ} \: ∂_μ ∧ dy \\
+          - & \E^z \: η^{tμ} \: ∂_μ ∧ dz \\
+            &  B^x \: η^{yμ} \: ∂_μ ∧ dz \\
+            &  B^y \: η^{zμ} \: ∂_μ ∧ dx \\
+            &  B^z \: η^{xμ} \: ∂_μ ∧ dy \\
+      \end{aligned} \right]
+
+   .. rubric:: Identify non-zero terms
+
+   .. math::
+
+      F^{♯♭} = \left[ \begin{aligned}
+          - & \E^x \: η^{tt} \: ∂_t ∧ dx \\
+          - & \E^y \: η^{tt} \: ∂_t ∧ dy \\
+          - & \E^z \: η^{tt} \: ∂_t ∧ dz \\
+            &  B^x \: η^{yy} \: ∂_y ∧ dz \\
+            &  B^y \: η^{zz} \: ∂_z ∧ dx \\
+            &  B^z \: η^{xx} \: ∂_x ∧ dy \\
+      \end{aligned} \right]
+
+   .. rubric:: Apply numerical values
+
+   .. math::
+
+      F^{♯♭} = \left[ \begin{aligned}
+          - & \E^x \: (+1) \: ∂_t ∧ dx \\
+          - & \E^y \: (+1) \: ∂_t ∧ dy \\
+          - & \E^z \: (+1) \: ∂_t ∧ dz \\
+            &  B^x \: (-1) \: ∂_y ∧ dz \\
+            &  B^y \: (-1) \: ∂_z ∧ dx \\
+            &  B^z \: (-1) \: ∂_x ∧ dy \\
+      \end{aligned} \right]
+
+   .. rubric:: Conclude
+
+   .. math::
+
+      F^{♯♭} = \left[ \begin{aligned}
+          - & \E^x \: ∂_t ∧ dx \\
+          - & \E^y \: ∂_t ∧ dy \\
+          - & \E^z \: ∂_t ∧ dz \\
+          - &  B^x \: ∂_y ∧ dz \\
+          - &  B^y \: ∂_z ∧ dx \\
+          - &  B^z \: ∂_x ∧ dy \\
+      \end{aligned} \right]
+
+   .. }}}
+
+We expand to matrix form using the :ref:`symmetries of the mixed exterior
+product in Minkowski <symmetries_of_the_sharp_flat_mixed_exterior_product>`:
+
+============ =============================
+Symmetry     Basis elements
+============ =============================
+Symetric     :math:`∂_t ∧ dx = + ∂_x ∧ dt`
+Symetric     :math:`∂_t ∧ dy = + ∂_y ∧ dt`
+Symetric     :math:`∂_t ∧ dz = + ∂_z ∧ dt`
+Antisymetric :math:`∂_y ∧ dz = - ∂_z ∧ dy`
+Antisymetric :math:`∂_z ∧ dx = - ∂_x ∧ dz`
+Antisymetric :math:`∂_x ∧ dy = - ∂_y ∧ dx`
+============ =============================
+
+.. rubric:: Start for the mixed ♯♭ form
+
+.. math::
+
+   F^{♯♭} = \left[ \begin{aligned}
+       - & \E^x \: ∂_t ∧ dx \\
+       - & \E^y \: ∂_t ∧ dy \\
+       - & \E^z \: ∂_t ∧ dz \\
+       - &  B^x \: ∂_y ∧ dz \\
+       - &  B^y \: ∂_z ∧ dx \\
+       - &  B^z \: ∂_x ∧ dy \\
+   \end{aligned} \right]
+
+.. rubric:: Expand using symmetries
+
+.. math::
+
+   F^{♯♭} = \left[ \begin{alignedat}{3}
+       - & \E^x \: ∂_t ∧ dx & \: - \: & \E^x \: ∂_x ∧ dt \\
+       - & \E^y \: ∂_t ∧ dy & \: - \: & \E^y \: ∂_y ∧ dt \\
+       - & \E^z \: ∂_t ∧ dz & \: - \: & \E^z \: ∂_z ∧ dt \\
+       - &  B^x \: ∂_y ∧ dz & \: + \: &  B^x \: ∂_z ∧ dy \\
+       - &  B^y \: ∂_z ∧ dx & \: + \: &  B^y \: ∂_x ∧ dz \\
+       - &  B^z \: ∂_x ∧ dy & \: + \: &  B^z \: ∂_y ∧ dx \\
+   \end{alignedat} \right]
+
+.. rubric:: Reorder according to row/column convention and conclude
+
+.. math::
+
+   F^{♯♭} = \begin{bmatrix}
+                          & - \E^x \: ∂_x ∧ dt & - \E^y \: ∂_y ∧ dt & - \E^z \: ∂_z ∧ dt \\
+       - \E^x \: ∂_t ∧ dx &                    & +  B^z \: ∂_y ∧ dx & -  B^y \: ∂_z ∧ dx \\
+       - \E^y \: ∂_t ∧ dy & -  B^z \: ∂_x ∧ dy &                    & +  B^x \: ∂_z ∧ dy \\
+       - \E^z \: ∂_t ∧ dz & +  B^y \: ∂_x ∧ dz & -  B^x \: ∂_y ∧ dz &                    \\
+   \end{bmatrix}
+
+.. }}}
 
 :math:`G^{♭♭}`
 --------------
