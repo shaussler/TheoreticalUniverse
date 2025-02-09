@@ -881,7 +881,9 @@ Taken together, we get the result consistent with the symmetries obtained for
 the :math:`♭♯`, thus strongly suggesting the results regarding the symmetries of
 the mixeed exterior product are correct.
 
-.. topic:: Symmetries of the :math:`♯♭` Mixed Exterior Product
+.. _symmetries_of_the_sharp_flat_mixed_exterior_product:
+
+.. topic:: Symmetries of the :math:`♯♭` mixed exterior product
 
    ============ =============================
    Symmetry     Basis elements
