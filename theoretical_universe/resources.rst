@@ -1,6 +1,9 @@
 Resources
 =========
 
+In this section, I list and review the best material I came across about the
+mathematics I am interested in.
+
 Lectures
 --------
 
@@ -26,19 +29,39 @@ In her `Gravitational Physics Lecture of January 8, 2024
 <https://en.m.wikipedia.org/wiki/Ruth_Gregory>`_ gives a rushed overview of
 Manifold basics. This is not learning material though, but review material.
 
+.. rubric:: Cartan's method of moving frames, tetrads, and Cartan’s Structure
+   Equations
+
+This covers the tetrad formalism, non-coordinate bases, Cartan's method of
+moving frames, and Cartan's structure equations. The more interesting the
+topic, the fewer resources you’ll find online. This is my playlist. I recommend
+starting *slowly* with `James Cook <https://www.youtube.com/@jamescook5617>`_:
+
+* `General Relativity: Lecture 20: tetrad method, Lorentzian frames, 5-16-23
+  <https://youtu.be/Ul9hCQqXaEg?si=16QWiiolXUqVN0sU>`_
+* `General Relativity: Lecture 20 part2: calculating via tetrad formalism,
+  future reading <https://youtu.be/cQUDEQd2jec?si=w6QMo138Gnx0KwBa>`_
+
+In her lecture on Cartan's formalism, `Ruth Gregory
+<https://en.m.wikipedia.org/wiki/Ruth_Gregory>`_ relates the covariant
+derivative to the abstract definition of a *derivation*. She presents Cartan's
+method of moving frames and derives Cartan's first structure equation. This is
+not for the faint-hearted. Be familiar with the concept of a `non-coordinate
+basis <https://en.m.wikipedia.org/wiki/Holonomic_basis>`_. Fasten your seatbelt
+and be prepare to watch thrice:
+
+* `PSI 2018/2019 - Gravitational Physics - Lecture 3 - Cartan's formalism:
+  connection & curvature <https://pirsa.org/19010053>`_
+
 .. rubric:: Gravitational Physics Lecture by Ruth Gregory
 
 There is great content from the Perimeter Institute Recorded Seminar Archive
-that I am going through. Here is a list of videos, which I have not watched
-yet.
+that I am going through. Here is a list of videos I intend to watch later.
 
 * `Gravitational Physics Lecture 1 <https://pirsa.org/24010048>`_
 * `Gravitational Physics Lecture 2 <https://pirsa.org/24010049>`_
 * `Gravitational Physics Lecture 3 <https://pirsa.org/24010050>`_
 * `Gravitational Physics Lecture 4 <https://pirsa.org/24010051>`_
-
-* `PSI 2018/2019 - Gravitational Physics - Lecture 3 - Cartan's formalism:
-  connection & curvature <https://pirsa.org/19010053>`_
 
 * `PSI 2017/2018 - Gravitational Physics - Lecture 3: Applying Cartan:
   Spherically Symmetric Spacetimes -- Schwarzschild, Relativistic Stars.
