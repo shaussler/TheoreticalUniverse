@@ -7,13 +7,14 @@
 How to cite
 -----------
 
-You can cite *Theoretical Universe* by copy-pasting the following. The date of
-last modification as well as the commit hash is set automatically and therefore
-up-to-date. The commit hash permits to uniquely identify the version, and past
-version can be restored from the *Theoretical Universe* repository.
+The date of the last modification and commit hash are both automatically
+generated. The commit hash ensures the version is uniquely identifiable, and
+previous versions can be retrieved from the repository. You can cite
+*Theoretical Universe* as follows:
 
 .. topic:: Citing *Theoretical Universe*
 
    Stéphane Haussler, *Theoretical Universe*,
-   https://shaussler.github.io/TheoreticalUniverse/, Last modified |today|,
+   https://shaussler.github.io/TheoreticalUniverse/,
+   Last modified |today|,
    Commit |commit_hash|
