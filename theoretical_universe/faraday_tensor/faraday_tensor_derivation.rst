@@ -9,7 +9,7 @@
 .. _deriving the Faraday tensor from the 1865 Maxwell's equations:
 .. _faraday tensor derivation:
 
-Deriving the Faraday Tensor from the 1865 Maxwell's Equations
+Deriving the Faraday tensor from the 1865 Maxwell's equations
 =============================================================
 
 .. rst-class:: custom-author
@@ -39,8 +39,8 @@ multiplication. While an understanding of Maxwell's equations and tensor
 calculus certainly can enrich the content, they are not essential to follow
 this derivation.
 
-The Vector Formulation of Mr. Heaviside
----------------------------------------
+Vector formulation of Mr. Heaviside
+-----------------------------------
 
 .. {{{
 
@@ -99,7 +99,7 @@ With the electric field :math:`\overrightarrow{E} = \begin{bmatrix} E^x \\ E^y
 
 .. }}}
 
-The Equations of Mr. Maxwell
+The equations of Mr. Maxwell
 ----------------------------
 
 .. {{{
@@ -137,8 +137,8 @@ the 1865 Maxwell formulation, albeit with modern notation and conventions.
 
 .. }}}
 
-The Underlying Structure
-------------------------
+Underlying structure
+--------------------
 
 .. {{{
 
@@ -155,23 +155,34 @@ Gathering and reordering the terms, a clear structures becomes apparent:
        + \frac{1}{c^2} \frac{∂E^z}{∂t} & - \frac{∂B^y}{∂x} & + \frac{∂B^x}{∂y} &                   & = - μ_0 J^z \\
    \end{alignedat}
 
+Reordered:
+
+.. math::
+
+   \begin{alignedat}{4}
+                                       & + \frac{∂E^x}{∂x} & + \frac{∂E^y}{∂y} & + \frac{∂E^z}{∂z} & = + & ρ/ε_0   \\
+       - \frac{1}{c^2} \frac{∂E^x}{∂t} &                   & + \frac{∂B^z}{∂y} & - \frac{∂B^y}{∂z} & = + & μ_0 J^x \\
+       - \frac{1}{c^2} \frac{∂E^y}{∂t} & - \frac{∂B^z}{∂x} &                   & + \frac{∂B^x}{∂z} & = + & μ_0 J^y \\
+       - \frac{1}{c^2} \frac{∂E^z}{∂t} & + \frac{∂B^y}{∂x} & - \frac{∂B^x}{∂y} &                   & = + & μ_0 J^z \\
+   \end{alignedat}
+
 .. rubric:: Homogenous equations: Guauss's law and Faraday's law of induction
 
 .. math::
 
    \begin{alignedat}{4}
-                        & + \frac{∂B^x}{∂x} & + \frac{∂B^y}{∂y} & + \frac{∂B^z}{∂z} &= 0 \\
-      + \frac{∂B^x}{∂t} &                   & + \frac{∂E^z}{y∂} & - \frac{∂E^y}{∂z} &= 0 \\
-      + \frac{∂B^y}{∂t} & - \frac{∂E^z}{∂x} &                   & + \frac{∂E^x}{∂z} &= 0 \\
-      + \frac{∂B^z}{∂t} & + \frac{∂E^y}{∂x} & - \frac{∂E^x}{∂y} &                   &= 0 \\
+                          & + \frac{∂B^x}{∂x} & + \frac{∂B^y}{∂y} & + \frac{∂B^z}{∂z} &= 0 \\
+        + \frac{∂B^x}{∂t} &                   & + \frac{∂E^z}{y∂} & - \frac{∂E^y}{∂z} &= 0 \\
+        + \frac{∂B^y}{∂t} & - \frac{∂E^z}{∂x} &                   & + \frac{∂E^x}{∂z} &= 0 \\
+        + \frac{∂B^z}{∂t} & + \frac{∂E^y}{∂x} & - \frac{∂E^x}{∂y} &                   &= 0 \\
    \end{alignedat}
 
 .. }}}
 
 .. _The Ordered Equations:
 
-The Ordered Equations
----------------------
+Ordered equations
+-----------------
 
 .. {{{
 
@@ -190,10 +201,21 @@ and for the spatial dimensions :math:`∂_x = \frac{∂}{∂ x}`, :math:`∂_y =
 .. math::
 
    \begin{alignedat}{4}
-                & + ∂_x \E^x & + ∂_y \E^y & + ∂_z \E^z & = + μ_0 c ρ \\
-     + ∂_t \E^x &            & - ∂_y  B^z & + ∂_z  B^y & = - μ_0 J^x \\
-     + ∂_t \E^y & + ∂_x  B^z &            & - ∂_z  B^x & = - μ_0 J^y \\
-     + ∂_t \E^z & - ∂_x  B^y & + ∂_y  B^x &            & = - μ_0 J^z \\
+                  & + ∂_x \E^x & + ∂_y \E^y & + ∂_z \E^z & = + μ_0 c ρ \\
+       + ∂_t \E^x &            & - ∂_y  B^z & + ∂_z  B^y & = - μ_0 J^x \\
+       + ∂_t \E^y & + ∂_x  B^z &            & - ∂_z  B^x & = - μ_0 J^y \\
+       + ∂_t \E^z & - ∂_x  B^y & + ∂_y  B^x &            & = - μ_0 J^z \\
+   \end{alignedat}
+
+Reordered:
+
+.. math::
+
+   \begin{alignedat}{5}
+                  & + ∂_x \E^x & + ∂_y \E^y & + ∂_z \E^z & = + & μ_0 c ρ \\
+       - ∂_t \E^x &            & + ∂_y  B^z & - ∂_z  B^y & = + & μ_0 J^x \\
+       - ∂_t \E^y & - ∂_x  B^z &            & + ∂_z  B^x & = + & μ_0 J^y \\
+       - ∂_t \E^z & + ∂_x  B^y & - ∂_y  B^x &            & = + & μ_0 J^z \\
    \end{alignedat}
 
 .. rubric:: Homogenous equations
@@ -201,10 +223,10 @@ and for the spatial dimensions :math:`∂_x = \frac{∂}{∂ x}`, :math:`∂_y =
 .. math::
 
    \begin{alignedat}{4}
-                & + ∂_x  B^x & + ∂_y  B^y & + ∂_z  B^z & = 0 \\
-     + ∂_t  B^x &            & + ∂_y \E^z & - ∂_z \E^y & = 0 \\
-     + ∂_t  B^y & - ∂_x \E^z &            & + ∂_z \E^x & = 0 \\
-     + ∂_t  B^z & + ∂_x \E^y & - ∂_y \E^x &            & = 0 \\
+                  & + ∂_x  B^x & + ∂_y  B^y & + ∂_z  B^z & = 0 \\
+       + ∂_t  B^x &            & + ∂_y \E^z & - ∂_z \E^y & = 0 \\
+       + ∂_t  B^y & - ∂_x \E^z &            & + ∂_z \E^x & = 0 \\
+       + ∂_t  B^z & + ∂_x \E^y & - ∂_y \E^x &            & = 0 \\
    \end{alignedat}
 
 For readers well-versed in the tensor formulation of electromagnetism, the
@@ -232,8 +254,8 @@ be apparent that we can employ matrices operations.
 
 .. _the_tensor_of_mr_faraday:
 
-The Tensor of Mr. Faraday
--------------------------
+Faraday tensor
+--------------
 
 .. {{{
 
@@ -252,6 +274,21 @@ to:
    =
    \begin{bmatrix} + μ_0 c ρ & - μ_0 J^x  & - μ_0 J^y  & - μ_0 J^z \end{bmatrix}
 
+Reordered:
+
+.. math::
+
+   \begin{bmatrix} ∂_t & ∂_x & ∂_y & ∂_z \end{bmatrix}
+   \begin{bmatrix}
+            & + \E^x & +\E^y & + \E^z \\
+     - \E^x &        & - B^z & +  B^y \\
+     - \E^y & +  B^z &       & -  B^x \\
+     - \E^z & -  B^y & + B^x &        \\
+   \end{bmatrix}
+   =
+   \begin{bmatrix} + μ_0 c ρ & + μ_0 J^x  & + μ_0 J^y  & + μ_0 J^z \end{bmatrix}
+
+
 .. math::
 
    \begin{bmatrix} ∂_t & ∂_x & ∂_y & ∂_z \end{bmatrix}
@@ -268,8 +305,8 @@ We have thus obtained the Faraday tensor (inhomogenous equations) and its dual
 
 .. }}}
 
-The Tensor Equations
---------------------
+Tensor equations
+----------------
 
 .. {{{
 

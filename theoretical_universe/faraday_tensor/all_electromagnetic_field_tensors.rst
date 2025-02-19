@@ -757,7 +757,7 @@ Antisymetric :math:`∂_x ∧ dy = - ∂_y ∧ dx`
 
 .. math::
 
-   F^{♯♭} = \left[ \begin{alignedat}{3}
+   F^{♯♭} = \frac{1}{2} \left[ \begin{alignedat}{3}
        - & \E^x \: ∂_t ∧ dx & \: - \: & \E^x \: ∂_x ∧ dt \\
        - & \E^y \: ∂_t ∧ dy & \: - \: & \E^y \: ∂_y ∧ dt \\
        - & \E^z \: ∂_t ∧ dz & \: - \: & \E^z \: ∂_z ∧ dt \\
@@ -770,7 +770,7 @@ Antisymetric :math:`∂_x ∧ dy = - ∂_y ∧ dx`
 
 .. math::
 
-   F^{♯♭} = \begin{bmatrix}
+   F^{♯♭} = \frac{1}{2}\begin{bmatrix}
                           & - \E^x \: ∂_x ∧ dt & - \E^y \: ∂_y ∧ dt & - \E^z \: ∂_z ∧ dt \\
        - \E^x \: ∂_t ∧ dx &                    & +  B^z \: ∂_y ∧ dx & -  B^y \: ∂_z ∧ dx \\
        - \E^y \: ∂_t ∧ dy & -  B^z \: ∂_x ∧ dy &                    & +  B^x \: ∂_z ∧ dy \\

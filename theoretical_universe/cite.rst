@@ -7,10 +7,10 @@
 How to cite
 -----------
 
-The date of the last modification and commit hash are both automatically
-generated. The commit hash ensures the version is uniquely identifiable, and
-previous versions can be retrieved from the repository. You can cite
-*Theoretical Universe* as follows:
+The date of last modification and commit hash are both automatically generated.
+The commit hash ensures the version is uniquely identifiable, and previous
+versions can be retrieved from the repository. You can cite *Theoretical
+Universe* as follows:
 
 .. topic:: Citing *Theoretical Universe*
 
