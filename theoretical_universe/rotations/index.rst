@@ -37,9 +37,9 @@ combination of the 3 independent planes of rotation. These are represented with
 .. math::
 
    R^{♯♯} = \begin{bmatrix}
-     a \; ∂_y ∧ ∂_z \\
-     b \; ∂_z ∧ ∂_x \\
-     c \; ∂_x ∧ ∂_y \\
+       R^{x} \; ∂_y ∧ ∂_z \\
+       R^{y} \; ∂_z ∧ ∂_x \\
+       R^{z} \; ∂_x ∧ ∂_y \\
    \end{bmatrix}
 
 Any rotation in 4-dimensional Minkowksi space is represented by a linear
@@ -49,12 +49,12 @@ combination of the 6 independent planes of rotation. These are represented with
 .. math::
 
    R^{♯♯}= \begin{bmatrix}
-     a \; ∂_t ∧ ∂_x \\
-     b \; ∂_t ∧ ∂_y \\
-     c \; ∂_t ∧ ∂_z \\
-     d \; ∂_y ∧ ∂_z \\
-     e \; ∂_z ∧ ∂_x \\
-     f \; ∂_x ∧ ∂_y \\
+       Q^{x} \; ∂_t ∧ ∂_x \\
+       Q^{y} \; ∂_t ∧ ∂_y \\
+       Q^{z} \; ∂_t ∧ ∂_z \\
+       R^{x} \; ∂_y ∧ ∂_z \\
+       R^{y} \; ∂_z ∧ ∂_x \\
+       R^{z} \; ∂_x ∧ ∂_y \\
    \end{bmatrix}
 
 Equivalently, rotations in spacetime can be represented by linear combinations
@@ -63,12 +63,12 @@ of 6 basis bicovectors:
 .. math::
 
    R^{♭♭} = \left[ \begin{aligned}
-     - & a \; dt ∧ dx \\
-     - & b \; dt ∧ dy \\
-     - & c \; dt ∧ dz \\
-       & d \; dy ∧ dz \\
-       & e \; dz ∧ dx \\
-       & f \; dx ∧ dy \\
+       - & Q^{x} \; dt ∧ dx \\
+       - & Q^{y} \; dt ∧ dy \\
+       - & Q^{z} \; dt ∧ dz \\
+         & R^{x} \; dy ∧ dz \\
+         & R^{y} \; dz ∧ dx \\
+         & R^{z} \; dx ∧ dy \\
    \end{aligned} \right]
 
 .. rubric:: Matrice Representation of the Mixed Exterior Product
