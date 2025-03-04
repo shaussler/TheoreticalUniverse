@@ -33,8 +33,9 @@ you find mistakes, don't hesitate to open an issue or directly provide
 corrections by sending a merge request to my `Github repository
 <https://github.com/shaussler/TheoreticalUniverse/>`_.
 
-I assume the reader possesses a strong grasp of vector calculus, including
-familiarity with the vector dot and cross products, as well as matrix
+This page stands alone and can be understood without referencing other content
+on this site. I assume the reader possesses a strong grasp of vector calculus,
+including familiarity with the vector dot and cross products, as well as matrix
 multiplication. While an understanding of Maxwell's equations and tensor
 calculus certainly can enrich the content, they are not essential to follow
 this derivation.
