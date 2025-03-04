@@ -6,7 +6,7 @@
 
 .. _All Electromagnetic Field Tensors:
 
-All Electromagnetic Field Tensors
+All electromagnetic field tensors
 =================================
 
 .. rst-class:: custom-author

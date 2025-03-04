@@ -5,12 +5,11 @@
 .. with this work. If not, see <https://creativecommons.org/licenses/by/4.0/>.
 
 .. _of_maxwell_equations_and_rotations:
-.. _Of Maxwell Equations and Rotations:
 .. _of maxwell equations and rotations:
 .. _Maxwell's Equations via Differential Forms:
 
-Maxwell's Equations via Differential Forms
-==========================================
+Deriving the Faraday 2-form from the 1865 Maxwell's equations
+=============================================================
 
 .. rst-class:: custom-title
 

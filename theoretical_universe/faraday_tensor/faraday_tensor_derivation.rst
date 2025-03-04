@@ -155,17 +155,6 @@ Gathering and reordering the terms, a clear structures becomes apparent:
        + \frac{1}{c^2} \frac{∂E^z}{∂t} & - \frac{∂B^y}{∂x} & + \frac{∂B^x}{∂y} &                   & = - μ_0 J^z \\
    \end{alignedat}
 
-Reordered:
-
-.. math::
-
-   \begin{alignedat}{4}
-                                       & + \frac{∂E^x}{∂x} & + \frac{∂E^y}{∂y} & + \frac{∂E^z}{∂z} & = + & ρ/ε_0   \\
-       - \frac{1}{c^2} \frac{∂E^x}{∂t} &                   & + \frac{∂B^z}{∂y} & - \frac{∂B^y}{∂z} & = + & μ_0 J^x \\
-       - \frac{1}{c^2} \frac{∂E^y}{∂t} & - \frac{∂B^z}{∂x} &                   & + \frac{∂B^x}{∂z} & = + & μ_0 J^y \\
-       - \frac{1}{c^2} \frac{∂E^z}{∂t} & + \frac{∂B^y}{∂x} & - \frac{∂B^x}{∂y} &                   & = + & μ_0 J^z \\
-   \end{alignedat}
-
 .. rubric:: Homogenous equations: Guauss's law and Faraday's law of induction
 
 .. math::
@@ -205,17 +194,6 @@ and for the spatial dimensions :math:`∂_x = \frac{∂}{∂ x}`, :math:`∂_y =
        + ∂_t \E^x &            & - ∂_y  B^z & + ∂_z  B^y & = - μ_0 J^x \\
        + ∂_t \E^y & + ∂_x  B^z &            & - ∂_z  B^x & = - μ_0 J^y \\
        + ∂_t \E^z & - ∂_x  B^y & + ∂_y  B^x &            & = - μ_0 J^z \\
-   \end{alignedat}
-
-Reordered:
-
-.. math::
-
-   \begin{alignedat}{5}
-                  & + ∂_x \E^x & + ∂_y \E^y & + ∂_z \E^z & = + & μ_0 c ρ \\
-       - ∂_t \E^x &            & + ∂_y  B^z & - ∂_z  B^y & = + & μ_0 J^x \\
-       - ∂_t \E^y & - ∂_x  B^z &            & + ∂_z  B^x & = + & μ_0 J^y \\
-       - ∂_t \E^z & + ∂_x  B^y & - ∂_y  B^x &            & = + & μ_0 J^z \\
    \end{alignedat}
 
 .. rubric:: Homogenous equations
@@ -271,23 +249,7 @@ to:
      + \E^y & -  B^z &       & +  B^x \\
      + \E^z & +  B^y & - B^x &        \\
    \end{bmatrix}
-   =
-   \begin{bmatrix} + μ_0 c ρ & - μ_0 J^x  & - μ_0 J^y  & - μ_0 J^z \end{bmatrix}
-
-Reordered:
-
-.. math::
-
-   \begin{bmatrix} ∂_t & ∂_x & ∂_y & ∂_z \end{bmatrix}
-   \begin{bmatrix}
-            & + \E^x & +\E^y & + \E^z \\
-     - \E^x &        & - B^z & +  B^y \\
-     - \E^y & +  B^z &       & -  B^x \\
-     - \E^z & -  B^y & + B^x &        \\
-   \end{bmatrix}
-   =
-   \begin{bmatrix} + μ_0 c ρ & + μ_0 J^x  & + μ_0 J^y  & + μ_0 J^z \end{bmatrix}
-
+   = \begin{bmatrix} + μ_0 c ρ & - μ_0 J^x  & - μ_0 J^y  & - μ_0 J^z \end{bmatrix}
 
 .. math::
 
@@ -300,29 +262,19 @@ Reordered:
    \end{bmatrix}
    = \begin{bmatrix} 0 & 0 & 0 & 0 \end{bmatrix}
 
-We have thus obtained the Faraday tensor (inhomogenous equations) and its dual
-(homogeneous equations).
-
-.. }}}
-
-Tensor equations
-----------------
-
-.. {{{
-
 The flat left hand side is a covector, which we note in tensor notation with
-lower indices :math:`∂_μ`. The right hand side is also flat and therefore is a
+lower indices :math:`∂_μ`. The right hand side is also flat and therefore a
 covector :math:`J_ν`. The rank 2 tensors in the expressions are necessarily one
 time contravariant and one time covariant. We multiply each column of :math:`∂`
 with each row of :math:`F`, and repeat for all columns of :math:`F`. With the
-first index of :math:`F` being the row :math:`μ`, and :math:`ν`, this means
-:math:`∂_μ F^μ{}_ν`. We then write in tensor notation :math:`F^μ{}_ν` for the
-Faraday tensor, and :math:`G^μ{}_ν` for its dual:
+first index :math:`μ` of :math:`F` to identify the rows, and the second index
+:math:`ν` to indentify the columns, this means :math:`∂_μ F^μ{}_ν`. We then
+write in tensor notation :math:`F^μ{}_ν` for the Faraday tensor, and
+:math:`G^μ{}_ν` for its dual:
 
 .. math::
 
-   \begin{bmatrix} F^μ{}_ν \end{bmatrix} =
-   \begin{bmatrix}
+   F^μ{}_ν = \begin{bmatrix}
             & + \E^x & + \E^y & + \E^z \\
      + \E^x &        & +  B^z & -  B^y \\
      + \E^y & -  B^z &        & +  B^x \\
@@ -331,15 +283,15 @@ Faraday tensor, and :math:`G^μ{}_ν` for its dual:
 
 .. math::
 
-   \begin{bmatrix} G^μ{}_ν \end{bmatrix} =
-   \begin{bmatrix}
+   G^μ{}_ν = \begin{bmatrix}
              & +  B^x & +  B^y & +  B^z \\
      +  B^x  &        & - \E^z & + \E^y \\
      +  B^y  & + \E^z &        & - \E^x \\
      +  B^z  & - \E^y & + \E^x &        \\
    \end{bmatrix}
 
-Maxwell's equations are then:
+We have thus obtained the Faraday tensor (inhomogenous equations) and its dual
+(homogeneous equations). Maxwell's equations are then:
 
 .. math::
 
@@ -348,6 +300,9 @@ Maxwell's equations are then:
 
 To double-check the result, you can have a look at `this alternative derivation
 of the mixed electromagnetic tensor
-<https://www.wikihow.life/Derive-the-Faraday-Tensor>`_.
+<https://www.wikihow.life/Derive-the-Faraday-Tensor>`_. To triple-check the
+result, you can also have a look at `these lecture notes from the Department of
+Physics of the University of Oxford
+<https://users.physics.ox.ac.uk/~palmerc/S8files/lectures.pdf>`_.
 
 .. }}}
