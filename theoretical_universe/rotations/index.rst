@@ -15,12 +15,18 @@ Rotations in differential form
    rotations_in_3_dimensions.rst
    rotations_in_minkowski_space.rst
 
-In the following pages, I express rotations in 3-dimensional Euclidean as well
-as in 4-dimensional Minkowski space, utilizing :ref:`the Cartan-Hodge
-formalism`. Anti-symmetries emerge from the Hodge star operator when arranging
-the differential forms into matrices, which exactly correspond to
-:math:`\mathfrak{so}(3)` and :math:`\mathfrak{so}(1,3)` matrices. Finally, we
-establish the identification of the electromagnetic field tensor.
+In the following pages, I systematically express infinitesimal rotations in
+both 3-dimensional Euclidean and Minkowski space. The ultimate purpose is to
+establish the relation of the electromagnetic field to infinitesimal rotations
+in spacetime.
+
+The components of these infinitesimal rotations, expressed as differential
+2-forms, will be arranged into matrices. The anti-symmetries will be explicit,
+emerging the exterior product :math:`∧`. I will demonstrate the exact relation
+to :math:`\mathfrak{so}(3)` and :math:`\mathfrak{so}(1,3)` matrices.
+
+I assume the reader understands tensor calculus and the exterior product
+:math:`∧`, as well as familiarity with :ref:`Hodge duality <hodge duality>`.
 
 .. rubric:: Rotations are Linear Combinations of Bivectors
 

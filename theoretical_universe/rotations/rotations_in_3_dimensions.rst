@@ -31,7 +31,7 @@ a linear combinations the three basis bivectors:
 
 .. math::
 
-   R^{♯♯} = a \; ∂_y ∧ ∂_z + b \; ∂_z ∧ ∂_x + c \; ∂_x ∧ ∂_y
+   R^{♯♯} = R^x \; ∂_y ∧ ∂_z + R^y \; ∂_z ∧ ∂_x + R^z \; ∂_x ∧ ∂_y
 
 We can rewrite as a single column:
 
