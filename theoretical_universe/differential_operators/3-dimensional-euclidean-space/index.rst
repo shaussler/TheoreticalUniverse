@@ -144,23 +144,20 @@ Apply the :math:`d` operator:
 
 .. math::
 
-   d ⋆ F^♭ = d
-   \begin{bmatrix}
-     F^x dy ∧ dz \\
-     F^y dz ∧ dx \\
-     F^z dx ∧ dy \\
+   d ⋆ F^♭ = d \begin{bmatrix}
+       F^x dy ∧ dz \\
+       F^y dz ∧ dx \\
+       F^z dx ∧ dy \\
    \end{bmatrix}
-   =
-   \begin{bmatrix}
-     ∂_x F^x dx ∧ dy ∧ dz \\
-     ∂_y F^y dy ∧ dz ∧ dx \\
-     ∂_z F^z dz ∧ dx ∧ dy \\
+   = \begin{bmatrix}
+       ∂_x F^x dx ∧ dy ∧ dz \\
+       ∂_y F^y dy ∧ dz ∧ dx \\
+       ∂_z F^z dz ∧ dx ∧ dy \\
    \end{bmatrix}
-   =
-   \begin{bmatrix}
-   ∂_x F^x dx ∧ dy ∧ dz \\
-   ∂_y F^y dx ∧ dy ∧ dz \\
-   ∂_z F^z dx ∧ dy ∧ dz \\
+   = \begin{bmatrix}
+       ∂_x F^x dx ∧ dy ∧ dz \\
+       ∂_y F^y dx ∧ dy ∧ dz \\
+       ∂_z F^z dx ∧ dy ∧ dz \\
    \end{bmatrix}
 
 Which can be brought back to a zero form by applying yet again the Hodge star
@@ -169,14 +166,14 @@ Which can be brought back to a zero form by applying yet again the Hodge star
 .. math::
 
    ⋆ d ⋆ F^♭ = \begin{bmatrix}
-     ∂_x F^x ⋆ dx ∧ dy ∧ dz \\
-     ∂_y F^y ⋆ dx ∧ dy ∧ dz \\
-     ∂_z F^z ⋆ dx ∧ dy ∧ dz \\
+       ∂_x F^x ⋆ dx ∧ dy ∧ dz \\
+       ∂_y F^y ⋆ dx ∧ dy ∧ dz \\
+       ∂_z F^z ⋆ dx ∧ dy ∧ dz \\
    \end{bmatrix}
    = \begin{bmatrix}
-     ∂_x F^x \mathbf{1} \\
-     ∂_y F^y \mathbf{1} \\
-     ∂_z F^z \mathbf{1} \\
+       ∂_x F^x \mathbf{1} \\
+       ∂_y F^y \mathbf{1} \\
+       ∂_z F^z \mathbf{1} \\
    \end{bmatrix}
    = ∂_x F^x + ∂_y F^y + ∂_z F^z
 
@@ -368,7 +365,7 @@ Laplace-De Rham Operator
 
 .. {{{
 
-.. warning:: Under construction
+.. warning:: Draft
 
 The Laplacian is only valid for functions (zero-forms). The Laplacian can be
 generalized to n-forms with the Laplace-de Rham operator.

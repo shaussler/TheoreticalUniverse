@@ -4,6 +4,7 @@
 .. international license. you should have received a copy of the license along
 .. with this work. if not, see <https://creativecommons.org/licenses/by/4.0/>.
 
+.. _free matrix representation:
 .. _the_free_matrix_representation:
 .. _the free matrix representation:
 
