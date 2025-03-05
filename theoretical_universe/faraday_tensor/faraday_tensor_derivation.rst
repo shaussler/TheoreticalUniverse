@@ -245,10 +245,10 @@ to:
 
    \begin{bmatrix} ∂_t & ∂_x & ∂_y & ∂_z \end{bmatrix}
    \begin{bmatrix}
-            & + \E^x & +\E^y & + \E^z \\
-     + \E^x &        & + B^z & -  B^y \\
-     + \E^y & -  B^z &       & +  B^x \\
-     + \E^z & +  B^y & - B^x &        \\
+              & + \E^x & +\E^y & + \E^z \\
+       + \E^x &        & + B^z & -  B^y \\
+       + \E^y & -  B^z &       & +  B^x \\
+       + \E^z & +  B^y & - B^x &        \\
    \end{bmatrix}
    = \begin{bmatrix} + μ_0 c ρ & - μ_0 J^x  & - μ_0 J^y  & - μ_0 J^z \end{bmatrix}
 
@@ -256,10 +256,10 @@ to:
 
    \begin{bmatrix} ∂_t & ∂_x & ∂_y & ∂_z \end{bmatrix}
    \begin{bmatrix}
-           & +  B^x & +  B^y & +  B^z \\
-     + B^x &        & - \E^z & + \E^y \\
-     + B^y & + \E^z &        & - \E^x \\
-     + B^z & - \E^y & + \E^x &        \\
+             & +  B^x & +  B^y & +  B^z \\
+       + B^x &        & - \E^z & + \E^y \\
+       + B^y & + \E^z &        & - \E^x \\
+       + B^z & - \E^y & + \E^x &        \\
    \end{bmatrix}
    = \begin{bmatrix} 0 & 0 & 0 & 0 \end{bmatrix}
 
@@ -276,19 +276,19 @@ write in tensor notation :math:`F^μ{}_ν` for the Faraday tensor, and
 .. math::
 
    F^μ{}_ν = \begin{bmatrix}
-            & + \E^x & + \E^y & + \E^z \\
-     + \E^x &        & +  B^z & -  B^y \\
-     + \E^y & -  B^z &        & +  B^x \\
-     + \E^z & +  B^y & -  B^x &        \\
+              & + \E^x & + \E^y & + \E^z \\
+       + \E^x &        & +  B^z & -  B^y \\
+       + \E^y & -  B^z &        & +  B^x \\
+       + \E^z & +  B^y & -  B^x &        \\
    \end{bmatrix}
 
 .. math::
 
    G^μ{}_ν = \begin{bmatrix}
-             & +  B^x & +  B^y & +  B^z \\
-     +  B^x  &        & - \E^z & + \E^y \\
-     +  B^y  & + \E^z &        & - \E^x \\
-     +  B^z  & - \E^y & + \E^x &        \\
+               & +  B^x & +  B^y & +  B^z \\
+       +  B^x  &        & - \E^z & + \E^y \\
+       +  B^y  & + \E^z &        & - \E^x \\
+       +  B^z  & - \E^y & + \E^x &        \\
    \end{bmatrix}
 
 We have thus obtained the Faraday tensor (inhomogenous equations) and its dual
@@ -305,5 +305,140 @@ of the mixed electromagnetic tensor
 result, you can also have a look at `these lecture notes from the Department of
 Physics of the University of Oxford
 <https://users.physics.ox.ac.uk/~palmerc/S8files/lectures.pdf>`_.
+
+.. admonition:: Doubly contravariant form
+   :class: dropdown, toggle-shown
+
+   .. {{{
+
+   Another widespread expression of the Maxwell equations is written with a
+   doubly contravariant tensor :math:`F^{μν}`. The derivation will be discussed
+   here. Contrary to my ususal practice of performing systematic calculations,
+   I consider in this note for simplicity only the inhomogenous equations. The
+   argument and calculations can be apply to the homogenous equations in the
+   same manner. You may have noticed that the sign in all equations can be
+   flipped. In particular we can choose to express the ordered equations using
+   the contravariant 4-current:
+
+   .. math::
+
+      J^ν = \begin{bmatrix}
+          + μ_0 c ρ \\
+          + μ_0 J^x \\
+          + μ_0 J^y \\
+          + μ_0 J^z \\
+      \end{bmatrix}
+
+   We would then reorder the inhomogenous equations as follows:
+
+   .. math::
+
+      \begin{alignedat}{4}
+                     & + ∂_x \E^x & + ∂_y \E^y & + ∂_z \E^z & = + μ_0 c ρ \\
+          - ∂_t \E^x &            & + ∂_y  B^z & - ∂_z  B^y & = + μ_0 J^x \\
+          - ∂_t \E^y & - ∂_x  B^z &            & + ∂_z  B^x & = + μ_0 J^y \\
+          - ∂_t \E^z & + ∂_x  B^y & - ∂_y  B^x &            & = + μ_0 J^z \\
+      \end{alignedat}
+
+   Following the same logic, we can use a column-column representation for the
+   Faraday tensor, which permit to still follow matrix multiplication rules:
+
+   .. math::
+
+      \begin{bmatrix} ∂_t & ∂_x & ∂_y & ∂_z \end{bmatrix}
+      \begin{bmatrix}
+          \begin{bmatrix}
+                 0   \\
+              + \E^x \\
+              + \E^y \\
+              + \E^z \\
+          \end{bmatrix} \\
+          \begin{bmatrix}
+              - \E^x \\
+                 0   \\
+              +  B^z \\
+              -  B^y \\
+          \end{bmatrix} \\
+          \begin{bmatrix}
+              -\E^y \\
+              - B^z \\
+                0   \\
+              + B^x \\
+          \end{bmatrix} \\
+          \begin{bmatrix}
+              - \E^z \\
+              +  B^y \\
+              -  B^x \\
+                 0   \\
+          \end{bmatrix} \\
+      \end{bmatrix}
+      = \begin{bmatrix}
+          + μ_0 c ρ \\
+          + μ_0 J^x \\
+          + μ_0 J^y \\
+          + μ_0 J^z \\
+      \end{bmatrix}
+
+   The doubly contravariant Faraday tensor can be written:
+
+   .. math::
+
+      F^{μν} = \begin{bmatrix}
+          \begin{bmatrix}
+                 0   \\
+              + \E^x \\
+              + \E^y \\
+              + \E^z \\
+          \end{bmatrix} \\
+          \begin{bmatrix}
+              - \E^x \\
+                 0   \\
+              +  B^z \\
+              -  B^y \\
+          \end{bmatrix} \\
+          \begin{bmatrix}
+              -\E^y \\
+              - B^z \\
+                0   \\
+              + B^x \\
+          \end{bmatrix} \\
+          \begin{bmatrix}
+              - \E^z \\
+              +  B^y \\
+              -  B^x \\
+                 0   \\
+          \end{bmatrix} \\
+      \end{bmatrix}
+
+   In this context, the first index :math:`μ` for selects the outer row, and
+   the second index :math:`ν` selects the inner row. However, representing the
+   Faraday tensor as a "row of rows" is unconventional. Typically a table form,
+   and matrix multiplication rules not applied. This leads to the following
+   expression for the doubly contravariant Faraday tensor:
+
+   .. math::
+
+      F^{μν} = \begin{bmatrix}
+                & - \E^x & - \E^y & - \E^z \\
+         + \E^x &        & -  B^z & +  B^y \\
+         + \E^y & +  B^z &        & -  B^x \\
+         + \E^z & -  B^y & +  B^x &        \\
+      \end{bmatrix}
+
+   Regardless whether we follow a row/row or row/column convention, the doubly
+   contravariant Maxwell equations in tensor form are expressed as:
+
+   .. math::
+
+      ∂_μ F^{μν} = J^ν
+
+   The discussion highlights some difficulties in using tensor notation, which
+   make it inconvenient when performing calculations algorithmically, without
+   extensive thoughts. This is adressed by using the :ref:`the free matrix
+   representation <the free matrix representation>` at the cost of extra symbols
+   for the explicit basis. The advantage is that it allows for
+   stgraightforward, "dumb" calculations.
+
+   .. }}}
 
 .. }}}
