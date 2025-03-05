@@ -24,10 +24,10 @@ Free matrix representation of rotations
 
 .. {{{
 
-:ref:`the free matrix representation` is intuitive when using a bivector basis,
-since the elements can be organized and re-ordered at will. With three
-dimensions, rotations are possible on the three planes and can be expressed as
-a linear combinations the three basis bivectors:
+:ref:`The free matrix representation <the free matrix representation>` is
+intuitive when using a bivector basis, since the elements can be organized and
+re-ordered at will. With three dimensions, rotations are possible on the three
+planes and can be expressed as a linear combinations the three basis bivectors:
 
 .. math::
 
@@ -40,9 +40,9 @@ We can rewrite as a single column:
    .. math::
 
       R^{♯♯} = \begin{bmatrix}
-        a \; ∂_y ∧ ∂_z \\
-        b \; ∂_z ∧ ∂_x \\
-        c \; ∂_x ∧ ∂_y \\
+          R^x \; ∂_y ∧ ∂_z \\
+          R^y \; ∂_z ∧ ∂_x \\
+          R^z \; ∂_x ∧ ∂_y \\
       \end{bmatrix}
 
 We could also represent the rotation with a row/column notation:
@@ -50,9 +50,9 @@ We could also represent the rotation with a row/column notation:
 .. math::
 
    R^{♯♯} = \left[ \begin{alignedat}{2}
-                    & c \; ∂_x ∧ ∂_y &                \\
-                    &                & a \; ∂_y ∧ ∂_z \\
-     b \; ∂_z ∧ ∂_x &                &                \\
+                        & R^z \; ∂_x ∧ ∂_y &                  \\
+                        &                  & R^x \; ∂_y ∧ ∂_z \\
+       R^y \; ∂_z ∧ ∂_x &                  &                  \\
    \end{alignedat} \right]
 
 However there is a more natural representation. The exterior product is
@@ -63,14 +63,14 @@ rewrite:
 .. math::
 
    R^{♯♯} = \begin{bmatrix}
-     a \; ∂_y ∧ ∂_z \\
-     b \; ∂_z ∧ ∂_x \\
-     c \; ∂_x ∧ ∂_y \\
-   \end{bmatrix} =
-   \begin{bmatrix}
-     a \; ∂_y ∧ ∂_z - a \; ∂_z ∧ ∂_y \\
-     b \; ∂_z ∧ ∂_x - b \; ∂_x ∧ ∂_z \\
-     c \; ∂_x ∧ ∂_y - c \; ∂_y ∧ ∂_x \\
+       R^x \; ∂_y ∧ ∂_z \\
+       R^y \; ∂_z ∧ ∂_x \\
+       R^z \; ∂_x ∧ ∂_y \\
+   \end{bmatrix}
+   = \frac{1}{2} \begin{bmatrix}
+       R^x \; ∂_y ∧ ∂_z - R^x \; ∂_z ∧ ∂_y \\
+       R^y \; ∂_z ∧ ∂_x - R^y \; ∂_x ∧ ∂_z \\
+       R^z \; ∂_x ∧ ∂_y - R^z \; ∂_y ∧ ∂_x \\
    \end{bmatrix}
 
 With a row/column representation, we obtain a fully anti-symmetric and doubly
@@ -81,9 +81,9 @@ contravariant representation:
    .. math::
 
       R^{♯♯} = \frac{1}{2} \begin{bmatrix}
-                       & - c \; ∂_y ∧ ∂_x & + b \; ∂_z ∧ ∂_x \\
-      + c \; ∂_x ∧ ∂_y &                  & - a \; ∂_z ∧ ∂_y \\
-      - b \; ∂_x ∧ ∂_z & + a \; ∂_y ∧ ∂_z &               \\
+                         & - R^z \; ∂_y ∧ ∂_x & + R^y \; ∂_z ∧ ∂_x \\
+      + R^z \; ∂_x ∧ ∂_y &                    & - R^x \; ∂_z ∧ ∂_y \\
+      - R^y \; ∂_x ∧ ∂_z & + R^x \; ∂_y ∧ ∂_z &                    \\
       \end{bmatrix}
 
 The doubly contravariant rotation obtained exclusively operates on covectors.
@@ -108,9 +108,9 @@ Flattening the first index of of the doubly contravariant form of the rotation
 .. math::
 
    R^{♭♯} = \begin{bmatrix}
-                   & - c \; dy ∧ ∂_x & + b \; dz ∧ ∂_x \\
-   + c \; dx ∧ ∂_y &                 & - a \; dz ∧ ∂_y \\
-   - b \; dx ∧ ∂_z & + a \; dy ∧ ∂_z &                 \\
+                         & - R^z \; dy ∧ ∂_x & + R^y \; dz ∧ ∂_x \\
+       + R^z \; dx ∧ ∂_y &                   & - R^x \; dz ∧ ∂_y \\
+       - R^y \; dx ∧ ∂_z & + R^x \; dy ∧ ∂_z &                   \\
    \end{bmatrix}
 
 .. admonition:: Calculations
@@ -127,9 +127,9 @@ Flattening the first index of of the doubly contravariant form of the rotation
    .. math::
 
       R^{♭♯} = \frac{1}{2} \begin{bmatrix}
-                        & - c \; ∂_y ∧ ∂_x & + b \; ∂_z ∧ ∂_x \\
-      + c  \; ∂_x ∧ ∂_y &                  & - a \; ∂_z ∧ ∂_y \\
-      - b  \; ∂_x ∧ ∂_z & + a \; ∂_y ∧ ∂_z &                  \\
+                              & - R^z \; ∂_y ∧ ∂_x & + R^y \; ∂_z ∧ ∂_x \\
+          + R^z  \; ∂_x ∧ ∂_y &                    & - R^x \; ∂_z ∧ ∂_y \\
+          - R^y  \; ∂_x ∧ ∂_z & + R^x \; ∂_y ∧ ∂_z &                    \\
       \end{bmatrix}^{♭♯}
 
    .. rubric:: Distribute the musical operators
@@ -137,9 +137,9 @@ Flattening the first index of of the doubly contravariant form of the rotation
    .. math::
 
       R^{♭♯} = \frac{1}{2} \begin{bmatrix}
-                              & - c \; (∂_y ∧ ∂_x)^{♭♯} & + b \; (∂_z ∧ ∂_x)^{♭♯} \\
-      + c \; (∂_x ∧ ∂_y)^{♭♯} &                         & - a \; (∂_z ∧ ∂_y)^{♭♯} \\
-      - b \; (∂_x ∧ ∂_z)^{♭♯} & + a \; (∂_y ∧ ∂_z)^{♭♯} &                         \\
+                                & - R^z \; (∂_y ∧ ∂_x)^{♭♯} & + R^y \; (∂_z ∧ ∂_x)^{♭♯} \\
+      + R^z \; (∂_x ∧ ∂_y)^{♭♯} &                           & - R^x \; (∂_z ∧ ∂_y)^{♭♯} \\
+      - R^y \; (∂_x ∧ ∂_z)^{♭♯} & + R^x \; (∂_y ∧ ∂_z)^{♭♯} &                           \\
       \end{bmatrix}
 
    .. rubric:: Apply the musical operators, using the euclidean metric
@@ -147,9 +147,9 @@ Flattening the first index of of the doubly contravariant form of the rotation
    .. math::
 
       R^{♭♯} = \frac{1}{2} \begin{bmatrix}
-                               & - c \; δ_{yi} dx^i ∧ ∂_x & + b \; δ_{zi} dx^i ∧ ∂_x \\
-      + c \; δ_{xi} dx^i ∧ ∂_y &                          & - a \; δ_{zi} dx^i ∧ ∂_y \\
-      - b \; δ_{xi} dx^i ∧ ∂_z & + a \; δ_{yi} dx^i ∧ ∂_z &                          \\
+                                 & - R^z \; δ_{yi} dx^i ∧ ∂_x & + R^y \; δ_{zi} dx^i ∧ ∂_x \\
+      + R^z \; δ_{xi} dx^i ∧ ∂_y &                            & - R^x \; δ_{zi} dx^i ∧ ∂_y \\
+      - R^y \; δ_{xi} dx^i ∧ ∂_z & + R^x \; δ_{yi} dx^i ∧ ∂_z &                            \\
       \end{bmatrix}
 
    .. rubric:: Identify the non-zero components and conclude
@@ -157,9 +157,9 @@ Flattening the first index of of the doubly contravariant form of the rotation
    .. math::
 
       R^{♭♯} = \frac{1}{2} \begin{bmatrix}
-                      & - c \; dy ∧ ∂_x & + b \; dz ∧ ∂_x \\
-      + c \; dx ∧ ∂_y &                 & - a \; dz ∧ ∂_y \\
-      - b \; dx ∧ ∂_z & + a \; dy ∧ ∂_z &                 \\
+                        & - R^z \; dy ∧ ∂_x & + R^y \; dz ∧ ∂_x \\
+      + R^z \; dx ∧ ∂_y &                   & - R^x \; dz ∧ ∂_y \\
+      - R^y \; dx ∧ ∂_z & + R^x \; dy ∧ ∂_z &                   \\
       \end{bmatrix}
 
    .. }}}
@@ -233,9 +233,9 @@ Flattening the second index of of the doubly contravariant form of the rotation
 .. math::
 
    R^{♯♭} = \frac{1}{2} \begin{bmatrix}
-                       & + c \; ∂_x ∧ dy & - b \; ∂_x ∧ dz \\
-       - c \; ∂_y ∧ dx &                 & + a \; ∂_y ∧ dz \\
-       + b \; ∂_z ∧ dx & - a \; ∂_z ∧ dy &                 \\
+                         & + R^z \; ∂_x ∧ dy & - R^y \; ∂_x ∧ dz \\
+       - R^z \; ∂_y ∧ dx &                   & + R^x \; ∂_y ∧ dz \\
+       + R^y \; ∂_z ∧ dx & - R^x \; ∂_z ∧ dy &                   \\
    \end{bmatrix}
 
 .. admonition:: Calculations
@@ -252,9 +252,9 @@ Flattening the second index of of the doubly contravariant form of the rotation
    .. math::
 
       R^{♯♭} = \frac{1}{2} \begin{bmatrix}
-                        & - c \; ∂_y ∧ ∂_x & + b \; ∂_z ∧ ∂_x \\
-      + c  \; ∂_x ∧ ∂_y &                  & - a \; ∂_z ∧ ∂_y \\
-      - b  \; ∂_x ∧ ∂_z & + a \; ∂_y ∧ ∂_z &                  \\
+                              & - R^z \; ∂_y ∧ ∂_x & + R^y \; ∂_z ∧ ∂_x \\
+          + R^z  \; ∂_x ∧ ∂_y &                    & - R^x \; ∂_z ∧ ∂_y \\
+          - R^y  \; ∂_x ∧ ∂_z & + R^x \; ∂_y ∧ ∂_z &                    \\
       \end{bmatrix}^{♯♭}
 
    .. rubric:: Distribute the musical operators:
@@ -262,9 +262,9 @@ Flattening the second index of of the doubly contravariant form of the rotation
    .. math::
 
       R^{♯♭} = \frac{1}{2} \begin{bmatrix}
-                              & - c \; (∂_y ∧ ∂_x)^{♯♭} & + b \; (∂_z ∧ ∂_x)^{♯♭} \\
-      + c \; (∂_x ∧ ∂_y)^{♯♭} &                         & - a \; (∂_z ∧ ∂_y)^{♯♭} \\
-      - b \; (∂_x ∧ ∂_z)^{♯♭} & + a \; (∂_y ∧ ∂_z)^{♯♭} &                         \\
+                                    & - R^z \; (∂_y ∧ ∂_x)^{♯♭} & + R^y \; (∂_z ∧ ∂_x)^{♯♭} \\
+          + R^z \; (∂_x ∧ ∂_y)^{♯♭} &                           & - R^x \; (∂_z ∧ ∂_y)^{♯♭} \\
+          - R^y \; (∂_x ∧ ∂_z)^{♯♭} & + R^x \; (∂_y ∧ ∂_z)^{♯♭} &                           \\
       \end{bmatrix}
 
    .. rubric:: Apply the musical operators using the euclidean metric:
@@ -272,9 +272,9 @@ Flattening the second index of of the doubly contravariant form of the rotation
    .. math::
 
       R^{♯♭} = \frac{1}{2} \begin{bmatrix}
-                                 & - c \; ∂_y ∧ δ_{xi} dx^i & + b \; ∂_z ∧ δ_{xi} dx^i \\
-        + c \; ∂_x ∧ δ_{yi} dx^i &                          & - a \; ∂_z ∧ δ_{yi} dx^i \\
-        - b \; ∂_x ∧ δ_{zi} dx^i & + a \; ∂_y ∧ δ_{zi} dx^i &                          \\
+                                     & - R^z \; ∂_y ∧ δ_{xi} dx^i & + R^y \; ∂_z ∧ δ_{xi} dx^i \\
+          + R^z \; ∂_x ∧ δ_{yi} dx^i &                            & - R^x \; ∂_z ∧ δ_{yi} dx^i \\
+          - R^y \; ∂_x ∧ δ_{zi} dx^i & + R^x \; ∂_y ∧ δ_{zi} dx^i &                            \\
       \end{bmatrix}
 
    .. rubric:: Identify the non-zero components:
@@ -282,9 +282,9 @@ Flattening the second index of of the doubly contravariant form of the rotation
    .. math::
 
       R^{♯♭} = \frac{1}{2} \begin{bmatrix}
-                          & - c \; ∂_y ∧ dx^x & + b \; ∂_z ∧ dx^x \\
-        + c \; ∂_x ∧ dx^y &                   & - a \; ∂_z ∧ dx^y \\
-        - b \; ∂_x ∧ dx^z & + a \; ∂_y ∧ dx^z &                   \\
+                              & - R^z \; ∂_y ∧ dx^x & + R^y \; ∂_z ∧ dx^x \\
+          + R^z \; ∂_x ∧ dx^y &                     & - R^x \; ∂_z ∧ dx^y \\
+          - R^y \; ∂_x ∧ dx^z & + R^x \; ∂_y ∧ dx^z &                     \\
       \end{bmatrix}
 
    .. rubric:: Replace the covectors by their expressions
@@ -298,9 +298,9 @@ Flattening the second index of of the doubly contravariant form of the rotation
    .. math::
 
       R^{♯♭} = \frac{1}{2} \begin{bmatrix}
-                        & - c \; ∂_y ∧ dx & + b \; ∂_z ∧ dx \\
-        + c \; ∂_x ∧ dy &                 & - a \; ∂_z ∧ dy \\
-        - b \; ∂_x ∧ dz & + a \; ∂_y ∧ dz &                 \\
+                            & - R^z \; ∂_y ∧ dx & + R^y \; ∂_z ∧ dx \\
+          + R^z \; ∂_x ∧ dy &                   & - R^x \; ∂_z ∧ dy \\
+          - R^y \; ∂_x ∧ dz & + R^x \; ∂_y ∧ dz &                   \\
       \end{bmatrix}
 
    .. rubric:: Reorder and conclude
@@ -308,9 +308,9 @@ Flattening the second index of of the doubly contravariant form of the rotation
    .. math::
 
       R^{♯♭} = \frac{1}{2} \begin{bmatrix}
-                        & + c \; ∂_x ∧ dy & - b \; ∂_x ∧ dz \\
-        - c \; ∂_y ∧ dx &                 & + a \; ∂_y ∧ dz \\
-        + b \; ∂_z ∧ dx & - a \; ∂_z ∧ dy &                 \\
+                            & + R^z \; ∂_x ∧ dy & - R^y \; ∂_x ∧ dz \\
+          - R^z \; ∂_y ∧ dx &                   & + R^x \; ∂_y ∧ dz \\
+          + R^y \; ∂_z ∧ dx & - R^x \; ∂_z ∧ dy &                   \\
       \end{bmatrix}
 
    .. }}}
@@ -420,24 +420,24 @@ electromagnetic tensor. Choosing the implicit basis :math:`\mathbf{e}_i \wedge
 
    \begin{align} R &= \frac{1}{2}
    \begin{bmatrix}
-         & - c & + b \\
-     + c &     & - a \\
-     - b & + a &     \\
+             & - R^z & + R^y \\
+       + R^z &       & - R^x \\
+       - R^y & + R^x &       \\
    \end{bmatrix} \\
-   &= a \left[ \begin{alignedat}{4}
-     \; 0 & \;   & 0 & \;  & 0 \\
-     \; 0 & \;   & 0 & \;- & 1 \\
-     \; 0 & \; + & 1 & \;  & 0 \\
+   &= R^x \left[ \begin{alignedat}{4}
+       \; 0 & \;   & 0 & \;  & 0 \\
+       \; 0 & \;   & 0 & \;- & 1 \\
+       \; 0 & \; + & 1 & \;  & 0 \\
    \end{alignedat} \right]
-   + b \left[ \begin{alignedat}{4}
-       & 0 & \quad 0 & \; + & 1 \\
-       & 0 & \quad 0 & \;   & 0 \\
-     - & 1 & \quad 0 & \;   & 0 \\
+   + R^y \left[ \begin{alignedat}{4}
+         & 0 & \quad 0 & \; + & 1 \\
+         & 0 & \quad 0 & \;   & 0 \\
+       - & 1 & \quad 0 & \;   & 0 \\
    \end{alignedat} \right]
-   + c \left[ \begin{alignedat}{4}
-       & 0 & - & 1 & \quad 0 \\
-     + & 1 &   & 0 & \quad 0 \\
-       & 0 &   & 0 & \quad 0 \\
+   + R^z \left[ \begin{alignedat}{4}
+         & 0 & - & 1 & \quad 0 \\
+       + & 1 &   & 0 & \quad 0 \\
+         & 0 &   & 0 & \quad 0 \\
    \end{alignedat} \right]
    \end{align}
 
@@ -461,19 +461,19 @@ Apply the Hodge star:
 
 .. math::
 
-   ⋆R = ⋆(a \; ∂_y ∧ ∂_z + b \; ∂_z ∧ ∂_x + c \; ∂_x ∧ ∂_y)
+   ⋆R = ⋆(R^x \; ∂_y ∧ ∂_z + R^y \; ∂_z ∧ ∂_x + R^z \; ∂_x ∧ ∂_y)
 
 Distribute the Hodge star:
 
 .. math::
 
-   ⋆R = a ⋆(∂_y ∧ ∂_z) + b ⋆(∂_z ∧ ∂_x) + c ⋆(∂_x ∧ ∂_y)
+   ⋆R = R^x ⋆(∂_y ∧ ∂_z) + R^y ⋆(∂_z ∧ ∂_x) + R^z ⋆(∂_x ∧ ∂_y)
 
 Identify the cross product:
 
 .. math::
 
-   ⋆R = a \; ∂_x + b \; ∂_y + c \; ∂_z
+   ⋆R = R^x \; ∂_x + R^y \; ∂_y + R^z \; ∂_z
 
 That is, the Hodge star of the rotation ∂_xpressed as a linear comibination of
 bivectors is exactly a rotation in terms of cross products in the Hodge dual
@@ -481,7 +481,7 @@ space:
 
 .. math::
 
-   ⋆R = a \; ∂_y ⨯ ∂_z + b \; ∂_z ⨯ ∂_x + c \; ∂_x ⨯ ∂_y
+   ⋆R = R^x \; ∂_y ⨯ ∂_z + R^y \; ∂_z ⨯ ∂_x + R^z \; ∂_x ⨯ ∂_y
 
 We could have written a covector in the same explicit manner. This notation is
 very conveniant when performing calculations in Cartan's framework as it

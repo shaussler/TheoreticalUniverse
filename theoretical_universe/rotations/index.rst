@@ -79,10 +79,10 @@ expressed in a mixed form is:
 .. math::
 
    R^{♭♯} = \frac{1}{2} \begin{bmatrix}
-                     & + a \; dt ∧ ∂_x & + b \; dt ∧ ∂_y & + c \; dt ∧ ∂_z \\
-     + a \; dx ∧ ∂_t &                 & + f \; dx ∧ ∂_y & - e \; dx ∧ ∂_z \\
-     + b \; dy ∧ ∂_t & - f \; dy ∧ ∂_x &                 & + d \; dy ∧ ∂_z \\
-     + c \; dz ∧ ∂_t & + e \; dz ∧ ∂_x & - d \; dz ∧ ∂_y &                 \\
+                         & + Q^x \; dt ∧ ∂_x & + Q^y \; dt ∧ ∂_y & + Q^z \; dt ∧ ∂_z \\
+       + Q^x \; dx ∧ ∂_t &                   & + R^y \; dx ∧ ∂_y & - R^x \; dx ∧ ∂_z \\
+       + Q^y \; dy ∧ ∂_t & - R^y \; dy ∧ ∂_x &                   & + R^z \; dy ∧ ∂_z \\
+       + Q^z \; dz ∧ ∂_t & + R^x \; dz ∧ ∂_x & - R^z \; dz ∧ ∂_y &                   \\
    \end{bmatrix}
 
 Readers well versed in the tensor formulations of electromagnetism will
@@ -94,7 +94,7 @@ recognise the mixed form of the :ref:`electromagnetic field tensor
 Expressing the mixed exterior product :math:`∧` in term of tensor products
 :math:`⊗`, we demonstrate that the mixed exterior product is not fully
 antisymmetric in Minkowski space. However, the total number of symmetries is
-equal. We obtain:
+equal:
 
 ============ =============================
 Symmetry     Basis elements

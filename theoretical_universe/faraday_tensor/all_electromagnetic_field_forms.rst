@@ -6,8 +6,8 @@
 
 .. _All Electromagnetic Field Tensors:
 
-All electromagnetic field tensors
-=================================
+All electromagnetic field forms
+===============================
 
 .. rst-class:: custom-author
 

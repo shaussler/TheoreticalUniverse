@@ -17,8 +17,9 @@ Covariant formulation of the electromagnetic field
 
    faraday_tensor_derivation.rst
    of_maxwell_equations_and_rotations.rst
+   relation_tensor_2form.rst
    potential_formulation.rst
-   all_electromagnetic_field_tensors.rst
+   all_electromagnetic_field_forms.rst
 
 Summary
 -------
