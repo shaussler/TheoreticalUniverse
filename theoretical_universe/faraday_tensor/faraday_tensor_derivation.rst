@@ -307,7 +307,7 @@ Physics of the University of Oxford
 <https://users.physics.ox.ac.uk/~palmerc/S8files/lectures.pdf>`_.
 
 .. admonition:: Doubly contravariant form
-   :class: dropdown, toggle-shown
+   :class: dropdown
 
    .. {{{
 
@@ -316,9 +316,13 @@ Physics of the University of Oxford
    here. Contrary to my ususal practice of performing systematic calculations,
    I consider in this note for simplicity only the inhomogenous equations. The
    argument and calculations can be apply to the homogenous equations in the
-   same manner. You may have noticed that the sign in all equations can be
-   flipped. In particular we can choose to express the ordered equations using
-   the contravariant 4-current:
+   same manner. Of course we can apply the Minkowski metric to raise or lower
+   the indices, but the point here is to derive the tensor form using the
+   doubly contravariant Faraday tensor, and from the ordered equations.
+
+   You may have noticed that the sign in all equations can be flipped. In
+   particular we can choose to express the ordered equations using the
+   contravariant 4-current:
 
    .. math::
 
@@ -433,11 +437,11 @@ Physics of the University of Oxford
       ∂_μ F^{μν} = J^ν
 
    The discussion highlights some difficulties in using tensor notation, which
-   make it inconvenient when performing calculations algorithmically, without
+   makes it inconvenient when performing calculations algorithmically, without
    extensive thoughts. This is adressed by using the :ref:`the free matrix
-   representation <the free matrix representation>` at the cost of extra symbols
-   for the explicit basis. The advantage is that it allows for
-   stgraightforward, "dumb" calculations.
+   representation <the free matrix representation>` at the cost of extra
+   symbols for the explicit basis. The advantage is that it allows for
+   straightforward, "dumb" calculations.
 
    .. }}}
 
