@@ -292,12 +292,13 @@ are the the components of the vectors.
    = ad - cb
 
 This can equivalently be achieved by calculating the exterior product of these
-two vectors:
+two vectors. The notation :math:`S^{♯♯}` indicates that the surface is a
+bivector, and not a real number :math:`S`.
 
 .. math::
 
-   S ∂_x ∧ ∂_y &= (a ∂_x + b ∂_y) ∧ (c ∂_x + d ∂_y) \\
-               &= (ad - bc) ∂_x ∧ ∂_y
+   S^{♯♯} &= (a ∂_x + b ∂_y) ∧ (c ∂_x + d ∂_y) \\
+          &= (ad - bc) ∂_x ∧ ∂_y
 
 .. admonition:: Calculation
    :class: dropdown
@@ -306,28 +307,32 @@ two vectors:
 
    .. math::
 
-      S ∂_x ∧ ∂_y &= (a ∂_x + b ∂_y) ∧ (c ∂_x + d ∂_y) \\
+      S^{♯♯} = (a ∂_x + b ∂_y) ∧ (c ∂_x + d ∂_y) \\
 
    .. rubric:: Distribute
 
    .. math::
 
-      S ∂_x ∧ ∂_y &= a ∂_x ∧ (c ∂_x + d ∂_y) + b ∂_y ∧ (c ∂_x + d ∂_y) \\
-                  &= a ∂_x ∧ c ∂_x + a ∂_x ∧ d ∂_y + b ∂_y ∧ c ∂_x + b ∂_y ∧ d ∂_y \\
+      S^{♯♯} &= a ∂_x ∧ (c ∂_x + d ∂_y) + b ∂_y ∧ (c ∂_x + d ∂_y) \\
+             &= a ∂_x ∧ c ∂_x + a ∂_x ∧ d ∂_y + b ∂_y ∧ c ∂_x + b ∂_y ∧ d ∂_y \\
 
    .. rubric:: Remove zero terms and take the factors in front of expression
 
    .. math::
 
-      S ∂_x ∧ ∂_y &= a ∂_x ∧ d ∂_y + b ∂_y ∧ c ∂_x \\
-                  &= a d ∂_x ∧ ∂_y + b c ∂_y ∧ ∂_x \\
+      S^{♯♯} &= a ∂_x ∧ d ∂_y + b ∂_y ∧ c ∂_x \\
+             &= a d ∂_x ∧ ∂_y + b c ∂_y ∧ ∂_x \\
 
    .. rubric:: Reorganize and conclude
 
    .. math::
 
-      S ∂_x ∧ ∂_y &= a d ∂_x ∧ ∂_y - b c ∂_x ∧ ∂_y \\
-                  &= (ad - bc) ∂_x ∧ ∂_y \\
+      S^{♯♯} &= a d ∂_x ∧ ∂_y - b c ∂_x ∧ ∂_y \\
+             &= (ad - bc) ∂_x ∧ ∂_y \\
+
+   .. math::
+
+      S = (ad - bc)
 
 .. admonition:: Calculation in free matrix representation
    :class: dropdown
@@ -339,7 +344,7 @@ two vectors:
 
    .. math::
 
-      S ∂_x ∧ ∂_y = \begin{bmatrix}
+      S^{♯♯} = \begin{bmatrix}
           a ∂_x \\
           b ∂_y \\
       \end{bmatrix}
@@ -352,7 +357,7 @@ two vectors:
 
    .. math::
 
-      S ∂_x ∧ ∂_y = \begin{bmatrix}
+      S^{♯♯} = \begin{bmatrix}
          a ∂_x ∧ d ∂_y \\
          a ∂_x ∧ c ∂_x \\
          b ∂_y ∧ c ∂_x \\
@@ -367,11 +372,15 @@ two vectors:
 
    .. math::
 
-      S ∂_x ∧ ∂_y = \begin{bmatrix}
+      S^{♯♯} = \begin{bmatrix}
           + a d ∂_x ∧ ∂_y \\
           - b c ∂_x ∧ ∂_y \\
       \end{bmatrix}
-      = (ad - bc) ∂_x ∧ ∂_y\\
+      = (ad - bc) ∂_x ∧ ∂_y
+
+    .. math::
+
+       S = (ab - bc)
 
 The same can be done to calculate the volume :math:`V` of a parallelepiped
 defined by three vectors.
@@ -802,7 +811,7 @@ We use our procedure for lifting the inner product to bivectors:
        ∂_μ \cdot ∂_σ & ∂_ν \cdot ∂_σ \\
    \end{vmatrix}
 
-We get in table form:
+In table form, we obtain:
 
 .. topic:: Inner product of bivectors in Minkowski space
 
@@ -1069,6 +1078,81 @@ In Minkowski space, all quadvectors are proportional to :math:`∂_t ∧ ∂_x �
 
 .. }}}
 
+Inner product of k-forms
+------------------------
+
+.. {{{
+
+The discussion of the inner product for k-vectors give us geometrical
+intuition. I switch the perspective to the dual k-forms, and show how to
+trivially calculate the inner product using the interior product :math:`⌟`.
+
+The inner product of k-vectors is equal to the inner product of k-forms. For
+basis vectors and covectors, the inner product is equal to the metric. In flat
+spacetime, we get the Minkowski metric :math:`η`:
+
+.. math::
+
+   \braket{∂_μ|∂_ν} = \braket{dx^μ|dx^ν} = η^{μν} = η_{μν}
+
+The dual covectors are defined as:
+
+.. math::
+
+   dx^μ \left( ∂_ν \right) = δ^μ_ν
+
+Here we apply the basis vector :math:`∂_ν` to a basis form :math:`dx^μ`. For a
+covector/vector pair, this is exactly the definition of the interior product
+:math:`⌟`:
+
+.. math::
+
+   ∂_ν \: ⌟ \: dx^μ = dx^μ \left( ∂_ν \right) = δ^μ_ν
+
+The interior product of a vector can be applied to a general form. We take the
+interior product of a basis vector with a basis 2--form by shuffling the basis
+one form to the front and applying the basis vector to the first slot. We just
+pass the basis vectors one after another to the basis two forms:
+
+.. math::
+
+   ∂_t \: ⌟ \: dx ∧ dt &= ∂_t \: ⌟ \: \left( - dt ∧ dx \right) \\
+                       &= - dt \left( ∂_t \right) dx \\
+                       &= - dx
+
+This interior product of a basis vector can be taken with a 3--form or a
+4--form. At the cost of geometric intuition, we gain a trivial way to calculate
+the inner product algorithmically with no thinking involved:
+
+.. math::
+
+   \braket{∂_t ∧ ∂_x|∂_t ∧ ∂_x } &= ∂_x \: ⌟ \: ∂_t \: ⌟\: dt ∧ dx \\
+                                 &= ∂_x \: ⌟ \: dx \\
+                                 &= -1
+
+We can then systematicall apply the procedure to obtain the same result:
+
+.. math::
+
+   \newcommand{\⌟}{\:⌟\:}
+   \begin{alignedat}{5}
+       \braket{dt ∧ dx|∂_t ∧ ∂_x} &= ∂_x &\⌟ (& ∂_t \⌟ dt ∧ dx &) &= ∂_x &\⌟ (+ dx&) = -1 \\
+       \braket{dt ∧ dy|∂_t ∧ ∂_y} &= ∂_y &\⌟ (& ∂_t \⌟ dt ∧ dy &) &= ∂_y &\⌟ (+ dy&) = -1 \\
+       \braket{dt ∧ dy|∂_t ∧ ∂_z} &= ∂_z &\⌟ (& ∂_t \⌟ dt ∧ dz &) &= ∂_z &\⌟ (+ dz&) = -1 \\
+       \braket{dy ∧ dz|∂_y ∧ ∂_z} &= ∂_z &\⌟ (& ∂_y \⌟ dy ∧ dz &) &= ∂_z &\⌟ (- dz&) = +1 \\
+       \braket{dz ∧ dx|∂_z ∧ ∂_x} &= ∂_x &\⌟ (& ∂_z \⌟ dz ∧ dx &) &= ∂_x &\⌟ (- dx&) = +1 \\
+       \braket{dx ∧ dy|∂_x ∧ ∂_y} &= ∂_y &\⌟ (& ∂_x \⌟ dx ∧ dy &) &= ∂_y &\⌟ (- dy&) = +1 \\
+   \end{alignedat}
+
+.. .. math::
+.. 
+..    \newcommand{\⌟}{\:⌟\:}
+..    \begin{alignedat}{5}
+..        \braket{dx ∧ dy ∧ dz | ∂_x ∧ ∂_y ∧ ∂_z} &= ∂_z \⌟ ∂_y \⌟ ∂_x \⌟ dx ∧ dy ∧ dz) = 
+..    \end{alignedat}
+
+.. }}}
+
 Formal and natural definition
 -----------------------------
 
@@ -1102,7 +1186,7 @@ this example, we obtain:
    ⋆ ∂_t ∧ ∂_x = - ∂_y ∧ ∂_z
 
 .. }}}
-
+mu
 .. _duality_in_minkowski_space:
 .. _Duality in Minkowski Space:
 
