@@ -30,11 +30,11 @@ I lay out the relation between the exterior product, matrix determinant,
 surface, volume and hypervolume. This will permit to generalize the inner
 product to k-vectors. Finally, I systematically calculate of the Hodge duals of
 vectors, bivectors, trivectors and quadvectors in Minkowski spacetime with
-metric signature :math:`(+,-,-,-)`. The very last step brings us to Hodge
-duality on k-forms based on vector/covector duality. This discussion assumes
-you, the reader, have a solid understanding of vector and tensor calculus, as
-well as familiarity with the exterior product and Élie Cartan's differential
-forms.
+metric signature :math:`(+,-,-,-)`. 
+
+This discussion assumes you, the reader, have a solid understanding of vector
+and tensor calculus, as well as familiarity with the exterior product and Élie
+Cartan's differential forms.
 
 I systematically use within this pages a toolbox of concepts and notations that
 I dub the Cartan-Hodge formalism. The notation is quite standard and should be
@@ -48,11 +48,11 @@ with the partial derivative symbol :math:`∂_μ`:
    \mathbf{e}_y & = ∂_y \\
    \mathbf{e}_z & = ∂_z \\
 
-I don't necessarily expect all readers to have ever considered partial
-derivatives as basis vectors. For our purpose, this is simply a matter of a
-notation. I use for the inner product either the dot notation :math:`\cdot`, or
-the bra-ket notation from quantum mechanics :math:`\braket{|}` when it helps
-readability [note1]_.
+I don't necessarily expect all readers to have ever considered :ref:`partial
+derivatives as basis vectors <partial derivatives as basis vectors>`. For our
+purpose, this is simply a matter of a notation. I use for the inner product
+either the dot notation :math:`\cdot`, or the bra-ket notation from quantum
+mechanics :math:`\braket{|}` when it helps readability [note1]_.
 
 I point out the work of `Michael Penn <https://www.michael-penn.net>`_  on
 `Differential Forms
@@ -1083,36 +1083,49 @@ Inner product of k-forms
 
 .. {{{
 
-The discussion of the inner product for k-vectors give us geometrical
-intuition. I switch the perspective to the dual k-forms, and show how to
-trivially calculate the inner product using the interior product :math:`⌟`.
+The discussion of the inner product for k--vectors provides geometric
+intuition. Here, I shift the perspective to k--forms and compute the inner
+product in a trivial manner using the interior product :math:`⌟`. This change
+of perspective does not affect the further reading of this article and this
+paragraph can be skipped if you are not interested.
 
-The inner product of k-vectors is equal to the inner product of k-forms. For
-basis vectors and covectors, the inner product is equal to the metric. In flat
-spacetime, we get the Minkowski metric :math:`η`:
+To establish a common foundation, recall that the inner product of k--vectors
+is equal to that of k--forms. For basis vectors and covectors, the inner
+product is the metric. In flat spacetime, this gives the Minkowski metric
+:math:`η`:
 
 .. math::
 
    \braket{∂_μ|∂_ν} = \braket{dx^μ|dx^ν} = η^{μν} = η_{μν}
 
-The dual covectors are defined as:
+Considering basisvectors, dual covectors are defined as:
 
 .. math::
 
    dx^μ \left( ∂_ν \right) = δ^μ_ν
 
-Here we apply the basis vector :math:`∂_ν` to a basis form :math:`dx^μ`. For a
-covector/vector pair, this is exactly the definition of the interior product
-:math:`⌟`:
+In this sense, 1--forms *measure* vectors, and the measure of a basis vector
+:math:`∂_ν` through it corresponding basis covector :math:`dx^μ` is one.
+
+The interior product is an operation between a vector and a form. It consist of
+applying the vector to the first slot of the form and rearanging the form to
+bring the appropriate covectors to the front. This operation transforms a
+k--form to a (k-1)--form. For example:
+
+.. math::
+
+   ∂_y ⌟ dx ∧ dy ∧ dz = ∂_y ⌟ (- dy ∧ dx ∧ dz) = -dz ∧ dx ∧ dz
+
+We apply the basis vector :math:`∂_ν` to the basis form :math:`dx^μ`. For a
+covector/vector pair, this is exactly returns the interior product :math:`⌟`:
 
 .. math::
 
    ∂_ν \: ⌟ \: dx^μ = dx^μ \left( ∂_ν \right) = δ^μ_ν
 
-The interior product of a vector can be applied to a general form. We take the
-interior product of a basis vector with a basis 2--form by shuffling the basis
-one form to the front and applying the basis vector to the first slot. We just
-pass the basis vectors one after another to the basis two forms:
+The interior product of a vector can be applied to a general form. For a basis
+vector acting on a basis 2--form, we bring the corresponding basis 1--form to
+the front and apply the vector to the first slot:
 
 .. math::
 
@@ -1120,9 +1133,9 @@ pass the basis vectors one after another to the basis two forms:
                        &= - dt \left( ∂_t \right) dx \\
                        &= - dx
 
-This interior product of a basis vector can be taken with a 3--form or a
-4--form. At the cost of geometric intuition, we gain a trivial way to calculate
-the inner product algorithmically with no thinking involved:
+Simmilarly, the interior product of a basis vector can be taken with a 3--form
+or a 4--form. This provides a straightforward algorithmic approach to calculate
+the inner product with no thinking involved:
 
 .. math::
 
@@ -1130,26 +1143,49 @@ the inner product algorithmically with no thinking involved:
                                  &= ∂_x \: ⌟ \: dx \\
                                  &= -1
 
-We can then systematicall apply the procedure to obtain the same result:
+We can systematicall apply the procedure to obtain the same result as above:
 
 .. math::
 
    \newcommand{\⌟}{\:⌟\:}
    \begin{alignedat}{5}
-       \braket{dt ∧ dx|∂_t ∧ ∂_x} &= ∂_x &\⌟ (& ∂_t \⌟ dt ∧ dx &) &= ∂_x &\⌟ (+ dx&) = -1 \\
-       \braket{dt ∧ dy|∂_t ∧ ∂_y} &= ∂_y &\⌟ (& ∂_t \⌟ dt ∧ dy &) &= ∂_y &\⌟ (+ dy&) = -1 \\
-       \braket{dt ∧ dy|∂_t ∧ ∂_z} &= ∂_z &\⌟ (& ∂_t \⌟ dt ∧ dz &) &= ∂_z &\⌟ (+ dz&) = -1 \\
-       \braket{dy ∧ dz|∂_y ∧ ∂_z} &= ∂_z &\⌟ (& ∂_y \⌟ dy ∧ dz &) &= ∂_z &\⌟ (- dz&) = +1 \\
-       \braket{dz ∧ dx|∂_z ∧ ∂_x} &= ∂_x &\⌟ (& ∂_z \⌟ dz ∧ dx &) &= ∂_x &\⌟ (- dx&) = +1 \\
-       \braket{dx ∧ dy|∂_x ∧ ∂_y} &= ∂_y &\⌟ (& ∂_x \⌟ dx ∧ dy &) &= ∂_y &\⌟ (- dy&) = +1 \\
+       \langle& dt &|& ∂_t &\rangle =& ∂_t &\⌟& dt & = +1 \\
+       \langle& dx &|& ∂_t &\rangle =& ∂_x &\⌟& dx & = -1 \\
+       \langle& dy &|& ∂_t &\rangle =& ∂_y &\⌟& dy & = -1 \\
+       \langle& dz &|& ∂_t &\rangle =& ∂_z &\⌟& dz & = -1 \\
    \end{alignedat}
 
-.. .. math::
-.. 
-..    \newcommand{\⌟}{\:⌟\:}
-..    \begin{alignedat}{5}
-..        \braket{dx ∧ dy ∧ dz | ∂_x ∧ ∂_y ∧ ∂_z} &= ∂_z \⌟ ∂_y \⌟ ∂_x \⌟ dx ∧ dy ∧ dz) = 
-..    \end{alignedat}
+.. math::
+
+   \newcommand{\⌟}{\:⌟\:}
+   \begin{alignedat}{5}
+       \langle &dt ∧ dx &|& ∂_t ∧ ∂_x &\rangle =& ∂_x &\⌟& ∂_t &\⌟& dt ∧ dx & = + ∂_x &\⌟& dx &= -1 \\
+       \langle &dt ∧ dy &|& ∂_t ∧ ∂_y &\rangle =& ∂_y &\⌟& ∂_t &\⌟& dt ∧ dy & = + ∂_y &\⌟& dy &= -1 \\
+       \langle &dt ∧ dy &|& ∂_t ∧ ∂_z &\rangle =& ∂_z &\⌟& ∂_t &\⌟& dt ∧ dz & = + ∂_z &\⌟& dz &= -1 \\
+       \langle &dy ∧ dz &|& ∂_y ∧ ∂_z &\rangle =& ∂_z &\⌟& ∂_y &\⌟& dy ∧ dz & = - ∂_z &\⌟& dz &= +1 \\
+       \langle &dz ∧ dx &|& ∂_z ∧ ∂_x &\rangle =& ∂_x &\⌟& ∂_z &\⌟& dz ∧ dx & = - ∂_x &\⌟& dx &= +1 \\
+       \langle &dx ∧ dy &|& ∂_x ∧ ∂_y &\rangle =& ∂_y &\⌟& ∂_x &\⌟& dx ∧ dy & = - ∂_y &\⌟& dy &= +1 \\
+   \end{alignedat}
+
+.. math::
+
+   \newcommand{\⌟}{\:⌟\:}
+   \small
+   \begin{alignedat}{5}
+       \langle& dx ∧ dy ∧ dz &|& ∂_x ∧ ∂_y ∧ ∂_z \rangle &=& ∂_z \⌟ ∂_y \⌟ ∂_x \⌟ dx ∧ dy ∧ dz &=& - ∂_z \⌟ ∂_y \⌟ dy ∧ dz &= + ∂_z \⌟ dz = -1 \\
+       \langle& dt ∧ dy ∧ dz &|& ∂_t ∧ ∂_y ∧ ∂_z \rangle &=& ∂_z \⌟ ∂_y \⌟ ∂_t \⌟ dt ∧ dy ∧ dz &=& + ∂_z \⌟ ∂_y \⌟ dy ∧ dz &= - ∂_z \⌟ dz = +1 \\
+       \langle& dt ∧ dz ∧ dx &|& ∂_t ∧ ∂_z ∧ ∂_x \rangle &=& ∂_x \⌟ ∂_z \⌟ ∂_t \⌟ dt ∧ dz ∧ dx &=& + ∂_x \⌟ ∂_z \⌟ dz ∧ dx &= - ∂_x \⌟ dx = +1 \\
+       \langle& dt ∧ dx ∧ dy &|& ∂_t ∧ ∂_x ∧ ∂_y \rangle &=& ∂_y \⌟ ∂_x \⌟ ∂_t \⌟ dt ∧ dx ∧ dy &=& + ∂_y \⌟ ∂_x \⌟ dx ∧ dy &= - ∂_y \⌟ dy = +1 \\
+   \end{alignedat}
+
+.. math::
+
+   \newcommand{\⌟}{\:⌟\:}
+   \braket{dt ∧ dx ∧ dy ∧ dz | dt ∧ dx ∧ dy ∧ dz} &= dz \⌟ dy \⌟ dx \⌟ dt \⌟ dt ∧ dx ∧ dy ∧ dz \\
+                                                  &= dz \⌟ dy \⌟ dx \⌟ dx ∧ dy ∧ dz \\
+                                                  &= -1 dz \⌟ dy \⌟ ∧ dy ∧ dz \\
+                                                  &= +1 dz \⌟ ∧ dz \\
+                                                  &= -1
 
 .. }}}
 
@@ -1186,9 +1222,8 @@ this example, we obtain:
    ⋆ ∂_t ∧ ∂_x = - ∂_y ∧ ∂_z
 
 .. }}}
-mu
-.. _duality_in_minkowski_space:
-.. _Duality in Minkowski Space:
+
+.. _duality in minkowski space:
 
 Duality in Minkowski space
 --------------------------
