@@ -14,14 +14,12 @@ Rotations in Minkowski space
    by Stéphane Haussler
 
 On this page, I systematically explore the geometric differential
-representation of rotations in minkowski spacetime. Rotations are first
-expressed as linear combination of rotation planes with bivectors. The dual
-differential 2-forms are then derived, as well as the mixed tensor
-representation in form of matrices.
-
-We work out the Lie algebra of the Lorentz group as well as the full matrix
-representation of rotations. The mixed wedge products are fully expressed in
-terms of tensor products and their symmetries highlighted.
+representation of infinitesimal rotations in Minkowski spacetime. Rotations are
+first expressed as linear combination of rotation planes in terms of bivectors.
+The dual differential 2--forms are then derived, as well as the mixed ♯♭ and ♭♯
+representation. We work out the Lie algebra of the Lorentz group as well as the
+full matrix representation of rotations. The mixed wedge products are fully
+expressed in terms of tensor products and their symmetries highlighted.
 
 The :math:`♯♯` rotation tensor
 ------------------------------
@@ -29,22 +27,23 @@ The :math:`♯♯` rotation tensor
 .. {{{
 
 General rotations can be expressed as linear combinations of rotations in each
-planes. For Minkowski space with 4 dimensions, this result in 6 planes of
-rotations. Each plance is expressed as the wedge product :math:`∧` of basis
-vectors as :math:`∂_x ∧ ∂_y`. A rotation in spacetime is represented by the
-linear combination of all basis rotations in all six available planes.
+planes. For Minkowski space with 4 directions :math:`∂_t`, :math:`∂_x`,
+:math:`∂_y` and :math:`∂_t`, this result in 6 planes of rotations. Each plance
+is expressed as the wedge product :math:`∧` of basis vectors as :math:`∂_μ ∧
+∂_ν`. A rotation in spacetime is represented by the linear combination of all
+basis rotations in all six available planes.
 
 .. topic:: Rotations in Minkowski Space
 
    .. math::
 
       R^{♯♯} = \begin{bmatrix}
-        a \; ∂_t ∧ ∂_x \\
-        b \; ∂_t ∧ ∂_y \\
-        c \; ∂_t ∧ ∂_z \\
-        d \; ∂_y ∧ ∂_z \\
-        e \; ∂_z ∧ ∂_x \\
-        f \; ∂_x ∧ ∂_y \\
+          Q^x \; ∂_t ∧ ∂_x \\
+          Q^y \; ∂_t ∧ ∂_y \\
+          Q^z \; ∂_t ∧ ∂_z \\
+          R^x \; ∂_y ∧ ∂_z \\
+          R^y \; ∂_z ∧ ∂_x \\
+          R^z \; ∂_x ∧ ∂_y \\
       \end{bmatrix}
 
 The sharp symbol :math:`\sharp` indicates that the components are doubly
@@ -55,12 +54,12 @@ exterior product :math:`∂_μ ∧ ∂_ν = - ∂_ν ∧ ∂_μ`, all terms can 
 .. math::
 
    R^{♯♯} = \begin{bmatrix}
-     a \; \frac{1}{2} (∂_t ∧ ∂_x - ∂_x ∧ ∂_t) \\
-     b \; \frac{1}{2} (∂_t ∧ ∂_y - ∂_y ∧ ∂_t) \\
-     c \; \frac{1}{2} (∂_t ∧ ∂_z - ∂_z ∧ ∂_t) \\
-     d \; \frac{1}{2} (∂_y ∧ ∂_z - ∂_z ∧ ∂_y) \\
-     e \; \frac{1}{2} (∂_z ∧ ∂_x - ∂_x ∧ ∂_z) \\
-     f \; \frac{1}{2} (∂_x ∧ ∂_y - ∂_y ∧ ∂_x) \\
+      Q^x \; \frac{1}{2} (∂_t ∧ ∂_x - ∂_x ∧ ∂_t) \\
+      Q^y \; \frac{1}{2} (∂_t ∧ ∂_y - ∂_y ∧ ∂_t) \\
+      Q^z \; \frac{1}{2} (∂_t ∧ ∂_z - ∂_z ∧ ∂_t) \\
+      R^x \; \frac{1}{2} (∂_y ∧ ∂_z - ∂_z ∧ ∂_y) \\
+      R^y \; \frac{1}{2} (∂_z ∧ ∂_x - ∂_x ∧ ∂_z) \\
+      R^z \; \frac{1}{2} (∂_x ∧ ∂_y - ∂_y ∧ ∂_x) \\
    \end{bmatrix}
 
 With minor rearangement, we get:
@@ -68,12 +67,12 @@ With minor rearangement, we get:
 .. math::
 
    R^{♯♯} = \frac{1}{2} \begin{bmatrix}
-     a \; ∂_t ∧ ∂_x - a \; ∂_x ∧ ∂_t) \\
-     b \; ∂_t ∧ ∂_y - b \; ∂_y ∧ ∂_t) \\
-     c \; ∂_t ∧ ∂_z - c \; ∂_z ∧ ∂_t) \\
-     d \; ∂_y ∧ ∂_z - d \; ∂_z ∧ ∂_y) \\
-     e \; ∂_z ∧ ∂_x - e \; ∂_x ∧ ∂_z) \\
-     f \; ∂_x ∧ ∂_y - f \; ∂_y ∧ ∂_x) \\
+       Q^x \; ∂_t ∧ ∂_x - Q^x \; ∂_x ∧ ∂_t) \\
+       Q^y \; ∂_t ∧ ∂_y - Q^y \; ∂_y ∧ ∂_t) \\
+       Q^z \; ∂_t ∧ ∂_z - Q^z \; ∂_z ∧ ∂_t) \\
+       R^x \; ∂_y ∧ ∂_z - R^x \; ∂_z ∧ ∂_y) \\
+       R^y \; ∂_z ∧ ∂_x - R^y \; ∂_x ∧ ∂_z) \\
+       R^z \; ∂_x ∧ ∂_y - R^z \; ∂_y ∧ ∂_x) \\
    \end{bmatrix}
 
 The free matrix representation permits to state the obvious, in that we can
@@ -84,10 +83,10 @@ rewrite the rotation above utilizing a row/column matrix representation:
    .. math::
 
       R^{♯♯}= \frac{1}{2} \begin{bmatrix}
-                         & + a \; ∂_t ∧ ∂_x & + b \; ∂_t ∧ ∂_y & + c \; ∂_t ∧ ∂_z \\
-        - a \; ∂_x ∧ ∂_t &                  & + f \; ∂_x ∧ ∂_y & - e \; ∂_x ∧ ∂_z \\
-        - b \; ∂_y ∧ ∂_t & - f \; ∂_y ∧ ∂_x &                  & + d \; ∂_y ∧ ∂_z \\
-        - c \; ∂_z ∧ ∂_t & + e \; ∂_z ∧ ∂_x & - d \; ∂_z ∧ ∂_y &                  \\
+                             & + Q^x \; ∂_t ∧ ∂_x & + Q^y \; ∂_t ∧ ∂_y & + Q^z \; ∂_t ∧ ∂_z \\
+          - Q^x \; ∂_x ∧ ∂_t &                    & + R^z \; ∂_x ∧ ∂_y & - R^y \; ∂_x ∧ ∂_z \\
+          - Q^y \; ∂_y ∧ ∂_t & - R^z \; ∂_y ∧ ∂_x &                    & + R^x \; ∂_y ∧ ∂_z \\
+          - Q^z \; ∂_z ∧ ∂_t & + R^y \; ∂_z ∧ ∂_x & - R^x \; ∂_z ∧ ∂_y &                    \\
       \end{bmatrix}
 
 .. }}}
@@ -110,9 +109,9 @@ flattened:
 .. math::
 
    \begin{matrix}
-     (∂_μ ∧ ∂_ν)^{♭♯} &= η_{γμ} dx^γ ∧ ∂_ν         \\
-     (∂_μ ∧ ∂_ν)^{♯♭} &= η_{γν} ∂_μ ∧ dx^γ         \\
-     (∂_μ ∧ ∂_ν)^{♭♭} &= η_{δμ} η_{γν} dx^δ ∧ dx^γ \\
+       (∂_μ ∧ ∂_ν)^{♭♯} &= η_{γμ} dx^γ ∧ ∂_ν         \\
+       (∂_μ ∧ ∂_ν)^{♯♭} &= η_{γν} ∂_μ ∧ dx^γ         \\
+       (∂_μ ∧ ∂_ν)^{♭♭} &= η_{δμ} η_{γν} dx^δ ∧ dx^γ \\
    \end{matrix}
 
 To obtain the doubly covariant representation of rotations in spacetime, we
@@ -124,12 +123,12 @@ apply the flat operators :math:`♭♭` to each components :math:`R^{♭♭} =
    .. math::
 
       R^{♭♭} = \left[ \begin{aligned}
-        - & a \; dt ∧ dx \\
-        - & b \; dt ∧ dy \\
-        - & c \; dt ∧ dz \\
-          & d \; dy ∧ dz \\
-          & e \; dz ∧ dx \\
-          & f \; dx ∧ dy \\
+          - & Q^x \; dt ∧ dx \\
+          - & Q^y \; dt ∧ dy \\
+          - & Q^z \; dt ∧ dz \\
+            & R^x \; dy ∧ dz \\
+            & R^y \; dz ∧ dx \\
+            & R^z \; dx ∧ dy \\
       \end{aligned} \right]
 
 .. admonition:: Calculations
@@ -142,12 +141,12 @@ apply the flat operators :math:`♭♭` to each components :math:`R^{♭♭} =
    .. math::
 
       R^{♭♭} = \begin{bmatrix}
-        a \; ∂_t ∧ ∂_x \\
-        b \; ∂_t ∧ ∂_y \\
-        c \; ∂_t ∧ ∂_z \\
-        d \; ∂_y ∧ ∂_z \\
-        e \; ∂_z ∧ ∂_x \\
-        f \; ∂_x ∧ ∂_y \\
+          Q^x \; ∂_t ∧ ∂_x \\
+          Q^y \; ∂_t ∧ ∂_y \\
+          Q^z \; ∂_t ∧ ∂_z \\
+          R^x \; ∂_y ∧ ∂_z \\
+          R^y \; ∂_z ∧ ∂_x \\
+          R^z \; ∂_x ∧ ∂_y \\
       \end{bmatrix}^{♭♭}
 
    .. rubric:: Distribute the musical operators
@@ -155,12 +154,12 @@ apply the flat operators :math:`♭♭` to each components :math:`R^{♭♭} =
    .. math::
 
       R^{♭♭} = \begin{bmatrix}
-        a \; ∂_t^♭ ∧ ∂_x^♭ \\
-        b \; ∂_t^♭ ∧ ∂_y^♭ \\
-        c \; ∂_t^♭ ∧ ∂_z^♭ \\
-        d \; ∂_y^♭ ∧ ∂_z^♭ \\
-        e \; ∂_z^♭ ∧ ∂_x^♭ \\
-        f \; ∂_x^♭ ∧ ∂_y^♭ \\
+          Q^x \; ∂_t^♭ ∧ ∂_x^♭ \\
+          Q^y \; ∂_t^♭ ∧ ∂_y^♭ \\
+          Q^z \; ∂_t^♭ ∧ ∂_z^♭ \\
+          R^x \; ∂_y^♭ ∧ ∂_z^♭ \\
+          R^y \; ∂_z^♭ ∧ ∂_x^♭ \\
+          R^z \; ∂_x^♭ ∧ ∂_y^♭ \\
       \end{bmatrix}
 
    .. rubric:: Expand
@@ -168,12 +167,12 @@ apply the flat operators :math:`♭♭` to each components :math:`R^{♭♭} =
    .. math::
 
       R^{♭♭} = \begin{bmatrix}
-        a \; η_{tμ} d^μ ∧ η_{xμ} d^μ \\
-        b \; η_{tμ} d^μ ∧ η_{yμ} d^μ \\
-        c \; η_{tμ} d^μ ∧ η_{zμ} d^μ \\
-        d \; η_{yμ} d^μ ∧ η_{zμ} d^μ \\
-        e \; η_{zμ} d^μ ∧ η_{xμ} d^μ \\
-        f \; η_{xμ} d^μ ∧ η_{yμ} d^μ \\
+          Q^x \; η_{tμ} d^μ ∧ η_{xμ} dx^μ \\
+          Q^y \; η_{tμ} d^μ ∧ η_{yμ} dx^μ \\
+          Q^z \; η_{tμ} d^μ ∧ η_{zμ} dx^μ \\
+          R^x \; η_{yμ} d^μ ∧ η_{zμ} dx^μ \\
+          R^y \; η_{zμ} d^μ ∧ η_{xμ} dx^μ \\
+          R^z \; η_{xμ} d^μ ∧ η_{yμ} dx^μ \\
       \end{bmatrix}
 
    .. rubric:: Identify non-zero terms
@@ -181,12 +180,12 @@ apply the flat operators :math:`♭♭` to each components :math:`R^{♭♭} =
    .. math::
 
       R^{♭♭} = \begin{bmatrix}
-        a \; η_{tt} dt ∧ η_{xx} dx \\
-        b \; η_{tt} dt ∧ η_{yy} dy \\
-        c \; η_{tt} dt ∧ η_{zz} dz \\
-        d \; η_{yy} dy ∧ η_{zz} dz \\
-        e \; η_{zz} dz ∧ η_{xx} dx \\
-        f \; η_{xx} dx ∧ η_{yy} dy \\
+          Q^x \; η_{tt} dt ∧ η_{xx} dx \\
+          Q^y \; η_{tt} dt ∧ η_{yy} dy \\
+          Q^z \; η_{tt} dt ∧ η_{zz} dz \\
+          R^x \; η_{yy} dy ∧ η_{zz} dz \\
+          R^y \; η_{zz} dz ∧ η_{xx} dx \\
+          R^z \; η_{xx} dx ∧ η_{yy} dy \\
       \end{bmatrix}
 
    .. rubric:: Apply numerical values
@@ -194,12 +193,12 @@ apply the flat operators :math:`♭♭` to each components :math:`R^{♭♭} =
    .. math::
 
       R^{♭♭} = \left[ \begin{aligned}
-        - & a \; dt ∧ dx \\
-        - & b \; dt ∧ dy \\
-        - & c \; dt ∧ dz \\
-          & d \; dy ∧ dz \\
-          & e \; dz ∧ dx \\
-          & f \; dx ∧ dy \\
+          - & Q^x \; dt ∧ dx \\
+          - & Q^y \; dt ∧ dy \\
+          - & Q^z \; dt ∧ dz \\
+            & R^x \; dy ∧ dz \\
+            & R^y \; dz ∧ dx \\
+            & R^z \; dx ∧ dy \\
       \end{aligned} \right]
 
    .. }}}
@@ -218,20 +217,20 @@ by applying the flatternig operator :math:`\flat`:
 .. math::
 
    R^{♭♯} = \begin{bmatrix}
-       a \; ∂_t ∧ ∂_x \\
-       b \; ∂_t ∧ ∂_y \\
-       c \; ∂_t ∧ ∂_z \\
-       d \; ∂_y ∧ ∂_z \\
-       e \; ∂_z ∧ ∂_x \\
-       f \; ∂_x ∧ ∂_y \\
+       Q^x \; ∂_t ∧ ∂_x \\
+       Q^y \; ∂_t ∧ ∂_y \\
+       Q^z \; ∂_t ∧ ∂_z \\
+       R^x \; ∂_y ∧ ∂_z \\
+       R^y \; ∂_z ∧ ∂_x \\
+       R^z \; ∂_x ∧ ∂_y \\
    \end{bmatrix}^{♭♯}
    = \begin{bmatrix}
-       + a \; dx^x ∧ ∂_t \\
-       + b \; dx^y ∧ ∂_t \\
-       + c \; dx^z ∧ ∂_t \\
-       - d \; dx^z ∧ ∂_y \\
-       - e \; dx^x ∧ ∂_z \\
-       - f \; dx^y ∧ ∂_x \\
+       + Q^x \; dx^x ∧ ∂_t \\
+       + Q^y \; dx^y ∧ ∂_t \\
+       + Q^z \; dx^z ∧ ∂_t \\
+       - R^x \; dx^z ∧ ∂_y \\
+       - R^y \; dx^x ∧ ∂_z \\
+       - R^z \; dx^y ∧ ∂_x \\
    \end{bmatrix}
 
 .. admonition:: Calculations
@@ -244,12 +243,12 @@ by applying the flatternig operator :math:`\flat`:
    .. math::
 
       B^{♭♯} = \begin{bmatrix}
-          a \; ∂_t ∧ ∂_x \\
-          b \; ∂_t ∧ ∂_y \\
-          c \; ∂_t ∧ ∂_z \\
-          d \; ∂_y ∧ ∂_z \\
-          e \; ∂_z ∧ ∂_x \\
-          f \; ∂_x ∧ ∂_y \\
+          Q^x \; ∂_t ∧ ∂_x \\
+          Q^y \; ∂_t ∧ ∂_y \\
+          Q^z \; ∂_t ∧ ∂_z \\
+          R^x \; ∂_y ∧ ∂_z \\
+          R^y \; ∂_z ∧ ∂_x \\
+          R^z \; ∂_x ∧ ∂_y \\
       \end{bmatrix}^{♭♯}
 
    .. rubric:: Distribute the musical operators to each matrix elements
@@ -257,12 +256,12 @@ by applying the flatternig operator :math:`\flat`:
    .. math::
 
       B^{♭♯} = \begin{bmatrix}
-        a \; (∂_t ∧ ∂_x)^{♭♯} \\
-        b \; (∂_t ∧ ∂_y)^{♭♯} \\
-        c \; (∂_t ∧ ∂_z)^{♭♯} \\
-        d \; (∂_y ∧ ∂_z)^{♭♯} \\
-        e \; (∂_z ∧ ∂_x)^{♭♯} \\
-        f \; (∂_x ∧ ∂_y)^{♭♯} \\
+          Q^x \; (∂_t ∧ ∂_x)^{♭♯} \\
+          Q^y \; (∂_t ∧ ∂_y)^{♭♯} \\
+          Q^z \; (∂_t ∧ ∂_z)^{♭♯} \\
+          R^x \; (∂_y ∧ ∂_z)^{♭♯} \\
+          R^y \; (∂_z ∧ ∂_x)^{♭♯} \\
+          R^z \; (∂_x ∧ ∂_y)^{♭♯} \\
       \end{bmatrix}
 
    .. rubric:: Distribute the musical operators
@@ -270,12 +269,12 @@ by applying the flatternig operator :math:`\flat`:
    .. math::
 
       B^{♭♯} = \begin{bmatrix}
-        a \; (∂_t^♭ ∧ ∂_x^♯) \\
-        b \; (∂_t^♭ ∧ ∂_y^♯) \\
-        c \; (∂_t^♭ ∧ ∂_z^♯) \\
-        d \; (∂_y^♭ ∧ ∂_z^♯) \\
-        e \; (∂_z^♭ ∧ ∂_x^♯) \\
-        f \; (∂_x^♭ ∧ ∂_y^♯) \\
+          Q^x \; (∂_t^♭ ∧ ∂_x^♯) \\
+          Q^y \; (∂_t^♭ ∧ ∂_y^♯) \\
+          Q^z \; (∂_t^♭ ∧ ∂_z^♯) \\
+          R^x \; (∂_y^♭ ∧ ∂_z^♯) \\
+          R^y \; (∂_z^♭ ∧ ∂_x^♯) \\
+          R^z \; (∂_x^♭ ∧ ∂_y^♯) \\
       \end{bmatrix}
 
    .. rubric:: Apply the musical operators
@@ -283,12 +282,12 @@ by applying the flatternig operator :math:`\flat`:
    .. math::
 
       B^{♭♯} = \begin{bmatrix}
-        a \; η_{tγ} dx^γ ∧ ∂_x^♯ \\
-        b \; η_{tγ} dx^γ ∧ ∂_y^♯ \\
-        c \; η_{tγ} dx^γ ∧ ∂_z^♯ \\
-        d \; η_{yγ} dx^γ ∧ ∂_z^♯ \\
-        e \; η_{zγ} dx^γ ∧ ∂_x^♯ \\
-        f \; η_{xγ} dx^γ ∧ ∂_y^♯ \\
+          Q^x \; η_{tγ} dx^γ ∧ ∂_x^♯ \\
+          Q^y \; η_{tγ} dx^γ ∧ ∂_y^♯ \\
+          Q^z \; η_{tγ} dx^γ ∧ ∂_z^♯ \\
+          R^x \; η_{yγ} dx^γ ∧ ∂_z^♯ \\
+          R^y \; η_{zγ} dx^γ ∧ ∂_x^♯ \\
+          R^z \; η_{xγ} dx^γ ∧ ∂_y^♯ \\
       \end{bmatrix}
 
    .. rubric:: Identify the non-zero terms of the Minkowski metric
@@ -296,12 +295,12 @@ by applying the flatternig operator :math:`\flat`:
    .. math::
 
       B^{♭♯} = \begin{bmatrix}
-        a \; η_{tt} dx^t ∧ ∂_x \\
-        b \; η_{tt} dx^t ∧ ∂_y \\
-        c \; η_{tt} dx^t ∧ ∂_z \\
-        d \; η_{yy} dx^y ∧ ∂_z \\
-        e \; η_{zz} dx^z ∧ ∂_x \\
-        f \; η_{xx} dx^x ∧ ∂_y \\
+          Q^x \; η_{tt} dx^t ∧ ∂_x \\
+          Q^y \; η_{tt} dx^t ∧ ∂_y \\
+          Q^z \; η_{tt} dx^t ∧ ∂_z \\
+          R^x \; η_{yy} dx^y ∧ ∂_z \\
+          R^y \; η_{zz} dx^z ∧ ∂_x \\
+          R^z \; η_{xx} dx^x ∧ ∂_y \\
       \end{bmatrix}
 
    .. rubric:: Use the numerical values of the Minkowski metric
@@ -309,28 +308,28 @@ by applying the flatternig operator :math:`\flat`:
    .. math::
 
       B^{♭♯} = \begin{bmatrix}
-        + a \; dx^t ∧ ∂_x \\
-        + b \; dx^t ∧ ∂_y \\
-        + c \; dx^t ∧ ∂_z \\
-        - d \; dx^y ∧ ∂_z \\
-        - e \; dx^z ∧ ∂_x \\
-        - f \; dx^x ∧ ∂_y \\
+          + Q^x \; dx^t ∧ ∂_x \\
+          + Q^y \; dx^t ∧ ∂_y \\
+          + Q^z \; dx^t ∧ ∂_z \\
+          - R^x \; dx^y ∧ ∂_z \\
+          - R^y \; dx^z ∧ ∂_x \\
+          - R^z \; dx^x ∧ ∂_y \\
       \end{bmatrix}
 
    .. }}}
 
-Taking into account the symetric property of :math:`dx^t ∧ ∂_x`, :math:`dx^t
-∧ ∂_y`, and :math:`dx^t ∧ ∂_z`, as well the antisymetric property of
-:math:`dx^x ∧ ∂_y`, :math:`dx^y ∧ ∂_z`, and :math:`dx^z ∧ ∂_x`
-demonstrated above, this results in:
+Taking into account the symetric property of :math:`dx^t ∧ ∂_x`, :math:`dx^t ∧
+∂_y`, and :math:`dx^t ∧ ∂_z`, as well the antisymetric property of :math:`dx^x
+∧ ∂_y`, :math:`dx^y ∧ ∂_z`, and :math:`dx^z ∧ ∂_x` demonstrated above, this
+results in:
 
 .. math::
 
    R^{♭♯} = \frac{1}{2} \begin{bmatrix}
-                       & + a \; dx^t ∧ ∂_x & + b \; dx^t ∧ ∂_y & + c \; dx^t ∧ ∂_z \\
-     + a \; dx^x ∧ ∂_t &                   & + f \; dx^x ∧ ∂_y & - e \; dx^x ∧ ∂_z \\
-     + b \; dx^y ∧ ∂_t & - f \; dx^y ∧ ∂_x &                   & + d \; dx^y ∧ ∂_z \\
-     + c \; dx^z ∧ ∂_t & + e \; dx^z ∧ ∂_x & - d \; dx^z ∧ ∂_y &                   \\
+                           & + Q^x \; dx^t ∧ ∂_x & + Q^y \; dx^t ∧ ∂_y & + Q^z \; dx^t ∧ ∂_z \\
+       + Q^x \; dx^x ∧ ∂_t &                     & + R^z \; dx^x ∧ ∂_y & - R^y \; dx^x ∧ ∂_z \\
+       + Q^y \; dx^y ∧ ∂_t & - R^z \; dx^y ∧ ∂_x &                     & + R^x \; dx^y ∧ ∂_z \\
+       + Q^z \; dx^z ∧ ∂_t & + R^y \; dx^z ∧ ∂_x & - R^x \; dx^z ∧ ∂_y &                     \\
    \end{bmatrix}
 
 .. }}}
@@ -346,20 +345,20 @@ tensor is obtained by applying the flatternig operator :math:`\flat`:
 .. math::
 
    R^{♯♭} = \begin{bmatrix}
-     a \; ∂_t ∧ ∂_x \\
-     b \; ∂_t ∧ ∂_y \\
-     c \; ∂_t ∧ ∂_z \\
-     d \; ∂_y ∧ ∂_z \\
-     e \; ∂_z ∧ ∂_x \\
-     f \; ∂_x ∧ ∂_y \\
+       Q^x \; ∂_t ∧ ∂_x \\
+       Q^y \; ∂_t ∧ ∂_y \\
+       Q^z \; ∂_t ∧ ∂_z \\
+       R^x \; ∂_y ∧ ∂_z \\
+       R^y \; ∂_z ∧ ∂_x \\
+       R^z \; ∂_x ∧ ∂_y \\
    \end{bmatrix}^{♯♭}
    = \begin{bmatrix}
-     - a \; ∂_t ∧ dx \\
-     - b \; ∂_t ∧ dy \\
-     - c \; ∂_t ∧ dz \\
-     - d \; ∂_y ∧ dz \\
-     - e \; ∂_z ∧ dx \\
-     - f \; ∂_x ∧ dy \\
+       - Q^x \; ∂_t ∧ dx \\
+       - Q^y \; ∂_t ∧ dy \\
+       - Q^z \; ∂_t ∧ dz \\
+       - R^x \; ∂_y ∧ dz \\
+       - R^y \; ∂_z ∧ dx \\
+       - R^z \; ∂_x ∧ dy \\
    \end{bmatrix}
 
 .. admonition:: Calculations
@@ -372,12 +371,12 @@ tensor is obtained by applying the flatternig operator :math:`\flat`:
    .. math::
 
       B^{♯♭} = \begin{bmatrix}
-        a \; ∂_t ∧ ∂_x \\
-        b \; ∂_t ∧ ∂_y \\
-        c \; ∂_t ∧ ∂_z \\
-        d \; ∂_y ∧ ∂_z \\
-        e \; ∂_z ∧ ∂_x \\
-        f \; ∂_x ∧ ∂_y \\
+          Q^x \; ∂_t ∧ ∂_x \\
+          Q^y \; ∂_t ∧ ∂_y \\
+          Q^z \; ∂_t ∧ ∂_z \\
+          R^x \; ∂_y ∧ ∂_z \\
+          R^y \; ∂_z ∧ ∂_x \\
+          R^z \; ∂_x ∧ ∂_y \\
       \end{bmatrix}^{♯♭}
 
    .. rubric:: Distribute the musical operators to each matrix elements
@@ -385,12 +384,12 @@ tensor is obtained by applying the flatternig operator :math:`\flat`:
    .. math::
 
       B^{♯♭} = \begin{bmatrix}
-        a \; (∂_t ∧ ∂_x)^{♯♭} \\
-        b \; (∂_t ∧ ∂_y)^{♯♭} \\
-        c \; (∂_t ∧ ∂_z)^{♯♭} \\
-        d \; (∂_y ∧ ∂_z)^{♯♭} \\
-        e \; (∂_z ∧ ∂_x)^{♯♭} \\
-        f \; (∂_x ∧ ∂_y)^{♯♭} \\
+          Q^x \; (∂_t ∧ ∂_x)^{♯♭} \\
+          Q^y \; (∂_t ∧ ∂_y)^{♯♭} \\
+          Q^z \; (∂_t ∧ ∂_z)^{♯♭} \\
+          R^x \; (∂_y ∧ ∂_z)^{♯♭} \\
+          R^y \; (∂_z ∧ ∂_x)^{♯♭} \\
+          R^z \; (∂_x ∧ ∂_y)^{♯♭} \\
       \end{bmatrix}
 
    .. rubric:: Distribute the musical operators
@@ -398,12 +397,12 @@ tensor is obtained by applying the flatternig operator :math:`\flat`:
    .. math::
 
       B^{♯♭} = \begin{bmatrix}
-        a \; (∂_t^♯ ∧ ∂_x^♭) \\
-        b \; (∂_t^♯ ∧ ∂_y^♭) \\
-        c \; (∂_t^♯ ∧ ∂_z^♭) \\
-        d \; (∂_y^♯ ∧ ∂_z^♭) \\
-        e \; (∂_z^♯ ∧ ∂_x^♭) \\
-        f \; (∂_x^♯ ∧ ∂_y^♭) \\
+          Q^x \; (∂_t^♯ ∧ ∂_x^♭) \\
+          Q^y \; (∂_t^♯ ∧ ∂_y^♭) \\
+          Q^z \; (∂_t^♯ ∧ ∂_z^♭) \\
+          R^x \; (∂_y^♯ ∧ ∂_z^♭) \\
+          R^y \; (∂_z^♯ ∧ ∂_x^♭) \\
+          R^z \; (∂_x^♯ ∧ ∂_y^♭) \\
       \end{bmatrix}
 
    .. rubric:: Apply and expand
@@ -411,12 +410,12 @@ tensor is obtained by applying the flatternig operator :math:`\flat`:
    .. math::
 
       B^{♯♭} = \begin{bmatrix}
-        a \; ∂_t ∧ η_{xγ} dx^γ \\
-        b \; ∂_t ∧ η_{yγ} dx^γ \\
-        c \; ∂_t ∧ η_{zγ} dx^γ \\
-        d \; ∂_y ∧ η_{zγ} dx^γ \\
-        e \; ∂_z ∧ η_{xγ} dx^γ \\
-        f \; ∂_x ∧ η_{yγ} dx^γ \\
+          Q^x \; ∂_t ∧ η_{xγ} dx^γ \\
+          Q^y \; ∂_t ∧ η_{yγ} dx^γ \\
+          Q^z \; ∂_t ∧ η_{zγ} dx^γ \\
+          R^x \; ∂_y ∧ η_{zγ} dx^γ \\
+          R^y \; ∂_z ∧ η_{xγ} dx^γ \\
+          R^z \; ∂_x ∧ η_{yγ} dx^γ \\
       \end{bmatrix}
 
    .. rubric:: The metric tensor can be taken out due to mulilinearity
@@ -424,12 +423,12 @@ tensor is obtained by applying the flatternig operator :math:`\flat`:
    .. math::
 
       B^{♯♭} = \begin{bmatrix}
-        a \; η_{xγ} ∂_t ∧ dx^γ \\
-        b \; η_{yγ} ∂_t ∧ dx^γ \\
-        c \; η_{zγ} ∂_t ∧ dx^γ \\
-        d \; η_{zγ} ∂_y ∧ dx^γ \\
-        e \; η_{xγ} ∂_z ∧ dx^γ \\
-        f \; η_{yγ} ∂_x ∧ dx^γ \\
+          Q^x \; η_{xγ} ∂_t ∧ dx^γ \\
+          Q^y \; η_{yγ} ∂_t ∧ dx^γ \\
+          Q^z \; η_{zγ} ∂_t ∧ dx^γ \\
+          R^x \; η_{zγ} ∂_y ∧ dx^γ \\
+          R^y \; η_{xγ} ∂_z ∧ dx^γ \\
+          R^z \; η_{yγ} ∂_x ∧ dx^γ \\
       \end{bmatrix}
 
    .. rubric:: Most terms of the Minkowski metric are zero
@@ -437,12 +436,12 @@ tensor is obtained by applying the flatternig operator :math:`\flat`:
    .. math::
 
       R^{♯♭} = \begin{bmatrix}
-        a \; η_{xx} ∂_t ∧ dx^x \\
-        b \; η_{yy} ∂_t ∧ dx^y \\
-        c \; η_{zz} ∂_t ∧ dx^z \\
-        d \; η_{zz} ∂_y ∧ dx^z \\
-        e \; η_{xx} ∂_z ∧ dx^x \\
-        f \; η_{yy} ∂_x ∧ dx^y \\
+          Q^x \; η_{xx} ∂_t ∧ dx \\
+          Q^y \; η_{yy} ∂_t ∧ dy \\
+          Q^z \; η_{zz} ∂_t ∧ dz \\
+          R^x \; η_{zz} ∂_y ∧ dz \\
+          R^y \; η_{xx} ∂_z ∧ dx \\
+          R^z \; η_{yy} ∂_x ∧ dy \\
       \end{bmatrix}
 
    .. rubric:: Use the numerical values of the Minkowski metric
@@ -450,12 +449,12 @@ tensor is obtained by applying the flatternig operator :math:`\flat`:
    .. math::
 
       R^{♯♭} = \begin{bmatrix}
-        - a \; ∂_t ∧ dx^x \\
-        - b \; ∂_t ∧ dx^y \\
-        - c \; ∂_t ∧ dx^z \\
-        - d \; ∂_y ∧ dx^z \\
-        - e \; ∂_z ∧ dx^x \\
-        - f \; ∂_x ∧ dx^y \\
+          - Q^x \; ∂_t ∧ dx \\
+          - Q^y \; ∂_t ∧ dy \\
+          - Q^z \; ∂_t ∧ dz \\
+          - R^x \; ∂_y ∧ dz \\
+          - R^y \; ∂_z ∧ dx \\
+          - R^z \; ∂_x ∧ dy \\
       \end{bmatrix}
 
    .. }}}
@@ -468,10 +467,10 @@ results in:
 .. math::
 
    R^{♯♭} = \frac{1}{2} \begin{bmatrix}
-                     & - a \; ∂_t ∧ dx & - b \; ∂_t ∧ dy & - c \; ∂_t ∧ dz \\
-     - a \; ∂_x ∧ dt &                 & - f \; ∂_x ∧ dy & + e \; ∂_x ∧ dz \\
-     - b \; ∂_y ∧ dt & + f \; ∂_y ∧ dx &                 & - d \; ∂_y ∧ dz \\
-     - c \; ∂_z ∧ dt & - e \; ∂_z ∧ dx & + d \; ∂_z ∧ dy &                 \\
+                         & - Q^x \; ∂_t ∧ dx & - Q^y \; ∂_t ∧ dy & - Q^z \; ∂_t ∧ dz \\
+       - Q^x \; ∂_x ∧ dt &                   & - R^z \; ∂_x ∧ dy & + R^y \; ∂_x ∧ dz \\
+       - Q^y \; ∂_y ∧ dt & + R^z \; ∂_y ∧ dx &                   & - R^x \; ∂_y ∧ dz \\
+       - Q^z \; ∂_z ∧ dt & - R^y \; ∂_z ∧ dx & + R^x \; ∂_z ∧ dy &                   \\
    \end{bmatrix}
 
 .. }}}
@@ -497,12 +496,12 @@ bivectors, we obtain:
 .. math::
 
    \begin{alignedat}{4}
-   (∂_t ∧ ∂_x)^{♭♯} =& + dt ∧ ∂_x &\qquad& (∂_x ∧ ∂_t)^{♭♯} =& - dx ∧ ∂_t \\
-   (∂_t ∧ ∂_y)^{♭♯} =& + dt ∧ ∂_y &\qquad& (∂_y ∧ ∂_t)^{♭♯} =& - dy ∧ ∂_t \\
-   (∂_t ∧ ∂_z)^{♭♯} =& + dt ∧ ∂_z &\qquad& (∂_z ∧ ∂_t)^{♭♯} =& - dz ∧ ∂_t \\
-   (∂_y ∧ ∂_z)^{♭♯} =& - dy ∧ ∂_z &\qquad& (∂_y ∧ ∂_x)^{♭♯} =& - dy ∧ ∂_x \\
-   (∂_z ∧ ∂_x)^{♭♯} =& - dz ∧ ∂_x &\qquad& (∂_z ∧ ∂_y)^{♭♯} =& - dz ∧ ∂_y \\
-   (∂_x ∧ ∂_y)^{♭♯} =& - dx ∧ ∂_y &\qquad& (∂_x ∧ ∂_z)^{♭♯} =& - dx ∧ ∂_z \\
+       (∂_t ∧ ∂_x)^{♭♯} =& + dt ∧ ∂_x &\qquad& (∂_x ∧ ∂_t)^{♭♯} =& - dx ∧ ∂_t \\
+       (∂_t ∧ ∂_y)^{♭♯} =& + dt ∧ ∂_y &\qquad& (∂_y ∧ ∂_t)^{♭♯} =& - dy ∧ ∂_t \\
+       (∂_t ∧ ∂_z)^{♭♯} =& + dt ∧ ∂_z &\qquad& (∂_z ∧ ∂_t)^{♭♯} =& - dz ∧ ∂_t \\
+       (∂_y ∧ ∂_z)^{♭♯} =& - dy ∧ ∂_z &\qquad& (∂_y ∧ ∂_x)^{♭♯} =& - dy ∧ ∂_x \\
+       (∂_z ∧ ∂_x)^{♭♯} =& - dz ∧ ∂_x &\qquad& (∂_z ∧ ∂_y)^{♭♯} =& - dz ∧ ∂_y \\
+       (∂_x ∧ ∂_y)^{♭♯} =& - dx ∧ ∂_y &\qquad& (∂_x ∧ ∂_z)^{♭♯} =& - dx ∧ ∂_z \\
    \end{alignedat}
 
 .. admonition:: Calculations
@@ -515,12 +514,12 @@ bivectors, we obtain:
    .. math::
 
       \begin{alignedat}{5}
-      (∂_t ∧ ∂_x)^{♭♯} &= (∂_t^♭ ∧ ∂_x^♯) &\qquad& (∂_x ∧ ∂_t)^{♭♯} &=& (∂_x^♭ ∧ ∂_t^♯) \\
-      (∂_t ∧ ∂_y)^{♭♯} &= (∂_t^♭ ∧ ∂_y^♯) &\qquad& (∂_y ∧ ∂_t)^{♭♯} &=& (∂_y^♭ ∧ ∂_t^♯) \\
-      (∂_t ∧ ∂_z)^{♭♯} &= (∂_t^♭ ∧ ∂_z^♯) &\qquad& (∂_z ∧ ∂_t)^{♭♯} &=& (∂_z^♭ ∧ ∂_t^♯) \\
-      (∂_x ∧ ∂_y)^{♭♯} &= (∂_x^♭ ∧ ∂_y^♯) &\qquad& (∂_y ∧ ∂_x)^{♭♯} &=& (∂_y^♭ ∧ ∂_x^♯) \\
-      (∂_y ∧ ∂_z)^{♭♯} &= (∂_y^♭ ∧ ∂_z^♯) &\qquad& (∂_z ∧ ∂_y)^{♭♯} &=& (∂_z^♭ ∧ ∂_y^♯) \\
-      (∂_z ∧ ∂_x)^{♭♯} &= (∂_z^♭ ∧ ∂_x^♯) &\qquad& (∂_x ∧ ∂_z)^{♭♯} &=& (∂_x^♭ ∧ ∂_z^♯) \\
+          (∂_t ∧ ∂_x)^{♭♯} &= (∂_t^♭ ∧ ∂_x^♯) &\qquad& (∂_x ∧ ∂_t)^{♭♯} &=& (∂_x^♭ ∧ ∂_t^♯) \\
+          (∂_t ∧ ∂_y)^{♭♯} &= (∂_t^♭ ∧ ∂_y^♯) &\qquad& (∂_y ∧ ∂_t)^{♭♯} &=& (∂_y^♭ ∧ ∂_t^♯) \\
+          (∂_t ∧ ∂_z)^{♭♯} &= (∂_t^♭ ∧ ∂_z^♯) &\qquad& (∂_z ∧ ∂_t)^{♭♯} &=& (∂_z^♭ ∧ ∂_t^♯) \\
+          (∂_x ∧ ∂_y)^{♭♯} &= (∂_x^♭ ∧ ∂_y^♯) &\qquad& (∂_y ∧ ∂_x)^{♭♯} &=& (∂_y^♭ ∧ ∂_x^♯) \\
+          (∂_y ∧ ∂_z)^{♭♯} &= (∂_y^♭ ∧ ∂_z^♯) &\qquad& (∂_z ∧ ∂_y)^{♭♯} &=& (∂_z^♭ ∧ ∂_y^♯) \\
+          (∂_z ∧ ∂_x)^{♭♯} &= (∂_z^♭ ∧ ∂_x^♯) &\qquad& (∂_x ∧ ∂_z)^{♭♯} &=& (∂_x^♭ ∧ ∂_z^♯) \\
       \end{alignedat}
 
    .. rubric:: Apply musical operators
@@ -528,12 +527,12 @@ bivectors, we obtain:
    .. math::
 
       \begin{alignedat}{5}
-      (∂_t ∧ ∂_x)^{♭♯} &= η_{tγ} dx^γ ∧ ∂_x &\qquad& (∂_x ∧ ∂_t)^{♭♯} &=& η_{xγ} dx^γ ∧ ∂_t \\
-      (∂_t ∧ ∂_y)^{♭♯} &= η_{tγ} dx^γ ∧ ∂_y &\qquad& (∂_y ∧ ∂_t)^{♭♯} &=& η_{yγ} dx^γ ∧ ∂_t \\
-      (∂_t ∧ ∂_z)^{♭♯} &= η_{tγ} dx^γ ∧ ∂_z &\qquad& (∂_z ∧ ∂_t)^{♭♯} &=& η_{zγ} dx^γ ∧ ∂_t \\
-      (∂_x ∧ ∂_y)^{♭♯} &= η_{xγ} dx^γ ∧ ∂_y &\qquad& (∂_y ∧ ∂_x)^{♭♯} &=& η_{yγ} dx^γ ∧ ∂_x \\
-      (∂_y ∧ ∂_z)^{♭♯} &= η_{yγ} dx^γ ∧ ∂_z &\qquad& (∂_z ∧ ∂_y)^{♭♯} &=& η_{zγ} dx^γ ∧ ∂_y \\
-      (∂_z ∧ ∂_x)^{♭♯} &= η_{zγ} dx^γ ∧ ∂_x &\qquad& (∂_x ∧ ∂_z)^{♭♯} &=& η_{xγ} dx^γ ∧ ∂_z \\
+          (∂_t ∧ ∂_x)^{♭♯} &= η_{tγ} dx^γ ∧ ∂_x &\qquad& (∂_x ∧ ∂_t)^{♭♯} &=& η_{xγ} dx^γ ∧ ∂_t \\
+          (∂_t ∧ ∂_y)^{♭♯} &= η_{tγ} dx^γ ∧ ∂_y &\qquad& (∂_y ∧ ∂_t)^{♭♯} &=& η_{yγ} dx^γ ∧ ∂_t \\
+          (∂_t ∧ ∂_z)^{♭♯} &= η_{tγ} dx^γ ∧ ∂_z &\qquad& (∂_z ∧ ∂_t)^{♭♯} &=& η_{zγ} dx^γ ∧ ∂_t \\
+          (∂_x ∧ ∂_y)^{♭♯} &= η_{xγ} dx^γ ∧ ∂_y &\qquad& (∂_y ∧ ∂_x)^{♭♯} &=& η_{yγ} dx^γ ∧ ∂_x \\
+          (∂_y ∧ ∂_z)^{♭♯} &= η_{yγ} dx^γ ∧ ∂_z &\qquad& (∂_z ∧ ∂_y)^{♭♯} &=& η_{zγ} dx^γ ∧ ∂_y \\
+          (∂_z ∧ ∂_x)^{♭♯} &= η_{zγ} dx^γ ∧ ∂_x &\qquad& (∂_x ∧ ∂_z)^{♭♯} &=& η_{xγ} dx^γ ∧ ∂_z \\
       \end{alignedat}
 
    .. rubric:: Identify non-zero elements
@@ -541,12 +540,12 @@ bivectors, we obtain:
    .. math::
 
       \begin{alignedat}{5}
-      (∂_t ∧ ∂_x)^{♭♯} &= η_{tt} dx^t ∧ ∂_x &\qquad& (∂_x ∧ ∂_t)^{♭♯} &=& η_{xx} dx^x ∧ ∂_t \\
-      (∂_t ∧ ∂_y)^{♭♯} &= η_{tt} dx^t ∧ ∂_y &\qquad& (∂_y ∧ ∂_t)^{♭♯} &=& η_{yy} dx^y ∧ ∂_t \\
-      (∂_t ∧ ∂_z)^{♭♯} &= η_{tt} dx^t ∧ ∂_z &\qquad& (∂_z ∧ ∂_t)^{♭♯} &=& η_{zz} dx^z ∧ ∂_t \\
-      (∂_x ∧ ∂_y)^{♭♯} &= η_{xx} dx^x ∧ ∂_y &\qquad& (∂_y ∧ ∂_x)^{♭♯} &=& η_{yy} dx^y ∧ ∂_x \\
-      (∂_y ∧ ∂_z)^{♭♯} &= η_{yy} dx^y ∧ ∂_z &\qquad& (∂_z ∧ ∂_y)^{♭♯} &=& η_{zz} dx^z ∧ ∂_y \\
-      (∂_z ∧ ∂_x)^{♭♯} &= η_{zz} dx^z ∧ ∂_x &\qquad& (∂_x ∧ ∂_z)^{♭♯} &=& η_{xx} dx^x ∧ ∂_z \\
+          (∂_t ∧ ∂_x)^{♭♯} &= η_{tt} dx^t ∧ ∂_x &\qquad& (∂_x ∧ ∂_t)^{♭♯} &=& η_{xx} dx^x ∧ ∂_t \\
+          (∂_t ∧ ∂_y)^{♭♯} &= η_{tt} dx^t ∧ ∂_y &\qquad& (∂_y ∧ ∂_t)^{♭♯} &=& η_{yy} dx^y ∧ ∂_t \\
+          (∂_t ∧ ∂_z)^{♭♯} &= η_{tt} dx^t ∧ ∂_z &\qquad& (∂_z ∧ ∂_t)^{♭♯} &=& η_{zz} dx^z ∧ ∂_t \\
+          (∂_x ∧ ∂_y)^{♭♯} &= η_{xx} dx^x ∧ ∂_y &\qquad& (∂_y ∧ ∂_x)^{♭♯} &=& η_{yy} dx^y ∧ ∂_x \\
+          (∂_y ∧ ∂_z)^{♭♯} &= η_{yy} dx^y ∧ ∂_z &\qquad& (∂_z ∧ ∂_y)^{♭♯} &=& η_{zz} dx^z ∧ ∂_y \\
+          (∂_z ∧ ∂_x)^{♭♯} &= η_{zz} dx^z ∧ ∂_x &\qquad& (∂_x ∧ ∂_z)^{♭♯} &=& η_{xx} dx^x ∧ ∂_z \\
       \end{alignedat}
 
    .. rubric:: Apply numerical values
@@ -554,12 +553,12 @@ bivectors, we obtain:
    .. math::
 
       \begin{alignedat}{5}
-      (∂_t ∧ ∂_x)^{♭♯} &= + dt ∧ ∂_x &\qquad& (∂_x ∧ ∂_t)^{♭♯} &=& - dx ∧ ∂_t \\
-      (∂_t ∧ ∂_y)^{♭♯} &= + dt ∧ ∂_y &\qquad& (∂_y ∧ ∂_t)^{♭♯} &=& - dy ∧ ∂_t \\
-      (∂_t ∧ ∂_z)^{♭♯} &= + dt ∧ ∂_z &\qquad& (∂_z ∧ ∂_t)^{♭♯} &=& - dz ∧ ∂_t \\
-      (∂_x ∧ ∂_y)^{♭♯} &= - dx ∧ ∂_y &\qquad& (∂_y ∧ ∂_x)^{♭♯} &=& - dy ∧ ∂_x \\
-      (∂_y ∧ ∂_z)^{♭♯} &= - dy ∧ ∂_z &\qquad& (∂_z ∧ ∂_y)^{♭♯} &=& - dz ∧ ∂_y \\
-      (∂_z ∧ ∂_x)^{♭♯} &= - dz ∧ ∂_x &\qquad& (∂_x ∧ ∂_z)^{♭♯} &=& - dx ∧ ∂_z \\
+          (∂_t ∧ ∂_x)^{♭♯} &= + dt ∧ ∂_x &\qquad& (∂_x ∧ ∂_t)^{♭♯} &=& - dx ∧ ∂_t \\
+          (∂_t ∧ ∂_y)^{♭♯} &= + dt ∧ ∂_y &\qquad& (∂_y ∧ ∂_t)^{♭♯} &=& - dy ∧ ∂_t \\
+          (∂_t ∧ ∂_z)^{♭♯} &= + dt ∧ ∂_z &\qquad& (∂_z ∧ ∂_t)^{♭♯} &=& - dz ∧ ∂_t \\
+          (∂_x ∧ ∂_y)^{♭♯} &= - dx ∧ ∂_y &\qquad& (∂_y ∧ ∂_x)^{♭♯} &=& - dy ∧ ∂_x \\
+          (∂_y ∧ ∂_z)^{♭♯} &= - dy ∧ ∂_z &\qquad& (∂_z ∧ ∂_y)^{♭♯} &=& - dz ∧ ∂_y \\
+          (∂_z ∧ ∂_x)^{♭♯} &= - dz ∧ ∂_x &\qquad& (∂_x ∧ ∂_z)^{♭♯} &=& - dx ∧ ∂_z \\
       \end{alignedat}
 
    .. }}}
@@ -570,12 +569,12 @@ terms of tensor products:
 .. math::
 
    \begin{alignedat}{8}
-   (∂_t ∧ ∂_x)^{♭♯} =& + dt ⊗ ∂_x &+& dx ⊗ ∂_t &\qquad& (∂_x ∧ ∂_t)^{♭♯} =& - dx ⊗ ∂_t &-& dt ⊗ ∂_x \\
-   (∂_t ∧ ∂_y)^{♭♯} =& + dt ⊗ ∂_y &+& dy ⊗ ∂_t &\qquad& (∂_y ∧ ∂_t)^{♭♯} =& - dy ⊗ ∂_t &-& dt ⊗ ∂_y \\
-   (∂_t ∧ ∂_z)^{♭♯} =& + dt ⊗ ∂_z &+& dz ⊗ ∂_t &\qquad& (∂_z ∧ ∂_t)^{♭♯} =& - dz ⊗ ∂_t &-& dt ⊗ ∂_z \\
-   (∂_y ∧ ∂_z)^{♭♯} =& - dy ⊗ ∂_z &+& dz ⊗ ∂_y &\qquad& (∂_z ∧ ∂_y)^{♭♯} =& - dz ⊗ ∂_y &+& dy ⊗ ∂_z \\
-   (∂_z ∧ ∂_x)^{♭♯} =& - dz ⊗ ∂_x &+& dx ⊗ ∂_z &\qquad& (∂_x ∧ ∂_z)^{♭♯} =& - dx ⊗ ∂_z &+& dz ⊗ ∂_x \\
-   (∂_x ∧ ∂_y)^{♭♯} =& - dx ⊗ ∂_y &+& dy ⊗ ∂_x &\qquad& (∂_y ∧ ∂_x)^{♭♯} =& - dy ⊗ ∂_x &+& dx ⊗ ∂_y \\
+       (∂_t ∧ ∂_x)^{♭♯} =& + dt ⊗ ∂_x &+& dx ⊗ ∂_t &\qquad& (∂_x ∧ ∂_t)^{♭♯} =& - dx ⊗ ∂_t &-& dt ⊗ ∂_x \\
+       (∂_t ∧ ∂_y)^{♭♯} =& + dt ⊗ ∂_y &+& dy ⊗ ∂_t &\qquad& (∂_y ∧ ∂_t)^{♭♯} =& - dy ⊗ ∂_t &-& dt ⊗ ∂_y \\
+       (∂_t ∧ ∂_z)^{♭♯} =& + dt ⊗ ∂_z &+& dz ⊗ ∂_t &\qquad& (∂_z ∧ ∂_t)^{♭♯} =& - dz ⊗ ∂_t &-& dt ⊗ ∂_z \\
+       (∂_y ∧ ∂_z)^{♭♯} =& - dy ⊗ ∂_z &+& dz ⊗ ∂_y &\qquad& (∂_z ∧ ∂_y)^{♭♯} =& - dz ⊗ ∂_y &+& dy ⊗ ∂_z \\
+       (∂_z ∧ ∂_x)^{♭♯} =& - dz ⊗ ∂_x &+& dx ⊗ ∂_z &\qquad& (∂_x ∧ ∂_z)^{♭♯} =& - dx ⊗ ∂_z &+& dz ⊗ ∂_x \\
+       (∂_x ∧ ∂_y)^{♭♯} =& - dx ⊗ ∂_y &+& dy ⊗ ∂_x &\qquad& (∂_y ∧ ∂_x)^{♭♯} =& - dy ⊗ ∂_x &+& dx ⊗ ∂_y \\
    \end{alignedat}
 
 .. admonition:: Calculations
@@ -588,12 +587,12 @@ terms of tensor products:
    .. math::
 
       \begin{alignedat}{7}
-      (∂_t ∧ ∂_x)^{♭♯} =& (∂_t ⊗ ∂_x &-& ∂_x ⊗ ∂_t)^{♭♯} &\qquad& (∂_x ∧ ∂_t)^{♭♯} &=& (∂_x ⊗ ∂_t &-& ∂_t ⊗ ∂_x)^{♭♯} \\
-      (∂_t ∧ ∂_y)^{♭♯} =& (∂_t ⊗ ∂_y &-& ∂_y ⊗ ∂_t)^{♭♯} &\qquad& (∂_y ∧ ∂_t)^{♭♯} &=& (∂_y ⊗ ∂_t &-& ∂_t ⊗ ∂_y)^{♭♯} \\
-      (∂_t ∧ ∂_z)^{♭♯} =& (∂_t ⊗ ∂_z &-& ∂_z ⊗ ∂_t)^{♭♯} &\qquad& (∂_z ∧ ∂_t)^{♭♯} &=& (∂_z ⊗ ∂_t &-& ∂_t ⊗ ∂_z)^{♭♯} \\
-      (∂_y ∧ ∂_z)^{♭♯} =& (∂_y ⊗ ∂_z &-& ∂_z ⊗ ∂_y)^{♭♯} &\qquad& (∂_z ∧ ∂_y)^{♭♯} &=& (∂_z ⊗ ∂_y &-& ∂_y ⊗ ∂_z)^{♭♯} \\
-      (∂_z ∧ ∂_x)^{♭♯} =& (∂_z ⊗ ∂_x &-& ∂_x ⊗ ∂_z)^{♭♯} &\qquad& (∂_x ∧ ∂_z)^{♭♯} &=& (∂_x ⊗ ∂_z &-& ∂_z ⊗ ∂_x)^{♭♯} \\
-      (∂_x ∧ ∂_y)^{♭♯} =& (∂_x ⊗ ∂_y &-& ∂_y ⊗ ∂_x)^{♭♯} &\qquad& (∂_y ∧ ∂_x)^{♭♯} &=& (∂_y ⊗ ∂_x &-& ∂_x ⊗ ∂_y)^{♭♯} \\
+          (∂_t ∧ ∂_x)^{♭♯} =& (∂_t ⊗ ∂_x &-& ∂_x ⊗ ∂_t)^{♭♯} &\qquad& (∂_x ∧ ∂_t)^{♭♯} &=& (∂_x ⊗ ∂_t &-& ∂_t ⊗ ∂_x)^{♭♯} \\
+          (∂_t ∧ ∂_y)^{♭♯} =& (∂_t ⊗ ∂_y &-& ∂_y ⊗ ∂_t)^{♭♯} &\qquad& (∂_y ∧ ∂_t)^{♭♯} &=& (∂_y ⊗ ∂_t &-& ∂_t ⊗ ∂_y)^{♭♯} \\
+          (∂_t ∧ ∂_z)^{♭♯} =& (∂_t ⊗ ∂_z &-& ∂_z ⊗ ∂_t)^{♭♯} &\qquad& (∂_z ∧ ∂_t)^{♭♯} &=& (∂_z ⊗ ∂_t &-& ∂_t ⊗ ∂_z)^{♭♯} \\
+          (∂_y ∧ ∂_z)^{♭♯} =& (∂_y ⊗ ∂_z &-& ∂_z ⊗ ∂_y)^{♭♯} &\qquad& (∂_z ∧ ∂_y)^{♭♯} &=& (∂_z ⊗ ∂_y &-& ∂_y ⊗ ∂_z)^{♭♯} \\
+          (∂_z ∧ ∂_x)^{♭♯} =& (∂_z ⊗ ∂_x &-& ∂_x ⊗ ∂_z)^{♭♯} &\qquad& (∂_x ∧ ∂_z)^{♭♯} &=& (∂_x ⊗ ∂_z &-& ∂_z ⊗ ∂_x)^{♭♯} \\
+          (∂_x ∧ ∂_y)^{♭♯} =& (∂_x ⊗ ∂_y &-& ∂_y ⊗ ∂_x)^{♭♯} &\qquad& (∂_y ∧ ∂_x)^{♭♯} &=& (∂_y ⊗ ∂_x &-& ∂_x ⊗ ∂_y)^{♭♯} \\
       \end{alignedat}
 
    .. rubric:: Distribute musical operators
@@ -601,12 +600,12 @@ terms of tensor products:
    .. math::
 
       \begin{alignedat}{7}
-      (∂_t ∧ ∂_x)^{♭♯} =& ∂_t^♭ ⊗ ∂_x^♯ - ∂_x^♭ ⊗ ∂_t^♯ &\qquad& (∂_x ∧ ∂_t)^{♭♯} &=& ∂_x^♭ ⊗ ∂_t^♯ - ∂_t^♭ ⊗ ∂_x^♯ \\
-      (∂_t ∧ ∂_y)^{♭♯} =& ∂_t^♭ ⊗ ∂_y^♯ - ∂_y^♭ ⊗ ∂_t^♯ &\qquad& (∂_y ∧ ∂_t)^{♭♯} &=& ∂_y^♭ ⊗ ∂_t^♯ - ∂_t^♭ ⊗ ∂_y^♯ \\
-      (∂_t ∧ ∂_z)^{♭♯} =& ∂_t^♭ ⊗ ∂_z^♯ - ∂_z^♭ ⊗ ∂_t^♯ &\qquad& (∂_z ∧ ∂_t)^{♭♯} &=& ∂_z^♭ ⊗ ∂_t^♯ - ∂_t^♭ ⊗ ∂_z^♯ \\
-      (∂_y ∧ ∂_z)^{♭♯} =& ∂_y^♭ ⊗ ∂_z^♯ - ∂_z^♭ ⊗ ∂_y^♯ &\qquad& (∂_z ∧ ∂_y)^{♭♯} &=& ∂_z^♭ ⊗ ∂_y^♯ - ∂_y^♭ ⊗ ∂_z^♯ \\
-      (∂_z ∧ ∂_x)^{♭♯} =& ∂_z^♭ ⊗ ∂_x^♯ - ∂_x^♭ ⊗ ∂_z^♯ &\qquad& (∂_x ∧ ∂_z)^{♭♯} &=& ∂_x^♭ ⊗ ∂_z^♯ - ∂_z^♭ ⊗ ∂_x^♯ \\
-      (∂_x ∧ ∂_y)^{♭♯} =& ∂_x^♭ ⊗ ∂_y^♯ - ∂_y^♭ ⊗ ∂_x^♯ &\qquad& (∂_y ∧ ∂_x)^{♭♯} &=& ∂_y^♭ ⊗ ∂_x^♯ - ∂_x^♭ ⊗ ∂_y^♯ \\
+          (∂_t ∧ ∂_x)^{♭♯} =& ∂_t^♭ ⊗ ∂_x^♯ - ∂_x^♭ ⊗ ∂_t^♯ &\qquad& (∂_x ∧ ∂_t)^{♭♯} &=& ∂_x^♭ ⊗ ∂_t^♯ - ∂_t^♭ ⊗ ∂_x^♯ \\
+          (∂_t ∧ ∂_y)^{♭♯} =& ∂_t^♭ ⊗ ∂_y^♯ - ∂_y^♭ ⊗ ∂_t^♯ &\qquad& (∂_y ∧ ∂_t)^{♭♯} &=& ∂_y^♭ ⊗ ∂_t^♯ - ∂_t^♭ ⊗ ∂_y^♯ \\
+          (∂_t ∧ ∂_z)^{♭♯} =& ∂_t^♭ ⊗ ∂_z^♯ - ∂_z^♭ ⊗ ∂_t^♯ &\qquad& (∂_z ∧ ∂_t)^{♭♯} &=& ∂_z^♭ ⊗ ∂_t^♯ - ∂_t^♭ ⊗ ∂_z^♯ \\
+          (∂_y ∧ ∂_z)^{♭♯} =& ∂_y^♭ ⊗ ∂_z^♯ - ∂_z^♭ ⊗ ∂_y^♯ &\qquad& (∂_z ∧ ∂_y)^{♭♯} &=& ∂_z^♭ ⊗ ∂_y^♯ - ∂_y^♭ ⊗ ∂_z^♯ \\
+          (∂_z ∧ ∂_x)^{♭♯} =& ∂_z^♭ ⊗ ∂_x^♯ - ∂_x^♭ ⊗ ∂_z^♯ &\qquad& (∂_x ∧ ∂_z)^{♭♯} &=& ∂_x^♭ ⊗ ∂_z^♯ - ∂_z^♭ ⊗ ∂_x^♯ \\
+          (∂_x ∧ ∂_y)^{♭♯} =& ∂_x^♭ ⊗ ∂_y^♯ - ∂_y^♭ ⊗ ∂_x^♯ &\qquad& (∂_y ∧ ∂_x)^{♭♯} &=& ∂_y^♭ ⊗ ∂_x^♯ - ∂_x^♭ ⊗ ∂_y^♯ \\
       \end{alignedat}
 
    .. rubric:: Apply musical operators
@@ -614,12 +613,12 @@ terms of tensor products:
    .. math::
 
       \begin{alignedat}{7}
-      (∂_t ∧ ∂_x)^{♭♯} &= η_{tγ} dx^γ ⊗ ∂_x - η_{xγ} dx^γ ⊗ ∂_t &\qquad& (∂_x ∧ ∂_t)^{♭♯} &=& η_{xγ} dx^γ ⊗ ∂_t - η_{tγ} dx^γ ⊗ ∂_x \\
-      (∂_t ∧ ∂_y)^{♭♯} &= η_{tγ} dx^γ ⊗ ∂_y - η_{yγ} dx^γ ⊗ ∂_t &\qquad& (∂_y ∧ ∂_t)^{♭♯} &=& η_{yγ} dx^γ ⊗ ∂_t - η_{tγ} dx^γ ⊗ ∂_y \\
-      (∂_t ∧ ∂_z)^{♭♯} &= η_{tγ} dx^γ ⊗ ∂_z - η_{zγ} dx^γ ⊗ ∂_t &\qquad& (∂_z ∧ ∂_t)^{♭♯} &=& η_{zγ} dx^γ ⊗ ∂_t - η_{tγ} dx^γ ⊗ ∂_z \\
-      (∂_y ∧ ∂_z)^{♭♯} &= η_{yγ} dx^γ ⊗ ∂_z - η_{zγ} dx^γ ⊗ ∂_y &\qquad& (∂_z ∧ ∂_y)^{♭♯} &=& η_{zγ} dx^γ ⊗ ∂_y - η_{yγ} dx^γ ⊗ ∂_z \\
-      (∂_z ∧ ∂_x)^{♭♯} &= η_{zγ} dx^γ ⊗ ∂_x - η_{xγ} dx^γ ⊗ ∂_z &\qquad& (∂_x ∧ ∂_z)^{♭♯} &=& η_{xγ} dx^γ ⊗ ∂_z - η_{zγ} dx^γ ⊗ ∂_x \\
-      (∂_x ∧ ∂_y)^{♭♯} &= η_{xγ} dx^γ ⊗ ∂_y - η_{yγ} dx^γ ⊗ ∂_x &\qquad& (∂_y ∧ ∂_x)^{♭♯} &=& η_{yγ} dx^γ ⊗ ∂_x - η_{xγ} dx^γ ⊗ ∂_y \\
+          (∂_t ∧ ∂_x)^{♭♯} &= η_{tγ} dx^γ ⊗ ∂_x - η_{xγ} dx^γ ⊗ ∂_t &\qquad& (∂_x ∧ ∂_t)^{♭♯} &=& η_{xγ} dx^γ ⊗ ∂_t - η_{tγ} dx^γ ⊗ ∂_x \\
+          (∂_t ∧ ∂_y)^{♭♯} &= η_{tγ} dx^γ ⊗ ∂_y - η_{yγ} dx^γ ⊗ ∂_t &\qquad& (∂_y ∧ ∂_t)^{♭♯} &=& η_{yγ} dx^γ ⊗ ∂_t - η_{tγ} dx^γ ⊗ ∂_y \\
+          (∂_t ∧ ∂_z)^{♭♯} &= η_{tγ} dx^γ ⊗ ∂_z - η_{zγ} dx^γ ⊗ ∂_t &\qquad& (∂_z ∧ ∂_t)^{♭♯} &=& η_{zγ} dx^γ ⊗ ∂_t - η_{tγ} dx^γ ⊗ ∂_z \\
+          (∂_y ∧ ∂_z)^{♭♯} &= η_{yγ} dx^γ ⊗ ∂_z - η_{zγ} dx^γ ⊗ ∂_y &\qquad& (∂_z ∧ ∂_y)^{♭♯} &=& η_{zγ} dx^γ ⊗ ∂_y - η_{yγ} dx^γ ⊗ ∂_z \\
+          (∂_z ∧ ∂_x)^{♭♯} &= η_{zγ} dx^γ ⊗ ∂_x - η_{xγ} dx^γ ⊗ ∂_z &\qquad& (∂_x ∧ ∂_z)^{♭♯} &=& η_{xγ} dx^γ ⊗ ∂_z - η_{zγ} dx^γ ⊗ ∂_x \\
+          (∂_x ∧ ∂_y)^{♭♯} &= η_{xγ} dx^γ ⊗ ∂_y - η_{yγ} dx^γ ⊗ ∂_x &\qquad& (∂_y ∧ ∂_x)^{♭♯} &=& η_{yγ} dx^γ ⊗ ∂_x - η_{xγ} dx^γ ⊗ ∂_y \\
       \end{alignedat}
 
    .. rubric:: Identify non-zero metric elements
@@ -627,12 +626,12 @@ terms of tensor products:
    .. math::
 
       \begin{alignedat}{7}
-      (∂_t ∧ ∂_x)^{♭♯} &= η_{tt} dx^t ⊗ ∂_x - η_{xx} dx^x ⊗ ∂_t &\qquad& (∂_x ∧ ∂_t)^{♭♯} &=& η_{xx} dx^x ⊗ ∂_t - η_{tt} dx^t ⊗ ∂_x \\
-      (∂_t ∧ ∂_y)^{♭♯} &= η_{tt} dx^t ⊗ ∂_y - η_{yy} dx^y ⊗ ∂_t &\qquad& (∂_y ∧ ∂_t)^{♭♯} &=& η_{yy} dx^y ⊗ ∂_t - η_{tt} dx^t ⊗ ∂_y \\
-      (∂_t ∧ ∂_z)^{♭♯} &= η_{tt} dx^t ⊗ ∂_z - η_{zz} dx^z ⊗ ∂_t &\qquad& (∂_z ∧ ∂_t)^{♭♯} &=& η_{zz} dx^z ⊗ ∂_t - η_{tt} dx^t ⊗ ∂_z \\
-      (∂_y ∧ ∂_z)^{♭♯} &= η_{yy} dx^y ⊗ ∂_z - η_{zz} dx^z ⊗ ∂_y &\qquad& (∂_z ∧ ∂_y)^{♭♯} &=& η_{zz} dx^z ⊗ ∂_y - η_{yy} dx^y ⊗ ∂_z \\
-      (∂_z ∧ ∂_x)^{♭♯} &= η_{zz} dx^z ⊗ ∂_x - η_{xx} dx^x ⊗ ∂_z &\qquad& (∂_x ∧ ∂_z)^{♭♯} &=& η_{xx} dx^x ⊗ ∂_z - η_{zz} dx^z ⊗ ∂_x \\
-      (∂_x ∧ ∂_y)^{♭♯} &= η_{xx} dx^x ⊗ ∂_y - η_{yy} dx^y ⊗ ∂_x &\qquad& (∂_y ∧ ∂_x)^{♭♯} &=& η_{yy} dx^y ⊗ ∂_x - η_{xx} dx^x ⊗ ∂_y \\
+          (∂_t ∧ ∂_x)^{♭♯} &= η_{tt} dx^t ⊗ ∂_x - η_{xx} dx^x ⊗ ∂_t &\qquad& (∂_x ∧ ∂_t)^{♭♯} &=& η_{xx} dx^x ⊗ ∂_t - η_{tt} dx^t ⊗ ∂_x \\
+          (∂_t ∧ ∂_y)^{♭♯} &= η_{tt} dx^t ⊗ ∂_y - η_{yy} dx^y ⊗ ∂_t &\qquad& (∂_y ∧ ∂_t)^{♭♯} &=& η_{yy} dx^y ⊗ ∂_t - η_{tt} dx^t ⊗ ∂_y \\
+          (∂_t ∧ ∂_z)^{♭♯} &= η_{tt} dx^t ⊗ ∂_z - η_{zz} dx^z ⊗ ∂_t &\qquad& (∂_z ∧ ∂_t)^{♭♯} &=& η_{zz} dx^z ⊗ ∂_t - η_{tt} dx^t ⊗ ∂_z \\
+          (∂_y ∧ ∂_z)^{♭♯} &= η_{yy} dx^y ⊗ ∂_z - η_{zz} dx^z ⊗ ∂_y &\qquad& (∂_z ∧ ∂_y)^{♭♯} &=& η_{zz} dx^z ⊗ ∂_y - η_{yy} dx^y ⊗ ∂_z \\
+          (∂_z ∧ ∂_x)^{♭♯} &= η_{zz} dx^z ⊗ ∂_x - η_{xx} dx^x ⊗ ∂_z &\qquad& (∂_x ∧ ∂_z)^{♭♯} &=& η_{xx} dx^x ⊗ ∂_z - η_{zz} dx^z ⊗ ∂_x \\
+          (∂_x ∧ ∂_y)^{♭♯} &= η_{xx} dx^x ⊗ ∂_y - η_{yy} dx^y ⊗ ∂_x &\qquad& (∂_y ∧ ∂_x)^{♭♯} &=& η_{yy} dx^y ⊗ ∂_x - η_{xx} dx^x ⊗ ∂_y \\
       \end{alignedat}
 
    .. rubric:: Apply numerical values
@@ -640,12 +639,12 @@ terms of tensor products:
    .. math::
 
       \begin{alignedat}{6}
-      (∂_t ∧ ∂_x)^{♭♯} & = + dt ⊗ ∂_x & + dx ⊗ ∂_t & \qquad & (∂_x ∧ ∂_t)^{♭♯} & = & - dx ⊗ ∂_t &-& dt ⊗ ∂_x \\
-      (∂_t ∧ ∂_y)^{♭♯} & = + dt ⊗ ∂_y & + dy ⊗ ∂_t & \qquad & (∂_y ∧ ∂_t)^{♭♯} & = & - dy ⊗ ∂_t &-& dt ⊗ ∂_y \\
-      (∂_t ∧ ∂_z)^{♭♯} & = + dt ⊗ ∂_z & + dz ⊗ ∂_t & \qquad & (∂_z ∧ ∂_t)^{♭♯} & = & - dz ⊗ ∂_t &-& dt ⊗ ∂_z \\
-      (∂_y ∧ ∂_z)^{♭♯} & = - dy ⊗ ∂_z & + dz ⊗ ∂_y & \qquad & (∂_z ∧ ∂_y)^{♭♯} & = & - dz ⊗ ∂_y &+& dy ⊗ ∂_z \\
-      (∂_z ∧ ∂_x)^{♭♯} & = - dz ⊗ ∂_x & + dx ⊗ ∂_z & \qquad & (∂_x ∧ ∂_z)^{♭♯} & = & - dx ⊗ ∂_z &+& dz ⊗ ∂_x \\
-      (∂_x ∧ ∂_y)^{♭♯} & = - dx ⊗ ∂_y & + dy ⊗ ∂_x & \qquad & (∂_y ∧ ∂_x)^{♭♯} & = & - dy ⊗ ∂_x &+& dx ⊗ ∂_y \\
+          (∂_t ∧ ∂_x)^{♭♯} & = + dt ⊗ ∂_x & + dx ⊗ ∂_t & \qquad & (∂_x ∧ ∂_t)^{♭♯} & = & - dx ⊗ ∂_t &-& dt ⊗ ∂_x \\
+          (∂_t ∧ ∂_y)^{♭♯} & = + dt ⊗ ∂_y & + dy ⊗ ∂_t & \qquad & (∂_y ∧ ∂_t)^{♭♯} & = & - dy ⊗ ∂_t &-& dt ⊗ ∂_y \\
+          (∂_t ∧ ∂_z)^{♭♯} & = + dt ⊗ ∂_z & + dz ⊗ ∂_t & \qquad & (∂_z ∧ ∂_t)^{♭♯} & = & - dz ⊗ ∂_t &-& dt ⊗ ∂_z \\
+          (∂_y ∧ ∂_z)^{♭♯} & = - dy ⊗ ∂_z & + dz ⊗ ∂_y & \qquad & (∂_z ∧ ∂_y)^{♭♯} & = & - dz ⊗ ∂_y &+& dy ⊗ ∂_z \\
+          (∂_z ∧ ∂_x)^{♭♯} & = - dz ⊗ ∂_x & + dx ⊗ ∂_z & \qquad & (∂_x ∧ ∂_z)^{♭♯} & = & - dx ⊗ ∂_z &+& dz ⊗ ∂_x \\
+          (∂_x ∧ ∂_y)^{♭♯} & = - dx ⊗ ∂_y & + dy ⊗ ∂_x & \qquad & (∂_y ∧ ∂_x)^{♭♯} & = & - dy ⊗ ∂_x &+& dx ⊗ ∂_y \\
       \end{alignedat}
 
    .. }}}
@@ -656,12 +655,12 @@ terms of tensor products:
 .. math::
 
    \begin{alignedat}{9}
-   dt ∧ ∂_x = & + dt ⊗ ∂_x & + & dx ⊗ ∂_t & \qquad & dx ∧ ∂_t & = & + dt ⊗ ∂_x & + & dx ⊗ ∂_t \\
-   dt ∧ ∂_y = & + dt ⊗ ∂_y & + & dy ⊗ ∂_t & \qquad & dy ∧ ∂_t & = & + dt ⊗ ∂_y & + & dy ⊗ ∂_t \\
-   dt ∧ ∂_z = & + dt ⊗ ∂_z & + & dz ⊗ ∂_t & \qquad & dz ∧ ∂_t & = & + dt ⊗ ∂_z & + & dz ⊗ ∂_t \\
-   dy ∧ ∂_z = & + dy ⊗ ∂_z & - & dz ⊗ ∂_y & \qquad & dz ∧ ∂_y & = & - dy ⊗ ∂_z & + & dz ⊗ ∂_y \\
-   dz ∧ ∂_x = & + dz ⊗ ∂_x & - & dx ⊗ ∂_z & \qquad & dx ∧ ∂_z & = & - dz ⊗ ∂_x & + & dx ⊗ ∂_z \\
-   dx ∧ ∂_y = & + dx ⊗ ∂_y & - & dy ⊗ ∂_x & \qquad & dy ∧ ∂_x & = & - dx ⊗ ∂_y & + & dy ⊗ ∂_x \\
+       dt ∧ ∂_x = & + dt ⊗ ∂_x & + & dx ⊗ ∂_t & \qquad & dx ∧ ∂_t & = & + dt ⊗ ∂_x & + & dx ⊗ ∂_t \\
+       dt ∧ ∂_y = & + dt ⊗ ∂_y & + & dy ⊗ ∂_t & \qquad & dy ∧ ∂_t & = & + dt ⊗ ∂_y & + & dy ⊗ ∂_t \\
+       dt ∧ ∂_z = & + dt ⊗ ∂_z & + & dz ⊗ ∂_t & \qquad & dz ∧ ∂_t & = & + dt ⊗ ∂_z & + & dz ⊗ ∂_t \\
+       dy ∧ ∂_z = & + dy ⊗ ∂_z & - & dz ⊗ ∂_y & \qquad & dz ∧ ∂_y & = & - dy ⊗ ∂_z & + & dz ⊗ ∂_y \\
+       dz ∧ ∂_x = & + dz ⊗ ∂_x & - & dx ⊗ ∂_z & \qquad & dx ∧ ∂_z & = & - dz ⊗ ∂_x & + & dx ⊗ ∂_z \\
+       dx ∧ ∂_y = & + dx ⊗ ∂_y & - & dy ⊗ ∂_x & \qquad & dy ∧ ∂_x & = & - dx ⊗ ∂_y & + & dy ⊗ ∂_x \\
    \end{alignedat}
 
 Taken together, we get:
@@ -697,12 +696,12 @@ bivectors and obtain:
 .. math::
 
    \begin{alignedat}{5}
-   (∂_t ∧ ∂_x)^{♯♭} & = - ∂_t ∧ dx & \qquad & (∂_x ∧ ∂_t)^{♯♭} & = & + ∂_x ∧ dt \\
-   (∂_t ∧ ∂_y)^{♯♭} & = - ∂_t ∧ dy & \qquad & (∂_y ∧ ∂_t)^{♯♭} & = & + ∂_y ∧ dt \\
-   (∂_t ∧ ∂_z)^{♯♭} & = - ∂_t ∧ dz & \qquad & (∂_z ∧ ∂_t)^{♯♭} & = & + ∂_z ∧ dt \\
-   (∂_y ∧ ∂_z)^{♯♭} & = - ∂_y ∧ dz & \qquad & (∂_z ∧ ∂_y)^{♯♭} & = & - ∂_z ∧ dy \\
-   (∂_z ∧ ∂_x)^{♯♭} & = - ∂_z ∧ dx & \qquad & (∂_x ∧ ∂_z)^{♯♭} & = & - ∂_x ∧ dz \\
-   (∂_x ∧ ∂_y)^{♯♭} & = - ∂_x ∧ dy & \qquad & (∂_y ∧ ∂_x)^{♯♭} & = & - ∂_y ∧ dx \\
+       (∂_t ∧ ∂_x)^{♯♭} & = - ∂_t ∧ dx & \qquad & (∂_x ∧ ∂_t)^{♯♭} & = & + ∂_x ∧ dt \\
+       (∂_t ∧ ∂_y)^{♯♭} & = - ∂_t ∧ dy & \qquad & (∂_y ∧ ∂_t)^{♯♭} & = & + ∂_y ∧ dt \\
+       (∂_t ∧ ∂_z)^{♯♭} & = - ∂_t ∧ dz & \qquad & (∂_z ∧ ∂_t)^{♯♭} & = & + ∂_z ∧ dt \\
+       (∂_y ∧ ∂_z)^{♯♭} & = - ∂_y ∧ dz & \qquad & (∂_z ∧ ∂_y)^{♯♭} & = & - ∂_z ∧ dy \\
+       (∂_z ∧ ∂_x)^{♯♭} & = - ∂_z ∧ dx & \qquad & (∂_x ∧ ∂_z)^{♯♭} & = & - ∂_x ∧ dz \\
+       (∂_x ∧ ∂_y)^{♯♭} & = - ∂_x ∧ dy & \qquad & (∂_y ∧ ∂_x)^{♯♭} & = & - ∂_y ∧ dx \\
    \end{alignedat}
 
 .. admonition:: Calculations
@@ -715,12 +714,12 @@ bivectors and obtain:
    .. math::
 
       \begin{alignedat}{5}
-      (∂_t ∧ ∂_x)^{♯♭} &= ∂_t^♯ ∧ ∂_x^♭ &\qquad& (∂_x ∧ ∂_t)^{♯♭} &=& ∂_x^♯ ∧ ∂_t^♭ \\
-      (∂_t ∧ ∂_y)^{♯♭} &= ∂_t^♯ ∧ ∂_y^♭ &\qquad& (∂_y ∧ ∂_t)^{♯♭} &=& ∂_y^♯ ∧ ∂_t^♭ \\
-      (∂_t ∧ ∂_z)^{♯♭} &= ∂_t^♯ ∧ ∂_z^♭ &\qquad& (∂_z ∧ ∂_t)^{♯♭} &=& ∂_z^♯ ∧ ∂_t^♭ \\
-      (∂_y ∧ ∂_z)^{♯♭} &= ∂_y^♯ ∧ ∂_z^♭ &\qquad& (∂_z ∧ ∂_y)^{♯♭} &=& ∂_z^♯ ∧ ∂_y^♭ \\
-      (∂_z ∧ ∂_x)^{♯♭} &= ∂_z^♯ ∧ ∂_x^♭ &\qquad& (∂_x ∧ ∂_z)^{♯♭} &=& ∂_x^♯ ∧ ∂_z^♭ \\
-      (∂_x ∧ ∂_y)^{♯♭} &= ∂_x^♯ ∧ ∂_y^♭ &\qquad& (∂_y ∧ ∂_x)^{♯♭} &=& ∂_y^♯ ∧ ∂_x^♭ \\
+          (∂_t ∧ ∂_x)^{♯♭} &= ∂_t^♯ ∧ ∂_x^♭ &\qquad& (∂_x ∧ ∂_t)^{♯♭} &=& ∂_x^♯ ∧ ∂_t^♭ \\
+          (∂_t ∧ ∂_y)^{♯♭} &= ∂_t^♯ ∧ ∂_y^♭ &\qquad& (∂_y ∧ ∂_t)^{♯♭} &=& ∂_y^♯ ∧ ∂_t^♭ \\
+          (∂_t ∧ ∂_z)^{♯♭} &= ∂_t^♯ ∧ ∂_z^♭ &\qquad& (∂_z ∧ ∂_t)^{♯♭} &=& ∂_z^♯ ∧ ∂_t^♭ \\
+          (∂_y ∧ ∂_z)^{♯♭} &= ∂_y^♯ ∧ ∂_z^♭ &\qquad& (∂_z ∧ ∂_y)^{♯♭} &=& ∂_z^♯ ∧ ∂_y^♭ \\
+          (∂_z ∧ ∂_x)^{♯♭} &= ∂_z^♯ ∧ ∂_x^♭ &\qquad& (∂_x ∧ ∂_z)^{♯♭} &=& ∂_x^♯ ∧ ∂_z^♭ \\
+          (∂_x ∧ ∂_y)^{♯♭} &= ∂_x^♯ ∧ ∂_y^♭ &\qquad& (∂_y ∧ ∂_x)^{♯♭} &=& ∂_y^♯ ∧ ∂_x^♭ \\
       \end{alignedat}
 
    .. rubric:: Apply the musical operators
@@ -728,12 +727,12 @@ bivectors and obtain:
    .. math::
 
       \begin{alignedat}{5}
-      (∂_t ∧ ∂_x)^{♯♭} &= ∂_t ∧ η_{xγ} dx^γ &\qquad& (∂_x ∧ ∂_t)^{♯♭} &=& ∂_x ∧ η_{γt} dx^γ \\
-      (∂_t ∧ ∂_y)^{♯♭} &= ∂_t ∧ η_{yγ} dx^γ &\qquad& (∂_y ∧ ∂_t)^{♯♭} &=& ∂_y ∧ η_{γt} dx^γ \\
-      (∂_t ∧ ∂_z)^{♯♭} &= ∂_t ∧ η_{zγ} dx^γ &\qquad& (∂_z ∧ ∂_t)^{♯♭} &=& ∂_z ∧ η_{γt} dx^γ \\
-      (∂_y ∧ ∂_z)^{♯♭} &= ∂_y ∧ η_{zγ} dx^γ &\qquad& (∂_z ∧ ∂_y)^{♯♭} &=& ∂_z ∧ η_{γy} dx^γ \\
-      (∂_z ∧ ∂_x)^{♯♭} &= ∂_z ∧ η_{xγ} dx^γ &\qquad& (∂_x ∧ ∂_z)^{♯♭} &=& ∂_x ∧ η_{γz} dx^γ \\
-      (∂_x ∧ ∂_y)^{♯♭} &= ∂_x ∧ η_{yγ} dx^γ &\qquad& (∂_y ∧ ∂_x)^{♯♭} &=& ∂_y ∧ η_{γx} dx^γ \\
+          (∂_t ∧ ∂_x)^{♯♭} &= ∂_t ∧ η_{xγ} dx^γ &\qquad& (∂_x ∧ ∂_t)^{♯♭} &=& ∂_x ∧ η_{γt} dx^γ \\
+          (∂_t ∧ ∂_y)^{♯♭} &= ∂_t ∧ η_{yγ} dx^γ &\qquad& (∂_y ∧ ∂_t)^{♯♭} &=& ∂_y ∧ η_{γt} dx^γ \\
+          (∂_t ∧ ∂_z)^{♯♭} &= ∂_t ∧ η_{zγ} dx^γ &\qquad& (∂_z ∧ ∂_t)^{♯♭} &=& ∂_z ∧ η_{γt} dx^γ \\
+          (∂_y ∧ ∂_z)^{♯♭} &= ∂_y ∧ η_{zγ} dx^γ &\qquad& (∂_z ∧ ∂_y)^{♯♭} &=& ∂_z ∧ η_{γy} dx^γ \\
+          (∂_z ∧ ∂_x)^{♯♭} &= ∂_z ∧ η_{xγ} dx^γ &\qquad& (∂_x ∧ ∂_z)^{♯♭} &=& ∂_x ∧ η_{γz} dx^γ \\
+          (∂_x ∧ ∂_y)^{♯♭} &= ∂_x ∧ η_{yγ} dx^γ &\qquad& (∂_y ∧ ∂_x)^{♯♭} &=& ∂_y ∧ η_{γx} dx^γ \\
       \end{alignedat}
 
    .. rubric:: Identify the non-zero metric components:
@@ -741,12 +740,12 @@ bivectors and obtain:
    .. math::
 
       \begin{alignedat}{5}
-      (∂_t ∧ ∂_x)^{♯♭} &= η_{xx} ∂_t ∧ dx^x &\qquad& (∂_x ∧ ∂_t)^{♯♭} &=& ∂_x ∧ η_{tt} dx^t \\
-      (∂_t ∧ ∂_y)^{♯♭} &= η_{yy} ∂_t ∧ dx^y &\qquad& (∂_y ∧ ∂_t)^{♯♭} &=& ∂_y ∧ η_{tt} dx^t \\
-      (∂_t ∧ ∂_z)^{♯♭} &= η_{zz} ∂_t ∧ dx^z &\qquad& (∂_z ∧ ∂_t)^{♯♭} &=& ∂_z ∧ η_{tt} dx^t \\
-      (∂_y ∧ ∂_z)^{♯♭} &= η_{zz} ∂_y ∧ dx^z &\qquad& (∂_z ∧ ∂_y)^{♯♭} &=& ∂_z ∧ η_{yy} dx^y \\
-      (∂_z ∧ ∂_x)^{♯♭} &= η_{xx} ∂_z ∧ dx^x &\qquad& (∂_x ∧ ∂_z)^{♯♭} &=& ∂_x ∧ η_{zz} dx^z \\
-      (∂_x ∧ ∂_y)^{♯♭} &= η_{yy} ∂_x ∧ dx^y &\qquad& (∂_y ∧ ∂_x)^{♯♭} &=& ∂_y ∧ η_{xx} dx^x \\
+          (∂_t ∧ ∂_x)^{♯♭} &= η_{xx} ∂_t ∧ dx^x &\qquad& (∂_x ∧ ∂_t)^{♯♭} &=& ∂_x ∧ η_{tt} dt \\
+          (∂_t ∧ ∂_y)^{♯♭} &= η_{yy} ∂_t ∧ dx^y &\qquad& (∂_y ∧ ∂_t)^{♯♭} &=& ∂_y ∧ η_{tt} dt \\
+          (∂_t ∧ ∂_z)^{♯♭} &= η_{zz} ∂_t ∧ dx^z &\qquad& (∂_z ∧ ∂_t)^{♯♭} &=& ∂_z ∧ η_{tt} dt \\
+          (∂_y ∧ ∂_z)^{♯♭} &= η_{zz} ∂_y ∧ dx^z &\qquad& (∂_z ∧ ∂_y)^{♯♭} &=& ∂_z ∧ η_{yy} dy \\
+          (∂_z ∧ ∂_x)^{♯♭} &= η_{xx} ∂_z ∧ dx^x &\qquad& (∂_x ∧ ∂_z)^{♯♭} &=& ∂_x ∧ η_{zz} dz \\
+          (∂_x ∧ ∂_y)^{♯♭} &= η_{yy} ∂_x ∧ dx^y &\qquad& (∂_y ∧ ∂_x)^{♯♭} &=& ∂_y ∧ η_{xx} dx \\
       \end{alignedat}
 
    .. rubric:: Simplify
@@ -754,12 +753,12 @@ bivectors and obtain:
    .. math::
 
       \begin{alignedat}{5}
-      (∂_t ∧ ∂_x)^{♯♭} &= η_{xx} ∂_t ∧ dx &\qquad& (∂_x ∧ ∂_t)^{♯♭} &=& η_{tt} ∂_x ∧ dt \\
-      (∂_t ∧ ∂_y)^{♯♭} &= η_{yy} ∂_t ∧ dy &\qquad& (∂_y ∧ ∂_t)^{♯♭} &=& η_{tt} ∂_y ∧ dt \\
-      (∂_t ∧ ∂_z)^{♯♭} &= η_{zz} ∂_t ∧ dz &\qquad& (∂_z ∧ ∂_t)^{♯♭} &=& η_{tt} ∂_z ∧ dt \\
-      (∂_y ∧ ∂_z)^{♯♭} &= η_{zz} ∂_y ∧ dz &\qquad& (∂_z ∧ ∂_y)^{♯♭} &=& η_{yy} ∂_z ∧ dy \\
-      (∂_z ∧ ∂_x)^{♯♭} &= η_{xx} ∂_z ∧ dx &\qquad& (∂_x ∧ ∂_z)^{♯♭} &=& η_{zz} ∂_x ∧ dz \\
-      (∂_x ∧ ∂_y)^{♯♭} &= η_{yy} ∂_x ∧ dy &\qquad& (∂_y ∧ ∂_x)^{♯♭} &=& η_{xx} ∂_y ∧ dx \\
+          (∂_t ∧ ∂_x)^{♯♭} &= η_{xx} ∂_t ∧ dx &\qquad& (∂_x ∧ ∂_t)^{♯♭} &=& η_{tt} ∂_x ∧ dt \\
+          (∂_t ∧ ∂_y)^{♯♭} &= η_{yy} ∂_t ∧ dy &\qquad& (∂_y ∧ ∂_t)^{♯♭} &=& η_{tt} ∂_y ∧ dt \\
+          (∂_t ∧ ∂_z)^{♯♭} &= η_{zz} ∂_t ∧ dz &\qquad& (∂_z ∧ ∂_t)^{♯♭} &=& η_{tt} ∂_z ∧ dt \\
+          (∂_y ∧ ∂_z)^{♯♭} &= η_{zz} ∂_y ∧ dz &\qquad& (∂_z ∧ ∂_y)^{♯♭} &=& η_{yy} ∂_z ∧ dy \\
+          (∂_z ∧ ∂_x)^{♯♭} &= η_{xx} ∂_z ∧ dx &\qquad& (∂_x ∧ ∂_z)^{♯♭} &=& η_{zz} ∂_x ∧ dz \\
+          (∂_x ∧ ∂_y)^{♯♭} &= η_{yy} ∂_x ∧ dy &\qquad& (∂_y ∧ ∂_x)^{♯♭} &=& η_{xx} ∂_y ∧ dx \\
       \end{alignedat}
 
    .. rubric:: Apply numerical values:
@@ -767,12 +766,12 @@ bivectors and obtain:
    .. math::
 
       \begin{alignedat}{5}
-      (∂_t ∧ ∂_x)^{♯♭} & = - ∂_t ∧ dx & \qquad & (∂_x ∧ ∂_t)^{♯♭} & = & + ∂_x ∧ dt \\
-      (∂_t ∧ ∂_y)^{♯♭} & = - ∂_t ∧ dy & \qquad & (∂_y ∧ ∂_t)^{♯♭} & = & + ∂_y ∧ dt \\
-      (∂_t ∧ ∂_z)^{♯♭} & = - ∂_t ∧ dz & \qquad & (∂_z ∧ ∂_t)^{♯♭} & = & + ∂_z ∧ dt \\
-      (∂_y ∧ ∂_z)^{♯♭} & = - ∂_y ∧ dz & \qquad & (∂_z ∧ ∂_y)^{♯♭} & = & - ∂_z ∧ dy \\
-      (∂_z ∧ ∂_x)^{♯♭} & = - ∂_z ∧ dx & \qquad & (∂_x ∧ ∂_z)^{♯♭} & = & - ∂_x ∧ dz \\
-      (∂_x ∧ ∂_y)^{♯♭} & = - ∂_x ∧ dy & \qquad & (∂_y ∧ ∂_x)^{♯♭} & = & - ∂_y ∧ dx \\
+          (∂_t ∧ ∂_x)^{♯♭} & = - ∂_t ∧ dx & \qquad & (∂_x ∧ ∂_t)^{♯♭} & = & + ∂_x ∧ dt \\
+          (∂_t ∧ ∂_y)^{♯♭} & = - ∂_t ∧ dy & \qquad & (∂_y ∧ ∂_t)^{♯♭} & = & + ∂_y ∧ dt \\
+          (∂_t ∧ ∂_z)^{♯♭} & = - ∂_t ∧ dz & \qquad & (∂_z ∧ ∂_t)^{♯♭} & = & + ∂_z ∧ dt \\
+          (∂_y ∧ ∂_z)^{♯♭} & = - ∂_y ∧ dz & \qquad & (∂_z ∧ ∂_y)^{♯♭} & = & - ∂_z ∧ dy \\
+          (∂_z ∧ ∂_x)^{♯♭} & = - ∂_z ∧ dx & \qquad & (∂_x ∧ ∂_z)^{♯♭} & = & - ∂_x ∧ dz \\
+          (∂_x ∧ ∂_y)^{♯♭} & = - ∂_x ∧ dy & \qquad & (∂_y ∧ ∂_x)^{♯♭} & = & - ∂_y ∧ dx \\
       \end{alignedat}
 
    .. }}}
@@ -783,12 +782,12 @@ terms of tensor products:
 .. math::
 
    \begin{alignedat}{5}
-   (∂_t ∧ ∂_x)^{♯♭} & = - ∂_t ⊗ dx - ∂_x ⊗ dt & \qquad & (∂_x ∧ ∂_t)^{♯♭} & = & + ∂_x ⊗ dt + ∂_t ⊗ dx \\
-   (∂_t ∧ ∂_y)^{♯♭} & = - ∂_t ⊗ dy - ∂_y ⊗ dt & \qquad & (∂_y ∧ ∂_t)^{♯♭} & = & + ∂_y ⊗ dt + ∂_t ⊗ dy \\
-   (∂_t ∧ ∂_z)^{♯♭} & = - ∂_t ⊗ dz - ∂_z ⊗ dt & \qquad & (∂_z ∧ ∂_t)^{♯♭} & = & + ∂_z ⊗ dt + ∂_t ⊗ dz \\
-   (∂_y ∧ ∂_z)^{♯♭} & = - ∂_y ⊗ dz + ∂_z ⊗ dy & \qquad & (∂_z ∧ ∂_y)^{♯♭} & = & - ∂_z ⊗ dy + ∂_y ⊗ dz \\
-   (∂_z ∧ ∂_x)^{♯♭} & = - ∂_z ⊗ dx + ∂_x ⊗ dz & \qquad & (∂_x ∧ ∂_z)^{♯♭} & = & - ∂_x ⊗ dz + ∂_z ⊗ dx \\
-   (∂_x ∧ ∂_y)^{♯♭} & = - ∂_x ⊗ dy + ∂_y ⊗ dx & \qquad & (∂_y ∧ ∂_x)^{♯♭} & = & - ∂_y ⊗ dx + ∂_x ⊗ dy \\
+       (∂_t ∧ ∂_x)^{♯♭} & = - ∂_t ⊗ dx - ∂_x ⊗ dt & \qquad & (∂_x ∧ ∂_t)^{♯♭} & = & + ∂_x ⊗ dt + ∂_t ⊗ dx \\
+       (∂_t ∧ ∂_y)^{♯♭} & = - ∂_t ⊗ dy - ∂_y ⊗ dt & \qquad & (∂_y ∧ ∂_t)^{♯♭} & = & + ∂_y ⊗ dt + ∂_t ⊗ dy \\
+       (∂_t ∧ ∂_z)^{♯♭} & = - ∂_t ⊗ dz - ∂_z ⊗ dt & \qquad & (∂_z ∧ ∂_t)^{♯♭} & = & + ∂_z ⊗ dt + ∂_t ⊗ dz \\
+       (∂_y ∧ ∂_z)^{♯♭} & = - ∂_y ⊗ dz + ∂_z ⊗ dy & \qquad & (∂_z ∧ ∂_y)^{♯♭} & = & - ∂_z ⊗ dy + ∂_y ⊗ dz \\
+       (∂_z ∧ ∂_x)^{♯♭} & = - ∂_z ⊗ dx + ∂_x ⊗ dz & \qquad & (∂_x ∧ ∂_z)^{♯♭} & = & - ∂_x ⊗ dz + ∂_z ⊗ dx \\
+       (∂_x ∧ ∂_y)^{♯♭} & = - ∂_x ⊗ dy + ∂_y ⊗ dx & \qquad & (∂_y ∧ ∂_x)^{♯♭} & = & - ∂_y ⊗ dx + ∂_x ⊗ dy \\
    \end{alignedat}
 
 .. admonition:: Calculations
@@ -801,12 +800,12 @@ terms of tensor products:
    .. math::
 
       \begin{alignedat}{5}
-      (∂_t ∧ ∂_x)^{♯♭} &= (∂_t ⊗ ∂_x - ∂_x ⊗ ∂_t)^{♯♭} &\qquad& (∂_x ∧ ∂_t)^{♯♭} &=& (∂_x ⊗ ∂_t - ∂_t ⊗ ∂_x)^{♯♭} \\
-      (∂_t ∧ ∂_y)^{♯♭} &= (∂_t ⊗ ∂_y - ∂_y ⊗ ∂_t)^{♯♭} &\qquad& (∂_y ∧ ∂_t)^{♯♭} &=& (∂_y ⊗ ∂_t - ∂_t ⊗ ∂_y)^{♯♭} \\
-      (∂_t ∧ ∂_z)^{♯♭} &= (∂_t ⊗ ∂_z - ∂_z ⊗ ∂_t)^{♯♭} &\qquad& (∂_z ∧ ∂_t)^{♯♭} &=& (∂_z ⊗ ∂_t - ∂_t ⊗ ∂_z)^{♯♭} \\
-      (∂_y ∧ ∂_z)^{♯♭} &= (∂_y ⊗ ∂_z - ∂_z ⊗ ∂_y)^{♯♭} &\qquad& (∂_z ∧ ∂_y)^{♯♭} &=& (∂_z ⊗ ∂_y - ∂_y ⊗ ∂_z)^{♯♭} \\
-      (∂_z ∧ ∂_x)^{♯♭} &= (∂_z ⊗ ∂_x - ∂_x ⊗ ∂_z)^{♯♭} &\qquad& (∂_x ∧ ∂_z)^{♯♭} &=& (∂_x ⊗ ∂_z - ∂_z ⊗ ∂_x)^{♯♭} \\
-      (∂_x ∧ ∂_y)^{♯♭} &= (∂_x ⊗ ∂_y - ∂_y ⊗ ∂_x)^{♯♭} &\qquad& (∂_y ∧ ∂_x)^{♯♭} &=& (∂_y ⊗ ∂_x - ∂_x ⊗ ∂_y)^{♯♭} \\
+          (∂_t ∧ ∂_x)^{♯♭} &= (∂_t ⊗ ∂_x - ∂_x ⊗ ∂_t)^{♯♭} &\qquad& (∂_x ∧ ∂_t)^{♯♭} &=& (∂_x ⊗ ∂_t - ∂_t ⊗ ∂_x)^{♯♭} \\
+          (∂_t ∧ ∂_y)^{♯♭} &= (∂_t ⊗ ∂_y - ∂_y ⊗ ∂_t)^{♯♭} &\qquad& (∂_y ∧ ∂_t)^{♯♭} &=& (∂_y ⊗ ∂_t - ∂_t ⊗ ∂_y)^{♯♭} \\
+          (∂_t ∧ ∂_z)^{♯♭} &= (∂_t ⊗ ∂_z - ∂_z ⊗ ∂_t)^{♯♭} &\qquad& (∂_z ∧ ∂_t)^{♯♭} &=& (∂_z ⊗ ∂_t - ∂_t ⊗ ∂_z)^{♯♭} \\
+          (∂_y ∧ ∂_z)^{♯♭} &= (∂_y ⊗ ∂_z - ∂_z ⊗ ∂_y)^{♯♭} &\qquad& (∂_z ∧ ∂_y)^{♯♭} &=& (∂_z ⊗ ∂_y - ∂_y ⊗ ∂_z)^{♯♭} \\
+          (∂_z ∧ ∂_x)^{♯♭} &= (∂_z ⊗ ∂_x - ∂_x ⊗ ∂_z)^{♯♭} &\qquad& (∂_x ∧ ∂_z)^{♯♭} &=& (∂_x ⊗ ∂_z - ∂_z ⊗ ∂_x)^{♯♭} \\
+          (∂_x ∧ ∂_y)^{♯♭} &= (∂_x ⊗ ∂_y - ∂_y ⊗ ∂_x)^{♯♭} &\qquad& (∂_y ∧ ∂_x)^{♯♭} &=& (∂_y ⊗ ∂_x - ∂_x ⊗ ∂_y)^{♯♭} \\
       \end{alignedat}
 
    .. rubric:: Distribute the musical operators
@@ -814,12 +813,12 @@ terms of tensor products:
    .. math::
 
       \begin{alignedat}{5}
-      (∂_t ∧ ∂_x)^{♯♭} &= ∂_t^♯ ⊗ ∂_x^♭ - ∂_x^♯ ⊗ ∂_t^♭ &\qquad& (∂_x ∧ ∂_t)^{♯♭} &=& ∂_x^♯ ⊗ ∂_t^♭ - ∂_t^♯ ⊗ ∂_x^♭ \\
-      (∂_t ∧ ∂_y)^{♯♭} &= ∂_t^♯ ⊗ ∂_y^♭ - ∂_y^♯ ⊗ ∂_t^♭ &\qquad& (∂_y ∧ ∂_t)^{♯♭} &=& ∂_y^♯ ⊗ ∂_t^♭ - ∂_t^♯ ⊗ ∂_y^♭ \\
-      (∂_t ∧ ∂_z)^{♯♭} &= ∂_t^♯ ⊗ ∂_z^♭ - ∂_z^♯ ⊗ ∂_t^♭ &\qquad& (∂_z ∧ ∂_t)^{♯♭} &=& ∂_z^♯ ⊗ ∂_t^♭ - ∂_t^♯ ⊗ ∂_z^♭ \\
-      (∂_y ∧ ∂_z)^{♯♭} &= ∂_y^♯ ⊗ ∂_z^♭ - ∂_z^♯ ⊗ ∂_y^♭ &\qquad& (∂_z ∧ ∂_y)^{♯♭} &=& ∂_z^♯ ⊗ ∂_y^♭ - ∂_y^♯ ⊗ ∂_z^♭ \\
-      (∂_z ∧ ∂_x)^{♯♭} &= ∂_z^♯ ⊗ ∂_x^♭ - ∂_x^♯ ⊗ ∂_z^♭ &\qquad& (∂_x ∧ ∂_z)^{♯♭} &=& ∂_x^♯ ⊗ ∂_z^♭ - ∂_z^♯ ⊗ ∂_x^♭ \\
-      (∂_x ∧ ∂_y)^{♯♭} &= ∂_x^♯ ⊗ ∂_y^♭ - ∂_y^♯ ⊗ ∂_x^♭ &\qquad& (∂_y ∧ ∂_x)^{♯♭} &=& ∂_y^♯ ⊗ ∂_x^♭ - ∂_x^♯ ⊗ ∂_y^♭ \\
+          (∂_t ∧ ∂_x)^{♯♭} &= ∂_t^♯ ⊗ ∂_x^♭ - ∂_x^♯ ⊗ ∂_t^♭ &\qquad& (∂_x ∧ ∂_t)^{♯♭} &=& ∂_x^♯ ⊗ ∂_t^♭ - ∂_t^♯ ⊗ ∂_x^♭ \\
+          (∂_t ∧ ∂_y)^{♯♭} &= ∂_t^♯ ⊗ ∂_y^♭ - ∂_y^♯ ⊗ ∂_t^♭ &\qquad& (∂_y ∧ ∂_t)^{♯♭} &=& ∂_y^♯ ⊗ ∂_t^♭ - ∂_t^♯ ⊗ ∂_y^♭ \\
+          (∂_t ∧ ∂_z)^{♯♭} &= ∂_t^♯ ⊗ ∂_z^♭ - ∂_z^♯ ⊗ ∂_t^♭ &\qquad& (∂_z ∧ ∂_t)^{♯♭} &=& ∂_z^♯ ⊗ ∂_t^♭ - ∂_t^♯ ⊗ ∂_z^♭ \\
+          (∂_y ∧ ∂_z)^{♯♭} &= ∂_y^♯ ⊗ ∂_z^♭ - ∂_z^♯ ⊗ ∂_y^♭ &\qquad& (∂_z ∧ ∂_y)^{♯♭} &=& ∂_z^♯ ⊗ ∂_y^♭ - ∂_y^♯ ⊗ ∂_z^♭ \\
+          (∂_z ∧ ∂_x)^{♯♭} &= ∂_z^♯ ⊗ ∂_x^♭ - ∂_x^♯ ⊗ ∂_z^♭ &\qquad& (∂_x ∧ ∂_z)^{♯♭} &=& ∂_x^♯ ⊗ ∂_z^♭ - ∂_z^♯ ⊗ ∂_x^♭ \\
+          (∂_x ∧ ∂_y)^{♯♭} &= ∂_x^♯ ⊗ ∂_y^♭ - ∂_y^♯ ⊗ ∂_x^♭ &\qquad& (∂_y ∧ ∂_x)^{♯♭} &=& ∂_y^♯ ⊗ ∂_x^♭ - ∂_x^♯ ⊗ ∂_y^♭ \\
       \end{alignedat}
 
    .. rubric:: Apply musical operators
@@ -827,12 +826,12 @@ terms of tensor products:
    .. math::
 
       \begin{alignedat}{5}
-      (∂_t ∧ ∂_x)^{♯♭} &= ∂_t ⊗ η_{xγ} dx^γ - η_{tγ} ∂_x ⊗ dx^γ &\qquad& (∂_x ∧ ∂_t)^{♯♭} &=& ∂_x ⊗ η_{γt} dx^γ - ∂_t ⊗ η_{γx} dx^γ \\
-      (∂_t ∧ ∂_y)^{♯♭} &= ∂_t ⊗ η_{yγ} dx^γ - η_{tγ} ∂_y ⊗ dx^γ &\qquad& (∂_y ∧ ∂_t)^{♯♭} &=& ∂_y ⊗ η_{γt} dx^γ - ∂_t ⊗ η_{γy} dx^γ \\
-      (∂_t ∧ ∂_z)^{♯♭} &= ∂_t ⊗ η_{zγ} dx^γ - η_{tγ} ∂_z ⊗ dx^γ &\qquad& (∂_z ∧ ∂_t)^{♯♭} &=& ∂_z ⊗ η_{γt} dx^γ - ∂_t ⊗ η_{γz} dx^γ \\
-      (∂_y ∧ ∂_z)^{♯♭} &= ∂_y ⊗ η_{zγ} dx^γ - η_{yγ} ∂_z ⊗ dx^γ &\qquad& (∂_z ∧ ∂_y)^{♯♭} &=& ∂_z ⊗ η_{γy} dx^γ - ∂_y ⊗ η_{γz} dx^γ \\
-      (∂_z ∧ ∂_x)^{♯♭} &= ∂_z ⊗ η_{xγ} dx^γ - η_{zγ} ∂_x ⊗ dx^γ &\qquad& (∂_x ∧ ∂_z)^{♯♭} &=& ∂_x ⊗ η_{γz} dx^γ - ∂_z ⊗ η_{γx} dx^γ \\
-      (∂_x ∧ ∂_y)^{♯♭} &= ∂_x ⊗ η_{yγ} dx^γ - η_{xγ} ∂_y ⊗ dx^γ &\qquad& (∂_y ∧ ∂_x)^{♯♭} &=& ∂_y ⊗ η_{γx} dx^γ - ∂_x ⊗ η_{γy} dx^γ \\
+          (∂_t ∧ ∂_x)^{♯♭} &= ∂_t ⊗ η_{xγ} dx^γ - η_{tγ} ∂_x ⊗ dx^γ &\qquad& (∂_x ∧ ∂_t)^{♯♭} &=& ∂_x ⊗ η_{γt} dx^γ - ∂_t ⊗ η_{γx} dx^γ \\
+          (∂_t ∧ ∂_y)^{♯♭} &= ∂_t ⊗ η_{yγ} dx^γ - η_{tγ} ∂_y ⊗ dx^γ &\qquad& (∂_y ∧ ∂_t)^{♯♭} &=& ∂_y ⊗ η_{γt} dx^γ - ∂_t ⊗ η_{γy} dx^γ \\
+          (∂_t ∧ ∂_z)^{♯♭} &= ∂_t ⊗ η_{zγ} dx^γ - η_{tγ} ∂_z ⊗ dx^γ &\qquad& (∂_z ∧ ∂_t)^{♯♭} &=& ∂_z ⊗ η_{γt} dx^γ - ∂_t ⊗ η_{γz} dx^γ \\
+          (∂_y ∧ ∂_z)^{♯♭} &= ∂_y ⊗ η_{zγ} dx^γ - η_{yγ} ∂_z ⊗ dx^γ &\qquad& (∂_z ∧ ∂_y)^{♯♭} &=& ∂_z ⊗ η_{γy} dx^γ - ∂_y ⊗ η_{γz} dx^γ \\
+          (∂_z ∧ ∂_x)^{♯♭} &= ∂_z ⊗ η_{xγ} dx^γ - η_{zγ} ∂_x ⊗ dx^γ &\qquad& (∂_x ∧ ∂_z)^{♯♭} &=& ∂_x ⊗ η_{γz} dx^γ - ∂_z ⊗ η_{γx} dx^γ \\
+          (∂_x ∧ ∂_y)^{♯♭} &= ∂_x ⊗ η_{yγ} dx^γ - η_{xγ} ∂_y ⊗ dx^γ &\qquad& (∂_y ∧ ∂_x)^{♯♭} &=& ∂_y ⊗ η_{γx} dx^γ - ∂_x ⊗ η_{γy} dx^γ \\
       \end{alignedat}
 
    .. rubric:: Identify the non-zero components
@@ -840,12 +839,12 @@ terms of tensor products:
    .. math::
 
       \begin{alignedat}{5}
-      (∂_t ∧ ∂_x)^{♯♭} &= ∂_t ⊗ η_{xx} dx - ∂_x ⊗ η_{tt} dt &\qquad& (∂_x ∧ ∂_t)^{♯♭} &=& ∂_x ⊗ η_{tt} dt - ∂_t ⊗ η_{xx} dx \\
-      (∂_t ∧ ∂_y)^{♯♭} &= ∂_t ⊗ η_{yy} dy - ∂_y ⊗ η_{tt} dt &\qquad& (∂_y ∧ ∂_t)^{♯♭} &=& ∂_y ⊗ η_{tt} dt - ∂_t ⊗ η_{yy} dy \\
-      (∂_t ∧ ∂_z)^{♯♭} &= ∂_t ⊗ η_{zz} dz - ∂_z ⊗ η_{tt} dt &\qquad& (∂_z ∧ ∂_t)^{♯♭} &=& ∂_z ⊗ η_{tt} dt - ∂_t ⊗ η_{zz} dz \\
-      (∂_y ∧ ∂_z)^{♯♭} &= ∂_y ⊗ η_{zz} dz - ∂_z ⊗ η_{yy} dy &\qquad& (∂_z ∧ ∂_y)^{♯♭} &=& ∂_z ⊗ η_{yy} dy - ∂_y ⊗ η_{zz} dz \\
-      (∂_z ∧ ∂_x)^{♯♭} &= ∂_z ⊗ η_{xx} dx - ∂_x ⊗ η_{zz} dz &\qquad& (∂_x ∧ ∂_z)^{♯♭} &=& ∂_x ⊗ η_{zz} dz - ∂_z ⊗ η_{xx} dx \\
-      (∂_x ∧ ∂_y)^{♯♭} &= ∂_x ⊗ η_{yy} dy - ∂_y ⊗ η_{xx} dx &\qquad& (∂_y ∧ ∂_x)^{♯♭} &=& ∂_y ⊗ η_{xx} dx - ∂_x ⊗ η_{yy} dy \\
+          (∂_t ∧ ∂_x)^{♯♭} &= ∂_t ⊗ η_{xx} dx - ∂_x ⊗ η_{tt} dt &\qquad& (∂_x ∧ ∂_t)^{♯♭} &=& ∂_x ⊗ η_{tt} dt - ∂_t ⊗ η_{xx} dx \\
+          (∂_t ∧ ∂_y)^{♯♭} &= ∂_t ⊗ η_{yy} dy - ∂_y ⊗ η_{tt} dt &\qquad& (∂_y ∧ ∂_t)^{♯♭} &=& ∂_y ⊗ η_{tt} dt - ∂_t ⊗ η_{yy} dy \\
+          (∂_t ∧ ∂_z)^{♯♭} &= ∂_t ⊗ η_{zz} dz - ∂_z ⊗ η_{tt} dt &\qquad& (∂_z ∧ ∂_t)^{♯♭} &=& ∂_z ⊗ η_{tt} dt - ∂_t ⊗ η_{zz} dz \\
+          (∂_y ∧ ∂_z)^{♯♭} &= ∂_y ⊗ η_{zz} dz - ∂_z ⊗ η_{yy} dy &\qquad& (∂_z ∧ ∂_y)^{♯♭} &=& ∂_z ⊗ η_{yy} dy - ∂_y ⊗ η_{zz} dz \\
+          (∂_z ∧ ∂_x)^{♯♭} &= ∂_z ⊗ η_{xx} dx - ∂_x ⊗ η_{zz} dz &\qquad& (∂_x ∧ ∂_z)^{♯♭} &=& ∂_x ⊗ η_{zz} dz - ∂_z ⊗ η_{xx} dx \\
+          (∂_x ∧ ∂_y)^{♯♭} &= ∂_x ⊗ η_{yy} dy - ∂_y ⊗ η_{xx} dx &\qquad& (∂_y ∧ ∂_x)^{♯♭} &=& ∂_y ⊗ η_{xx} dx - ∂_x ⊗ η_{yy} dy \\
       \end{alignedat}
 
    .. rubric:: Apply numerical values
@@ -853,12 +852,12 @@ terms of tensor products:
    .. math::
 
       \begin{alignedat}{5}
-      (∂_t ∧ ∂_x)^{♯♭} &= - ∂_t ⊗ dx - ∂_x ⊗ dt &\qquad& (∂_x ∧ ∂_t)^{♯♭} &=& + ∂_x ⊗ dt + ∂_t ⊗ dx \\
-      (∂_t ∧ ∂_y)^{♯♭} &= - ∂_t ⊗ dy - ∂_y ⊗ dt &\qquad& (∂_y ∧ ∂_t)^{♯♭} &=& + ∂_y ⊗ dt + ∂_t ⊗ dy \\
-      (∂_t ∧ ∂_z)^{♯♭} &= - ∂_t ⊗ dz - ∂_z ⊗ dt &\qquad& (∂_z ∧ ∂_t)^{♯♭} &=& + ∂_z ⊗ dt + ∂_t ⊗ dz \\
-      (∂_y ∧ ∂_z)^{♯♭} &= - ∂_y ⊗ dz + ∂_z ⊗ dy &\qquad& (∂_z ∧ ∂_y)^{♯♭} &=& - ∂_z ⊗ dy + ∂_y ⊗ dz \\
-      (∂_z ∧ ∂_x)^{♯♭} &= - ∂_z ⊗ dx + ∂_x ⊗ dz &\qquad& (∂_x ∧ ∂_z)^{♯♭} &=& - ∂_x ⊗ dz + ∂_z ⊗ dx \\
-      (∂_x ∧ ∂_y)^{♯♭} &= - ∂_x ⊗ dy + ∂_y ⊗ dx &\qquad& (∂_y ∧ ∂_x)^{♯♭} &=& - ∂_y ⊗ dx + ∂_x ⊗ dy \\
+          (∂_t ∧ ∂_x)^{♯♭} &= - ∂_t ⊗ dx - ∂_x ⊗ dt &\qquad& (∂_x ∧ ∂_t)^{♯♭} &=& + ∂_x ⊗ dt + ∂_t ⊗ dx \\
+          (∂_t ∧ ∂_y)^{♯♭} &= - ∂_t ⊗ dy - ∂_y ⊗ dt &\qquad& (∂_y ∧ ∂_t)^{♯♭} &=& + ∂_y ⊗ dt + ∂_t ⊗ dy \\
+          (∂_t ∧ ∂_z)^{♯♭} &= - ∂_t ⊗ dz - ∂_z ⊗ dt &\qquad& (∂_z ∧ ∂_t)^{♯♭} &=& + ∂_z ⊗ dt + ∂_t ⊗ dz \\
+          (∂_y ∧ ∂_z)^{♯♭} &= - ∂_y ⊗ dz + ∂_z ⊗ dy &\qquad& (∂_z ∧ ∂_y)^{♯♭} &=& - ∂_z ⊗ dy + ∂_y ⊗ dz \\
+          (∂_z ∧ ∂_x)^{♯♭} &= - ∂_z ⊗ dx + ∂_x ⊗ dz &\qquad& (∂_x ∧ ∂_z)^{♯♭} &=& - ∂_x ⊗ dz + ∂_z ⊗ dx \\
+          (∂_x ∧ ∂_y)^{♯♭} &= - ∂_x ⊗ dy + ∂_y ⊗ dx &\qquad& (∂_y ∧ ∂_x)^{♯♭} &=& - ∂_y ⊗ dx + ∂_x ⊗ dy \\
       \end{alignedat}
 
    .. }}}
@@ -869,12 +868,12 @@ terms of tensor products:
 .. math::
 
    \begin{alignedat}{4}
-   ∂_t ∧ dx & = + ∂_t ⊗ dx + ∂_x ⊗ dt & \qquad & ∂_x ∧ dt & = + ∂_x ⊗ dt + ∂_t ⊗ dx \\
-   ∂_t ∧ dy & = + ∂_t ⊗ dy + ∂_y ⊗ dt & \qquad & ∂_y ∧ dt & = + ∂_y ⊗ dt + ∂_t ⊗ dy \\
-   ∂_t ∧ dz & = + ∂_t ⊗ dz + ∂_z ⊗ dt & \qquad & ∂_z ∧ dt & = + ∂_z ⊗ dt + ∂_t ⊗ dz \\
-   ∂_y ∧ dz & = + ∂_y ⊗ dz - ∂_z ⊗ dy & \qquad & ∂_z ∧ dy & = + ∂_z ⊗ dy - ∂_y ⊗ dz \\
-   ∂_z ∧ dx & = + ∂_z ⊗ dx - ∂_x ⊗ dz & \qquad & ∂_x ∧ dz & = + ∂_x ⊗ dz - ∂_z ⊗ dx \\
-   ∂_x ∧ dy & = + ∂_x ⊗ dy - ∂_y ⊗ dx & \qquad & ∂_y ∧ dx & = + ∂_y ⊗ dx - ∂_x ⊗ dy \\
+       ∂_t ∧ dx & = + ∂_t ⊗ dx + ∂_x ⊗ dt & \qquad & ∂_x ∧ dt & = + ∂_x ⊗ dt + ∂_t ⊗ dx \\
+       ∂_t ∧ dy & = + ∂_t ⊗ dy + ∂_y ⊗ dt & \qquad & ∂_y ∧ dt & = + ∂_y ⊗ dt + ∂_t ⊗ dy \\
+       ∂_t ∧ dz & = + ∂_t ⊗ dz + ∂_z ⊗ dt & \qquad & ∂_z ∧ dt & = + ∂_z ⊗ dt + ∂_t ⊗ dz \\
+       ∂_y ∧ dz & = + ∂_y ⊗ dz - ∂_z ⊗ dy & \qquad & ∂_z ∧ dy & = + ∂_z ⊗ dy - ∂_y ⊗ dz \\
+       ∂_z ∧ dx & = + ∂_z ⊗ dx - ∂_x ⊗ dz & \qquad & ∂_x ∧ dz & = + ∂_x ⊗ dz - ∂_z ⊗ dx \\
+       ∂_x ∧ dy & = + ∂_x ⊗ dy - ∂_y ⊗ dx & \qquad & ∂_y ∧ dx & = + ∂_y ⊗ dx - ∂_x ⊗ dy \\
    \end{alignedat}
 
 Taken together, we get the result consistent with the symmetries obtained for
@@ -921,10 +920,10 @@ The type :math:`♯♭` row/column matrix representation of rotations is:
 .. math::
 
    R^{♭♯} = \frac{1}{2} \begin{bmatrix}
-                       & + a \; dx^t ∧ ∂_x & + b \; dx^t ∧ ∂_y & + c \; dx^t ∧ ∂_z \\
-     + a \; dx^x ∧ ∂_t &                   & + f \; dx^x ∧ ∂_y & - e \; dx^x ∧ ∂_z \\
-     + b \; dx^y ∧ ∂_t & - f \; dx^y ∧ ∂_x &                   & + d \; dx^y ∧ ∂_z \\
-     + c \; dx^z ∧ ∂_t & + e \; dx^z ∧ ∂_x & - d \; dx^z ∧ ∂_y &                   \\
+                           & + Q^x \; dx^t ∧ ∂_x & + Q^y \; dx^t ∧ ∂_y & + Q^z \; dx^t ∧ ∂_z \\
+       + Q^x \; dx^x ∧ ∂_t &                     & + R^z \; dx^x ∧ ∂_y & - R^y \; dx^x ∧ ∂_z \\
+       + Q^y \; dx^y ∧ ∂_t & - R^z \; dx^y ∧ ∂_x &                     & + R^x \; dx^y ∧ ∂_z \\
+       + Q^z \; dx^z ∧ ∂_t & + R^y \; dx^z ∧ ∂_x & - R^x \; dx^z ∧ ∂_y &                     \\
    \end{bmatrix}
 
 Taking out the basis bivectors from :ref:`the free matrix representation`, we
@@ -935,10 +934,10 @@ interpretation as a rotation in spacetime:
 .. math::
 
    R^{♭♯} = \frac{1}{2} \begin{bmatrix}
-           & + a & + b & + c \\
-       + a &     & + f & - e \\
-       + b & - f &     & + d \\
-       + c & + e & - d &     \\
+             & + Q^x & + Q^y & + Q^z \\
+       + Q^x &       & + R^z & - R^y \\
+       + Q^y & - R^z &       & + R^x \\
+       + Q^z & + R^y & - R^x &       \\
    \end{bmatrix}
 
 .. }}}
