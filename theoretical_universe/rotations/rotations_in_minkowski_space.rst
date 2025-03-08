@@ -920,10 +920,10 @@ The type :math:`♯♭` row/column matrix representation of rotations is:
 .. math::
 
    R^{♭♯} = \frac{1}{2} \begin{bmatrix}
-                           & + Q^x \; dx^t ∧ ∂_x & + Q^y \; dx^t ∧ ∂_y & + Q^z \; dx^t ∧ ∂_z \\
-       + Q^x \; dx^x ∧ ∂_t &                     & + R^z \; dx^x ∧ ∂_y & - R^y \; dx^x ∧ ∂_z \\
-       + Q^y \; dx^y ∧ ∂_t & - R^z \; dx^y ∧ ∂_x &                     & + R^x \; dx^y ∧ ∂_z \\
-       + Q^z \; dx^z ∧ ∂_t & + R^y \; dx^z ∧ ∂_x & - R^x \; dx^z ∧ ∂_y &                     \\
+                         & + Q^x \: dt ∧ ∂_x & + Q^y \: dt ∧ ∂_y & + Q^z \: dt ∧ ∂_z \\
+       + Q^x \: dx ∧ ∂_t &                   & + R^z \: dx ∧ ∂_y & - R^y \: dx ∧ ∂_z \\
+       + Q^y \: dy ∧ ∂_t & - R^z \: dy ∧ ∂_x &                   & + R^x \: dy ∧ ∂_z \\
+       + Q^z \: dz ∧ ∂_t & + R^y \: dz ∧ ∂_x & - R^x \: dz ∧ ∂_y &                   \\
    \end{bmatrix}
 
 Taking out the basis bivectors from :ref:`the free matrix representation`, we
