@@ -811,12 +811,12 @@ Expanded, we obtain:
    .. math::
 
      F^{♭♭} = \left[ \begin{aligned}
-       - & \E^x \; dt ∧ dx \\
-       - & \E^y \; dt ∧ dy \\
-       - & \E^z \; dt ∧ dz \\
-         &  B^x \; dy ∧ dz \\
-         &  B^y \; dz ∧ dx \\
-         &  B^z \; dx ∧ dy \\
+         - & \E^x \; dt ∧ dx \\
+         - & \E^y \; dt ∧ dy \\
+         - & \E^z \; dt ∧ dz \\
+           &  B^x \; dy ∧ dz \\
+           &  B^y \; dz ∧ dx \\
+           &  B^z \; dx ∧ dy \\
      \end{aligned} \right]
 
    .. rubric:: Take the Hodge dual
@@ -824,12 +824,12 @@ Expanded, we obtain:
    .. math::
 
      G^{♭♭} = ⋆ F^{♭♭} = ⋆ \left[ \begin{aligned}
-       - & \E^x \; dt ∧ dx \\
-       - & \E^y \; dt ∧ dy \\
-       - & \E^z \; dt ∧ dz \\
-         &  B^x \; dy ∧ dz \\
-         &  B^y \; dz ∧ dx \\
-         &  B^z \; dx ∧ dy \\
+         - & \E^x \; dt ∧ dx \\
+         - & \E^y \; dt ∧ dy \\
+         - & \E^z \; dt ∧ dz \\
+           &  B^x \; dy ∧ dz \\
+           &  B^y \; dz ∧ dx \\
+           &  B^z \; dx ∧ dy \\
      \end{aligned} \right]
 
    .. rubric:: Distribute the Hodge dual operator
@@ -837,28 +837,28 @@ Expanded, we obtain:
    .. math::
 
      G^{♭♭} = \left[ \begin{aligned}
-       - & \E^x \; ⋆ dt ∧ dx \\
-       - & \E^y \; ⋆ dt ∧ dy \\
-       - & \E^z \; ⋆ dt ∧ dz \\
-         &  B^x \; ⋆ dy ∧ dz \\
-         &  B^y \; ⋆ dz ∧ dx \\
-         &  B^z \; ⋆ dx ∧ dy \\
+         - & \E^x \; ⋆ dt ∧ dx \\
+         - & \E^y \; ⋆ dt ∧ dy \\
+         - & \E^z \; ⋆ dt ∧ dz \\
+           &  B^x \; ⋆ dy ∧ dz \\
+           &  B^y \; ⋆ dz ∧ dx \\
+           &  B^z \; ⋆ dx ∧ dy \\
      \end{aligned} \right]
 
    .. rubric:: Apply the Hodge dual operator
 
    You can find the Hodge dual of each bivector basis in Minkowski space
-   :ref:`here <Duality in Minkowski Space>`.
+   :ref:`here <duality in minkowski space>`.
 
    .. math::
 
      G^{♭♭} = \left[ \begin{alignedat}{2}
-       - & \E^x \; (-1) & dy ∧ dz \\
-       - & \E^y \; (-1) & dz ∧ dx \\
-       - & \E^z \; (-1) & dx ∧ dy \\
-         &  B^x \; (+1) & dt ∧ dx \\
-         &  B^y \; (+1) & dt ∧ dy \\
-         &  B^z \; (+1) & dt ∧ dz \\
+         - & \E^x \; (-1) & dy ∧ dz \\
+         - & \E^y \; (-1) & dz ∧ dx \\
+         - & \E^z \; (-1) & dx ∧ dy \\
+           &  B^x \; (+1) & dt ∧ dx \\
+           &  B^y \; (+1) & dt ∧ dy \\
+           &  B^z \; (+1) & dt ∧ dz \\
      \end{alignedat} \right]
 
    .. rubric:: Simplify
@@ -866,12 +866,12 @@ Expanded, we obtain:
    .. math::
 
      G^{♭♭} = \left[ \begin{alignedat}{1}
-       \E^x \; & dy ∧ dz \\
-       \E^y \; & dz ∧ dx \\
-       \E^z \; & dx ∧ dy \\
-        B^x \; & dt ∧ dx \\
-        B^y \; & dt ∧ dy \\
-        B^z \; & dt ∧ dz \\
+         \E^x \; & dy ∧ dz \\
+         \E^y \; & dz ∧ dx \\
+         \E^z \; & dx ∧ dy \\
+          B^x \; & dt ∧ dx \\
+          B^y \; & dt ∧ dy \\
+          B^z \; & dt ∧ dz \\
      \end{alignedat} \right]
 
    .. rubric:: Reorder
@@ -879,12 +879,12 @@ Expanded, we obtain:
    .. math::
 
      G^{♭♭} = \left[ \begin{alignedat}{1}
-        B^x \; & dt ∧ dx \\
-        B^y \; & dt ∧ dy \\
-        B^z \; & dt ∧ dz \\
-       \E^x \; & dy ∧ dz \\
-       \E^y \; & dz ∧ dx \\
-       \E^z \; & dx ∧ dy \\
+          B^x \; & dt ∧ dx \\
+          B^y \; & dt ∧ dy \\
+          B^z \; & dt ∧ dz \\
+         \E^x \; & dy ∧ dz \\
+         \E^y \; & dz ∧ dx \\
+         \E^z \; & dx ∧ dy \\
      \end{alignedat} \right]
 
    .. }}}

@@ -13,6 +13,8 @@ Basis vectors
 
    by Stéphane Haussler
 
+.. _partial derivatives as basis vectors:
+
 Partial Derivatives
 -------------------
 
