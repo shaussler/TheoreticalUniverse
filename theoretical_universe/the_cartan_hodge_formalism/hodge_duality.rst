@@ -1085,12 +1085,12 @@ Alternative simplified procedure
 
 The preceding discussion for k--vectors provides geometric intuition. Here, I
 offer an alternative perspective to compute the inner product in a trivial
-algorithmic manner using the interior product :math:`⌟`. Note, however, that I
-use the interior product in a non-standard manner. Therefore, please consider
-this paragraph carefully. I have not investigated whether the procedure
-described below is known or established. It works as I intuitively expect it
-should. You may also consider it a usefull trick to efficiently determine the
-inner product between k--vectors.
+algorithmic manner using the interior product :math:`⌟`. Note, however, that my
+use of the interior product is as far as I know not standard. Therefore, please
+consider this paragraph carefully. I have not investigated whether the
+procedure described below is known or established. It works as I intuitively
+expect it should. You may also consider it a usefull trick to efficiently
+determine the inner product between k--vectors.
 
 This paragraph is not essential for further reading of this article and can be
 skipped if you are not interested.
@@ -1546,8 +1546,12 @@ in Minkowski space:
 
    .. }}}
 
-k-forms
-'''''''
+.. }}}
+
+k--forms
+''''''''
+
+.. {{{
 
 We repeat the definition of the Hodge dual of k--vectors to k-forms. Indeed the
 inner product is:
