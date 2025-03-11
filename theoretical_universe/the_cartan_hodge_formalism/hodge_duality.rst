@@ -28,7 +28,7 @@ and is meant to be quite easy to follow. Next comes a shaping operation:
 Preparing the generalization to any number of dimensions and metric signatures.
 I lay out the relation between the exterior product, matrix determinant,
 surface, volume and hypervolume. This will permit to generalize the inner
-product to k-vectors. Finally, I systematically calculate of the Hodge duals of
+product to k--vectors. Finally, I systematically calculate of the Hodge duals of
 vectors, bivectors, trivectors and quadvectors in Minkowski spacetime with
 metric signature :math:`(+,-,-,-)`. 
 
@@ -209,8 +209,8 @@ the Hodge dual scalar is flipped.
 
 .. }}}
 
-Inner product of k-vectors
---------------------------
+Inner product of k--vectors
+---------------------------
 
 .. {{{
 
@@ -258,7 +258,7 @@ For the basis 4-vectors in flat Minkowski space, we obtain:
 
 This is the starting point for a procedure which permits to meaningfully lift
 the inner product on vectors to the inner products on bivectors, trivectors,
-quadvectors, and in all generality to k-vectors.
+quadvectors, and in all generality to k--vectors.
 
 .. }}}
 
@@ -492,9 +492,9 @@ these three vectors:
 
       V ∂_x ∧ ∂_y ∧ ∂_z = (+avr -awq -bur +bwp +cuq -cvp) ∂_x ∧ ∂_y ∧ ∂_z
 
-This procedure can be generalized to hypervolumes constructed from k-vectors/
+This procedure can be generalized to hypervolumes constructed from k--vectors/
 The hypervolume is calculated with the determinant of a :math:`k \times k`
-matrice, or equivalently by taking the exterior product of k k-vectors.
+matrice, or equivalently by taking the exterior product of k k--vectors.
 
 .. }}}
 
@@ -513,7 +513,7 @@ determinant of :math:`3 ⨯ 3` matrices, corresponding to the volumes covered by
 3-vectors. One step further, a k-dimensional shadow measure can then be
 calculated using :math:`k ⨯ k` matrices, corresponding to hypervolumes of
 dimension k. This permits to find a meaningfull way to *lift* the inner product
-from vectors to bivectors, trivectors, and k-vectors. Lifting the inner product
+from vectors to bivectors, trivectors, and k--vectors. Lifting the inner product
 permits to generalize the the Hodge dual to any metric signature, and apply to
 Minkowski space with metric signature :math:`(+,-,-,-)`. In 3-dimensional
 Euclidean space, the inner product of the basis vectors, denoted with either
@@ -775,8 +775,8 @@ signature.
 
 .. }}}
 
-Inner product of k-vectors in Minkowski space
-'''''''''''''''''''''''''''''''''''''''''''''
+Inner product of k--vectors in Minkowski space
+''''''''''''''''''''''''''''''''''''''''''''''
 
 .. {{{
 
@@ -1078,69 +1078,93 @@ In Minkowski space, all quadvectors are proportional to :math:`∂_t ∧ ∂_x �
 
 .. }}}
 
-Inner product of k-forms
-------------------------
+Alternative simplified procedure
+''''''''''''''''''''''''''''''''
 
 .. {{{
 
-The discussion of the inner product for k--vectors provides geometric
-intuition. Here, I shift the perspective to k--forms and compute the inner
-product in a trivial manner using the interior product :math:`⌟`. This change
-of perspective does not affect the further reading of this article and this
-paragraph can be skipped if you are not interested.
+The preceding discussion for k--vectors provides geometric intuition. Here, I
+offer an alternative perspective to compute the inner product in a trivial
+algorithmic manner using the interior product :math:`⌟`. Note, however, that I
+use the interior product in a non-standard manner. Therefore, please consider
+this paragraph carefully. I have not investigated whether the procedure
+described below is known or established. It works as I intuitively expect it
+should. You may also consider it a usefull trick to efficiently determine the
+inner product between k--vectors.
+
+This paragraph is not essential for further reading of this article and can be
+skipped if you are not interested.
 
 To establish a common foundation, recall that the inner product of k--vectors
 is equal to that of k--forms. For basis vectors and covectors, the inner
-product is the metric. In flat spacetime, this gives the Minkowski metric
+product is the metric. In flat spacetime, this yields the Minkowski metric
 :math:`η`:
 
 .. math::
 
-   \braket{∂_μ|∂_ν} = \braket{dx^μ|dx^ν} = η^{μν} = η_{μν}
+   ∂_μ · ∂_ν = dx^μ · dx^ν = η^{μν} = η_{μν}
 
-Considering basisvectors, dual covectors are defined as:
+Considering basis vectors, dual covectors are defined as:
 
 .. math::
 
    dx^μ \left( ∂_ν \right) = δ^μ_ν
 
 In this sense, 1--forms *measure* vectors, and the measure of a basis vector
-:math:`∂_ν` through it corresponding basis covector :math:`dx^μ` is one.
+:math:`∂_ν` through it corresponding basis covector :math:`dx^μ` is one. The
+inner product, denoted with :math:`·` or :math:`\braket{|}`, measures the
+shadow of one vector onto another.
 
-The interior product is an operation between a vector and a form. It consist of
-applying the vector to the first slot of the form and rearanging the form to
-bring the appropriate covectors to the front. This operation transforms a
+The standard interior product is an operation between a vector and a form. It
+consist of rearanging the form to bring the corresponding covector to the
+front, and applying the vector to that front slot. This operation transforms a
 k--form to a (k-1)--form. For example:
 
 .. math::
 
-   ∂_y ⌟ dx ∧ dy ∧ dz = ∂_y ⌟ (- dy ∧ dx ∧ dz) = -dz ∧ dx ∧ dz
+   \newcommand{\⌟}{\:⌟\:}
+   ∂_y \⌟ dx ∧ dy ∧ dz = ∂_y \⌟ (- dy ∧ dx ∧ dz) = - dy\left(∂_y\right) ∧ dx ∧ dz = - dx ∧ dz
 
-We apply the basis vector :math:`∂_ν` to the basis form :math:`dx^μ`. For a
-covector/vector pair, this is exactly returns the interior product :math:`⌟`:
+Here, we have applied the basis vector :math:`∂_ν` to the basis form
+:math:`dx^μ`.
 
-.. math::
-
-   ∂_ν \: ⌟ \: dx^μ = dx^μ \left( ∂_ν \right) = δ^μ_ν
-
-The interior product of a vector can be applied to a general form. For a basis
-vector acting on a basis 2--form, we bring the corresponding basis 1--form to
-the front and apply the vector to the first slot:
+The unconventional proposal is to equate the interior product to the dot
+product for a vector pair is the interior product :math:`⌟`:
 
 .. math::
 
-   ∂_t \: ⌟ \: dx ∧ dt &= ∂_t \: ⌟ \: \left( - dt ∧ dx \right) \\
-                       &= - dt \left( ∂_t \right) dx \\
-                       &= - dx
+   \newcommand{\⌟}{\:⌟\:}
+   ∂_ν  \⌟ ∂_μ  = ∂_μ  · ∂_ν  = η_{μν}
 
-Simmilarly, the interior product of a basis vector can be taken with a 3--form
-or a 4--form. This provides a straightforward algorithmic approach to calculate
-the inner product with no thinking involved:
+For covectors:
 
 .. math::
 
-   \braket{∂_t ∧ ∂_x|∂_t ∧ ∂_x } &= ∂_x \: ⌟ \: ∂_t \: ⌟\: dt ∧ dx \\
-                                 &= ∂_x \: ⌟ \: dx \\
+   \newcommand{\⌟}{\:⌟\:}
+   dx^ν \⌟ dx^μ = dx^μ · dx^ν = η^{μν} \\
+
+The interior product of a vector can be applied to a general k--vector. For a
+basis vector acting on a basis 2--vector, we bring the corresponding basis
+1--vector to the front and apply the vector to the first slot:
+
+.. math::
+
+   \newcommand{\⌟}{\:⌟\:}
+   ∂_t \⌟ ∂_x ∧ ∂_t &= ∂_t \⌟ \left( - ∂_t ∧ ∂_x \right) \\
+                    &= - ∂_t · ∂_t \; ∂_x \\
+                    &= - ∂_x
+
+Simmilarly, the interior product of a basis vector can be taken with a
+3--vector or a 4--vector. This provides a straightforward algorithmic approach
+to calculate the inner product with no thinking involved:
+
+.. math::
+
+   \newcommand{\⌟}{\:⌟\:}
+   \braket{∂_t ∧ ∂_x|∂_t ∧ ∂_x } &= ∂_x \⌟ ∂_t \⌟ ∂_t ∧ ∂_x \\
+                                 &= ∂_x \⌟ (∂_t · ∂_t) ∧ ∂_x \\
+                                 &= ∂_x \⌟ ∂_x \\
+                                 &= ∂_x · ∂_x \\
                                  &= -1
 
 We can systematicall apply the procedure to obtain the same result as above:
@@ -1149,22 +1173,22 @@ We can systematicall apply the procedure to obtain the same result as above:
 
    \newcommand{\⌟}{\:⌟\:}
    \begin{alignedat}{5}
-       \langle& dt &|& ∂_t &\rangle =& ∂_t &\⌟& dt & = +1 \\
-       \langle& dx &|& ∂_t &\rangle =& ∂_x &\⌟& dx & = -1 \\
-       \langle& dy &|& ∂_t &\rangle =& ∂_y &\⌟& dy & = -1 \\
-       \langle& dz &|& ∂_t &\rangle =& ∂_z &\⌟& dz & = -1 \\
+       \langle& ∂_t &|& ∂_t &\rangle =& ∂_t &\⌟& ∂_t & = +1 \\
+       \langle& ∂_x &|& ∂_t &\rangle =& ∂_x &\⌟& ∂_x & = -1 \\
+       \langle& ∂_y &|& ∂_t &\rangle =& ∂_y &\⌟& ∂_y & = -1 \\
+       \langle& ∂_z &|& ∂_t &\rangle =& ∂_z &\⌟& ∂_z & = -1 \\
    \end{alignedat}
 
 .. math::
 
    \newcommand{\⌟}{\:⌟\:}
    \begin{alignedat}{5}
-       \langle &dt ∧ dx &|& ∂_t ∧ ∂_x &\rangle =& ∂_x &\⌟& ∂_t &\⌟& dt ∧ dx & = + ∂_x &\⌟& dx &= -1 \\
-       \langle &dt ∧ dy &|& ∂_t ∧ ∂_y &\rangle =& ∂_y &\⌟& ∂_t &\⌟& dt ∧ dy & = + ∂_y &\⌟& dy &= -1 \\
-       \langle &dt ∧ dy &|& ∂_t ∧ ∂_z &\rangle =& ∂_z &\⌟& ∂_t &\⌟& dt ∧ dz & = + ∂_z &\⌟& dz &= -1 \\
-       \langle &dy ∧ dz &|& ∂_y ∧ ∂_z &\rangle =& ∂_z &\⌟& ∂_y &\⌟& dy ∧ dz & = - ∂_z &\⌟& dz &= +1 \\
-       \langle &dz ∧ dx &|& ∂_z ∧ ∂_x &\rangle =& ∂_x &\⌟& ∂_z &\⌟& dz ∧ dx & = - ∂_x &\⌟& dx &= +1 \\
-       \langle &dx ∧ dy &|& ∂_x ∧ ∂_y &\rangle =& ∂_y &\⌟& ∂_x &\⌟& dx ∧ dy & = - ∂_y &\⌟& dy &= +1 \\
+       \langle &∂_t ∧ ∂_x &|& ∂_t ∧ ∂_x &\rangle =& ∂_x &\⌟& ∂_t &\⌟& ∂_t ∧ ∂_x & = + ∂_x &\⌟& ∂_x &= -1 \\
+       \langle &∂_t ∧ ∂_y &|& ∂_t ∧ ∂_y &\rangle =& ∂_y &\⌟& ∂_t &\⌟& ∂_t ∧ ∂_y & = + ∂_y &\⌟& ∂_y &= -1 \\
+       \langle &∂_t ∧ ∂_y &|& ∂_t ∧ ∂_z &\rangle =& ∂_z &\⌟& ∂_t &\⌟& ∂_t ∧ ∂_z & = + ∂_z &\⌟& ∂_z &= -1 \\
+       \langle &∂_y ∧ ∂_z &|& ∂_y ∧ ∂_z &\rangle =& ∂_z &\⌟& ∂_y &\⌟& ∂_y ∧ ∂_z & = - ∂_z &\⌟& ∂_z &= +1 \\
+       \langle &∂_z ∧ ∂_x &|& ∂_z ∧ ∂_x &\rangle =& ∂_x &\⌟& ∂_z &\⌟& ∂_z ∧ ∂_x & = - ∂_x &\⌟& ∂_x &= +1 \\
+       \langle &∂_x ∧ ∂_y &|& ∂_x ∧ ∂_y &\rangle =& ∂_y &\⌟& ∂_x &\⌟& ∂_x ∧ ∂_y & = - ∂_y &\⌟& ∂_y &= +1 \\
    \end{alignedat}
 
 .. math::
@@ -1172,20 +1196,20 @@ We can systematicall apply the procedure to obtain the same result as above:
    \newcommand{\⌟}{\:⌟\:}
    \small
    \begin{alignedat}{5}
-       \langle& dx ∧ dy ∧ dz &|& ∂_x ∧ ∂_y ∧ ∂_z \rangle &=& ∂_z \⌟ ∂_y \⌟ ∂_x \⌟ dx ∧ dy ∧ dz &=& - ∂_z \⌟ ∂_y \⌟ dy ∧ dz &= + ∂_z \⌟ dz = -1 \\
-       \langle& dt ∧ dy ∧ dz &|& ∂_t ∧ ∂_y ∧ ∂_z \rangle &=& ∂_z \⌟ ∂_y \⌟ ∂_t \⌟ dt ∧ dy ∧ dz &=& + ∂_z \⌟ ∂_y \⌟ dy ∧ dz &= - ∂_z \⌟ dz = +1 \\
-       \langle& dt ∧ dz ∧ dx &|& ∂_t ∧ ∂_z ∧ ∂_x \rangle &=& ∂_x \⌟ ∂_z \⌟ ∂_t \⌟ dt ∧ dz ∧ dx &=& + ∂_x \⌟ ∂_z \⌟ dz ∧ dx &= - ∂_x \⌟ dx = +1 \\
-       \langle& dt ∧ dx ∧ dy &|& ∂_t ∧ ∂_x ∧ ∂_y \rangle &=& ∂_y \⌟ ∂_x \⌟ ∂_t \⌟ dt ∧ dx ∧ dy &=& + ∂_y \⌟ ∂_x \⌟ dx ∧ dy &= - ∂_y \⌟ dy = +1 \\
+       \langle& ∂_x ∧ ∂_y ∧ ∂_z &|& ∂_x ∧ ∂_y ∧ ∂_z \rangle &=& ∂_z \⌟ ∂_y \⌟ ∂_x \⌟ ∂_x ∧ ∂_y ∧ ∂_z &=& - ∂_z \⌟ ∂_y \⌟ ∂_y ∧ ∂_z &= + ∂_z \⌟ ∂_z = -1 \\
+       \langle& ∂_t ∧ ∂_y ∧ ∂_z &|& ∂_t ∧ ∂_y ∧ ∂_z \rangle &=& ∂_z \⌟ ∂_y \⌟ ∂_t \⌟ ∂_t ∧ ∂_y ∧ ∂_z &=& + ∂_z \⌟ ∂_y \⌟ ∂_y ∧ ∂_z &= - ∂_z \⌟ ∂_z = +1 \\
+       \langle& ∂_t ∧ ∂_z ∧ ∂_x &|& ∂_t ∧ ∂_z ∧ ∂_x \rangle &=& ∂_x \⌟ ∂_z \⌟ ∂_t \⌟ ∂_t ∧ ∂_z ∧ ∂_x &=& + ∂_x \⌟ ∂_z \⌟ ∂_z ∧ ∂_x &= - ∂_x \⌟ ∂_x = +1 \\
+       \langle& ∂_t ∧ ∂_x ∧ ∂_y &|& ∂_t ∧ ∂_x ∧ ∂_y \rangle &=& ∂_y \⌟ ∂_x \⌟ ∂_t \⌟ ∂_t ∧ ∂_x ∧ ∂_y &=& + ∂_y \⌟ ∂_x \⌟ ∂_x ∧ ∂_y &= - ∂_y \⌟ ∂_y = +1 \\
    \end{alignedat}
 
 .. math::
 
    \newcommand{\⌟}{\:⌟\:}
-   \braket{dt ∧ dx ∧ dy ∧ dz | dt ∧ dx ∧ dy ∧ dz} &= dz \⌟ dy \⌟ dx \⌟ dt \⌟ dt ∧ dx ∧ dy ∧ dz \\
-                                                  &= dz \⌟ dy \⌟ dx \⌟ dx ∧ dy ∧ dz \\
-                                                  &= -1 dz \⌟ dy \⌟ ∧ dy ∧ dz \\
-                                                  &= +1 dz \⌟ ∧ dz \\
-                                                  &= -1
+   \braket{∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z | ∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z} &= ∂_z \⌟ ∂_y \⌟ ∂_x \⌟ ∂_t \⌟ ∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z \\
+                                                          &= ∂_z \⌟ ∂_y \⌟ ∂_x \⌟ ∂_x ∧ ∂_y ∧ ∂_z \\
+                                                          &= -1 ∂_z \⌟ ∂_y \⌟ ∧ ∂_y ∧ ∂_z \\
+                                                          &= +1 ∂_z \⌟ ∧ ∂_z \\
+                                                          &= -1
 
 .. }}}
 
@@ -1194,15 +1218,15 @@ Formal and natural definition
 
 .. {{{
 
-In 3-dimensional Euclidean space, the Hodge dual of a k-vector :math:`β` is
-uniquely defined by the property that for any other k-vector :math:`α`, the
+In 3-dimensional Euclidean space, the Hodge dual of a k--vector :math:`β` is
+uniquely defined by the property that for any other k--vector :math:`α`, the
 following property holds:
 
 .. math::
 
    α ∧ ⋆ β = \braket{α | β} \; ∂_x ∧ ∂_y ∧ ∂_z
 
-In essence, this asks: Given a k-vector, which m-vector fills the remaining
+In essence, this asks: Given a k--vector, which m-vector fills the remaining
 space? Where the inner product :math:`\braket{α | β}` ensures that :math:`⋆ β`
 is unique. This question can be viewed as a *natural definition*  and be used
 for practical calculations. For 4-dimensional Minkowski space, the definition
@@ -1228,12 +1252,12 @@ this example, we obtain:
 Duality in Minkowski space
 --------------------------
 
-k-vectors
-'''''''''
+k--vectors
+''''''''''
 
 .. {{{
 
-With this, we can conclude and fully determine the Hodge dual of all k-vectors
+With this, we can conclude and fully determine the Hodge dual of all k--vectors
 in Minkowski space:
 
 .. topic:: Hodge duals of vectors in Minkowski Space
@@ -1525,7 +1549,7 @@ in Minkowski space:
 k-forms
 '''''''
 
-We repeat the definition of the Hodge dual of k-vectors to k-forms. Indeed the
+We repeat the definition of the Hodge dual of k--vectors to k-forms. Indeed the
 inner product is:
 
 .. math::
