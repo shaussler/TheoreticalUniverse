@@ -43,19 +43,19 @@ We have:
 .. math::
 
    \newcommand{\⌟}{\:⌟\:}
-   dx \⌟ \frac{1}{2!} \left(R^{♭♭} \right)^2 & = \frac{1}{2!} \left(dx \⌟ R^{♭♭} \right) \⌟ R^{♭♭} \\
-                                             & = \frac{1}{2!} θ dy \⌟ R^{♭♭} \\
-                                             & = \frac{1}{2!} θ dy \⌟ θ dx ∧ dy \\
-                                             & = \frac{1}{2!} θ^2 dy \⌟ \left( - dy ∧ dx \right) \\
-                                             & = - \frac{1}{2!} θ^2 dx \\
+   dx \⌟ \left(R^{♭♭} \right)^2 & = \left(dx \⌟ R^{♭♭} \right) \⌟ R^{♭♭} \\
+                                & = θ dy \⌟ R^{♭♭} \\
+                                & = θ dy \⌟ θ dx ∧ dy \\
+                                & = θ^2 dy \⌟ \left( - dy ∧ dx \right) \\
+                                & = - θ^2 dx \\
 
 .. math::
 
    \newcommand{\⌟}{\:⌟\:}
-   dx \⌟ \frac{1}{3!} \left(R^{♭♭} \right)^3 & = \frac{1}{3!} \left(dx \⌟ \left(R^{♭♭}\right)^2 \right) \⌟ R^{♭♭} \\
-                                             & = \frac{1}{3!} \left( - θ^2 dx \right) \⌟ R^{♭♭} \\
-                                             & = - \frac{1}{3!} θ^2 dx \⌟ θ dx ∧ dy \\
-                                             & = - \frac{1}{3!} θ^3 dy
+   dx \⌟ \left(R^{♭♭} \right)^3 & = \left(dx \⌟ \left(R^{♭♭}\right)^2 \right) \⌟ R^{♭♭} \\
+                                & = \left( - θ^2 dx \right) \⌟ R^{♭♭} \\
+                                & = - θ^2 dx \⌟ θ dx ∧ dy \\
+                                & = - θ^3 dy
 
 We then get:
 
