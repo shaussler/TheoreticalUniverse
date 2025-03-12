@@ -61,7 +61,8 @@ We then get:
 
 .. math::
 
-   dx ⌟ exp\left( θ dx ∧ dy \right) =
+   \newcommand{\⌟}{\:⌟\:}
+   dx \⌟ exp\left( θ dx ∧ dy \right) =
    \begin{bmatrix}
        \left( 1 - \frac{1}{2!} θ^2 + \cdots \right) dx \\
        \left( θ - \frac{1}{3!} θ^3 + \cdots \right) dy \\
