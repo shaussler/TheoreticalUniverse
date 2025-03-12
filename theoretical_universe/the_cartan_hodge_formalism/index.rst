@@ -21,6 +21,7 @@ The Cartan-Hodge formalism
    basis_vectors.rst
    musicality.rst
    hodge_duality.rst
+   calculating_hodge_dual.rst
    the_free_matrix_representation.rst
    the_minkowski_metric.rst
 

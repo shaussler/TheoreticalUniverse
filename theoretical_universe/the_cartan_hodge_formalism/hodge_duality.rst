@@ -52,7 +52,7 @@ I don't necessarily expect all readers to have ever considered :ref:`partial
 derivatives as basis vectors <partial derivatives as basis vectors>`. For our
 purpose, this is simply a matter of a notation. I use for the inner product
 either the dot notation :math:`\cdot`, or the bra-ket notation from quantum
-mechanics :math:`\braket{|}` when it helps readability [note1]_.
+mechanics :math:`\braket{|}` when it helps readability.
 
 I point out the work of `Michael Penn <https://www.michael-penn.net>`_  on
 `Differential Forms
@@ -69,6 +69,11 @@ page:
 These videos provide an alternative, yet equivalent, approach to the
 conclusions presented here. There is also the added bonus that he
 uses the same metric signature :math:`(+,-,-,-)`.
+
+You might also be interested in the article :ref:`Calculating the Hodge dual
+<calculating the hodge dual>`, which presents as method for systematically
+calculating the Hodge dual using the interior product :math:`⌟` in a fast,
+efficient, and satisfying manner.
 
 .. }}}
 
@@ -1078,140 +1083,6 @@ In Minkowski space, all quadvectors are proportional to :math:`∂_t ∧ ∂_x �
 
 .. }}}
 
-Alternative simplified procedure
-''''''''''''''''''''''''''''''''
-
-.. {{{
-
-The preceding discussion for k--vectors provides geometric intuition. Here, I
-offer an alternative perspective to compute the inner product in a trivial
-algorithmic manner using the interior product :math:`⌟`. Note, however, that my
-use of the interior product is as far as I know not standard. Therefore, please
-consider this paragraph carefully. I have not investigated whether the
-procedure described below is known or established. It works as I intuitively
-expect it should. You may also consider it a usefull trick to efficiently
-determine the inner product between k--vectors.
-
-This paragraph is not essential for further reading of this article and can be
-skipped if you are not interested.
-
-To establish a common foundation, recall that the inner product of k--vectors
-is equal to that of k--forms. For basis vectors and covectors, the inner
-product is the metric. In flat spacetime, this yields the Minkowski metric
-:math:`η`:
-
-.. math::
-
-   ∂_μ · ∂_ν = dx^μ · dx^ν = η^{μν} = η_{μν}
-
-Considering basis vectors, dual covectors are defined as:
-
-.. math::
-
-   dx^μ \left( ∂_ν \right) = δ^μ_ν
-
-In this sense, 1--forms *measure* vectors, and the measure of a basis vector
-:math:`∂_ν` through it corresponding basis covector :math:`dx^μ` is one. The
-inner product, denoted with :math:`·` or :math:`\braket{|}`, measures the
-shadow of one vector onto another.
-
-The standard interior product is an operation between a vector and a form. It
-consist of rearanging the form to bring the corresponding covector to the
-front, and applying the vector to that front slot. This operation transforms a
-k--form to a (k-1)--form. For example:
-
-.. math::
-
-   \newcommand{\⌟}{\:⌟\:}
-   ∂_y \⌟ dx ∧ dy ∧ dz = ∂_y \⌟ (- dy ∧ dx ∧ dz) = - dy\left(∂_y\right) ∧ dx ∧ dz = - dx ∧ dz
-
-Here, we have applied the basis vector :math:`∂_ν` to the basis form
-:math:`dx^μ`.
-
-The unconventional proposal is to equate the interior product to the dot
-product for a vector pair is the interior product :math:`⌟`:
-
-.. math::
-
-   \newcommand{\⌟}{\:⌟\:}
-   ∂_ν  \⌟ ∂_μ  = ∂_μ  · ∂_ν  = η_{μν}
-
-For covectors:
-
-.. math::
-
-   \newcommand{\⌟}{\:⌟\:}
-   dx^ν \⌟ dx^μ = dx^μ · dx^ν = η^{μν} \\
-
-The interior product of a vector can be applied to a general k--vector. For a
-basis vector acting on a basis 2--vector, we bring the corresponding basis
-1--vector to the front and apply the vector to the first slot:
-
-.. math::
-
-   \newcommand{\⌟}{\:⌟\:}
-   ∂_t \⌟ ∂_x ∧ ∂_t &= ∂_t \⌟ \left( - ∂_t ∧ ∂_x \right) \\
-                    &= - ∂_t · ∂_t \; ∂_x \\
-                    &= - ∂_x
-
-Simmilarly, the interior product of a basis vector can be taken with a
-3--vector or a 4--vector. This provides a straightforward algorithmic approach
-to calculate the inner product with no thinking involved:
-
-.. math::
-
-   \newcommand{\⌟}{\:⌟\:}
-   \braket{∂_t ∧ ∂_x|∂_t ∧ ∂_x } &= ∂_x \⌟ ∂_t \⌟ ∂_t ∧ ∂_x \\
-                                 &= ∂_x \⌟ (∂_t · ∂_t) ∧ ∂_x \\
-                                 &= ∂_x \⌟ ∂_x \\
-                                 &= ∂_x · ∂_x \\
-                                 &= -1
-
-We can systematicall apply the procedure to obtain the same result as above:
-
-.. math::
-
-   \newcommand{\⌟}{\:⌟\:}
-   \begin{alignedat}{5}
-       \langle& ∂_t &|& ∂_t &\rangle =& ∂_t &\⌟& ∂_t & = +1 \\
-       \langle& ∂_x &|& ∂_t &\rangle =& ∂_x &\⌟& ∂_x & = -1 \\
-       \langle& ∂_y &|& ∂_t &\rangle =& ∂_y &\⌟& ∂_y & = -1 \\
-       \langle& ∂_z &|& ∂_t &\rangle =& ∂_z &\⌟& ∂_z & = -1 \\
-   \end{alignedat}
-
-.. math::
-
-   \newcommand{\⌟}{\:⌟\:}
-   \begin{alignedat}{5}
-       \langle &∂_t ∧ ∂_x &|& ∂_t ∧ ∂_x &\rangle =& ∂_x &\⌟& ∂_t &\⌟& ∂_t ∧ ∂_x & = + ∂_x &\⌟& ∂_x &= -1 \\
-       \langle &∂_t ∧ ∂_y &|& ∂_t ∧ ∂_y &\rangle =& ∂_y &\⌟& ∂_t &\⌟& ∂_t ∧ ∂_y & = + ∂_y &\⌟& ∂_y &= -1 \\
-       \langle &∂_t ∧ ∂_y &|& ∂_t ∧ ∂_z &\rangle =& ∂_z &\⌟& ∂_t &\⌟& ∂_t ∧ ∂_z & = + ∂_z &\⌟& ∂_z &= -1 \\
-       \langle &∂_y ∧ ∂_z &|& ∂_y ∧ ∂_z &\rangle =& ∂_z &\⌟& ∂_y &\⌟& ∂_y ∧ ∂_z & = - ∂_z &\⌟& ∂_z &= +1 \\
-       \langle &∂_z ∧ ∂_x &|& ∂_z ∧ ∂_x &\rangle =& ∂_x &\⌟& ∂_z &\⌟& ∂_z ∧ ∂_x & = - ∂_x &\⌟& ∂_x &= +1 \\
-       \langle &∂_x ∧ ∂_y &|& ∂_x ∧ ∂_y &\rangle =& ∂_y &\⌟& ∂_x &\⌟& ∂_x ∧ ∂_y & = - ∂_y &\⌟& ∂_y &= +1 \\
-   \end{alignedat}
-
-.. math::
-
-   \newcommand{\⌟}{\:⌟\:}
-   \small
-   \begin{alignedat}{5}
-       \langle& ∂_x ∧ ∂_y ∧ ∂_z &|& ∂_x ∧ ∂_y ∧ ∂_z \rangle &=& ∂_z \⌟ ∂_y \⌟ ∂_x \⌟ ∂_x ∧ ∂_y ∧ ∂_z &=& - ∂_z \⌟ ∂_y \⌟ ∂_y ∧ ∂_z &= + ∂_z \⌟ ∂_z = -1 \\
-       \langle& ∂_t ∧ ∂_y ∧ ∂_z &|& ∂_t ∧ ∂_y ∧ ∂_z \rangle &=& ∂_z \⌟ ∂_y \⌟ ∂_t \⌟ ∂_t ∧ ∂_y ∧ ∂_z &=& + ∂_z \⌟ ∂_y \⌟ ∂_y ∧ ∂_z &= - ∂_z \⌟ ∂_z = +1 \\
-       \langle& ∂_t ∧ ∂_z ∧ ∂_x &|& ∂_t ∧ ∂_z ∧ ∂_x \rangle &=& ∂_x \⌟ ∂_z \⌟ ∂_t \⌟ ∂_t ∧ ∂_z ∧ ∂_x &=& + ∂_x \⌟ ∂_z \⌟ ∂_z ∧ ∂_x &= - ∂_x \⌟ ∂_x = +1 \\
-       \langle& ∂_t ∧ ∂_x ∧ ∂_y &|& ∂_t ∧ ∂_x ∧ ∂_y \rangle &=& ∂_y \⌟ ∂_x \⌟ ∂_t \⌟ ∂_t ∧ ∂_x ∧ ∂_y &=& + ∂_y \⌟ ∂_x \⌟ ∂_x ∧ ∂_y &= - ∂_y \⌟ ∂_y = +1 \\
-   \end{alignedat}
-
-.. math::
-
-   \newcommand{\⌟}{\:⌟\:}
-   \braket{∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z | ∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z} &= ∂_z \⌟ ∂_y \⌟ ∂_x \⌟ ∂_t \⌟ ∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z \\
-                                                          &= ∂_z \⌟ ∂_y \⌟ ∂_x \⌟ ∂_x ∧ ∂_y ∧ ∂_z \\
-                                                          &= -1 ∂_z \⌟ ∂_y \⌟ ∧ ∂_y ∧ ∂_z \\
-                                                          &= +1 ∂_z \⌟ ∧ ∂_z \\
-                                                          &= -1
-
-.. }}}
 
 Formal and natural definition
 -----------------------------
@@ -1607,16 +1478,4 @@ following holds:
 
 .. }}}
 
-Notes
------
-
-.. {{{
-
-.. [note1] The bra :math:`\bra{}` notation corresponds to the musical flat
-   operator :math:`♭`, whereas the :math:`\ket{}` notation corresponds to the
-   musical sharp operator :math:`♯`. Hence we have :math:`dx^i = ∂_i^♭ =
-   \bra{∂_i} = \bra{∂_i^♭} = \bra{dx^i}`, and :math:`∂_i = (dx^i)^♯ = \ket{∂_i}
-   = \ket{(dx^i)^♯} = \ket{∂_i}`
-
 .. }}}
-
