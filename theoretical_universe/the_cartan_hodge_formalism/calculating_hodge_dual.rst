@@ -214,7 +214,8 @@ Hodge duals
       ⋆& dz &= dz &\⌟ dt ∧ dx ∧ dy ∧ dz \\
 
    .. rubric:: Reorder
-                                                                                                                                                         .. math::
+
+   .. math::
 
       \newcommand{\⌟}{\:⌟\:}
       ⋆& dt &= + dt &\⌟ dt ∧ dx ∧ dy ∧ dz \\
@@ -246,9 +247,12 @@ Hodge duals
 .. math::
 
    \begin{alignedat}{2}
-   ⋆ dt ∧ dx &= \\                                                                                                                                       ⋆ dt ∧ dy &= \\
-   ⋆ dt ∧ dz &= \\                                                                                                                                       ⋆ dy ∧ dz &= \\
-   ⋆ dz ∧ dx &= \\                                                                                                                                       ⋆ dx ∧ dy &= \\
+   ⋆ dt ∧ dx &= \\
+   ⋆ dt ∧ dy &= \\
+   ⋆ dt ∧ dz &= \\
+   ⋆ dy ∧ dz &= \\
+   ⋆ dz ∧ dx &= \\
+   ⋆ dx ∧ dy &= \\
    \end{alignedat}
 
 .. rubric:: 3-forms

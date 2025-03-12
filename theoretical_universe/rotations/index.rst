@@ -14,6 +14,7 @@ Rotations in differential form
 
    rotations_in_3_dimensions.rst
    rotations_in_minkowski_space.rst
+   exponential_map.rst
 
 In the following pages, I systematically express infinitesimal rotations in
 both 3-dimensional Euclidean and Minkowski space. The ultimate purpose is to
