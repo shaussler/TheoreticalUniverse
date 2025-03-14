@@ -7,8 +7,8 @@
 .. _hodge_duality:
 .. _hodge duality:
 
-Hodge duality
-=============
+Hodge duality fundamentals
+==========================
 
 .. rst-class:: custom-author
 
@@ -28,9 +28,11 @@ and is meant to be quite easy to follow. Next comes a shaping operation:
 Preparing the generalization to any number of dimensions and metric signatures.
 I lay out the relation between the exterior product, matrix determinant,
 surface, volume and hypervolume. This will permit to generalize the inner
-product to k--vectors. Finally, I systematically calculate of the Hodge duals of
-vectors, bivectors, trivectors and quadvectors in Minkowski spacetime with
-metric signature :math:`(+,-,-,-)`. 
+product to k--vectors. Finally, I systematically calculate of the Hodge duals
+of vectors, bivectors, trivectors and quadvectors in Minkowski spacetime with
+metric signature :math:`(+,-,-,-)`. For an efficient method to calculate the
+Hodge dual, as well as calculating the inner product on k--forms, have a look
+at the article :ref:`Hodge dual computations`.
 
 This discussion assumes you, the reader, have a solid understanding of vector
 and tensor calculus, as well as familiarity with the exterior product and Élie
@@ -70,10 +72,9 @@ These videos provide an alternative, yet equivalent, approach to the
 conclusions presented here. There is also the added bonus that he
 uses the same metric signature :math:`(+,-,-,-)`.
 
-You might also be interested in the article :ref:`Calculating the Hodge dual
-<calculating the hodge dual>`, which presents as method for systematically
-calculating the Hodge dual using the interior product :math:`⌟` in a fast,
-efficient, and satisfying manner.
+You might also be interested in the article :ref:`Hodge dual computations`,
+which presents as method for systematically calculating the Hodge dual using
+the interior product :math:`⌟` in a fast, efficient, (and satisfying) manner.
 
 .. }}}
 

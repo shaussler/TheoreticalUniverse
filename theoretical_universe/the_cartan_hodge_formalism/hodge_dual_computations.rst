@@ -4,10 +4,10 @@
 .. International License. You should have received a copy of the license along
 .. with this work. If not, see <https://creativecommons.org/licenses/by/4.0/>.
 
-.. _calculating the hodge dual:
+.. _hodge dual computations:
 
-Calculating the Hodge dual
-==========================
+Hodge dual computations
+=======================
 
 .. rst-class:: custom-author
 
@@ -15,23 +15,26 @@ Calculating the Hodge dual
 
 .. warning:: Draft
 
-In this page, I present a straightforward algorithmic way to calculate the
-inner product between k--vectors (respectively k--forms). The dicussion in the
-article :ref:`Hodge duality` for k--vectors provides geometric intuition. Here,
-I offer an alternative to compute the inner product of k--forms, as well as the
-Hodge dual of k--forms in a trivial algorithmic manner using the interior
-product :math:`⌟`. My use of the interior product :math:`⌟` my be non-standard.
-I have not investigated whether the procedure described below is known or
-established. It certainly works as I intuitively expect it should. You may then
-just consider it a usefull trick to efficiently determine the inner product
-between k--forms, or the Hodge dual of k-forms.
+In this page, I present a straightforward algorithmic method to calculate the
+inner product between k--vectors (or k--forms). The dicussion in the article on
+:ref:`Hodge duality` provides geometric intuition. Here, I offer an alternative
+approach to compute the inner product of k--forms, as well as the Hodge dual of
+k--forms, with a simple algorithmic method using the interior product
+:math:`⌟`.
+
+My use of the interior product might be non-standard, and I have not
+investigated whether what follows is established. It certainly works as I
+intuitively expect it should. You may also just find this method a usefull as
+an efficient trick to determine the inner product between k--forms, or the
+Hodge dual of k-forms.
 
 Inner product on k--froms
 -------------------------
 
 To establish a common foundation, recall that the inner product of k--vectors
 is equal to that of k--forms. For basis vectors and covectors, the inner
-product is the metric. In flat spacetime, this yields the Minkowski metric :math:`η`:
+product is the metric. In flat spacetime, this yields the Minkowski
+metric :math:`η`:
 
 .. math::
 
@@ -195,10 +198,10 @@ Hodge duals
 
 .. math::
 
-   ⋆& dt &= dx ∧ dy ∧ dz \\
-   ⋆& dx &= dt ∧ dy ∧ dz \\
-   ⋆& dy &= dt ∧ dz ∧ dx \\
-   ⋆& dz &= dt ∧ dx ∧ dy \\
+   ⋆ dt &=& dx ∧ dy ∧ dz \\
+   ⋆ dx &=& dt ∧ dy ∧ dz \\
+   ⋆ dy &=& dt ∧ dz ∧ dx \\
+   ⋆ dz &=& dt ∧ dx ∧ dy \\
 
 .. admonition:: Calculations
    :class: dropdown, toggle-shown
@@ -208,52 +211,50 @@ Hodge duals
    .. math::
 
       \newcommand{\⌟}{\:⌟\:}
-      ⋆& dt &= dt &\⌟ dt ∧ dx ∧ dy ∧ dz \\
-      ⋆& dx &= dx &\⌟ dt ∧ dx ∧ dy ∧ dz \\
-      ⋆& dy &= dy &\⌟ dt ∧ dx ∧ dy ∧ dz \\
-      ⋆& dz &= dz &\⌟ dt ∧ dx ∧ dy ∧ dz \\
+      ⋆ dt &=& dt &\⌟ dt ∧ dx ∧ dy ∧ dz \\
+      ⋆ dx &=& dx &\⌟ dt ∧ dx ∧ dy ∧ dz \\
+      ⋆ dy &=& dy &\⌟ dt ∧ dx ∧ dy ∧ dz \\
+      ⋆ dz &=& dz &\⌟ dt ∧ dx ∧ dy ∧ dz \\
 
    .. rubric:: Reorder
 
    .. math::
 
       \newcommand{\⌟}{\:⌟\:}
-      ⋆& dt &= + dt &\⌟ dt ∧ dx ∧ dy ∧ dz \\
-      ⋆& dx &= - dx &\⌟ dx ∧ dt ∧ dy ∧ dz \\
-      ⋆& dy &= - dy &\⌟ dy ∧ dt ∧ dz ∧ dx \\
-      ⋆& dz &= - dz &\⌟ dz ∧ dt ∧ dx ∧ dy \\
+      ⋆ dt &=& + dt &\⌟ dt ∧ dx ∧ dy ∧ dz \\
+      ⋆ dx &=& - dx &\⌟ dx ∧ dt ∧ dy ∧ dz \\
+      ⋆ dy &=& - dy &\⌟ dy ∧ dt ∧ dz ∧ dx \\
+      ⋆ dz &=& - dz &\⌟ dz ∧ dt ∧ dx ∧ dy \\
 
    .. rubric:: Apply the interior product
 
    .. math::
 
       \newcommand{\.}{\:.\:}
-      ⋆& dt &= + (& dt &\·& dt &) \: & dx ∧ dy ∧ dz \\
-      ⋆& dx &= - (& dx &\·& dx &) \: & dt ∧ dy ∧ dz \\
-      ⋆& dy &= - (& dy &\·& dy &) \: & dt ∧ dz ∧ dx \\
-      ⋆& dz &= - (& dz &\·& dz &) \: & dt ∧ dx ∧ dy \\
+      ⋆& dt &=& + (& dt &\·& dt &) \: & dx ∧ dy ∧ dz \\
+      ⋆& dx &=& - (& dx &\·& dx &) \: & dt ∧ dy ∧ dz \\
+      ⋆& dy &=& - (& dy &\·& dy &) \: & dt ∧ dz ∧ dx \\
+      ⋆& dz &=& - (& dz &\·& dz &) \: & dt ∧ dx ∧ dy \\
 
    .. rubric:: Apply numerical values and conclude
 
    .. math::
 
-      ⋆& dt &= dx ∧ dy ∧ dz \\
-      ⋆& dx &= dt ∧ dy ∧ dz \\
-      ⋆& dy &= dt ∧ dz ∧ dx \\
-      ⋆& dz &= dt ∧ dx ∧ dy \\
+      ⋆ dt &=& dx ∧ dy ∧ dz \\
+      ⋆ dx &=& dt ∧ dy ∧ dz \\
+      ⋆ dy &=& dt ∧ dz ∧ dx \\
+      ⋆ dz &=& dt ∧ dx ∧ dy \\
 
 .. rubric:: 2-forms
 
 .. math::
 
-   \begin{alignedat}{2}
    ⋆ dt ∧ dx &= \\
    ⋆ dt ∧ dy &= \\
    ⋆ dt ∧ dz &= \\
    ⋆ dy ∧ dz &= \\
    ⋆ dz ∧ dx &= \\
    ⋆ dx ∧ dy &= \\
-   \end{alignedat}
 
 .. rubric:: 3-forms
 

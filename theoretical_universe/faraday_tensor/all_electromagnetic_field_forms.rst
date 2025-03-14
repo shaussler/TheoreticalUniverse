@@ -16,11 +16,10 @@ All electromagnetic field forms
 .. {{{
 
 In this section, I systematically derive all representations of the Faraday
-tensor :math:`F` and its Hodge dual with metric signature :math:`(+,-,-,-)`. I
-cannot imagine there is no sign error in the calculations below. The Hodge dual
-:math:`⋆\:F` is also noted :math:`G`. The starting point is the electromagnetic
-field 2-form derivated in the article :ref:`Maxwell's Equations via
-Differential Forms`:
+field form :math:`F` as well as its Hodge dual with metric signature
+:math:`(+,-,-,-)`. The Hodge dual :math:`⋆\:F` is also noted :math:`G`. The
+starting point is the electromagnetic field 2-form derivated in the article
+:ref:`Maxwell's Equations via Differential Forms`:
 
 .. math::
 
@@ -33,9 +32,9 @@ Differential Forms`:
          &  B^z \: dx ∧ dy \\
    \end{aligned} \right]
 
-All expressions of the Faraday Tensor :math:`F` are the same object viewed from
-a different perspective. All these objects are strictly equivalent and their
-naming (2--form, tensor) merely a matter of convention.
+All expressions of the Faraday field :math:`F` are the same object viewed from
+a different perspective. The relation between the electromagnetic field 2--form and the field tensor is layed out in the article
+:ref:`relation between the faraday 2--form and the faraday tensor`.
 
 .. }}}
 
