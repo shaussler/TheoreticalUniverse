@@ -1425,20 +1425,23 @@ k--forms
 
 .. {{{
 
-We repeat the definition of the Hodge dual of k--vectors to k-forms. Indeed the
-inner product is:
+We have established the Hodge dual of k--vectors. This procedure can be
+also applied to k--forms. As with k--vectors, the Hodge dual on k--forms is
+defined by the property that for all k--forms :math:`α` and :math:`β`, the
+following equation holds:
 
 .. math::
 
-   \braket{∂_μ | ∂_ν} = \braket{dx^μ | dx^ν}
+   α ∧ ⋆ β = α · β dt ∧ dx ∧ dy ∧ dz
 
-We seek the dual k-form that fills the 4-dimensional space: the Hodge dual is
-defined by the property that for all k-forms :math:`α` and :math:`β`, the
-following holds:
+Here, :math:`α · β` is the inner product on k--forms, which is lifted from the
+inner product on 1--forms, as previously demonstrated for k--vectors:
 
 .. math::
 
-   α ∧ ⋆ β = \braket{α | β} dt ∧ dx ∧ dy ∧ dz
+   dx^μ · dx^ν = ∂_μ · ∂_ν
+
+Consequently we obtain:
 
 .. topic:: Hodge duals of 1-forms in Minkowski space
 

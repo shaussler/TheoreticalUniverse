@@ -20,7 +20,7 @@ Infinitesimal rotations in 2D Euclidean space are expressed as:
 
 .. math::
 
-   R^{♭♭} = θ dx ∧ dy
+   R^{♭♭} = θ \: dx ∧ dy
 
 We take the exponential map:
 
@@ -32,17 +32,14 @@ We have:
 
 .. math::
 
-   \newcommand{\⌟}{\:⌟\:}
    dx \⌟ \mathbb{1} = dx
 
 .. math::
 
-   \newcommand{\⌟}{\:⌟\:}
    dx \⌟ R^{♭♭} = dx \⌟ θ dx ∧ dy = θ dy
 
 .. math::
 
-   \newcommand{\⌟}{\:⌟\:}
    dx \⌟ \left(R^{♭♭} \right)^2 & = \left(dx \⌟ R^{♭♭} \right) \⌟ R^{♭♭} \\
                                 & = θ dy \⌟ R^{♭♭} \\
                                 & = θ dy \⌟ θ dx ∧ dy \\
@@ -51,7 +48,6 @@ We have:
 
 .. math::
 
-   \newcommand{\⌟}{\:⌟\:}
    dx \⌟ \left(R^{♭♭} \right)^3 & = \left(dx \⌟ \left(R^{♭♭}\right)^2 \right) \⌟ R^{♭♭} \\
                                 & = \left( - θ^2 dx \right) \⌟ R^{♭♭} \\
                                 & = - θ^2 dx \⌟ θ dx ∧ dy \\
@@ -61,7 +57,6 @@ We then get:
 
 .. math::
 
-   \newcommand{\⌟}{\:⌟\:}
    dx \⌟ exp\left( θ dx ∧ dy \right) =
    \begin{bmatrix}
        \left( 1 - \frac{1}{2!} θ^2 + \cdots \right) dx \\
