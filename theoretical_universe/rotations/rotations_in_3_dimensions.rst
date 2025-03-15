@@ -395,13 +395,13 @@ Symmetries of the mixed exterior product
 From the explicit calculation of the basis elements, we observe the following
 properties:
 
-================== =========================== ==========================
-Basis element      Expression                  Row/column matrix symmetry
-================== =========================== ==========================
-:math:`∂_x ∧ dx^y` :math:`∂_x ⊗ dy - ∂_y ⊗ dx` Antisymetric
-:math:`∂_y ∧ dx^z` :math:`∂_x ⊗ dz - ∂_z ⊗ dy` Antisymetric
-:math:`∂_z ∧ dx^x` :math:`∂_x ⊗ dx - ∂_x ⊗ dz` Antisymetric
-================== =========================== ==========================
+================ =========================== ==========================
+Basis element    Expression                  Row/column matrix symmetry
+================ =========================== ==========================
+:math:`∂_x ∧ dy` :math:`∂_x ⊗ dy - ∂_y ⊗ dx` Antisymetric
+:math:`∂_y ∧ dz` :math:`∂_x ⊗ dz - ∂_z ⊗ dy` Antisymetric
+:math:`∂_z ∧ dx` :math:`∂_x ⊗ dx - ∂_x ⊗ dz` Antisymetric
+================ =========================== ==========================
 
 .. }}}
 

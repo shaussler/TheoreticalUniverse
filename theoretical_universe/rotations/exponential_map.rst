@@ -32,37 +32,113 @@ We have:
 
 .. math::
 
-   dx \⌟ \mathbb{1} = dx
+   dx \⌟ \mathbb{1} &= dx \\
+   dy \⌟ \mathbb{1} &= dy \\
+
+----
 
 .. math::
 
-   dx \⌟ R^{♭♭} = dx \⌟ θ dx ∧ dy = θ dy
+   dx \⌟ R^{♭♭} = + θ dy \\
+   dy \⌟ R^{♭♭} = - θ dx \\
+
+.. admonition:: Calculations
+   :class: dropdown
+
+   .. rubric:: dx
+
+   .. math::
+
+      dx \⌟ R^{♭♭} &= dx \⌟ θ dx ∧ dy \\
+                   &= θ dy
+
+   .. rubric:: dy
+
+   .. math::
+
+      dy \⌟ R^{♭♭} &= dy \⌟ θ dx ∧ dy \\
+                   &= - dy \⌟ θ dy ∧ dx \\
+                   &= - θ dx
+
+----
 
 .. math::
 
-   dx \⌟ \left(R^{♭♭} \right)^2 & = \left(dx \⌟ R^{♭♭} \right) \⌟ R^{♭♭} \\
-                                & = θ dy \⌟ R^{♭♭} \\
-                                & = θ dy \⌟ θ dx ∧ dy \\
-                                & = θ^2 dy \⌟ \left( - dy ∧ dx \right) \\
-                                & = - θ^2 dx \\
+   dx \⌟ \left(R^{♭♭}\right)^2 &= - θ^2 dx \\
+   dy \⌟ \left(R^{♭♭}\right)^2 &= - θ^2 dy \\
+
+.. admonition:: Calculations
+   :class: dropdown
+
+   .. rubric:: dx
+
+   .. math::
+
+      dx \⌟ \left(R^{♭♭} \right)^2 & = \left(dx \⌟ R^{♭♭} \right) \⌟ R^{♭♭} \\
+                                   & = θ dy \⌟ R^{♭♭} \\
+                                   & = θ dy \⌟ \left(θ dx ∧ dy\right) \\
+                                   & = θ^2 dy \⌟ \left( - dy ∧ dx \right) \\
+                                   & = - θ^2 dx \\
+
+   .. rubric:: dy
+
+   .. math::
+
+      dy \⌟ \left(R^{♭♭} \right)^2 & = \left(dy \⌟ R^{♭♭} \right) \⌟ R^{♭♭} \\
+                                   & = - θ dx \⌟ R^{♭♭} \\
+                                   & = - θ dx \⌟ \left(θ dx ∧ dy\right) \\
+                                   & = - θ^2 dx \⌟ \left( dx ∧ dy \right) \\
+                                   & = - θ^2 dy \\
+----
 
 .. math::
 
-   dx \⌟ \left(R^{♭♭} \right)^3 & = \left(dx \⌟ \left(R^{♭♭}\right)^2 \right) \⌟ R^{♭♭} \\
-                                & = \left( - θ^2 dx \right) \⌟ R^{♭♭} \\
-                                & = - θ^2 dx \⌟ θ dx ∧ dy \\
-                                & = - θ^3 dy
+   dx \⌟ \left(R^{♭♭}\right)^3 &= - θ^3 dy \\
+   dy \⌟ \left(R^{♭♭}\right)^3 &= + θ^3 dx \\
 
+.. admonition:: Calculations
+   :class: dropdown
+
+   .. rubric:: dx
+
+   .. math::
+
+      dx \⌟ \left(R^{♭♭} \right)^3 & = \left(dx \⌟ \left(R^{♭♭}\right)^2 \right) \⌟ R^{♭♭} \\
+                                   & = \left( - θ^2 dx \right) \⌟ R^{♭♭} \\
+                                   & = - θ^2 dx \⌟ \left(θ dx ∧ dy\right) \\
+                                   & = - θ^3 dy
+
+   .. rubric:: dy
+
+   .. math::
+
+      dy \⌟ \left(R^{♭♭} \right)^3 & = \left(dy \⌟ \left(R^{♭♭}\right)^2 \right) \⌟ R^{♭♭} \\
+                                   & = \left( - θ^2 dy \right) \⌟ R^{♭♭} \\
+                                   & = - θ^2 dy \⌟ \left(θ dx ∧ dy\right) \\
+                                   & = - θ^3 dy \⌟ \left(- θ dy ∧ dx\right) \\
+                                   & = + θ^3 dx
 We then get:
 
 .. math::
 
-   dx \⌟ exp\left( θ dx ∧ dy \right) =
-   \begin{bmatrix}
-       \left( 1 - \frac{1}{2!} θ^2 + \cdots \right) dx \\
-       \left( θ - \frac{1}{3!} θ^3 + \cdots \right) dy \\
+   dx \⌟ e^{θ dx ∧ dy}
+   = \begin{bmatrix}
+       \left( + 1 - \frac{1}{2!} θ^2 + \cdots \right) dx \\
+       \left( + θ - \frac{1}{3!} θ^3 + \cdots \right) dy \\
    \end{bmatrix}
    = \begin{bmatrix}
-      cos(θ) dx \\
-      sin(θ) dy \\
+      + cos(θ) dx \\
+      + sin(θ) dy \\
+   \end{bmatrix}
+
+.. math::
+
+   dy \⌟ e^{θ dx ∧ dy}
+   = \begin{bmatrix}
+       \left( - θ + \frac{1}{3!} θ^3 + \cdots) \right) dx \\
+       \left( + 1 - \frac{1}{2!} θ^2 + \cdots) \right) dy \\
+   \end{bmatrix}
+   = \begin{bmatrix}
+      - sin(θ) dx \\
+      + cos(θ) dy \\
    \end{bmatrix}
