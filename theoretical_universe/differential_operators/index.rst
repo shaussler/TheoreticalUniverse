@@ -17,7 +17,7 @@ Differential operators expressed as exterior derivatives
    :maxdepth: 1
    :caption: Table of Contents:
 
-   3-dimensional-euclidean-space/index.rst
+   3-dimensional-euclidean-space.rst
    minkowski-space/index.rst
 
 .. {{{
@@ -41,19 +41,23 @@ Exterior derivative in 3D Euclidean space
 All standard differential operators commonly encountered in vector calculus are
 expressed in the framework of differential forms, musicality, and Hodge duality:
 
-.. rubric:: Gradiant
+Gradiant
+''''''''
 
 .. math:: (df)^♯ = \mathbf{∇} f
 
-.. rubric:: Divergence
+Divergence
+''''''''''
 
 .. math:: ⋆ d ⋆ F^♭ = \mathbf{∇} \cdot \mathbf{F}
 
-.. rubric:: Curl
+Curl
+''''
 
 .. math:: (⋆(dF^♭))^♯ = ∇^♯ ⨯ F^♯
 
-.. rubric:: Laplacian
+Laplacian
+'''''''''
 
 .. math:: ⋆ d ⋆ d f = \mathbf{∇}^2 f
 
