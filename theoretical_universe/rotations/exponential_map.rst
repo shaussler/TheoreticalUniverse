@@ -89,6 +89,7 @@ We have:
                                    & = - θ dx \⌟ \left(θ dx ∧ dy\right) \\
                                    & = - θ^2 dx \⌟ \left( dx ∧ dy \right) \\
                                    & = - θ^2 dy \\
+
 ----
 
 .. math::
@@ -117,6 +118,7 @@ We have:
                                    & = - θ^2 dy \⌟ \left(θ dx ∧ dy\right) \\
                                    & = - θ^3 dy \⌟ \left(- θ dy ∧ dx\right) \\
                                    & = + θ^3 dx
+
 We then get:
 
 .. math::
@@ -142,3 +144,50 @@ We then get:
       - sin(θ) dx \\
       + cos(θ) dy \\
    \end{bmatrix}
+
+3D Euclidean space
+------------------
+
+Commutation relations
+'''''''''''''''''''''
+
+.. math::
+
+   L_x &= dy ∧ dz \\
+   L_y &= dz ∧ dx \\
+   L_z &= dx ∧ dy \\
+
+.. math::
+
+   \left[ L_x, L_y \right] &= L_x L_y - L_y L_x = L_z \\
+                           &= dy ∧ dz \⌟  dz ∧ dx - dz ∧ dx \⌟ dy ∧ dz = dx ∧ dy
+
+.. math::
+
+   \small
+   V^{♭} ⌟ \left[ dy ∧ dz, dz ∧ dx \right]
+   &= \begin{bmatrix} a dx \\ b dy \\ c dz \end{bmatrix} \⌟ dy ∧ dz \⌟  dz ∧ dx
+   - \begin{bmatrix} a dx \\ b dy \\ c dz \end{bmatrix} \⌟ dz ∧ dx \⌟ dy ∧ dz
+   \\ &= \begin{bmatrix} + b dz \\ - c dy \end{bmatrix} \⌟ dz ∧ dx
+   - \begin{bmatrix}  - a dz \\ + c dx \end{bmatrix} \⌟ dy ∧ dz
+   \\ &= + b dx - a dy
+   \\ &= \begin{bmatrix}
+   + b dx \\
+   - a dy \\
+   \end{bmatrix}
+
+.. math::
+
+   V^{♭} ⌟ \left[ dx ∧ dy \right]
+   &= \begin{bmatrix}
+   a \: dx \\
+   b \: dy \\
+   c \: dz \\
+   \end{bmatrix}
+   \⌟
+   dx ∧ dy \\
+   &= \begin{bmatrix}
+   - b \: dx \\
+   + a \: dy \\
+   \end{bmatrix}
+

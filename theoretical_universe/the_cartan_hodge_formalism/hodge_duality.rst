@@ -24,24 +24,25 @@ experience daily. From there, generalizing the concept to 4-dimensional
 Minkowski space is natural.
 
 The first part of this article presents the core intuition behind Hodge duality
-and is meant to be quite easy to follow. Next comes a shaping operation:
-Preparing the generalization to any number of dimensions and metric signatures.
-I lay out the relation between the exterior product, matrix determinant,
-surface, volume and hypervolume. This will permit to generalize the inner
-product to k--vectors. Finally, I systematically calculate of the Hodge duals
-of vectors, bivectors, trivectors and quadvectors in Minkowski spacetime with
-metric signature :math:`(+,-,-,-)`. For an efficient method to calculate the
-Hodge dual, as well as calculating the inner product on k--forms, have a look
-at the article :ref:`Hodge dual computations`.
+in 3--dimensional Euclidean space and is meant to be easy to follow. Next comes
+a shaping operation: Preparing the generalization to any number of dimensions
+and metric signatures. I lay out the relation between the exterior product,
+matrix determinant, surface, volume and hypervolume. This will permit to
+generalize the inner product to k--vectors. Finally, I systematically calculate
+of the Hodge duals of vectors, bivectors, trivectors and quadvectors in
+Minkowski spacetime with metric signature :math:`(+,-,-,-)`.
 
-This discussion assumes you, the reader, have a solid understanding of vector
-and tensor calculus, as well as familiarity with the exterior product and Élie
-Cartan's differential forms.
+For a straightforward method using the interior product :math:`⌟` to calculate
+the Hodge dual of k--forms, have a look at the page :ref:`Hodge dual
+computations`. This article also provides an easier method to calculate the
+inner product between k--forms.
 
-I systematically use within this pages a toolbox of concepts and notations that
-I dub the Cartan-Hodge formalism. The notation is quite standard and should be
-widely recognized. In this page, basis vectors :math:`\mathbf{e}_μ` are noted
-with the partial derivative symbol :math:`∂_μ`:
+This discussion assumes you have a solid understanding the exterior product and
+Élie Cartan's differential forms.
+
+Notations in this page are standard and should be widely recognized. See that
+basis vectors :math:`\mathbf{e}_μ` are noted with the partial derivative symbol
+:math:`∂_μ`:
 
 .. math::
 
@@ -53,7 +54,7 @@ with the partial derivative symbol :math:`∂_μ`:
 I don't necessarily expect all readers to have ever considered :ref:`partial
 derivatives as basis vectors <partial derivatives as basis vectors>`. For our
 purpose, this is simply a matter of a notation. I use for the inner product
-either the dot notation :math:`\cdot`, or the bra-ket notation from quantum
+either the dot notation :math:`\cdot` or the bra-ket notation from quantum
 mechanics :math:`\braket{|}` when it helps readability.
 
 I point out the work of `Michael Penn <https://www.michael-penn.net>`_  on
@@ -69,12 +70,8 @@ page:
   <https://m.youtube.com/watch?v=vDRfADusqYQ>`_.
 
 These videos provide an alternative, yet equivalent, approach to the
-conclusions presented here. There is also the added bonus that he
-uses the same metric signature :math:`(+,-,-,-)`.
-
-You might also be interested in the article :ref:`Hodge dual computations`,
-which presents as method for systematically calculating the Hodge dual using
-the interior product :math:`⌟` in a fast, efficient, (and satisfying) manner.
+conclusions presented here. There is also the added bonus that he uses the same
+metric signature :math:`(+,-,-,-)`.
 
 .. }}}
 
@@ -1084,7 +1081,6 @@ In Minkowski space, all quadvectors are proportional to :math:`∂_t ∧ ∂_x �
 
 .. }}}
 
-
 Formal and natural definition
 -----------------------------
 
@@ -1124,13 +1120,24 @@ this example, we obtain:
 Duality in Minkowski space
 --------------------------
 
+.. {{{
+
+With the formal definition of the Hodge dual and the calculated inner products
+on k--vectors, we systematically compute the Hodge dual in Minkowski using the
+mostly negative Minkowski metric signature :math:`(+,-,-,-)`. I first give the
+Hodge dual for k--vectors, as developed throughout this page, and then extend
+it to k--forms.
+
+For a straightforward and alternative calculation of the Hodge duals using the
+interior product :math:`⌟`, you can have a look at the page :ref:`Hodge dual
+computations`.
+
+.. }}}
+
 k--vectors
 ''''''''''
 
 .. {{{
-
-With this, we can conclude and fully determine the Hodge dual of all k--vectors
-in Minkowski space:
 
 .. topic:: Hodge duals of vectors in Minkowski Space
 
@@ -1201,10 +1208,10 @@ in Minkowski space:
    .. math::
 
       \begin{alignedat}{2}
-      ⋆ ∂_t & = \braket{∂_t | ∂_t} & ∂_x ∧ ∂_y ∧ ∂_z \\
-      ⋆ ∂_x & = \braket{∂_x | ∂_x} & ∂_t ∧ ∂_z ∧ ∂_y \\
-      ⋆ ∂_y & = \braket{∂_y | ∂_y} & ∂_t ∧ ∂_x ∧ ∂_z \\
-      ⋆ ∂_z & = \braket{∂_z | ∂_z} & ∂_t ∧ ∂_y ∧ ∂_x \\
+          ⋆ ∂_t & = \braket{∂_t | ∂_t} & ∂_x ∧ ∂_y ∧ ∂_z \\
+          ⋆ ∂_x & = \braket{∂_x | ∂_x} & ∂_t ∧ ∂_z ∧ ∂_y \\
+          ⋆ ∂_y & = \braket{∂_y | ∂_y} & ∂_t ∧ ∂_x ∧ ∂_z \\
+          ⋆ ∂_z & = \braket{∂_z | ∂_z} & ∂_t ∧ ∂_y ∧ ∂_x \\
       \end{alignedat}
 
    .. rubric:: Reorder
@@ -1212,10 +1219,10 @@ in Minkowski space:
    .. math::
 
       \begin{alignedat}{3}
-      ⋆ ∂_t & = \braket{∂_t | ∂_t} & (+1) & ∂_x ∧ ∂_y ∧ ∂_z \\
-      ⋆ ∂_x & = \braket{∂_x | ∂_x} & (-1) & ∂_t ∧ ∂_y ∧ ∂_z \\
-      ⋆ ∂_y & = \braket{∂_y | ∂_y} & (-1) & ∂_t ∧ ∂_z ∧ ∂_x \\
-      ⋆ ∂_z & = \braket{∂_z | ∂_z} & (-1) & ∂_t ∧ ∂_x ∧ ∂_y \\
+          ⋆ ∂_t & = \braket{∂_t | ∂_t} & (+1) & ∂_x ∧ ∂_y ∧ ∂_z \\
+          ⋆ ∂_x & = \braket{∂_x | ∂_x} & (-1) & ∂_t ∧ ∂_y ∧ ∂_z \\
+          ⋆ ∂_y & = \braket{∂_y | ∂_y} & (-1) & ∂_t ∧ ∂_z ∧ ∂_x \\
+          ⋆ ∂_z & = \braket{∂_z | ∂_z} & (-1) & ∂_t ∧ ∂_x ∧ ∂_y \\
       \end{alignedat}
 
    .. rubric:: Apply the values of the inner products
@@ -1223,10 +1230,10 @@ in Minkowski space:
    .. math::
 
       \begin{alignedat}{3}
-      ⋆ ∂_t & = (+1) & (+1) & ∂_x ∧ ∂_y ∧ ∂_z \\
-      ⋆ ∂_x & = (-1) & (-1) & ∂_t ∧ ∂_y ∧ ∂_z \\
-      ⋆ ∂_y & = (-1) & (-1) & ∂_t ∧ ∂_z ∧ ∂_x \\
-      ⋆ ∂_z & = (-1) & (-1) & ∂_t ∧ ∂_x ∧ ∂_y \\
+          ⋆ ∂_t & = (+1) & (+1) & ∂_x ∧ ∂_y ∧ ∂_z \\
+          ⋆ ∂_x & = (-1) & (-1) & ∂_t ∧ ∂_y ∧ ∂_z \\
+          ⋆ ∂_y & = (-1) & (-1) & ∂_t ∧ ∂_z ∧ ∂_x \\
+          ⋆ ∂_z & = (-1) & (-1) & ∂_t ∧ ∂_x ∧ ∂_y \\
       \end{alignedat}
 
    .. rubric:: Conclude
@@ -1249,12 +1256,12 @@ in Minkowski space:
    .. math::
 
       \begin{alignedat}{2}
-      ⋆ (∂_t ∧ ∂_x) &= -& ∂_y ∧ ∂_z \\
-      ⋆ (∂_t ∧ ∂_y) &= -& ∂_z ∧ ∂_x \\
-      ⋆ (∂_t ∧ ∂_z) &= -& ∂_x ∧ ∂_y \\
-      ⋆ (∂_y ∧ ∂_z) &=  & ∂_t ∧ ∂_x \\
-      ⋆ (∂_z ∧ ∂_x) &=  & ∂_t ∧ ∂_y \\
-      ⋆ (∂_x ∧ ∂_y) &=  & ∂_t ∧ ∂_z \\
+          ⋆ (∂_t ∧ ∂_x) &= -& ∂_y ∧ ∂_z \\
+          ⋆ (∂_t ∧ ∂_y) &= -& ∂_z ∧ ∂_x \\
+          ⋆ (∂_t ∧ ∂_z) &= -& ∂_x ∧ ∂_y \\
+          ⋆ (∂_y ∧ ∂_z) &=  & ∂_t ∧ ∂_x \\
+          ⋆ (∂_z ∧ ∂_x) &=  & ∂_t ∧ ∂_y \\
+          ⋆ (∂_x ∧ ∂_y) &=  & ∂_t ∧ ∂_z \\
       \end{alignedat}
 
 .. admonition:: Calculations
@@ -1301,12 +1308,12 @@ in Minkowski space:
    .. math::
 
       \begin{alignedat}{3}
-      ⋆ (∂_t ∧ ∂_x) &= -& ∂_y ∧ ∂_z \\
-      ⋆ (∂_t ∧ ∂_y) &= -& ∂_z ∧ ∂_x \\
-      ⋆ (∂_t ∧ ∂_z) &= -& ∂_x ∧ ∂_y \\
-      ⋆ (∂_y ∧ ∂_z) &=  & ∂_t ∧ ∂_x \\
-      ⋆ (∂_z ∧ ∂_x) &=  & ∂_t ∧ ∂_y \\
-      ⋆ (∂_x ∧ ∂_y) &=  & ∂_t ∧ ∂_z \\
+          ⋆ (∂_t ∧ ∂_x) &= -& ∂_y ∧ ∂_z \\
+          ⋆ (∂_t ∧ ∂_y) &= -& ∂_z ∧ ∂_x \\
+          ⋆ (∂_t ∧ ∂_z) &= -& ∂_x ∧ ∂_y \\
+          ⋆ (∂_y ∧ ∂_z) &=  & ∂_t ∧ ∂_x \\
+          ⋆ (∂_z ∧ ∂_x) &=  & ∂_t ∧ ∂_y \\
+          ⋆ (∂_x ∧ ∂_y) &=  & ∂_t ∧ ∂_z \\
       \end{alignedat}
 
    .. }}}
@@ -1331,10 +1338,10 @@ in Minkowski space:
    .. math::
 
       \begin{alignedat}{2}
-      ⋆ ∂_x ∧ ∂_y ∧ ∂_z &\propto - & ∂_t \\
-      ⋆ ∂_t ∧ ∂_y ∧ ∂_z &\propto   & ∂_x \\
-      ⋆ ∂_t ∧ ∂_z ∧ ∂_x &\propto   & ∂_y \\
-      ⋆ ∂_t ∧ ∂_x ∧ ∂_y &\propto   & ∂_z \\
+          ⋆ ∂_x ∧ ∂_y ∧ ∂_z &\propto - & ∂_t \\
+          ⋆ ∂_t ∧ ∂_y ∧ ∂_z &\propto   & ∂_x \\
+          ⋆ ∂_t ∧ ∂_z ∧ ∂_x &\propto   & ∂_y \\
+          ⋆ ∂_t ∧ ∂_x ∧ ∂_y &\propto   & ∂_z \\
       \end{alignedat}
 
    Indeed, we check this for all entries:
@@ -1342,10 +1349,10 @@ in Minkowski space:
    .. math::
 
       \begin{alignedat}{2}
-      ⋆ ∂_x ∧ ∂_y ∧ ∂_z \propto ∂_t & \rightarrow   & ∂_x ∧ ∂_y ∧ ∂_z ∧ ∂_t \\
-                                    & \rightarrow - & ∂_x ∧ ∂_y ∧ ∂_t ∧ ∂_z \\
-                                    & \rightarrow   & ∂_x ∧ ∂_t ∧ ∂_y ∧ ∂_z \\
-                                    & \rightarrow - & ∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z \\
+         ⋆ ∂_x ∧ ∂_y ∧ ∂_z \propto ∂_t & \rightarrow   & ∂_x ∧ ∂_y ∧ ∂_z ∧ ∂_t \\
+                                       & \rightarrow - & ∂_x ∧ ∂_y ∧ ∂_t ∧ ∂_z \\
+                                       & \rightarrow   & ∂_x ∧ ∂_t ∧ ∂_y ∧ ∂_z \\
+                                       & \rightarrow - & ∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z \\
       \end{alignedat}
 
    .. math::
@@ -1359,9 +1366,9 @@ in Minkowski space:
    .. math::
 
       \begin{alignedat}{2}
-      ⋆ ∂_t ∧ ∂_z ∧ ∂_x \propto ∂_y & \rightarrow   & ∂_t ∧ ∂_z ∧ ∂_x ∧ ∂_y \\
-                                    & \rightarrow - & ∂_t ∧ ∂_x ∧ ∂_z ∧ ∂_y \\
-                                    & \rightarrow   & ∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z \\
+         ⋆ ∂_t ∧ ∂_z ∧ ∂_x \propto ∂_y & \rightarrow   & ∂_t ∧ ∂_z ∧ ∂_x ∧ ∂_y \\
+                                       & \rightarrow - & ∂_t ∧ ∂_x ∧ ∂_z ∧ ∂_y \\
+                                       & \rightarrow   & ∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z \\
       \end{alignedat}
 
    .. math::
@@ -1373,10 +1380,10 @@ in Minkowski space:
    .. math::
 
       \begin{alignedat}{2}
-      ⋆ ∂_x ∧ ∂_y ∧ ∂_z &= \braket{∂_x ∧ ∂_y ∧ ∂_z | ∂_x ∧ ∂_y ∧ ∂_z}- & ∂_t \\
-      ⋆ ∂_t ∧ ∂_y ∧ ∂_z &= \braket{∂_t ∧ ∂_y ∧ ∂_z | ∂_t ∧ ∂_y ∧ ∂_z}  & ∂_x \\
-      ⋆ ∂_t ∧ ∂_z ∧ ∂_x &= \braket{∂_t ∧ ∂_z ∧ ∂_x | ∂_t ∧ ∂_z ∧ ∂_x}  & ∂_y \\
-      ⋆ ∂_t ∧ ∂_x ∧ ∂_y &= \braket{∂_t ∧ ∂_x ∧ ∂_y | ∂_t ∧ ∂_x ∧ ∂_y}  & ∂_z \\
+         ⋆ ∂_x ∧ ∂_y ∧ ∂_z &= \braket{∂_x ∧ ∂_y ∧ ∂_z | ∂_x ∧ ∂_y ∧ ∂_z}- & ∂_t \\
+         ⋆ ∂_t ∧ ∂_y ∧ ∂_z &= \braket{∂_t ∧ ∂_y ∧ ∂_z | ∂_t ∧ ∂_y ∧ ∂_z}  & ∂_x \\
+         ⋆ ∂_t ∧ ∂_z ∧ ∂_x &= \braket{∂_t ∧ ∂_z ∧ ∂_x | ∂_t ∧ ∂_z ∧ ∂_x}  & ∂_y \\
+         ⋆ ∂_t ∧ ∂_x ∧ ∂_y &= \braket{∂_t ∧ ∂_x ∧ ∂_y | ∂_t ∧ ∂_x ∧ ∂_y}  & ∂_z \\
       \end{alignedat}
 
    .. math::
@@ -1425,17 +1432,17 @@ k--forms
 
 .. {{{
 
-We have established the Hodge dual of k--vectors. This procedure can be
+We now have established the Hodge dual of k--vectors. This procedure can be
 also applied to k--forms. As with k--vectors, the Hodge dual on k--forms is
 defined by the property that for all k--forms :math:`α` and :math:`β`, the
 following equation holds:
 
 .. math::
 
-   α ∧ ⋆ β = α · β dt ∧ dx ∧ dy ∧ dz
+   α ∧ ⋆ β = \braket{α|β} dt ∧ dx ∧ dy ∧ dz
 
-Here, :math:`α · β` is the inner product on k--forms, which is lifted from the
-inner product on 1--forms, as previously demonstrated for k--vectors:
+Here, :math:`\braket{α|β} = α · β` is the inner product on k--forms, lifted
+from the inner product on 1--forms as previously investigated for k--vectors:
 
 .. math::
 
@@ -1457,12 +1464,12 @@ Consequently we obtain:
    .. math::
 
       \begin{alignedat}{2}
-      ⋆ dt ∧ dx &= -& dy ∧ dz \\
-      ⋆ dt ∧ dy &= -& dz ∧ dx \\
-      ⋆ dt ∧ dz &= -& dx ∧ dy \\
-      ⋆ dy ∧ dz &=  & dt ∧ dx \\
-      ⋆ dz ∧ dx &=  & dt ∧ dy \\
-      ⋆ dx ∧ dy &=  & dt ∧ dz \\
+         ⋆ dt ∧ dx &= -& dy ∧ dz \\
+         ⋆ dt ∧ dy &= -& dz ∧ dx \\
+         ⋆ dt ∧ dz &= -& dx ∧ dy \\
+         ⋆ dy ∧ dz &=  & dt ∧ dx \\
+         ⋆ dz ∧ dx &=  & dt ∧ dy \\
+         ⋆ dx ∧ dy &=  & dt ∧ dz \\
       \end{alignedat}
 
 .. topic:: Hodge duals of 3-forms in Minkowski space
