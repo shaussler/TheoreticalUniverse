@@ -28,8 +28,20 @@ intuitively expect it should. You may also just find this method a usefull as
 an efficient trick to determine the inner product between k--forms, or the
 Hodge dual of k-forms.
 
+In this page, I call the top-dimensional differential form the
+**pseudo-scalar**. Specifically, the pseudo-scalar is:
+* :math:`dx ∧ dy ∧ dz` in 3D--Euclidean space, and
+* :math:`dt ∧ dx ∧ dy ∧ dz` in 4D--Minkowski space.
+
+The term **pseudo-scalar** is chosen because the Hodge dual of these
+top-dimensional differential forms results in scalar quantities. This naming
+convention highlights the relationship between these forms and scalar fields
+through the Hodge duality.
+
 Inner product on k--froms
 -------------------------
+
+.. {{{
 
 To establish a common foundation, recall that the inner product of k--vectors
 is equal to that of k--forms. For basis vectors and covectors, the inner
@@ -101,8 +113,12 @@ Simmilarly, the interior product of a basis vector can be taken with a
                          &= dx · dx \\
                          &= -1
 
+.. }}}
+
 Hodge dual of k--forms
 ----------------------
+
+.. {{{
 
 In the article :ref:`Hodge duality`, the inclusion of the inner product to
 determine the Hodge dual of k--forms is explained. Here I present how to
@@ -123,6 +139,8 @@ For example, the Hodge dual of :math:`dx ∧ dy` is:
              & = - (dy · dy) \: dt ∧ dz \\
              & = dt ∧ dz \\
 
+.. }}}
+
 Euclidean space
 ---------------
 
@@ -138,9 +156,22 @@ Minkowski space
 Inner product
 '''''''''''''
 
+.. {{{
+
 We can systematicall apply the procedure to obtain the same result as above:
 
 .. rubric:: 1--forms
+
+.. math::
+
+   \begin{array}{c|rrrr}
+           & dt & dx  & dy  & dz \\
+       \hline
+       dt & +1  &  0  &  0  &  0 \\
+       dx &  0  & -1  &  0  &  0 \\
+       dy &  0  &  0  & -1  &  0 \\
+       dz &  0  &  0  &  0  & -1 \\
+   \end{array}
 
 .. math::
 
@@ -156,6 +187,18 @@ We can systematicall apply the procedure to obtain the same result as above:
 
 .. math::
 
+   \begin{array}{c|rrrrrr}
+              & dt ∧ dx & dt ∧ dy & dt ∧ dz & dy ∧ dz & dz ∧ dx & dx ∧ dy \\
+              \hline
+      dt ∧ dx & -1      &  0      &  0      &   0     &  0      &  0      \\
+      dt ∧ dy &  0      & -1      &  0      &   0     &  0      &  0      \\                                                                     dt ∧ dz &  0      &  0      & -1      &   0     &  0      &  0      \\
+      dy ∧ dz &  0      &  0      &  0      &  +1     &  0      &  0      \\
+      dz ∧ dx &  0      &  0      &  0      &   0     & +1      &  0      \\
+      dx ∧ dy &  0      &  0      &  0      &   0     &  0      & +1      \\
+   \end{array}
+
+.. math::
+
    \newcommand{\⌟}{\:⌟\:}
    \newcommand{\·}{\:·\:}
    \begin{alignedat}{5}
@@ -167,6 +210,16 @@ We can systematicall apply the procedure to obtain the same result as above:
    \end{alignedat}
 
 .. rubric:: 3--forms
+
+
+.. math::                                                                                                                                  
+   \begin{array}{c|rrrr}
+                   & dx ∧ dy ∧ dz & dt ∧ dy ∧ dz & dt ∧ dz ∧ dx & dt ∧ dx ∧ dy \\
+                   \hline
+      dx ∧ dy ∧ dz & -1           &  0           &   0          &   0          \\
+      dt ∧ dy ∧ dz &  0           & +1           &   0          &   0          \\
+      dt ∧ dz ∧ dx &  0           &  0           &  +1          &   0          \\                                                                dt ∧ dx ∧ dy &  0           &  0           &   0          &  +1          \\
+   \end{array}
 
 .. math::
 
@@ -183,6 +236,13 @@ We can systematicall apply the procedure to obtain the same result as above:
 
 .. math::
 
+   \begin{array}{c|c}
+                         & dt ∧ dx ∧ dy ∧ dz \\                                                                                                   \hline
+       dt ∧ dx ∧ dy ∧ dz &                -1 \\
+   \end{array}
+
+.. math::
+
    \newcommand{\⌟}{\:⌟\:}
    \newcommand{\·}{\:·\:}
    (dt ∧ dx ∧ dy ∧ dz) \· (dt ∧ dx ∧ dy ∧ dz) &= dz \⌟ dy \⌟ dx \⌟ dt \⌟ dt ∧ dx ∧ dy ∧ dz \\
@@ -191,8 +251,12 @@ We can systematicall apply the procedure to obtain the same result as above:
                                              &= +1 dz \⌟ ∧ dz \\
                                              &= -1
 
+.. }}}
+
 Hodge duals
 '''''''''''
+
+.. {{{
 
 .. rubric:: 1-forms
 
@@ -206,11 +270,10 @@ Hodge duals
 .. admonition:: Calculations
    :class: dropdown, toggle-shown
 
-   .. rubric:: Take the inner product with the pseudoscalar
+   .. rubric:: Take the interior product with the pseudoscalar
 
    .. math::
 
-      \newcommand{\⌟}{\:⌟\:}
       ⋆ dt &=& dt &\⌟ dt ∧ dx ∧ dy ∧ dz \\
       ⋆ dx &=& dx &\⌟ dt ∧ dx ∧ dy ∧ dz \\
       ⋆ dy &=& dy &\⌟ dt ∧ dx ∧ dy ∧ dz \\
@@ -220,7 +283,6 @@ Hodge duals
 
    .. math::
 
-      \newcommand{\⌟}{\:⌟\:}
       ⋆ dt &=& + dt &\⌟ dt ∧ dx ∧ dy ∧ dz \\
       ⋆ dx &=& - dx &\⌟ dx ∧ dt ∧ dy ∧ dz \\
       ⋆ dy &=& - dy &\⌟ dy ∧ dt ∧ dz ∧ dx \\
@@ -230,7 +292,6 @@ Hodge duals
 
    .. math::
 
-      \newcommand{\.}{\:.\:}
       ⋆& dt &=& + (& dt &\·& dt &) \: & dx ∧ dy ∧ dz \\
       ⋆& dx &=& - (& dx &\·& dx &) \: & dt ∧ dy ∧ dz \\
       ⋆& dy &=& - (& dy &\·& dy &) \: & dt ∧ dz ∧ dx \\

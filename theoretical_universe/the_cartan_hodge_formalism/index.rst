@@ -130,83 +130,17 @@ also valid in the free matrix representation:
 
 .. }}}
 
-Hodge duality
--------------
-
-Inner product of k-forms in Minkowski space
-'''''''''''''''''''''''''''''''''''''''''''
-
-.. {{{
-
-The inner product of k-forms in Minkowski space are calculated for the basis
-vectors, bivectors, trivectors and quadvectors and summarized here in table
-form.
-
-----
-
-.. math::
-
-   \begin{array}{c|rrrr}
-           & ∂_t & ∂_x & ∂_y & ∂_z \\
-       \hline
-       ∂_t & +1  &  0  &  0  &  0  \\
-       ∂_x &  0  & -1  &  0  &  0  \\
-       ∂_y &  0  &  0  & -1  &  0  \\
-       ∂_z &  0  &  0  &  0  & -1  \\
-   \end{array}
-
-----
-
-.. math::
-
-   \begin{array}{c|rrrrrr}
-             & ∂_t ∧ ∂_x & ∂_t ∧ ∂_y & ∂_t ∧ ∂_z & ∂_y ∧ ∂_z & ∂_z ∧ ∂_x & ∂_x ∧ ∂_y \\
-             \hline
-   ∂_t ∧ ∂_x & -1        &  0        &  0        &   0       &  0        &  0        \\
-   ∂_t ∧ ∂_y &  0        & -1        &  0        &   0       &  0        &  0        \\
-   ∂_t ∧ ∂_z &  0        &  0        & -1        &   0       &  0        &  0        \\
-   ∂_y ∧ ∂_z &  0        &  0        &  0        &  +1       &  0        &  0        \\
-   ∂_z ∧ ∂_x &  0        &  0        &  0        &   0       & +1        &  0        \\
-   ∂_x ∧ ∂_y &  0        &  0        &  0        &   0       &  0        & +1        \\
-   \end{array}
-
-----
-
-.. math::
-
-   \begin{array}{c|rrrr}
-                   & ∂_x ∧ ∂_y ∧ ∂_z & ∂_t ∧ ∂_y ∧ ∂_z & ∂_t ∧ ∂_z ∧ ∂_x & ∂_t ∧ ∂_x ∧ ∂_y \\
-                   \hline
-   ∂_x ∧ ∂_y ∧ ∂_z & -1              &  0              &   0             &   0             \\
-   ∂_t ∧ ∂_y ∧ ∂_z &  0              & +1              &   0             &   0             \\
-   ∂_t ∧ ∂_z ∧ ∂_x &  0              &  0              &  +1             &   0             \\
-   ∂_t ∧ ∂_x ∧ ∂_y &  0              &  0              &   0             &  +1             \\
-   \end{array}
-
-----
-
-.. math::
-
-   \begin{array}{c|c}
-                             & ∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z \\
-       \hline
-       ∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z &                    -1 \\
-   \end{array}
-
-
-----
-
-.. }}}
-
 .. _hodge dual tables:
 
-Hodge dual tables
-'''''''''''''''''
+Hodge dual of k--forms in Minkowski space
+-----------------------------------------
 
 .. {{{
 
 The Hodge duality assumes a central role, transitioning tensors between spaces
 and their dual complements.
+
+.. rubric:: 1--forms
 
 .. math::
 
@@ -215,7 +149,7 @@ and their dual complements.
    ⋆ dy & = dt ∧ dz ∧ dx \\
    ⋆ dz & = dt ∧ dx ∧ dy \\
 
-----
+.. rubric:: 2--forms
 
 .. math::
 
@@ -228,7 +162,7 @@ and their dual complements.
    ⋆ dx ∧ dy &=  & dt ∧ dz \\
    \end{alignedat}
 
-----
+.. rubric:: 3--forms
 
 .. math::
 
@@ -237,7 +171,7 @@ and their dual complements.
    ⋆ dt ∧ dz ∧ dx &= dy \\
    ⋆ dt ∧ dx ∧ dy &= dz \\
 
-----
+.. rubric:: 4--forms
 
 .. math::
 
