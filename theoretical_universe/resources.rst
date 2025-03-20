@@ -1,8 +1,8 @@
 Resources
 =========
 
-In this section, I list and review the best material I came across about the
-mathematics I am interested in.
+On this page, I list and review materials I have come across, enjoyed, and
+learned from in the areas of mathematics and physics that interest me.
 
 Lectures
 --------
@@ -21,6 +21,26 @@ Maxwell's equations via differential forms introduced.
 In `14/15 PSI - Relativity - Lecture 1 <https://pirsa.org/14090007>`_, `Neil
 Turok <https://en.m.wikipedia.org/wiki/Neil_Turok>`_ gives a concise and
 precise presentation of Maxwell's equations in tensor notation.
+
+.. rubric:: Representations of Maxwell's equations by Peter Joot
+
+In his video series, `Representations of Maxwell's equations
+<https://www.youtube.com/watch?v=d1YGrLVjbUQ&list=PL7_teJROyYjilE9R_7PpFpkqqDvSaxj4c>`_,
+`Peter Joot <https://www.youtube.com/@PeeterJoot>`_, explores a wide range of
+formulations of Maxwell's equations in great detail:
+
+* Vector formulation
+* Tensor formulation
+* Geometric algebra formulation
+* Spacetime algebra formulation
+* Differential forms formulation
+
+I appreciated the thorough step-by-step derivations. For completeness, since
+the forumlation in terms of quaternions is not covered in these videos, Peter
+Joot has nontheless `a blog post about this
+<https://peeterjoot.com/2018/03/05/a-derivation-of-the-quaternion-maxwells-equations-using-geometric-algebra/>`_.
+I have watched the whole video series but have not gone through the details of
+the blog post.
 
 .. rubric:: Review of Manifold Basics by Ruth Gregory
 
@@ -62,7 +82,6 @@ that I am going through. Here is a list of videos I intend to watch later.
 * `Gravitational Physics Lecture 2 <https://pirsa.org/24010049>`_
 * `Gravitational Physics Lecture 3 <https://pirsa.org/24010050>`_
 * `Gravitational Physics Lecture 4 <https://pirsa.org/24010051>`_
-
 * `PSI 2017/2018 - Gravitational Physics - Lecture 3: Applying Cartan:
   Spherically Symmetric Spacetimes -- Schwarzschild, Relativistic Stars.
   <https://pirsa.org/18010023>`_
@@ -72,6 +91,8 @@ that I am going through. Here is a list of videos I intend to watch later.
 I am yet to watch the serie `Relativity and Cosmology II
 <https://www.thp.uni-koeln.de/gravitation/courses/rcii21.html>`_ by Claus
 Kiefer.
+
+.. rubric:: Cartan
 
 I am interested in Cartan connections and Cartan structure equations and the
 following content:
@@ -84,23 +105,16 @@ following content:
   <https://www.youtube.com/watch?v=lJFjFyXiZD4&list=PLelGJJV9hME1I04Cd8pbXd5GuN-qw1les&index=11>`_
 * `10.7 - 8. Metricity, applications, integration, Maxwell and Einstein equations.
   <https://www.youtube.com/watch?v=eWpm6FXKC7Q&list=PLelGJJV9hME1I04Cd8pbXd5GuN-qw1les&index=12>`_
+* `Connections, Curvature and Covariant Derivatives
+  <https://www.youtube.com/watch?v=NEO8ozOH33M&list=PLJmfLfPx1OefvYSzPxWAqvq5v6g1iicha>`_
+  by `Taylor Dupuy <https://www.youtube.com/@taylordupuy2402>`_
 
 Q&A
 ---
 
-I sometimes participate in discussions, which are gathered here:
+I sometimes but rarely participate in discussions, which are gathered here:
 
 .. rubric:: Physics Stackexchange
 
 * `Deriving the Electromagnetic Tensor
   <https://physics.stackexchange.com/questions/91421/deriving-the-electromagnetic-tensor/811409#811409>`_
-
-.. rubric:: Quora
-
-* `Using Maxwell's equations (in differential form), how does one explain that
-  an electromagnetic wave can propagate in a vacuum?
-  <https://www.quora.com/Using-Maxwells-equations-in-differential-form-how-does-one-explain-that-an-electromagnetic-wave-can-propagate-in-a-vacuum/answer/St%C3%A9phane-Haussler>`_
-
-.. * `What is an intuitive explanation of differential forms formulation of
-..  Maxwell's equations?
-..  <https://www.quora.com/What-is-an-intuitive-explanation-of-differential-forms-formulation-of-Maxwells-equations/answer/St%C3%A9phane-Haussler>`_

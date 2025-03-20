@@ -30,6 +30,7 @@ Hodge dual of k-forms.
 
 In this page, I call the top-dimensional differential form the
 **pseudo-scalar**. Specifically, the pseudo-scalar is:
+
 * :math:`dx ∧ dy ∧ dz` in 3D--Euclidean space, and
 * :math:`dt ∧ dx ∧ dy ∧ dz` in 4D--Minkowski space.
 
