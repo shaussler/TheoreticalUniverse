@@ -15,7 +15,7 @@ Basis vectors
 
 .. _partial derivatives as basis vectors:
 
-Partial Derivatives
+Partial derivatives
 -------------------
 
 .. {{{
@@ -117,7 +117,7 @@ For the basis covectors, we have:
 
 .. _orientation_of_space:
 
-Basis Elements
+Basis elements
 --------------
 
 .. {{{
@@ -154,7 +154,7 @@ these two vectors :math:`|V^♯ ∧ W^♯| = V^i W^j δ_{ji} sin(θ)`.
 
 .. }}}
 
-Orientation of Space
+Orientation of space
 --------------------
 
 .. {{{

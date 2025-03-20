@@ -7,7 +7,7 @@ learned from in the areas of mathematics and physics that interest me.
 Lectures
 --------
 
-.. rubric:: Differential Forms by Michael Penn
+.. rubric:: Differential forms by Michael Penn
 
 The serie `Differential Forms
 <https://www.youtube.com/playlist?list=PL22w63XsKjqzQZtDZO_9s2HEMRJnaOTX7>`_ by
@@ -16,7 +16,7 @@ lectures covering the exterior product, the exterior derivative, and the Hodge
 operator. The Hodge dual in 4-dimensional Minkowski space is included and
 Maxwell's equations via differential forms introduced.
 
-.. rubric:: Maxwell's Theory in Relativistic Notations by Neil Turok
+.. rubric:: Maxwell's theory in relativistic notations by Neil Turok
 
 In `14/15 PSI - Relativity - Lecture 1 <https://pirsa.org/14090007>`_, `Neil
 Turok <https://en.m.wikipedia.org/wiki/Neil_Turok>`_ gives a concise and
@@ -42,15 +42,15 @@ Joot has nontheless `a blog post about this
 I have watched the whole video series but have not gone through the details of
 the blog post.
 
-.. rubric:: Review of Manifold Basics by Ruth Gregory
+.. rubric:: Review of manifold basics by Ruth Gregory
 
 In her `Gravitational Physics Lecture of January 8, 2024
 <https://pirsa.org/24010048>`_, `Ruth Gregory
 <https://en.m.wikipedia.org/wiki/Ruth_Gregory>`_ gives a rushed overview of
 Manifold basics. This is not learning material though, but review material.
 
-.. rubric:: Cartan's method of moving frames, tetrads, and Cartan’s Structure
-   Equations
+.. rubric:: Cartan's method of moving frames, tetrads, and Cartan’s structure
+   equations
 
 This covers the tetrad formalism, non-coordinate bases, Cartan's method of
 moving frames, and Cartan's structure equations. The more interesting the
@@ -73,7 +73,7 @@ and be prepare to watch thrice:
 * `PSI 2018/2019 - Gravitational Physics - Lecture 3 - Cartan's formalism:
   connection & curvature <https://pirsa.org/19010053>`_
 
-.. rubric:: Gravitational Physics Lecture by Ruth Gregory
+.. rubric:: Gravitational physics lecture by Ruth Gregory
 
 There is great content from the Perimeter Institute Recorded Seminar Archive
 that I am going through. Here is a list of videos I intend to watch later.
@@ -86,7 +86,7 @@ that I am going through. Here is a list of videos I intend to watch later.
   Spherically Symmetric Spacetimes -- Schwarzschild, Relativistic Stars.
   <https://pirsa.org/18010023>`_
 
-.. rubric:: Relativity and Cosmology II
+.. rubric:: Relativity and cosmology II
 
 I am yet to watch the serie `Relativity and Cosmology II
 <https://www.thp.uni-koeln.de/gravitation/courses/rcii21.html>`_ by Claus
