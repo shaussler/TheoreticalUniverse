@@ -40,6 +40,8 @@ multiplication. While an understanding of Maxwell's equations and tensor
 calculus certainly can enrich the content, they are not essential to follow
 this derivation.
 
+.. _vector_formulation_of_mr_heaviside:
+
 Vector formulation of Mr. Heaviside
 -----------------------------------
 

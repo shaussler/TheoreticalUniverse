@@ -15,6 +15,7 @@ Covariant formulation of the electromagnetic field
    :maxdepth: 1
    :caption: Table of Contents:
 
+   revisiting_maxwell_equations.rst
    faraday_tensor_derivation.rst
    of_maxwell_equations_and_rotations.rst
    2form_vs_tensor.rst
