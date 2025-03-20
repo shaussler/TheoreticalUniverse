@@ -13,14 +13,19 @@ Revisiting the 1865 Maxwell's equations
 
 In this article, I revisit the formulation of the equations for
 electromagnetism as expressed by Professor James Clerk Maxwell in 1865. The
-form of the equations in this page draw strong inspiration from Minkowski's
-1908 paper, `The Fundamental Equations for Electromagnetic Processes in Moving
-Bodies <https://en.wikisource.org/wiki/Translation:
+structure of the equations here is strongly inspired Minkowski's 1908 paper,
+`The Fundamental Equations for Electromagnetic Processes in Moving Bodies
+<https://en.wikisource.org/wiki/Translation:
 The_Fundamental_Equations_for_Electromagnetic_Processes_in_Moving_Bodies>`_.
+Starting from the widely recognized vector formulation introduced by Mr.
+Heaviside, I rephrase this equations to adheres to the spirit of the 1865
+formulation, albeit with modern notation and structuring.
 
-I start from the widespread and most recognized vector formulation introduced
-by Mr. Heaviside, and rephrase to a form that adheres in spirtit to the
-original 1865 formulation, albeit with modern notation and splitting.
+I aim to argue that the 1865 formulation remains not only relevant today but
+also highly useful. By reordering the terms and adopting modern notation, such
+as that for partial derivatives, we can reveal its underlying structure and
+gain valuable insights. These insights are not immediately obvious in the
+standard modern vector formulation.
 
 This page can be read on its own with no reference to other content on this
 site. I assume the reader possesses a strong grasp of vector calculus,
