@@ -7,40 +7,39 @@
 .. _of_maxwell_equations_and_rotations:
 .. _of maxwell equations and rotations:
 .. _Maxwell's Equations via Differential Forms:
+.. _Deriving the Faraday 2--form from the 1865 Maxwell's equations:
 
-Deriving the Faraday 2-form from the 1865 Maxwell's equations
-=============================================================
+Deriving the Faraday 2--form from the 1865 Maxwell's equations
+==============================================================
 
 .. rst-class:: custom-title
 
-   The Connection to Rotations
+   The connection to rotations
 
 .. rst-class:: custom-author
 
    by Stéphane Haussler
 
-The present page presents a derivation of the geometric differential
-formulation of electromagnetism, emphasizing the direct connection between
-Maxwell's equations and :ref:`rotations in differential form <rotations in
-differential form>`. The mathematical expressions are based on previous
-investigations, where I utilize :ref:`the Cartan-Hodge formalism <the
-cartan-hodge formalism>` to calculate :ref:`the exterior derivative of
-rotations in spacetime <the exterior derivative of rotations in spacetime>`.
-Through a straightforward identification process, we will see that the
-equations governing electromagnetism are, in fact, spacetime rotations with the
-exterior derivative applied. In layman's terms, we can think of
-electromagnetism as a twist in spacetime.
+This page presents a derivation of the geometric differential formulation of
+electromagnetism, emphasizing the direct connection between Maxwell's equations
+and :ref:`rotations expressed with differential form <rotations in differential
+form>`. By calculating :ref:`the exterior derivative these rotations in
+spacetime <the exterior derivative of rotations in spacetime>`
+andstraightforward identification, we will see that the equations governing
+electromagnetism are, in fact, spacetime rotations with the exterior derivative
+applied. In layman's terms, we can think of electromagnetism as a torque over
+all possible 6 planes of rotations in 4--dimensional spacetime.
 
-My approach should feel more intuitive than the conventional method where the
-electromagnetic 2-form as well as the Maxwell's equations in geometric
+I hope my approach will feel more intuitive than the conventional method where
+the electromagnetic 2-form as well as the Maxwell's equations in geometric
 differential form are given upfront, and equivalence to the vector formulation
 proven backward. For an example of the standard proof, see `a nonetheless great
 video by Michael Penn <https://www.youtube.com/watch?v=YQoiR-HEUqk&t=3s>`_. The
 mathematical expressions obtained in this section correspond to `the
 well-recognized differential geometric formulation of Maxwell's equations
 <https://en.m.wikipedia.org/wiki/Mathematical_descriptions_of_the_electromagnetic_field#Differential_forms_approach>`_,
-where :math:`\mathbf{F}` is the field 2-form and :math:`\mathbf{J}` the current
-3-form.
+where :math:`\mathbf{F}` is the field 2--form and :math:`\mathbf{J}` the
+current 3--form.
 
 .. math::
 
@@ -53,48 +52,23 @@ involved by using musical notation. The electromagnetic field 2-form
 :math:`\mathbf{F}` is written :math:`F^{♭♭}`, the current 3-form :math:`J^{♭♭♭}`
 and the Hodge dual current 1-form :math:`J^♭`.
 
-The Equations of Mr. Maxwell
-----------------------------
-
-.. {{{
-
 In the article :ref:`Deriving the Faraday Tensor from the 1865 Maxwell
 Equations`, I reordered and re-expressed the original Maxwell's equations with
 modern notation. We use this form as the basis for formulating the
 electromagnetic field equations using geometric differential forms.
 
-.. rubric:: Inhomogenous Maxwell equations
+.. include:: faraday_tensor_derivation.rst
+   :start-after: _vector_formulation_of_mr_heaviside:
+   :end-before: _the_tensor_of_mr_faraday:
 
-*Gauss’s Law* and *Ampère’s Circuital Law* are gathered:
+Rotations in differential forms
+-------------------------------
 
-.. math::
-   :label: M1
+.. include:: ../rotations/rotations_in_minkowski_space.rst
+   :start-after: _include_begin_♯♯_rotations:
+   :end-before: _include_end_♯♯_rotations:
 
-   \begin{alignedat}{5}
-                & + ∂_x \E^x & + ∂_y \E^y & + ∂_z \E^z & = & + μ_0 c ρ \\
-     + ∂_t \E^x &            & - ∂_y  B^z & + ∂_z  B^y & = & - μ_0 J^x \\
-     + ∂_t \E^y & + ∂_x  B^z &            & - ∂_z  B^x & = & - μ_0 J^y \\
-     + ∂_t \E^z & - ∂_x  B^y & + ∂_y  B^x &            & = & - μ_0 J^z \\
-   \end{alignedat}
-
-.. rubric:: Homogenous Maxwell equations
-
-Similarly, *Gauss’s Law for Magnetism* and *Faraday’s Law of Induction* are also
-be formulated in this manner:
-
-.. math::
-   :label: M2
-
-   \begin{alignedat}{4}
-                & + ∂_x  B^x & + ∂_y  B^y & + ∂_z  B^z & = 0 \\
-     + ∂_t  B^x &            & + ∂_y \E^z & - ∂_z \E^y & = 0 \\
-     + ∂_t  B^y & - ∂_x \E^z &            & + ∂_z \E^x & = 0 \\
-     + ∂_t  B^z & + ∂_x \E^y & - ∂_y \E^x &            & = 0 \\
-   \end{alignedat}
-
-.. }}}
-
-The Exterior Derivative of Rotations
+The exterior derivative of rotations
 ------------------------------------
 
 .. {{{
@@ -145,14 +119,13 @@ rotations and their Hodge dual, obtaining the following expressions:
 
 .. }}}
 
-Identifying the Equations of Mr. Maxwell
+Identifying the equations of Mr. Maxwell
 ----------------------------------------
 
 .. {{{
 
-From equations :eq:`M1` and :eq:`dR1`, identifiying the components of the
-electric field :math:`\tilde{E}^i=E^i/c` and magnetic field :math:`B^i` is
-trivial:
+Identifiying the components of the electric field :math:`\tilde{E}^i=E^i/c` and
+magnetic field :math:`B^i` is trivial:
 
 .. math::
 
@@ -216,9 +189,9 @@ that rotation with :math:`d F^{♭♭}` and its Hodge dual :math:`d ⋆ F^{♭�
    \end{aligned} \right]
    = 0
 
-Thus and as advertised in the introduction, we fall back to the well-known
-expression of Maxwell equations in differential form where :math:`\mathbf{F}` is
-the field 2-form and :math:`\mathbf{J}` is the current 3-form.
+As advertised in the introduction, we fall back to the well-known expression of
+Maxwell equations in differential form where :math:`\mathbf{F}` is the field
+2-form and :math:`\mathbf{J}` is the current 3-form.
 
 .. math::
 
@@ -227,7 +200,7 @@ the field 2-form and :math:`\mathbf{J}` is the current 3-form.
 
 .. }}}
 
-A Single Equation
+A single equation
 -----------------
 
 .. {{{

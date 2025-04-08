@@ -24,8 +24,10 @@ expressed in terms of tensor products and their symmetries highlighted.
 The :math:`♯♯` rotation tensor
 ------------------------------
 
-.. {{{
+.. _include_begin_♯♯_rotations:
 
+.. {{{
+   
 General rotations can be expressed as linear combinations of rotations in each
 planes. For Minkowski space with 4 directions :math:`∂_t`, :math:`∂_x`,
 :math:`∂_y` and :math:`∂_t`, this result in 6 planes of rotations. Each plance
@@ -45,6 +47,8 @@ basis rotations in all six available planes.
           R^y \; ∂_z ∧ ∂_x \\
           R^z \; ∂_x ∧ ∂_y \\
       \end{bmatrix}
+
+.. _include_end_♯♯_rotations:
 
 The sharp symbol :math:`\sharp` indicates that the components are doubly
 contravariant tensor components. Using the antisymmetric property of the

@@ -171,8 +171,6 @@ Gathering and reordering the terms, a clear structures becomes apparent:
 
 .. }}}
 
-.. _The Ordered Equations:
-
 Ordered equations
 -----------------
 
