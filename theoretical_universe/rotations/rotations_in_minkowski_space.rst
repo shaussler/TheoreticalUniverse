@@ -24,18 +24,18 @@ expressed in terms of tensor products and their symmetries highlighted.
 The :math:`♯♯` rotation tensor
 ------------------------------
 
+.. {{{
+
 .. _include_begin_♯♯_rotations:
 
-.. {{{
-   
 General rotations can be expressed as linear combinations of rotations in each
 planes. For Minkowski space with 4 directions :math:`∂_t`, :math:`∂_x`,
 :math:`∂_y` and :math:`∂_t`, this result in 6 planes of rotations. Each plance
-is expressed as the wedge product :math:`∧` of basis vectors as :math:`∂_μ ∧
-∂_ν`. A rotation in spacetime is represented by the linear combination of all
-basis rotations in all six available planes.
+is expressed as the exterior product :math:`∧` of basis vectors as :math:`∂_μ ∧
+∂_ν`. Rotations in spacetime are expresssed as linear combination of basis
+rotations in the six available planes of rotations.
 
-.. topic:: Rotations in Minkowski Space
+.. topic:: Rotations in Minkowski space
 
    .. math::
 
@@ -82,7 +82,7 @@ With minor rearangement, we get:
 The free matrix representation permits to state the obvious, in that we can
 rewrite the rotation above utilizing a row/column matrix representation:
 
-.. topic:: The Doubly Contravariant Rotation in Matrix Form
+.. topic:: The doubly contravariant rotation in matrix form
 
    .. math::
 
@@ -100,8 +100,10 @@ The :math:`♭♭` rotation tensor
 
 .. {{{
 
-Using the Minkowski metric, we flatten a basis vector with the flat operator
-:math:`♭`:
+.. _include_begin_♭♭_rotations:
+
+Using the Minkowski metric :math:`η`, we flatten a basis vector with the flat
+operator :math:`♭`:
 
 .. math::
 
@@ -122,7 +124,7 @@ To obtain the doubly covariant representation of rotations in spacetime, we
 apply the flat operators :math:`♭♭` to each components :math:`R^{♭♭} =
 (R^{♯♯})^{♭♭}`:
 
-.. topic:: Doubly Covariant Representation of Rotations in Minkowski Space
+.. topic:: Doubly covariant representation of rotations in Minkowski space
 
    .. math::
 
@@ -206,6 +208,8 @@ apply the flat operators :math:`♭♭` to each components :math:`R^{♭♭} =
       \end{aligned} \right]
 
    .. }}}
+
+.. _include_end_♭♭_rotations:
 
 .. }}}
 

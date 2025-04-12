@@ -24,13 +24,6 @@ article, I demonstrate in :ref:`Of Maxwell Equations and Rotations
 <of_maxwell_equations_and_rotations>` that a twist in spacetime leads to the
 equations governing electromagnetism.
 
-While the concept might not be entirely novel, I have not yet encountered some
-of my observations elsewhere. If you are aware of relevant references, feel free
-to open an issue and I will include them. I you identify any errors, you can
-either open an issue, or directly submit corrections via a merge request to my
-GitHub repository: `Theoretical Universe
-<https://github.com/shaussler/TheoreticalUniverse/>`_.
-
 .. }}}
 
 Rotations
@@ -39,7 +32,7 @@ Rotations
 .. {{{
 
 Rotations in spacetime can occur in six independent planes. Any rotation can be
-decomposed into a linear combination of basis rotations within each plane:
+decomposed into a linear combination of basis rotations within each plane as:
 
 .. math::
 
@@ -71,7 +64,7 @@ covariant differential 2-form representative of the rotation:
 .. admonition:: Calculations
    :class: dropdown
 
-   .. {{{za
+   .. {{{
 
    .. rubric:: Flatten the rotation
 
@@ -95,12 +88,12 @@ covariant differential 2-form representative of the rotation:
    .. math::
 
       R^{♭♭} = \begin{bmatrix}
-        Q^x \; η_{αt} \; dx^α ∧ η_{βx} \; dx^β \\
-        Q^y \; η_{αt} \; dx^α ∧ η_{βy} \; dx^β \\
-        Q^z \; η_{αt} \; dx^α ∧ η_{βz} \; dx^β \\
-        R^x \; η_{αy} \; dx^α ∧ η_{βz} \; dx^β \\
-        R^y \; η_{αz} \; dx^α ∧ η_{βx} \; dx^β \\
-        R^z \; η_{αx} \; dx^α ∧ η_{βy} \; dx^β \\
+          Q^x \; η_{αt} \; dx^α ∧ η_{βx} \; dx^β \\
+          Q^y \; η_{αt} \; dx^α ∧ η_{βy} \; dx^β \\
+          Q^z \; η_{αt} \; dx^α ∧ η_{βz} \; dx^β \\
+          R^x \; η_{αy} \; dx^α ∧ η_{βz} \; dx^β \\
+          R^y \; η_{αz} \; dx^α ∧ η_{βx} \; dx^β \\
+          R^z \; η_{αx} \; dx^α ∧ η_{βy} \; dx^β \\
       \end{bmatrix}
 
    The exterior product :math:`∧` is bilinear. The Minkowski metric components
@@ -117,21 +110,6 @@ covariant differential 2-form representative of the rotation:
           R^z \; η_{αx} η_{βy} \; dx^α ∧ dx^β \\
       \end{bmatrix}
 
-   .. rubric:: Identify the non-zero components of the Minkowski metric
-
-   .. math::
-
-      R^{♭♭} = \begin{bmatrix}
-          Q^x \; η_{tt} η_{xx} \; dx^t ∧ dx^x \\
-          Q^y \; η_{tt} η_{yy} \; dx^t ∧ dx^y \\
-          Q^z \; η_{tt} η_{zz} \; dx^t ∧ dx^z \\
-          R^x \; η_{yy} η_{zz} \; dx^y ∧ dx^z \\
-          R^y \; η_{zz} η_{xx} \; dx^z ∧ dx^x \\
-          R^z \; η_{xx} η_{yy} \; dx^x ∧ dx^y \\
-      \end{bmatrix}
-
-   .. rubric:: Rewrite
-
    For readability, replace the :math:`dx^μ` symbols by their explicit
    expressions:
 
@@ -142,7 +120,7 @@ covariant differential 2-form representative of the rotation:
       dx^y &= dy \\
       dx^z &= dz
 
-   We obtain:
+   .. rubric:: Identify the non-zero components of the Minkowski metric
 
    .. math::
 
@@ -253,15 +231,17 @@ Applying the Hodge star to the rotation 2-form, we obtain:
 
 .. {{{
 
-Apply the exterior derivative to the rotation 2-form, we obtain:
+Applying the exterior derivative to the rotation 2-form, we obtain:
+
+.. _include_begin_dR♭♭:
 
 .. math::
 
    dR^{♭♭} = \left[ \begin{alignedat}{5}
-     (&         & + ∂_x R^x & + ∂_y R^y & + ∂_z R^z &\:) \; dx^x ∧ dx^y ∧ dx^z \\
-     (& + ∂_t R^x &         & + ∂_y Q^z & - ∂_z Q^y &\:) \; dx^t ∧ dx^y ∧ dx^z \\
-     (& + ∂_t R^y & - ∂_x Q^z &         & + ∂_z Q^x &\:) \; dx^t ∧ dx^z ∧ dx^x \\
-     (& + ∂_t R^z & + ∂_x Q^y & - ∂_y Q^x &         &\:) \; dx^t ∧ dx^x ∧ dx^y \\
+      (&         & + ∂_x R^x & + ∂_y R^y & + ∂_z R^z &\:) \; dx ∧ dy ∧ dz \\
+      (& + ∂_t R^x &         & + ∂_y Q^z & - ∂_z Q^y &\:) \; dt ∧ dy ∧ dz \\
+      (& + ∂_t R^y & - ∂_x Q^z &         & + ∂_z Q^x &\:) \; dt ∧ dz ∧ dx \\
+      (& + ∂_t R^z & + ∂_x Q^y & - ∂_y Q^x &         &\:) \; dt ∧ dx ∧ dy \\
    \end{alignedat} \right]
 
 .. admonition:: Calculations
@@ -326,13 +306,15 @@ Apply the exterior derivative to the rotation 2-form, we obtain:
    .. math::
 
       dR^{♭♭} = \left[ \begin{alignedat}{5}
-        (&         & + ∂_x R^x & + ∂_y R^y & + ∂_z R^z &\:) \; dx^x ∧ dx^y ∧ dx^z \\
-        (& + ∂_t R^x &         & + ∂_y Q^z & - ∂_z Q^y &\:) \; dx^t ∧ dx^y ∧ dx^z \\
-        (& + ∂_t R^y & - ∂_x Q^z &         & + ∂_z Q^x &\:) \; dx^t ∧ dx^z ∧ dx^x \\
-        (& + ∂_t R^z & + ∂_x Q^y & - ∂_y Q^x &         &\:) \; dx^t ∧ dx^x ∧ dx^y \\
+        (&         & + ∂_x R^x & + ∂_y R^y & + ∂_z R^z &\:) \; dx ∧ dy ∧ dz \\
+        (& + ∂_t R^x &         & + ∂_y Q^z & - ∂_z Q^y &\:) \; dt ∧ dy ∧ dz \\
+        (& + ∂_t R^y & - ∂_x Q^z &         & + ∂_z Q^x &\:) \; dt ∧ dz ∧ dx \\
+        (& + ∂_t R^z & + ∂_x Q^y & - ∂_y Q^x &         &\:) \; dt ∧ dx ∧ dy \\
       \end{alignedat} \right]
 
    .. }}}
+
+.. _include_end_dR♭♭:
 
 .. }}}
 
@@ -344,13 +326,15 @@ Apply the exterior derivative to the rotation 2-form, we obtain:
 Applying in sequence the exterior derivative and the Hodge star operator to the
 rotation 2-form, we obtain:
 
+.. _include_begin_d⋆R♭♭:
+
 .. math::
 
    d( ⋆ R^{♭♭} ) = \left[ \begin{alignedat}{5}
-     (&         & + ∂_x Q^x & + ∂_y Q^y & + ∂_z Q^z &\:) \; dx ∧ dy ∧ dz \\
-     (& + ∂_t Q^x &         & - ∂_y R^z & + ∂_z R^y &\:) \; dt ∧ dy ∧ dz \\
-     (& + ∂_t Q^y & + ∂_x R^z &         & - ∂_z R^x &\:) \; dt ∧ dz ∧ dx \\
-     (& + ∂_t Q^z & - ∂_x R^y & + ∂_y R^x &         &\:) \; dt ∧ dx ∧ dy \\
+       (&         & + ∂_x Q^x & + ∂_y Q^y & + ∂_z Q^z &\:) \; dx ∧ dy ∧ dz \\
+       (& + ∂_t Q^x &         & - ∂_y R^z & + ∂_z R^y &\:) \; dt ∧ dy ∧ dz \\
+       (& + ∂_t Q^y & + ∂_x R^z &         & - ∂_z R^x &\:) \; dt ∧ dz ∧ dx \\
+       (& + ∂_t Q^z & - ∂_x R^y & + ∂_y R^x &         &\:) \; dt ∧ dx ∧ dy \\
    \end{alignedat} \right]
 
 .. admonition:: Calculations
@@ -436,6 +420,8 @@ rotation 2-form, we obtain:
 
    .. }}}
 
+.. _include_end_d⋆R♭♭:
+
 .. }}}
 
 :math:`⋆d R^{♭♭}`
@@ -445,6 +431,8 @@ rotation 2-form, we obtain:
 
 Applying in sequence the Hodge star and the exterior derivative operator
 :math:`d` to the rotation 2-form, we obtain:
+
+.. _include_begin_⋆dR♭♭:
 
 .. math::
 
@@ -509,6 +497,8 @@ Applying in sequence the Hodge star and the exterior derivative operator
       \end{alignedat} \right]
 
    .. }}}
+
+.. _include_end_⋆dR♭♭:
 
 .. }}}
 

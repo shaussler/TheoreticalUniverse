@@ -20,12 +20,12 @@ Deriving the Faraday 2--form from the 1865 Maxwell's equations
 
    by Stéphane Haussler
 
-This page presents a derivation of the geometric differential formulation of
-electromagnetism, emphasizing the direct connection between Maxwell's equations
-and :ref:`rotations expressed with differential form <rotations in differential
+This page presents the geometric differential formulation of electromagnetism,
+emphasizing the direct connection between Maxwell's equations and
+:ref:`rotations expressed with differential form <rotations in differential
 form>`. By calculating :ref:`the exterior derivative these rotations in
-spacetime <the exterior derivative of rotations in spacetime>`
-andstraightforward identification, we will see that the equations governing
+spacetime <the exterior derivative of rotations in spacetime>` and
+straightforward identification, we will see that the equations governing
 electromagnetism are, in fact, spacetime rotations with the exterior derivative
 applied. In layman's terms, we can think of electromagnetism as a torque over
 all possible 6 planes of rotations in 4--dimensional spacetime.
@@ -61,6 +61,11 @@ electromagnetic field equations using geometric differential forms.
    :start-after: _vector_formulation_of_mr_heaviside:
    :end-before: _the_tensor_of_mr_faraday:
 
+We now will link the ordered Maxwell equations to the exterior derivative of
+rotations in spacetime. For this, we first express a generic rotation as a
+linear combination of bivectors, flatten to a 2--form, and calculate the
+exterior derivative.
+
 Rotations in differential forms
 -------------------------------
 
@@ -68,56 +73,32 @@ Rotations in differential forms
    :start-after: _include_begin_♯♯_rotations:
    :end-before: _include_end_♯♯_rotations:
 
+.. include:: ../rotations/rotations_in_minkowski_space.rst
+   :start-after: _include_begin_♭♭_rotations:
+   :end-before: _include_end_♭♭_rotations:
+
 The exterior derivative of rotations
 ------------------------------------
-
-.. {{{
-
-In the article :ref:`Rotations in Minkowski Space`, I investigate spacetime
-rotations in differential form and demonstrate that rotations can be expressed
-as:
-
-.. math::
-   R^{♭♭} = \left[ \begin{aligned}
-     - &a \; dt ∧ dx \\
-     - &b \; dt ∧ dy \\
-     - &c \; dt ∧ dz \\
-       &d \; dy ∧ dz \\
-       &e \; dz ∧ dx \\
-       &f \; dx ∧ dy \\
-   \end{aligned} \right]
 
 In the subsequent article :ref:`The Exterior Derivative of Rotations in
 Spacetime`, I systematically calculate the exterior derivative of arbitrary
 rotations and their Hodge dual, obtaining the following expressions:
 
-.. rubric:: Exterior derivative of the Hodge dual of rotations in differential
-   form
+.. rubric:: Exterior derivative of the Hodge dual of rotations
 
-.. math::
-   :label: dR1
+.. include:: ../differential_operators/minkowski-space/2-forms.rst
+   :start-after: _include_begin_d⋆R♭♭:
+   :end-before: _include_end_d⋆R♭♭:
 
-   d ⋆ R^{♭♭} = \left[ \begin{alignedat}{5}
-     (&         & + ∂_x a & + ∂_y b & + ∂_z c \:&) \; dx ∧ dy ∧ dz \\
-     (& + ∂_t a &         & - ∂_y f & + ∂_z e \:&) \; dt ∧ dy ∧ dz \\
-     (& + ∂_t b & + ∂_x f &         & - ∂_z d \:&) \; dt ∧ dz ∧ dx \\
-     (& + ∂_t c & - ∂_x e & + ∂_y d &         \:&) \; dt ∧ dx ∧ dy \\
-   \end{alignedat} \right]
+.. rubric:: Hodge dual of the exterior derivative of rotations
 
-.. rubric:: Hodge dual of the exterior derivative of rotations in differential
-   form
+.. include:: ../differential_operators/minkowski-space/2-forms.rst
+   :start-after: _include_begin_dR♭♭:
+   :end-before: _include_end_dR♭♭:
 
-.. math::
-   :label: dR2
-
-   ⋆\:d\:R^{♭♭} = \left[ \begin{alignedat}{5}
-     (&       \;   & - ∂_x \; d & - ∂_y \; e & - ∂_z \; f \:&) \; dt \\
-     (& - ∂_t \; d &       \;   & - ∂_y \; c & + ∂_z \; b \:&) \; dx \\
-     (& - ∂_t \; e & + ∂_x \; c &       \;   & - ∂_z \; a \:&) \; dy \\
-     (& - ∂_t \; f & - ∂_x \; b & + ∂_y \; a &       \;   \:&) \; dz \\
-   \end{alignedat} \right]
-
-.. }}}
+.. include:: ../differential_operators/minkowski-space/2-forms.rst
+   :start-after: _include_begin_⋆dR♭♭:
+   :end-before: _include_end_⋆dR♭♭:
 
 Identifying the equations of Mr. Maxwell
 ----------------------------------------
@@ -125,67 +106,63 @@ Identifying the equations of Mr. Maxwell
 .. {{{
 
 Identifiying the components of the electric field :math:`\tilde{E}^i=E^i/c` and
-magnetic field :math:`B^i` is trivial:
+magnetic field :math:`B^i` is trivial. The Faraday 2--form :math:`F^{♭♭}` is
+identified as an arbitrary rotation :math:`R^{♭♭}` in Minkowski spacetime:
 
 .. math::
 
    \begin{matrix}
-     \E^x = a & B^x = d \\
-     \E^y = b & B^y = e \\
-     \E^z = c & B^z = f \\
+       \E^x = R^x & B^x = Q^x \\
+       \E^y = R^y & B^y = Q^y \\
+       \E^z = R^z & B^z = Q^z \\
    \end{matrix}
-
-We could have equally used equations :eq:`M2` and :eq:`dR1` for the
-identification. There, the sign of :eq:`M2` can be flipped as needed. The doubly
-covariant Faraday tensor :math:`F^{♭♭}` is identified as an arbitrary rotation
-:math:`R^{♭♭}` in Minkowski spacetime:
 
 .. rubric:: The doubly covariant Faraday 2-form as a rotation in spacetime
 
 .. math::
 
    R^{♭♭} = F^{♭♭} = \left[ \begin{aligned}
-     - & \E^x \; dt ∧ dx \\
-     - & \E^y \; dt ∧ dy \\
-     - & \E^z \; dt ∧ dz \\
-       &  B^x \; dy ∧ dz \\
-       &  B^y \; dz ∧ dx \\
-       &  B^z \; dx ∧ dy \\
+       - & \E^x \; dt ∧ dx \\
+       - & \E^y \; dt ∧ dy \\
+       - & \E^z \; dt ∧ dz \\
+         &  B^x \; dy ∧ dz \\
+         &  B^y \; dz ∧ dx \\
+         &  B^z \; dx ∧ dy \\
    \end{aligned} \right]
 
 Maxwell equations are therefore obtained by applying the exterior derivative to
 that rotation with :math:`d F^{♭♭}` and its Hodge dual :math:`d ⋆ F^{♭♭}`.
 
-.. rubric:: Inhomogenous Maxwell equations via differential forms
+.. rubric:: Inhomogenous Maxwell equations
 
 .. math::
 
    d\:⋆ \left[ \begin{aligned}
-     - & \E^x \; dt ∧ dx \\
-     - & \E^y \; dt ∧ dy \\
-     - & \E^z \; dt ∧ dz \\
-       &  B^x \; dy ∧ dz \\
-       &  B^y \; dz ∧ dx \\
-       &  B^z \; dx ∧ dy \\
+       - & \E^x \; dt ∧ dx \\
+       - & \E^y \; dt ∧ dy \\
+       - & \E^z \; dt ∧ dz \\
+         &  B^x \; dy ∧ dz \\
+         &  B^y \; dz ∧ dx \\
+         &  B^z \; dx ∧ dy \\
    \end{aligned} \right]
    = \begin{bmatrix}
-     + μ_0 c ρ \; dx ∧ dy ∧ dz\\
-     - μ_0 J^x \; dt ∧ dy ∧ dz\\
-     - μ_0 J^y \; dt ∧ dz ∧ dx\\
-     - μ_0 J^z \; dt ∧ dx ∧ dy\\
+       + μ_0 c ρ \; dx ∧ dy ∧ dz\\
+       - μ_0 J^x \; dt ∧ dy ∧ dz\\
+       - μ_0 J^y \; dt ∧ dz ∧ dx\\
+       - μ_0 J^z \; dt ∧ dx ∧ dy\\
    \end{bmatrix}
 
-.. rubric:: Homogenous Maxwell equations via differential forms
+.. rubric:: Homogenous Maxwell equations
 
 .. math::
 
    ⋆\:d \left[ \begin{aligned}
-     - & \E^x \; dt ∧ dx \\
-     - & \E^y \; dt ∧ dy \\
-     - & \E^z \; dt ∧ dz \\
-       &  B^x \; dy ∧ dz \\
-       &  B^y \; dz ∧ dx \\
-       &  B^z \; dx ∧ dy \\
+       - & \E^x \; dt ∧ dx \\
+       - & \E^y \; dt ∧ dy \\
+       - & \E^z \; dt ∧ dz \\
+         &  B^x \; dy ∧ dz \\
+         &  B^y \; dz ∧ dx \\
+         &  B^z \; dx ∧ dy \\
    \end{aligned} \right]
    = 0
 
