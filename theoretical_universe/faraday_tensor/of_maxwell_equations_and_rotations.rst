@@ -70,12 +70,12 @@ Rotations in differential forms
 -------------------------------
 
 .. include:: ../rotations/rotations_in_minkowski_space.rst
-   :start-after: _include_begin_♯♯_rotations:
-   :end-before: _include_end_♯♯_rotations:
+   :start-after: _inc_begin_♯♯_rotations:
+   :end-before: _inc_end_♯♯_rotations:
 
 .. include:: ../rotations/rotations_in_minkowski_space.rst
-   :start-after: _include_begin_♭♭_rotations:
-   :end-before: _include_end_♭♭_rotations:
+   :start-after: _inc_begin_♭♭_rotations:
+   :end-before: _inc_end_♭♭_rotations:
 
 The exterior derivative of rotations
 ------------------------------------
@@ -87,27 +87,73 @@ rotations and their Hodge dual, obtaining the following expressions:
 .. rubric:: Exterior derivative of the Hodge dual of rotations
 
 .. include:: ../differential_operators/minkowski-space/2-forms.rst
-   :start-after: _include_begin_d⋆R♭♭:
-   :end-before: _include_end_d⋆R♭♭:
+   :start-after: _inc_begin_⋆R♭♭:
+   :end-before: _inc_end_⋆R♭♭:
+
+.. include:: ../differential_operators/minkowski-space/2-forms.rst
+   :start-after: _inc_begin_calc_⋆R♭♭:
+   :end-before: _inc_end_calc_⋆R♭♭:
+
+.. include:: ../differential_operators/minkowski-space/2-forms.rst
+   :start-after: _inc_begin_d⋆R♭♭:
+   :end-before: _inc_end_d⋆R♭♭:
+
+.. include:: ../differential_operators/minkowski-space/2-forms.rst
+   :start-after: _inc_begin_calc_d⋆R♭♭:
+   :end-before: _inc_end_calc_d⋆R♭♭:
 
 .. rubric:: Hodge dual of the exterior derivative of rotations
 
 .. include:: ../differential_operators/minkowski-space/2-forms.rst
-   :start-after: _include_begin_dR♭♭:
-   :end-before: _include_end_dR♭♭:
+   :start-after: _inc_begin_dR♭♭:
+   :end-before: _inc_end_dR♭♭:
 
 .. include:: ../differential_operators/minkowski-space/2-forms.rst
-   :start-after: _include_begin_⋆dR♭♭:
-   :end-before: _include_end_⋆dR♭♭:
+   :start-after: _inc_begin_calc_dR♭♭:
+   :end-before: _inc_end_calc_dR♭♭:
+
+.. include:: ../differential_operators/minkowski-space/2-forms.rst
+   :start-after: _inc_begin_⋆dR♭♭:
+   :end-before: _inc_end_⋆dR♭♭:
+
+.. include:: ../differential_operators/minkowski-space/2-forms.rst
+   :start-after: _inc_begin_calc_⋆dR♭♭:
+   :end-before: _inc_end_calc_⋆dR♭♭:
 
 Identifying the equations of Mr. Maxwell
 ----------------------------------------
 
-.. {{{
-
 Identifiying the components of the electric field :math:`\tilde{E}^i=E^i/c` and
 magnetic field :math:`B^i` is trivial. The Faraday 2--form :math:`F^{♭♭}` is
 identified as an arbitrary rotation :math:`R^{♭♭}` in Minkowski spacetime:
+
+First we summarize the results that we have obtained thus far. The reordered
+1865 Maxwell equations are:
+
+.. rubric:: Inhomogenous equations
+
+.. include:: ./faraday_tensor_derivation.rst
+   :start-after: _inc_beg_ordered_inhomogenous_equations:
+   :end-before: _inc_end_ordered_inhomogenous_equations:
+
+.. include:: ../differential_operators/minkowski-space/2-forms.rst
+   :start-after: _inc_begin_d⋆R♭♭:
+   :end-before: _inc_end_d⋆R♭♭:
+
+.. rubric:: Homogenous equations
+
+.. include:: ./faraday_tensor_derivation.rst
+   :start-after: _inc_beg_ordered_homogenous_equations:
+   :end-before: _inc_end_ordered_homogenous_equations:
+
+.. include:: ../differential_operators/minkowski-space/2-forms.rst
+   :start-after: _inc_begin_⋆dR♭♭:
+   :end-before: _inc_end_⋆dR♭♭:
+
+.. rubric:: Identification
+
+Given a rotation, we can identify the components of the electric and magnetic
+fields:
 
 .. math::
 
@@ -175,12 +221,8 @@ Maxwell equations in differential form where :math:`\mathbf{F}` is the field
    d\:\mathbf{F} &= 0          \\
    d⋆ \mathbf{F} &= \mathbf{J} \\
 
-.. }}}
-
 A single equation
 -----------------
-
-.. {{{
 
 With the explicit component form of the Cartan-Hodge formalism, it may now be
 obvious that since :math:`⋆\:d\:F` is a 1-form and :math:`d⋆F` a 3-form, we can
@@ -273,12 +315,8 @@ proportional to the 4-current.
 
       ⋆ \: d \: \mathbf{F} + d⋆\mathbf{F} = \mathbf{J}
 
-.. }}}
-
 Notes
 -----
-
-.. {{{
 
 .. [note2] An equation containing 3-forms and 2-forms indeed cannot be reduced.
    For example, the following equation: :math:`a \; dx ∧ dy + b \; dx ∧ dy ∧ dz
@@ -292,5 +330,3 @@ Notes
    into a single equation.
 
 .. [note3] Flipping the sign of :math:`⋆ d` is equally valid.
-
-.. }}}

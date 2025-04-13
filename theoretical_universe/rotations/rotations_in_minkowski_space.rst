@@ -26,7 +26,7 @@ The :math:`♯♯` rotation tensor
 
 .. {{{
 
-.. _include_begin_♯♯_rotations:
+.. _inc_begin_♯♯_rotations:
 
 General rotations can be expressed as linear combinations of rotations in each
 planes. For Minkowski space with 4 directions :math:`∂_t`, :math:`∂_x`,
@@ -48,7 +48,7 @@ rotations in the six available planes of rotations.
           R^z \; ∂_x ∧ ∂_y \\
       \end{bmatrix}
 
-.. _include_end_♯♯_rotations:
+.. _inc_end_♯♯_rotations:
 
 The sharp symbol :math:`\sharp` indicates that the components are doubly
 contravariant tensor components. Using the antisymmetric property of the
@@ -100,7 +100,7 @@ The :math:`♭♭` rotation tensor
 
 .. {{{
 
-.. _include_begin_♭♭_rotations:
+.. _inc_begin_♭♭_rotations:
 
 Using the Minkowski metric :math:`η`, we flatten a basis vector with the flat
 operator :math:`♭`:
@@ -173,12 +173,12 @@ apply the flat operators :math:`♭♭` to each components :math:`R^{♭♭} =
    .. math::
 
       R^{♭♭} = \begin{bmatrix}
-          Q^x \; η_{tμ} d^μ ∧ η_{xμ} dx^μ \\
-          Q^y \; η_{tμ} d^μ ∧ η_{yμ} dx^μ \\
-          Q^z \; η_{tμ} d^μ ∧ η_{zμ} dx^μ \\
-          R^x \; η_{yμ} d^μ ∧ η_{zμ} dx^μ \\
-          R^y \; η_{zμ} d^μ ∧ η_{xμ} dx^μ \\
-          R^z \; η_{xμ} d^μ ∧ η_{yμ} dx^μ \\
+          Q^x \; η_{tμ} d^xμ ∧ η_{xμ} dx^μ \\
+          Q^y \; η_{tμ} d^xμ ∧ η_{yμ} dx^μ \\
+          Q^z \; η_{tμ} d^xμ ∧ η_{zμ} dx^μ \\
+          R^x \; η_{yμ} d^xμ ∧ η_{zμ} dx^μ \\
+          R^y \; η_{zμ} d^xμ ∧ η_{xμ} dx^μ \\
+          R^z \; η_{xμ} d^xμ ∧ η_{yμ} dx^μ \\
       \end{bmatrix}
 
    .. rubric:: Identify non-zero terms
@@ -209,7 +209,7 @@ apply the flat operators :math:`♭♭` to each components :math:`R^{♭♭} =
 
    .. }}}
 
-.. _include_end_♭♭_rotations:
+.. _inc_end_♭♭_rotations:
 
 .. }}}
 

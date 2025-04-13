@@ -170,6 +170,8 @@ covariant differential 2-form representative of the rotation:
 
 Applying the Hodge star to the rotation 2-form, we obtain:
 
+.. _inc_begin_⋆R♭♭:
+
 .. math::
 
    ⋆ R^{♭♭} = \left[ \begin{aligned}
@@ -180,6 +182,10 @@ Applying the Hodge star to the rotation 2-form, we obtain:
        & R^y \; dt ∧ dy \\
        & R^z \; dt ∧ dz \\
    \end{aligned} \right]
+
+.. _inc_end_⋆R♭♭:
+
+.. _inc_begin_calc_⋆R♭♭:
 
 .. admonition:: Calculations
    :class: dropdown
@@ -224,16 +230,18 @@ Applying the Hodge star to the rotation 2-form, we obtain:
 
    .. }}}
 
+.. _inc_end_calc_⋆R♭♭:
+
 .. }}}
 
-:math:`d R^{♭♭}`
-----------------
+:math:`dR^{♭♭}`
+---------------
 
 .. {{{
 
 Applying the exterior derivative to the rotation 2-form, we obtain:
 
-.. _include_begin_dR♭♭:
+.. _inc_begin_dR♭♭:
 
 .. math::
 
@@ -243,6 +251,10 @@ Applying the exterior derivative to the rotation 2-form, we obtain:
       (& + ∂_t R^y & - ∂_x Q^z &         & + ∂_z Q^x &\:) \; dt ∧ dz ∧ dx \\
       (& + ∂_t R^z & + ∂_x Q^y & - ∂_y Q^x &         &\:) \; dt ∧ dx ∧ dy \\
    \end{alignedat} \right]
+
+.. _inc_end_dR♭♭:
+
+.. _inc_begin_calc_dR♭♭:
 
 .. admonition:: Calculations
    :class: dropdown
@@ -306,36 +318,40 @@ Applying the exterior derivative to the rotation 2-form, we obtain:
    .. math::
 
       dR^{♭♭} = \left[ \begin{alignedat}{5}
-        (&         & + ∂_x R^x & + ∂_y R^y & + ∂_z R^z &\:) \; dx ∧ dy ∧ dz \\
-        (& + ∂_t R^x &         & + ∂_y Q^z & - ∂_z Q^y &\:) \; dt ∧ dy ∧ dz \\
-        (& + ∂_t R^y & - ∂_x Q^z &         & + ∂_z Q^x &\:) \; dt ∧ dz ∧ dx \\
-        (& + ∂_t R^z & + ∂_x Q^y & - ∂_y Q^x &         &\:) \; dt ∧ dx ∧ dy \\
+          (&         & + ∂_x R^x & + ∂_y R^y & + ∂_z R^z &\:) \; dx ∧ dy ∧ dz \\
+          (& + ∂_t R^x &         & + ∂_y Q^z & - ∂_z Q^y &\:) \; dt ∧ dy ∧ dz \\
+          (& + ∂_t R^y & - ∂_x Q^z &         & + ∂_z Q^x &\:) \; dt ∧ dz ∧ dx \\
+          (& + ∂_t R^z & + ∂_x Q^y & - ∂_y Q^x &         &\:) \; dt ∧ dx ∧ dy \\
       \end{alignedat} \right]
 
    .. }}}
 
-.. _include_end_dR♭♭:
+.. _inc_end_calc_dR♭♭:
 
 .. }}}
 
-:math:`d⋆ R^{♭♭}`
------------------
+:math:`d⋆R^{♭♭}`
+----------------
 
 .. {{{
 
 Applying in sequence the exterior derivative and the Hodge star operator to the
 rotation 2-form, we obtain:
 
-.. _include_begin_d⋆R♭♭:
+.. _inc_begin_d⋆R♭♭:
 
 .. math::
 
-   d( ⋆ R^{♭♭} ) = \left[ \begin{alignedat}{5}
+   d⋆R^{♭♭} = \left[ \begin{alignedat}{5}
        (&         & + ∂_x Q^x & + ∂_y Q^y & + ∂_z Q^z &\:) \; dx ∧ dy ∧ dz \\
        (& + ∂_t Q^x &         & - ∂_y R^z & + ∂_z R^y &\:) \; dt ∧ dy ∧ dz \\
        (& + ∂_t Q^y & + ∂_x R^z &         & - ∂_z R^x &\:) \; dt ∧ dz ∧ dx \\
        (& + ∂_t Q^z & - ∂_x R^y & + ∂_y R^x &         &\:) \; dt ∧ dx ∧ dy \\
    \end{alignedat} \right]
+
+.. _inc_end_d⋆R♭♭:
+
+.. _inc_begin_calc_d⋆R♭♭:
 
 .. admonition:: Calculations
    :class: dropdown
@@ -420,19 +436,19 @@ rotation 2-form, we obtain:
 
    .. }}}
 
-.. _include_end_d⋆R♭♭:
+.. _inc_end_calc_d⋆R♭♭:
 
 .. }}}
 
-:math:`⋆d R^{♭♭}`
------------------
+:math:`⋆dR^{♭♭}`
+----------------
 
 .. {{{
 
 Applying in sequence the Hodge star and the exterior derivative operator
 :math:`d` to the rotation 2-form, we obtain:
 
-.. _include_begin_⋆dR♭♭:
+.. _inc_begin_⋆dR♭♭:
 
 .. math::
 
@@ -442,6 +458,10 @@ Applying in sequence the Hodge star and the exterior derivative operator
        (& - ∂_t R^y & + ∂_x Q^z &         & - ∂_z Q^x &\:) \; dy \\
        (& - ∂_t R^z & - ∂_x Q^y & + ∂_y Q^x &         &\:) \; dz \\
    \end{alignedat} \right]
+
+.. _inc_end_⋆dR♭♭:
+
+.. _inc_begin_calc_⋆dR♭♭:
 
 .. admonition:: Calculations
    :class: dropdown
@@ -498,25 +518,24 @@ Applying in sequence the Hodge star and the exterior derivative operator
 
    .. }}}
 
-.. _include_end_⋆dR♭♭:
+.. _inc_end_calc_⋆dR♭♭:
 
 .. }}}
 
-:math:`⋆d⋆ R^{♭♭}`
-------------------
+:math:`⋆d⋆R^{♭♭}`
+-----------------
 
 .. {{{
-
 
 Applying the Hodge star to :math:`d⋆R^{♭♭}`, we obtain:
 
 .. math::
 
    ⋆d⋆R^{♭♭} = \left[ \begin{alignedat}{5}
-     (&         & + ∂_x Q^x & + ∂_y Q^y & + ∂_z Q^z &\:) \; dt \\
-     (& + ∂_t Q^x &         & - ∂_y R^z & + ∂_z R^y &\:) \; dx \\
-     (& + ∂_t Q^y & + ∂_x R^z &         & - ∂_z R^x &\:) \; dy \\
-     (& + ∂_t Q^z & - ∂_x R^y & + ∂_y R^x &         &\:) \; dz \\
+       (&         & + ∂_x Q^x & + ∂_y Q^y & + ∂_z Q^z &\:) \; dt \\
+       (& + ∂_t Q^x &         & - ∂_y R^z & + ∂_z R^y &\:) \; dx \\
+       (& + ∂_t Q^y & + ∂_x R^z &         & - ∂_z R^x &\:) \; dy \\
+       (& + ∂_t Q^z & - ∂_x R^y & + ∂_y R^x &         &\:) \; dz \\
    \end{alignedat} \right]
 
 .. admonition:: Calculations
@@ -565,8 +584,8 @@ Applying the Hodge star to :math:`d⋆R^{♭♭}`, we obtain:
 
 .. }}}
 
-:math:`d⋆d R^{♭♭}`
-------------------
+:math:`d⋆dR^{♭♭}`
+-----------------
 
 .. {{{
 

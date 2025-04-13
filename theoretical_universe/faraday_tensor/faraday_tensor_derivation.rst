@@ -188,6 +188,8 @@ and for the spatial dimensions :math:`∂_x = \frac{∂}{∂ x}`, :math:`∂_y =
 
 .. rubric:: Inhomogenous equations
 
+.. _inc_beg_ordered_inhomogenous_equations:
+
 .. math::
 
    \begin{alignedat}{4}
@@ -197,7 +199,11 @@ and for the spatial dimensions :math:`∂_x = \frac{∂}{∂ x}`, :math:`∂_y =
        + ∂_t \E^z & - ∂_x  B^y & + ∂_y  B^x &            & = - μ_0 J^z \\
    \end{alignedat}
 
+.. _inc_end_ordered_inhomogenous_equations:
+
 .. rubric:: Homogenous equations
+
+.. _inc_beg_ordered_homogenous_equations:
 
 .. math::
 
@@ -207,6 +213,8 @@ and for the spatial dimensions :math:`∂_x = \frac{∂}{∂ x}`, :math:`∂_y =
        + ∂_t  B^y & - ∂_x \E^z &            & + ∂_z \E^x & = 0 \\
        + ∂_t  B^z & + ∂_x \E^y & - ∂_y \E^x &            & = 0 \\
    \end{alignedat}
+
+.. _inc_end_ordered_homogenous_equations:
 
 For readers well-versed in the tensor formulation of electromagnetism, the
 presence and nature of the Faraday tensor and its dual are likely evident.
