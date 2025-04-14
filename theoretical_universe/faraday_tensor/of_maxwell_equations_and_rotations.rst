@@ -118,7 +118,7 @@ derivative of their Hodge duals the following:
 
 .. include:: ../differential_operators/minkowski-space/2-forms.rst
    :start-after: _inc_begin_d⋆R♭♭:
-   :end-befo: _inc_end_d⋆R♭♭:
+   :end-before: _inc_end_d⋆R♭♭:
 
 .. include:: ../differential_operators/minkowski-space/2-forms.rst
    :start-after: _inc_begin_calc_d⋆R♭♭:
