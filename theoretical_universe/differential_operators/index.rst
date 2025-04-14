@@ -5,6 +5,7 @@
 .. with this work. If not, see <https://creativecommons.org/licenses/by/4.0/>.
 
 .. _differential_operators_in_differential_form:
+.. _Differential operators expressed as exterior derivatives:
 
 Differential operators expressed as exterior derivatives
 ========================================================

@@ -80,9 +80,19 @@ Rotations in differential forms
 The exterior derivative of rotations
 ------------------------------------
 
-In the subsequent article :ref:`The Exterior Derivative of Rotations in
-Spacetime`, I systematically calculate the exterior derivative of arbitrary
-rotations and their Hodge dual, obtaining the following expressions:
+In the article :ref:`Differential operators expressed as exterior derivatives`,
+I systematically compute the exterior derivative of all possible k--forms in
+both 3D Euclidean space and 4D spacetime with the Minkowski metric. The
+motivation for these systematic calculations is that all differential operators
+acting on fields (such as the gradient and the laplacian) or vector fields
+(such as the divergence and the curl) can be expressed using combinations of
+the Hodge star operator :math:`⋆` and the exterior derivative :math:`d`.
+
+Since the combinations of these two operators are finite, this approach allows
+for the calculation of all conceivable differential operators, which are
+generalized within the framework of exterior calculus. Specifically, we derive
+expressions for the exterior derivative of rotations and the exterior
+derivative of their Hodge duals the following:
 
 .. rubric:: Exterior derivative of the Hodge dual of rotations
 
@@ -120,15 +130,28 @@ rotations and their Hodge dual, obtaining the following expressions:
    :start-after: _inc_begin_calc_⋆dR♭♭:
    :end-before: _inc_end_calc_⋆dR♭♭:
 
-Identifying the equations of Mr. Maxwell
-----------------------------------------
+Identifying the Faraday 2--form
+-------------------------------
 
-Identifiying the components of the electric field :math:`\tilde{E}^i=E^i/c` and
-magnetic field :math:`B^i` is trivial. The Faraday 2--form :math:`F^{♭♭}` is
-identified as an arbitrary rotation :math:`R^{♭♭}` in Minkowski spacetime:
+Summarizing the results obtained thus far, an arbitrary rotation in Minkowski
+space is represented with a 2--form:
 
-First we summarize the results that we have obtained thus far. The reordered
-1865 Maxwell equations are:
+.. include:: ../differential_operators/minkowski-space/2-forms.rst
+   :start-after: _inc_begin_R♭♭:
+   :end-before: _inc_end_\R♭♭:
+
+We can apply the exterior derivative to this rotation or its Hodge dual,
+effectively calculating a torque:
+
+.. include:: ../differential_operators/minkowski-space/2-forms.rst
+   :start-after: _inc_begin_d⋆R♭♭:
+   :end-before: _inc_end_d⋆R♭♭:
+
+.. include:: ../differential_operators/minkowski-space/2-forms.rst
+   :start-after: _inc_begin_⋆dR♭♭:
+   :end-before: _inc_end_⋆dR♭♭:
+
+The reordered 1865 Maxwell equations are:
 
 .. rubric:: Inhomogenous equations
 
@@ -136,24 +159,19 @@ First we summarize the results that we have obtained thus far. The reordered
    :start-after: _inc_beg_ordered_inhomogenous_equations:
    :end-before: _inc_end_ordered_inhomogenous_equations:
 
-.. include:: ../differential_operators/minkowski-space/2-forms.rst
-   :start-after: _inc_begin_d⋆R♭♭:
-   :end-before: _inc_end_d⋆R♭♭:
-
 .. rubric:: Homogenous equations
 
 .. include:: ./faraday_tensor_derivation.rst
    :start-after: _inc_beg_ordered_homogenous_equations:
    :end-before: _inc_end_ordered_homogenous_equations:
 
-.. include:: ../differential_operators/minkowski-space/2-forms.rst
-   :start-after: _inc_begin_⋆dR♭♭:
-   :end-before: _inc_end_⋆dR♭♭:
-
 .. rubric:: Identification
 
-Given a rotation, we can identify the components of the electric and magnetic
-fields:
+Identifiying the components of the electric field :math:`\tilde{E}^i=E^i/c` and
+magnetic field :math:`B^i` is then stgraightforward. The Faraday 2--form
+:math:`F^{♭♭}` is a rotation :math:`R^{♭♭}` in Minkowski spacetime, and the
+Maxwell's equations are obtained by applying the exterior derivative, directly
+and to the Hodge dual.
 
 .. math::
 

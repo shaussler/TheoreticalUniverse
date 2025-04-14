@@ -31,8 +31,9 @@ Rotations
 
 .. {{{
 
-Rotations in spacetime can occur in six independent planes. Any rotation can be
-decomposed into a linear combination of basis rotations within each plane as:
+Rotations in spacetime can occur in six independent planes. Any rotation
+:math:`R` can be decomposed into a linear combination of basis rotations within
+each plane as:
 
 .. math::
 
@@ -45,21 +46,25 @@ decomposed into a linear combination of basis rotations within each plane as:
        R^z \; ∂_x ∧ ∂_y \\
    \end{bmatrix}
 
-The generic rotation above is doubly contravariant, given in terms of the wedge
-product :math:`∧` of vectors corresponding to our physical understanding of
-space (and time). By fully flattening, we obtain the associated doubly
-covariant differential 2-form representative of the rotation:
+The representation of the rotation above is fully contravariant, given in terms
+of the exterior product :math:`∧` of vectors corresponding to our physical
+understanding of space (and time). By fully flattening, we obtain the
+associated fully covariant differential 2--form representation:
+
+.. _inc_beg_R♭♭:
 
 .. math::
 
-   R^{♭♭} = \left[ \begin{aligned}
-       - & Q^x \; dt ∧ dx \\
-       - & Q^y \; dt ∧ dy \\
-       - & Q^z \; dt ∧ dz \\
-         & R^x \; dy ∧ dz \\
-         & R^y \; dz ∧ dx \\
-         & R^z \; dx ∧ dy \\
-   \end{aligned} \right]
+   R^{♭♭} = \left[ \begin{alignedat}{3}
+       - & Q^x \; dt &\: ∧ &\: dx \\
+       - & Q^y \; dt &\: ∧ &\: dy \\
+       - & Q^z \; dt &\: ∧ &\: dz \\
+         & R^x \; dy &\: ∧ &\: dz \\
+         & R^y \; dz &\: ∧ &\: dx \\
+         & R^z \; dx &\: ∧ &\: dy \\
+   \end{alignedat} \right]
+
+.. _inc_end_R♭♭:
 
 .. admonition:: Calculations
    :class: dropdown
@@ -163,8 +168,8 @@ covariant differential 2-form representative of the rotation:
 
 .. }}}
 
-:math:`⋆ R^{♭♭}`
-----------------
+:math:`⋆R^{♭♭}`
+---------------
 
 .. {{{
 
