@@ -20,6 +20,8 @@ Deriving the Faraday 2--form from the 1865 Maxwell's equations
 
    by Stéphane Haussler
 
+.. {{{
+
 This page presents the geometric differential formulation of electromagnetism,
 emphasizing the direct connection between Maxwell's equations and
 :ref:`rotations expressed with differential form <rotations in differential
@@ -66,8 +68,12 @@ rotations in spacetime. For this, we first express a generic rotation as a
 linear combination of bivectors, flatten to a 2--form, and calculate the
 exterior derivative.
 
+.. }}}
+
 Rotations in differential forms
 -------------------------------
+
+.. {{{
 
 .. include:: ../rotations/rotations_in_minkowski_space.rst
    :start-after: _inc_begin_♯♯_rotations:
@@ -77,8 +83,12 @@ Rotations in differential forms
    :start-after: _inc_begin_♭♭_rotations:
    :end-before: _inc_end_♭♭_rotations:
 
+.. }}}
+
 The exterior derivative of rotations
 ------------------------------------
+
+.. {{{
 
 In the article :ref:`Differential operators expressed as exterior derivatives`,
 I systematically compute the exterior derivative of all possible k--forms in
@@ -94,7 +104,7 @@ generalized within the framework of exterior calculus. Specifically, we derive
 expressions for the exterior derivative of rotations and the exterior
 derivative of their Hodge duals the following:
 
-.. rubric:: Exterior derivative of the Hodge dual of rotations
+.. rubric:: Hodge dual of rotations
 
 .. include:: ../differential_operators/minkowski-space/2-forms.rst
    :start-after: _inc_begin_⋆R♭♭:
@@ -104,15 +114,17 @@ derivative of their Hodge duals the following:
    :start-after: _inc_begin_calc_⋆R♭♭:
    :end-before: _inc_end_calc_⋆R♭♭:
 
+.. rubric:: Exterior derivative of the Hodge dual of rotations
+
 .. include:: ../differential_operators/minkowski-space/2-forms.rst
    :start-after: _inc_begin_d⋆R♭♭:
-   :end-before: _inc_end_d⋆R♭♭:
+   :end-befo: _inc_end_d⋆R♭♭:
 
 .. include:: ../differential_operators/minkowski-space/2-forms.rst
    :start-after: _inc_begin_calc_d⋆R♭♭:
    :end-before: _inc_end_calc_d⋆R♭♭:
 
-.. rubric:: Hodge dual of the exterior derivative of rotations
+.. rubric:: Exterior derivative of rotations
 
 .. include:: ../differential_operators/minkowski-space/2-forms.rst
    :start-after: _inc_begin_dR♭♭:
@@ -122,6 +134,8 @@ derivative of their Hodge duals the following:
    :start-after: _inc_begin_calc_dR♭♭:
    :end-before: _inc_end_calc_dR♭♭:
 
+.. rubric:: Hodge dual of the exterior derivative of rotations
+
 .. include:: ../differential_operators/minkowski-space/2-forms.rst
    :start-after: _inc_begin_⋆dR♭♭:
    :end-before: _inc_end_⋆dR♭♭:
@@ -130,18 +144,22 @@ derivative of their Hodge duals the following:
    :start-after: _inc_begin_calc_⋆dR♭♭:
    :end-before: _inc_end_calc_⋆dR♭♭:
 
+.. }}}
+
 Identifying the Faraday 2--form
 -------------------------------
 
-Summarizing the results obtained thus far, an arbitrary rotation in Minkowski
-space is represented with a 2--form:
+.. {{{
+
+To summarize the results and observations thus far, an arbitrary rotation in
+Minkowski space is represented by a 2--form:
 
 .. include:: ../differential_operators/minkowski-space/2-forms.rst
    :start-after: _inc_begin_R♭♭:
-   :end-before: _inc_end_\R♭♭:
+   :end-before: _inc_end_R♭♭:
 
-We can apply the exterior derivative to this rotation or its Hodge dual,
-effectively calculating a torque:
+By applying the exterior derivative :math:`d` to this rotation or to its Hodge
+dual (effectively calculating a torque), we obtain:
 
 .. include:: ../differential_operators/minkowski-space/2-forms.rst
    :start-after: _inc_begin_d⋆R♭♭:
@@ -151,7 +169,7 @@ effectively calculating a torque:
    :start-after: _inc_begin_⋆dR♭♭:
    :end-before: _inc_end_⋆dR♭♭:
 
-The reordered 1865 Maxwell equations are:
+We have also reordered the 1865 Maxwell equations to:
 
 .. rubric:: Inhomogenous equations
 
@@ -168,24 +186,24 @@ The reordered 1865 Maxwell equations are:
 .. rubric:: Identification
 
 Identifiying the components of the electric field :math:`\tilde{E}^i=E^i/c` and
-magnetic field :math:`B^i` is then stgraightforward. The Faraday 2--form
-:math:`F^{♭♭}` is a rotation :math:`R^{♭♭}` in Minkowski spacetime, and the
-Maxwell's equations are obtained by applying the exterior derivative, directly
-and to the Hodge dual.
+the magnetic field :math:`B^i` is straightforward:
 
 .. math::
 
    \begin{matrix}
-       \E^x = R^x & B^x = Q^x \\
-       \E^y = R^y & B^y = Q^y \\
-       \E^z = R^z & B^z = Q^z \\
+       \E^x = R^x \\
+       \E^y = R^y \\
+       \E^z = R^z \\
+        B^x = Q^x \\
+        B^y = Q^y \\
+        B^z = Q^z \\
    \end{matrix}
 
-.. rubric:: The doubly covariant Faraday 2-form as a rotation in spacetime
+The Faraday 2--form :math:`F^{♭♭}` is a rotation in Minkowski spacetime.
 
 .. math::
 
-   R^{♭♭} = F^{♭♭} = \left[ \begin{aligned}
+   F^{♭♭} = \left[ \begin{aligned}
        - & \E^x \; dt ∧ dx \\
        - & \E^y \; dt ∧ dy \\
        - & \E^z \; dt ∧ dz \\
@@ -194,8 +212,8 @@ and to the Hodge dual.
          &  B^z \; dx ∧ dy \\
    \end{aligned} \right]
 
-Maxwell equations are therefore obtained by applying the exterior derivative to
-that rotation with :math:`d F^{♭♭}` and its Hodge dual :math:`d ⋆ F^{♭♭}`.
+Maxwell's equations are obtained by applying the exterior derivative, both
+directly :math:`dF^{♭♭}` and to its Hodge dual :math:`d⋆F^{♭♭}`:
 
 .. rubric:: Inhomogenous Maxwell equations
 
@@ -220,7 +238,7 @@ that rotation with :math:`d F^{♭♭}` and its Hodge dual :math:`d ⋆ F^{♭�
 
 .. math::
 
-   ⋆\:d \left[ \begin{aligned}
+   d \left[ \begin{aligned}
        - & \E^x \; dt ∧ dx \\
        - & \E^y \; dt ∧ dy \\
        - & \E^z \; dt ∧ dz \\
@@ -230,21 +248,41 @@ that rotation with :math:`d F^{♭♭}` and its Hodge dual :math:`d ⋆ F^{♭�
    \end{aligned} \right]
    = 0
 
-As advertised in the introduction, we fall back to the well-known expression of
-Maxwell equations in differential form where :math:`\mathbf{F}` is the field
-2-form and :math:`\mathbf{J}` is the current 3-form.
+We have flipped the sign of the ordered homegenous Maxwell equations to our
+conveniance to ensure the correct overall sign. With our explicit notation,
+using a double musical flat ♭♭ to identify 2--forms, and a single musical flat
+♭ to identify 1--forms, we have:
+
+.. math::
+
+   d\:F^{♭♭} &= 0   \\
+   d⋆ F^{♭♭} &= J^♭ \\
+
+As advertised in the introduction and using the implicit notation of the
+wikipedia article, we fall back to the `well-recognized differential geometric
+formulation of Maxwell's equations
+<https://en.m.wikipedia.org/wiki/Mathematical_descriptions_of_the_electromagnetic_field#Differential_forms_approach>`_,
+where :math:`\mathbf{F}` is the field 2--form and :math:`\mathbf{J}` is the
+current 3--form.
 
 .. math::
 
    d\:\mathbf{F} &= 0          \\
    d⋆ \mathbf{F} &= \mathbf{J} \\
 
+.. }}}
+
 A single equation
 -----------------
 
-With the explicit component form of the Cartan-Hodge formalism, it may now be
-obvious that since :math:`⋆\:d\:F` is a 1-form and :math:`d⋆F` a 3-form, we can
-unambiguously merge inhomogeneous and homogeneous equations [note2]_.
+.. {{{
+
+Adding a further Hodge star to the Homogenous equations is equally valid and we
+can equally write :math:`d\:F^{♭♭} = 0` or :math:`⋆d\:F^{♭♭}=0`. With our
+explicit notation using double or single musical flats to idenfity 1--forms (♭)
+and 2--forms (♭♭), and since :math:`⋆\:d\:F` is a 1--form and :math:`d⋆F` a
+3--form, we notice that we can unambiguously merge inhomogeneous and
+homogeneous equations into a single equation [note2]_:
 
 .. math::
 
@@ -269,7 +307,7 @@ unambiguously merge inhomogeneous and homogeneous equations [note2]_.
        - μ_0 J^z \; dt ∧ dx ∧ dy\\
    \end{bmatrix}
 
-.. rubric:: Maxwell's Equations in Differential Form
+.. rubric:: Maxwell's equations in differential form
 
 .. math::
 
@@ -291,26 +329,28 @@ With a shorthand :math:`F^{♭♭}` for the electromagnetic field 2-form and
 :math:`J^{♭♭♭}` for the current 3-form, we conclude with the compact form
 [note3]_:
 
-.. topic:: Maxwell equations
+.. topic:: Maxwell's equations
 
    .. math:: (d ⋆ + ⋆ d) \; F^{♭♭} = J^{♭♭♭}
 
 Maxwell's equations are interpreted as a twist in spacetime, with a strength
 proportional to the 4-current.
 
-.. admonition:: Proof using the *standard* notation
+.. admonition:: Reducing to a single equation using the *wikipedia* notation
    :class: dropdown
 
-   Using the standard notation, we get to the same result:
+   Using the *wikipedia* notation, we arrive at the same result. However the
+   lack of an explicit distinction between 1--forms and 2--forms is unfortunate
+   as it makes it harder to see the reduction to a single equation.
 
    .. math::
 
       ⋆ \: d \: \mathbf{F} + d⋆\mathbf{F} = \mathbf{J}
 
-   Since :math:`d\:\mathbf{F}` is a 3-form, its Hodge dual
-   :math:`⋆\:d\:\mathbf{F}` is a 1-form. We can thus rewrite the homogenous
-   equation as acting on 1-forms, and the inhomogeneous equations as acting on
-   3-forms:
+   Since :math:`d\:\mathbf{F}` is a 3--form, its Hodge dual
+   :math:`⋆\:d\:\mathbf{F}` is a 1--form. We can thus rewrite the homogenous
+   equation as acting on 1--forms, and the inhomogeneous equations as acting on
+   3--forms:
 
    .. math::
 
@@ -327,14 +367,18 @@ proportional to the 4-current.
       d⋆\mathbf{F}         =& \: \mu_0 ρ dx∧dy∧dz - μ_0 J^x dt∧dy∧dz - μ_0 J^y dt∧dz∧dx - μ_0 J^z dt∧dx∧dy \\
 
    Therefore, the differential geometric formulation can be unambiguously
-   reduced to a single equation involving both 3-forms and 1-forms:
+   reduced to a single equation involving both 3--forms and 1--forms:
 
    .. math::
 
       ⋆ \: d \: \mathbf{F} + d⋆\mathbf{F} = \mathbf{J}
 
+.. }}}
+
 Notes
 -----
+
+.. {{{
 
 .. [note2] An equation containing 3-forms and 2-forms indeed cannot be reduced.
    For example, the following equation: :math:`a \; dx ∧ dy + b \; dx ∧ dy ∧ dz
@@ -348,3 +392,5 @@ Notes
    into a single equation.
 
 .. [note3] Flipping the sign of :math:`⋆ d` is equally valid.
+
+.. }}}
