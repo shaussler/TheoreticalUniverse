@@ -48,22 +48,30 @@ current 3--form.
    d\:\mathbf{F} = 0 \\
    d⋆ \mathbf{F} = \mathbf{J}
 
-Unless explicitly mentioned otherwise, I use :ref:`the Cartan-Hodge formalism`,
-which permits to be explicit about the nature of the mathematical objects
-involved by using musical notation. The electromagnetic field 2-form
-:math:`\mathbf{F}` is written :math:`F^{♭♭}`, the current 3-form :math:`J^{♭♭♭}`
-and the Hodge dual current 1-form :math:`J^♭`.
+Unless explicitly stated otherwise, I explicitely indicate the nature of the
+mathematical objects involved using musical notation. The electromagnetic field
+2--form :math:`\mathbf{F}` is written with a double musical flat
+:math:`F^{♭♭}`, the current 3--form with a triple musical flat :math:`J^{♭♭♭}`,
+and the Hodge dual current 1--form with a single musical flat :math:`J^♭`.
 
-In the article :ref:`Deriving the Faraday Tensor from the 1865 Maxwell
-Equations`, I reordered and re-expressed the original Maxwell's equations with
-modern notation. We use this form as the basis for formulating the
-electromagnetic field equations using geometric differential forms.
+This argumentation in this page proceeds as follows: First, I reordered
+Maxwell's equations to align with their original formulation, using modern
+notation. This reorered form will serve the foundation for expressing the
+electromagnetic field equations in terms of geometric differential forms. Next,
+I represent a generic rotation in spacetime to which I apply the exterior
+derivative. Finally, I identified Maxwell's equations with the exterior
+derivative of this spacetime rotation.
+
+The discussion assumes a solid understanding of the exterior derivative
+:math:`d`, Élie Caretan's differential forms, as well as :ref:`Hodge duality
+<hodge duality>`. This page is self-contained and can be read independently of
+other content on this site.
 
 .. include:: faraday_tensor_derivation.rst
    :start-after: _vector_formulation_of_mr_heaviside:
    :end-before: _the_tensor_of_mr_faraday:
 
-We now will link the ordered Maxwell equations to the exterior derivative of
+We now link the ordered Maxwell equations to the exterior derivative of
 rotations in spacetime. For this, we first express a generic rotation as a
 linear combination of bivectors, flatten to a 2--form, and calculate the
 exterior derivative.
