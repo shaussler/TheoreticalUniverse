@@ -1,0 +1,736 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9HQ1J8VKRB"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-9HQ1J8VKRB');
+    </script>
+    
+    <title>Hodge dual computations &#8212; Theoretical Universe</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=c1fb35df" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>window.MathJax = {"chtml": {"displayAlign": "left", "displayIndent": "2em"}, "tex": {"packages": {"[+]": ["ams"]}, "macros": {"E": "\\tilde{E}", "\u231f": "\\:\u231f\\:"}}, "tex2jax": {"ignoreClass": ".*", "processClass": "math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'the_cartan_hodge_formalism/hodge_dual_computations';</script>
+    <link rel="canonical" href="https://shaussler.github.io/TheoreticalUniverse/the_cartan_hodge_formalism/hodge_dual_computations.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Free matrix representation" href="the_free_matrix_representation.html" />
+    <link rel="prev" title="Hodge duality fundamentals" href="hodge_duality.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Theoretical Universe</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Table of Contents:</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../licence.html">Licence</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cite.html">How to cite</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">How to contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../resources.html">Resources</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">The Cartan-Hodge formalism</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="basis_vectors.html">Basis vectors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="musicality.html">Musicality</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hodge_duality.html">Hodge duality fundamentals</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Hodge dual computations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="the_free_matrix_representation.html">Free matrix representation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="the_minkowski_metric.html">Minkowski metric</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../rotations/index.html">Rotations in differential form</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../rotations/rotations_in_3_dimensions.html">Rotations in Euclidean space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rotations/rotations_in_minkowski_space.html">Rotations in Minkowski space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rotations/exponential_map.html">Exponential map</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../differential_operators/index.html">Differential operators expressed as exterior derivatives</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../differential_operators/3-dimensional-euclidean-space.html">3D Euclidean space</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../differential_operators/minkowski-space/index.html">Minkowski space</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../differential_operators/minkowski-space/0-forms.html">0–forms (functions)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../differential_operators/minkowski-space/1-forms.html">1–forms (translations)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../differential_operators/minkowski-space/2-forms.html">2–forms (rotations)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../differential_operators/minkowski-space/3-forms.html">3–forms (3D volumes)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../differential_operators/minkowski-space/4-forms.html">4–forms (4D volumes)</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../faraday_tensor/index.html">Covariant formulation of the electromagnetic field</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../faraday_tensor/revisiting_maxwell_equations.html">Revisiting the 1865 Maxwell’s equations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faraday_tensor/faraday_tensor_derivation.html">Deriving the Faraday tensor from the 1865 Maxwell’s equations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faraday_tensor/of_maxwell_equations_and_rotations.html">Deriving the Faraday 2–form from the 1865 Maxwell’s equations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faraday_tensor/2form_vs_tensor.html">Relation between the Faraday 2–form and the Faraday tensor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faraday_tensor/potential_formulation.html">Potential formulation via differential forms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faraday_tensor/all_electromagnetic_field_forms.html">All electromagnetic field forms</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../miscellaneous/index.html">Random thoughts</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../miscellaneous/de_guas_theorem.html">Proving De Gua’s theorem with Clifford algebra</a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/the_cartan_hodge_formalism/hodge_dual_computations.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Hodge dual computations</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inner-product-on-k-froms">Inner product on k–froms</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hodge-dual-of-k-forms">Hodge dual of k–forms</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#euclidean-space">Euclidean space</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inner-product">Inner product</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hodge-duals">Hodge duals</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#minkowski-space">Minkowski space</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Inner product</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Hodge duals</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="hodge-dual-computations">
+<span id="id1"></span><h1>Hodge dual computations<a class="headerlink" href="#hodge-dual-computations" title="Link to this heading">#</a></h1>
+<p class="custom-author">by Stéphane Haussler</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Draft</p>
+</div>
+<p>In this page, I present a straightforward algorithmic method to calculate the
+inner product between k–vectors (or k–forms). The dicussion in the article on
+<a class="reference internal" href="hodge_duality.html#id1"><span class="std std-ref">Hodge duality fundamentals</span></a> provides geometric intuition. Here, I offer an alternative
+approach to compute the inner product of k–forms, as well as the Hodge dual of
+k–forms, with a simple algorithmic method using the interior product
+<span class="math notranslate nohighlight">\(⌟\)</span>.</p>
+<p>My use of the interior product might be non-standard, and I have not
+investigated whether what follows is established. It certainly works as I
+intuitively expect it should. You may also just find this method a usefull as
+an efficient trick to determine the inner product between k–forms, or the
+Hodge dual of k-forms.</p>
+<p>In this page, I call the top-dimensional differential form the
+<strong>pseudo-scalar</strong>. Specifically, the pseudo-scalar is:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(dx ∧ dy ∧ dz\)</span> in 3D–Euclidean space, and</p></li>
+<li><p><span class="math notranslate nohighlight">\(dt ∧ dx ∧ dy ∧ dz\)</span> in 4D–Minkowski space.</p></li>
+</ul>
+<p>The term <strong>pseudo-scalar</strong> is chosen because the Hodge dual of these
+top-dimensional differential forms results in scalar quantities. This naming
+convention highlights the relationship between these forms and scalar fields
+through the Hodge duality.</p>
+<section id="inner-product-on-k-froms">
+<h2>Inner product on k–froms<a class="headerlink" href="#inner-product-on-k-froms" title="Link to this heading">#</a></h2>
+<p>To establish a common foundation, recall that the inner product of k–vectors
+is equal to that of k–forms. For basis vectors and covectors, the inner
+product is the metric. In flat spacetime, this yields the Minkowski
+metric <span class="math notranslate nohighlight">\(η\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[∂_μ · ∂_ν = dx^μ · dx^ν = η^{μν} = η_{μν}\]</div>
+<p>Considering basis vectors, dual covectors are defined as:</p>
+<div class="math notranslate nohighlight">
+\[dx^μ \left( ∂_ν \right) = δ^μ_ν\]</div>
+<p>In this sense, 1–forms <em>measure</em> vectors, and the measure of a basis vector
+<span class="math notranslate nohighlight">\(∂_ν\)</span> through it corresponding basis covector <span class="math notranslate nohighlight">\(dx^μ\)</span> is one. The
+inner product, denoted with <span class="math notranslate nohighlight">\(·\)</span> or <span class="math notranslate nohighlight">\(\braket{|}\)</span>, measures the                                                                             shadow of one vector onto another.</p>
+<p>The standard interior product is an operation between a vector and a form. It
+consist of rearanging the form to bring the corresponding covector to the
+front, and applying the vector to that front slot. This operation transforms a
+k–form to a (k-1)–form. For example:</p>
+<div class="math notranslate nohighlight">
+\[\newcommand{\⌟}{\:⌟\:}
+∂_y \⌟ dx ∧ dy ∧ dz = ∂_y \⌟ (- dy ∧ dx ∧ dz) = - dy \left( ∂_y \right) ∧ dx ∧ dz = - dx ∧ dz\]</div>
+<p>Here, we have applied the basis vector <span class="math notranslate nohighlight">\(∂_ν\)</span> to the basis form
+<span class="math notranslate nohighlight">\(dx^μ\)</span>.</p>
+<p>We equate the interior product to the dot product for a vector pair to the
+interior product <span class="math notranslate nohighlight">\(⌟\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\newcommand{\⌟}{\:⌟\:}
+∂_ν \⌟ ∂_μ  = ∂_μ  · ∂_ν  = η_{μν}\]</div>
+<p>For covectors:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\newcommand{\⌟}{\:⌟\:}
+dx^ν \⌟ dx^μ = dx^μ · dx^ν = η^{μν} \\\end{split}\]</div>
+<p>The interior product of a vector can be applied to a general k–vector. For a
+basis vector acting on a basis 2–vector, we bring the corresponding basis
+1–vector to the front and apply the vector to the first slot:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\newcommand{\⌟}{\:⌟\:}
+dt \⌟ dx ∧ dt &amp;= dt \⌟ \left( - dt ∧ dx \right) \\
+              &amp;= - ( dt · dt ) \; dx \\
+              &amp;= - dx\end{split}\]</div>
+<p>Simmilarly, the interior product of a basis vector can be taken with a
+3–vector or a 4–vector. This provides a straightforward algorithmic approach                                                                        to calculate the inner product with no thinking involved:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\newcommand{\⌟}{\:⌟\:}
+(dt ∧ dx) · (dt ∧ dx) &amp;= dx \⌟ dt \⌟ dt ∧ dx \\
+                      &amp;= dx \⌟ (dt · dt) ∧ dx \\
+                      &amp;= dx \⌟ dx \\
+                      &amp;= dx · dx \\
+                      &amp;= -1\end{split}\]</div>
+</section>
+<section id="hodge-dual-of-k-forms">
+<h2>Hodge dual of k–forms<a class="headerlink" href="#hodge-dual-of-k-forms" title="Link to this heading">#</a></h2>
+<p>In the article <a class="reference internal" href="hodge_duality.html#id1"><span class="std std-ref">Hodge duality fundamentals</span></a>, the inclusion of the inner product to
+determine the Hodge dual of k–forms is explained. Here I present how to
+directly determine the Hodge dual. The Hodge dual can be determined directly by
+taking the interior product <span class="math notranslate nohighlight">\(⌟\)</span> with the pseudo-scalar. In Minkowski
+space, the pseudo-scalar is <span class="math notranslate nohighlight">\(dt ∧ dx ∧ dy ∧ dz\)</span>.</p>
+<p>For example, the Hodge dual of <span class="math notranslate nohighlight">\(dx ∧ dy\)</span> is:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\newcommand{\⌟}{\:⌟\:}
+⋆ dx ∧ dy &amp; = (dx ∧ dy) \⌟ dt ∧ dx ∧ dy ∧ dz \\
+          &amp; = dy \⌟ dx \⌟ (- dx ∧ dt ∧ dy ∧ dz) \\
+          &amp; = dy \⌟ dx \⌟ (+ dx ∧ dy ∧ dt ∧ dz) \\
+          &amp; = dy \⌟ (dx · dx) \: dy ∧ dt ∧ dz \\
+          &amp; = - dy \⌟ dy ∧ dt ∧ dz \\
+          &amp; = - (dy · dy) \: dt ∧ dz \\
+          &amp; = dt ∧ dz \\\end{split}\]</div>
+</section>
+<section id="euclidean-space">
+<h2>Euclidean space<a class="headerlink" href="#euclidean-space" title="Link to this heading">#</a></h2>
+<section id="inner-product">
+<h3>Inner product<a class="headerlink" href="#inner-product" title="Link to this heading">#</a></h3>
+</section>
+<section id="hodge-duals">
+<h3>Hodge duals<a class="headerlink" href="#hodge-duals" title="Link to this heading">#</a></h3>
+</section>
+</section>
+<section id="minkowski-space">
+<h2>Minkowski space<a class="headerlink" href="#minkowski-space" title="Link to this heading">#</a></h2>
+<section id="id2">
+<h3>Inner product<a class="headerlink" href="#id2" title="Link to this heading">#</a></h3>
+<p>We can systematicall apply the procedure to obtain the same result as above:</p>
+<p class="rubric">1–forms</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{array}{c|rrrr}
+        &amp; dt &amp; dx  &amp; dy  &amp; dz \\
+    \hline
+    dt &amp; +1  &amp;  0  &amp;  0  &amp;  0 \\
+    dx &amp;  0  &amp; -1  &amp;  0  &amp;  0 \\
+    dy &amp;  0  &amp;  0  &amp; -1  &amp;  0 \\
+    dz &amp;  0  &amp;  0  &amp;  0  &amp; -1 \\
+\end{array}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\newcommand{\⌟}{\:⌟\:}
+\begin{alignedat}{5}
+    dt · dt &amp;=&amp; dt &amp;\⌟&amp; dt &amp; = +1 \\
+    dx · dt &amp;=&amp; dx &amp;\⌟&amp; dx &amp; = -1 \\
+    dy · dt &amp;=&amp; dy &amp;\⌟&amp; dy &amp; = -1 \\
+    dz · dt &amp;=&amp; dz &amp;\⌟&amp; dz &amp; = -1 \\
+\end{alignedat}\end{split}\]</div>
+<p class="rubric">2–forms</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{array}{c|rrrrrr}
+           &amp; dt ∧ dx &amp; dt ∧ dy &amp; dt ∧ dz &amp; dy ∧ dz &amp; dz ∧ dx &amp; dx ∧ dy \\
+           \hline
+   dt ∧ dx &amp; -1      &amp;  0      &amp;  0      &amp;   0     &amp;  0      &amp;  0      \\
+   dt ∧ dy &amp;  0      &amp; -1      &amp;  0      &amp;   0     &amp;  0      &amp;  0      \\                                                                     dt ∧ dz &amp;  0      &amp;  0      &amp; -1      &amp;   0     &amp;  0      &amp;  0      \\
+   dy ∧ dz &amp;  0      &amp;  0      &amp;  0      &amp;  +1     &amp;  0      &amp;  0      \\
+   dz ∧ dx &amp;  0      &amp;  0      &amp;  0      &amp;   0     &amp; +1      &amp;  0      \\
+   dx ∧ dy &amp;  0      &amp;  0      &amp;  0      &amp;   0     &amp;  0      &amp; +1      \\
+\end{array}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\newcommand{\⌟}{\:⌟\:}
+\newcommand{\·}{\:·\:}
+\begin{alignedat}{5}
+    (&amp; dt ∧ dx &amp;) \· (&amp; dt ∧ dx &amp;) =&amp; dx &amp;\⌟&amp; dt &amp;\⌟&amp; dt ∧ dx &amp;= + dx &amp;\⌟&amp; dx &amp;= -1 \\
+    (&amp; dt ∧ dy &amp;) \· (&amp; dt ∧ dy &amp;) =&amp; dy &amp;\⌟&amp; dt &amp;\⌟&amp; dt ∧ dy &amp;= + dy &amp;\⌟&amp; dy &amp;= -1 \\
+    (&amp; dt ∧ dy &amp;) \· (&amp; dt ∧ dz &amp;) =&amp; dz &amp;\⌟&amp; dt &amp;\⌟&amp; dt ∧ dz &amp;= + dz &amp;\⌟&amp; dz &amp;= -1 \\
+    (&amp; dy ∧ dz &amp;) \· (&amp; dy ∧ dz &amp;) =&amp; dz &amp;\⌟&amp; dy &amp;\⌟&amp; dy ∧ dz &amp;= - dz &amp;\⌟&amp; dz &amp;= +1 \\
+    (&amp; dz ∧ dx &amp;) \· (&amp; dz ∧ dx &amp;) =&amp; dx &amp;\⌟&amp; dz &amp;\⌟&amp; dz ∧ dx &amp;= - dx &amp;\⌟&amp; dx &amp;= +1 \\                                                                    (&amp; dx ∧ dy &amp;) \· (&amp; dx ∧ dy &amp;) =&amp; dy &amp;\⌟&amp; dx &amp;\⌟&amp; dx ∧ dy &amp;= - dy &amp;\⌟&amp; dy &amp;= +1 \\
+\end{alignedat}\end{split}\]</div>
+<p class="rubric">3–forms</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{array}{c|rrrr}
+                &amp; dx ∧ dy ∧ dz &amp; dt ∧ dy ∧ dz &amp; dt ∧ dz ∧ dx &amp; dt ∧ dx ∧ dy \\
+                \hline
+   dx ∧ dy ∧ dz &amp; -1           &amp;  0           &amp;   0          &amp;   0          \\
+   dt ∧ dy ∧ dz &amp;  0           &amp; +1           &amp;   0          &amp;   0          \\
+   dt ∧ dz ∧ dx &amp;  0           &amp;  0           &amp;  +1          &amp;   0          \\                                                                dt ∧ dx ∧ dy &amp;  0           &amp;  0           &amp;   0          &amp;  +1          \\
+\end{array}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\newcommand{\⌟}{\:⌟\:}
+\newcommand{\·}{\:·\:}
+\small
+\begin{alignedat}{5}
+    (&amp; dx ∧ dy ∧ dz &amp;) \· (&amp; dx ∧ dy ∧ dz &amp;) =&amp; dz \⌟ dy \⌟ dx \⌟ dx ∧ dy ∧ dz &amp;=&amp; - dz \⌟ dy \⌟ dy ∧ dz &amp;= + dz \⌟ d = -1 \\
+    (&amp; dt ∧ dy ∧ dz &amp;) \· (&amp; dt ∧ dy ∧ dz &amp;) =&amp; dz \⌟ dy \⌟ dt \⌟ dt ∧ dy ∧ dz &amp;=&amp; + dz \⌟ dy \⌟ dy ∧ dz &amp;= - dz \⌟ d = +1 \\
+    (&amp; dt ∧ dz ∧ dx &amp;) \· (&amp; dt ∧ dz ∧ dx &amp;) =&amp; dx \⌟ dz \⌟ dt \⌟ dt ∧ dz ∧ dx &amp;=&amp; + dx \⌟ dz \⌟ dz ∧ dx &amp;= - dx \⌟ d = +1 \\                             (&amp; dt ∧ dx ∧ dy &amp;) \· (&amp; dt ∧ dx ∧ dy &amp;) =&amp; dy \⌟ dx \⌟ dt \⌟ dt ∧ dx ∧ dy &amp;=&amp; + dy \⌟ dx \⌟ dx ∧ dy &amp;= - dy \⌟ d = +1 \\
+\end{alignedat}\end{split}\]</div>
+<p class="rubric">4–forms</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{array}{c|c}
+                      &amp; dt ∧ dx ∧ dy ∧ dz \\                                                                                                   \hline
+    dt ∧ dx ∧ dy ∧ dz &amp;                -1 \\
+\end{array}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\newcommand{\⌟}{\:⌟\:}
+\newcommand{\·}{\:·\:}
+(dt ∧ dx ∧ dy ∧ dz) \· (dt ∧ dx ∧ dy ∧ dz) &amp;= dz \⌟ dy \⌟ dx \⌟ dt \⌟ dt ∧ dx ∧ dy ∧ dz \\
+                                          &amp;= dz \⌟ dy \⌟ dx \⌟ dx ∧ dy ∧ dz \\
+                                          &amp;= -1 dz \⌟ dy \⌟ ∧ dy ∧ dz \\
+                                          &amp;= +1 dz \⌟ ∧ dz \\
+                                          &amp;= -1\end{split}\]</div>
+</section>
+<section id="id3">
+<h3>Hodge duals<a class="headerlink" href="#id3" title="Link to this heading">#</a></h3>
+<p class="rubric">1-forms</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}⋆ dt &amp;=&amp; dx ∧ dy ∧ dz \\
+⋆ dx &amp;=&amp; dt ∧ dy ∧ dz \\
+⋆ dy &amp;=&amp; dt ∧ dz ∧ dx \\
+⋆ dz &amp;=&amp; dt ∧ dx ∧ dy \\\end{split}\]</div>
+<div class="dropdown toggle-shown admonition">
+<p class="admonition-title">Calculations</p>
+<p class="rubric">Take the interior product with the pseudoscalar</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}⋆ dt &amp;=&amp; dt &amp;\⌟ dt ∧ dx ∧ dy ∧ dz \\
+⋆ dx &amp;=&amp; dx &amp;\⌟ dt ∧ dx ∧ dy ∧ dz \\
+⋆ dy &amp;=&amp; dy &amp;\⌟ dt ∧ dx ∧ dy ∧ dz \\
+⋆ dz &amp;=&amp; dz &amp;\⌟ dt ∧ dx ∧ dy ∧ dz \\\end{split}\]</div>
+<p class="rubric">Reorder</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}⋆ dt &amp;=&amp; + dt &amp;\⌟ dt ∧ dx ∧ dy ∧ dz \\
+⋆ dx &amp;=&amp; - dx &amp;\⌟ dx ∧ dt ∧ dy ∧ dz \\
+⋆ dy &amp;=&amp; - dy &amp;\⌟ dy ∧ dt ∧ dz ∧ dx \\
+⋆ dz &amp;=&amp; - dz &amp;\⌟ dz ∧ dt ∧ dx ∧ dy \\\end{split}\]</div>
+<p class="rubric">Apply the interior product</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}⋆&amp; dt &amp;=&amp; + (&amp; dt &amp;\·&amp; dt &amp;) \: &amp; dx ∧ dy ∧ dz \\
+⋆&amp; dx &amp;=&amp; - (&amp; dx &amp;\·&amp; dx &amp;) \: &amp; dt ∧ dy ∧ dz \\
+⋆&amp; dy &amp;=&amp; - (&amp; dy &amp;\·&amp; dy &amp;) \: &amp; dt ∧ dz ∧ dx \\
+⋆&amp; dz &amp;=&amp; - (&amp; dz &amp;\·&amp; dz &amp;) \: &amp; dt ∧ dx ∧ dy \\\end{split}\]</div>
+<p class="rubric">Apply numerical values and conclude</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}⋆ dt &amp;=&amp; dx ∧ dy ∧ dz \\
+⋆ dx &amp;=&amp; dt ∧ dy ∧ dz \\
+⋆ dy &amp;=&amp; dt ∧ dz ∧ dx \\
+⋆ dz &amp;=&amp; dt ∧ dx ∧ dy \\\end{split}\]</div>
+</div>
+<p class="rubric">2-forms</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}⋆ dt ∧ dx &amp;= \\
+⋆ dt ∧ dy &amp;= \\
+⋆ dt ∧ dz &amp;= \\
+⋆ dy ∧ dz &amp;= \\
+⋆ dz ∧ dx &amp;= \\
+⋆ dx ∧ dy &amp;= \\\end{split}\]</div>
+<p class="rubric">3-forms</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}⋆ dx ∧ dy ∧ dz &amp;=  \\
+⋆ dt ∧ dy ∧ dz &amp;=  \\
+⋆ dt ∧ dz ∧ dx &amp;=  \\
+⋆ dt ∧ dx ∧ dy &amp;=  \\\end{split}\]</div>
+<p class="rubric">4-forms</p>
+<div class="math notranslate nohighlight">
+\[⋆ dt ∧ dx ∧ dy ∧ dz =\]</div>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="hodge_duality.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Hodge duality fundamentals</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="the_free_matrix_representation.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Free matrix representation</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inner-product-on-k-froms">Inner product on k–froms</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hodge-dual-of-k-forms">Hodge dual of k–forms</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#euclidean-space">Euclidean space</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inner-product">Inner product</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hodge-duals">Hodge duals</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#minkowski-space">Minkowski space</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Inner product</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">Hodge duals</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Stéphane Haussler
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024, Stéphane Haussler.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
