@@ -15,8 +15,40 @@ Relation between the Faraday 2--form and the Faraday tensor
 
 .. warning:: under construction
 
-In this page, I relate the Faraday 2--form to the electormagnetic field tensor,
-and review the differences when rising or lowering and indices.
+I have personally been very confused by the relationship between the Faraday
+tensor and the Faraday 2--form. In particular, I was confused about the
+components of the Faraday tensor :math:`F_{μν}` and the Faraday 2--form, also
+noted :math:`F_{μν}`. In particular, I was confused about the components
+obtained in row/column representation, their symmetries, especially when
+lowering or raising indices. I somehow expected to always obtain the same
+components, which is the case for the fully covariant or fully contravariant
+case, but is not the case in mixed form. After all, 2--forms transform like
+tensors. Maybe this is obvious to most, but maybe helpful to few. Hence, in
+this page, I explore the relationship between the electromagnetic field tensor
+(Faraday tensor) and the Faraday 2--form that I have derived from Maxwell's
+equations:
+
+* :ref:`Deriving the Faraday tensor from the 1865 Maxwell's equations`
+* :ref:`Deriving the Faraday 2--form from the 1865 Maxwell's equations`
+
+In particular, we examine the effects of raising and lowering indices on both
+the Faraday 2-form, and the Faraday tensor. The core distinction lies in their
+mathematical structure. A tensor can be expressed in a tensor basis :math:`dx^μ
+⊗ dx^ν`, and the overall tensor object :math:`T` :math:`T=T_{μν} dx^μ ⊗ dx^ν`
+can be symmetric, or antisymmetric, or combinations of both. Really, here we do
+nothing else than separate a rank 2 tensor into its symmetric and its
+antisymmetric part:
+
+.. math::
+
+   T_{μν} \: dx^μ ⊗ dx^ν =& \frac{1}{2} \: T_{μν}\left( dx^μ ⊗ dx^ν + dx^ν ⊗ dx^μ \right) + \\
+                          & \frac{1}{2} \: T_{μν}\left( dx^μ ⊗ dx^ν - dx^ν ⊗ dx^μ \right)
+
+The tensor :math:`T` is then antisymmetric if the tensor components
+:math:`T_{μν}` are antisymmetric. In contrast, 2--forms are antisymmetric by
+nature and built from tensors by taking the antisymmetric part. The 2--form
+basis can be expressed combinations of tensor elements built to take the
+antisymmetric part :math:`T_{μν} \: dx^μ ⊗ dx^ν - dx^ν ⊗ dx^μ`.
 
 In abstract index notation, the doubly covariant Faraday tensor is expressed
 without its tensor basis as:

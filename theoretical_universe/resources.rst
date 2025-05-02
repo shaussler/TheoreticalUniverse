@@ -73,6 +73,20 @@ and be prepare to watch thrice:
 * `PSI 2018/2019 - Gravitational Physics - Lecture 3 - Cartan's formalism:
   connection & curvature <https://pirsa.org/19010053>`_
 
+.. rubric:: Connection forms
+
+I have not gone through the material below:
+
+Blogs:
+
+* https://sunglee.us/mathphysarchive/?p=1038
+* https://hadroncfy.com/articles/2019/03/31/curvature-2-form/index.html
+
+Videos:
+
+* `Differential Geometry: Lecture 7 part 2: connection form in R3
+  <https://www.youtube.com/watch?v=dJ0DLBbyz-Y>`_
+
 .. rubric:: Gravitational physics lecture by Ruth Gregory
 
 There is great content from the Perimeter Institute Recorded Seminar Archive
