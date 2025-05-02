@@ -138,7 +138,75 @@ row/column representation of the doubly covariant Faraday tensor.
 
    .. }}}
 
-With implicit bivector basis, we have the `standard representation with abstract
+In terms of tensor basis, we obtain:
+
+.. math::
+
+   F^{♭♭} = \left[ \begin{alignedat}{1}
+                         & + \E^x \: dx ⊗ dt & + \E^y \: dy ⊗ dt & + \E^z \: dz ⊗ dt \\
+       - \E^x \: dt ⊗ dx &                   & -  B^z \: dy ⊗ dx & +  B^y \: dz ⊗ dx \\
+       - \E^y \: dt ⊗ dy & +  B^z \: dx ⊗ dy &                   & -  B^x \: dz ⊗ dy \\
+       - \E^z \: dt ⊗ dz & -  B^y \: dx ⊗ dz & +  B^x \: dy ⊗ dz &                   \\
+   \end{alignedat} \right]
+
+.. admonition:: Calculations
+   :class: dropdown
+
+   .. {{{
+
+   .. rubric:: Start from the Faraday 2--form
+
+   .. math::
+
+      F^{♭♭} = \left[ \begin{aligned}
+          - & \E^x \: dt ∧ dx \\
+          - & \E^y \: dt ∧ dy \\
+          - & \E^z \: dt ∧ dz \\
+            &  B^x \: dy ∧ dz \\
+            &  B^y \: dz ∧ dx \\
+            &  B^z \: dx ∧ dy \\
+      \end{aligned} \right]
+
+   .. rubric:: Switch from bivectgor basis to tensor basis
+
+   .. math::
+
+      F^{♭♭} = \left[ \begin{aligned}
+          - & \E^x \: \left( dt ⊗ dx - dx ⊗ dt\right) \\
+          - & \E^y \: \left( dt ⊗ dy - dy ⊗ dt\right) \\
+          - & \E^z \: \left( dt ⊗ dz - dz ⊗ dt\right) \\
+            &  B^x \: \left( dy ⊗ dz - dz ⊗ dy\right) \\
+            &  B^y \: \left( dz ⊗ dx - dx ⊗ dz\right) \\
+            &  B^z \: \left( dx ⊗ dy - dy ⊗ dx\right) \\
+      \end{aligned} \right]
+
+   .. rubric:: Expand
+
+   .. math::
+
+      F^{♭♭} = \left[ \begin{alignedat}{1}
+          - & \E^x \: dt ⊗ dx &+ & \E^x \: dx ⊗ dt \\
+          - & \E^y \: dt ⊗ dy &+ & \E^y \: dy ⊗ dt \\
+          - & \E^z \: dt ⊗ dz &+ & \E^z \: dz ⊗ dt \\
+          + &  B^x \: dy ⊗ dz &- &  B^x \: dz ⊗ dy \\
+          + &  B^y \: dz ⊗ dx &- &  B^y \: dx ⊗ dz \\
+          + &  B^z \: dx ⊗ dy &- &  B^z \: dy ⊗ dx \\
+      \end{alignedat} \right]
+
+   .. rubric:: Reorder and conclude
+
+   .. math::
+
+      F^{♭♭} = \left[ \begin{alignedat}{1}
+                            & + \E^x \: dx ⊗ dt & + \E^y \: dy ⊗ dt & + \E^z \: dz ⊗ dt \\
+          - \E^x \: dt ⊗ dx &                   & -  B^z \: dy ⊗ dx & +  B^y \: dz ⊗ dx \\
+          - \E^y \: dt ⊗ dy & +  B^z \: dx ⊗ dy &                   & -  B^x \: dz ⊗ dy \\
+          - \E^z \: dt ⊗ dz & -  B^y \: dx ⊗ dz & +  B^x \: dy ⊗ dz &                   \\
+      \end{alignedat} \right]
+
+   .. }}}
+
+With implicit tensor basis, we have the `standard representation with abstract
 index notation <https://en.m.wikipedia.org/wiki/Electromagnetic_tensor>`_
 
 .. math::
@@ -150,11 +218,11 @@ index notation <https://en.m.wikipedia.org/wiki/Electromagnetic_tensor>`_
        - \E^z & -  B^y & +  B^x &        \\
    \end{bmatrix}
 
-Where the field 2-form is related to the Faraday tensor with:
+The field 2--form is related to the Faraday tensor through:
 
 .. math::
 
-   F^{♭♭} = \frac{1}{2} \: F_{μν} \: dx^μ ∧ dx^ν
+   F^{♭♭} = \frac{1}{2} \: F_{μν} \: dx^μ ∧ dx^ν = F_{μν} \: dx^μ ⊗ dx^ν
 
 For sanity, I refer to Wikipedia for a quick double check of `the link between
 the Faraday 2--form and the Faraday tensor
