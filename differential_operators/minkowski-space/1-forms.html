@@ -1,0 +1,938 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9HQ1J8VKRB"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-9HQ1J8VKRB');
+    </script>
+    
+    <title>1–forms (translations) &#8212; Theoretical Universe</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=c1fb35df" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>window.MathJax = {"chtml": {"displayAlign": "left", "displayIndent": "2em"}, "tex": {"packages": {"[+]": ["ams"]}, "macros": {"E": "\\tilde{E}", "\u231f": "\\:\u231f\\:"}}, "tex2jax": {"ignoreClass": ".*", "processClass": "math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'differential_operators/minkowski-space/1-forms';</script>
+    <link rel="canonical" href="https://shaussler.github.io/TheoreticalUniverse/differential_operators/minkowski-space/1-forms.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="2–forms (rotations)" href="2-forms.html" />
+    <link rel="prev" title="0–forms (functions)" href="0-forms.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Theoretical Universe</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Table of Contents:</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../licence.html">Licence</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cite.html">How to cite</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute.html">How to contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../resources.html">Resources</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../the_cartan_hodge_formalism/index.html">The Cartan-Hodge formalism</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../the_cartan_hodge_formalism/basis_vectors.html">Basis vectors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../the_cartan_hodge_formalism/musicality.html">Musicality</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../the_cartan_hodge_formalism/hodge_duality.html">Hodge duality fundamentals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../the_cartan_hodge_formalism/hodge_dual_computations.html">Hodge dual computations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../the_cartan_hodge_formalism/the_free_matrix_representation.html">Free matrix representation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../the_cartan_hodge_formalism/the_minkowski_metric.html">Minkowski metric</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../rotations/index.html">Rotations in differential form</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../rotations/rotations_in_3_dimensions.html">Rotations in Euclidean space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rotations/rotations_in_minkowski_space.html">Rotations in Minkowski space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rotations/exponential_map.html">Exponential map</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../index.html">Differential operators expressed as exterior derivatives</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../3-dimensional-euclidean-space.html">3D Euclidean space</a></li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="index.html">Minkowski space</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="0-forms.html">0–forms (functions)</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">1–forms (translations)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="2-forms.html">2–forms (rotations)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3-forms.html">3–forms (3D volumes)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="4-forms.html">4–forms (4D volumes)</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../faraday_tensor/index.html">Covariant formulation of the electromagnetic field</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../faraday_tensor/revisiting_maxwell_equations.html">Revisiting the 1865 Maxwell’s equations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../faraday_tensor/faraday_tensor_derivation.html">Deriving the Faraday tensor from the 1865 Maxwell’s equations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../faraday_tensor/of_maxwell_equations_and_rotations.html">Deriving the Faraday 2–form from the 1865 Maxwell’s equations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../faraday_tensor/2form_vs_tensor.html">Relation between the Faraday 2–form and the Faraday tensor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../faraday_tensor/potential_formulation.html">Potential formulation via differential forms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../faraday_tensor/all_electromagnetic_field_forms.html">All electromagnetic field forms</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../miscellaneous/index.html">Random thoughts</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../miscellaneous/de_guas_theorem.html">Proving De Gua’s theorem with Clifford algebra</a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/differential_operators/minkowski-space/1-forms.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>1–forms (translations)</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#translations">Translations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#t"><span class="math notranslate nohighlight">\(⋆ T^♭\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d-t"><span class="math notranslate nohighlight">\(d T^♭\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"><span class="math notranslate nohighlight">\(d⋆ T^♭\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2"><span class="math notranslate nohighlight">\(⋆d T^♭\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3"><span class="math notranslate nohighlight">\(⋆d⋆ T^♭\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dd-t"><span class="math notranslate nohighlight">\(d⋆d T^♭\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4"><span class="math notranslate nohighlight">\(d⋆d⋆ T^♭\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5"><span class="math notranslate nohighlight">\(⋆d⋆d T^♭\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dd-dd-t"><span class="math notranslate nohighlight">\((⋆d⋆d - d⋆d⋆) T^♭\)</span></a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="forms-translations">
+<h1>1–forms (translations)<a class="headerlink" href="#forms-translations" title="Link to this heading">#</a></h1>
+<p class="custom-author">by Stéphane Haussler</p>
+<section id="translations">
+<h2>Translations<a class="headerlink" href="#translations" title="Link to this heading">#</a></h2>
+<p>A generic translation in spacetime is expressed with a 4-vector:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}T^♯ = \left[ \begin{alignedat}{1}
+    A^t &amp; ∂_t \\
+    A^x &amp; ∂_x \\
+    A^y &amp; ∂_y \\
+    A^z &amp; ∂_z \\
+\end{alignedat} \right]\end{split}\]</div>
+<p>Flattened, the translation expressed in differential form is:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}T^♭ = \left[ \begin{alignedat}{2}
+      &amp; A^t &amp; dt \\
+    - &amp; A^x &amp; dx \\
+    - &amp; A^y &amp; dy \\
+    - &amp; A^z &amp; dz \\
+\end{alignedat} \right]\end{split}\]</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Calculations</p>
+<p class="rubric">References</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../../the_cartan_hodge_formalism/basis_vectors.html#basis-vectors"><span class="std std-ref">Basis vectors</span></a></p></li>
+<li><p><a class="reference internal" href="../../the_cartan_hodge_formalism/musicality.html#musicality"><span class="std std-ref">Musicality</span></a></p></li>
+</ul>
+<p class="rubric">Flatten the translation vector</p>
+<div class="math notranslate nohighlight">
+\[T^♭ = \left(T^♯\right)^♭\]</div>
+<p class="rubric">Expand</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}T^♭ = \left[ \begin{alignedat}{1}
+    A^t &amp; ∂_t \\
+    A^x &amp; ∂_x \\
+    A^y &amp; ∂_y \\
+    A^z &amp; ∂_z \\
+\end{alignedat} \right]^♭\end{split}\]</div>
+<p class="rubric">Distribute the flat operator to the basis vectors</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}T^♭ = \left[ \begin{alignedat}{1}
+    A^t &amp; ∂_t^♭ \\
+    A^x &amp; ∂_x^♭ \\
+    A^y &amp; ∂_y^♭ \\
+    A^z &amp; ∂_z^♭ \\
+\end{alignedat} \right]\end{split}\]</div>
+<p class="rubric">Apply the flat operators to each basis vectors</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}T^♭ = \left[ \begin{alignedat}{2}
+    A^t &amp; η_{tμ} &amp; dx^μ \\
+    A^x &amp; η_{xμ} &amp; dx^μ \\
+    A^y &amp; η_{yμ} &amp; dx^μ \\
+    A^z &amp; η_{zμ} &amp; dx^μ \\
+\end{alignedat} \right]\end{split}\]</div>
+<p class="rubric">Identify non-zero terms</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}T^♭ = \left[ \begin{alignedat}{2}
+    A^t &amp; η_{tt} &amp; dx^t \\
+    A^x &amp; η_{xx} &amp; dx^x \\
+    A^y &amp; η_{yy} &amp; dx^y \\
+    A^z &amp; η_{zz} &amp; dx^z \\
+\end{alignedat} \right]\end{split}\]</div>
+<p class="rubric">Apply numerical values</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}T^♭ = \left[ \begin{alignedat}{2}
+    A^t &amp;     &amp; dx^t \\
+    A^x &amp; (-) &amp; dx^x \\
+    A^y &amp; (-) &amp; dx^y \\
+    A^z &amp; (-) &amp; dx^z \\
+\end{alignedat} \right]\end{split}\]</div>
+<p class="rubric">Rearange and conclude</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}T^♭ = \left[ \begin{alignedat}{2}
+    &amp; A^t &amp; dt \\
+  - &amp; A^x &amp; dx \\
+  - &amp; A^y &amp; dy \\
+  - &amp; A^z &amp; dz \\
+\end{alignedat} \right]\end{split}\]</div>
+</div>
+</section>
+<section id="t">
+<h2><span class="math notranslate nohighlight">\(⋆ T^♭\)</span><a class="headerlink" href="#t" title="Link to this heading">#</a></h2>
+<div class="math notranslate nohighlight">
+\[\begin{split}⋆ T^♭ = \left[ \begin{alignedat}{2}
+      &amp; A^t &amp; dx ∧ dy ∧ dz \\
+    - &amp; A^x &amp; dt ∧ dy ∧ dz \\
+    - &amp; A^y &amp; dt ∧ dz ∧ dx \\
+    - &amp; A^z &amp; dt ∧ dx ∧ dy \\
+\end{alignedat} \right]\end{split}\]</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Calculations</p>
+<p class="rubric">References</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../../the_cartan_hodge_formalism/index.html#hodge-dual-tables"><span class="std std-ref">Hodge dual of k–forms in Minkowski space</span></a></p></li>
+</ul>
+<p class="rubric">Apply the Hodge star to all</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}⋆ T^♭ = ⋆ \left[ \begin{alignedat}{2}
+      &amp; A^t &amp; dt \\
+    - &amp; A^x &amp; dx \\
+    - &amp; A^y &amp; dy \\
+    - &amp; A^z &amp; dz \\
+\end{alignedat} \right]\end{split}\]</div>
+<p class="rubric">Distribute the Hodge star to each</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}⋆ T^♭ = \left[ \begin{alignedat}{3}
+      &amp; A^t &amp; ⋆ &amp; dt \\
+    - &amp; A^x &amp; ⋆ &amp; dx \\
+    - &amp; A^y &amp; ⋆ &amp; dy \\
+    - &amp; A^z &amp; ⋆ &amp; dz \\
+\end{alignedat} \right]\end{split}\]</div>
+<p class="rubric">Apply the Hodge star and conclude</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}⋆ T^♭ = \left[ \begin{alignedat}{2}
+      &amp; A^t &amp; dx ∧ dy ∧ dz \\
+    - &amp; A^x &amp; dt ∧ dy ∧ dz \\
+    - &amp; A^y &amp; dt ∧ dz ∧ dx \\
+    - &amp; A^z &amp; dt ∧ dx ∧ dy \\
+\end{alignedat} \right]\end{split}\]</div>
+</div>
+</section>
+<section id="d-t">
+<h2><span class="math notranslate nohighlight">\(d T^♭\)</span><a class="headerlink" href="#d-t" title="Link to this heading">#</a></h2>
+<div class="math notranslate nohighlight">
+\[\begin{split}d T^♭ = \left[ \begin{alignedat}{1}
+    ( &amp; - &amp; ∂_t A^x &amp; - &amp; ∂_x A^t) &amp; \; dt ∧ dx \\
+    ( &amp; - &amp; ∂_t A^y &amp; - &amp; ∂_y A^t) &amp; \; dt ∧ dy \\
+    ( &amp; - &amp; ∂_t A^z &amp; - &amp; ∂_z A^t) &amp; \; dt ∧ dz \\
+    ( &amp; - &amp; ∂_y A^z &amp; + &amp; ∂_z A^y) &amp; \; dy ∧ dz \\
+    ( &amp; - &amp; ∂_z A^x &amp; + &amp; ∂_x A^z) &amp; \; dz ∧ dx \\
+    ( &amp; - &amp; ∂_x A^y &amp; + &amp; ∂_y A^x) &amp; \; dx ∧ dy \\
+\end{alignedat} \right]\end{split}\]</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Calculations</p>
+<p class="rubric">Take the exterior derivative</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}d T^♭ = d \left[ \begin{alignedat}{2}
+      &amp; A^t &amp; dt \\
+    - &amp; A^x &amp; dx \\
+    - &amp; A^y &amp; dy \\
+    - &amp; A^z &amp; dz \\
+\end{alignedat} \right]\end{split}\]</div>
+<p class="rubric">Apply the exterior derivative</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}d T^♭ = \begin{bmatrix}
+    + ∂_x A^t dx ∧ dt &amp; + ∂_y A^t dy ∧ dt &amp; + ∂_z A^t dz ∧ dt \\
+    - ∂_t A^x dt ∧ dx &amp; - ∂_y A^x dy ∧ dx &amp; - ∂_z A^x dz ∧ dx \\
+    - ∂_t A^y dt ∧ dy &amp; - ∂_z A^y dz ∧ dy &amp; - ∂_x A^y dx ∧ dy \\
+    - ∂_t A^z dt ∧ dz &amp; - ∂_x A^z dx ∧ dz &amp; - ∂_y A^z dy ∧ dz \\
+\end{bmatrix}\end{split}\]</div>
+<p class="rubric">Rearrange and conclude</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}d T^♭ = \left[ \begin{alignedat}{1}
+    ( &amp; - &amp; ∂_t A^x &amp; - &amp; ∂_x A^t) &amp; \; dt ∧ dx \\
+    ( &amp; - &amp; ∂_t A^y &amp; - &amp; ∂_y A^t) &amp; \; dt ∧ dy \\
+    ( &amp; - &amp; ∂_t A^z &amp; - &amp; ∂_z A^t) &amp; \; dt ∧ dz \\
+    ( &amp; - &amp; ∂_y A^z &amp; + &amp; ∂_z A^y) &amp; \; dy ∧ dz \\
+    ( &amp; - &amp; ∂_z A^x &amp; + &amp; ∂_x A^z) &amp; \; dz ∧ dx \\
+    ( &amp; - &amp; ∂_x A^y &amp; + &amp; ∂_y A^x) &amp; \; dx ∧ dy \\
+\end{alignedat} \right]\end{split}\]</div>
+</div>
+</section>
+<section id="id1">
+<h2><span class="math notranslate nohighlight">\(d⋆ T^♭\)</span><a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<div class="math notranslate nohighlight">
+\[d ⋆ T^♭ = \left( ∂_t A^t + ∂_x A^x + ∂_y A^y + ∂_z A^z \right) \; dt ∧ dx ∧ dy ∧ dz\]</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Calculations</p>
+<p class="rubric">References</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../../the_cartan_hodge_formalism/index.html#hodge-dual-tables"><span class="std std-ref">Hodge dual of k–forms in Minkowski space</span></a></p></li>
+</ul>
+<p class="rubric">Apply the exterior derivative</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}d ⋆ T^♭ = d \left[ \begin{alignedat}{2}
+      &amp; A^t &amp; dx ∧ dy ∧ dz \\
+    - &amp; A^x &amp; dt ∧ dy ∧ dz \\
+    - &amp; A^y &amp; dt ∧ dz ∧ dx \\
+    - &amp; A^z &amp; dt ∧ dx ∧ dy \\
+\end{alignedat} \right]\end{split}\]</div>
+<p class="rubric">Expand the exterior derivative</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}d ⋆ T^♭ = \left[ \begin{alignedat}{2}
+      &amp; ∂_t A^t &amp; dt ∧ dx ∧ dy ∧ dz \\
+    - &amp; ∂_x A^x &amp; dx ∧ dt ∧ dy ∧ dz \\
+    - &amp; ∂_y A^y &amp; dy ∧ dt ∧ dz ∧ dx \\
+    - &amp; ∂_z A^z &amp; dz ∧ dt ∧ dx ∧ dy \\
+\end{alignedat} \right]\end{split}\]</div>
+<p class="rubric">Reorder the exterior products</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}d ⋆ T^♭ = \left[ \begin{alignedat}{2}
+    ∂_t A^t &amp; dt ∧ dx ∧ dy ∧ dz \\
+    ∂_x A^x &amp; dt ∧ dx ∧ dy ∧ dz \\
+    ∂_y A^y &amp; dt ∧ dx ∧ dy ∧ dz \\
+    ∂_z A^z &amp; dt ∧ dx ∧ dy ∧ dz \\
+\end{alignedat} \right]\end{split}\]</div>
+<p class="rubric">Conclude</p>
+<div class="math notranslate nohighlight">
+\[d ⋆ T^♭ = \left( ∂_t A^t + ∂_x A^x + ∂_y A^y + ∂_z A^z \right) \; dt ∧ dx ∧ dy ∧ dz\]</div>
+</div>
+</section>
+<section id="id2">
+<h2><span class="math notranslate nohighlight">\(⋆d T^♭\)</span><a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<div class="math notranslate nohighlight">
+\[\begin{split}⋆ d T^♭ = \left[ \begin{alignedat}{4}
+   (+ &amp; ∂_z A^y &amp; - &amp; ∂_y A^z &amp; ) &amp; \; dt ∧ dx \\
+   (+ &amp; ∂_x A^z &amp; - &amp; ∂_z A^x &amp; ) &amp; \; dt ∧ dy \\
+   (+ &amp; ∂_y A^x &amp; - &amp; ∂_x A^y &amp; ) &amp; \; dt ∧ dz \\
+   (+ &amp; ∂_x A^t &amp; + &amp; ∂_t A^x &amp; ) &amp; \; dy ∧ dz \\
+   (+ &amp; ∂_y A^t &amp; + &amp; ∂_t A^y &amp; ) &amp; \; dz ∧ dx \\
+   (+ &amp; ∂_z A^t &amp; + &amp; ∂_t A^z &amp; ) &amp; \; dx ∧ dy \\
+\end{alignedat} \right]\end{split}\]</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Calculations</p>
+<p class="rubric">References</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../../the_cartan_hodge_formalism/index.html#hodge-dual-tables"><span class="std std-ref">Hodge dual of k–forms in Minkowski space</span></a></p></li>
+</ul>
+<p class="rubric">Take the Hodge star</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}⋆ d T^♭ = ⋆ \left[ \begin{alignedat}{1}
+    ( &amp; - &amp; ∂_t A^x &amp; - &amp; ∂_x A^t &amp; ) &amp; \; dt ∧ dx \\
+    ( &amp; - &amp; ∂_t A^y &amp; - &amp; ∂_y A^t &amp; ) &amp; \; dt ∧ dy \\
+    ( &amp; - &amp; ∂_t A^z &amp; - &amp; ∂_z A^t &amp; ) &amp; \; dt ∧ dz \\
+    ( &amp; - &amp; ∂_y A^z &amp; + &amp; ∂_z A^y &amp; ) &amp; \; dy ∧ dz \\
+    ( &amp; - &amp; ∂_z A^x &amp; + &amp; ∂_x A^z &amp; ) &amp; \; dz ∧ dx \\
+    ( &amp; - &amp; ∂_x A^y &amp; + &amp; ∂_y A^x &amp; ) &amp; \; dx ∧ dy \\
+\end{alignedat} \right]\end{split}\]</div>
+<p class="rubric">Distribute the Hodge star</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}⋆ d T^♭ = \left[ \begin{alignedat}{1}
+    ( &amp; - &amp; ∂_t A^x &amp; - &amp; ∂_x A^t) &amp; \; ⋆ \left( dt ∧ dx \right) \\
+    ( &amp; - &amp; ∂_t A^y &amp; - &amp; ∂_y A^t) &amp; \; ⋆ \left( dt ∧ dy \right) \\
+    ( &amp; - &amp; ∂_t A^z &amp; - &amp; ∂_z A^t) &amp; \; ⋆ \left( dt ∧ dz \right) \\
+    ( &amp; - &amp; ∂_y A^z &amp; + &amp; ∂_z A^y) &amp; \; ⋆ \left( dy ∧ dz \right) \\
+    ( &amp; - &amp; ∂_z A^x &amp; + &amp; ∂_x A^z) &amp; \; ⋆ \left( dz ∧ dx \right) \\
+    ( &amp; - &amp; ∂_x A^y &amp; + &amp; ∂_y A^x) &amp; \; ⋆ \left( dx ∧ dy \right) \\
+\end{alignedat} \right]\end{split}\]</div>
+<p class="rubric">Apply the Hodge star</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}⋆ d T^♭ = \left[ \begin{alignedat}{1}
+    ( &amp; - &amp; ∂_t A^x &amp; - &amp; ∂_x A^t) &amp; \; &amp; - &amp; \left( dy ∧ dz \right) \\
+    ( &amp; - &amp; ∂_t A^y &amp; - &amp; ∂_y A^t) &amp; \; &amp; - &amp; \left( dz ∧ dx \right) \\
+    ( &amp; - &amp; ∂_t A^z &amp; - &amp; ∂_z A^t) &amp; \; &amp; - &amp; \left( dx ∧ dy \right) \\
+    ( &amp; - &amp; ∂_y A^z &amp; + &amp; ∂_z A^y) &amp; \; &amp;   &amp; \left( dt ∧ dx \right) \\
+    ( &amp; - &amp; ∂_z A^x &amp; + &amp; ∂_x A^z) &amp; \; &amp;   &amp; \left( dt ∧ dy \right) \\
+    ( &amp; - &amp; ∂_x A^y &amp; + &amp; ∂_y A^x) &amp; \; &amp;   &amp; \left( dt ∧ dz \right) \\
+\end{alignedat} \right]\end{split}\]</div>
+<p class="rubric">Reorder and conclude</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}⋆ d T^♭ = \left[ \begin{alignedat}{4}
+   ( + &amp; ∂_z A^y &amp; - &amp; ∂_y A^z &amp; ) &amp; \; dt ∧ dx \\
+   ( + &amp; ∂_x A^z &amp; - &amp; ∂_z A^x &amp; ) &amp; \; dt ∧ dy \\
+   ( + &amp; ∂_y A^x &amp; - &amp; ∂_x A^y &amp; ) &amp; \; dt ∧ dz \\
+   ( + &amp; ∂_x A^t &amp; + &amp; ∂_t A^x &amp; ) &amp; \; dy ∧ dz \\
+   ( + &amp; ∂_y A^t &amp; + &amp; ∂_t A^y &amp; ) &amp; \; dz ∧ dx \\
+   ( + &amp; ∂_z A^t &amp; + &amp; ∂_t A^z &amp; ) &amp; \; dx ∧ dy \\
+\end{alignedat} \right]\end{split}\]</div>
+</div>
+</section>
+<section id="id3">
+<h2><span class="math notranslate nohighlight">\(⋆d⋆ T^♭\)</span><a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<div class="math notranslate nohighlight">
+\[⋆d⋆ T^♭ = ∂_t A^t + ∂_x A^x + ∂_y A^y + ∂_z A^z\]</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Calculations</p>
+<p class="rubric">Apply the Hodge star</p>
+<div class="math notranslate nohighlight">
+\[⋆ d ⋆ T^♭ = ⋆ \left( ∂_t A^t + ∂_x A^x + ∂_y A^y + ∂_z A^z \right) \; dt ∧ dx ∧ dy ∧ dz\]</div>
+<p class="rubric">Conclude</p>
+<div class="math notranslate nohighlight">
+\[⋆ d ⋆ T^♭ = ∂_t A^t + ∂_x A^x + ∂_y A^y + ∂_z A^z\]</div>
+</div>
+</section>
+<section id="dd-t">
+<h2><span class="math notranslate nohighlight">\(d⋆d T^♭\)</span><a class="headerlink" href="#dd-t" title="Link to this heading">#</a></h2>
+<div class="math notranslate nohighlight">
+\[\begin{split}d⋆d T^♭ = \left[ \begin{alignedat}{7}
+   ( &amp; + ∂_x^2 A^t &amp; + ∂_y^2 A^t &amp; + ∂_z^2 A^t &amp; + ∂_t ∂_x A^x &amp; + ∂_t ∂_y A^y &amp; + ∂_t ∂_z A^z &amp; ) \; dx ∧ dx ∧ dy \\
+   ( &amp; + ∂_t^2 A^x &amp; - ∂_y^2 A^x &amp; - ∂_z^2 A^x &amp; + ∂_t ∂_x A^t &amp; + ∂_x ∂_y A^y &amp; + ∂_z ∂_x A^z &amp; ) \; dt ∧ dy ∧ dz \\
+   ( &amp; + ∂_t^2 A^y &amp; - ∂_x^2 A^y &amp; - ∂_z^2 A^y &amp; + ∂_t ∂_y A^t &amp; + ∂_y ∂_z A^z &amp; + ∂_x ∂_y A^x &amp; ) \; dt ∧ dz ∧ dx \\
+   ( &amp; + ∂_t^2 A^z &amp; - ∂_x^2 A^z &amp; - ∂_y^2 A^z &amp; + ∂_t ∂_z A^t &amp; + ∂_z ∂_x A^x &amp; + ∂_y ∂_z A^y &amp; ) \; dt ∧ dx ∧ dy \\
+\end{alignedat} \right]\end{split}\]</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Calculations</p>
+<p class="rubric">Apply the exterior derivative to all</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}d ⋆ d T^♭ = d \left[ \begin{alignedat}{4}
+   (+ &amp; ∂_z A^y &amp; - &amp; ∂_y A^z &amp;) \; dt ∧ dx \\
+   (+ &amp; ∂_x A^z &amp; - &amp; ∂_z A^x &amp;) \; dt ∧ dy \\
+   (+ &amp; ∂_y A^x &amp; - &amp; ∂_x A^y &amp;) \; dt ∧ dz \\
+   (+ &amp; ∂_x A^t &amp; + &amp; ∂_t A^x &amp;) \; dy ∧ dz \\
+   (+ &amp; ∂_y A^t &amp; + &amp; ∂_t A^y &amp;) \; dz ∧ dx \\
+   (+ &amp; ∂_z A^t &amp; + &amp; ∂_t A^z &amp;) \; dx ∧ dy \\
+\end{alignedat} \right]\end{split}\]</div>
+<p class="rubric">Collapse permutations</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}d ⋆ d T^♭ = Π d \left[ \begin{alignedat}{4}
+   (+ &amp; ∂_z A^y &amp; - &amp; ∂_y A^z &amp;) \; dt ∧ dx \\
+   (+ &amp; ∂_x A^t &amp; + &amp; ∂_t A^x &amp;) \; dy ∧ dz \\
+\end{alignedat} \right]\end{split}\]</div>
+<p class="rubric">Apply the exterior derivative</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}d ⋆ d T^♭ = Π d \left[ \begin{alignedat}{4}
+   ∂_y (+ &amp; ∂_z A^y &amp; - &amp; ∂_y A^z &amp;) \; dy ∧ dt ∧ dx \\
+   ∂_z (+ &amp; ∂_z A^y &amp; - &amp; ∂_y A^z &amp;) \; dz ∧ dt ∧ dx \\
+   ∂_t (+ &amp; ∂_x A^t &amp; + &amp; ∂_t A^x &amp;) \; dt ∧ dy ∧ dz \\
+   ∂_x (+ &amp; ∂_x A^t &amp; + &amp; ∂_t A^x &amp;) \; dx ∧ dy ∧ dz \\
+\end{alignedat} \right]\end{split}\]</div>
+<p class="rubric">Rearange</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}d ⋆ d T^♭ = Π d \left[ \begin{alignedat}{4}
+   (- &amp; ∂_y^2 A^z &amp; + &amp; ∂_y ∂_z A^y &amp; ) \; dt ∧ dx ∧ dy \\
+   (- &amp; ∂_z^2 A^y &amp; + &amp; ∂_y ∂_z A^z &amp; ) \; dt ∧ dz ∧ dx \\
+   (+ &amp; ∂_t^2 A^x &amp; + &amp; ∂_t ∂_x A^t &amp; ) \; dt ∧ dy ∧ dz \\
+   (+ &amp; ∂_x^2 A^t &amp; + &amp; ∂_t ∂_x A^x &amp; ) \; dx ∧ dy ∧ dz \\
+\end{alignedat} \right]\end{split}\]</div>
+<p class="rubric">Rearange</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}d ⋆ d T^♭ = Π d \left[ \begin{alignedat}{4}
+   (+ &amp; ∂_x^2 A^t &amp; + &amp; ∂_t ∂_x A^x &amp; ) \; dx ∧ dy ∧ dz \\
+   (+ &amp; ∂_t^2 A^x &amp; + &amp; ∂_t ∂_x A^t &amp; ) \; dt ∧ dy ∧ dz \\
+   (- &amp; ∂_z^2 A^y &amp; + &amp; ∂_y ∂_z A^z &amp; ) \; dt ∧ dz ∧ dx \\
+   (- &amp; ∂_y^2 A^z &amp; + &amp; ∂_y ∂_z A^y &amp; ) \; dt ∧ dx ∧ dy \\
+\end{alignedat} \right]\end{split}\]</div>
+<p class="rubric">Expand permutations</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}d ⋆ d T^♭ = \left[ \begin{alignedat}{4}
+   (+ &amp; ∂_x^2 A^t &amp; + &amp; ∂_t ∂_x A^x &amp; ) \; dx ∧ dy ∧ dz \\
+   (+ &amp; ∂_y^2 A^t &amp; + &amp; ∂_t ∂_y A^y &amp; ) \; dx ∧ dz ∧ dx \\
+   (+ &amp; ∂_z^2 A^t &amp; + &amp; ∂_t ∂_z A^z &amp; ) \; dx ∧ dx ∧ dy \\
+   %
+   (+ &amp; ∂_t^2 A^x &amp; + &amp; ∂_t ∂_x A^t &amp; ) \; dt ∧ dy ∧ dz \\
+   (+ &amp; ∂_t^2 A^y &amp; + &amp; ∂_t ∂_y A^t &amp; ) \; dt ∧ dz ∧ dx \\
+   (+ &amp; ∂_t^2 A^z &amp; + &amp; ∂_t ∂_z A^t &amp; ) \; dt ∧ dx ∧ dy \\
+   %
+   (- &amp; ∂_z^2 A^y &amp; + &amp; ∂_y ∂_z A^z &amp; ) \; dt ∧ dz ∧ dx \\
+   (- &amp; ∂_x^2 A^z &amp; + &amp; ∂_z ∂_x A^x &amp; ) \; dt ∧ dx ∧ dy \\
+   (- &amp; ∂_y^2 A^x &amp; + &amp; ∂_x ∂_y A^y &amp; ) \; dt ∧ dy ∧ dz \\
+   %
+   (- &amp; ∂_y^2 A^z &amp; + &amp; ∂_y ∂_z A^y &amp; ) \; dt ∧ dx ∧ dy \\
+   (- &amp; ∂_z^2 A^x &amp; + &amp; ∂_z ∂_x A^z &amp; ) \; dt ∧ dy ∧ dz \\
+   (- &amp; ∂_x^2 A^y &amp; + &amp; ∂_x ∂_y A^x &amp; ) \; dt ∧ dz ∧ dx \\
+\end{alignedat} \right]\end{split}\]</div>
+<p class="rubric">Simplify and conclude</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}d ⋆ d T^♭ = \left[ \begin{alignedat}{7}
+   ( &amp; + ∂_x^2 A^t &amp; + ∂_y^2 A^t &amp; + ∂_z^2 A^t &amp; + ∂_t ∂_x A^x &amp; + ∂_t ∂_y A^y &amp; + ∂_t ∂_z A^z &amp; ) \; dx ∧ dx ∧ dy \\
+   ( &amp; + ∂_t^2 A^x &amp; - ∂_y^2 A^x &amp; - ∂_z^2 A^x &amp; + ∂_t ∂_x A^t &amp; + ∂_x ∂_y A^y &amp; + ∂_z ∂_x A^z &amp; ) \; dt ∧ dy ∧ dz \\
+   ( &amp; + ∂_t^2 A^y &amp; - ∂_x^2 A^y &amp; - ∂_z^2 A^y &amp; + ∂_t ∂_y A^t &amp; + ∂_y ∂_z A^z &amp; + ∂_x ∂_y A^x &amp; ) \; dt ∧ dz ∧ dx \\
+   ( &amp; + ∂_t^2 A^z &amp; - ∂_x^2 A^z &amp; - ∂_y^2 A^z &amp; + ∂_t ∂_z A^t &amp; + ∂_z ∂_x A^x &amp; + ∂_y ∂_z A^y &amp; ) \; dt ∧ dx ∧ dy \\
+\end{alignedat} \right]\end{split}\]</div>
+</div>
+</section>
+<section id="id4">
+<h2><span class="math notranslate nohighlight">\(d⋆d⋆ T^♭\)</span><a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
+<div class="math notranslate nohighlight">
+\[\begin{split} d⋆d⋆ T^♭ = \left[ \begin{alignedat}{7}
+     ( &amp; ∂_t ∂_x A^x &amp; \: + \: &amp; ∂_t ∂_y A^y &amp; \: + \: &amp; ∂_t ∂_z A^z &amp; ) &amp; \; dt \\
+     ( &amp; ∂_t ∂_x A^t &amp; \: + \: &amp; ∂_x ∂_y A^y &amp; \: + \: &amp; ∂_z ∂_x A^z &amp; ) &amp; \; dx \\
+     ( &amp; ∂_t ∂_y A^t &amp; \: + \: &amp; ∂_y ∂_z A^z &amp; \: + \: &amp; ∂_x ∂_y A^x &amp; ) &amp; \; dy \\
+     ( &amp; ∂_t ∂_z A^t &amp; \: + \: &amp; ∂_z ∂_x A^x &amp; \: + \: &amp; ∂_y ∂_z A^y &amp; ) &amp; \; dz \\
+\end{alignedat} \right]\end{split}\]</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Calculations</p>
+<p class="rubric">Apply the exterior derivative</p>
+<div class="math notranslate nohighlight">
+\[d ⋆ d ⋆ T^♭ = d (∂_t A^t + ∂_x A^x + ∂_y A^y + ∂_z A^z)\]</div>
+<p class="rubric">Reorder</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} d ⋆ d ⋆ T^♭ = \left[ \begin{alignedat}{7}
+     d \: &amp; (∂_t A^t &amp; ) \\
+     d \: &amp; (∂_x A^x &amp; ) \\
+     d \: &amp; (∂_y A^y &amp; ) \\
+     d \: &amp; (∂_z A^z &amp; ) \\
+\end{alignedat} \right]\end{split}\]</div>
+<p class="rubric">Apply the exterior derivative</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} d ⋆ d ⋆ T^♭ = \left[ \begin{alignedat}{7}
+     ∂_x ∂_t A^t dx &amp; \: + \: &amp; ∂_y ∂_t A^t dy &amp; \: + \: &amp; ∂_z ∂_t A^t dz \\
+     ∂_t ∂_x A^x dt &amp; \: + \: &amp; ∂_y ∂_x A^x dy &amp; \: + \: &amp; ∂_z ∂_x A^x dz \\
+     ∂_t ∂_y A^y dt &amp; \: + \: &amp; ∂_x ∂_y A^y dx &amp; \: + \: &amp; ∂_z ∂_y A^y dz \\
+     ∂_t ∂_z A^z dt &amp; \: + \: &amp; ∂_x ∂_z A^z dx &amp; \: + \: &amp; ∂_y ∂_z A^z dy \\
+\end{alignedat} \right]\end{split}\]</div>
+<p class="rubric">Reorder, simplify and conclude</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} d ⋆ d ⋆ T^♭ = \left[ \begin{alignedat}{7}
+     ( &amp; ∂_t ∂_x A^x &amp; \: + \: &amp; ∂_t ∂_y A^y &amp; \: + \: &amp; ∂_t ∂_z A^z &amp; ) &amp; \; dt \\
+     ( &amp; ∂_x ∂_t A^t &amp; \: + \: &amp; ∂_x ∂_y A^y &amp; \: + \: &amp; ∂_x ∂_z A^z &amp; ) &amp; \; dx \\
+     ( &amp; ∂_y ∂_t A^t &amp; \: + \: &amp; ∂_y ∂_z A^z &amp; \: + \: &amp; ∂_y ∂_x A^x &amp; ) &amp; \; dy \\
+     ( &amp; ∂_z ∂_t A^t &amp; \: + \: &amp; ∂_z ∂_x A^x &amp; \: + \: &amp; ∂_z ∂_y A^y &amp; ) &amp; \; dz \\
+\end{alignedat} \right]\end{split}\]</div>
+</div>
+</section>
+<section id="id5">
+<h2><span class="math notranslate nohighlight">\(⋆d⋆d T^♭\)</span><a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
+<div class="math notranslate nohighlight">
+\[\begin{split}⋆d⋆d T^♭ = \left[ \begin{alignedat}{7}
+   ( &amp; + ∂_x^2 A^t &amp; + ∂_y^2 A^t &amp; + ∂_z^2 A^t &amp; + ∂_t ∂_x A^x &amp; + ∂_t ∂_y A^y &amp; + ∂_t ∂_z A^z &amp; ) \; dt \\
+   ( &amp; + ∂_t^2 A^x &amp; - ∂_y^2 A^x &amp; - ∂_z^2 A^x &amp; + ∂_t ∂_x A^t &amp; + ∂_x ∂_y A^y &amp; + ∂_z ∂_x A^z &amp; ) \; dx \\
+   ( &amp; + ∂_t^2 A^y &amp; - ∂_x^2 A^y &amp; - ∂_z^2 A^y &amp; + ∂_t ∂_y A^t &amp; + ∂_y ∂_z A^z &amp; + ∂_x ∂_y A^x &amp; ) \; dy \\
+   ( &amp; + ∂_t^2 A^z &amp; - ∂_x^2 A^z &amp; - ∂_y^2 A^z &amp; + ∂_t ∂_z A^t &amp; + ∂_z ∂_x A^x &amp; + ∂_y ∂_z A^y &amp; ) \; dz \\
+\end{alignedat} \right]\end{split}\]</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Calculations</p>
+<p class="rubric">Apply the Hodge star to all</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}⋆ d ⋆ d T^♭ = ⋆ \left[ \begin{alignedat}{7}
+   ( &amp; + ∂_x^2 A^t &amp; + ∂_y^2 A^t &amp; + ∂_z^2 A^t &amp; + ∂_t ∂_x A^x &amp; + ∂_t ∂_y A^y &amp; + ∂_t ∂_z A^z &amp; ) \; dx ∧ dx ∧ dy \\
+   ( &amp; + ∂_t^2 A^x &amp; - ∂_y^2 A^x &amp; - ∂_z^2 A^x &amp; + ∂_t ∂_x A^t &amp; + ∂_x ∂_y A^y &amp; + ∂_z ∂_x A^z &amp; ) \; dt ∧ dy ∧ dz \\
+   ( &amp; + ∂_t^2 A^y &amp; - ∂_x^2 A^y &amp; - ∂_z^2 A^y &amp; + ∂_t ∂_y A^t &amp; + ∂_y ∂_z A^z &amp; + ∂_x ∂_y A^x &amp; ) \; dt ∧ dz ∧ dx \\
+   ( &amp; + ∂_t^2 A^z &amp; - ∂_x^2 A^z &amp; - ∂_y^2 A^z &amp; + ∂_t ∂_z A^t &amp; + ∂_z ∂_x A^x &amp; + ∂_y ∂_z A^y &amp; ) \; dt ∧ dx ∧ dy \\
+\end{alignedat} \right]\end{split}\]</div>
+<p class="rubric">Apply the Hodge star to each</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}⋆ d ⋆ d T^♭ = \left[ \begin{alignedat}{7}
+   ( &amp; + ∂_x^2 A^t &amp; + ∂_y^2 A^t &amp; + ∂_z^2 A^t &amp; + ∂_t ∂_x A^x &amp; + ∂_t ∂_y A^y &amp; + ∂_t ∂_z A^z &amp; ) \; ⋆ (dx ∧ dx ∧ dy) \\
+   ( &amp; + ∂_t^2 A^x &amp; - ∂_y^2 A^x &amp; - ∂_z^2 A^x &amp; + ∂_t ∂_x A^t &amp; + ∂_x ∂_y A^y &amp; + ∂_z ∂_x A^z &amp; ) \; ⋆ (dt ∧ dy ∧ dz) \\
+   ( &amp; + ∂_t^2 A^y &amp; - ∂_x^2 A^y &amp; - ∂_z^2 A^y &amp; + ∂_t ∂_y A^t &amp; + ∂_y ∂_z A^z &amp; + ∂_x ∂_y A^x &amp; ) \; ⋆ (dt ∧ dz ∧ dx) \\
+   ( &amp; + ∂_t^2 A^z &amp; - ∂_x^2 A^z &amp; - ∂_y^2 A^z &amp; + ∂_t ∂_z A^t &amp; + ∂_z ∂_x A^x &amp; + ∂_y ∂_z A^y &amp; ) \; ⋆ (dt ∧ dx ∧ dy) \\
+\end{alignedat} \right]\end{split}\]</div>
+<p class="rubric">Conclude</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}⋆ d ⋆ d T^♭ = \left[ \begin{alignedat}{7}
+   ( &amp; + ∂_x^2 A^t &amp; + ∂_y^2 A^t &amp; + ∂_z^2 A^t &amp; + ∂_t ∂_x A^x &amp; + ∂_t ∂_y A^y &amp; + ∂_t ∂_z A^z &amp; ) \; dt \\
+   ( &amp; + ∂_t^2 A^x &amp; - ∂_y^2 A^x &amp; - ∂_z^2 A^x &amp; + ∂_t ∂_x A^t &amp; + ∂_x ∂_y A^y &amp; + ∂_z ∂_x A^z &amp; ) \; dx \\
+   ( &amp; + ∂_t^2 A^y &amp; - ∂_x^2 A^y &amp; - ∂_z^2 A^y &amp; + ∂_t ∂_y A^t &amp; + ∂_y ∂_z A^z &amp; + ∂_x ∂_y A^x &amp; ) \; dy \\
+   ( &amp; + ∂_t^2 A^z &amp; - ∂_x^2 A^z &amp; - ∂_y^2 A^z &amp; + ∂_t ∂_z A^t &amp; + ∂_z ∂_x A^x &amp; + ∂_y ∂_z A^y &amp; ) \; dz \\
+\end{alignedat} \right]\end{split}\]</div>
+</div>
+</section>
+<section id="dd-dd-t">
+<h2><span class="math notranslate nohighlight">\((⋆d⋆d - d⋆d⋆) T^♭\)</span><a class="headerlink" href="#dd-dd-t" title="Link to this heading">#</a></h2>
+<div class="math notranslate nohighlight">
+\[\begin{split}(⋆ d ⋆ d - d ⋆ d ⋆) T^♭ = \left[ \begin{alignedat}{7}
+   ( &amp;             &amp; + ∂_x^2 A^t &amp; + ∂_y^2 A^t &amp; + ∂_z^2 A^t &amp; ) \; dt \\
+   ( &amp; + ∂_t^2 A^x &amp;             &amp; - ∂_y^2 A^x &amp; - ∂_z^2 A^x &amp; ) \; dx \\
+   ( &amp; + ∂_t^2 A^y &amp; - ∂_x^2 A^y &amp;             &amp; - ∂_z^2 A^y &amp; ) \; dy \\
+   ( &amp; + ∂_t^2 A^z &amp; - ∂_x^2 A^z &amp; - ∂_y^2 A^z &amp;             &amp; ) \; dz \\
+\end{alignedat} \right]\end{split}\]</div>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="0-forms.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">0–forms (functions)</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="2-forms.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">2–forms (rotations)</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#translations">Translations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#t"><span class="math notranslate nohighlight">\(⋆ T^♭\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#d-t"><span class="math notranslate nohighlight">\(d T^♭\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1"><span class="math notranslate nohighlight">\(d⋆ T^♭\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2"><span class="math notranslate nohighlight">\(⋆d T^♭\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id3"><span class="math notranslate nohighlight">\(⋆d⋆ T^♭\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dd-t"><span class="math notranslate nohighlight">\(d⋆d T^♭\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id4"><span class="math notranslate nohighlight">\(d⋆d⋆ T^♭\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id5"><span class="math notranslate nohighlight">\(⋆d⋆d T^♭\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dd-dd-t"><span class="math notranslate nohighlight">\((⋆d⋆d - d⋆d⋆) T^♭\)</span></a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Stéphane Haussler
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024, Stéphane Haussler.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

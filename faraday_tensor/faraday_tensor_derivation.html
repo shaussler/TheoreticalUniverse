@@ -1,0 +1,805 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9HQ1J8VKRB"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-9HQ1J8VKRB');
+    </script>
+    
+    <title>Deriving the Faraday tensor from the 1865 Maxwell’s equations &#8212; Theoretical Universe</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=c1fb35df" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>window.MathJax = {"chtml": {"displayAlign": "left", "displayIndent": "2em"}, "tex": {"packages": {"[+]": ["ams"]}, "macros": {"E": "\\tilde{E}", "\u231f": "\\:\u231f\\:"}}, "tex2jax": {"ignoreClass": ".*", "processClass": "math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'faraday_tensor/faraday_tensor_derivation';</script>
+    <link rel="canonical" href="https://shaussler.github.io/TheoreticalUniverse/faraday_tensor/faraday_tensor_derivation.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Deriving the Faraday 2–form from the 1865 Maxwell’s equations" href="of_maxwell_equations_and_rotations.html" />
+    <link rel="prev" title="Revisiting the 1865 Maxwell’s equations" href="revisiting_maxwell_equations.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Theoretical Universe</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Table of Contents:</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../licence.html">Licence</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cite.html">How to cite</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">How to contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../resources.html">Resources</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../the_cartan_hodge_formalism/index.html">The Cartan-Hodge formalism</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../the_cartan_hodge_formalism/basis_vectors.html">Basis vectors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../the_cartan_hodge_formalism/musicality.html">Musicality</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../the_cartan_hodge_formalism/hodge_duality.html">Hodge duality fundamentals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../the_cartan_hodge_formalism/hodge_dual_computations.html">Hodge dual computations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../the_cartan_hodge_formalism/the_free_matrix_representation.html">Free matrix representation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../the_cartan_hodge_formalism/the_minkowski_metric.html">Minkowski metric</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../rotations/index.html">Rotations in differential form</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../rotations/rotations_in_3_dimensions.html">Rotations in Euclidean space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rotations/rotations_in_minkowski_space.html">Rotations in Minkowski space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rotations/exponential_map.html">Exponential map</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../differential_operators/index.html">Differential operators expressed as exterior derivatives</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../differential_operators/3-dimensional-euclidean-space.html">3D Euclidean space</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../differential_operators/minkowski-space/index.html">Minkowski space</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../differential_operators/minkowski-space/0-forms.html">0–forms (functions)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../differential_operators/minkowski-space/1-forms.html">1–forms (translations)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../differential_operators/minkowski-space/2-forms.html">2–forms (rotations)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../differential_operators/minkowski-space/3-forms.html">3–forms (3D volumes)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../differential_operators/minkowski-space/4-forms.html">4–forms (4D volumes)</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Covariant formulation of the electromagnetic field</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="revisiting_maxwell_equations.html">Revisiting the 1865 Maxwell’s equations</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Deriving the Faraday tensor from the 1865 Maxwell’s equations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="of_maxwell_equations_and_rotations.html">Deriving the Faraday 2–form from the 1865 Maxwell’s equations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2form_vs_tensor.html">Relation between the Faraday 2–form and the Faraday tensor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="potential_formulation.html">Potential formulation via differential forms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="all_electromagnetic_field_forms.html">All electromagnetic field forms</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../miscellaneous/index.html">Random thoughts</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../miscellaneous/de_guas_theorem.html">Proving De Gua’s theorem with Clifford algebra</a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/faraday_tensor/faraday_tensor_derivation.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Deriving the Faraday tensor from the 1865 Maxwell’s equations</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vector-formulation-of-mr-heaviside">Vector formulation of Mr. Heaviside</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-equations-of-mr-maxwell">The equations of Mr. Maxwell</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#underlying-structure">Underlying structure</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ordered-equations">Ordered equations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#faraday-tensor">Faraday tensor</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="faraday-tensor-derivation">
+<span id="deriving-the-faraday-tensor-from-the-1865-maxwell-s-equations"></span><span id="id1"></span><span id="deriving-the-faraday-tensor-from-the-1865-maxwell-equations"></span><span id="id2"></span><h1>Deriving the Faraday tensor from the 1865 Maxwell’s equations<a class="headerlink" href="#faraday-tensor-derivation" title="Link to this heading">#</a></h1>
+<p class="custom-author">by Stéphane Haussler</p>
+<p>In this article, I present a straightforward and natural derivation of the
+electromagnetic field tensor. This derivation draws strong inspiration from
+Minkowski’s 1908 paper, <a class="reference external" href="https://en.wikisource.org/wiki/Translation:The_Fundamental_Equations_for_Electromagnetic_Processes_in_Moving_Bodies">The Fundamental Equations for Electromagnetic
+Processes in Moving Bodies</a>.
+What sets this derivation apart is that it avoids the often-seen backward proof
+that the tensor formulation is equivalent to the Maxwell equations. Notably, it
+doesn’t rely on the widespread vector formulation introduced by Mr. Heaviside,
+but rather adheres to the original 1865 formulation by Mr. Maxwell, albeit
+presented with modern notation and the benefit of hindsight.</p>
+<p>This derivation might not be widely known. If I am mistaken and you are aware
+of freely available resources, open an issue and I will include a reference. If
+you find mistakes, don’t hesitate to open an issue or directly provide
+corrections by sending a merge request to my <a class="reference external" href="https://github.com/shaussler/TheoreticalUniverse/">Github repository</a>.</p>
+<p>This page stands alone and can be understood without referencing other content
+on this site. I assume the reader possesses a strong grasp of vector calculus,
+including familiarity with the vector dot and cross products, as well as matrix
+multiplication. While an understanding of Maxwell’s equations and tensor
+calculus certainly can enrich the content, they are not essential to follow
+this derivation.</p>
+<section id="vector-formulation-of-mr-heaviside">
+<span id="id3"></span><h2>Vector formulation of Mr. Heaviside<a class="headerlink" href="#vector-formulation-of-mr-heaviside" title="Link to this heading">#</a></h2>
+<p>Mr. Maxwell’s groundbreaking work in 1865, <a class="reference external" href="https://en.m.wikipedia.org/wiki/A_Dynamical_Theory_of_the_Electromagnetic_Field">A Dynamical Theory of the
+Electromagnetic Field</a>
+(<a class="reference external" href="https://www.jstor.org/stable/108892">pdf</a>), utilized differential
+expressions rather than the modern vector formulation proposed by Mr. Heaviside.
+Indeed in 1865, the concept of vectors had not yet been introduced.</p>
+<p><a class="reference external" href="https://youtu.be/M12CJIuX8D4?si=nuOUEFmRu5Jx4jHJ">Mr. Heaviside proposed both the concept of vectors as well as the vector form
+of the Maxwell equations.</a>
+This is the most widespread formulation today. I therefore start from there and
+unpack into a form closer in spirit to the 1865 equation. The equations consist
+of two inhomogeneous (Gauss’s law and Ampère’circuital law) and two homogeneous
+vector equations (Gauss’s law for magnetism and Faraday’s law of induction),
+which is how I organize the equations.</p>
+<p>While these equations are undoubtedly intriguing, within the context of this
+derivation, a deep comprehension of the physics behind them is unnecessary. I
+simply present them as the initial basis for the derivation. With the exception
+of Maxwell’s modification to Ampère’s circuital law, these equations represent
+the mathematical expression of empirical observations. Therefore, they can be
+regarded as established experimental facts.</p>
+<p class="rubric">Gauss’s Law</p>
+<div class="math notranslate nohighlight">
+\[\overrightarrow{∇} \cdot \overrightarrow{E}  = ρ / ε_0\]</div>
+<p class="rubric">Ampère’s Circuital Law</p>
+<div class="math notranslate nohighlight">
+\[\overrightarrow{∇} \times \overrightarrow{B} =
+μ_0 \overrightarrow{J} + \frac{1}{c^2} \frac{∂}{∂t} \overrightarrow{E}\]</div>
+<p class="rubric">Faraday’s law of induction</p>
+<div class="math notranslate nohighlight">
+\[\overrightarrow{∇} ⨯ \overrightarrow{E} = -\frac{∂}{∂t} \overrightarrow{B}\]</div>
+<p class="rubric">Gauss’s Law for Magnetism</p>
+<div class="math notranslate nohighlight">
+\[\overrightarrow{∇} \cdot \overrightarrow{B} = 0\]</div>
+<p>With the electric field <span class="math notranslate nohighlight">\(\overrightarrow{E} = \begin{bmatrix} E^x \\ E^y
+\\ E^z \end{bmatrix}\)</span>, magnetic field <span class="math notranslate nohighlight">\(\overrightarrow{B} =
+\begin{bmatrix} B^x \\ B^y \\ B^z \end{bmatrix}\)</span>, and operator
+<span class="math notranslate nohighlight">\(\overrightarrow{∇} = \begin{bmatrix} \frac{∂}{∂x} \\ \frac{∂}{∂y} \\
+\frac{∂}{∂z} \end{bmatrix}\)</span></p>
+</section>
+<section id="the-equations-of-mr-maxwell">
+<h2>The equations of Mr. Maxwell<a class="headerlink" href="#the-equations-of-mr-maxwell" title="Link to this heading">#</a></h2>
+<p>Unpacking the vector equations into their component form, we obtain in spirit
+the 1865 Maxwell formulation, albeit with modern notation and conventions.</p>
+<p class="rubric">Gauss’s Law</p>
+<div class="math notranslate nohighlight">
+\[\frac{∂}{∂x} E^x + \frac{∂}{∂y} E^y + \frac{∂}{∂z} E^z = ρ / ε_0\]</div>
+<p class="rubric">Ampère’s Circuital Law</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\frac{∂}{∂y} B^z - \frac{∂}{∂z} B^y = μ_0 J^x + \frac{1}{c^2} \frac{∂}{∂t} E^x \\
+\frac{∂}{∂z} B^x - \frac{∂}{∂x} B^z = μ_0 J^y + \frac{1}{c^2} \frac{∂}{∂t} E^y \\
+\frac{∂}{∂x} B^y - \frac{∂}{∂y} B^x = μ_0 J^z + \frac{1}{c^2} \frac{∂}{∂t} E^z \\\end{split}\]</div>
+<p class="rubric">Gauss’s Law for Magnetism</p>
+<div class="math notranslate nohighlight">
+\[\frac{∂}{∂x} B^x + \frac{∂}{∂y} B^y + \frac{∂}{∂z} B^z = 0\]</div>
+<p class="rubric">Faraday’s Law of Induction</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\frac{∂}{∂y} E^z - \frac{∂}{∂z} E^y = - \frac{∂}{∂t} B^x \\
+\frac{∂}{∂z} E^x - \frac{∂}{∂x} E^z = - \frac{∂}{∂t} B^y \\
+\frac{∂}{∂x} E^y - \frac{∂}{∂y} E^x = - \frac{∂}{∂t} B^z \\\end{split}\]</div>
+</section>
+<section id="underlying-structure">
+<h2>Underlying structure<a class="headerlink" href="#underlying-structure" title="Link to this heading">#</a></h2>
+<p>Gathering and reordering the terms, a clear structures becomes apparent:</p>
+<p class="rubric">Inhomogenous equations: Gauss’s law and Ampère’s circuital law</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{alignedat}{4}
+                                    &amp; + \frac{∂E^x}{∂x} &amp; + \frac{∂E^y}{∂y} &amp; + \frac{∂E^z}{∂z} &amp; = + ρ/ε_0   \\
+    + \frac{1}{c^2} \frac{∂E^x}{∂t} &amp;                   &amp; - \frac{∂B^z}{∂y} &amp; + \frac{∂B^y}{∂z} &amp; = - μ_0 J^x \\
+    + \frac{1}{c^2} \frac{∂E^y}{∂t} &amp; + \frac{∂B^z}{∂x} &amp;                   &amp; - \frac{∂B^x}{∂z} &amp; = - μ_0 J^y \\
+    + \frac{1}{c^2} \frac{∂E^z}{∂t} &amp; - \frac{∂B^y}{∂x} &amp; + \frac{∂B^x}{∂y} &amp;                   &amp; = - μ_0 J^z \\
+\end{alignedat}\end{split}\]</div>
+<p class="rubric">Homogenous equations: Guauss’s law and Faraday’s law of induction</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{alignedat}{4}
+                       &amp; + \frac{∂B^x}{∂x} &amp; + \frac{∂B^y}{∂y} &amp; + \frac{∂B^z}{∂z} &amp;= 0 \\
+     + \frac{∂B^x}{∂t} &amp;                   &amp; + \frac{∂E^z}{y∂} &amp; - \frac{∂E^y}{∂z} &amp;= 0 \\
+     + \frac{∂B^y}{∂t} &amp; - \frac{∂E^z}{∂x} &amp;                   &amp; + \frac{∂E^x}{∂z} &amp;= 0 \\
+     + \frac{∂B^z}{∂t} &amp; + \frac{∂E^y}{∂x} &amp; - \frac{∂E^x}{∂y} &amp;                   &amp;= 0 \\
+\end{alignedat}\end{split}\]</div>
+</section>
+<section id="ordered-equations">
+<h2>Ordered equations<a class="headerlink" href="#ordered-equations" title="Link to this heading">#</a></h2>
+<p>Recognizing the emerging structure, we slightly modify the expressions. These
+modifications are not intricate. The objective is merely to present a compact
+and symmetrical form, where all terms are aligned.</p>
+<p>To eliminate the factor <span class="math notranslate nohighlight">\(1/c\)</span>, we introduce <span class="math notranslate nohighlight">\(\tilde{E}^x = E^x /
+c\)</span>, <span class="math notranslate nohighlight">\(\tilde{E}^y = E^y / c\)</span>, and <span class="math notranslate nohighlight">\(\tilde{E}^z = E^z / c\)</span>.
+Additionally, we define for the time dimension <span class="math notranslate nohighlight">\(∂_t = \frac{∂}{∂(ct)}\)</span>,
+and for the spatial dimensions <span class="math notranslate nohighlight">\(∂_x = \frac{∂}{∂ x}\)</span>, <span class="math notranslate nohighlight">\(∂_y =
+\frac{∂}{∂y}\)</span>, as well as <span class="math notranslate nohighlight">\(∂_z = \frac{∂}{∂z}\)</span>. The equations are now:</p>
+<p class="rubric">Inhomogenous equations</p>
+<div class="math notranslate nohighlight" id="inc-beg-ordered-inhomogenous-equations">
+\[\begin{split}\begin{alignedat}{4}
+               &amp; + ∂_x \E^x &amp; + ∂_y \E^y &amp; + ∂_z \E^z &amp; = + μ_0 c ρ \\
+    + ∂_t \E^x &amp;            &amp; - ∂_y  B^z &amp; + ∂_z  B^y &amp; = - μ_0 J^x \\
+    + ∂_t \E^y &amp; + ∂_x  B^z &amp;            &amp; - ∂_z  B^x &amp; = - μ_0 J^y \\
+    + ∂_t \E^z &amp; - ∂_x  B^y &amp; + ∂_y  B^x &amp;            &amp; = - μ_0 J^z \\
+\end{alignedat}\end{split}\]</div>
+<p class="rubric" id="inc-end-ordered-inhomogenous-equations">Homogenous equations</p>
+<div class="math notranslate nohighlight" id="inc-beg-ordered-homogenous-equations">
+\[\begin{split}\begin{alignedat}{4}
+               &amp; + ∂_x  B^x &amp; + ∂_y  B^y &amp; + ∂_z  B^z &amp; = 0 \\
+    + ∂_t  B^x &amp;            &amp; + ∂_y \E^z &amp; - ∂_z \E^y &amp; = 0 \\
+    + ∂_t  B^y &amp; - ∂_x \E^z &amp;            &amp; + ∂_z \E^x &amp; = 0 \\
+    + ∂_t  B^z &amp; + ∂_x \E^y &amp; - ∂_y \E^x &amp;            &amp; = 0 \\
+\end{alignedat}\end{split}\]</div>
+<p id="inc-end-ordered-homogenous-equations">For readers well-versed in the tensor formulation of electromagnetism, the
+presence and nature of the Faraday tensor and its dual are likely evident.
+Moreover, for those acquainted with matrix multiplication principles, it should
+be apparent that we can employ matrices operations.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Although beyond our current discussion’s scope, defining <span class="math notranslate nohighlight">\(∂_μ\)</span> unifies
+all dimensions to a unit of inverse distance. <span class="math notranslate nohighlight">\(\frac{1}{c}\frac{∂}{∂t}
+=\frac{∂}{∂(ct)}\)</span> has the units of an inverse distance, exactly like the
+partial derivative with respect to the spatial dimensions
+<span class="math notranslate nohighlight">\(\frac{∂}{∂x}\)</span>, <span class="math notranslate nohighlight">\(\frac{∂}{∂y}\)</span>, and <span class="math notranslate nohighlight">\(\frac{∂}{∂z}\)</span>.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The experimental relation between the speed of light <span class="math notranslate nohighlight">\(c\)</span>, the
+permitivity of free space <span class="math notranslate nohighlight">\(ε_0\)</span>, and and the permeability of free
+space <span class="math notranslate nohighlight">\(μ_0\)</span> is used:</p>
+<div class="math notranslate nohighlight">
+\[c = \frac{1}{\sqrt{ε_0 μ_0}}\]</div>
+</div>
+</section>
+<section id="faraday-tensor">
+<span id="the-tensor-of-mr-faraday"></span><h2>Faraday tensor<a class="headerlink" href="#faraday-tensor" title="Link to this heading">#</a></h2>
+<p>From matrix multiplication rules, we infer the ordered equations are equivalent
+to:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix} ∂_t &amp; ∂_x &amp; ∂_y &amp; ∂_z \end{bmatrix}
+\begin{bmatrix}
+           &amp; + \E^x &amp; +\E^y &amp; + \E^z \\
+    + \E^x &amp;        &amp; + B^z &amp; -  B^y \\
+    + \E^y &amp; -  B^z &amp;       &amp; +  B^x \\
+    + \E^z &amp; +  B^y &amp; - B^x &amp;        \\
+\end{bmatrix}
+= \begin{bmatrix} + μ_0 c ρ &amp; - μ_0 J^x  &amp; - μ_0 J^y  &amp; - μ_0 J^z \end{bmatrix}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix} ∂_t &amp; ∂_x &amp; ∂_y &amp; ∂_z \end{bmatrix}
+\begin{bmatrix}
+          &amp; +  B^x &amp; +  B^y &amp; +  B^z \\
+    + B^x &amp;        &amp; - \E^z &amp; + \E^y \\
+    + B^y &amp; + \E^z &amp;        &amp; - \E^x \\
+    + B^z &amp; - \E^y &amp; + \E^x &amp;        \\
+\end{bmatrix}
+= \begin{bmatrix} 0 &amp; 0 &amp; 0 &amp; 0 \end{bmatrix}\end{split}\]</div>
+<p>The flat left hand side is a covector, which we note in tensor notation with
+lower indices <span class="math notranslate nohighlight">\(∂_μ\)</span>. The right hand side is also flat and therefore a
+covector <span class="math notranslate nohighlight">\(J_ν\)</span>. The rank 2 tensors in the expressions are necessarily one
+time contravariant and one time covariant. We multiply each column of <span class="math notranslate nohighlight">\(∂\)</span>
+with each row of <span class="math notranslate nohighlight">\(F\)</span>, and repeat for all columns of <span class="math notranslate nohighlight">\(F\)</span>. With the
+first index <span class="math notranslate nohighlight">\(μ\)</span> of <span class="math notranslate nohighlight">\(F\)</span> to identify the rows, and the second index
+<span class="math notranslate nohighlight">\(ν\)</span> to indentify the columns, this means <span class="math notranslate nohighlight">\(∂_μ F^μ{}_ν\)</span>. We then
+write in tensor notation <span class="math notranslate nohighlight">\(F^μ{}_ν\)</span> for the Faraday tensor, and
+<span class="math notranslate nohighlight">\(G^μ{}_ν\)</span> for its dual:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}F^μ{}_ν = \begin{bmatrix}
+           &amp; + \E^x &amp; + \E^y &amp; + \E^z \\
+    + \E^x &amp;        &amp; +  B^z &amp; -  B^y \\
+    + \E^y &amp; -  B^z &amp;        &amp; +  B^x \\
+    + \E^z &amp; +  B^y &amp; -  B^x &amp;        \\
+\end{bmatrix}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}G^μ{}_ν = \begin{bmatrix}
+            &amp; +  B^x &amp; +  B^y &amp; +  B^z \\
+    +  B^x  &amp;        &amp; - \E^z &amp; + \E^y \\
+    +  B^y  &amp; + \E^z &amp;        &amp; - \E^x \\
+    +  B^z  &amp; - \E^y &amp; + \E^x &amp;        \\
+\end{bmatrix}\end{split}\]</div>
+<p>We have thus obtained the Faraday tensor (inhomogenous equations) and its dual
+(homogeneous equations). Maxwell’s equations are then:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}∂_μ F^μ{}_ν &amp;= J_{ν} \\
+∂_μ G^μ{}_ν &amp;= 0     \\\end{split}\]</div>
+<p>To double-check the result, you can have a look at <a class="reference external" href="https://www.wikihow.life/Derive-the-Faraday-Tensor">this alternative derivation
+of the mixed electromagnetic tensor</a>. To triple-check the
+result, you can also have a look at <a class="reference external" href="https://users.physics.ox.ac.uk/~palmerc/S8files/lectures.pdf">these lecture notes from the Department of
+Physics of the University of Oxford</a>.</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Doubly contravariant form</p>
+<p>Another widespread expression of the Maxwell equations is written with a
+doubly contravariant tensor <span class="math notranslate nohighlight">\(F^{μν}\)</span>. The derivation will be discussed
+here. Contrary to my ususal practice of performing systematic calculations,
+I consider in this note for simplicity only the inhomogenous equations. The
+argument and calculations can be apply to the homogenous equations in the
+same manner. Of course we can apply the Minkowski metric to raise or lower
+the indices, but the point here is to derive the tensor form using the
+doubly contravariant Faraday tensor, and from the ordered equations.</p>
+<p>You may have noticed that the sign in all equations can be flipped. In
+particular we can choose to express the ordered equations using the
+contravariant 4-current:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}J^ν = \begin{bmatrix}
+    + μ_0 c ρ \\
+    + μ_0 J^x \\
+    + μ_0 J^y \\
+    + μ_0 J^z \\
+\end{bmatrix}\end{split}\]</div>
+<p>We would then reorder the inhomogenous equations as follows:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{alignedat}{4}
+               &amp; + ∂_x \E^x &amp; + ∂_y \E^y &amp; + ∂_z \E^z &amp; = + μ_0 c ρ \\
+    - ∂_t \E^x &amp;            &amp; + ∂_y  B^z &amp; - ∂_z  B^y &amp; = + μ_0 J^x \\
+    - ∂_t \E^y &amp; - ∂_x  B^z &amp;            &amp; + ∂_z  B^x &amp; = + μ_0 J^y \\
+    - ∂_t \E^z &amp; + ∂_x  B^y &amp; - ∂_y  B^x &amp;            &amp; = + μ_0 J^z \\
+\end{alignedat}\end{split}\]</div>
+<p>Following the same logic, we can use a column-column representation for the
+Faraday tensor, which permit to still follow matrix multiplication rules:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix} ∂_t &amp; ∂_x &amp; ∂_y &amp; ∂_z \end{bmatrix}
+\begin{bmatrix}
+    \begin{bmatrix}
+           0   \\
+        + \E^x \\
+        + \E^y \\
+        + \E^z \\
+    \end{bmatrix} \\
+    \begin{bmatrix}
+        - \E^x \\
+           0   \\
+        +  B^z \\
+        -  B^y \\
+    \end{bmatrix} \\
+    \begin{bmatrix}
+        -\E^y \\
+        - B^z \\
+          0   \\
+        + B^x \\
+    \end{bmatrix} \\
+    \begin{bmatrix}
+        - \E^z \\
+        +  B^y \\
+        -  B^x \\
+           0   \\
+    \end{bmatrix} \\
+\end{bmatrix}
+= \begin{bmatrix}
+    + μ_0 c ρ \\
+    + μ_0 J^x \\
+    + μ_0 J^y \\
+    + μ_0 J^z \\
+\end{bmatrix}\end{split}\]</div>
+<p>The doubly contravariant Faraday tensor can be written:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}F^{μν} = \begin{bmatrix}
+    \begin{bmatrix}
+           0   \\
+        + \E^x \\
+        + \E^y \\
+        + \E^z \\
+    \end{bmatrix} \\
+    \begin{bmatrix}
+        - \E^x \\
+           0   \\
+        +  B^z \\
+        -  B^y \\
+    \end{bmatrix} \\
+    \begin{bmatrix}
+        -\E^y \\
+        - B^z \\
+          0   \\
+        + B^x \\
+    \end{bmatrix} \\
+    \begin{bmatrix}
+        - \E^z \\
+        +  B^y \\
+        -  B^x \\
+           0   \\
+    \end{bmatrix} \\
+\end{bmatrix}\end{split}\]</div>
+<p>In this context, the first index <span class="math notranslate nohighlight">\(μ\)</span> for selects the outer row, and
+the second index <span class="math notranslate nohighlight">\(ν\)</span> selects the inner row. However, representing the
+Faraday tensor as a “row of rows” is unconventional. Typically a table form,
+and matrix multiplication rules not applied. This leads to the following
+expression for the doubly contravariant Faraday tensor:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}F^{μν} = \begin{bmatrix}
+          &amp; - \E^x &amp; - \E^y &amp; - \E^z \\
+   + \E^x &amp;        &amp; -  B^z &amp; +  B^y \\
+   + \E^y &amp; +  B^z &amp;        &amp; -  B^x \\
+   + \E^z &amp; -  B^y &amp; +  B^x &amp;        \\
+\end{bmatrix}\end{split}\]</div>
+<p>Regardless whether we follow a row/row or row/column convention, the doubly
+contravariant Maxwell equations in tensor form are expressed as:</p>
+<div class="math notranslate nohighlight">
+\[∂_μ F^{μν} = J^ν\]</div>
+<p>The discussion highlights some difficulties in using tensor notation, which
+makes it inconvenient when performing calculations algorithmically, without
+extensive thoughts. This is adressed by using the <a class="reference internal" href="../the_cartan_hodge_formalism/the_free_matrix_representation.html#id1"><span class="std std-ref">the free matrix
+representation</span></a> at the cost of extra
+symbols for the explicit basis. The advantage is that it allows for
+straightforward, “dumb” calculations.</p>
+</div>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="revisiting_maxwell_equations.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Revisiting the 1865 Maxwell’s equations</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="of_maxwell_equations_and_rotations.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Deriving the Faraday 2–form from the 1865 Maxwell’s equations</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vector-formulation-of-mr-heaviside">Vector formulation of Mr. Heaviside</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-equations-of-mr-maxwell">The equations of Mr. Maxwell</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#underlying-structure">Underlying structure</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ordered-equations">Ordered equations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#faraday-tensor">Faraday tensor</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Stéphane Haussler
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024, Stéphane Haussler.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
