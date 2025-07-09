@@ -23,6 +23,15 @@ Within these pages, you will find the formulation of electromagnetism in terms
 of Élie Cartan's differential forms, along with a systematic analysis of this
 formulation.
 
+This websitge was originally intended as a collection of short, standalone
+articles. However, it has grown beyond my initial expectations and evolved into
+something more comprehensive. I’m doing my best to balance both approaches:
+each article can be read independently, yet they also form part of a larger
+whole. As a result, some material may be repeated across the site. Still, I
+believe the short, self-contained format is better suited to our time. The
+website is designed with both computers and mobile devices in mind, which
+should ensure a smooth experience on any screen size.
+
 In 1865, James Clerck Maxwell presented his groundbreaking work, `A Dynamical
 Theory of the Electromagnetic Field
 <https://en.m.wikipedia.org/wiki/A_Dynamical_Theory_of_the_Electromagnetic_Field>`_
@@ -35,8 +44,8 @@ astonishing fact: the speed of light is constant, regardless of the relative
 motion of objects. This was experimentally confirmed by Albert Michelson and
 Edward Morley, paving the way for the theory of special relativity. Later,
 Albert Einstein drew inspiration from Mr. Maxwell's work once more when
-developing the theory of general relativity, seeking a formulation that
-resembled the field equations for electromagnetism.
+developing the theory of general relativity, seeking a formulation of gravity
+that resembled the field equations for electromagnetism.
 
 The mathematical work of Mr. Maxwell is deeply rooted in experiments,
 translating ideas, most notably from Mr. Michael Faraday, into mathematical
@@ -90,7 +99,7 @@ The pivotal aspects the present study lie in three articles:
 * :ref:`Maxwell's Equations via Differential Forms`
 
 In the first article, differential forms are presented as a simple yet
-powerfull concept for representing rotations, and generalize to
+powerfull concept for representing rotations, which can be generalized to
 four-dimensional Minkowski spacetime. The connection to *standard* rotation
 matrices is laid plain, along with the relation to the Lie algebra of the
 Lorentz group :math:`\mathfrak{so}(1,3)`. The second article explores how to
@@ -100,56 +109,60 @@ systematically analyzed. The final article links the exterior derivative of
 rotations to Maxwell's equations by identification, revealing that we are
 dealing with a twist, or to be more precise torque, in Minkowski spacetime.
 This provides a comprehensive and coherent demonstration of how Maxwell's
-equations emerge from the framework of differential forms and electromagnetism
-is reduced to a single equation.
+equations emerge from the framework of differential forms, and how
+electromagnetism can be written with a single equation.
 
-This serie was originally envisioned as a collection of short, standalone
-articles. However, it has expanded beyond my initial expectation and evolved
-into something more comprehensive.
+.. rubric:: :ref:`Maxwell's equations via differential forms <Deriving the
+   Faraday 2--form from the 1865 Maxwell's equations>`
 
-.. topic:: Maxwell Equations in the Cartan-Hodge Formalism
+The core expressions are the inhomogeneous and homogeneous Maxwell equations
+written using differential forms, expanded explicitly along the four dimensions
+of spacetime. I prefer this formulation over the more compact version using
+:math:`F^{♭♭}` to represent the Faraday 2-form, as it makes all basis
+permutations explicit and directly accessible for calculations or
+transformations between reference frames. This is in essence the standard and
+widely used form of Maxwell’s equations in the language of differential forms.
+I will also show how these can be reduced to a single equation.
 
-   .. rubric:: Inhomogenous Maxwell equations via differential forms
+.. math::
 
-   .. math::
+   d ⋆ \left[ \begin{aligned}
+       - & \E^x \; dt ∧ dx \\
+       - & \E^y \; dt ∧ dy \\
+       - & \E^z \; dt ∧ dz \\
+         &  B^x \; dy ∧ dz \\
+         &  B^y \; dz ∧ dx \\
+         &  B^z \; dx ∧ dy \\
+   \end{aligned} \right]
+   = \begin{bmatrix}
+       + μ_0 c ρ \; dx ∧ dy ∧ dz\\
+       - μ_0 J^x \; dt ∧ dy ∧ dz\\
+       - μ_0 J^y \; dt ∧ dz ∧ dx\\
+       - μ_0 J^z \; dt ∧ dx ∧ dy\\
+   \end{bmatrix}
 
-      d ⋆ \left[ \begin{aligned}
-          - & \E^x \; dt ∧ dx \\
-          - & \E^y \; dt ∧ dy \\
-          - & \E^z \; dt ∧ dz \\
-            &  B^x \; dy ∧ dz \\
-            &  B^y \; dz ∧ dx \\
-            &  B^z \; dx ∧ dy \\
-      \end{aligned} \right]
-      = \begin{bmatrix}
-          + μ_0 c ρ \; dx ∧ dy ∧ dz\\
-          - μ_0 J^x \; dt ∧ dy ∧ dz\\
-          - μ_0 J^y \; dt ∧ dz ∧ dx\\
-          - μ_0 J^z \; dt ∧ dx ∧ dy\\
-      \end{bmatrix}
+Homogenous equations
 
-   .. rubric:: Homogenous Maxwell equations via differential forms
+.. math::
 
-   .. math::
+   ⋆ d \left[ \begin{aligned}
+       - & \E^x \; dt ∧ dx \\
+       - & \E^y \; dt ∧ dy \\
+       - & \E^z \; dt ∧ dz \\
+         &  B^x \; dy ∧ dz \\
+         &  B^y \; dz ∧ dx \\
+         &  B^z \; dx ∧ dy \\
+   \end{aligned} \right]
+   = 0
 
-      ⋆ d \left[ \begin{aligned}
-          - & \E^x \; dt ∧ dx \\
-          - & \E^y \; dt ∧ dy \\
-          - & \E^z \; dt ∧ dz \\
-            &  B^x \; dy ∧ dz \\
-            &  B^y \; dz ∧ dx \\
-            &  B^z \; dx ∧ dy \\
-      \end{aligned} \right]
-      = 0
-
-   Where :math:`d` is the exterior derivative, :math:`⋆` the Hodge star, and
-   :math:`∧` the exterior product. :math:`\E^x`, :math:`\E^y` and :math:`\E^z`
-   are the components of the electric field divided by the speed of light
-   :math:`c`, and :math:`B^x`, :math:`B^y`, :math:`B^z` the components of the
-   magnetic field. The term on the right hand side is the four-current, with
-   :math:`μ_0` the permeability of free space, :math:`ρ` the volume charge
-   density, and :math:`J^x`, :math:`J^y`, :math:`J^z` the components of the
-   conventional current density.
+Where :math:`d` is the exterior derivative, :math:`⋆` the Hodge star, and
+:math:`∧` the exterior product. :math:`\E^x`, :math:`\E^y` and :math:`\E^z`
+are the components of the electric field divided by the speed of light
+:math:`c`, and :math:`B^x`, :math:`B^y`, :math:`B^z` the components of the
+magnetic field. The term on the right hand side is the four-current, with
+:math:`μ_0` the permeability of free space, :math:`ρ` the volume charge
+density, and :math:`J^x`, :math:`J^y`, :math:`J^z` the components of the
+conventional current density.
 
 .. }}}
 
