@@ -53,8 +53,8 @@ three-covector using the Euclidean metric :math:`δ` with:
        &= a \; δ_{xx} \; dx^x + b \; δ_{yy} \; dx^y + c \; δ_{zz} \; dx^z \\
        &= a \; dx + b \; dy + c \; dz                                     \\
 
-Likewise, the musical sharp :math:`♯` is utilized as an operatro converting
-covectors to vecotrs. For example, the three-covector :math:`V^♭` is sharpened
+Likewise, the musical sharp :math:`♯` is utilized as an operator converting
+covectors to vectors. For example, the three-covector :math:`V^♭` is sharpened
 to a three-vector using:
 
 .. math::

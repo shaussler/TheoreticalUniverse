@@ -68,7 +68,7 @@ associated covectors :math:`\mathbf{e}^ν` are the differential operators:
    \mathbf{e}^y & = dy \\
    \mathbf{e}^z & = dz \\
 
-With :math:`δ` being the Kronecher-delta, the differential operators
+With :math:`δ` being the Kronecker-delta, the differential operators
 :math:`dx^ν` fulfill the definition for covectors, i.e. :math:`\mathbf{e}^μ
 \mathbf{e}_ν = δ^μ_ν`:
 
@@ -171,7 +171,7 @@ Direction   Surface           Permutation
 =========== ================= =============
 :math:`∂_x` :math:`∂_y ∧ ∂_z` :math:`x,y,z`
 :math:`∂_y` :math:`∂_z ∧ ∂_x` :math:`y,z,x`
-:math:`∂_z` :math:`∂_x ∧ ∂_z` :math:`z,x,y`
+:math:`∂_z` :math:`∂_x ∧ ∂_y` :math:`z,x,y`
 =========== ================= =============
 
 Traversing the table above from left to right or top to bottom, we cycle

@@ -475,7 +475,7 @@ Identify the cross product:
 
    ⋆R = R^x \; ∂_x + R^y \; ∂_y + R^z \; ∂_z
 
-That is, the Hodge star of the rotation ∂_xpressed as a linear comibination of
+That is, the Hodge star of the rotation expressed as a linear combination of
 bivectors is exactly a rotation in terms of cross products in the Hodge dual
 space:
 
@@ -484,7 +484,7 @@ space:
    ⋆R = R^x \; ∂_y ⨯ ∂_z + R^y \; ∂_z ⨯ ∂_x + R^z \; ∂_x ⨯ ∂_y
 
 We could have written a covector in the same explicit manner. This notation is
-very conveniant when performing calculations in Cartan's framework as it
+very convenient when performing calculations in Cartan's framework as it
 permits to identify and organize terms for practical calculations by falling
 back to regular matrix multiplication.
 

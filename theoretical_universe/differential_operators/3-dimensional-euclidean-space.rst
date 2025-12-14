@@ -17,10 +17,10 @@ and the laplacian in 3-dimensional Euclidean space.
 
 I assume the reader possesses a strong grasp of vector calculus, a working
 understanding of differential forms, the exterior product, musical operators, as
-well as :ref:`the Hoddge dual <hodge_duality>`. To learn about differential
+well as :ref:`the Hodge dual <hodge_duality>`. To learn about differential
 forms, `see yet another great video serie by Michael Penn
 <https://youtube.com/playlist?list=PL22w63XsKjqzQZtDZO_9s2HEMRJnaOTX7&si=4dDrAZ-oKa1rI7B8>`_.
-Implicitely assumed with the above requisites is a basic understanding of tensor
+Implicitly assumed with the above requisites is a basic understanding of tensor
 calculus, and in particular the concept of vector and covector. Some familiarity
 with the concepts of of either Grassman Algebra, Clifford Algebra (AKA Geometric
 Algebra), or Lie Algebra is not necessary but certainly welcome for a deeper
@@ -342,14 +342,14 @@ Taking the differential
           &= \left( \frac{∂^2 f}{∂ x^2} + \frac{∂^2 f}{∂ y^2} + \frac{∂^2 f}{∂ z^2} \right) \; dx ∧ dy ∧ dz         \\
 
 Taking the Hodge dual, we tranform volumes to functions and obtain the
-expression for the laplacian:
+expression for the Laplacian:
 
 .. math::
 
    ⋆ d ⋆ df = \left( \frac{∂^2 f}{∂ x^2} + \frac{∂^2 f}{∂ y^2} + \frac{∂^2 f}{∂ z^2} \right)
 
 The Laplacian in vector calculus is the divergence :math:`\mathbf{∇} \cdot`
-applied to the gradiant of a function :math:`\mathbf{∇} f`:
+applied to the gradient of a function :math:`\mathbf{∇} f`:
 
 .. math:: \mathbf{∇} \cdot \mathbf{∇} f
 

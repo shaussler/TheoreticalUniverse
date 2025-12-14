@@ -72,7 +72,7 @@ of 6 basis bicovectors:
          & R^{z} \; dx ∧ dy \\
    \end{aligned} \right]
 
-.. rubric:: Matrice Representation of the Mixed Exterior Product
+.. rubric:: Matrix Representation of the Mixed Exterior Product
 
 The row-major free matrix representation of any rotation in Minkowski space,
 expressed in a mixed form is:

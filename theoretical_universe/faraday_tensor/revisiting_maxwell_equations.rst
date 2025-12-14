@@ -17,7 +17,7 @@ Hermann Minkowski's 1908 paper, `The Fundamental Equations for Electromagnetic
 Processes in Moving Bodies <https://en.wikisource.org/wiki/Translation:
 The_Fundamental_Equations_for_Electromagnetic_Processes_in_Moving_Bodies>`_.
 Starting from the widely recognized vector formulation introduced by Mr. Oliver
-Heaviside, I rephrase this equations to adheres to the spirit of the 1865
+Heaviside, I rephrase this equations to adhere to the spirit of the 1865
 formulation, albeit with modern notation and structuring.
 
 My aim is to argue that the 1865 formulation not only remains relevant today

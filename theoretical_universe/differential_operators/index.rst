@@ -81,8 +81,7 @@ Faraday tensor, its dual, and the Maxwell equations.
 The most generic possible form in Minkowski space is:
 
 .. math::
-   f
-   + \left[ \begin{alignedat}{2}
+   f = \left[ \begin{alignedat}{2}
        & A^t & \: dt \\
        & A^x & \: dx \\
        & A^y & \: dy \\

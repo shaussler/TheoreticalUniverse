@@ -180,7 +180,7 @@ All above matrix representations merely mean:
 
 .. math::
 
-   R^{♯♯} a \; ∂_y ∧ ∂_z + b \; ∂_z ∧ ∂_x + c \; ∂_x ∧ ∂_y
+   R^{♯♯} = a \; ∂_y ∧ ∂_z + b \; ∂_z ∧ ∂_x + c \; ∂_x ∧ ∂_y
 
 .. }}}
 

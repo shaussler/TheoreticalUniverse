@@ -30,7 +30,7 @@ The :math:`♯♯` rotation tensor
 
 General rotations can be expressed as linear combinations of rotations in each
 planes. For Minkowski space with 4 directions :math:`∂_t`, :math:`∂_x`,
-:math:`∂_y` and :math:`∂_t`, this result in 6 planes of rotations. Each plance
+:math:`∂_y` and :math:`∂_t`, this result in 6 planes of rotations. Each plane
 is expressed as the exterior product :math:`∧` of basis vectors as :math:`∂_μ ∧
 ∂_ν`. Rotations in spacetime are expresssed as linear combination of basis
 rotations in the six available planes of rotations.
