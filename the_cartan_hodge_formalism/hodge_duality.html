@@ -1,0 +1,1608 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9HQ1J8VKRB"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-9HQ1J8VKRB');
+    </script>
+    
+    <title>Hodge duality fundamentals &#8212; Theoretical Universe</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=c1fb35df" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>window.MathJax = {"chtml": {"displayAlign": "left", "displayIndent": "2em"}, "tex": {"packages": {"[+]": ["ams"]}, "macros": {"E": "\\tilde{E}", "\u231f": "\\:\u231f\\:"}}, "tex2jax": {"ignoreClass": ".*", "processClass": "math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'the_cartan_hodge_formalism/hodge_duality';</script>
+    <link rel="canonical" href="https://shaussler.github.io/TheoreticalUniverse/the_cartan_hodge_formalism/hodge_duality.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Hodge dual computations" href="hodge_dual_computations.html" />
+    <link rel="prev" title="Musicality" href="musicality.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Theoretical Universe</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Table of Contents:</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../licence.html">Licence</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cite.html">How to cite</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">How to contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../resources.html">Resources</a></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">The Cartan-Hodge formalism</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="basis_vectors.html">Basis vectors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="musicality.html">Musicality</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Hodge duality fundamentals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hodge_dual_computations.html">Hodge dual computations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="the_free_matrix_representation.html">Free matrix representation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="the_minkowski_metric.html">Minkowski metric</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../rotations/index.html">Rotations in differential form</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../rotations/rotations_in_3_dimensions.html">Rotations in Euclidean space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rotations/rotations_in_minkowski_space.html">Rotations in Minkowski space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rotations/exponential_map.html">Exponential map</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../differential_operators/index.html">Differential operators expressed as exterior derivatives</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../differential_operators/3-dimensional-euclidean-space.html">3D Euclidean space</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../differential_operators/minkowski-space/index.html">Minkowski space</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../differential_operators/minkowski-space/0-forms.html">0–forms (functions)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../differential_operators/minkowski-space/1-forms.html">1–forms (translations)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../differential_operators/minkowski-space/2-forms.html">2–forms (rotations)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../differential_operators/minkowski-space/3-forms.html">3–forms (3D volumes)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../differential_operators/minkowski-space/4-forms.html">4–forms (4D volumes)</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../faraday_tensor/index.html">Covariant formulation of the electromagnetic field</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../faraday_tensor/revisiting_maxwell_equations.html">Revisiting the 1865 Maxwell’s equations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faraday_tensor/faraday_tensor_derivation.html">Deriving the Faraday tensor from the 1865 Maxwell’s equations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faraday_tensor/of_maxwell_equations_and_rotations.html">Deriving the Faraday 2–form from the 1865 Maxwell’s equations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faraday_tensor/2form_vs_tensor.html">Relation between the Faraday 2–form and the Faraday tensor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faraday_tensor/potential_formulation.html">Potential formulation via differential forms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faraday_tensor/all_electromagnetic_field_forms.html">All electromagnetic field forms</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../miscellaneous/index.html">Random thoughts</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../miscellaneous/de_guas_theorem.html">Proving De Gua’s theorem with Clifford algebra</a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/the_cartan_hodge_formalism/hodge_duality.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Hodge duality fundamentals</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#duality-in-three-dimensions">Duality in three dimensions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pseudo-vectors-and-pseudo-scalars">Pseudo-vectors and pseudo-scalars</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inner-product-of-k-vectors">Inner product of k–vectors</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inner-product-of-vectors">Inner product of vectors</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#surfaces-volumes-hypervolumes-and-the-determinant-of-matrices">Surfaces, volumes, hypervolumes, and the determinant of matrices</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inner-product-of-vectors-bivectors-and-trivectors-in-3-dimensional-euclidean-space">Inner product of vectors, bivectors, and trivectors in 3-dimensional Euclidean space</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inner-product-of-k-vectors-in-minkowski-space">Inner product of k–vectors in Minkowski space</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#formal-and-natural-definition">Formal and natural definition</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#duality-in-minkowski-space">Duality in Minkowski space</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#k-vectors">k–vectors</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#k-forms">k–forms</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="hodge-duality-fundamentals">
+<span id="id1"></span><span id="hodge-duality"></span><h1>Hodge duality fundamentals<a class="headerlink" href="#hodge-duality-fundamentals" title="Link to this heading">#</a></h1>
+<p class="custom-author">by Stéphane Haussler</p>
+<p>The Hodge dual is in my opinion often presented with unnecessary complexity,
+frequently involving from the start a number of dimensions beyond three,
+varying metric signatures, and a formal mathematical approach. However, the
+concept is intuitive in the familiar 3-dimensional Euclidean space that we
+experience daily. From there, generalizing the concept to 4-dimensional
+Minkowski space is natural.</p>
+<p>The first part of this article presents the core intuition behind Hodge duality
+in 3–dimensional Euclidean space and is meant to be easy to follow. Next comes
+a shaping operation: Preparing the generalization to any number of dimensions
+and metric signatures. I lay out the relation between the exterior product,
+matrix determinant, surface, volume and hypervolume. This will permit to
+generalize the inner product to k–vectors. Finally, I systematically calculate
+of the Hodge duals of vectors, bivectors, trivectors and quadvectors in
+Minkowski spacetime with metric signature <span class="math notranslate nohighlight">\((+,-,-,-)\)</span>.</p>
+<p>For a straightforward method using the interior product <span class="math notranslate nohighlight">\(⌟\)</span> to calculate
+the Hodge dual of k–forms, have a look at the page <a class="reference internal" href="hodge_dual_computations.html#hodge-dual-computations"><span class="std std-ref">Hodge dual computations</span></a>. This article also provides an easier method to calculate the
+inner product between k–forms.</p>
+<p>This discussion assumes you have a solid understanding the exterior product and
+Élie Cartan’s differential forms.</p>
+<p>Notations in this page are standard and should be widely recognized. See that
+basis vectors <span class="math notranslate nohighlight">\(\mathbf{e}_μ\)</span> are noted with the partial derivative symbol
+<span class="math notranslate nohighlight">\(∂_μ\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\mathbf{e}_t &amp; = ∂_t \\
+\mathbf{e}_x &amp; = ∂_x \\
+\mathbf{e}_y &amp; = ∂_y \\
+\mathbf{e}_z &amp; = ∂_z \\\end{split}\]</div>
+<p>I don’t necessarily expect all readers to have ever considered <a class="reference internal" href="basis_vectors.html#partial-derivatives-as-basis-vectors"><span class="std std-ref">partial
+derivatives as basis vectors</span></a>. For our
+purpose, this is simply a matter of a notation. I use for the inner product
+either the dot notation <span class="math notranslate nohighlight">\(\cdot\)</span> or the bra-ket notation from quantum
+mechanics <span class="math notranslate nohighlight">\(\braket{|}\)</span> when it helps readability.</p>
+<p>I point out the work of <a class="reference external" href="https://www.michael-penn.net">Michael Penn</a>  on
+<a class="reference external" href="https://m.youtube.com/playlist?list=PL22w63XsKjqzQZtDZO_9s2HEMRJnaOTX7">Differential Forms</a> . In
+particular, the following videos intersect greatly with the content of this
+page:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://m.youtube.com/watch?v=iLlaFBMk_Bs&amp;list=PLHlTqVYmqunWXBoO3xZhQOAoc8oqd-2Su&amp;index=58&amp;t=225s&amp;pp=gAQBiAQB">Differential Forms | The Hodge operator via an inner product</a>.</p></li>
+<li><p><a class="reference external" href="https://m.youtube.com/watch?v=vDRfADusqYQ">Differential Forms | The Minkowski metric and the Hodge operator</a>.</p></li>
+</ul>
+<p>These videos provide an alternative, yet equivalent, approach to the
+conclusions presented here. There is also the added bonus that he uses the same
+metric signature <span class="math notranslate nohighlight">\((+,-,-,-)\)</span>.</p>
+<section id="duality-in-three-dimensions">
+<h2>Duality in three dimensions<a class="headerlink" href="#duality-in-three-dimensions" title="Link to this heading">#</a></h2>
+<p>First consider a coordinate basis <span class="math notranslate nohighlight">\(∂_x\)</span>, <span class="math notranslate nohighlight">\(∂_y\)</span> and <span class="math notranslate nohighlight">\(∂_z\)</span> in 3
+dimensions corresponding to our intuitive understanding of space. Observe that
+we did not merely define three unit vectors, but also three <em>unit surfaces</em>,
+which we name using the wedge symbol <span class="math notranslate nohighlight">\(∧\)</span>. The surface along the <span class="math notranslate nohighlight">\(x\)</span>
+and <span class="math notranslate nohighlight">\(y\)</span> axis is named <span class="math notranslate nohighlight">\(∂_x ∧ ∂_y\)</span>, along the <span class="math notranslate nohighlight">\(y\)</span> and
+<span class="math notranslate nohighlight">\(z\)</span> axis <span class="math notranslate nohighlight">\(∂_y ∧ ∂_z\)</span>, and along the <span class="math notranslate nohighlight">\(z\)</span> and <span class="math notranslate nohighlight">\(x\)</span> axis
+<span class="math notranslate nohighlight">\(∂_z ∧ ∂_x\)</span>:</p>
+<a class="reference internal image-reference" href="../_images/hodge_dual_coordinates.png"><img alt="../_images/hodge_dual_coordinates.png" class="align-center" src="../_images/hodge_dual_coordinates.png" style="width: 60%;" />
+</a>
+<p>The naming of the surfaces is carefully chosen counterclock-wise. The reason is
+that we have not defined a mere surface from two vectors, but an oriented
+surface: The surface magnitude can be negative, depending on the chosen
+orientation. Here, we take the convention that surfaces oriented
+counterclockwise are positive. For example: <span class="math notranslate nohighlight">\(∂_z ∧ ∂_x = - ∂_x ∧ ∂_z\)</span>.</p>
+<p>Remark that we have not only decided on a naming convention, but created new
+mathematical objects built from two vectors and a new product denoted with the
+wedge symbol <span class="math notranslate nohighlight">\(∧\)</span>. We call these objects <em>bivectors</em>, and the new product
+denoted with the wedge symbol <span class="math notranslate nohighlight">\(∧\)</span> <em>exterior product</em>. The fundamental
+property of these objects is that they are antisymmetric, and is already given
+by the discussion about the surface orientation:</p>
+<div class="math notranslate nohighlight">
+\[∂_i ∧ ∂_j = - ∂_j ∧ ∂_i\]</div>
+<p>Necessarily, <span class="math notranslate nohighlight">\(∂_i ∧ ∂_i = 0\)</span> since two copies of the same vectors cannot
+generate a surface. This can also be determined from the antisymmetric property
+above.</p>
+<p>In 3 dimensions, we note that each basis bivector can be associated with a
+unique basis vector:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}∂_x ∧ ∂_y \rightarrow ∂_z \\
+∂_y ∧ ∂_z \rightarrow ∂_x \\
+∂_z ∧ ∂_x \rightarrow ∂_y \\\end{split}\]</div>
+<p>We note this relation with the star symbol <span class="math notranslate nohighlight">\(⋆\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}⋆ ∂_x ∧ ∂_y = ∂_z \\
+⋆ ∂_y ∧ ∂_z = ∂_x \\
+⋆ ∂_z ∧ ∂_x = ∂_y \\\end{split}\]</div>
+<p>This association defines a unique vector dual to every oriented surfaces called
+the Hodge dual. Hodge duality is noted with the star symbol <span class="math notranslate nohighlight">\(⋆\)</span>, called
+the <em>Hodge star operator</em>. The relation holds in both direction:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}⋆ ∂_z = ∂_x ∧ ∂_y \\
+⋆ ∂_x = ∂_y ∧ ∂_z \\
+⋆ ∂_y = ∂_z ∧ ∂_x \\\end{split}\]</div>
+<p>The Hodge dual in three dimensions is the cross product. The cross product
+defines a vector perpendicular to the surface whose length is proportional to
+the amount of rotation:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}∂_x ⨯ ∂_y = ⋆ ∂_x ∧ ∂_y = ∂_z \\
+∂_y ⨯ ∂_z = ⋆ ∂_y ∧ ∂_z = ∂_x \\
+∂_z ⨯ ∂_x = ⋆ ∂_z ∧ ∂_x = ∂_y \\\end{split}\]</div>
+<p>This establishes the deep connection between the Hodge dual, rotations,
+surfaces, and the cross product.</p>
+<p>Going one step futher, we observe that we did not merely define unit surfaces,
+but also unit volumes that we note <span class="math notranslate nohighlight">\(∂_x ∧ ∂_y ∧ ∂_z\)</span>. We can associate
+the unit volume with numbers:</p>
+<div class="math notranslate nohighlight">
+\[⋆ \mathbf{1} = ∂_x ∧ ∂_y ∧ ∂_z\]</div>
+<p>As well as:</p>
+<div class="math notranslate nohighlight">
+\[⋆ ∂_x ∧ ∂_y ∧ ∂_z = \mathbf{1}\]</div>
+<p>Where <span class="math notranslate nohighlight">\(\mathbf{1}\)</span> is the unit number. In other words any number can be
+expressed as a linear combination of <span class="math notranslate nohighlight">\(1\)</span>.</p>
+</section>
+<section id="pseudo-vectors-and-pseudo-scalars">
+<span id="id2"></span><h2>Pseudo-vectors and pseudo-scalars<a class="headerlink" href="#pseudo-vectors-and-pseudo-scalars" title="Link to this heading">#</a></h2>
+<p>As a side quest which may be of particular interest to particle physicist, I
+discuss the naming <em>pseudo-vector</em> and <em>pseudo-scalar</em>. From the vector basis,
+we have constructed with the following objects:</p>
+<ul class="simple">
+<li><p>scalars,</p></li>
+<li><p>vectors,</p></li>
+<li><p>bivectors corresponding to oriented surfaces, and</p></li>
+<li><p>trivectors corresponding to oriented volumes.</p></li>
+</ul>
+<p>Place these objects in front of a mirror as a <em>Gedankenexperiment</em>. Observe the
+image of these objects and notice that:</p>
+<ul class="simple">
+<li><p>scalars are unchanged,</p></li>
+<li><p>vectors are unchanged,</p></li>
+<li><p>oriented surfaces defined from two vectors are flipped with a change of sign,
+and</p></li>
+<li><p>oriented volumes defined as trivectors (i.e. from an oriented surface and a
+vector) are also flipped with a change of sign.</p></li>
+</ul>
+<p>This is the reason for the name <em>pseudo-vector</em>. These objects look like and
+nearly behave like the vectors they are associated to through Hodge duality.
+However and contrary to vectors, the sign of the image of a positive oriented
+surface goes to negative when placed in front of a mirror. The image of the
+Hodge dual vector is flipped.</p>
+<p>This is also the reason for the name <em>pseudo-scalar</em>. These objects look like
+and nearly behave like the scalars they are associated to through Hodge
+duality. However and contrary to scalars, the sign of the image of a positive
+oriented volume goes to negative when placed in front of a mirror. The image of
+the Hodge dual scalar is flipped.</p>
+</section>
+<section id="inner-product-of-k-vectors">
+<h2>Inner product of k–vectors<a class="headerlink" href="#inner-product-of-k-vectors" title="Link to this heading">#</a></h2>
+<p>The object of this section is to generalize the inner product from vectors to
+multivectors. This will be needed to generalize Hodge duality to any number of
+dimensions and metric signatures. Indeed, Minkowski space is characterized not
+only by 4 dimension, but also by the mixed metric signature <span class="math notranslate nohighlight">\((+,-,-,-)\)</span>.
+Intuitively, we can guess that the inner product on multivectors should be
+influence by the metric signature. In turn, we can then also expect that the
+metric signature will play a role for Hodge duality in Minkowski space. We will
+see that the concept of the inner product is akin to measuring the size of
+shadows in one dimension, two dimensions, three dimensions, and k-dimensions in
+all generality.</p>
+<section id="inner-product-of-vectors">
+<h3>Inner product of vectors<a class="headerlink" href="#inner-product-of-vectors" title="Link to this heading">#</a></h3>
+<p>I expect you are very familiar with linear algebra, since you are interested in
+the more <em>advanced</em> topic of Hodge duality. I nonethelss recall what you may
+find obvious. The inner product of one vector onto another corresponds to the
+projection of one vector onto the other. In that sense, the inner product can
+be understood as a one-dimensional shadow:</p>
+<figure class="align-default" id="id5">
+<a class="reference internal image-reference" href="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Dot_Product.svg/600px-Dot_Product.svg.png"><img alt="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Dot_Product.svg/600px-Dot_Product.svg.png" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Dot_Product.svg/600px-Dot_Product.svg.png" style="width: 250px;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Inner product on vectors.</span><a class="headerlink" href="#id5" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>For the basis vectors in flat euclidean space, we obtain:</p>
+<div class="math notranslate nohighlight">
+\[∂_i \cdot ∂_j = \braket{∂_i | ∂_j} = δ_{ij}\]</div>
+<p>For the basis 4-vectors in flat Minkowski space, we obtain:</p>
+<div class="math notranslate nohighlight">
+\[∂_μ \cdot ∂_ν = \braket{∂_μ | ∂_ν} = η_{μν}\]</div>
+<p>This is the starting point for a procedure which permits to meaningfully lift
+the inner product on vectors to the inner products on bivectors, trivectors,
+quadvectors, and in all generality to k–vectors.</p>
+</section>
+<section id="surfaces-volumes-hypervolumes-and-the-determinant-of-matrices">
+<h3>Surfaces, volumes, hypervolumes, and the determinant of matrices<a class="headerlink" href="#surfaces-volumes-hypervolumes-and-the-determinant-of-matrices" title="Link to this heading">#</a></h3>
+<p>The next step is to highlight the link between the inner product and the
+determinant of matrices. I recall the relationship between the determinant,
+surfaces, volumes, and hypervolumes.</p>
+<figure class="align-default" id="id6">
+<a class="reference internal image-reference" href="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Area_parallellogram_as_determinant.svg/891px-Area_parallellogram_as_determinant.svg.png"><img alt="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Area_parallellogram_as_determinant.svg/891px-Area_parallellogram_as_determinant.svg.png" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Area_parallellogram_as_determinant.svg/891px-Area_parallellogram_as_determinant.svg.png" style="width: 250px;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Surfaces and the determinant of 2x2 matrices.</span><a class="headerlink" href="#id6" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<p>The area of the surface <span class="math notranslate nohighlight">\(S\)</span> spanned by the parallelogram defined by a
+vector <span class="math notranslate nohighlight">\(a ∂_x + b ∂_y\)</span> and a vector <span class="math notranslate nohighlight">\(c ∂_x + d ∂_y\)</span> corresponds to
+the determinant of the <span class="math notranslate nohighlight">\(2 \times 2\)</span> matrice, where each column entries
+are the the components of the vectors.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}S = \begin{vmatrix}
+  a &amp; c \\
+  b &amp; d \\
+\end{vmatrix}
+= ad - cb\end{split}\]</div>
+<p>This can equivalently be achieved by calculating the exterior product of these
+two vectors. The notation <span class="math notranslate nohighlight">\(S^{♯♯}\)</span> indicates that the surface is a
+bivector, and not a real number <span class="math notranslate nohighlight">\(S\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}S^{♯♯} &amp;= (a ∂_x + b ∂_y) ∧ (c ∂_x + d ∂_y) \\
+       &amp;= (ad - bc) ∂_x ∧ ∂_y\end{split}\]</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Calculation</p>
+<p class="rubric">Take the exterior product</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}S^{♯♯} = (a ∂_x + b ∂_y) ∧ (c ∂_x + d ∂_y) \\\end{split}\]</div>
+<p class="rubric">Distribute</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}S^{♯♯} &amp;= a ∂_x ∧ (c ∂_x + d ∂_y) + b ∂_y ∧ (c ∂_x + d ∂_y) \\
+       &amp;= a ∂_x ∧ c ∂_x + a ∂_x ∧ d ∂_y + b ∂_y ∧ c ∂_x + b ∂_y ∧ d ∂_y \\\end{split}\]</div>
+<p class="rubric">Remove zero terms and take the factors in front of expression</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}S^{♯♯} &amp;= a ∂_x ∧ d ∂_y + b ∂_y ∧ c ∂_x \\
+       &amp;= a d ∂_x ∧ ∂_y + b c ∂_y ∧ ∂_x \\\end{split}\]</div>
+<p class="rubric">Reorganize and conclude</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}S^{♯♯} &amp;= a d ∂_x ∧ ∂_y - b c ∂_x ∧ ∂_y \\
+       &amp;= (ad - bc) ∂_x ∧ ∂_y \\\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[S = (ad - bc)\]</div>
+</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Calculation in free matrix representation</p>
+<p>Using the free matrix representation from the Cartan-Hodge formalism helps
+organize calculations and yields the same result.</p>
+<p class="rubric">Take the exterior product</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}S^{♯♯} = \begin{bmatrix}
+    a ∂_x \\
+    b ∂_y \\
+\end{bmatrix}
+∧ \begin{bmatrix}
+    c ∂_x \\
+    d ∂_y \\
+\end{bmatrix}\end{split}\]</div>
+<p class="rubric">Distribute and remove zero terms</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}S^{♯♯} = \begin{bmatrix}
+   a ∂_x ∧ d ∂_y \\
+   a ∂_x ∧ c ∂_x \\
+   b ∂_y ∧ c ∂_x \\
+   b ∂_y ∧ d ∂_y
+\end{bmatrix}
+= \begin{bmatrix}
+    a ∂_x ∧ d ∂_y \\
+    b ∂_y ∧ c ∂_x \\
+\end{bmatrix}\end{split}\]</div>
+<p class="rubric">Reorganize and conclude</p>
+<div class="math notranslate nohighlight">
+\[ \begin{align}\begin{aligned}\begin{split}  S^{♯♯} = \begin{bmatrix}
+      + a d ∂_x ∧ ∂_y \\
+      - b c ∂_x ∧ ∂_y \\
+  \end{bmatrix}
+  = (ad - bc) ∂_x ∧ ∂_y\end{split}\\.. math::\\   S = (ab - bc)\end{aligned}\end{align} \]</div>
+</div>
+<p>The same can be done to calculate the volume <span class="math notranslate nohighlight">\(V\)</span> of a parallelepiped
+defined by three vectors.</p>
+<figure class="align-default" id="id7">
+<a class="reference internal image-reference" href="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Determinant_parallelepiped.svg/912px-Determinant_parallelepiped.svg.png"><img alt="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Determinant_parallelepiped.svg/912px-Determinant_parallelepiped.svg.png" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Determinant_parallelepiped.svg/912px-Determinant_parallelepiped.svg.png" style="width: 250px;" />
+</a>
+<figcaption>
+<p><span class="caption-text">Volumes and the determinant of 3x3 matrices.</span><a class="headerlink" href="#id7" title="Link to this image">#</a></p>
+</figcaption>
+</figure>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(r_1 = a ∂_x + b ∂_y + c ∂_z\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(r_2 = u ∂_x + v ∂_y + w ∂_z\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(r_3 = p ∂_x + q ∂_y + r ∂_z\)</span></p></li>
+</ul>
+<p>The entries of each columns are the vector components:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}V &amp;= \begin{vmatrix}
+  a &amp; u &amp; p \\
+  b &amp; v &amp; q \\
+  c &amp; w &amp; r \\
+\end{vmatrix}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}V = + a \begin{vmatrix}
+  v &amp; q \\
+  w &amp; r \\
+\end{vmatrix}
+- b \begin{vmatrix}
+   u &amp; p \\
+   w &amp; r \\
+\end{vmatrix}
++ c \begin{vmatrix}
+   u &amp; p \\
+   v &amp; q \\
+  \end{vmatrix}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[V = + avr - awq - bur + bwp + cuq - cvp\]</div>
+<p>The above result can be equivalently achieved by taking the exterior product of
+these three vectors:</p>
+<div class="math notranslate nohighlight">
+\[V ∂_x ∧ ∂_y ∧ ∂_z = (+avr -awq -bur +bwp +cuq -cvp) ∂_x ∧ ∂_y ∧ ∂_z\]</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Calculation</p>
+<p class="rubric">Wedge the three vectors defining the volume</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}V ∂_x ∧ ∂_y ∧ ∂_z = \begin{bmatrix} a ∂_x \\ b ∂_y \\ c ∂_z \end{bmatrix} ∧
+                    \begin{bmatrix} u ∂_x \\ v ∂_y \\ w ∂_z \end{bmatrix} ∧
+                    \begin{bmatrix} p ∂_x \\ q ∂_y \\ r ∂_z \end{bmatrix}\end{split}\]</div>
+<p class="rubric">Expand the first two vectors</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}V ∂_x ∧ ∂_y ∧ ∂_z = \begin{bmatrix}
+                         av ∂_x ∧ ∂_y \\
+                         aw ∂_x ∧ ∂_z \\
+                         bu ∂_y ∧ ∂_x \\
+                         bw ∂_y ∧ ∂_z \\
+                         cu ∂_z ∧ ∂_x \\
+                         cv ∂_z ∧ ∂_y
+                     \end{bmatrix}
+                     ∧ \begin{bmatrix}
+                           p ∂_x \\
+                           q ∂_y \\
+                           r ∂_z
+                       \end{bmatrix}\end{split}\]</div>
+<p class="rubric">Expand with the third vector</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}V ∂_x ∧ ∂_y ∧ ∂_z = \begin{bmatrix}
+                         avr ∂_x ∧ ∂_y ∧ ∂_z \\
+                         awq ∂_x ∧ ∂_z ∧ ∂_y \\
+                         bur ∂_y ∧ ∂_x ∧ ∂_z \\
+                         bwp ∂_y ∧ ∂_z ∧ ∂_x \\
+                         cuq ∂_z ∧ ∂_x ∧ ∂_y \\
+                         cvp ∂_z ∧ ∂_y ∧ ∂_x
+                     \end{bmatrix}\end{split}\]</div>
+<p class="rubric">Reorder</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}V ∂_x ∧ ∂_y ∧ ∂_z = \begin{bmatrix}
+                         +avr ∂_x ∧ ∂_y ∧ ∂_z \\
+                         -awq ∂_x ∧ ∂_y ∧ ∂_z \\
+                         -bur ∂_x ∧ ∂_y ∧ ∂_z \\
+                         +bwp ∂_x ∧ ∂_y ∧ ∂_z \\
+                         +cuq ∂_x ∧ ∂_y ∧ ∂_z \\
+                         -cvp ∂_x ∧ ∂_y ∧ ∂_z
+                     \end{bmatrix}\end{split}\]</div>
+<p class="rubric">Conclude</p>
+<div class="math notranslate nohighlight">
+\[V ∂_x ∧ ∂_y ∧ ∂_z = (+avr -awq -bur +bwp +cuq -cvp) ∂_x ∧ ∂_y ∧ ∂_z\]</div>
+</div>
+<p>This procedure can be generalized to hypervolumes constructed from k–vectors/
+The hypervolume is calculated with the determinant of a <span class="math notranslate nohighlight">\(k \times k\)</span>
+matrice, or equivalently by taking the exterior product of k k–vectors.</p>
+</section>
+<section id="inner-product-of-vectors-bivectors-and-trivectors-in-3-dimensional-euclidean-space">
+<h3>Inner product of vectors, bivectors, and trivectors in 3-dimensional Euclidean space<a class="headerlink" href="#inner-product-of-vectors-bivectors-and-trivectors-in-3-dimensional-euclidean-space" title="Link to this heading">#</a></h3>
+<p>In essence, the inner product can be understood as the concept of measuring
+shadows. The inner product between two vectors is the measure of the
+1-dimensional shadow of one vector onto the other. Similarly, the inner product
+between bivectors is the measure of the surface shadow of one surface onto the
+other. This 2-dimensional surface can be calculated from the determinant of a
+<span class="math notranslate nohighlight">\(2 ⨯ 2\)</span> matrix. We then generalize to 3-dimensions by calculating the
+determinant of <span class="math notranslate nohighlight">\(3 ⨯ 3\)</span> matrices, corresponding to the volumes covered by
+3-vectors. One step further, a k-dimensional shadow measure can then be
+calculated using <span class="math notranslate nohighlight">\(k ⨯ k\)</span> matrices, corresponding to hypervolumes of
+dimension k. This permits to find a meaningfull way to <em>lift</em> the inner product
+from vectors to bivectors, trivectors, and k–vectors. Lifting the inner product
+permits to generalize the the Hodge dual to any metric signature, and apply to
+Minkowski space with metric signature <span class="math notranslate nohighlight">\((+,-,-,-)\)</span>. In 3-dimensional
+Euclidean space, the inner product of the basis vectors, denoted with either
+the dot symbol <span class="math notranslate nohighlight">\(\cdot\)</span> or the bracket symbol <span class="math notranslate nohighlight">\(\braket{|}\)</span> is given
+by:</p>
+<div class="math notranslate nohighlight">
+\[∂_i \cdot ∂_j = \braket{∂_i|∂_j} = δ_{ij}\]</div>
+<p>Fully expanded, we have the following dot products for each basis vector
+combination:</p>
+<aside class="topic">
+<p class="topic-title">Inner product of vectors</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{array}{c|ccc}
+        &amp; ∂_x &amp; ∂_y &amp; ∂_z \\
+    \hline
+    ∂_x &amp;   1 &amp;   0 &amp;   0 \\
+    ∂_y &amp;   0 &amp;   1 &amp;   0 \\
+    ∂_z &amp;   0 &amp;   0 &amp;   1 \\
+\end{array}\end{split}\]</div>
+</aside>
+<p>A first hint that the inner product can be naturally generalized to surfaces,
+is that in 3 dimensions, we can associate a basis surface to each of the basis
+vectors through the Hodge dual, as argued at the beginning of this article. It
+may then <em>feel natural,</em> since <span class="math notranslate nohighlight">\(∂_x\)</span> is associated to <span class="math notranslate nohighlight">\(∂_y ∧ ∂_z\)</span>,
+to expect that the inner product <span class="math notranslate nohighlight">\(\braket{∂_x|∂_x}=1\)</span> implies that
+<span class="math notranslate nohighlight">\(\braket{∂_y ∧ ∂_z | ∂_y ∧ ∂_z}=1\)</span>.</p>
+<p>Let us consider two vectors <span class="math notranslate nohighlight">\(a^♯\)</span> and <span class="math notranslate nohighlight">\(b^♯\)</span> in 3-dimensional
+Euclidean space, written in component form as:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(a^♯ = p \, ∂_x + q \, ∂_y + r \, ∂_z\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(b^♯ = u \, ∂_x + v \, ∂_y + w \, ∂_z\)</span></p></li>
+</ul>
+<p>Now consider the components of <span class="math notranslate nohighlight">\(a^♯\)</span> and <span class="math notranslate nohighlight">\(b^♯\)</span> along the unit
+vectors <span class="math notranslate nohighlight">\(∂_x\)</span> and <span class="math notranslate nohighlight">\(∂_y\)</span>:</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(p \, ∂_x + q \, ∂_y\)</span></p></li>
+<li><p><span class="math notranslate nohighlight">\(u \, ∂_x + v \, ∂_y\)</span></p></li>
+</ul>
+<p>The measure of the amount of shadow of the surface determined by vectors
+<span class="math notranslate nohighlight">\(a^♯\)</span> and <span class="math notranslate nohighlight">\(b^♯\)</span> on the <span class="math notranslate nohighlight">\(∂_x ∧ ∂_y\)</span> plane is the inner product
+on bivectors. This lifts the inner product from vectors to bivectors through
+the determinant:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\braket{α^♯ ∧ β^♯ | ∂_x ∧ ∂_y} =
+\begin{vmatrix}
+    p &amp; u \\
+    q &amp; v \\
+\end{vmatrix}
+= pv - qu\end{split}\]</div>
+<p>In the same manner we obtain:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\braket{α^♯ ∧ β^♯ | ∂_y ∧ ∂_z} =
+\begin{vmatrix}
+    q &amp; v \\
+    r &amp; w \\
+\end{vmatrix}
+= qw - rv\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\braket{α^♯ ∧ β^♯ | ∂_z ∧ ∂_x} =
+\begin{vmatrix}
+    r &amp; w \\
+    p &amp; u \\
+\end{vmatrix}
+= ru - pw\end{split}\]</div>
+<p>With this quantities, we have measured the amount of shadow from the surface
+determined by vectors <span class="math notranslate nohighlight">\(a^♯\)</span> and <span class="math notranslate nohighlight">\(b^♯\)</span> onto the unit bivectors
+<span class="math notranslate nohighlight">\(∂_y ∧ ∂_z\)</span>, <span class="math notranslate nohighlight">\(∂_z ∧ ∂_x\)</span>, and <span class="math notranslate nohighlight">\(∂_x ∧ ∂_y\)</span>, . We can modify
+the expressions slightly in order to relate the vector components to the inner
+product of vectors. Vector components can be obtained by doting the vectors
+with the basis vectors:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\braket{a^♯ ∧ b^♯ | ∂_y ∧ ∂_z} =
+\begin{vmatrix}
+    q &amp; v \\
+    r &amp; w \\
+\end{vmatrix} =
+\begin{vmatrix}
+    \braket{a^♯ | ∂_y} &amp; \braket{b^♯ | ∂_y} \\
+    \braket{a^♯ | ∂_z} &amp; \braket{b^♯ | ∂_z} \\
+\end{vmatrix}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\braket{a^♯ ∧ b^♯ | ∂_z ∧ ∂_x} =
+\begin{vmatrix}
+    r &amp; w \\
+    p &amp; u \\
+\end{vmatrix} =
+\begin{vmatrix}
+    \braket{a^♯ | ∂_z} &amp; \braket{b^♯ | ∂_z} \\
+    \braket{a^♯ | ∂_x} &amp; \braket{b^♯ | ∂_x} \\
+\end{vmatrix}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\braket{a^♯ ∧ b^♯ | ∂_x ∧ ∂_y} =
+\begin{vmatrix}
+    p &amp; u \\
+    q &amp; v \\
+\end{vmatrix} =
+\begin{vmatrix}
+    \braket{a^♯ | ∂_x} &amp; \braket{b^♯ | ∂_x} \\
+    \braket{a^♯ | ∂_y} &amp; \braket{b^♯ | ∂_y} \\
+\end{vmatrix}\end{split}\]</div>
+<p>Put together in condensed form:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\braket{a^♯ ∧ b^♯ | ∂_k ∧ ∂_l} =
+\begin{vmatrix}
+    \braket{a^♯ | ∂_k} &amp; \braket{b^♯ | ∂_k} \\
+    \braket{a^♯ | ∂_l} &amp; \braket{b^♯ | ∂_l} \\
+\end{vmatrix}\end{split}\]</div>
+<p>With this, we can determine the surface of any arbitrary bivector compared to
+the basis bivectors. In particular We can replace vectors <span class="math notranslate nohighlight">\(a^♯\)</span> and
+<span class="math notranslate nohighlight">\(b^♯\)</span> with any of the basis vectors <span class="math notranslate nohighlight">\(∂_x\)</span>, <span class="math notranslate nohighlight">\(∂_y\)</span>, or
+<span class="math notranslate nohighlight">\(∂_z\)</span>. We now have a technique to determine the inner product of basis
+bivectors:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\braket{∂_i ∧ ∂_j | ∂_k ∧ ∂_l} =
+\begin{vmatrix}
+    \braket{∂_i | ∂_k} &amp; \braket{∂_j | ∂_k} \\
+    \braket{∂_i | ∂_l} &amp; \braket{∂_j | ∂_l} \\
+\end{vmatrix}\end{split}\]</div>
+<p>Which permits to obtain:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\braket{∂_y ∧ ∂_z | ∂_y ∧ ∂_z}
+=
+\begin{vmatrix}
+    \braket{∂_y | ∂_y} &amp; \braket{∂_z | ∂_y} \\
+    \braket{∂_y | ∂_z} &amp; \braket{∂_z | ∂_z} \\
+\end{vmatrix}
+=
+\begin{vmatrix}
+    1 &amp; 0 \\
+    0 &amp; 1 \\
+\end{vmatrix}
+=1\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\braket{∂_z ∧ ∂_x | ∂_z ∧ ∂_x}
+= \begin{vmatrix}
+    \braket{∂_z | ∂_z} &amp; \braket{∂_x | ∂_z} \\
+    \braket{∂_z | ∂_x} &amp; \braket{∂_x | ∂_x} \\
+\end{vmatrix}
+= \begin{vmatrix}
+    1 &amp; 0 \\
+    0 &amp; 1 \\
+\end{vmatrix}
+= 1\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\braket{∂_x ∧ ∂_y | ∂_x ∧ ∂_y}
+= \begin{vmatrix}
+    \braket{∂_x | ∂_x} &amp; \braket{∂_y | ∂_x} \\
+    \braket{∂_x | ∂_y} &amp; \braket{∂_y | ∂_y} \\
+\end{vmatrix}
+= \begin{vmatrix}
+    1 &amp; 0 \\
+    0 &amp; 1 \\
+\end{vmatrix}
+= 1\end{split}\]</div>
+<p>All other inner products are zero. For example:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\braket{∂_y ∧ ∂_z | ∂_x ∧ ∂_y}
+= \begin{vmatrix}
+    \braket{∂_y | ∂_x} &amp; \braket{∂_z | ∂_x} \\
+    \braket{∂_y | ∂_y} &amp; \braket{∂_z | ∂_y} \\
+\end{vmatrix}
+= \begin{vmatrix}
+    0 &amp; 0 \\
+    0 &amp; 0 \\
+\end{vmatrix}
+= 0\end{split}\]</div>
+<p>In summary, we obtain:</p>
+<aside class="topic">
+<p class="topic-title">Inner product of bivectors</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{array}{c|cccc}
+              &amp; ∂_y ∧ ∂_z &amp; ∂_z ∧ ∂_x &amp; ∂_x ∧ ∂_y \\
+   \hline
+    ∂_y ∧ ∂_z &amp; 1         &amp; 0         &amp; 0         \\
+    ∂_z ∧ ∂_x &amp; 0         &amp; 1         &amp; 0         \\
+    ∂_x ∧ ∂_y &amp; 0         &amp; 0         &amp; 1         \\
+\end{array}\end{split}\]</div>
+</aside>
+<p>Finally, we generalize lifting the inner product to trivectors. In
+3-dimensional Euclidean space, we get for the unit trivector:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\braket{∂_x ∧ ∂_y ∧ ∂_z | ∂_x ∧ ∂_y ∧ ∂_z} =
+\begin{vmatrix}
+    \braket{∂_x | ∂_x} &amp; \braket{∂_y | ∂_x} &amp; \braket{∂_z | ∂_x}\\
+    \braket{∂_x | ∂_y} &amp; \braket{∂_y | ∂_y} &amp; \braket{∂_z | ∂_y}\\
+    \braket{∂_x | ∂_z} &amp; \braket{∂_y | ∂_z} &amp; \braket{∂_z | ∂_z}\\
+\end{vmatrix}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\braket{∂_x ∧ ∂_y ∧ ∂_z | ∂_x ∧ ∂_y ∧ ∂_z} =
+\begin{vmatrix}
+    1 &amp; 0 &amp; 0\\
+    0 &amp; 1 &amp; 0\\
+    0 &amp; 0 &amp; 1\\
+\end{vmatrix}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\braket{∂_x ∧ ∂_y ∧ ∂_z | ∂_x ∧ ∂_y ∧ ∂_z} = 1\]</div>
+<p>In table form, we have:</p>
+<aside class="topic">
+<p class="topic-title">Inner product of trivectors</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{array}{c|c}
+                   &amp; ∂_x ∧ ∂_y ∧ ∂_z \\
+   \hline
+   ∂_x ∧ ∂_y ∧ ∂_z &amp;               1 \\
+\end{array}\end{split}\]</div>
+</aside>
+<p>With this, we remark we have found a meaningfull and reasonable way to extend
+the inner product to k-forms in Minkowski space. This approach is meaningful,
+as the inner product of the basis vectors inherently incorporates the metric
+signature.</p>
+</section>
+<section id="inner-product-of-k-vectors-in-minkowski-space">
+<h3>Inner product of k–vectors in Minkowski space<a class="headerlink" href="#inner-product-of-k-vectors-in-minkowski-space" title="Link to this heading">#</a></h3>
+<p>The inner product in Minkowski space of the basis vectors is:</p>
+<div class="math notranslate nohighlight">
+\[∂_μ \cdot ∂_ν = \braket{∂_μ|∂_ν} = η_{μν}\]</div>
+<p>Fully expanded in table form we have:</p>
+<aside class="topic">
+<p class="topic-title">Inner product of vectors in Minkowski space</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{array}{c|rrrr}
+        &amp; ∂_t &amp; ∂_x &amp; ∂_y &amp; ∂_z \\
+    \hline
+    ∂_t &amp; +1  &amp;  0  &amp;  0  &amp;  0  \\
+    ∂_x &amp;  0  &amp; -1  &amp;  0  &amp;  0  \\
+    ∂_y &amp;  0  &amp;  0  &amp; -1  &amp;  0  \\
+    ∂_z &amp;  0  &amp;  0  &amp;  0  &amp; -1  \\
+\end{array}\end{split}\]</div>
+</aside>
+<p>We use our procedure for lifting the inner product to bivectors:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\braket{∂_μ ∧ ∂_ν | ∂_ρ ∧ ∂_σ}
+= \begin{vmatrix}
+    ∂_μ \cdot ∂_ρ &amp; ∂_ν \cdot ∂_ρ \\
+    ∂_μ \cdot ∂_σ &amp; ∂_ν \cdot ∂_σ \\
+\end{vmatrix}\end{split}\]</div>
+<p>In table form, we obtain:</p>
+<aside class="topic">
+<p class="topic-title">Inner product of bivectors in Minkowski space</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{array}{c|rrrrrr}
+          &amp; ∂_t ∧ ∂_x &amp; ∂_t ∧ ∂_y &amp; ∂_t ∧ ∂_z &amp; ∂_y ∧ ∂_z &amp; ∂_z ∧ ∂_x &amp; ∂_x ∧ ∂_y \\
+          \hline
+∂_t ∧ ∂_x &amp; -1        &amp;  0        &amp;  0        &amp;   0       &amp;  0        &amp;  0        \\
+∂_t ∧ ∂_y &amp;  0        &amp; -1        &amp;  0        &amp;   0       &amp;  0        &amp;  0        \\
+∂_t ∧ ∂_z &amp;  0        &amp;  0        &amp; -1        &amp;   0       &amp;  0        &amp;  0        \\
+∂_y ∧ ∂_z &amp;  0        &amp;  0        &amp;  0        &amp;  +1       &amp;  0        &amp;  0        \\
+∂_z ∧ ∂_x &amp;  0        &amp;  0        &amp;  0        &amp;   0       &amp; +1        &amp;  0        \\
+∂_x ∧ ∂_y &amp;  0        &amp;  0        &amp;  0        &amp;   0       &amp;  0        &amp; +1        \\
+\end{array}\end{split}\]</div>
+</aside>
+<div class="dropdown admonition">
+<p class="admonition-title">Calculations</p>
+<p>In this dropdown section, I extend the inner product to all non-zero
+bivector combinations and provide an example of a zero combination.</p>
+<p class="rubric">Basis bivectors involving the temporal dimension</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\braket{∂_t ∧ ∂_x | ∂_t ∧ ∂_x}
+= \begin{vmatrix}
+    ∂_t \cdot ∂_t &amp; ∂_x \cdot ∂_t \\
+    ∂_t \cdot ∂_x &amp; ∂_x \cdot ∂_x \\
+\end{vmatrix}
+= \begin{vmatrix}
+      \begin{alignedat}{3}
+        + &amp; 1 &amp; \;   &amp; 0 \\
+          &amp; 0 &amp; \; - &amp; 1 \\
+       \end{alignedat}
+\end{vmatrix}
+= -1\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\braket{∂_t ∧ ∂_y | ∂_t ∧ ∂_y} =
+\begin{vmatrix}
+    ∂_t \cdot ∂_t &amp; ∂_y \cdot ∂_t \\
+    ∂_t \cdot ∂_y &amp; ∂_y \cdot ∂_y \\
+\end{vmatrix}
+= \begin{vmatrix}
+      \begin{alignedat}{3}
+        + &amp; 1 &amp; \;   &amp; 0 \\
+          &amp; 0 &amp; \; - &amp; 1 \\
+       \end{alignedat}
+\end{vmatrix}
+= -1\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\braket{∂_t ∧ ∂_z | ∂_t ∧ ∂_z} =
+\begin{vmatrix}
+    ∂_t \cdot ∂_t &amp; ∂_z \cdot ∂_t \\
+    ∂_t \cdot ∂_z &amp; ∂_z \cdot ∂_z \\
+\end{vmatrix}
+= \begin{vmatrix}
+      \begin{alignedat}{3}
+        + &amp; 1 &amp; \;   &amp; 0 \\
+          &amp; 0 &amp; \; - &amp; 1 \\
+       \end{alignedat}
+\end{vmatrix}
+= -1\end{split}\]</div>
+<p class="rubric">Basis bivectors involving the spatial dimensions</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\braket{∂_y ∧ ∂_z | ∂_y ∧ ∂_z} =
+\begin{vmatrix}
+    ∂_y \cdot ∂_y &amp; ∂_z \cdot ∂_y \\
+    ∂_y \cdot ∂_z &amp; ∂_z \cdot ∂_z \\
+\end{vmatrix}
+= \begin{vmatrix}
+      \begin{alignedat}{3}
+        - &amp; 1 &amp; \;   &amp; 0 \\
+          &amp; 0 &amp; \; - &amp; 1 \\
+       \end{alignedat}
+\end{vmatrix}
+= +1\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\braket{∂_z ∧ ∂_x | ∂_z ∧ ∂_x} =
+\begin{vmatrix}
+    ∂_z \cdot ∂_z &amp; ∂_x \cdot ∂_z \\
+    ∂_z \cdot ∂_x &amp; ∂_x \cdot ∂_x \\
+\end{vmatrix}
+= \begin{vmatrix}
+      \begin{alignedat}{3}
+        - &amp; 1 &amp; \;   &amp; 0 \\
+          &amp; 0 &amp; \; - &amp; 1 \\
+       \end{alignedat}
+\end{vmatrix}
+= +1\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\braket{∂_x ∧ ∂_y | ∂_x ∧ ∂_y} =
+\begin{vmatrix}
+    ∂_x \cdot ∂_x &amp; ∂_y \cdot ∂_x \\
+    ∂_x \cdot ∂_y &amp; ∂_y \cdot ∂_y \\
+\end{vmatrix}
+= \begin{vmatrix}
+      \begin{alignedat}{3}
+        - &amp; 1 &amp; \;   &amp; 0 \\
+          &amp; 0 &amp; \; - &amp; 1 \\
+       \end{alignedat}
+\end{vmatrix}
+= +1\end{split}\]</div>
+<p class="rubric">Basis vectors resulting in zero inner products</p>
+<p>All other inner products are zero. I demonstrate one example calculation,
+assuming the remaining cases will be clear to the reader.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\braket{∂_t ∧ ∂_x | ∂_x ∧ ∂_y} =
+\begin{vmatrix}
+    ∂_t \cdot ∂_x &amp; ∂_x \cdot ∂_x \\
+    ∂_t \cdot ∂_y &amp; ∂_x \cdot ∂_y \\
+\end{vmatrix}
+= \begin{vmatrix}
+      \begin{alignedat}{3}
+          &amp; 0 &amp; \; + &amp; 1 \\
+          &amp; 0 &amp; \;   &amp; 0 \\
+       \end{alignedat}
+\end{vmatrix}
+= 0\end{split}\]</div>
+</div>
+<p>As well as for trivectors:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\braket{∂_μ ∧ ∂_ν ∧ ∂_λ | ∂_ρ ∧ ∂_σ ∧ ∂_τ} = \begin{vmatrix}
+    ∂_μ \cdot ∂_ρ &amp; ∂_ν \cdot ∂_ρ &amp; ∂_λ \cdot ∂_ρ \\
+    ∂_μ \cdot ∂_σ &amp; ∂_ν \cdot ∂_σ &amp; ∂_λ \cdot ∂_σ \\
+    ∂_μ \cdot ∂_τ &amp; ∂_ν \cdot ∂_τ &amp; ∂_λ \cdot ∂_τ \\
+\end{vmatrix}\end{split}\]</div>
+<aside class="topic">
+<p class="topic-title">Inner product of trivectors in Minkowski space</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{array}{c|rrrr}
+                &amp; ∂_x ∧ ∂_y ∧ ∂_z &amp; ∂_t ∧ ∂_y ∧ ∂_z &amp; ∂_t ∧ ∂_z ∧ ∂_x &amp; ∂_t ∧ ∂_x ∧ ∂_y \\
+                \hline
+∂_x ∧ ∂_y ∧ ∂_z &amp; -1              &amp;  0              &amp;   0             &amp;   0             \\
+∂_t ∧ ∂_y ∧ ∂_z &amp;  0              &amp; +1              &amp;   0             &amp;   0             \\
+∂_t ∧ ∂_z ∧ ∂_x &amp;  0              &amp;  0              &amp;  +1             &amp;   0             \\
+∂_t ∧ ∂_x ∧ ∂_y &amp;  0              &amp;  0              &amp;   0             &amp;  +1             \\
+\end{array}\end{split}\]</div>
+</aside>
+<div class="dropdown admonition">
+<p class="admonition-title">Calculations</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\braket{∂_x ∧ ∂_y ∧ ∂_z | ∂_x ∧ ∂_y ∧ ∂_z}
+= \begin{vmatrix}
+    ∂_x \cdot ∂_x &amp; ∂_y \cdot ∂_x &amp; ∂_z \cdot ∂_x \\
+    ∂_x \cdot ∂_y &amp; ∂_y \cdot ∂_y &amp; ∂_z \cdot ∂_y \\
+    ∂_x \cdot ∂_z &amp; ∂_y \cdot ∂_z &amp; ∂_z \cdot ∂_z \\
+\end{vmatrix}
+=  \begin{vmatrix}
+    -1 &amp;  0 &amp;  0 \\
+     0 &amp; -1 &amp;  0 \\
+     0 &amp;  0 &amp; -1 \\
+\end{vmatrix}
+= -1\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\braket{∂_t ∧ ∂_y ∧ ∂_z | ∂_t ∧ ∂_y ∧ ∂_z}
+= \begin{vmatrix}
+    ∂_t \cdot ∂_t &amp; ∂_y \cdot ∂_t &amp; ∂_z \cdot ∂_t \\
+    ∂_t \cdot ∂_y &amp; ∂_y \cdot ∂_y &amp; ∂_z \cdot ∂_y \\
+    ∂_t \cdot ∂_z &amp; ∂_y \cdot ∂_z &amp; ∂_z \cdot ∂_z \\
+\end{vmatrix}
+= \begin{vmatrix}
+    +1 &amp;  0 &amp;  0 \\
+     0 &amp; -1 &amp;  0 \\
+     0 &amp;  0 &amp; -1 \\
+\end{vmatrix}
+= 1\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\braket{∂_t ∧ ∂_z ∧ ∂_x | ∂_t ∧ ∂_z ∧ ∂_x}
+= \begin{vmatrix}
+    ∂_t \cdot ∂_t &amp; ∂_z \cdot ∂_t &amp; ∂_x \cdot ∂_t \\
+    ∂_t \cdot ∂_z &amp; ∂_z \cdot ∂_z &amp; ∂_x \cdot ∂_z \\
+    ∂_t \cdot ∂_x &amp; ∂_z \cdot ∂_x &amp; ∂_x \cdot ∂_x \\
+\end{vmatrix}
+= \begin{vmatrix}
+    +1 &amp;  0 &amp;  0 \\
+     0 &amp; -1 &amp;  0 \\
+     0 &amp;  0 &amp; -1 \\
+\end{vmatrix}
+= 1\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\braket{∂_t ∧ ∂_x ∧ ∂_y | ∂_t ∧ ∂_x ∧ ∂_y}
+= \begin{vmatrix}
+    ∂_t \cdot ∂_t &amp; ∂_x \cdot ∂_t &amp; ∂_y \cdot ∂_t \\
+    ∂_t \cdot ∂_x &amp; ∂_x \cdot ∂_x &amp; ∂_y \cdot ∂_x \\
+    ∂_t \cdot ∂_y &amp; ∂_x \cdot ∂_y &amp; ∂_y \cdot ∂_y \\
+\end{vmatrix}
+=  \begin{vmatrix}
+    +1 &amp;  0 &amp;  0 \\
+     0 &amp; -1 &amp;  0 \\
+     0 &amp;  0 &amp; -1 \\
+\end{vmatrix}
+= 1\end{split}\]</div>
+</div>
+<p>In Minkowski space, all quadvectors are proportional to <span class="math notranslate nohighlight">\(∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\braket{∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z | ∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z} = \begin{vmatrix}
+    ∂_t \cdot ∂_t &amp; ∂_x \cdot ∂_t &amp; ∂_y \cdot ∂_t &amp; ∂_y \cdot ∂_t \\
+    ∂_t \cdot ∂_x &amp; ∂_x \cdot ∂_x &amp; ∂_y \cdot ∂_x &amp; ∂_y \cdot ∂_x \\
+    ∂_t \cdot ∂_y &amp; ∂_x \cdot ∂_y &amp; ∂_y \cdot ∂_y &amp; ∂_y \cdot ∂_y \\
+    ∂_t \cdot ∂_z &amp; ∂_x \cdot ∂_z &amp; ∂_y \cdot ∂_z &amp; ∂_y \cdot ∂_z \\
+\end{vmatrix}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\braket{∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z | ∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z} = \begin{vmatrix}
+    +1 &amp;  0 &amp;  0 &amp;  0 \\
+     0 &amp; -1 &amp;  0 &amp;  0 \\
+     0 &amp;  0 &amp; -1 &amp;  0 \\
+     0 &amp;  0 &amp;  0 &amp; -1 \\
+\end{vmatrix}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\braket{∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z | ∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z} = -1\]</div>
+<aside class="topic">
+<p class="topic-title">Inner product of quadvectors in Minkowski space</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{array}{c|c}
+                          &amp; ∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z \\
+    \hline
+    ∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z &amp;                    -1 \\
+\end{array}\end{split}\]</div>
+</aside>
+</section>
+</section>
+<section id="formal-and-natural-definition">
+<h2>Formal and natural definition<a class="headerlink" href="#formal-and-natural-definition" title="Link to this heading">#</a></h2>
+<p>In 3-dimensional Euclidean space, the Hodge dual of a k–vector <span class="math notranslate nohighlight">\(β\)</span> is
+uniquely defined by the property that for any other k–vector <span class="math notranslate nohighlight">\(α\)</span>, the
+following property holds:</p>
+<div class="math notranslate nohighlight">
+\[α ∧ ⋆ β = \braket{α | β} \; ∂_x ∧ ∂_y ∧ ∂_z\]</div>
+<p>In essence, this asks: Given a k–vector, which m-vector fills the remaining
+space? Where the inner product <span class="math notranslate nohighlight">\(\braket{α | β}\)</span> ensures that <span class="math notranslate nohighlight">\(⋆ β\)</span>
+is unique. This question can be viewed as a <em>natural definition</em>  and be used
+for practical calculations. For 4-dimensional Minkowski space, the definition
+is:</p>
+<div class="math notranslate nohighlight">
+\[α ∧ ⋆ β = \braket{α | β} \; ∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z\]</div>
+<p>For instance, when seeking the Hodge dual <span class="math notranslate nohighlight">\(⋆(∂_t ∧ ∂_x)\)</span>, we know that it
+must be <span class="math notranslate nohighlight">\(∂_y ∧ ∂_z\)</span> to complete the space, with the sign determined by
+the inner product <span class="math notranslate nohighlight">\(\braket{∂_t ∧ ∂_x | ∂_t ∧ ∂_x} = -1\)</span>. Therefore, in
+this example, we obtain:</p>
+<div class="math notranslate nohighlight">
+\[⋆ ∂_t ∧ ∂_x = - ∂_y ∧ ∂_z\]</div>
+</section>
+<section id="duality-in-minkowski-space">
+<span id="id3"></span><h2>Duality in Minkowski space<a class="headerlink" href="#duality-in-minkowski-space" title="Link to this heading">#</a></h2>
+<p>With the formal definition of the Hodge dual and the calculated inner products
+on k–vectors, we systematically compute the Hodge dual in Minkowski using the
+mostly negative Minkowski metric signature <span class="math notranslate nohighlight">\((+,-,-,-)\)</span>. I first give the
+Hodge dual for k–vectors, as developed throughout this page, and then extend
+it to k–forms.</p>
+<p>For a straightforward and alternative calculation of the Hodge duals using the
+interior product <span class="math notranslate nohighlight">\(⌟\)</span>, you can have a look at the page <a class="reference internal" href="hodge_dual_computations.html#hodge-dual-computations"><span class="std std-ref">Hodge dual computations</span></a>.</p>
+<section id="k-vectors">
+<h3>k–vectors<a class="headerlink" href="#k-vectors" title="Link to this heading">#</a></h3>
+<aside class="topic">
+<p class="topic-title">Hodge duals of vectors in Minkowski Space</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}⋆ ∂_t &amp; = ∂_x ∧ ∂_y ∧ ∂_z \\
+⋆ ∂_x &amp; = ∂_t ∧ ∂_y ∧ ∂_z \\
+⋆ ∂_y &amp; = ∂_t ∧ ∂_z ∧ ∂_x \\
+⋆ ∂_z &amp; = ∂_t ∧ ∂_x ∧ ∂_y \\\end{split}\]</div>
+</aside>
+<div class="dropdown admonition">
+<p class="admonition-title">Calculations</p>
+<p class="rubric">Determine the Hodge duals up to the sign</p>
+<p>To obtain the volume element <span class="math notranslate nohighlight">\(∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z\)</span>, the Hodge duals
+must be proportional to:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{alignedat}{2}
+⋆ ∂_t &amp; \propto &amp; ∂_x ∧ ∂_y ∧ ∂_z \\
+⋆ ∂_x &amp; \propto &amp; ∂_t ∧ ∂_z ∧ ∂_y \\
+⋆ ∂_y &amp; \propto &amp; ∂_t ∧ ∂_x ∧ ∂_z \\
+⋆ ∂_z &amp; \propto &amp; ∂_t ∧ ∂_y ∧ ∂_x \\
+\end{alignedat}\end{split}\]</div>
+<p class="rubric">Check the sign</p>
+<p>Since the above was mentally determined, we check by wedging the left part
+to the right part of the equations above in order to make sure the sign is
+positive when reordered into the volume element <span class="math notranslate nohighlight">\(∂_t ∧ ∂_x ∧ ∂_y ∧
+∂_z\)</span>.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}⋆ ∂_t \propto ∂_x ∧ ∂_y ∧ ∂_z \rightarrow \phantom{-} ∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z \\\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{alignedat}{2}
+⋆ ∂_x \propto ∂_t ∧ ∂_z ∧ ∂_y \rightarrow &amp;   &amp; ∂_x ∧ ∂_t ∧ ∂_z ∧ ∂_y \\
+                                          &amp; - &amp; ∂_t ∧ ∂_x ∧ ∂_z ∧ ∂_y \\
+                                          &amp;   &amp; ∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z \\
+\end{alignedat}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{alignedat}{2}
+⋆ ∂_y \propto ∂_t ∧ ∂_x ∧ ∂_z \rightarrow &amp;   &amp; ∂_y ∧ ∂_t ∧ ∂_x ∧ ∂_z \\
+                                          &amp; - &amp; ∂_t ∧ ∂_y ∧ ∂_x ∧ ∂_z \\
+                                          &amp; - &amp; ∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z \\
+\end{alignedat}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{alignedat}{2}
+⋆ ∂_z \propto ∂_t ∧ ∂_y ∧ ∂_x \rightarrow &amp;   &amp; ∂_z ∧ ∂_t ∧ ∂_y ∧ ∂_x \\
+                                          &amp; - &amp; ∂_t ∧ ∂_z ∧ ∂_y ∧ ∂_x \\
+                                          &amp;   &amp; ∂_t ∧ ∂_y ∧ ∂_z ∧ ∂_x \\
+                                          &amp; - &amp; ∂_t ∧ ∂_y ∧ ∂_x ∧ ∂_z \\
+                                          &amp;   &amp; ∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z \\
+\end{alignedat}\end{split}\]</div>
+<p class="rubric">Use the definition of the Hodge dual</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{alignedat}{2}
+    ⋆ ∂_t &amp; = \braket{∂_t | ∂_t} &amp; ∂_x ∧ ∂_y ∧ ∂_z \\
+    ⋆ ∂_x &amp; = \braket{∂_x | ∂_x} &amp; ∂_t ∧ ∂_z ∧ ∂_y \\
+    ⋆ ∂_y &amp; = \braket{∂_y | ∂_y} &amp; ∂_t ∧ ∂_x ∧ ∂_z \\
+    ⋆ ∂_z &amp; = \braket{∂_z | ∂_z} &amp; ∂_t ∧ ∂_y ∧ ∂_x \\
+\end{alignedat}\end{split}\]</div>
+<p class="rubric">Reorder</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{alignedat}{3}
+    ⋆ ∂_t &amp; = \braket{∂_t | ∂_t} &amp; (+1) &amp; ∂_x ∧ ∂_y ∧ ∂_z \\
+    ⋆ ∂_x &amp; = \braket{∂_x | ∂_x} &amp; (-1) &amp; ∂_t ∧ ∂_y ∧ ∂_z \\
+    ⋆ ∂_y &amp; = \braket{∂_y | ∂_y} &amp; (-1) &amp; ∂_t ∧ ∂_z ∧ ∂_x \\
+    ⋆ ∂_z &amp; = \braket{∂_z | ∂_z} &amp; (-1) &amp; ∂_t ∧ ∂_x ∧ ∂_y \\
+\end{alignedat}\end{split}\]</div>
+<p class="rubric">Apply the values of the inner products</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{alignedat}{3}
+    ⋆ ∂_t &amp; = (+1) &amp; (+1) &amp; ∂_x ∧ ∂_y ∧ ∂_z \\
+    ⋆ ∂_x &amp; = (-1) &amp; (-1) &amp; ∂_t ∧ ∂_y ∧ ∂_z \\
+    ⋆ ∂_y &amp; = (-1) &amp; (-1) &amp; ∂_t ∧ ∂_z ∧ ∂_x \\
+    ⋆ ∂_z &amp; = (-1) &amp; (-1) &amp; ∂_t ∧ ∂_x ∧ ∂_y \\
+\end{alignedat}\end{split}\]</div>
+<p class="rubric">Conclude</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}⋆ ∂_t &amp; = ∂_x ∧ ∂_y ∧ ∂_z \\
+⋆ ∂_x &amp; = ∂_t ∧ ∂_y ∧ ∂_z \\
+⋆ ∂_y &amp; = ∂_t ∧ ∂_z ∧ ∂_x \\
+⋆ ∂_z &amp; = ∂_t ∧ ∂_x ∧ ∂_y \\\end{split}\]</div>
+<p>If you feel more comfortable with a more <em>mechanical approach</em> I redirect
+you to the video by Michael Penn: <a class="reference external" href="https://m.youtube.com/watch?v=vDRfADusqYQ">Differential Forms | The Minkowski metric
+and the Hodge operator</a>.</p>
+</div>
+<aside class="topic">
+<p class="topic-title">Hodge duals of bivectors in Minkowski space</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{alignedat}{2}
+    ⋆ (∂_t ∧ ∂_x) &amp;= -&amp; ∂_y ∧ ∂_z \\
+    ⋆ (∂_t ∧ ∂_y) &amp;= -&amp; ∂_z ∧ ∂_x \\
+    ⋆ (∂_t ∧ ∂_z) &amp;= -&amp; ∂_x ∧ ∂_y \\
+    ⋆ (∂_y ∧ ∂_z) &amp;=  &amp; ∂_t ∧ ∂_x \\
+    ⋆ (∂_z ∧ ∂_x) &amp;=  &amp; ∂_t ∧ ∂_y \\
+    ⋆ (∂_x ∧ ∂_y) &amp;=  &amp; ∂_t ∧ ∂_z \\
+\end{alignedat}\end{split}\]</div>
+</aside>
+<div class="dropdown admonition">
+<p class="admonition-title">Calculations</p>
+<p>To obtain the volume element <span class="math notranslate nohighlight">\(∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z\)</span>, the Hodge duals
+must be proportional to:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}⋆ (∂_t ∧ ∂_x) \propto ∂_y ∧ ∂_z \\
+⋆ (∂_t ∧ ∂_y) \propto ∂_z ∧ ∂_x \\
+⋆ (∂_t ∧ ∂_z) \propto ∂_x ∧ ∂_y \\
+⋆ (∂_y ∧ ∂_z) \propto ∂_t ∧ ∂_x \\
+⋆ (∂_z ∧ ∂_x) \propto ∂_t ∧ ∂_y \\
+⋆ (∂_x ∧ ∂_y) \propto ∂_t ∧ ∂_z \\\end{split}\]</div>
+<p>For example, taking the second entry as an example <span class="math notranslate nohighlight">\(⋆ (∂_t ∧ ∂_y) \propto
+∂_z ∧ ∂_x\)</span>, we have:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{alignedat}{2}
+⋆ (∂_t ∧ ∂_y) \propto ∂_z ∧ ∂_x  &amp; \rightarrow   &amp; ∂_t ∧ ∂_y ∧ ∂_z ∧ ∂_x \\
+                                 &amp; \rightarrow - &amp; ∂_t ∧ ∂_y ∧ ∂_x ∧ ∂_z \\
+                                 &amp; \rightarrow   &amp; ∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z \\
+\end{alignedat}\end{split}\]</div>
+<p>Taken all together and with the inner product, we have:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}⋆ (∂_t ∧ ∂_x) &amp;= \braket{∂_t ∧ ∂_x|∂_t ∧ ∂_x} \, ∂_y ∧ ∂_z \\
+⋆ (∂_t ∧ ∂_y) &amp;= \braket{∂_t ∧ ∂_y|∂_t ∧ ∂_y} \, ∂_z ∧ ∂_x \\
+⋆ (∂_t ∧ ∂_z) &amp;= \braket{∂_t ∧ ∂_z|∂_t ∧ ∂_z} \, ∂_x ∧ ∂_y \\
+⋆ (∂_y ∧ ∂_z) &amp;= \braket{∂_y ∧ ∂_z|∂_y ∧ ∂_z} \, ∂_t ∧ ∂_x \\
+⋆ (∂_z ∧ ∂_x) &amp;= \braket{∂_z ∧ ∂_x|∂_z ∧ ∂_x} \, ∂_t ∧ ∂_y \\
+⋆ (∂_x ∧ ∂_y) &amp;= \braket{∂_x ∧ ∂_y|∂_x ∧ ∂_y} \, ∂_t ∧ ∂_z \\\end{split}\]</div>
+<p>Which simplifies to:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{alignedat}{3}
+    ⋆ (∂_t ∧ ∂_x) &amp;= -&amp; ∂_y ∧ ∂_z \\
+    ⋆ (∂_t ∧ ∂_y) &amp;= -&amp; ∂_z ∧ ∂_x \\
+    ⋆ (∂_t ∧ ∂_z) &amp;= -&amp; ∂_x ∧ ∂_y \\
+    ⋆ (∂_y ∧ ∂_z) &amp;=  &amp; ∂_t ∧ ∂_x \\
+    ⋆ (∂_z ∧ ∂_x) &amp;=  &amp; ∂_t ∧ ∂_y \\
+    ⋆ (∂_x ∧ ∂_y) &amp;=  &amp; ∂_t ∧ ∂_z \\
+\end{alignedat}\end{split}\]</div>
+</div>
+<aside class="topic">
+<p class="topic-title">Hodge duals of trivectors in Minkowski space</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}⋆ ∂_x ∧ ∂_y ∧ ∂_z &amp;= ∂_t \\
+⋆ ∂_t ∧ ∂_y ∧ ∂_z &amp;= ∂_x \\
+⋆ ∂_t ∧ ∂_z ∧ ∂_x &amp;= ∂_y \\
+⋆ ∂_t ∧ ∂_x ∧ ∂_y &amp;= ∂_z \\\end{split}\]</div>
+</aside>
+<div class="dropdown admonition">
+<p class="admonition-title">Calculations</p>
+<p>To obtain the volume element <span class="math notranslate nohighlight">\(∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z\)</span>, the Hodge duals
+must be proportional to:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{alignedat}{2}
+    ⋆ ∂_x ∧ ∂_y ∧ ∂_z &amp;\propto - &amp; ∂_t \\
+    ⋆ ∂_t ∧ ∂_y ∧ ∂_z &amp;\propto   &amp; ∂_x \\
+    ⋆ ∂_t ∧ ∂_z ∧ ∂_x &amp;\propto   &amp; ∂_y \\
+    ⋆ ∂_t ∧ ∂_x ∧ ∂_y &amp;\propto   &amp; ∂_z \\
+\end{alignedat}\end{split}\]</div>
+<p>Indeed, we check this for all entries:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{alignedat}{2}
+   ⋆ ∂_x ∧ ∂_y ∧ ∂_z \propto ∂_t &amp; \rightarrow   &amp; ∂_x ∧ ∂_y ∧ ∂_z ∧ ∂_t \\
+                                 &amp; \rightarrow - &amp; ∂_x ∧ ∂_y ∧ ∂_t ∧ ∂_z \\
+                                 &amp; \rightarrow   &amp; ∂_x ∧ ∂_t ∧ ∂_y ∧ ∂_z \\
+                                 &amp; \rightarrow - &amp; ∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z \\
+\end{alignedat}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{alignedat}{2}
+⋆ ∂_t ∧ ∂_y ∧ ∂_z \propto ∂_x &amp; \rightarrow   &amp; ∂_t ∧ ∂_y ∧ ∂_z ∧ ∂_x \\
+                              &amp; \rightarrow - &amp; ∂_t ∧ ∂_y ∧ ∂_x ∧ ∂_z \\
+                              &amp; \rightarrow   &amp; ∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z \\
+\end{alignedat}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{alignedat}{2}
+   ⋆ ∂_t ∧ ∂_z ∧ ∂_x \propto ∂_y &amp; \rightarrow   &amp; ∂_t ∧ ∂_z ∧ ∂_x ∧ ∂_y \\
+                                 &amp; \rightarrow - &amp; ∂_t ∧ ∂_x ∧ ∂_z ∧ ∂_y \\
+                                 &amp; \rightarrow   &amp; ∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z \\
+\end{alignedat}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}⋆ ∂_t ∧ ∂_x ∧ ∂_y \propto ∂_z \rightarrow \phantom{-} ∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z \\\end{split}\]</div>
+<p>Taken all together and with the inner product:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{alignedat}{2}
+   ⋆ ∂_x ∧ ∂_y ∧ ∂_z &amp;= \braket{∂_x ∧ ∂_y ∧ ∂_z | ∂_x ∧ ∂_y ∧ ∂_z}- &amp; ∂_t \\
+   ⋆ ∂_t ∧ ∂_y ∧ ∂_z &amp;= \braket{∂_t ∧ ∂_y ∧ ∂_z | ∂_t ∧ ∂_y ∧ ∂_z}  &amp; ∂_x \\
+   ⋆ ∂_t ∧ ∂_z ∧ ∂_x &amp;= \braket{∂_t ∧ ∂_z ∧ ∂_x | ∂_t ∧ ∂_z ∧ ∂_x}  &amp; ∂_y \\
+   ⋆ ∂_t ∧ ∂_x ∧ ∂_y &amp;= \braket{∂_t ∧ ∂_x ∧ ∂_y | ∂_t ∧ ∂_x ∧ ∂_y}  &amp; ∂_z \\
+\end{alignedat}\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}⋆ ∂_x ∧ ∂_y ∧ ∂_z &amp;= ∂_t \\
+⋆ ∂_t ∧ ∂_y ∧ ∂_z &amp;= ∂_x \\
+⋆ ∂_t ∧ ∂_z ∧ ∂_x &amp;= ∂_y \\
+⋆ ∂_t ∧ ∂_x ∧ ∂_y &amp;= ∂_z \\\end{split}\]</div>
+</div>
+<aside class="topic">
+<p class="topic-title">Hodge duals of quadvectors in Minkowski space</p>
+<div class="math notranslate nohighlight">
+\[⋆ ∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z = - 1\]</div>
+</aside>
+<div class="dropdown admonition">
+<p class="admonition-title">Calculations</p>
+<p>To obtain the volume element <span class="math notranslate nohighlight">\(∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z\)</span>, the Hodge duals
+must be proportional to:</p>
+<div class="math notranslate nohighlight">
+\[⋆ ∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z \propto 1\]</div>
+<p>Taken all together and with the inner product:</p>
+<div class="math notranslate nohighlight">
+\[⋆ ∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z = \braket{∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z | ∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z} - 1\]</div>
+<div class="math notranslate nohighlight">
+\[⋆ ∂_t ∧ ∂_x ∧ ∂_y ∧ ∂_z = -1\]</div>
+</div>
+</section>
+<section id="k-forms">
+<h3>k–forms<a class="headerlink" href="#k-forms" title="Link to this heading">#</a></h3>
+<p>We now have established the Hodge dual of k–vectors. This procedure can be
+also applied to k–forms. As with k–vectors, the Hodge dual on k–forms is
+defined by the property that for all k–forms <span class="math notranslate nohighlight">\(α\)</span> and <span class="math notranslate nohighlight">\(β\)</span>, the
+following equation holds:</p>
+<div class="math notranslate nohighlight">
+\[α ∧ ⋆ β = \braket{α|β} dt ∧ dx ∧ dy ∧ dz\]</div>
+<p>Here, <span class="math notranslate nohighlight">\(\braket{α|β} = α · β\)</span> is the inner product on k–forms, lifted
+from the inner product on 1–forms as previously investigated for k–vectors:</p>
+<div class="math notranslate nohighlight">
+\[dx^μ · dx^ν = ∂_μ · ∂_ν\]</div>
+<p>Consequently we obtain:</p>
+<aside class="topic">
+<p class="topic-title">Hodge duals of 1-forms in Minkowski space</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}⋆ dt &amp; = dx ∧ dy ∧ dz \\
+⋆ dx &amp; = dt ∧ dy ∧ dz \\
+⋆ dy &amp; = dt ∧ dz ∧ dx \\
+⋆ dz &amp; = dt ∧ dx ∧ dy \\\end{split}\]</div>
+</aside>
+<aside class="topic">
+<p class="topic-title">Hodge duals of 2-forms in Minkowski space</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{alignedat}{2}
+   ⋆ dt ∧ dx &amp;= -&amp; dy ∧ dz \\
+   ⋆ dt ∧ dy &amp;= -&amp; dz ∧ dx \\
+   ⋆ dt ∧ dz &amp;= -&amp; dx ∧ dy \\
+   ⋆ dy ∧ dz &amp;=  &amp; dt ∧ dx \\
+   ⋆ dz ∧ dx &amp;=  &amp; dt ∧ dy \\
+   ⋆ dx ∧ dy &amp;=  &amp; dt ∧ dz \\
+\end{alignedat}\end{split}\]</div>
+</aside>
+<aside class="topic">
+<p class="topic-title">Hodge duals of 3-forms in Minkowski space</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}⋆ dx ∧ dy ∧ dz &amp;= dt \\
+⋆ dt ∧ dy ∧ dz &amp;= dx \\
+⋆ dt ∧ dz ∧ dx &amp;= dy \\
+⋆ dt ∧ dx ∧ dy &amp;= dz \\\end{split}\]</div>
+</aside>
+<aside class="topic">
+<p class="topic-title">Hodge duals of 4-forms in Minkowski space</p>
+<div class="math notranslate nohighlight">
+\[⋆ dt ∧ dx ∧ dy ∧ dz = - 1\]</div>
+</aside>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="musicality.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Musicality</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="hodge_dual_computations.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Hodge dual computations</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#duality-in-three-dimensions">Duality in three dimensions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pseudo-vectors-and-pseudo-scalars">Pseudo-vectors and pseudo-scalars</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#inner-product-of-k-vectors">Inner product of k–vectors</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inner-product-of-vectors">Inner product of vectors</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#surfaces-volumes-hypervolumes-and-the-determinant-of-matrices">Surfaces, volumes, hypervolumes, and the determinant of matrices</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inner-product-of-vectors-bivectors-and-trivectors-in-3-dimensional-euclidean-space">Inner product of vectors, bivectors, and trivectors in 3-dimensional Euclidean space</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inner-product-of-k-vectors-in-minkowski-space">Inner product of k–vectors in Minkowski space</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#formal-and-natural-definition">Formal and natural definition</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#duality-in-minkowski-space">Duality in Minkowski space</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#k-vectors">k–vectors</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#k-forms">k–forms</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Stéphane Haussler
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024, Stéphane Haussler.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

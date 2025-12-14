@@ -1,0 +1,600 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9HQ1J8VKRB"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-9HQ1J8VKRB');
+    </script>
+    
+    <title>The Cartan-Hodge formalism &#8212; Theoretical Universe</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=c1fb35df" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>window.MathJax = {"chtml": {"displayAlign": "left", "displayIndent": "2em"}, "tex": {"packages": {"[+]": ["ams"]}, "macros": {"E": "\\tilde{E}", "\u231f": "\\:\u231f\\:"}}, "tex2jax": {"ignoreClass": ".*", "processClass": "math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'the_cartan_hodge_formalism/index';</script>
+    <link rel="canonical" href="https://shaussler.github.io/TheoreticalUniverse/the_cartan_hodge_formalism/index.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Basis vectors" href="basis_vectors.html" />
+    <link rel="prev" title="Resources" href="../resources.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Theoretical Universe</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Table of Contents:</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../licence.html">Licence</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cite.html">How to cite</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">How to contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../resources.html">Resources</a></li>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">The Cartan-Hodge formalism</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="basis_vectors.html">Basis vectors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="musicality.html">Musicality</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hodge_duality.html">Hodge duality fundamentals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="hodge_dual_computations.html">Hodge dual computations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="the_free_matrix_representation.html">Free matrix representation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="the_minkowski_metric.html">Minkowski metric</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../rotations/index.html">Rotations in differential form</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../rotations/rotations_in_3_dimensions.html">Rotations in Euclidean space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rotations/rotations_in_minkowski_space.html">Rotations in Minkowski space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rotations/exponential_map.html">Exponential map</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../differential_operators/index.html">Differential operators expressed as exterior derivatives</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../differential_operators/3-dimensional-euclidean-space.html">3D Euclidean space</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../differential_operators/minkowski-space/index.html">Minkowski space</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../differential_operators/minkowski-space/0-forms.html">0–forms (functions)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../differential_operators/minkowski-space/1-forms.html">1–forms (translations)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../differential_operators/minkowski-space/2-forms.html">2–forms (rotations)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../differential_operators/minkowski-space/3-forms.html">3–forms (3D volumes)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../differential_operators/minkowski-space/4-forms.html">4–forms (4D volumes)</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../faraday_tensor/index.html">Covariant formulation of the electromagnetic field</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../faraday_tensor/revisiting_maxwell_equations.html">Revisiting the 1865 Maxwell’s equations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faraday_tensor/faraday_tensor_derivation.html">Deriving the Faraday tensor from the 1865 Maxwell’s equations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faraday_tensor/of_maxwell_equations_and_rotations.html">Deriving the Faraday 2–form from the 1865 Maxwell’s equations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faraday_tensor/2form_vs_tensor.html">Relation between the Faraday 2–form and the Faraday tensor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faraday_tensor/potential_formulation.html">Potential formulation via differential forms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../faraday_tensor/all_electromagnetic_field_forms.html">All electromagnetic field forms</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../miscellaneous/index.html">Random thoughts</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../miscellaneous/de_guas_theorem.html">Proving De Gua’s theorem with Clifford algebra</a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/the_cartan_hodge_formalism/index.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>The Cartan-Hodge formalism</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basis-vectors">Basis vectors</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#musicality">Musicality</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-free-matrix-representation">The free matrix representation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hodge-dual-of-k-forms-in-minkowski-space">Hodge dual of k–forms in Minkowski space</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="id1">
+<span id="the-cartan-hodge-formalism"></span><span id="id2"></span><h1>The Cartan-Hodge formalism<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
+<p class="custom-author">by Stéphane Haussler</p>
+<div class="toctree-wrapper compound">
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Table of Contents</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="basis_vectors.html">Basis vectors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="musicality.html">Musicality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hodge_duality.html">Hodge duality fundamentals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="hodge_dual_computations.html">Hodge dual computations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="the_free_matrix_representation.html">Free matrix representation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="the_minkowski_metric.html">Minkowski metric</a></li>
+</ul>
+</div>
+<p>This part introduces the Cartan-Hodge formalism, which bundles the notions of
+<em>tensor calculus</em>, <em>musical operators</em>, <em>Hodge duality</em>, <em>exterior derivative</em>,
+and the <em>free matrix representation</em> into a comprehensive framework of notation
+and mathematical tools. Practical computations follow clear and concise rules,
+with each step presented in a compact and comprehensible manner. The objective
+is also to depart from the abstract index notation of tensor calculus,
+eliminate the need for the Levi-Civita symbol, and expand tensor equations to
+their component from, all while adhering to standard and widespread notations.</p>
+<p>This is not a comprehensive introduction into these subjects, but recalls basic
+definitions and properties necessary to perform calculations. I assume the
+reader possesses a solid understanding of vector and tensor calculus, as well
+as a working familiarity with Cartan’s differential forms and the exterior
+derivative.</p>
+<p>I also here highlight and point out <a class="reference internal" href="hodge_duality.html#id1"><span class="std std-ref">the article on Hodge duality</span></a> can be read as a self-contained article and may be of interest to the
+reader on its own.</p>
+<section id="basis-vectors">
+<h2>Basis vectors<a class="headerlink" href="#basis-vectors" title="Link to this heading">#</a></h2>
+<p>The Euclidean basis vectors are traditionally noted <span class="math notranslate nohighlight">\(\mathbf{e}_x\)</span>,
+<span class="math notranslate nohighlight">\(\mathbf{e}_y\)</span>, and <span class="math notranslate nohighlight">\(\mathbf{e}_z\)</span>. It can be demonstrated that the
+basis vectors are the partial derivatives:</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{e}_i = ∂_i\]</div>
+<p>Any vector can  be expressed as a linear combination of the basis vectors as:</p>
+<div class="math notranslate nohighlight">
+\[a \; ∂_x + b \; ∂_y + c \; ∂_z\]</div>
+<p>The differential applied to the basis vectors results in the Kronecker
+<span class="math notranslate nohighlight">\(δ\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[dx^i (∂_j) = δ^i_j\]</div>
+<p>Therefore the dual basis covectors are:</p>
+<div class="math notranslate nohighlight">
+\[\mathbf{e}^i = dx^i\]</div>
+<p>And a covariant dual covector is expressed as linear combination of the basis
+covectors:</p>
+<div class="math notranslate nohighlight">
+\[a \; dx + b \; dy + c \; dz\]</div>
+</section>
+<section id="musicality">
+<h2>Musicality<a class="headerlink" href="#musicality" title="Link to this heading">#</a></h2>
+<p>With the musical flat <span class="math notranslate nohighlight">\(♭\)</span> and sharp <span class="math notranslate nohighlight">\(♯\)</span> symbols, covectors and
+vectors are explicetely declared. For example, a contravariant three-vector is
+declared with the sharp operator <span class="math notranslate nohighlight">\(♯\)</span> as:</p>
+<div class="math notranslate nohighlight">
+\[V^♯ = a \; ∂_x + b \; ∂_y + c \; ∂_z\]</div>
+<p>The musical flat <span class="math notranslate nohighlight">\(♭\)</span> and sharp <span class="math notranslate nohighlight">\(♯\)</span> symbols are further utilzed as
+operators converting vectors to covectors and vice versa. For example, a
+three-vector with euclidean metric <span class="math notranslate nohighlight">\(δ\)</span> is flattend to a three-covector
+with:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}V^{♭} &amp;= (V^♯)^♭                                                         \\
+      &amp;= a \; ∂_x^♭ + b \; ∂_y^♭ + c \; ∂_z^♭                            \\
+      &amp;= a \; δ_{xi} \; dx^i + b \; δ_{yi} \; dx^i + c \; δ_{zi} \; dx^i \\
+      &amp;= a \; dx + b \; dy + c \; dz                                     \\\end{split}\]</div>
+</section>
+<section id="the-free-matrix-representation">
+<h2>The free matrix representation<a class="headerlink" href="#the-free-matrix-representation" title="Link to this heading">#</a></h2>
+<p>With the <em>free matrix representation</em>, vectors can be ordered into arbitray
+matrix, while keeping the tensor basis is explicitly included. A vector can the
+be expressed explicitly as:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}V^♯ = \begin{bmatrix}
+  a \; ∂_x \\
+  b \; ∂_y \\
+  c \; ∂_z \\
+\end{bmatrix}\end{split}\]</div>
+<p>The representation can be freely modified to best facilitate calculations, with
+the brackets acting as an operator <span class="math notranslate nohighlight">\(\begin{bmatrix}\end{bmatrix}\)</span> adding
+elements together. As an example, the following row representation of a vector is
+also valid in the free matrix representation:</p>
+<div class="math notranslate nohighlight">
+\[V^♯ = \begin{bmatrix} a \; ∂_x &amp; b \; ∂_y &amp; c \; ∂_z \end{bmatrix}\]</div>
+</section>
+<section id="hodge-dual-of-k-forms-in-minkowski-space">
+<span id="hodge-dual-tables"></span><h2>Hodge dual of k–forms in Minkowski space<a class="headerlink" href="#hodge-dual-of-k-forms-in-minkowski-space" title="Link to this heading">#</a></h2>
+<p>The Hodge duality assumes a central role, transitioning tensors between spaces
+and their dual complements.</p>
+<p class="rubric">1–forms</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}⋆ dt &amp; = dx ∧ dy ∧ dz \\
+⋆ dx &amp; = dt ∧ dy ∧ dz \\
+⋆ dy &amp; = dt ∧ dz ∧ dx \\
+⋆ dz &amp; = dt ∧ dx ∧ dy \\\end{split}\]</div>
+<p class="rubric">2–forms</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{alignedat}{2}
+⋆ dt ∧ dx &amp;= -&amp; dy ∧ dz \\
+⋆ dt ∧ dy &amp;= -&amp; dz ∧ dx \\
+⋆ dt ∧ dz &amp;= -&amp; dx ∧ dy \\
+⋆ dy ∧ dz &amp;=  &amp; dt ∧ dx \\
+⋆ dz ∧ dx &amp;=  &amp; dt ∧ dy \\
+⋆ dx ∧ dy &amp;=  &amp; dt ∧ dz \\
+\end{alignedat}\end{split}\]</div>
+<p class="rubric">3–forms</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}⋆ dx ∧ dy ∧ dz &amp;= dt \\
+⋆ dt ∧ dy ∧ dz &amp;= dx \\
+⋆ dt ∧ dz ∧ dx &amp;= dy \\
+⋆ dt ∧ dx ∧ dy &amp;= dz \\\end{split}\]</div>
+<p class="rubric">4–forms</p>
+<div class="math notranslate nohighlight">
+\[⋆ dt ∧ dx ∧ dy ∧ dz = - 1\]</div>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../resources.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Resources</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="basis_vectors.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Basis vectors</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#basis-vectors">Basis vectors</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#musicality">Musicality</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-free-matrix-representation">The free matrix representation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hodge-dual-of-k-forms-in-minkowski-space">Hodge dual of k–forms in Minkowski space</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Stéphane Haussler
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024, Stéphane Haussler.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

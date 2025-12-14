@@ -1,0 +1,1201 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9HQ1J8VKRB"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-9HQ1J8VKRB');
+    </script>
+    
+    <title>Deriving the Faraday 2–form from the 1865 Maxwell’s equations &#8212; Theoretical Universe</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=c1fb35df" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>window.MathJax = {"chtml": {"displayAlign": "left", "displayIndent": "2em"}, "tex": {"packages": {"[+]": ["ams"]}, "macros": {"E": "\\tilde{E}", "\u231f": "\\:\u231f\\:"}}, "tex2jax": {"ignoreClass": ".*", "processClass": "math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'faraday_tensor/of_maxwell_equations_and_rotations';</script>
+    <link rel="canonical" href="https://shaussler.github.io/TheoreticalUniverse/faraday_tensor/of_maxwell_equations_and_rotations.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Relation between the Faraday 2–form and the Faraday tensor" href="2form_vs_tensor.html" />
+    <link rel="prev" title="Deriving the Faraday tensor from the 1865 Maxwell’s equations" href="faraday_tensor_derivation.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Theoretical Universe</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Table of Contents:</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../licence.html">Licence</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cite.html">How to cite</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contribute.html">How to contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../resources.html">Resources</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../the_cartan_hodge_formalism/index.html">The Cartan-Hodge formalism</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../the_cartan_hodge_formalism/basis_vectors.html">Basis vectors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../the_cartan_hodge_formalism/musicality.html">Musicality</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../the_cartan_hodge_formalism/hodge_duality.html">Hodge duality fundamentals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../the_cartan_hodge_formalism/hodge_dual_computations.html">Hodge dual computations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../the_cartan_hodge_formalism/the_free_matrix_representation.html">Free matrix representation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../the_cartan_hodge_formalism/the_minkowski_metric.html">Minkowski metric</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../rotations/index.html">Rotations in differential form</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../rotations/rotations_in_3_dimensions.html">Rotations in Euclidean space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rotations/rotations_in_minkowski_space.html">Rotations in Minkowski space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rotations/exponential_map.html">Exponential map</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../differential_operators/index.html">Differential operators expressed as exterior derivatives</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../differential_operators/3-dimensional-euclidean-space.html">3D Euclidean space</a></li>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../differential_operators/minkowski-space/index.html">Minkowski space</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3"><a class="reference internal" href="../differential_operators/minkowski-space/0-forms.html">0–forms (functions)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../differential_operators/minkowski-space/1-forms.html">1–forms (translations)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../differential_operators/minkowski-space/2-forms.html">2–forms (rotations)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../differential_operators/minkowski-space/3-forms.html">3–forms (3D volumes)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../differential_operators/minkowski-space/4-forms.html">4–forms (4D volumes)</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Covariant formulation of the electromagnetic field</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="revisiting_maxwell_equations.html">Revisiting the 1865 Maxwell’s equations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="faraday_tensor_derivation.html">Deriving the Faraday tensor from the 1865 Maxwell’s equations</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Deriving the Faraday 2–form from the 1865 Maxwell’s equations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2form_vs_tensor.html">Relation between the Faraday 2–form and the Faraday tensor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="potential_formulation.html">Potential formulation via differential forms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="all_electromagnetic_field_forms.html">All electromagnetic field forms</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../miscellaneous/index.html">Random thoughts</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../miscellaneous/de_guas_theorem.html">Proving De Gua’s theorem with Clifford algebra</a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/faraday_tensor/of_maxwell_equations_and_rotations.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Deriving the Faraday 2–form from the 1865 Maxwell’s equations</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vector-formulation-of-mr-heaviside">Vector formulation of Mr. Heaviside</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-equations-of-mr-maxwell">The equations of Mr. Maxwell</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#underlying-structure">Underlying structure</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ordered-equations">Ordered equations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rotations-in-differential-forms">Rotations in differential forms</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-exterior-derivative-of-rotations">The exterior derivative of rotations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#identifying-the-faraday-2-form">Identifying the Faraday 2–form</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-single-equation">A single equation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#notes">Notes</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="deriving-the-faraday-2-form-from-the-1865-maxwell-s-equations">
+<span id="maxwell-s-equations-via-differential-forms"></span><span id="id1"></span><span id="of-maxwell-equations-and-rotations"></span><span id="id2"></span><h1>Deriving the Faraday 2–form from the 1865 Maxwell’s equations<a class="headerlink" href="#deriving-the-faraday-2-form-from-the-1865-maxwell-s-equations" title="Link to this heading">#</a></h1>
+<p class="custom-title">The connection to rotations</p>
+<p class="custom-author">by Stéphane Haussler</p>
+<p>This page presents the geometric differential formulation of electromagnetism,
+emphasizing the direct connection between Maxwell’s equations and
+<a class="reference internal" href="../rotations/index.html#id1"><span class="std std-ref">rotations expressed with differential form</span></a>. By calculating <a class="reference internal" href="../differential_operators/minkowski-space/2-forms.html#the-exterior-derivative-of-rotations-in-spacetime"><span class="std std-ref">the exterior derivative these rotations in
+spacetime</span></a> and
+straightforward identification, we will see that the equations governing
+electromagnetism are, in fact, spacetime rotations with the exterior derivative
+applied. In layman’s terms, we can think of electromagnetism as a torque over
+all possible 6 planes of rotations in 4–dimensional spacetime.</p>
+<p>I hope my approach will feel more intuitive than the conventional method where
+the electromagnetic 2-form as well as the Maxwell’s equations in geometric
+differential form are given upfront, and equivalence to the vector formulation
+proven backward. For an example of the standard proof, see <a class="reference external" href="https://www.youtube.com/watch?v=YQoiR-HEUqk&amp;t=3s">a nonetheless great
+video by Michael Penn</a>. The
+mathematical expressions obtained in this section correspond to <a class="reference external" href="https://en.m.wikipedia.org/wiki/Mathematical_descriptions_of_the_electromagnetic_field#Differential_forms_approach">the
+well-recognized differential geometric formulation of Maxwell’s equations</a>,
+where <span class="math notranslate nohighlight">\(\mathbf{F}\)</span> is the field 2–form and <span class="math notranslate nohighlight">\(\mathbf{J}\)</span> the
+current 3–form.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}d\:\mathbf{F} = 0 \\
+d⋆ \mathbf{F} = \mathbf{J}\end{split}\]</div>
+<p>Unless explicitly stated otherwise, I explicitely indicate the nature of the
+mathematical objects involved using musical notation. The electromagnetic field
+2–form <span class="math notranslate nohighlight">\(\mathbf{F}\)</span> is written with a double musical flat
+<span class="math notranslate nohighlight">\(F^{♭♭}\)</span>, the current 3–form with a triple musical flat <span class="math notranslate nohighlight">\(J^{♭♭♭}\)</span>,
+and the Hodge dual current 1–form with a single musical flat <span class="math notranslate nohighlight">\(J^♭\)</span>.</p>
+<p>This argumentation in this page proceeds as follows: First, I reordered
+Maxwell’s equations to align with their original formulation, using modern
+notation. This reorered form will serve the foundation for expressing the
+electromagnetic field equations in terms of geometric differential forms. Next,
+I represent a generic rotation in spacetime to which I apply the exterior
+derivative. Finally, I identified Maxwell’s equations with the exterior
+derivative of this spacetime rotation.</p>
+<p>The discussion assumes a solid understanding of the exterior derivative
+<span class="math notranslate nohighlight">\(d\)</span>, Élie Caretan’s differential forms, as well as <a class="reference internal" href="../the_cartan_hodge_formalism/hodge_duality.html#id1"><span class="std std-ref">Hodge duality</span></a>. This page is self-contained and can be read independently of
+other content on this site.</p>
+<section id="vector-formulation-of-mr-heaviside">
+<h2>Vector formulation of Mr. Heaviside<a class="headerlink" href="#vector-formulation-of-mr-heaviside" title="Link to this heading">#</a></h2>
+<p>Mr. Maxwell’s groundbreaking work in 1865, <a class="reference external" href="https://en.m.wikipedia.org/wiki/A_Dynamical_Theory_of_the_Electromagnetic_Field">A Dynamical Theory of the
+Electromagnetic Field</a>
+(<a class="reference external" href="https://www.jstor.org/stable/108892">pdf</a>), utilized differential
+expressions rather than the modern vector formulation proposed by Mr. Heaviside.
+Indeed in 1865, the concept of vectors had not yet been introduced.</p>
+<p><a class="reference external" href="https://youtu.be/M12CJIuX8D4?si=nuOUEFmRu5Jx4jHJ">Mr. Heaviside proposed both the concept of vectors as well as the vector form
+of the Maxwell equations.</a>
+This is the most widespread formulation today. I therefore start from there and
+unpack into a form closer in spirit to the 1865 equation. The equations consist
+of two inhomogeneous (Gauss’s law and Ampère’circuital law) and two homogeneous
+vector equations (Gauss’s law for magnetism and Faraday’s law of induction),
+which is how I organize the equations.</p>
+<p>While these equations are undoubtedly intriguing, within the context of this
+derivation, a deep comprehension of the physics behind them is unnecessary. I
+simply present them as the initial basis for the derivation. With the exception
+of Maxwell’s modification to Ampère’s circuital law, these equations represent
+the mathematical expression of empirical observations. Therefore, they can be
+regarded as established experimental facts.</p>
+<p class="rubric">Gauss’s Law</p>
+<div class="math notranslate nohighlight">
+\[\overrightarrow{∇} \cdot \overrightarrow{E}  = ρ / ε_0\]</div>
+<p class="rubric">Ampère’s Circuital Law</p>
+<div class="math notranslate nohighlight">
+\[\overrightarrow{∇} \times \overrightarrow{B} =
+μ_0 \overrightarrow{J} + \frac{1}{c^2} \frac{∂}{∂t} \overrightarrow{E}\]</div>
+<p class="rubric">Faraday’s law of induction</p>
+<div class="math notranslate nohighlight">
+\[\overrightarrow{∇} ⨯ \overrightarrow{E} = -\frac{∂}{∂t} \overrightarrow{B}\]</div>
+<p class="rubric">Gauss’s Law for Magnetism</p>
+<div class="math notranslate nohighlight">
+\[\overrightarrow{∇} \cdot \overrightarrow{B} = 0\]</div>
+<p>With the electric field <span class="math notranslate nohighlight">\(\overrightarrow{E} = \begin{bmatrix} E^x \\ E^y
+\\ E^z \end{bmatrix}\)</span>, magnetic field <span class="math notranslate nohighlight">\(\overrightarrow{B} =
+\begin{bmatrix} B^x \\ B^y \\ B^z \end{bmatrix}\)</span>, and operator
+<span class="math notranslate nohighlight">\(\overrightarrow{∇} = \begin{bmatrix} \frac{∂}{∂x} \\ \frac{∂}{∂y} \\
+\frac{∂}{∂z} \end{bmatrix}\)</span></p>
+</section>
+<section id="the-equations-of-mr-maxwell">
+<h2>The equations of Mr. Maxwell<a class="headerlink" href="#the-equations-of-mr-maxwell" title="Link to this heading">#</a></h2>
+<p>Unpacking the vector equations into their component form, we obtain in spirit
+the 1865 Maxwell formulation, albeit with modern notation and conventions.</p>
+<p class="rubric">Gauss’s Law</p>
+<div class="math notranslate nohighlight">
+\[\frac{∂}{∂x} E^x + \frac{∂}{∂y} E^y + \frac{∂}{∂z} E^z = ρ / ε_0\]</div>
+<p class="rubric">Ampère’s Circuital Law</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\frac{∂}{∂y} B^z - \frac{∂}{∂z} B^y = μ_0 J^x + \frac{1}{c^2} \frac{∂}{∂t} E^x \\
+\frac{∂}{∂z} B^x - \frac{∂}{∂x} B^z = μ_0 J^y + \frac{1}{c^2} \frac{∂}{∂t} E^y \\
+\frac{∂}{∂x} B^y - \frac{∂}{∂y} B^x = μ_0 J^z + \frac{1}{c^2} \frac{∂}{∂t} E^z \\\end{split}\]</div>
+<p class="rubric">Gauss’s Law for Magnetism</p>
+<div class="math notranslate nohighlight">
+\[\frac{∂}{∂x} B^x + \frac{∂}{∂y} B^y + \frac{∂}{∂z} B^z = 0\]</div>
+<p class="rubric">Faraday’s Law of Induction</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\frac{∂}{∂y} E^z - \frac{∂}{∂z} E^y = - \frac{∂}{∂t} B^x \\
+\frac{∂}{∂z} E^x - \frac{∂}{∂x} E^z = - \frac{∂}{∂t} B^y \\
+\frac{∂}{∂x} E^y - \frac{∂}{∂y} E^x = - \frac{∂}{∂t} B^z \\\end{split}\]</div>
+</section>
+<section id="underlying-structure">
+<h2>Underlying structure<a class="headerlink" href="#underlying-structure" title="Link to this heading">#</a></h2>
+<p>Gathering and reordering the terms, a clear structures becomes apparent:</p>
+<p class="rubric">Inhomogenous equations: Gauss’s law and Ampère’s circuital law</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{alignedat}{4}
+                                    &amp; + \frac{∂E^x}{∂x} &amp; + \frac{∂E^y}{∂y} &amp; + \frac{∂E^z}{∂z} &amp; = + ρ/ε_0   \\
+    + \frac{1}{c^2} \frac{∂E^x}{∂t} &amp;                   &amp; - \frac{∂B^z}{∂y} &amp; + \frac{∂B^y}{∂z} &amp; = - μ_0 J^x \\
+    + \frac{1}{c^2} \frac{∂E^y}{∂t} &amp; + \frac{∂B^z}{∂x} &amp;                   &amp; - \frac{∂B^x}{∂z} &amp; = - μ_0 J^y \\
+    + \frac{1}{c^2} \frac{∂E^z}{∂t} &amp; - \frac{∂B^y}{∂x} &amp; + \frac{∂B^x}{∂y} &amp;                   &amp; = - μ_0 J^z \\
+\end{alignedat}\end{split}\]</div>
+<p class="rubric">Homogenous equations: Guauss’s law and Faraday’s law of induction</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{alignedat}{4}
+                       &amp; + \frac{∂B^x}{∂x} &amp; + \frac{∂B^y}{∂y} &amp; + \frac{∂B^z}{∂z} &amp;= 0 \\
+     + \frac{∂B^x}{∂t} &amp;                   &amp; + \frac{∂E^z}{y∂} &amp; - \frac{∂E^y}{∂z} &amp;= 0 \\
+     + \frac{∂B^y}{∂t} &amp; - \frac{∂E^z}{∂x} &amp;                   &amp; + \frac{∂E^x}{∂z} &amp;= 0 \\
+     + \frac{∂B^z}{∂t} &amp; + \frac{∂E^y}{∂x} &amp; - \frac{∂E^x}{∂y} &amp;                   &amp;= 0 \\
+\end{alignedat}\end{split}\]</div>
+</section>
+<section id="ordered-equations">
+<h2>Ordered equations<a class="headerlink" href="#ordered-equations" title="Link to this heading">#</a></h2>
+<p>Recognizing the emerging structure, we slightly modify the expressions. These
+modifications are not intricate. The objective is merely to present a compact
+and symmetrical form, where all terms are aligned.</p>
+<p>To eliminate the factor <span class="math notranslate nohighlight">\(1/c\)</span>, we introduce <span class="math notranslate nohighlight">\(\tilde{E}^x = E^x /
+c\)</span>, <span class="math notranslate nohighlight">\(\tilde{E}^y = E^y / c\)</span>, and <span class="math notranslate nohighlight">\(\tilde{E}^z = E^z / c\)</span>.
+Additionally, we define for the time dimension <span class="math notranslate nohighlight">\(∂_t = \frac{∂}{∂(ct)}\)</span>,
+and for the spatial dimensions <span class="math notranslate nohighlight">\(∂_x = \frac{∂}{∂ x}\)</span>, <span class="math notranslate nohighlight">\(∂_y =
+\frac{∂}{∂y}\)</span>, as well as <span class="math notranslate nohighlight">\(∂_z = \frac{∂}{∂z}\)</span>. The equations are now:</p>
+<p class="rubric">Inhomogenous equations</p>
+<div class="math notranslate nohighlight" id="inc-beg-ordered-inhomogenous-equations">
+\[\begin{split}\begin{alignedat}{4}
+               &amp; + ∂_x \E^x &amp; + ∂_y \E^y &amp; + ∂_z \E^z &amp; = + μ_0 c ρ \\
+    + ∂_t \E^x &amp;            &amp; - ∂_y  B^z &amp; + ∂_z  B^y &amp; = - μ_0 J^x \\
+    + ∂_t \E^y &amp; + ∂_x  B^z &amp;            &amp; - ∂_z  B^x &amp; = - μ_0 J^y \\
+    + ∂_t \E^z &amp; - ∂_x  B^y &amp; + ∂_y  B^x &amp;            &amp; = - μ_0 J^z \\
+\end{alignedat}\end{split}\]</div>
+<p class="rubric" id="inc-end-ordered-inhomogenous-equations">Homogenous equations</p>
+<div class="math notranslate nohighlight" id="inc-beg-ordered-homogenous-equations">
+\[\begin{split}\begin{alignedat}{4}
+               &amp; + ∂_x  B^x &amp; + ∂_y  B^y &amp; + ∂_z  B^z &amp; = 0 \\
+    + ∂_t  B^x &amp;            &amp; + ∂_y \E^z &amp; - ∂_z \E^y &amp; = 0 \\
+    + ∂_t  B^y &amp; - ∂_x \E^z &amp;            &amp; + ∂_z \E^x &amp; = 0 \\
+    + ∂_t  B^z &amp; + ∂_x \E^y &amp; - ∂_y \E^x &amp;            &amp; = 0 \\
+\end{alignedat}\end{split}\]</div>
+<p id="inc-end-ordered-homogenous-equations">For readers well-versed in the tensor formulation of electromagnetism, the
+presence and nature of the Faraday tensor and its dual are likely evident.
+Moreover, for those acquainted with matrix multiplication principles, it should
+be apparent that we can employ matrices operations.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Although beyond our current discussion’s scope, defining <span class="math notranslate nohighlight">\(∂_μ\)</span> unifies
+all dimensions to a unit of inverse distance. <span class="math notranslate nohighlight">\(\frac{1}{c}\frac{∂}{∂t}
+=\frac{∂}{∂(ct)}\)</span> has the units of an inverse distance, exactly like the
+partial derivative with respect to the spatial dimensions
+<span class="math notranslate nohighlight">\(\frac{∂}{∂x}\)</span>, <span class="math notranslate nohighlight">\(\frac{∂}{∂y}\)</span>, and <span class="math notranslate nohighlight">\(\frac{∂}{∂z}\)</span>.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The experimental relation between the speed of light <span class="math notranslate nohighlight">\(c\)</span>, the
+permitivity of free space <span class="math notranslate nohighlight">\(ε_0\)</span>, and and the permeability of free
+space <span class="math notranslate nohighlight">\(μ_0\)</span> is used:</p>
+<div class="math notranslate nohighlight">
+\[c = \frac{1}{\sqrt{ε_0 μ_0}}\]</div>
+</div>
+<p>We now link the ordered Maxwell equations to the exterior derivative of
+rotations in spacetime. For this, we first express a generic rotation as a
+linear combination of bivectors, flatten to a 2–form, and calculate the
+exterior derivative.</p>
+</section>
+<section id="rotations-in-differential-forms">
+<h2>Rotations in differential forms<a class="headerlink" href="#rotations-in-differential-forms" title="Link to this heading">#</a></h2>
+<p>General rotations can be expressed as linear combinations of rotations in each
+planes. For Minkowski space with 4 directions <span class="math notranslate nohighlight">\(∂_t\)</span>, <span class="math notranslate nohighlight">\(∂_x\)</span>,
+<span class="math notranslate nohighlight">\(∂_y\)</span> and <span class="math notranslate nohighlight">\(∂_t\)</span>, this result in 6 planes of rotations. Each plane
+is expressed as the exterior product <span class="math notranslate nohighlight">\(∧\)</span> of basis vectors as <span class="math notranslate nohighlight">\(∂_μ ∧
+∂_ν\)</span>. Rotations in spacetime are expresssed as linear combination of basis
+rotations in the six available planes of rotations.</p>
+<aside class="topic">
+<p class="topic-title">Rotations in Minkowski space</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}R^{♯♯} = \begin{bmatrix}
+    Q^x \; ∂_t ∧ ∂_x \\
+    Q^y \; ∂_t ∧ ∂_y \\
+    Q^z \; ∂_t ∧ ∂_z \\
+    R^x \; ∂_y ∧ ∂_z \\
+    R^y \; ∂_z ∧ ∂_x \\
+    R^z \; ∂_x ∧ ∂_y \\
+\end{bmatrix}\end{split}\]</div>
+</aside>
+<p>Using the Minkowski metric <span class="math notranslate nohighlight">\(η\)</span>, we flatten a basis vector with the flat
+operator <span class="math notranslate nohighlight">\(♭\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[(∂_μ)^♭ = η_{μν} dx^ν\]</div>
+<p>Likewise any index of the doubly contravariant exterior product can be
+flattened:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{matrix}
+    (∂_μ ∧ ∂_ν)^{♭♯} &amp;= η_{γμ} dx^γ ∧ ∂_ν         \\
+    (∂_μ ∧ ∂_ν)^{♯♭} &amp;= η_{γν} ∂_μ ∧ dx^γ         \\
+    (∂_μ ∧ ∂_ν)^{♭♭} &amp;= η_{δμ} η_{γν} dx^δ ∧ dx^γ \\
+\end{matrix}\end{split}\]</div>
+<p>To obtain the doubly covariant representation of rotations in spacetime, we
+apply the flat operators <span class="math notranslate nohighlight">\(♭♭\)</span> to each components <span class="math notranslate nohighlight">\(R^{♭♭} =
+(R^{♯♯})^{♭♭}\)</span>:</p>
+<aside class="topic">
+<p class="topic-title">Doubly covariant representation of rotations in Minkowski space</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}R^{♭♭} = \left[ \begin{aligned}
+    - &amp; Q^x \; dt ∧ dx \\
+    - &amp; Q^y \; dt ∧ dy \\
+    - &amp; Q^z \; dt ∧ dz \\
+      &amp; R^x \; dy ∧ dz \\
+      &amp; R^y \; dz ∧ dx \\
+      &amp; R^z \; dx ∧ dy \\
+\end{aligned} \right]\end{split}\]</div>
+</aside>
+<div class="dropdown admonition">
+<p class="admonition-title">Calculations</p>
+<p class="rubric">Apply the flat operators</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}R^{♭♭} = \begin{bmatrix}
+    Q^x \; ∂_t ∧ ∂_x \\
+    Q^y \; ∂_t ∧ ∂_y \\
+    Q^z \; ∂_t ∧ ∂_z \\
+    R^x \; ∂_y ∧ ∂_z \\
+    R^y \; ∂_z ∧ ∂_x \\
+    R^z \; ∂_x ∧ ∂_y \\
+\end{bmatrix}^{♭♭}\end{split}\]</div>
+<p class="rubric">Distribute the musical operators</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}R^{♭♭} = \begin{bmatrix}
+    Q^x \; ∂_t^♭ ∧ ∂_x^♭ \\
+    Q^y \; ∂_t^♭ ∧ ∂_y^♭ \\
+    Q^z \; ∂_t^♭ ∧ ∂_z^♭ \\
+    R^x \; ∂_y^♭ ∧ ∂_z^♭ \\
+    R^y \; ∂_z^♭ ∧ ∂_x^♭ \\
+    R^z \; ∂_x^♭ ∧ ∂_y^♭ \\
+\end{bmatrix}\end{split}\]</div>
+<p class="rubric">Expand</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}R^{♭♭} = \begin{bmatrix}
+    Q^x \; η_{tμ} d^xμ ∧ η_{xμ} dx^μ \\
+    Q^y \; η_{tμ} d^xμ ∧ η_{yμ} dx^μ \\
+    Q^z \; η_{tμ} d^xμ ∧ η_{zμ} dx^μ \\
+    R^x \; η_{yμ} d^xμ ∧ η_{zμ} dx^μ \\
+    R^y \; η_{zμ} d^xμ ∧ η_{xμ} dx^μ \\
+    R^z \; η_{xμ} d^xμ ∧ η_{yμ} dx^μ \\
+\end{bmatrix}\end{split}\]</div>
+<p class="rubric">Identify non-zero terms</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}R^{♭♭} = \begin{bmatrix}
+    Q^x \; η_{tt} dt ∧ η_{xx} dx \\
+    Q^y \; η_{tt} dt ∧ η_{yy} dy \\
+    Q^z \; η_{tt} dt ∧ η_{zz} dz \\
+    R^x \; η_{yy} dy ∧ η_{zz} dz \\
+    R^y \; η_{zz} dz ∧ η_{xx} dx \\
+    R^z \; η_{xx} dx ∧ η_{yy} dy \\
+\end{bmatrix}\end{split}\]</div>
+<p class="rubric">Apply numerical values</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}R^{♭♭} = \left[ \begin{aligned}
+    - &amp; Q^x \; dt ∧ dx \\
+    - &amp; Q^y \; dt ∧ dy \\
+    - &amp; Q^z \; dt ∧ dz \\
+      &amp; R^x \; dy ∧ dz \\
+      &amp; R^y \; dz ∧ dx \\
+      &amp; R^z \; dx ∧ dy \\
+\end{aligned} \right]\end{split}\]</div>
+</div>
+</section>
+<section id="the-exterior-derivative-of-rotations">
+<h2>The exterior derivative of rotations<a class="headerlink" href="#the-exterior-derivative-of-rotations" title="Link to this heading">#</a></h2>
+<p>In the article <a class="reference internal" href="../differential_operators/index.html#differential-operators-expressed-as-exterior-derivatives"><span class="std std-ref">Differential operators expressed as exterior derivatives</span></a>,
+I systematically compute the exterior derivative of all possible k–forms in
+both 3D Euclidean space and 4D spacetime with the Minkowski metric. The
+motivation for these systematic calculations is that all differential operators
+acting on fields (such as the gradient and the laplacian) or vector fields
+(such as the divergence and the curl) can be expressed using combinations of
+the Hodge star operator <span class="math notranslate nohighlight">\(⋆\)</span> and the exterior derivative <span class="math notranslate nohighlight">\(d\)</span>.</p>
+<p>Since the combinations of these two operators are finite, this approach allows
+for the calculation of all conceivable differential operators, which are
+generalized within the framework of exterior calculus. Specifically, we derive
+expressions for the exterior derivative of rotations and the exterior
+derivative of their Hodge duals the following:</p>
+<p class="rubric">Hodge dual of rotations</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}⋆ R^{♭♭} = \left[ \begin{aligned}
+    &amp; Q^x \; dy ∧ dz \\
+    &amp; Q^y \; dz ∧ dx \\
+    &amp; Q^z \; dx ∧ dy \\
+    &amp; R^x \; dt ∧ dx \\
+    &amp; R^y \; dt ∧ dy \\
+    &amp; R^z \; dt ∧ dz \\
+\end{aligned} \right]\end{split}\]</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Calculations</p>
+<p class="rubric">Apply the Hodge star by linearity</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}⋆ R^{♭♭} = ⋆ \left[ \begin{aligned}
+    - &amp; Q^x \; dt ∧ dx \\
+    - &amp; Q^y \; dt ∧ dy \\
+    - &amp; Q^z \; dt ∧ dz \\
+      &amp; R^x \; dy ∧ dz \\
+      &amp; R^y \; dz ∧ dx \\
+      &amp; R^z \; dx ∧ dy \\
+\end{aligned} \right]
+= \left[ \begin{aligned}
+    - &amp; Q^x \; ⋆ dt ∧ dx \\
+    - &amp; Q^y \; ⋆ dt ∧ dy \\
+    - &amp; Q^z \; ⋆ dt ∧ dz \\
+      &amp; R^x \; ⋆ dy ∧ dz \\
+      &amp; R^y \; ⋆ dz ∧ dx \\
+      &amp; R^z \; ⋆ dx ∧ dy \\
+\end{aligned} \right]\end{split}\]</div>
+<p class="rubric">Apply the Hodge star to the basis 2-Forms</p>
+<p>Using the <a class="reference internal" href="../the_cartan_hodge_formalism/index.html#hodge-dual-tables"><span class="std std-ref">tables for the Hodge dual</span></a>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}⋆ R^{♭♭} = \left[ \begin{aligned}
+    &amp; Q^x \; dy ∧ dz \\
+    &amp; Q^y \; dz ∧ dx \\
+    &amp; Q^z \; dx ∧ dy \\
+    &amp; R^x \; dt ∧ dx \\
+    &amp; R^y \; dt ∧ dy \\
+    &amp; R^z \; dt ∧ dz \\
+\end{aligned} \right]\end{split}\]</div>
+</div>
+<p class="rubric">Exterior derivative of the Hodge dual of rotations</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}d⋆R^{♭♭} = \left[ \begin{alignedat}{5}
+    (&amp;         &amp; + ∂_x Q^x &amp; + ∂_y Q^y &amp; + ∂_z Q^z &amp;\:) \; dx ∧ dy ∧ dz \\
+    (&amp; + ∂_t Q^x &amp;         &amp; - ∂_y R^z &amp; + ∂_z R^y &amp;\:) \; dt ∧ dy ∧ dz \\
+    (&amp; + ∂_t Q^y &amp; + ∂_x R^z &amp;         &amp; - ∂_z R^x &amp;\:) \; dt ∧ dz ∧ dx \\
+    (&amp; + ∂_t Q^z &amp; - ∂_x R^y &amp; + ∂_y R^x &amp;         &amp;\:) \; dt ∧ dx ∧ dy \\
+\end{alignedat} \right]\end{split}\]</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Calculations</p>
+<p class="rubric">Take the exterior derivative</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}d⋆R^{♭♭} = d \begin{bmatrix}
+    Q^x \; dy ∧ dz \\
+    Q^y \; dz ∧ dx \\
+    Q^z \; dx ∧ dy \\
+    R^x \; dt ∧ dx \\
+    R^y \; dt ∧ dy \\
+    R^z \; dt ∧ dz \\
+\end{bmatrix}\end{split}\]</div>
+<p class="rubric">Distribute the exterior derivative</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}d⋆R^{♭♭} = \begin{bmatrix}
+    d( Q^x \; dy ∧ dz) \\
+    d( Q^y \; dz ∧ dx) \\
+    d( Q^z \; dx ∧ dy) \\
+    d( R^x \; dt ∧ dx) \\
+    d( R^y \; dt ∧ dy) \\
+    d( R^z \; dt ∧ dz) \\
+\end{bmatrix}\end{split}\]</div>
+<p class="rubric">Apply</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}d⋆R^{♭♭})= \left[ \begin{alignedat}{5}
+    ∂_t (+ Q^x ) \; &amp; dt ∧ dy ∧ dz &amp; + &amp; ∂_x (+ Q^x ) \; &amp; dx ∧ dy ∧ dz \\
+    ∂_t (+ Q^y ) \; &amp; dt ∧ dz ∧ dx &amp; + &amp; ∂_y (+ Q^y ) \; &amp; dy ∧ dz ∧ dx \\
+    ∂_t (+ Q^z ) \; &amp; dt ∧ dx ∧ dy &amp; + &amp; ∂_z (+ Q^z ) \; &amp; dz ∧ dx ∧ dy \\
+    ∂_y (+ R^x ) \; &amp; dy ∧ dt ∧ dx &amp; + &amp; ∂_z (+ R^x ) \; &amp; dz ∧ dt ∧ dx \\
+    ∂_x (+ R^y ) \; &amp; dx ∧ dt ∧ dy &amp; + &amp; ∂_z (+ R^y ) \; &amp; dz ∧ dt ∧ dy \\
+    ∂_x (+ R^z ) \; &amp; dx ∧ dt ∧ dz &amp; + &amp; ∂_y (+ R^z ) \; &amp; dy ∧ dt ∧ dz \\
+\end{alignedat} \right]\end{split}\]</div>
+<p class="rubric">Reorder</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}d⋆R^{♭♭} = \left[ \begin{alignedat}{5}
+    ∂_t (+ Q^x )(+1) \; &amp; dt ∧ dy ∧ dz &amp; + &amp; ∂_x (+ Q^x )(+1) \; &amp; dx ∧ dy ∧ dz \\
+    ∂_t (+ Q^y )(+1) \; &amp; dt ∧ dz ∧ dx &amp; + &amp; ∂_y (+ Q^y )(+1) \; &amp; dx ∧ dy ∧ dz \\
+    ∂_t (+ Q^z )(+1) \; &amp; dt ∧ dx ∧ dy &amp; + &amp; ∂_z (+ Q^z )(+1) \; &amp; dx ∧ dy ∧ dz \\
+    ∂_y (+ R^x )(+1) \; &amp; dt ∧ dx ∧ dy &amp; + &amp; ∂_z (+ R^x )(-1) \; &amp; dt ∧ dz ∧ dx \\
+    ∂_x (+ R^y )(-1) \; &amp; dt ∧ dx ∧ dy &amp; + &amp; ∂_z (+ R^y )(+1) \; &amp; dt ∧ dy ∧ dz \\
+    ∂_x (+ R^z )(+1) \; &amp; dt ∧ dz ∧ dx &amp; + &amp; ∂_y (+ R^z )(-1) \; &amp; dt ∧ dy ∧ dz \\
+\end{alignedat} \right]\end{split}\]</div>
+<p class="rubric">Apply values</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}d(⋆R^{♭♭}) = \left[ \begin{alignedat}{5}
+    ∂_t (+ Q^x ) \; &amp; dt ∧ dy ∧ dz &amp; + &amp; ∂_x (+ Q^x ) \; &amp; dx ∧ dy ∧ dz \\
+    ∂_t (+ Q^y ) \; &amp; dt ∧ dz ∧ dx &amp; + &amp; ∂_y (+ Q^y ) \; &amp; dx ∧ dy ∧ dz \\
+    ∂_t (+ Q^z ) \; &amp; dt ∧ dx ∧ dy &amp; + &amp; ∂_z (+ Q^z ) \; &amp; dx ∧ dy ∧ dz \\
+    ∂_y (+ R^x ) \; &amp; dt ∧ dx ∧ dy &amp; + &amp; ∂_z (- R^x ) \; &amp; dt ∧ dz ∧ dx \\
+    ∂_x (- R^y ) \; &amp; dt ∧ dx ∧ dy &amp; + &amp; ∂_z (+ R^y ) \; &amp; dt ∧ dy ∧ dz \\
+    ∂_x (+ R^z ) \; &amp; dt ∧ dz ∧ dx &amp; + &amp; ∂_y (- R^z ) \; &amp; dt ∧ dy ∧ dz \\
+\end{alignedat} \right]\end{split}\]</div>
+<p class="rubric">Rearange</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}d ⋆ R^{♭♭} = \left[ \begin{alignedat}{5}
+    (&amp;         &amp; + ∂_x Q^x &amp; + ∂_y Q^y &amp; + ∂_z Q^z &amp; \: ) \; &amp; dx ∧ dy ∧ dz \\
+    (&amp; + ∂_t Q^x &amp;         &amp; - ∂_y R^z &amp; + ∂_z R^y &amp; \: ) \; &amp; dt ∧ dy ∧ dz \\
+    (&amp; + ∂_t Q^y &amp; + ∂_x R^z &amp;         &amp; - ∂_z R^x &amp; \: ) \; &amp; dt ∧ dz ∧ dx \\
+    (&amp; + ∂_t Q^z &amp; - ∂_x R^y &amp; + ∂_y R^x &amp;         &amp; \: ) \; &amp; dt ∧ dx ∧ dy \\
+\end{alignedat} \right]\end{split}\]</div>
+</div>
+<p class="rubric">Exterior derivative of rotations</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}dR^{♭♭} = \left[ \begin{alignedat}{5}
+   (&amp;         &amp; + ∂_x R^x &amp; + ∂_y R^y &amp; + ∂_z R^z &amp;\:) \; dx ∧ dy ∧ dz \\
+   (&amp; + ∂_t R^x &amp;         &amp; + ∂_y Q^z &amp; - ∂_z Q^y &amp;\:) \; dt ∧ dy ∧ dz \\
+   (&amp; + ∂_t R^y &amp; - ∂_x Q^z &amp;         &amp; + ∂_z Q^x &amp;\:) \; dt ∧ dz ∧ dx \\
+   (&amp; + ∂_t R^z &amp; + ∂_x Q^y &amp; - ∂_y Q^x &amp;         &amp;\:) \; dt ∧ dx ∧ dy \\
+\end{alignedat} \right]\end{split}\]</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Calculations</p>
+<p class="rubric">Distribute the exterior derivative</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}dR^{♭♭} = \begin{bmatrix}
+   d( - Q^x \; dt ∧ dx ) \\
+   d( - Q^y \; dt ∧ dy ) \\
+   d( - Q^z \; dt ∧ dz ) \\
+   d( + R^x \; dy ∧ dz ) \\
+   d( + R^y \; dz ∧ dx ) \\
+   d( + R^z \; dx ∧ dy ) \\
+\end{bmatrix}\end{split}\]</div>
+<p class="rubric">Apply the exterior derivative</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}dR^{♭♭} = \left[ \begin{alignedat}{3}
+    ∂_y (- Q^x ) \; &amp; dy ∧ dt ∧ dx &amp; + &amp; ∂_z (- Q^x ) \; &amp; dz ∧ dt ∧ dx \\
+    ∂_x (- Q^y ) \; &amp; dx ∧ dt ∧ dy &amp; + &amp; ∂_z (- Q^y ) \; &amp; dz ∧ dt ∧ dy \\
+    ∂_x (- Q^z ) \; &amp; dx ∧ dt ∧ dz &amp; + &amp; ∂_y (- Q^z ) \; &amp; dy ∧ dt ∧ dz \\
+    ∂_t (+ R^x ) \; &amp; dt ∧ dy ∧ dz &amp; + &amp; ∂_x (+ R^x ) \; &amp; dx ∧ dy ∧ dz \\
+    ∂_t (+ R^y ) \; &amp; dt ∧ dz ∧ dx &amp; + &amp; ∂_y (+ R^y ) \; &amp; dy ∧ dz ∧ dx \\
+    ∂_t (+ R^z ) \; &amp; dt ∧ dx ∧ dy &amp; + &amp; ∂_z (+ R^z ) \; &amp; dz ∧ dx ∧ dy \\
+\end{alignedat} \right]\end{split}\]</div>
+<p class="rubric">Reorder the exterior products</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}dR^{♭♭} = \left[ \begin{alignedat}{3}
+    ∂_y (- Q^x )(+1) \; &amp; dt ∧ dx ∧ dy &amp; + &amp; ∂_z (- Q^x )(-1) \; &amp; dt ∧ dz ∧ dx \\
+    ∂_x (- Q^y )(-1) \; &amp; dt ∧ dx ∧ dy &amp; + &amp; ∂_z (- Q^y )(+1) \; &amp; dt ∧ dy ∧ dz \\
+    ∂_x (- Q^z )(+1) \; &amp; dt ∧ dz ∧ dx &amp; + &amp; ∂_y (- Q^z )(-1) \; &amp; dt ∧ dy ∧ dz \\
+    ∂_t (+ R^x )(+1) \; &amp; dt ∧ dy ∧ dz &amp; + &amp; ∂_x (+ R^x )(+1) \; &amp; dx ∧ dy ∧ dz \\
+    ∂_t (+ R^y )(+1) \; &amp; dt ∧ dz ∧ dx &amp; + &amp; ∂_y (+ R^y )(+1) \; &amp; dx ∧ dy ∧ dz \\
+    ∂_t (+ R^z )(+1) \; &amp; dt ∧ dx ∧ dy &amp; + &amp; ∂_z (+ R^z )(+1) \; &amp; dx ∧ dy ∧ dz \\
+\end{alignedat} \right]\end{split}\]</div>
+<p class="rubric">Simplify</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}dR^{♭♭} = \left[ \begin{alignedat}{3}
+    ∂_y (- Q^x ) \; &amp; dt ∧ dx ∧ dy &amp; + &amp; ∂_z (+ Q^x ) \; &amp; dt ∧ dz ∧ dx \\
+    ∂_x (+ Q^y ) \; &amp; dt ∧ dx ∧ dy &amp; + &amp; ∂_z (- Q^y ) \; &amp; dt ∧ dy ∧ dz \\
+    ∂_x (- Q^z ) \; &amp; dt ∧ dz ∧ dx &amp; + &amp; ∂_y (+ Q^z ) \; &amp; dt ∧ dy ∧ dz \\
+    ∂_t (+ R^x ) \; &amp; dt ∧ dy ∧ dz &amp; + &amp; ∂_x (+ R^x ) \; &amp; dx ∧ dy ∧ dz \\
+    ∂_t (+ R^y ) \; &amp; dt ∧ dz ∧ dx &amp; + &amp; ∂_y (+ R^y ) \; &amp; dx ∧ dy ∧ dz \\
+    ∂_t (+ R^z ) \; &amp; dt ∧ dx ∧ dy &amp; + &amp; ∂_z (+ R^z ) \; &amp; dx ∧ dy ∧ dz \\
+\end{alignedat} \right]\end{split}\]</div>
+<p class="rubric">Rearange</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}dR^{♭♭} = \left[ \begin{alignedat}{5}
+    (&amp;         &amp; + ∂_x R^x &amp; + ∂_y R^y &amp; + ∂_z R^z &amp;\:) \; dx ∧ dy ∧ dz \\
+    (&amp; + ∂_t R^x &amp;         &amp; + ∂_y Q^z &amp; - ∂_z Q^y &amp;\:) \; dt ∧ dy ∧ dz \\
+    (&amp; + ∂_t R^y &amp; - ∂_x Q^z &amp;         &amp; + ∂_z Q^x &amp;\:) \; dt ∧ dz ∧ dx \\
+    (&amp; + ∂_t R^z &amp; + ∂_x Q^y &amp; - ∂_y Q^x &amp;         &amp;\:) \; dt ∧ dx ∧ dy \\
+\end{alignedat} \right]\end{split}\]</div>
+</div>
+<p class="rubric">Hodge dual of the exterior derivative of rotations</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}⋆ dR^{♭♭} = \left[ \begin{alignedat}{5}
+    (&amp;         &amp; - ∂_x R^x &amp; - ∂_y R^y &amp; - ∂_z R^z &amp;\:) \; dt \\
+    (&amp; - ∂_t R^x &amp;         &amp; - ∂_y Q^z &amp; + ∂_z Q^y &amp;\:) \; dx \\
+    (&amp; - ∂_t R^y &amp; + ∂_x Q^z &amp;         &amp; - ∂_z Q^x &amp;\:) \; dy \\
+    (&amp; - ∂_t R^z &amp; - ∂_x Q^y &amp; + ∂_y Q^x &amp;         &amp;\:) \; dz \\
+\end{alignedat} \right]\end{split}\]</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Calculations</p>
+<p class="rubric">Apply the Hodge star</p>
+<p>Apply the Hodge star to <span class="math notranslate nohighlight">\(dR^{♭♭}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}⋆dR^{♭♭} = ⋆\left[ \begin{alignedat}{5}
+  (&amp;         &amp; + ∂_x R^x &amp; + ∂_y R^y &amp; + ∂_z R^z &amp;\:) \; dx ∧ dy ∧ dz \\
+  (&amp; + ∂_t R^x &amp;         &amp; + ∂_y Q^z &amp; - ∂_z Q^y &amp;\:) \; dt ∧ dy ∧ dz \\
+  (&amp; + ∂_t R^y &amp; - ∂_x Q^z &amp;         &amp; + ∂_z Q^x &amp;\:) \; dt ∧ dz ∧ dx \\
+  (&amp; + ∂_t R^z &amp; + ∂_x Q^y &amp; - ∂_y Q^x &amp;         &amp;\:) \; dt ∧ dx ∧ dy \\
+\end{alignedat} \right]\end{split}\]</div>
+<p class="rubric">Distribute the Hodge star</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}⋆dR^{♭♭} = \left[ \begin{alignedat}{5}
+  (&amp;         &amp; + ∂_x R^x &amp; + ∂_y R^y &amp; + ∂_z R^z &amp;\:) \; ⋆ dx^x ∧ dx^y ∧ dx^z \\
+  (&amp; + ∂_t R^x &amp;         &amp; + ∂_y Q^z &amp; - ∂_z Q^y &amp;\:) \; ⋆ dx^t ∧ dx^y ∧ dx^z \\
+  (&amp; + ∂_t R^y &amp; - ∂_x Q^z &amp;         &amp; + ∂_z Q^x &amp;\:) \; ⋆ dx^t ∧ dx^z ∧ dx^x \\
+  (&amp; + ∂_t R^z &amp; + ∂_x Q^y &amp; - ∂_y Q^x &amp;         &amp;\:) \; ⋆ dx^t ∧ dx^x ∧ dx^y \\
+\end{alignedat} \right]\end{split}\]</div>
+<p class="rubric">Apply the Hodge star to the basis 1-forms</p>
+<p>Using the <a class="reference internal" href="../the_cartan_hodge_formalism/index.html#hodge-dual-tables"><span class="std std-ref">tables for the Hodge dual</span></a>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}⋆dR^{♭♭} = \left[ \begin{alignedat}{5}
+  (&amp;         &amp; + ∂_x R^x &amp; + ∂_y R^y &amp; + ∂_z R^z &amp;\:) \; (-dt) \\
+  (&amp; + ∂_t R^x &amp;         &amp; + ∂_y Q^z &amp; - ∂_z Q^y &amp;\:) \; (-dx) \\
+  (&amp; + ∂_t R^y &amp; - ∂_x Q^z &amp;         &amp; + ∂_z Q^x &amp;\:) \; (-dy) \\
+  (&amp; + ∂_t R^z &amp; + ∂_x Q^y &amp; - ∂_y Q^x &amp;         &amp;\:) \; (-dz) \\
+\end{alignedat} \right]\end{split}\]</div>
+<p class="rubric">Conclude</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}⋆dR^{♭♭} = \left[ \begin{alignedat}{5}
+  (&amp;         &amp; - ∂_x R^x &amp; - ∂_y R^y &amp; - ∂_z R^z &amp;\:) \; dt \\
+  (&amp; - ∂_t R^x &amp;         &amp; - ∂_y Q^z &amp; + ∂_z Q^y &amp;\:) \; dx \\
+  (&amp; - ∂_t R^y &amp; + ∂_x Q^z &amp;         &amp; - ∂_z Q^x &amp;\:) \; dy \\
+  (&amp; - ∂_t R^z &amp; - ∂_x Q^y &amp; + ∂_y Q^x &amp;         &amp;\:) \; dz \\
+\end{alignedat} \right]\end{split}\]</div>
+</div>
+</section>
+<section id="identifying-the-faraday-2-form">
+<h2>Identifying the Faraday 2–form<a class="headerlink" href="#identifying-the-faraday-2-form" title="Link to this heading">#</a></h2>
+<p>To summarize the results and observations thus far, an arbitrary rotation in
+Minkowski space is represented by a 2–form:</p>
+<p>By applying the exterior derivative <span class="math notranslate nohighlight">\(d\)</span> to this rotation or to its Hodge
+dual (effectively calculating a torque), we obtain:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}d⋆R^{♭♭} = \left[ \begin{alignedat}{5}
+    (&amp;         &amp; + ∂_x Q^x &amp; + ∂_y Q^y &amp; + ∂_z Q^z &amp;\:) \; dx ∧ dy ∧ dz \\
+    (&amp; + ∂_t Q^x &amp;         &amp; - ∂_y R^z &amp; + ∂_z R^y &amp;\:) \; dt ∧ dy ∧ dz \\
+    (&amp; + ∂_t Q^y &amp; + ∂_x R^z &amp;         &amp; - ∂_z R^x &amp;\:) \; dt ∧ dz ∧ dx \\
+    (&amp; + ∂_t Q^z &amp; - ∂_x R^y &amp; + ∂_y R^x &amp;         &amp;\:) \; dt ∧ dx ∧ dy \\
+\end{alignedat} \right]\end{split}\]</div>
+<div class="math notranslate nohighlight">
+\[\begin{split}⋆ dR^{♭♭} = \left[ \begin{alignedat}{5}
+    (&amp;         &amp; - ∂_x R^x &amp; - ∂_y R^y &amp; - ∂_z R^z &amp;\:) \; dt \\
+    (&amp; - ∂_t R^x &amp;         &amp; - ∂_y Q^z &amp; + ∂_z Q^y &amp;\:) \; dx \\
+    (&amp; - ∂_t R^y &amp; + ∂_x Q^z &amp;         &amp; - ∂_z Q^x &amp;\:) \; dy \\
+    (&amp; - ∂_t R^z &amp; - ∂_x Q^y &amp; + ∂_y Q^x &amp;         &amp;\:) \; dz \\
+\end{alignedat} \right]\end{split}\]</div>
+<p>We have also reordered the 1865 Maxwell equations to:</p>
+<p class="rubric">Inhomogenous equations</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{alignedat}{4}
+               &amp; + ∂_x \E^x &amp; + ∂_y \E^y &amp; + ∂_z \E^z &amp; = + μ_0 c ρ \\
+    + ∂_t \E^x &amp;            &amp; - ∂_y  B^z &amp; + ∂_z  B^y &amp; = - μ_0 J^x \\
+    + ∂_t \E^y &amp; + ∂_x  B^z &amp;            &amp; - ∂_z  B^x &amp; = - μ_0 J^y \\
+    + ∂_t \E^z &amp; - ∂_x  B^y &amp; + ∂_y  B^x &amp;            &amp; = - μ_0 J^z \\
+\end{alignedat}\end{split}\]</div>
+<p class="rubric">Homogenous equations</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{alignedat}{4}
+               &amp; + ∂_x  B^x &amp; + ∂_y  B^y &amp; + ∂_z  B^z &amp; = 0 \\
+    + ∂_t  B^x &amp;            &amp; + ∂_y \E^z &amp; - ∂_z \E^y &amp; = 0 \\
+    + ∂_t  B^y &amp; - ∂_x \E^z &amp;            &amp; + ∂_z \E^x &amp; = 0 \\
+    + ∂_t  B^z &amp; + ∂_x \E^y &amp; - ∂_y \E^x &amp;            &amp; = 0 \\
+\end{alignedat}\end{split}\]</div>
+<p class="rubric">Identification</p>
+<p>Identifiying the components of the electric field <span class="math notranslate nohighlight">\(\tilde{E}^i=E^i/c\)</span> and
+the magnetic field <span class="math notranslate nohighlight">\(B^i\)</span> is straightforward:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{matrix}
+    \E^x = R^x \\
+    \E^y = R^y \\
+    \E^z = R^z \\
+     B^x = Q^x \\
+     B^y = Q^y \\
+     B^z = Q^z \\
+\end{matrix}\end{split}\]</div>
+<p>The Faraday 2–form <span class="math notranslate nohighlight">\(F^{♭♭}\)</span> is a rotation in Minkowski spacetime.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}F^{♭♭} = \left[ \begin{aligned}
+    - &amp; \E^x \; dt ∧ dx \\
+    - &amp; \E^y \; dt ∧ dy \\
+    - &amp; \E^z \; dt ∧ dz \\
+      &amp;  B^x \; dy ∧ dz \\
+      &amp;  B^y \; dz ∧ dx \\
+      &amp;  B^z \; dx ∧ dy \\
+\end{aligned} \right]\end{split}\]</div>
+<p>Maxwell’s equations are obtained by applying the exterior derivative, both
+directly <span class="math notranslate nohighlight">\(dF^{♭♭}\)</span> and to its Hodge dual <span class="math notranslate nohighlight">\(d⋆F^{♭♭}\)</span>:</p>
+<p class="rubric">Inhomogenous Maxwell equations</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}d\:⋆ \left[ \begin{aligned}
+    - &amp; \E^x \; dt ∧ dx \\
+    - &amp; \E^y \; dt ∧ dy \\
+    - &amp; \E^z \; dt ∧ dz \\
+      &amp;  B^x \; dy ∧ dz \\
+      &amp;  B^y \; dz ∧ dx \\
+      &amp;  B^z \; dx ∧ dy \\
+\end{aligned} \right]
+= \begin{bmatrix}
+    + μ_0 c ρ \; dx ∧ dy ∧ dz\\
+    - μ_0 J^x \; dt ∧ dy ∧ dz\\
+    - μ_0 J^y \; dt ∧ dz ∧ dx\\
+    - μ_0 J^z \; dt ∧ dx ∧ dy\\
+\end{bmatrix}\end{split}\]</div>
+<p class="rubric">Homogenous Maxwell equations</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}d \left[ \begin{aligned}
+    - &amp; \E^x \; dt ∧ dx \\
+    - &amp; \E^y \; dt ∧ dy \\
+    - &amp; \E^z \; dt ∧ dz \\
+      &amp;  B^x \; dy ∧ dz \\
+      &amp;  B^y \; dz ∧ dx \\
+      &amp;  B^z \; dx ∧ dy \\
+\end{aligned} \right]
+= 0\end{split}\]</div>
+<p>We have flipped the sign of the ordered homegenous Maxwell equations to our
+conveniance to ensure the correct overall sign. With our explicit notation,
+using a double musical flat ♭♭ to identify 2–forms, and a single musical flat
+♭ to identify 1–forms, we have:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}d\:F^{♭♭} &amp;= 0   \\
+d⋆ F^{♭♭} &amp;= J^♭ \\\end{split}\]</div>
+<p>As advertised in the introduction and using the implicit notation of the
+wikipedia article, we fall back to the <a class="reference external" href="https://en.m.wikipedia.org/wiki/Mathematical_descriptions_of_the_electromagnetic_field#Differential_forms_approach">well-recognized differential geometric
+formulation of Maxwell’s equations</a>,
+where <span class="math notranslate nohighlight">\(\mathbf{F}\)</span> is the field 2–form and <span class="math notranslate nohighlight">\(\mathbf{J}\)</span> is the
+current 3–form.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}d\:\mathbf{F} &amp;= 0          \\
+d⋆ \mathbf{F} &amp;= \mathbf{J} \\\end{split}\]</div>
+</section>
+<section id="a-single-equation">
+<h2>A single equation<a class="headerlink" href="#a-single-equation" title="Link to this heading">#</a></h2>
+<p>Adding a further Hodge star to the Homogenous equations is equally valid and we
+can equally write <span class="math notranslate nohighlight">\(d\:F^{♭♭} = 0\)</span> or <span class="math notranslate nohighlight">\(⋆d\:F^{♭♭}=0\)</span>. With our
+explicit notation using double or single musical flats to idenfity 1–forms (♭)
+and 2–forms (♭♭), and since <span class="math notranslate nohighlight">\(⋆\:d\:F\)</span> is a 1–form and <span class="math notranslate nohighlight">\(d⋆F\)</span> a
+3–form, we notice that we can unambiguously merge inhomogeneous and
+homogeneous equations into a single equation <a class="reference internal" href="#note2" id="id3"><span>[note2]</span></a>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}d ⋆ \left[ \begin{aligned}
+    - &amp; \E^x \; dt ∧ dx \\
+    - &amp; \E^y \; dt ∧ dy \\
+    - &amp; \E^z \; dt ∧ dz \\
+      &amp;  B^x \; dy ∧ dz \\
+      &amp;  B^y \; dz ∧ dx \\
+      &amp;  B^z \; dx ∧ dy \\
+\end{aligned} \right] + ⋆\:d \left[ \begin{aligned}
+    - &amp; \E^x \; dt ∧ dx \\
+    - &amp; \E^y \; dt ∧ dy \\
+    - &amp; \E^z \; dt ∧ dz \\
+      &amp;  B^x \; dy ∧ dz \\
+      &amp;  B^y \; dz ∧ dx \\
+      &amp;  B^z \; dx ∧ dy \\
+\end{aligned} \right] = \begin{bmatrix}
+    + μ_0 c ρ \; dx ∧ dy ∧ dz\\
+    - μ_0 J^x \; dt ∧ dy ∧ dz\\
+    - μ_0 J^y \; dt ∧ dz ∧ dx\\
+    - μ_0 J^z \; dt ∧ dx ∧ dy\\
+\end{bmatrix}\end{split}\]</div>
+<p class="rubric">Maxwell’s equations in differential form</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}(d ⋆ + ⋆ d ) \left[ \begin{aligned}
+    - &amp; \E^x \; dt ∧ dx \\
+    - &amp; \E^y \; dt ∧ dy \\
+    - &amp; \E^z \; dt ∧ dz \\
+      &amp;  B^x \; dy ∧ dz \\
+      &amp;  B^y \; dz ∧ dx \\
+      &amp;  B^z \; dx ∧ dy \\
+\end{aligned} \right] = \left[ \begin{aligned}
+    + μ_0 c ρ \; dx ∧ dy ∧ dz\\
+    - μ_0 J^x \; dt ∧ dy ∧ dz\\
+    - μ_0 J^y \; dt ∧ dz ∧ dx\\
+    - μ_0 J^z \; dt ∧ dx ∧ dy\\
+\end{aligned} \right]\end{split}\]</div>
+<p>With a shorthand <span class="math notranslate nohighlight">\(F^{♭♭}\)</span> for the electromagnetic field 2-form and
+<span class="math notranslate nohighlight">\(J^{♭♭♭}\)</span> for the current 3-form, we conclude with the compact form
+<a class="reference internal" href="#note3" id="id4"><span>[note3]</span></a>:</p>
+<aside class="topic">
+<p class="topic-title">Maxwell’s equations</p>
+<div class="math notranslate nohighlight">
+\[(d ⋆ + ⋆ d) \; F^{♭♭} = J^{♭♭♭}\]</div>
+</aside>
+<p>Maxwell’s equations are interpreted as a twist in spacetime, with a strength
+proportional to the 4-current.</p>
+<div class="dropdown admonition">
+<p class="admonition-title">Reducing to a single equation using the <em>wikipedia</em> notation</p>
+<p>Using the <em>wikipedia</em> notation, we arrive at the same result. However the
+lack of an explicit distinction between 1–forms and 2–forms is unfortunate
+as it makes it harder to see the reduction to a single equation.</p>
+<div class="math notranslate nohighlight">
+\[⋆ \: d \: \mathbf{F} + d⋆\mathbf{F} = \mathbf{J}\]</div>
+<p>Since <span class="math notranslate nohighlight">\(d\:\mathbf{F}\)</span> is a 3–form, its Hodge dual
+<span class="math notranslate nohighlight">\(⋆\:d\:\mathbf{F}\)</span> is a 1–form. We can thus rewrite the homogenous
+equation as acting on 1–forms, and the inhomogeneous equations as acting on
+3–forms:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{alignedat}{2}
+⋆ \: d \: \mathbf{F} &amp;= 0          &amp; \qquad\text{1-forms} \\
+d⋆\mathbf{F}         &amp;= \mathbf{J} &amp; \qquad\text{3-forms} \\
+\end{alignedat}\end{split}\]</div>
+<p>Expanding the right hand side of both equations for the argument, we have:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}⋆ \: d \: \mathbf{F} =&amp; \: 0\:dt + 0\:dx + 0\:dy + 0\:dz                                             \\
+d⋆\mathbf{F}         =&amp; \: \mu_0 ρ dx∧dy∧dz - μ_0 J^x dt∧dy∧dz - μ_0 J^y dt∧dz∧dx - μ_0 J^z dt∧dx∧dy \\\end{split}\]</div>
+<p>Therefore, the differential geometric formulation can be unambiguously
+reduced to a single equation involving both 3–forms and 1–forms:</p>
+<div class="math notranslate nohighlight">
+\[⋆ \: d \: \mathbf{F} + d⋆\mathbf{F} = \mathbf{J}\]</div>
+</div>
+</section>
+<section id="notes">
+<h2>Notes<a class="headerlink" href="#notes" title="Link to this heading">#</a></h2>
+<div role="list" class="citation-list">
+<div class="citation" id="note2" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id3">note2</a><span class="fn-bracket">]</span></span>
+<p>An equation containing 3-forms and 2-forms indeed cannot be reduced.
+For example, the following equation: <span class="math notranslate nohighlight">\(a \; dx ∧ dy + b \; dx ∧ dy ∧ dz
+= c \; dx ∧ dy\)</span> cannot be simplified. Surface 2-forms and volume 3-forms are
+distinct objects, but they can be represented in the same equation using the
+<span class="math notranslate nohighlight">\(+\)</span> symbol, even though they cannot actually be added together. Similar
+examples include combining the real and imaginary parts of complex numbers,
+or adding bivectors and trivectors in Clifford algebra. With the exemplary
+equation above, we thus necessarily have <span class="math notranslate nohighlight">\(a = c\)</span> as well as <span class="math notranslate nohighlight">\(b =
+0\)</span>. This is how we can write the Maxwell equations via differential forms
+into a single equation.</p>
+</div>
+<div class="citation" id="note3" role="doc-biblioentry">
+<span class="label"><span class="fn-bracket">[</span><a role="doc-backlink" href="#id4">note3</a><span class="fn-bracket">]</span></span>
+<p>Flipping the sign of <span class="math notranslate nohighlight">\(⋆ d\)</span> is equally valid.</p>
+</div>
+</div>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="faraday_tensor_derivation.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Deriving the Faraday tensor from the 1865 Maxwell’s equations</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="2form_vs_tensor.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Relation between the Faraday 2–form and the Faraday tensor</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#vector-formulation-of-mr-heaviside">Vector formulation of Mr. Heaviside</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-equations-of-mr-maxwell">The equations of Mr. Maxwell</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#underlying-structure">Underlying structure</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ordered-equations">Ordered equations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rotations-in-differential-forms">Rotations in differential forms</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-exterior-derivative-of-rotations">The exterior derivative of rotations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#identifying-the-faraday-2-form">Identifying the Faraday 2–form</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#a-single-equation">A single equation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#notes">Notes</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Stéphane Haussler
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024, Stéphane Haussler.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

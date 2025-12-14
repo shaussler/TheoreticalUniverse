@@ -1,0 +1,1430 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-9HQ1J8VKRB"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-9HQ1J8VKRB');
+    </script>
+    
+    <title>2–forms (rotations) &#8212; Theoretical Universe</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=c1fb35df" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>window.MathJax = {"chtml": {"displayAlign": "left", "displayIndent": "2em"}, "tex": {"packages": {"[+]": ["ams"]}, "macros": {"E": "\\tilde{E}", "\u231f": "\\:\u231f\\:"}}, "tex2jax": {"ignoreClass": ".*", "processClass": "math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'differential_operators/minkowski-space/2-forms';</script>
+    <link rel="canonical" href="https://shaussler.github.io/TheoreticalUniverse/differential_operators/minkowski-space/2-forms.html" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="3–forms (3D volumes)" href="3-forms.html" />
+    <link rel="prev" title="1–forms (translations)" href="1-forms.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../index.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Theoretical Universe</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Table of Contents:</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../licence.html">Licence</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../cite.html">How to cite</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute.html">How to contribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../resources.html">Resources</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../the_cartan_hodge_formalism/index.html">The Cartan-Hodge formalism</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../the_cartan_hodge_formalism/basis_vectors.html">Basis vectors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../the_cartan_hodge_formalism/musicality.html">Musicality</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../the_cartan_hodge_formalism/hodge_duality.html">Hodge duality fundamentals</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../the_cartan_hodge_formalism/hodge_dual_computations.html">Hodge dual computations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../the_cartan_hodge_formalism/the_free_matrix_representation.html">Free matrix representation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../the_cartan_hodge_formalism/the_minkowski_metric.html">Minkowski metric</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../rotations/index.html">Rotations in differential form</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../rotations/rotations_in_3_dimensions.html">Rotations in Euclidean space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rotations/rotations_in_minkowski_space.html">Rotations in Minkowski space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rotations/exponential_map.html">Exponential map</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../index.html">Differential operators expressed as exterior derivatives</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../3-dimensional-euclidean-space.html">3D Euclidean space</a></li>
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="index.html">Minkowski space</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="0-forms.html">0–forms (functions)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="1-forms.html">1–forms (translations)</a></li>
+<li class="toctree-l3 current active"><a class="current reference internal" href="#">2–forms (rotations)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="3-forms.html">3–forms (3D volumes)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="4-forms.html">4–forms (4D volumes)</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../faraday_tensor/index.html">Covariant formulation of the electromagnetic field</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../faraday_tensor/revisiting_maxwell_equations.html">Revisiting the 1865 Maxwell’s equations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../faraday_tensor/faraday_tensor_derivation.html">Deriving the Faraday tensor from the 1865 Maxwell’s equations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../faraday_tensor/of_maxwell_equations_and_rotations.html">Deriving the Faraday 2–form from the 1865 Maxwell’s equations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../faraday_tensor/2form_vs_tensor.html">Relation between the Faraday 2–form and the Faraday tensor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../faraday_tensor/potential_formulation.html">Potential formulation via differential forms</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../faraday_tensor/all_electromagnetic_field_forms.html">All electromagnetic field forms</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../miscellaneous/index.html">Random thoughts</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../miscellaneous/de_guas_theorem.html">Proving De Gua’s theorem with Clifford algebra</a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/differential_operators/minkowski-space/2-forms.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>2–forms (rotations)</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rotations">Rotations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#r"><span class="math notranslate nohighlight">\(⋆R^{♭♭}\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dr"><span class="math notranslate nohighlight">\(dR^{♭♭}\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2"><span class="math notranslate nohighlight">\(d⋆R^{♭♭}\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7"><span class="math notranslate nohighlight">\(⋆dR^{♭♭}\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12"><span class="math notranslate nohighlight">\(⋆d⋆R^{♭♭}\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ddr"><span class="math notranslate nohighlight">\(d⋆dR^{♭♭}\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13"><span class="math notranslate nohighlight">\(d⋆d⋆R^{♭♭}\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dd-r"><span class="math notranslate nohighlight">\(⋆d⋆d R^{♭♭}\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dd-dd"><span class="math notranslate nohighlight">\(d⋆d⋆ - ⋆d⋆d\)</span></a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="forms-rotations">
+<span id="the-exterior-derivative-or-rotations-in-spacetime"></span><span id="the-exterior-derivative-of-rotations-in-spacetime"></span><h1>2–forms (rotations)<a class="headerlink" href="#forms-rotations" title="Link to this heading">#</a></h1>
+<p class="custom-author">by Stéphane Haussler</p>
+<p>This article investigates the exterior derivative of <a class="reference internal" href="../../rotations/rotations_in_minkowski_space.html#rotations-in-minkowski-space"><span class="std std-ref">rotations expressed
+in differential form</span></a>. We employ <a class="reference internal" href="../../the_cartan_hodge_formalism/index.html#the-cartan-hodge-formalism"><span class="std std-ref">the
+Cartan-Hodge formalism</span></a> within the context of
+Minkowski spacetime. Following the systematic calculations presented in this
+article, I demonstrate in <a class="reference internal" href="../../faraday_tensor/of_maxwell_equations_and_rotations.html#of-maxwell-equations-and-rotations"><span class="std std-ref">Of Maxwell Equations and Rotations</span></a> that a twist in spacetime leads to the
+equations governing electromagnetism.</p>
+<section id="rotations">
+<h2>Rotations<a class="headerlink" href="#rotations" title="Link to this heading">#</a></h2>
+<p>Rotations in spacetime can occur in six independent planes. Any rotation
+<span class="math notranslate nohighlight">\(R\)</span> can be decomposed into a linear combination of basis rotations within
+each plane as:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}R^{♯♯} = \begin{bmatrix}
+    Q^x \; ∂_t ∧ ∂_x \\
+    Q^y \; ∂_t ∧ ∂_y \\
+    Q^z \; ∂_t ∧ ∂_z \\
+    R^x \; ∂_y ∧ ∂_z \\
+    R^y \; ∂_z ∧ ∂_x \\
+    R^z \; ∂_x ∧ ∂_y \\
+\end{bmatrix}\end{split}\]</div>
+<p>The representation of the rotation above is fully contravariant, given in terms
+of the exterior product <span class="math notranslate nohighlight">\(∧\)</span> of vectors corresponding to our physical
+understanding of space (and time). By fully flattening, we obtain the
+associated fully covariant differential 2–form representation:</p>
+<div class="math notranslate nohighlight" id="inc-beg-r">
+\[\begin{split}R^{♭♭} = \left[ \begin{alignedat}{3}
+    - &amp; Q^x \; dt &amp;\: ∧ &amp;\: dx \\
+    - &amp; Q^y \; dt &amp;\: ∧ &amp;\: dy \\
+    - &amp; Q^z \; dt &amp;\: ∧ &amp;\: dz \\
+      &amp; R^x \; dy &amp;\: ∧ &amp;\: dz \\
+      &amp; R^y \; dz &amp;\: ∧ &amp;\: dx \\
+      &amp; R^z \; dx &amp;\: ∧ &amp;\: dy \\
+\end{alignedat} \right]\end{split}\]</div>
+<div class="dropdown admonition" id="inc-end-r">
+<p class="admonition-title">Calculations</p>
+<p class="rubric">Flatten the rotation</p>
+<div class="math notranslate nohighlight">
+\[R^{♭♭} = (R^{♯♯})^{♭♭}\]</div>
+<p class="rubric">Expand and distribute the flat operator</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}R^{♭♭} = \begin{bmatrix}
+    Q^x \; ∂_t^♭ ∧ ∂_x^♭ \\
+    Q^y \; ∂_t^♭ ∧ ∂_y^♭ \\
+    Q^z \; ∂_t^♭ ∧ ∂_z^♭ \\
+    R^x \; ∂_y^♭ ∧ ∂_z^♭ \\
+    R^y \; ∂_z^♭ ∧ ∂_x^♭ \\
+    R^z \; ∂_x^♭ ∧ ∂_y^♭ \\
+\end{bmatrix}\end{split}\]</div>
+<p class="rubric">Expand with the Minkowski metric</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}R^{♭♭} = \begin{bmatrix}
+    Q^x \; η_{αt} \; dx^α ∧ η_{βx} \; dx^β \\
+    Q^y \; η_{αt} \; dx^α ∧ η_{βy} \; dx^β \\
+    Q^z \; η_{αt} \; dx^α ∧ η_{βz} \; dx^β \\
+    R^x \; η_{αy} \; dx^α ∧ η_{βz} \; dx^β \\
+    R^y \; η_{αz} \; dx^α ∧ η_{βx} \; dx^β \\
+    R^z \; η_{αx} \; dx^α ∧ η_{βy} \; dx^β \\
+\end{bmatrix}\end{split}\]</div>
+<p>The exterior product <span class="math notranslate nohighlight">\(∧\)</span> is bilinear. The Minkowski metric components
+<span class="math notranslate nohighlight">\(η\)</span>’s can be taken in front of the expression:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}R^{♭♭} = \begin{bmatrix}
+    Q^x \; η_{αt} η_{βx} \; dx^α ∧ dx^β \\
+    Q^y \; η_{αt} η_{βy} \; dx^α ∧ dx^β \\
+    Q^z \; η_{αt} η_{βz} \; dx^α ∧ dx^β \\
+    R^x \; η_{αy} η_{βz} \; dx^α ∧ dx^β \\
+    R^y \; η_{αz} η_{βx} \; dx^α ∧ dx^β \\
+    R^z \; η_{αx} η_{βy} \; dx^α ∧ dx^β \\
+\end{bmatrix}\end{split}\]</div>
+<p>For readability, replace the <span class="math notranslate nohighlight">\(dx^μ\)</span> symbols by their explicit
+expressions:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}dx^t &amp;= dt \\
+dx^x &amp;= dx \\
+dx^y &amp;= dy \\
+dx^z &amp;= dz\end{split}\]</div>
+<p class="rubric">Identify the non-zero components of the Minkowski metric</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}R^{♭♭} = \begin{bmatrix}
+    Q^x \; η_{tt} η_{xx} \; dt ∧ dx \\
+    Q^y \; η_{tt} η_{yy} \; dt ∧ dy \\
+    Q^z \; η_{tt} η_{zz} \; dt ∧ dz \\
+    R^x \; η_{yy} η_{zz} \; dy ∧ dz \\
+    R^y \; η_{zz} η_{xx} \; dz ∧ dx \\
+    R^z \; η_{xx} η_{yy} \; dx ∧ dy \\
+\end{bmatrix}\end{split}\]</div>
+<p class="rubric">Apply the numerical values of the Minkowski metric components</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}R^{♭♭} = \begin{bmatrix}
+    Q^x \; (+1) (-1) \; dt ∧ dx \\
+    Q^y \; (+1) (-1) \; dt ∧ dy \\
+    Q^z \; (+1) (-1) \; dt ∧ dz \\
+    R^x \; (-1) (-1) \; dy ∧ dz \\
+    R^y \; (-1) (-1) \; dz ∧ dx \\
+    R^z \; (-1) (-1) \; dx ∧ dy \\
+\end{bmatrix}\end{split}\]</div>
+<p class="rubric">Conclude</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}R^{♭♭} = \left[ \begin{aligned}
+    - &amp; Q^x \; dt ∧ dx \\
+    - &amp; Q^y \; dt ∧ dy \\
+    - &amp; Q^z \; dt ∧ dz \\
+      &amp; R^x \; dy ∧ dz \\
+      &amp; R^y \; dz ∧ dx \\
+      &amp; R^z \; dx ∧ dy \\
+\end{aligned} \right]\end{split}\]</div>
+</div>
+</section>
+<section id="r">
+<h2><span class="math notranslate nohighlight">\(⋆R^{♭♭}\)</span><a class="headerlink" href="#r" title="Link to this heading">#</a></h2>
+<p>Applying the Hodge star to the rotation 2-form, we obtain:</p>
+<div class="math notranslate nohighlight" id="inc-begin-r">
+\[\begin{split}⋆ R^{♭♭} = \left[ \begin{aligned}
+    &amp; Q^x \; dy ∧ dz \\
+    &amp; Q^y \; dz ∧ dx \\
+    &amp; Q^z \; dx ∧ dy \\
+    &amp; R^x \; dt ∧ dx \\
+    &amp; R^y \; dt ∧ dy \\
+    &amp; R^z \; dt ∧ dz \\
+\end{aligned} \right]\end{split}\]</div>
+<div class="dropdown admonition" id="inc-begin-calc-r">
+<span id="id1"></span><p class="admonition-title">Calculations</p>
+<p class="rubric">Apply the Hodge star by linearity</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}⋆ R^{♭♭} = ⋆ \left[ \begin{aligned}
+    - &amp; Q^x \; dt ∧ dx \\
+    - &amp; Q^y \; dt ∧ dy \\
+    - &amp; Q^z \; dt ∧ dz \\
+      &amp; R^x \; dy ∧ dz \\
+      &amp; R^y \; dz ∧ dx \\
+      &amp; R^z \; dx ∧ dy \\
+\end{aligned} \right]
+= \left[ \begin{aligned}
+    - &amp; Q^x \; ⋆ dt ∧ dx \\
+    - &amp; Q^y \; ⋆ dt ∧ dy \\
+    - &amp; Q^z \; ⋆ dt ∧ dz \\
+      &amp; R^x \; ⋆ dy ∧ dz \\
+      &amp; R^y \; ⋆ dz ∧ dx \\
+      &amp; R^z \; ⋆ dx ∧ dy \\
+\end{aligned} \right]\end{split}\]</div>
+<p class="rubric">Apply the Hodge star to the basis 2-Forms</p>
+<p>Using the <a class="reference internal" href="../../the_cartan_hodge_formalism/index.html#hodge-dual-tables"><span class="std std-ref">tables for the Hodge dual</span></a>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}⋆ R^{♭♭} = \left[ \begin{aligned}
+    &amp; Q^x \; dy ∧ dz \\
+    &amp; Q^y \; dz ∧ dx \\
+    &amp; Q^z \; dx ∧ dy \\
+    &amp; R^x \; dt ∧ dx \\
+    &amp; R^y \; dt ∧ dy \\
+    &amp; R^z \; dt ∧ dz \\
+\end{aligned} \right]\end{split}\]</div>
+</div>
+<span class="target" id="inc-end-calc-r"></span></section>
+<section id="dr">
+<h2><span class="math notranslate nohighlight">\(dR^{♭♭}\)</span><a class="headerlink" href="#dr" title="Link to this heading">#</a></h2>
+<p>Applying the exterior derivative to the rotation 2-form, we obtain:</p>
+<div class="math notranslate nohighlight" id="inc-begin-dr">
+\[\begin{split}dR^{♭♭} = \left[ \begin{alignedat}{5}
+   (&amp;         &amp; + ∂_x R^x &amp; + ∂_y R^y &amp; + ∂_z R^z &amp;\:) \; dx ∧ dy ∧ dz \\
+   (&amp; + ∂_t R^x &amp;         &amp; + ∂_y Q^z &amp; - ∂_z Q^y &amp;\:) \; dt ∧ dy ∧ dz \\
+   (&amp; + ∂_t R^y &amp; - ∂_x Q^z &amp;         &amp; + ∂_z Q^x &amp;\:) \; dt ∧ dz ∧ dx \\
+   (&amp; + ∂_t R^z &amp; + ∂_x Q^y &amp; - ∂_y Q^x &amp;         &amp;\:) \; dt ∧ dx ∧ dy \\
+\end{alignedat} \right]\end{split}\]</div>
+<div class="dropdown admonition" id="inc-begin-calc-dr">
+<span id="inc-end-dr"></span><p class="admonition-title">Calculations</p>
+<p class="rubric">Distribute the exterior derivative</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}dR^{♭♭} = \begin{bmatrix}
+   d( - Q^x \; dt ∧ dx ) \\
+   d( - Q^y \; dt ∧ dy ) \\
+   d( - Q^z \; dt ∧ dz ) \\
+   d( + R^x \; dy ∧ dz ) \\
+   d( + R^y \; dz ∧ dx ) \\
+   d( + R^z \; dx ∧ dy ) \\
+\end{bmatrix}\end{split}\]</div>
+<p class="rubric">Apply the exterior derivative</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}dR^{♭♭} = \left[ \begin{alignedat}{3}
+    ∂_y (- Q^x ) \; &amp; dy ∧ dt ∧ dx &amp; + &amp; ∂_z (- Q^x ) \; &amp; dz ∧ dt ∧ dx \\
+    ∂_x (- Q^y ) \; &amp; dx ∧ dt ∧ dy &amp; + &amp; ∂_z (- Q^y ) \; &amp; dz ∧ dt ∧ dy \\
+    ∂_x (- Q^z ) \; &amp; dx ∧ dt ∧ dz &amp; + &amp; ∂_y (- Q^z ) \; &amp; dy ∧ dt ∧ dz \\
+    ∂_t (+ R^x ) \; &amp; dt ∧ dy ∧ dz &amp; + &amp; ∂_x (+ R^x ) \; &amp; dx ∧ dy ∧ dz \\
+    ∂_t (+ R^y ) \; &amp; dt ∧ dz ∧ dx &amp; + &amp; ∂_y (+ R^y ) \; &amp; dy ∧ dz ∧ dx \\
+    ∂_t (+ R^z ) \; &amp; dt ∧ dx ∧ dy &amp; + &amp; ∂_z (+ R^z ) \; &amp; dz ∧ dx ∧ dy \\
+\end{alignedat} \right]\end{split}\]</div>
+<p class="rubric">Reorder the exterior products</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}dR^{♭♭} = \left[ \begin{alignedat}{3}
+    ∂_y (- Q^x )(+1) \; &amp; dt ∧ dx ∧ dy &amp; + &amp; ∂_z (- Q^x )(-1) \; &amp; dt ∧ dz ∧ dx \\
+    ∂_x (- Q^y )(-1) \; &amp; dt ∧ dx ∧ dy &amp; + &amp; ∂_z (- Q^y )(+1) \; &amp; dt ∧ dy ∧ dz \\
+    ∂_x (- Q^z )(+1) \; &amp; dt ∧ dz ∧ dx &amp; + &amp; ∂_y (- Q^z )(-1) \; &amp; dt ∧ dy ∧ dz \\
+    ∂_t (+ R^x )(+1) \; &amp; dt ∧ dy ∧ dz &amp; + &amp; ∂_x (+ R^x )(+1) \; &amp; dx ∧ dy ∧ dz \\
+    ∂_t (+ R^y )(+1) \; &amp; dt ∧ dz ∧ dx &amp; + &amp; ∂_y (+ R^y )(+1) \; &amp; dx ∧ dy ∧ dz \\
+    ∂_t (+ R^z )(+1) \; &amp; dt ∧ dx ∧ dy &amp; + &amp; ∂_z (+ R^z )(+1) \; &amp; dx ∧ dy ∧ dz \\
+\end{alignedat} \right]\end{split}\]</div>
+<p class="rubric">Simplify</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}dR^{♭♭} = \left[ \begin{alignedat}{3}
+    ∂_y (- Q^x ) \; &amp; dt ∧ dx ∧ dy &amp; + &amp; ∂_z (+ Q^x ) \; &amp; dt ∧ dz ∧ dx \\
+    ∂_x (+ Q^y ) \; &amp; dt ∧ dx ∧ dy &amp; + &amp; ∂_z (- Q^y ) \; &amp; dt ∧ dy ∧ dz \\
+    ∂_x (- Q^z ) \; &amp; dt ∧ dz ∧ dx &amp; + &amp; ∂_y (+ Q^z ) \; &amp; dt ∧ dy ∧ dz \\
+    ∂_t (+ R^x ) \; &amp; dt ∧ dy ∧ dz &amp; + &amp; ∂_x (+ R^x ) \; &amp; dx ∧ dy ∧ dz \\
+    ∂_t (+ R^y ) \; &amp; dt ∧ dz ∧ dx &amp; + &amp; ∂_y (+ R^y ) \; &amp; dx ∧ dy ∧ dz \\
+    ∂_t (+ R^z ) \; &amp; dt ∧ dx ∧ dy &amp; + &amp; ∂_z (+ R^z ) \; &amp; dx ∧ dy ∧ dz \\
+\end{alignedat} \right]\end{split}\]</div>
+<p class="rubric">Rearange</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}dR^{♭♭} = \left[ \begin{alignedat}{5}
+    (&amp;         &amp; + ∂_x R^x &amp; + ∂_y R^y &amp; + ∂_z R^z &amp;\:) \; dx ∧ dy ∧ dz \\
+    (&amp; + ∂_t R^x &amp;         &amp; + ∂_y Q^z &amp; - ∂_z Q^y &amp;\:) \; dt ∧ dy ∧ dz \\
+    (&amp; + ∂_t R^y &amp; - ∂_x Q^z &amp;         &amp; + ∂_z Q^x &amp;\:) \; dt ∧ dz ∧ dx \\
+    (&amp; + ∂_t R^z &amp; + ∂_x Q^y &amp; - ∂_y Q^x &amp;         &amp;\:) \; dt ∧ dx ∧ dy \\
+\end{alignedat} \right]\end{split}\]</div>
+</div>
+<span class="target" id="inc-end-calc-dr"></span></section>
+<section id="id2">
+<h2><span class="math notranslate nohighlight">\(d⋆R^{♭♭}\)</span><a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<p>Applying in sequence the exterior derivative and the Hodge star operator to the
+rotation 2-form, we obtain:</p>
+<div class="math notranslate nohighlight" id="id3">
+\[\begin{split}d⋆R^{♭♭} = \left[ \begin{alignedat}{5}
+    (&amp;         &amp; + ∂_x Q^x &amp; + ∂_y Q^y &amp; + ∂_z Q^z &amp;\:) \; dx ∧ dy ∧ dz \\
+    (&amp; + ∂_t Q^x &amp;         &amp; - ∂_y R^z &amp; + ∂_z R^y &amp;\:) \; dt ∧ dy ∧ dz \\
+    (&amp; + ∂_t Q^y &amp; + ∂_x R^z &amp;         &amp; - ∂_z R^x &amp;\:) \; dt ∧ dz ∧ dx \\
+    (&amp; + ∂_t Q^z &amp; - ∂_x R^y &amp; + ∂_y R^x &amp;         &amp;\:) \; dt ∧ dx ∧ dy \\
+\end{alignedat} \right]\end{split}\]</div>
+<div class="dropdown admonition" id="id5">
+<span id="id4"></span><p class="admonition-title">Calculations</p>
+<p class="rubric">Take the exterior derivative</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}d⋆R^{♭♭} = d \begin{bmatrix}
+    Q^x \; dy ∧ dz \\
+    Q^y \; dz ∧ dx \\
+    Q^z \; dx ∧ dy \\
+    R^x \; dt ∧ dx \\
+    R^y \; dt ∧ dy \\
+    R^z \; dt ∧ dz \\
+\end{bmatrix}\end{split}\]</div>
+<p class="rubric">Distribute the exterior derivative</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}d⋆R^{♭♭} = \begin{bmatrix}
+    d( Q^x \; dy ∧ dz) \\
+    d( Q^y \; dz ∧ dx) \\
+    d( Q^z \; dx ∧ dy) \\
+    d( R^x \; dt ∧ dx) \\
+    d( R^y \; dt ∧ dy) \\
+    d( R^z \; dt ∧ dz) \\
+\end{bmatrix}\end{split}\]</div>
+<p class="rubric">Apply</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}d⋆R^{♭♭})= \left[ \begin{alignedat}{5}
+    ∂_t (+ Q^x ) \; &amp; dt ∧ dy ∧ dz &amp; + &amp; ∂_x (+ Q^x ) \; &amp; dx ∧ dy ∧ dz \\
+    ∂_t (+ Q^y ) \; &amp; dt ∧ dz ∧ dx &amp; + &amp; ∂_y (+ Q^y ) \; &amp; dy ∧ dz ∧ dx \\
+    ∂_t (+ Q^z ) \; &amp; dt ∧ dx ∧ dy &amp; + &amp; ∂_z (+ Q^z ) \; &amp; dz ∧ dx ∧ dy \\
+    ∂_y (+ R^x ) \; &amp; dy ∧ dt ∧ dx &amp; + &amp; ∂_z (+ R^x ) \; &amp; dz ∧ dt ∧ dx \\
+    ∂_x (+ R^y ) \; &amp; dx ∧ dt ∧ dy &amp; + &amp; ∂_z (+ R^y ) \; &amp; dz ∧ dt ∧ dy \\
+    ∂_x (+ R^z ) \; &amp; dx ∧ dt ∧ dz &amp; + &amp; ∂_y (+ R^z ) \; &amp; dy ∧ dt ∧ dz \\
+\end{alignedat} \right]\end{split}\]</div>
+<p class="rubric">Reorder</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}d⋆R^{♭♭} = \left[ \begin{alignedat}{5}
+    ∂_t (+ Q^x )(+1) \; &amp; dt ∧ dy ∧ dz &amp; + &amp; ∂_x (+ Q^x )(+1) \; &amp; dx ∧ dy ∧ dz \\
+    ∂_t (+ Q^y )(+1) \; &amp; dt ∧ dz ∧ dx &amp; + &amp; ∂_y (+ Q^y )(+1) \; &amp; dx ∧ dy ∧ dz \\
+    ∂_t (+ Q^z )(+1) \; &amp; dt ∧ dx ∧ dy &amp; + &amp; ∂_z (+ Q^z )(+1) \; &amp; dx ∧ dy ∧ dz \\
+    ∂_y (+ R^x )(+1) \; &amp; dt ∧ dx ∧ dy &amp; + &amp; ∂_z (+ R^x )(-1) \; &amp; dt ∧ dz ∧ dx \\
+    ∂_x (+ R^y )(-1) \; &amp; dt ∧ dx ∧ dy &amp; + &amp; ∂_z (+ R^y )(+1) \; &amp; dt ∧ dy ∧ dz \\
+    ∂_x (+ R^z )(+1) \; &amp; dt ∧ dz ∧ dx &amp; + &amp; ∂_y (+ R^z )(-1) \; &amp; dt ∧ dy ∧ dz \\
+\end{alignedat} \right]\end{split}\]</div>
+<p class="rubric">Apply values</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}d(⋆R^{♭♭}) = \left[ \begin{alignedat}{5}
+    ∂_t (+ Q^x ) \; &amp; dt ∧ dy ∧ dz &amp; + &amp; ∂_x (+ Q^x ) \; &amp; dx ∧ dy ∧ dz \\
+    ∂_t (+ Q^y ) \; &amp; dt ∧ dz ∧ dx &amp; + &amp; ∂_y (+ Q^y ) \; &amp; dx ∧ dy ∧ dz \\
+    ∂_t (+ Q^z ) \; &amp; dt ∧ dx ∧ dy &amp; + &amp; ∂_z (+ Q^z ) \; &amp; dx ∧ dy ∧ dz \\
+    ∂_y (+ R^x ) \; &amp; dt ∧ dx ∧ dy &amp; + &amp; ∂_z (- R^x ) \; &amp; dt ∧ dz ∧ dx \\
+    ∂_x (- R^y ) \; &amp; dt ∧ dx ∧ dy &amp; + &amp; ∂_z (+ R^y ) \; &amp; dt ∧ dy ∧ dz \\
+    ∂_x (+ R^z ) \; &amp; dt ∧ dz ∧ dx &amp; + &amp; ∂_y (- R^z ) \; &amp; dt ∧ dy ∧ dz \\
+\end{alignedat} \right]\end{split}\]</div>
+<p class="rubric">Rearange</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}d ⋆ R^{♭♭} = \left[ \begin{alignedat}{5}
+    (&amp;         &amp; + ∂_x Q^x &amp; + ∂_y Q^y &amp; + ∂_z Q^z &amp; \: ) \; &amp; dx ∧ dy ∧ dz \\
+    (&amp; + ∂_t Q^x &amp;         &amp; - ∂_y R^z &amp; + ∂_z R^y &amp; \: ) \; &amp; dt ∧ dy ∧ dz \\
+    (&amp; + ∂_t Q^y &amp; + ∂_x R^z &amp;         &amp; - ∂_z R^x &amp; \: ) \; &amp; dt ∧ dz ∧ dx \\
+    (&amp; + ∂_t Q^z &amp; - ∂_x R^y &amp; + ∂_y R^x &amp;         &amp; \: ) \; &amp; dt ∧ dx ∧ dy \\
+\end{alignedat} \right]\end{split}\]</div>
+</div>
+<span class="target" id="id6"></span></section>
+<section id="id7">
+<h2><span class="math notranslate nohighlight">\(⋆dR^{♭♭}\)</span><a class="headerlink" href="#id7" title="Link to this heading">#</a></h2>
+<p>Applying in sequence the Hodge star and the exterior derivative operator
+<span class="math notranslate nohighlight">\(d\)</span> to the rotation 2-form, we obtain:</p>
+<div class="math notranslate nohighlight" id="id8">
+\[\begin{split}⋆ dR^{♭♭} = \left[ \begin{alignedat}{5}
+    (&amp;         &amp; - ∂_x R^x &amp; - ∂_y R^y &amp; - ∂_z R^z &amp;\:) \; dt \\
+    (&amp; - ∂_t R^x &amp;         &amp; - ∂_y Q^z &amp; + ∂_z Q^y &amp;\:) \; dx \\
+    (&amp; - ∂_t R^y &amp; + ∂_x Q^z &amp;         &amp; - ∂_z Q^x &amp;\:) \; dy \\
+    (&amp; - ∂_t R^z &amp; - ∂_x Q^y &amp; + ∂_y Q^x &amp;         &amp;\:) \; dz \\
+\end{alignedat} \right]\end{split}\]</div>
+<div class="dropdown admonition" id="id10">
+<span id="id9"></span><p class="admonition-title">Calculations</p>
+<p class="rubric">Apply the Hodge star</p>
+<p>Apply the Hodge star to <span class="math notranslate nohighlight">\(dR^{♭♭}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}⋆dR^{♭♭} = ⋆\left[ \begin{alignedat}{5}
+  (&amp;         &amp; + ∂_x R^x &amp; + ∂_y R^y &amp; + ∂_z R^z &amp;\:) \; dx ∧ dy ∧ dz \\
+  (&amp; + ∂_t R^x &amp;         &amp; + ∂_y Q^z &amp; - ∂_z Q^y &amp;\:) \; dt ∧ dy ∧ dz \\
+  (&amp; + ∂_t R^y &amp; - ∂_x Q^z &amp;         &amp; + ∂_z Q^x &amp;\:) \; dt ∧ dz ∧ dx \\
+  (&amp; + ∂_t R^z &amp; + ∂_x Q^y &amp; - ∂_y Q^x &amp;         &amp;\:) \; dt ∧ dx ∧ dy \\
+\end{alignedat} \right]\end{split}\]</div>
+<p class="rubric">Distribute the Hodge star</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}⋆dR^{♭♭} = \left[ \begin{alignedat}{5}
+  (&amp;         &amp; + ∂_x R^x &amp; + ∂_y R^y &amp; + ∂_z R^z &amp;\:) \; ⋆ dx^x ∧ dx^y ∧ dx^z \\
+  (&amp; + ∂_t R^x &amp;         &amp; + ∂_y Q^z &amp; - ∂_z Q^y &amp;\:) \; ⋆ dx^t ∧ dx^y ∧ dx^z \\
+  (&amp; + ∂_t R^y &amp; - ∂_x Q^z &amp;         &amp; + ∂_z Q^x &amp;\:) \; ⋆ dx^t ∧ dx^z ∧ dx^x \\
+  (&amp; + ∂_t R^z &amp; + ∂_x Q^y &amp; - ∂_y Q^x &amp;         &amp;\:) \; ⋆ dx^t ∧ dx^x ∧ dx^y \\
+\end{alignedat} \right]\end{split}\]</div>
+<p class="rubric">Apply the Hodge star to the basis 1-forms</p>
+<p>Using the <a class="reference internal" href="../../the_cartan_hodge_formalism/index.html#hodge-dual-tables"><span class="std std-ref">tables for the Hodge dual</span></a>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}⋆dR^{♭♭} = \left[ \begin{alignedat}{5}
+  (&amp;         &amp; + ∂_x R^x &amp; + ∂_y R^y &amp; + ∂_z R^z &amp;\:) \; (-dt) \\
+  (&amp; + ∂_t R^x &amp;         &amp; + ∂_y Q^z &amp; - ∂_z Q^y &amp;\:) \; (-dx) \\
+  (&amp; + ∂_t R^y &amp; - ∂_x Q^z &amp;         &amp; + ∂_z Q^x &amp;\:) \; (-dy) \\
+  (&amp; + ∂_t R^z &amp; + ∂_x Q^y &amp; - ∂_y Q^x &amp;         &amp;\:) \; (-dz) \\
+\end{alignedat} \right]\end{split}\]</div>
+<p class="rubric">Conclude</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}⋆dR^{♭♭} = \left[ \begin{alignedat}{5}
+  (&amp;         &amp; - ∂_x R^x &amp; - ∂_y R^y &amp; - ∂_z R^z &amp;\:) \; dt \\
+  (&amp; - ∂_t R^x &amp;         &amp; - ∂_y Q^z &amp; + ∂_z Q^y &amp;\:) \; dx \\
+  (&amp; - ∂_t R^y &amp; + ∂_x Q^z &amp;         &amp; - ∂_z Q^x &amp;\:) \; dy \\
+  (&amp; - ∂_t R^z &amp; - ∂_x Q^y &amp; + ∂_y Q^x &amp;         &amp;\:) \; dz \\
+\end{alignedat} \right]\end{split}\]</div>
+</div>
+<span class="target" id="id11"></span></section>
+<section id="id12">
+<h2><span class="math notranslate nohighlight">\(⋆d⋆R^{♭♭}\)</span><a class="headerlink" href="#id12" title="Link to this heading">#</a></h2>
+<p>Applying the Hodge star to <span class="math notranslate nohighlight">\(d⋆R^{♭♭}\)</span>, we obtain:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}⋆d⋆R^{♭♭} = \left[ \begin{alignedat}{5}
+    (&amp;         &amp; + ∂_x Q^x &amp; + ∂_y Q^y &amp; + ∂_z Q^z &amp;\:) \; dt \\
+    (&amp; + ∂_t Q^x &amp;         &amp; - ∂_y R^z &amp; + ∂_z R^y &amp;\:) \; dx \\
+    (&amp; + ∂_t Q^y &amp; + ∂_x R^z &amp;         &amp; - ∂_z R^x &amp;\:) \; dy \\
+    (&amp; + ∂_t Q^z &amp; - ∂_x R^y &amp; + ∂_y R^x &amp;         &amp;\:) \; dz \\
+\end{alignedat} \right]\end{split}\]</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Calculations</p>
+<p class="rubric">Apply the Hodge star</p>
+<p>Apply the Hodge star to <span class="math notranslate nohighlight">\(d⋆R^{♭♭}\)</span>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}⋆ d⋆R^{♭♭} = ⋆ \left[ \begin{alignedat}{5}
+  (&amp;         &amp; + ∂_x Q^x &amp; + ∂_y Q^y &amp; + ∂_z Q^z &amp;\:) \; dx ∧ dy ∧ dz \\
+  (&amp; + ∂_t Q^x &amp;         &amp; - ∂_y R^z &amp; + ∂_z R^y &amp;\:) \; dt ∧ dy ∧ dz \\
+  (&amp; + ∂_t Q^y &amp; + ∂_x R^z &amp;         &amp; - ∂_z R^x &amp;\:) \; dt ∧ dz ∧ dx \\
+  (&amp; + ∂_t Q^z &amp; - ∂_x R^y &amp; + ∂_y R^x &amp;         &amp;\:) \; dt ∧ dx ∧ dy \\
+\end{alignedat} \right]\end{split}\]</div>
+<p class="rubric">Distribute the Hodge star by linearity</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}⋆ d⋆R^{♭♭} = \left[ \begin{alignedat}{5}
+  (&amp;         &amp; + ∂_x Q^x &amp; + ∂_y Q^y &amp; + ∂_z Q^z &amp;\:) \; ⋆ dx ∧ dy ∧ dz \\
+  (&amp; + ∂_t Q^x &amp;         &amp; - ∂_y R^z &amp; + ∂_z R^y &amp;\:) \; ⋆ dt ∧ dy ∧ dz \\
+  (&amp; + ∂_t Q^y &amp; + ∂_x R^z &amp;         &amp; - ∂_z R^x &amp;\:) \; ⋆ dt ∧ dz ∧ dx \\
+  (&amp; + ∂_t Q^z &amp; - ∂_x R^y &amp; + ∂_y R^x &amp;         &amp;\:) \; ⋆ dt ∧ dx ∧ dy \\
+\end{alignedat} \right]\end{split}\]</div>
+<p class="rubric">Apply the Hodge star to the basis 3-forms</p>
+<p>Using the <a class="reference internal" href="../../the_cartan_hodge_formalism/index.html#hodge-dual-tables"><span class="std std-ref">tables for the Hodge dual</span></a>:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}⋆ d⋆R^{♭♭} = \left[ \begin{alignedat}{5}
+  (&amp;         &amp; + ∂_x Q^x &amp; + ∂_y Q^y &amp; + ∂_z Q^z &amp;\:) \; dt \\
+  (&amp; + ∂_t Q^x &amp;         &amp; - ∂_y R^z &amp; + ∂_z R^y &amp;\:) \; dx \\
+  (&amp; + ∂_t Q^y &amp; + ∂_x R^z &amp;         &amp; - ∂_z R^x &amp;\:) \; dy \\
+  (&amp; + ∂_t Q^z &amp; - ∂_x R^y &amp; + ∂_y R^x &amp;         &amp;\:) \; dz \\
+\end{alignedat} \right]\end{split}\]</div>
+</div>
+</section>
+<section id="ddr">
+<h2><span class="math notranslate nohighlight">\(d⋆dR^{♭♭}\)</span><a class="headerlink" href="#ddr" title="Link to this heading">#</a></h2>
+<p>Applying the exterior derivative to <span class="math notranslate nohighlight">\(⋆d R^{♭♭}\)</span>, we obtain:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}d⋆d R^{♭♭}
+&amp;= \left[ \begin{alignedat}{4}
+    &amp; ( - ∂_t^2 R^x &amp; + ∂_x^2 R^x &amp;             &amp;             &amp; ) \; dt ∧ dx \\
+    &amp; ( - ∂_t^2 R^y &amp;             &amp; + ∂_y^2 R^y &amp;             &amp; ) \; dt ∧ dy \\
+    &amp; ( - ∂_t^2 R^z &amp;             &amp;             &amp; + ∂_z^2 R^z &amp; ) \; dt ∧ dz \\
+\end{alignedat} \right] \\[2mm]
+&amp;+ \left[ \begin{alignedat}{4}
+    &amp; (            &amp; + ∂_y^2 Q^x &amp; + ∂_z^2 Q^x &amp; ) \; dy ∧ dz \\
+    &amp; (+ ∂_x^2 Q^y &amp;             &amp; + ∂_z^2 Q^y &amp; ) \; dz ∧ dx \\
+    &amp; (+ ∂_x^2 Q^z &amp; + ∂_y^2 Q^z &amp;             &amp; ) \; dx ∧ dy \\
+\end{alignedat} \right] \\[2mm]
+&amp;+ \left[ \begin{alignedat}{4}
+    &amp; (               &amp; - ∂_t ∂_y Q^z &amp; + ∂_t ∂_z Q^y &amp; ) \; dt ∧ dx \\
+    &amp; ( + ∂_t ∂_x Q^z &amp;               &amp; - ∂_t ∂_z Q^x &amp; ) \; dt ∧ dy \\
+    &amp; ( - ∂_t ∂_x Q^y &amp; + ∂_t ∂_y Q^x &amp;               &amp; ) \; dt ∧ dz \\
+\end{alignedat} \right] \\[2mm]
+&amp;+ \left[ \begin{alignedat}{4}
+    &amp; (               &amp; - ∂_z ∂_x Q^y &amp; - ∂_x ∂_y Q^y &amp; ) \; dy ∧ dz \\
+    &amp; ( - ∂_y ∂_z Q^z &amp;               &amp; - ∂_x ∂_y Q^x &amp; ) \; dz ∧ dx \\
+    &amp; ( - ∂_y ∂_z Q^y &amp; - ∂_z ∂_x Q^x &amp;               &amp; ) \; dx ∧ dy \\
+\end{alignedat} \right] \\[2mm]
+&amp;+ \left[ \begin{alignedat}{4}
+    &amp; (               &amp; + ∂_x ∂_y R^y &amp; + ∂_x ∂_z R^z &amp; ) \; dt ∧ dx \\
+    &amp; ( + ∂_y ∂_x R^x &amp;               &amp; + ∂_y ∂_z R^z &amp; ) \; dt ∧ dy \\
+    &amp; ( + ∂_z ∂_x R^x &amp; + ∂_z ∂_y R^y &amp;               &amp; ) \; dt ∧ dz \\
+\end{alignedat} \right] \\[2mm]
+&amp;+ \left[ \begin{alignedat}{4}
+    &amp; (               &amp; - ∂_t ∂_y R^z &amp; + ∂_t ∂_z R^y &amp; ) \; dy ∧ dz \\
+    &amp; ( + ∂_t ∂_x R^z &amp;               &amp; - ∂_t ∂_z R^x &amp; ) \; dz ∧ dx \\
+    &amp; ( - ∂_t ∂_x R^y &amp; + ∂_t ∂_y R^x &amp;               &amp; ) \; dx ∧ dy \\
+\end{alignedat} \right] \\[2mm]\end{split}\]</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Calculations</p>
+<p class="rubric">Apply the exterior derivative</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}d⋆dR^{♭♭} = d \left[ \begin{alignedat}{5}
+    (&amp;           &amp; - ∂_x R^x &amp; - ∂_y R^y &amp; - ∂_z R^z &amp;\:) \; dt \\
+    (&amp; - ∂_t R^x &amp;           &amp; - ∂_y Q^z &amp; + ∂_z Q^y &amp;\:) \; dx \\
+    (&amp; - ∂_t R^y &amp; + ∂_x Q^z &amp;           &amp; - ∂_z Q^x &amp;\:) \; dy \\
+    (&amp; - ∂_t R^z &amp; - ∂_x Q^y &amp; + ∂_y Q^x &amp;           &amp;\:) \; dz \\
+\end{alignedat} \right]\end{split}\]</div>
+<p class="rubric">Apply the exterior derivative</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}d⋆dR^{♭♭} = d \left[ \begin{alignedat}{5}
+    &amp;( &amp; - &amp; ∂_x ∂_x R^x &amp; - &amp; ∂_x ∂_y R^y &amp; - &amp; ∂_x ∂_z R^z &amp; ) &amp; \; dx ∧ dt \\
+    &amp;( &amp; - &amp; ∂_y ∂_x R^x &amp; - &amp; ∂_y ∂_y R^y &amp; - &amp; ∂_y ∂_z R^z &amp; ) &amp; \; dy ∧ dt \\
+    &amp;( &amp; - &amp; ∂_z ∂_x R^x &amp; - &amp; ∂_z ∂_y R^y &amp; - &amp; ∂_z ∂_z R^z &amp; ) &amp; \; dz ∧ dt \\[2mm]
+    &amp;( &amp; - &amp; ∂_t ∂_t R^x &amp; - &amp; ∂_t ∂_y Q^z &amp; + &amp; ∂_t ∂_z Q^y &amp; ) &amp; \; dt ∧ dx \\
+    &amp;( &amp; - &amp; ∂_y ∂_t R^x &amp; - &amp; ∂_y ∂_y Q^z &amp; + &amp; ∂_y ∂_z Q^y &amp; ) &amp; \; dy ∧ dx \\
+    &amp;( &amp; - &amp; ∂_z ∂_t R^x &amp; - &amp; ∂_z ∂_y Q^z &amp; + &amp; ∂_z ∂_z Q^y &amp; ) &amp; \; dz ∧ dx \\[2mm]
+    &amp;( &amp; - &amp; ∂_t ∂_t R^y &amp; + &amp; ∂_t ∂_x Q^z &amp; - &amp; ∂_t ∂_z Q^x &amp; ) &amp; \; dt ∧ dy \\
+    &amp;( &amp; - &amp; ∂_x ∂_t R^y &amp; + &amp; ∂_x ∂_x Q^z &amp; - &amp; ∂_x ∂_z Q^x &amp; ) &amp; \; dx ∧ dy \\
+    &amp;( &amp; - &amp; ∂_z ∂_t R^y &amp; + &amp; ∂_z ∂_x Q^z &amp; - &amp; ∂_z ∂_z Q^x &amp; ) &amp; \; dz ∧ dy \\[2mm]
+    &amp;( &amp; - &amp; ∂_t ∂_t R^z &amp; - &amp; ∂_t ∂_x Q^y &amp; + &amp; ∂_t ∂_y Q^x &amp; ) &amp; \; dt ∧ dz \\
+    &amp;( &amp; - &amp; ∂_x ∂_t R^z &amp; - &amp; ∂_x ∂_x Q^y &amp; + &amp; ∂_x ∂_y Q^x &amp; ) &amp; \; dx ∧ dz \\
+    &amp;( &amp; - &amp; ∂_y ∂_t R^z &amp; - &amp; ∂_y ∂_x Q^y &amp; + &amp; ∂_y ∂_y Q^x &amp; ) &amp; \; dy ∧ dz \\
+\end{alignedat} \right]\end{split}\]</div>
+<p class="rubric">Rearange</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}d⋆dR^{♭♭} = d \left[ \begin{alignedat}{5}
+    &amp;( &amp; - &amp; ∂_x ∂_x R^x &amp; - &amp; ∂_x ∂_y R^y &amp; - &amp; ∂_x ∂_z R^z &amp; ) &amp; \; dx ∧ dt \\
+    &amp;( &amp; - &amp; ∂_y ∂_x R^x &amp; - &amp; ∂_y ∂_y R^y &amp; - &amp; ∂_y ∂_z R^z &amp; ) &amp; \; dy ∧ dt \\
+    &amp;( &amp; - &amp; ∂_z ∂_x R^x &amp; - &amp; ∂_z ∂_y R^y &amp; - &amp; ∂_z ∂_z R^z &amp; ) &amp; \; dz ∧ dt \\[2mm]
+    &amp;( &amp; - &amp; ∂_t ∂_t R^x &amp; - &amp; ∂_t ∂_y Q^z &amp; + &amp; ∂_t ∂_z Q^y &amp; ) &amp; \; dt ∧ dx \\
+    &amp;( &amp; - &amp; ∂_t ∂_t R^y &amp; + &amp; ∂_t ∂_x Q^z &amp; - &amp; ∂_t ∂_z Q^x &amp; ) &amp; \; dt ∧ dy \\
+    &amp;( &amp; - &amp; ∂_t ∂_t R^z &amp; - &amp; ∂_t ∂_x Q^y &amp; + &amp; ∂_t ∂_y Q^x &amp; ) &amp; \; dt ∧ dz \\[2mm]
+    &amp;( &amp; - &amp; ∂_z ∂_t R^y &amp; + &amp; ∂_z ∂_x Q^z &amp; - &amp; ∂_z ∂_z Q^x &amp; ) &amp; \; dz ∧ dy \\
+    &amp;( &amp; - &amp; ∂_y ∂_t R^z &amp; - &amp; ∂_y ∂_x Q^y &amp; + &amp; ∂_y ∂_y Q^x &amp; ) &amp; \; dy ∧ dz \\[2mm]
+    &amp;( &amp; - &amp; ∂_z ∂_t R^x &amp; - &amp; ∂_z ∂_y Q^z &amp; + &amp; ∂_z ∂_z Q^y &amp; ) &amp; \; dz ∧ dx \\
+    &amp;( &amp; - &amp; ∂_x ∂_t R^z &amp; - &amp; ∂_x ∂_x Q^y &amp; + &amp; ∂_x ∂_y Q^x &amp; ) &amp; \; dx ∧ dz \\[2mm]
+    &amp;( &amp; - &amp; ∂_y ∂_t R^x &amp; - &amp; ∂_y ∂_y Q^z &amp; + &amp; ∂_y ∂_z Q^y &amp; ) &amp; \; dy ∧ dx \\
+    &amp;( &amp; - &amp; ∂_x ∂_t R^y &amp; + &amp; ∂_x ∂_x Q^z &amp; - &amp; ∂_x ∂_z Q^x &amp; ) &amp; \; dx ∧ dy \\
+\end{alignedat} \right]\end{split}\]</div>
+<p class="rubric">Reorder the exterior products</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}d⋆dR^{♭♭} = d \left[ \begin{alignedat}{5}
+    &amp;( &amp; + &amp; ∂_x ∂_x R^x &amp; + &amp; ∂_x ∂_y R^y &amp; + &amp; ∂_x ∂_z R^z &amp; ) &amp; \; dt ∧ dx \\
+    &amp;( &amp; + &amp; ∂_y ∂_x R^x &amp; + &amp; ∂_y ∂_y R^y &amp; + &amp; ∂_y ∂_z R^z &amp; ) &amp; \; dt ∧ dy \\
+    &amp;( &amp; + &amp; ∂_z ∂_x R^x &amp; + &amp; ∂_z ∂_y R^y &amp; + &amp; ∂_z ∂_z R^z &amp; ) &amp; \; dt ∧ dz \\[2mm]
+    &amp;( &amp; - &amp; ∂_t ∂_t R^x &amp; - &amp; ∂_t ∂_y Q^z &amp; + &amp; ∂_t ∂_z Q^y &amp; ) &amp; \; dt ∧ dx \\
+    &amp;( &amp; - &amp; ∂_t ∂_t R^y &amp; + &amp; ∂_t ∂_x Q^z &amp; - &amp; ∂_t ∂_z Q^x &amp; ) &amp; \; dt ∧ dy \\
+    &amp;( &amp; - &amp; ∂_t ∂_t R^z &amp; - &amp; ∂_t ∂_x Q^y &amp; + &amp; ∂_t ∂_y Q^x &amp; ) &amp; \; dt ∧ dz \\[2mm]
+    &amp;( &amp; + &amp; ∂_z ∂_t R^y &amp; - &amp; ∂_z ∂_x Q^z &amp; + &amp; ∂_z ∂_z Q^x &amp; ) &amp; \; dy ∧ dz \\
+    &amp;( &amp; - &amp; ∂_y ∂_t R^z &amp; - &amp; ∂_y ∂_x Q^y &amp; + &amp; ∂_y ∂_y Q^x &amp; ) &amp; \; dy ∧ dz \\[2mm]
+    &amp;( &amp; - &amp; ∂_z ∂_t R^x &amp; - &amp; ∂_z ∂_y Q^z &amp; + &amp; ∂_z ∂_z Q^y &amp; ) &amp; \; dz ∧ dx \\
+    &amp;( &amp; + &amp; ∂_x ∂_t R^z &amp; + &amp; ∂_x ∂_x Q^y &amp; - &amp; ∂_x ∂_y Q^x &amp; ) &amp; \; dz ∧ dx \\[2mm]
+    &amp;( &amp; + &amp; ∂_y ∂_t R^x &amp; + &amp; ∂_y ∂_y Q^z &amp; - &amp; ∂_y ∂_z Q^y &amp; ) &amp; \; dx ∧ dy \\
+    &amp;( &amp; - &amp; ∂_x ∂_t R^y &amp; + &amp; ∂_x ∂_x Q^z &amp; - &amp; ∂_x ∂_z Q^x &amp; ) &amp; \; dx ∧ dy \\
+\end{alignedat} \right]\end{split}\]</div>
+<p class="rubric">Rearange</p>
+<p>Here we ar looking for terms that belong together.</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}d⋆dR^{♭♭} = d \left[ \begin{alignedat}{5}
+    &amp;( &amp; + &amp; ∂_x ∂_x R^x &amp; + &amp; ∂_x ∂_y R^y &amp; + &amp; ∂_x ∂_z R^z &amp; ) &amp; \; dt ∧ dx \\
+    &amp;( &amp; + &amp; ∂_y ∂_x R^x &amp; + &amp; ∂_y ∂_y R^y &amp; + &amp; ∂_y ∂_z R^z &amp; ) &amp; \; dt ∧ dy \\
+    &amp;( &amp; + &amp; ∂_z ∂_x R^x &amp; + &amp; ∂_z ∂_y R^y &amp; + &amp; ∂_z ∂_z R^z &amp; ) &amp; \; dt ∧ dz \\[2mm]
+    &amp;( &amp; - &amp; ∂_t ∂_t R^x &amp;   &amp;             &amp;   &amp;             &amp; ) &amp; \; dt ∧ dx \\
+    &amp;( &amp; - &amp; ∂_t ∂_t R^y &amp;   &amp;             &amp;   &amp;             &amp; ) &amp; \; dt ∧ dy \\
+    &amp;( &amp; - &amp; ∂_t ∂_t R^z &amp;   &amp;             &amp;   &amp;             &amp; ) &amp; \; dt ∧ dz \\[2mm]
+    &amp;( &amp;   &amp;             &amp; - &amp; ∂_t ∂_y Q^z &amp; + &amp; ∂_t ∂_z Q^y &amp; ) &amp; \; dt ∧ dx \\
+    &amp;( &amp;   &amp;             &amp; + &amp; ∂_t ∂_x Q^z &amp; - &amp; ∂_t ∂_z Q^x &amp; ) &amp; \; dt ∧ dy \\
+    &amp;( &amp;   &amp;             &amp; - &amp; ∂_t ∂_x Q^y &amp; + &amp; ∂_t ∂_y Q^x &amp; ) &amp; \; dt ∧ dz \\[2mm]
+    &amp;( &amp; + &amp; ∂_z ∂_t R^y &amp;   &amp;             &amp;   &amp;             &amp; ) &amp; \; dy ∧ dz \\
+    &amp;( &amp; - &amp; ∂_y ∂_t R^z &amp;   &amp;             &amp;   &amp;             &amp; ) &amp; \; dy ∧ dz \\
+    &amp;( &amp; - &amp; ∂_z ∂_t R^x &amp;   &amp;             &amp;   &amp;             &amp; ) &amp; \; dz ∧ dx \\
+    &amp;( &amp; + &amp; ∂_x ∂_t R^z &amp;   &amp;             &amp;   &amp;             &amp; ) &amp; \; dz ∧ dx \\
+    &amp;( &amp; + &amp; ∂_y ∂_t R^x &amp;   &amp;             &amp;   &amp;             &amp; ) &amp; \; dx ∧ dy \\
+    &amp;( &amp; - &amp; ∂_x ∂_t R^y &amp;   &amp;             &amp;   &amp;             &amp; ) &amp; \; dx ∧ dy \\[2mm]
+    &amp;( &amp;   &amp;             &amp;   &amp;             &amp; + &amp; ∂_z ∂_z Q^x &amp; ) &amp; \; dy ∧ dz \\
+    &amp;( &amp;   &amp;             &amp;   &amp;             &amp; + &amp; ∂_y ∂_y Q^x &amp; ) &amp; \; dy ∧ dz \\
+    &amp;( &amp;   &amp;             &amp;   &amp;             &amp; + &amp; ∂_z ∂_z Q^y &amp; ) &amp; \; dz ∧ dx \\
+    &amp;( &amp;   &amp;             &amp; + &amp; ∂_x ∂_x Q^y &amp;   &amp;             &amp; ) &amp; \; dz ∧ dx \\
+    &amp;( &amp;   &amp;             &amp; + &amp; ∂_y ∂_y Q^z &amp;   &amp;             &amp; ) &amp; \; dx ∧ dy \\
+    &amp;( &amp;   &amp;             &amp; + &amp; ∂_x ∂_x Q^z &amp;   &amp;             &amp; ) &amp; \; dx ∧ dy \\[2mm]
+    &amp;( &amp;   &amp;             &amp; - &amp; ∂_z ∂_x Q^z &amp;   &amp;             &amp; ) &amp; \; dy ∧ dz \\
+    &amp;( &amp;   &amp;             &amp; - &amp; ∂_y ∂_x Q^y &amp;   &amp;             &amp; ) &amp; \; dy ∧ dz \\
+    &amp;( &amp;   &amp;             &amp; - &amp; ∂_z ∂_y Q^z &amp;   &amp;             &amp; ) &amp; \; dz ∧ dx \\
+    &amp;( &amp;   &amp;             &amp;   &amp;             &amp; - &amp; ∂_x ∂_y Q^x &amp; ) &amp; \; dz ∧ dx \\
+    &amp;( &amp;   &amp;             &amp;   &amp;             &amp; - &amp; ∂_y ∂_z Q^y &amp; ) &amp; \; dx ∧ dy \\
+    &amp;( &amp;   &amp;             &amp;   &amp;             &amp; - &amp; ∂_x ∂_z Q^x &amp; ) &amp; \; dx ∧ dy \\
+\end{alignedat} \right]\end{split}\]</div>
+<p class="rubric">Reorder</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}d⋆dR^{♭♭} &amp;= \left[ \begin{alignedat}{4}
+    ( &amp; ∂_x ∂_x &amp; \; R^x &amp; \, + \, &amp; ∂_x ∂_y &amp; \; R^y &amp; \, + \, &amp; ∂_x ∂_z &amp; \; R^z &amp; \; ) &amp; \; dt ∧ dx \\
+    ( &amp; ∂_x ∂_y &amp; \; R^x &amp; \, + \, &amp; ∂_y ∂_y &amp; \; R^y &amp; \, + \, &amp; ∂_y ∂_z &amp; \; R^z &amp; \; ) &amp; \; dt ∧ dy \\
+    ( &amp; ∂_x ∂_z &amp; \; R^x &amp; \, + \, &amp; ∂_y ∂_z &amp; \; R^y &amp; \, + \, &amp; ∂_z ∂_z &amp; \; R^z &amp; \; ) &amp; \; dt ∧ dz \\
+\end{alignedat} \right] \\[2mm]
+&amp;+ \left[ \begin{alignedat}{4}
+    &amp; - ∂_t^2 R^x &amp; \; dt ∧ dx \\
+    &amp; - ∂_t^2 R^y &amp; \; dt ∧ dy \\
+    &amp; - ∂_t^2 R^z &amp; \; dt ∧ dz \\
+\end{alignedat} \right] \\[2mm]
+&amp;+ \left[ \begin{alignedat}{4}
+    &amp; (               &amp; - ∂_t ∂_y Q^z &amp; + ∂_t ∂_z Q^y &amp; ) &amp; \; dt ∧ dx \\
+    &amp; ( + ∂_t ∂_x Q^z &amp;               &amp; - ∂_t ∂_z Q^x &amp; ) &amp; \; dt ∧ dy \\
+    &amp; ( - ∂_t ∂_x Q^y &amp; + ∂_t ∂_y Q^x &amp;               &amp; ) &amp; \; dt ∧ dz \\
+\end{alignedat} \right] \\[2mm]
+&amp;+ \left[ \begin{alignedat}{4}
+    &amp; (               &amp; - ∂_t ∂_y R^z &amp; + ∂_t ∂_z R^y &amp; ) &amp; \; dy ∧ dz \\
+    &amp; ( + ∂_t ∂_x R^z &amp;               &amp; - ∂_t ∂_z R^x &amp; ) &amp; \; dz ∧ dx \\
+    &amp; ( - ∂_t ∂_x R^y &amp; + ∂_t ∂_y R^x &amp;               &amp; ) &amp; \; dx ∧ dy \\
+\end{alignedat} \right] \\[2mm]
+&amp;+ \left[ \begin{alignedat}{4}
+    &amp; (            &amp; + ∂_y^2 Q^x &amp; + ∂_z^2 Q^x &amp; ) &amp; \; dy ∧ dz \\
+    &amp; (+ ∂_x^2 Q^y &amp;             &amp; + ∂_z^2 Q^y &amp; ) &amp; \; dz ∧ dx \\
+    &amp; (+ ∂_x^2 Q^z &amp; + ∂_y^2 Q^z &amp;             &amp; ) &amp; \; dx ∧ dy \\
+\end{alignedat} \right] \\[2mm]
+&amp;+ \left[ \begin{alignedat}{4}
+    &amp; (               &amp; - ∂_z ∂_x Q^z &amp; - ∂_x ∂_y Q^y &amp; ) &amp; \; dy ∧ dz \\
+    &amp; ( - ∂_y ∂_z Q^z &amp;               &amp; - ∂_x ∂_y Q^x &amp; ) &amp; \; dz ∧ dx \\
+    &amp; ( - ∂_y ∂_z Q^y &amp; - ∂_z ∂_x Q^x &amp;               &amp; ) &amp; \; dx ∧ dy \\
+\end{alignedat} \right]\end{split}\]</div>
+<p class="rubric">Rearange</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}d⋆d R^{♭♭}
+&amp;= \left[ \begin{alignedat}{4}
+    &amp; ( - ∂_t^2 R^x &amp; + ∂_x^2 R^x &amp;             &amp;             &amp; ) \; dt ∧ dx \\
+    &amp; ( - ∂_t^2 R^y &amp;             &amp; + ∂_y^2 R^y &amp;             &amp; ) \; dt ∧ dy \\
+    &amp; ( - ∂_t^2 R^z &amp;             &amp;             &amp; + ∂_z^2 R^z &amp; ) \; dt ∧ dz \\
+\end{alignedat} \right] \\[2mm]
+&amp;+ \left[ \begin{alignedat}{4}
+    &amp; (            &amp; + ∂_y^2 Q^x &amp; + ∂_z^2 Q^x &amp; ) \; dy ∧ dz \\
+    &amp; (+ ∂_x^2 Q^y &amp;             &amp; + ∂_z^2 Q^y &amp; ) \; dz ∧ dx \\
+    &amp; (+ ∂_x^2 Q^z &amp; + ∂_y^2 Q^z &amp;             &amp; ) \; dx ∧ dy \\
+\end{alignedat} \right] \\[2mm]
+&amp;+ \left[ \begin{alignedat}{4}
+    &amp; (               &amp; - ∂_t ∂_y Q^z &amp; + ∂_t ∂_z Q^y &amp; ) \; dt ∧ dx \\
+    &amp; ( + ∂_t ∂_x Q^z &amp;               &amp; - ∂_t ∂_z Q^x &amp; ) \; dt ∧ dy \\
+    &amp; ( - ∂_t ∂_x Q^y &amp; + ∂_t ∂_y Q^x &amp;               &amp; ) \; dt ∧ dz \\
+\end{alignedat} \right] \\[2mm]
+&amp;+ \left[ \begin{alignedat}{4}
+    &amp; (               &amp; - ∂_z ∂_x Q^y &amp; - ∂_x ∂_y Q^y &amp; ) \; dy ∧ dz \\
+    &amp; ( - ∂_y ∂_z Q^z &amp;               &amp; - ∂_x ∂_y Q^x &amp; ) \; dz ∧ dx \\
+    &amp; ( - ∂_y ∂_z Q^y &amp; - ∂_z ∂_x Q^x &amp;               &amp; ) \; dx ∧ dy \\
+\end{alignedat} \right] \\[2mm]
+&amp;+ \left[ \begin{alignedat}{4}
+    &amp; (               &amp; + ∂_x ∂_y R^y &amp; + ∂_x ∂_z R^z &amp; ) \; dt ∧ dx \\
+    &amp; ( + ∂_y ∂_x R^x &amp;               &amp; + ∂_y ∂_z R^z &amp; ) \; dt ∧ dy \\
+    &amp; ( + ∂_z ∂_x R^x &amp; + ∂_z ∂_y R^y &amp;               &amp; ) \; dt ∧ dz \\
+\end{alignedat} \right] \\[2mm]
+&amp;+ \left[ \begin{alignedat}{4}
+    &amp; (               &amp; - ∂_t ∂_y R^z &amp; + ∂_t ∂_z R^y &amp; ) \; dy ∧ dz \\
+    &amp; ( + ∂_t ∂_x R^z &amp;               &amp; - ∂_t ∂_z R^x &amp; ) \; dz ∧ dx \\
+    &amp; ( - ∂_t ∂_x R^y &amp; + ∂_t ∂_y R^x &amp;               &amp; ) \; dx ∧ dy \\
+\end{alignedat} \right] \\[2mm]\end{split}\]</div>
+</div>
+</section>
+<section id="id13">
+<h2><span class="math notranslate nohighlight">\(d⋆d⋆R^{♭♭}\)</span><a class="headerlink" href="#id13" title="Link to this heading">#</a></h2>
+<p>Applying the exterior derivative to <span class="math notranslate nohighlight">\(⋆d⋆R^{♭♭}\)</span>, we obtain:</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}d⋆d⋆ R^{♭♭}
+&amp;= \left[ \begin{alignedat}{4}
+    &amp; ( + ∂_t^2 Q^x &amp; - ∂_x^2 Q^x &amp;             &amp;             &amp; ) \; dt ∧ dx \\
+    &amp; ( + ∂_t^2 Q^y &amp;             &amp; - ∂_y^2 Q^y &amp;             &amp; ) \; dt ∧ dy \\
+    &amp; ( + ∂_t^2 Q^z &amp;             &amp;             &amp; - ∂_z^2 Q^z &amp; ) \; dt ∧ dx \\
+\end{alignedat} \right] \\[2mm]
+&amp;+ \left[ \begin{alignedat}{4}
+    &amp; (               &amp; + ∂_y^2 R^x   &amp; + ∂_z^2 R^x   &amp; ) \; dy ∧ dz \\
+    &amp; ( + ∂_x^2 R^y   &amp;               &amp; + ∂_z^2 R^y   &amp; ) \; dz ∧ dx \\
+    &amp; ( + ∂_x^2 R^z   &amp; + ∂_y^2 R^z   &amp;               &amp; ) \; dx ∧ dy \\
+\end{alignedat} \right] \\[2mm]
+&amp;+ \left[ \begin{alignedat}{4}
+    &amp; (               &amp; - ∂_x ∂_y Q^y &amp; - ∂_z ∂_x Q^z &amp; ) \; dt ∧ dx \\
+    &amp; ( - ∂_x ∂_y Q^x &amp;               &amp; - ∂_y ∂_z Q^z &amp; ) \; dt ∧ dy \\
+    &amp; ( - ∂_z ∂_x Q^x &amp; - ∂_z ∂_y Q^y &amp; -             &amp; ) \; dt ∧ dx \\
+\end{alignedat} \right] \\[2mm]
+&amp;+ \left[ \begin{alignedat}{4}
+    &amp; (               &amp; + ∂_t ∂_y Q^z &amp; - ∂_t ∂_z Q^y &amp; ) \; dy ∧ dz \\
+    &amp; ( - ∂_t ∂_x Q^z &amp;               &amp; + ∂_t ∂_z Q^x &amp; ) \; dz ∧ dx \\
+    &amp; ( + ∂_t ∂_x Q^y &amp; - ∂_t ∂_y Q^x &amp;               &amp; ) \; dx ∧ dy \\
+\end{alignedat} \right] \\[2mm]
+&amp;+ \left[ \begin{alignedat}{4}
+    &amp; (               &amp; - ∂_t ∂_y R^z &amp; + ∂_t ∂_z R^y &amp; ) \; dt ∧ dx \\
+    &amp; ( + ∂_t ∂_x R^z &amp;               &amp; - ∂_t ∂_z R^x &amp; ) \; dt ∧ dy \\
+    &amp; ( - ∂_t ∂_x R^y &amp; + ∂_t ∂_y R^x &amp;               &amp; ) \; dt ∧ dz \\
+\end{alignedat} \right] \\[2mm]
+&amp;+ \left[ \begin{alignedat}{4}
+    &amp; (               &amp; - ∂_x ∂_y R^y &amp; - ∂_x ∂_z R^z &amp; ) \; dy ∧ dz \\
+    &amp; ( - ∂_y ∂_x R^x &amp;               &amp; - ∂_y ∂_z R^z &amp; ) \; dz ∧ dx \\
+    &amp; ( - ∂_z ∂_x R^x &amp; - ∂_z ∂_y R^y &amp;               &amp; ) \; dx ∧ dy \\
+\end{alignedat} \right]\end{split}\]</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Calculations</p>
+<p class="rubric">Take the exterior derivative</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}d⋆d⋆ R^{♭♭} = d \left[ \begin{alignedat}{5}
+    (&amp;         &amp; + ∂_x Q^x &amp; + ∂_y Q^y &amp; + ∂_z Q^z &amp;) &amp; \; &amp; dt \\
+    (&amp; + ∂_t Q^x &amp;         &amp; - ∂_y R^z &amp; + ∂_z R^y &amp;) &amp; \; &amp; dx \\
+    (&amp; + ∂_t Q^y &amp; + ∂_x R^z &amp;         &amp; - ∂_z R^x &amp;) &amp; \; &amp; dy \\
+    (&amp; + ∂_t Q^z &amp; - ∂_x R^y &amp; + ∂_y R^x &amp;         &amp;) &amp; \; &amp; dz \\
+\end{alignedat} \right]\end{split}\]</div>
+<p class="rubric">Apply the exterior derivative</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}d⋆d⋆ R^{♭♭} = d \left[ \begin{alignedat}{5}
+    ( &amp; + &amp; ∂_x ∂_x Q^x &amp; + &amp; ∂_x ∂_y Q^y &amp; + &amp; ∂_x ∂_z Q^z &amp; ) &amp; \; &amp; dx ∧ dt \\
+    ( &amp; + &amp; ∂_y ∂_x Q^x &amp; + &amp; ∂_y ∂_y Q^y &amp; + &amp; ∂_y ∂_z Q^z &amp; ) &amp; \; &amp; dy ∧ dt \\
+    ( &amp; + &amp; ∂_z ∂_x Q^x &amp; + &amp; ∂_z ∂_y Q^y &amp; + &amp; ∂_z ∂_z Q^z &amp; ) &amp; \; &amp; dx ∧ dt \\[2mm]
+    ( &amp; + &amp; ∂_t ∂_t Q^x &amp; - &amp; ∂_t ∂_y R^z &amp; + &amp; ∂_t ∂_z R^y &amp; ) &amp; \; &amp; dt ∧ dx \\
+    ( &amp; + &amp; ∂_y ∂_t Q^x &amp; - &amp; ∂_y ∂_y R^z &amp; + &amp; ∂_y ∂_z R^y &amp; ) &amp; \; &amp; dy ∧ dx \\
+    ( &amp; + &amp; ∂_z ∂_t Q^x &amp; - &amp; ∂_z ∂_y R^z &amp; + &amp; ∂_z ∂_z R^y &amp; ) &amp; \; &amp; dz ∧ dx \\[2mm]
+    ( &amp; + &amp; ∂_t ∂_t Q^y &amp; + &amp; ∂_t ∂_x R^z &amp; - &amp; ∂_t ∂_z R^x &amp; ) &amp; \; &amp; dt ∧ dy \\
+    ( &amp; + &amp; ∂_x ∂_t Q^y &amp; + &amp; ∂_x ∂_x R^z &amp; - &amp; ∂_x ∂_z R^x &amp; ) &amp; \; &amp; dx ∧ dy \\
+    ( &amp; + &amp; ∂_z ∂_t Q^y &amp; + &amp; ∂_z ∂_x R^z &amp; - &amp; ∂_z ∂_z R^x &amp; ) &amp; \; &amp; dz ∧ dy \\[2mm]
+    ( &amp; + &amp; ∂_t ∂_t Q^z &amp; - &amp; ∂_t ∂_x R^y &amp; + &amp; ∂_t ∂_y R^x &amp; ) &amp; \; &amp; dt ∧ dz \\
+    ( &amp; + &amp; ∂_x ∂_t Q^z &amp; - &amp; ∂_x ∂_x R^y &amp; + &amp; ∂_x ∂_y R^x &amp; ) &amp; \; &amp; dx ∧ dz \\
+    ( &amp; + &amp; ∂_y ∂_t Q^z &amp; - &amp; ∂_y ∂_x R^y &amp; + &amp; ∂_y ∂_y R^x &amp; ) &amp; \; &amp; dy ∧ dz \\
+\end{alignedat} \right]\end{split}\]</div>
+<p class="rubric">Rearange</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}d⋆d⋆ R^{♭♭} = d \left[ \begin{alignedat}{5}
+    ( &amp; + &amp; ∂_x ∂_x Q^x &amp; + &amp; ∂_x ∂_y Q^y &amp; + &amp; ∂_x ∂_z Q^z &amp; ) &amp; \; &amp; dx ∧ dt \\
+    ( &amp; + &amp; ∂_y ∂_x Q^x &amp; + &amp; ∂_y ∂_y Q^y &amp; + &amp; ∂_y ∂_z Q^z &amp; ) &amp; \; &amp; dy ∧ dt \\
+    ( &amp; + &amp; ∂_z ∂_x Q^x &amp; + &amp; ∂_z ∂_y Q^y &amp; + &amp; ∂_z ∂_z Q^z &amp; ) &amp; \; &amp; dx ∧ dt \\[2mm]
+    ( &amp; + &amp; ∂_t ∂_t Q^x &amp; - &amp; ∂_t ∂_y R^z &amp; + &amp; ∂_t ∂_z R^y &amp; ) &amp; \; &amp; dt ∧ dx \\
+    ( &amp; + &amp; ∂_t ∂_t Q^y &amp; + &amp; ∂_t ∂_x R^z &amp; - &amp; ∂_t ∂_z R^x &amp; ) &amp; \; &amp; dt ∧ dy \\
+    ( &amp; + &amp; ∂_t ∂_t Q^z &amp; - &amp; ∂_t ∂_x R^y &amp; + &amp; ∂_t ∂_y R^x &amp; ) &amp; \; &amp; dt ∧ dz \\[2mm]
+    ( &amp; + &amp; ∂_z ∂_t Q^y &amp; + &amp; ∂_z ∂_x R^z &amp; - &amp; ∂_z ∂_z R^x &amp; ) &amp; \; &amp; dz ∧ dy \\
+    ( &amp; + &amp; ∂_y ∂_t Q^z &amp; - &amp; ∂_y ∂_x R^y &amp; + &amp; ∂_y ∂_y R^x &amp; ) &amp; \; &amp; dy ∧ dz \\[2mm]
+    ( &amp; + &amp; ∂_z ∂_t Q^x &amp; - &amp; ∂_z ∂_y R^z &amp; + &amp; ∂_z ∂_z R^y &amp; ) &amp; \; &amp; dz ∧ dx \\
+    ( &amp; + &amp; ∂_x ∂_t Q^z &amp; - &amp; ∂_x ∂_x R^y &amp; + &amp; ∂_x ∂_y R^x &amp; ) &amp; \; &amp; dx ∧ dz \\[2mm]
+    ( &amp; + &amp; ∂_y ∂_t Q^x &amp; - &amp; ∂_y ∂_y R^z &amp; + &amp; ∂_y ∂_z R^y &amp; ) &amp; \; &amp; dy ∧ dx \\
+    ( &amp; + &amp; ∂_x ∂_t Q^y &amp; + &amp; ∂_x ∂_x R^z &amp; - &amp; ∂_x ∂_z R^x &amp; ) &amp; \; &amp; dx ∧ dy \\
+\end{alignedat} \right]\end{split}\]</div>
+<p class="rubric">Reorder the exterior products</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}d⋆d⋆ R^{♭♭} = d \left[ \begin{alignedat}{5}
+    ( &amp; - &amp; ∂_x ∂_x Q^x &amp; - &amp; ∂_x ∂_y Q^y &amp; - &amp; ∂_x ∂_z Q^z &amp; ) &amp; \; &amp; dt ∧ dx \\
+    ( &amp; - &amp; ∂_y ∂_x Q^x &amp; - &amp; ∂_y ∂_y Q^y &amp; - &amp; ∂_y ∂_z Q^z &amp; ) &amp; \; &amp; dt ∧ dy \\
+    ( &amp; - &amp; ∂_z ∂_x Q^x &amp; - &amp; ∂_z ∂_y Q^y &amp; - &amp; ∂_z ∂_z Q^z &amp; ) &amp; \; &amp; dt ∧ dx \\[2mm]
+    ( &amp; + &amp; ∂_t ∂_t Q^x &amp; - &amp; ∂_t ∂_y R^z &amp; + &amp; ∂_t ∂_z R^y &amp; ) &amp; \; &amp; dt ∧ dx \\
+    ( &amp; + &amp; ∂_t ∂_t Q^y &amp; + &amp; ∂_t ∂_x R^z &amp; - &amp; ∂_t ∂_z R^x &amp; ) &amp; \; &amp; dt ∧ dy \\
+    ( &amp; + &amp; ∂_t ∂_t Q^z &amp; - &amp; ∂_t ∂_x R^y &amp; + &amp; ∂_t ∂_y R^x &amp; ) &amp; \; &amp; dt ∧ dz \\[2mm]
+    ( &amp; - &amp; ∂_z ∂_t Q^y &amp; - &amp; ∂_z ∂_x R^z &amp; + &amp; ∂_z ∂_z R^x &amp; ) &amp; \; &amp; dy ∧ dz \\
+    ( &amp; + &amp; ∂_y ∂_t Q^z &amp; - &amp; ∂_y ∂_x R^y &amp; + &amp; ∂_y ∂_y R^x &amp; ) &amp; \; &amp; dy ∧ dz \\[2mm]
+    ( &amp; + &amp; ∂_z ∂_t Q^x &amp; - &amp; ∂_z ∂_y R^z &amp; + &amp; ∂_z ∂_z R^y &amp; ) &amp; \; &amp; dz ∧ dx \\
+    ( &amp; - &amp; ∂_x ∂_t Q^z &amp; + &amp; ∂_x ∂_x R^y &amp; - &amp; ∂_x ∂_y R^x &amp; ) &amp; \; &amp; dz ∧ dx \\[2mm]
+    ( &amp; - &amp; ∂_y ∂_t Q^x &amp; + &amp; ∂_y ∂_y R^z &amp; - &amp; ∂_y ∂_z R^y &amp; ) &amp; \; &amp; dx ∧ dy \\
+    ( &amp; + &amp; ∂_x ∂_t Q^y &amp; + &amp; ∂_x ∂_x R^z &amp; - &amp; ∂_x ∂_z R^x &amp; ) &amp; \; &amp; dx ∧ dy \\
+\end{alignedat} \right]\end{split}\]</div>
+<p class="rubric">Rearange</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}d⋆d⋆ R^{♭♭} = d \left[ \begin{alignedat}{5}
+    ( &amp; - &amp; ∂_x ∂_x Q^x &amp; - &amp; ∂_x ∂_y Q^y &amp; - &amp; ∂_x ∂_z Q^z &amp; ) &amp; \; &amp; dt ∧ dx \\
+    ( &amp; - &amp; ∂_y ∂_x Q^x &amp; - &amp; ∂_y ∂_y Q^y &amp; - &amp; ∂_y ∂_z Q^z &amp; ) &amp; \; &amp; dt ∧ dy \\
+    ( &amp; - &amp; ∂_z ∂_x Q^x &amp; - &amp; ∂_z ∂_y Q^y &amp; - &amp; ∂_z ∂_z Q^z &amp; ) &amp; \; &amp; dt ∧ dx \\[2mm]
+    ( &amp; + &amp; ∂_t ∂_t Q^x &amp;   &amp;             &amp;   &amp;             &amp; ) &amp; \; &amp; dt ∧ dx \\
+    ( &amp; + &amp; ∂_t ∂_t Q^y &amp;   &amp;             &amp;   &amp;             &amp; ) &amp; \; &amp; dt ∧ dy \\
+    ( &amp; + &amp; ∂_t ∂_t Q^z &amp;   &amp;             &amp;   &amp;             &amp; ) &amp; \; &amp; dt ∧ dz \\[2mm]
+    ( &amp;   &amp;             &amp; - &amp; ∂_t ∂_y R^z &amp; + &amp; ∂_t ∂_z R^y &amp; ) &amp; \; &amp; dt ∧ dx \\
+    ( &amp;   &amp;             &amp; + &amp; ∂_t ∂_x R^z &amp; - &amp; ∂_t ∂_z R^x &amp; ) &amp; \; &amp; dt ∧ dy \\
+    ( &amp;   &amp;             &amp; - &amp; ∂_t ∂_x R^y &amp; + &amp; ∂_t ∂_y R^x &amp; ) &amp; \; &amp; dt ∧ dz \\[2mm]
+    ( &amp; - &amp; ∂_z ∂_t Q^y &amp;   &amp;             &amp;   &amp;             &amp; ) &amp; \; &amp; dy ∧ dz \\
+    ( &amp; + &amp; ∂_y ∂_t Q^z &amp;   &amp;             &amp;   &amp;             &amp; ) &amp; \; &amp; dy ∧ dz \\
+    ( &amp; + &amp; ∂_z ∂_t Q^x &amp;   &amp;             &amp;   &amp;             &amp; ) &amp; \; &amp; dz ∧ dx \\
+    ( &amp; - &amp; ∂_x ∂_t Q^z &amp;   &amp;             &amp;   &amp;             &amp; ) &amp; \; &amp; dz ∧ dx \\
+    ( &amp; - &amp; ∂_y ∂_t Q^x &amp;   &amp;             &amp;   &amp;             &amp; ) &amp; \; &amp; dx ∧ dy \\
+    ( &amp; + &amp; ∂_x ∂_t Q^y &amp;   &amp;             &amp;   &amp;             &amp; ) &amp; \; &amp; dx ∧ dy \\[2mm]
+    ( &amp;   &amp;             &amp;   &amp;             &amp; + &amp; ∂_z ∂_z R^x &amp; ) &amp; \; &amp; dy ∧ dz \\
+    ( &amp;   &amp;             &amp;   &amp;             &amp; + &amp; ∂_y ∂_y R^x &amp; ) &amp; \; &amp; dy ∧ dz \\
+    ( &amp;   &amp;             &amp;   &amp;             &amp; + &amp; ∂_z ∂_z R^y &amp; ) &amp; \; &amp; dz ∧ dx \\
+    ( &amp;   &amp;             &amp; + &amp; ∂_x ∂_x R^y &amp;   &amp;             &amp; ) &amp; \; &amp; dz ∧ dx \\
+    ( &amp;   &amp;             &amp; + &amp; ∂_y ∂_y R^z &amp;   &amp;             &amp; ) &amp; \; &amp; dx ∧ dy \\
+    ( &amp;   &amp;             &amp; + &amp; ∂_x ∂_x R^z &amp;   &amp;             &amp; ) &amp; \; &amp; dx ∧ dy \\[2mm]
+    ( &amp;   &amp;             &amp; - &amp; ∂_z ∂_x R^z &amp;   &amp;             &amp; ) &amp; \; &amp; dy ∧ dz \\
+    ( &amp;   &amp;             &amp; - &amp; ∂_y ∂_x R^y &amp;   &amp;             &amp; ) &amp; \; &amp; dy ∧ dz \\
+    ( &amp;   &amp;             &amp; - &amp; ∂_z ∂_y R^z &amp;   &amp;             &amp; ) &amp; \; &amp; dz ∧ dx \\
+    ( &amp;   &amp;             &amp;   &amp;             &amp; - &amp; ∂_x ∂_y R^x &amp; ) &amp; \; &amp; dz ∧ dx \\
+    ( &amp;   &amp;             &amp;   &amp;             &amp; - &amp; ∂_y ∂_z R^y &amp; ) &amp; \; &amp; dx ∧ dy \\
+    ( &amp;   &amp;             &amp;   &amp;             &amp; - &amp; ∂_x ∂_z R^x &amp; ) &amp; \; &amp; dx ∧ dy \\
+\end{alignedat} \right]\end{split}\]</div>
+<p class="rubric">Rearange</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}d⋆d⋆ R^{♭♭} &amp;= \left[ \begin{alignedat}{4}
+    ( &amp; + &amp; ∂_t^2 Q^x &amp; - &amp; ∂_x ∂_x Q^x &amp; - &amp; ∂_x ∂_y Q^y &amp; - &amp; ∂_x ∂_z Q^z &amp; ) &amp; \; &amp; dt ∧ dx \\
+    ( &amp; + &amp; ∂_t^2 Q^y &amp; - &amp; ∂_x ∂_y Q^x &amp; - &amp; ∂_y ∂_y Q^y &amp; - &amp; ∂_y ∂_z Q^z &amp; ) &amp; \; &amp; dt ∧ dy \\
+    ( &amp; + &amp; ∂_t^2 Q^z &amp; - &amp; ∂_x ∂_z Q^x &amp; - &amp; ∂_z ∂_y Q^y &amp; - &amp; ∂_z ∂_z Q^z &amp; ) &amp; \; &amp; dt ∧ dx \\
+\end{alignedat} \right] \\[2mm]
+&amp;+ \left[ \begin{alignedat}{4}
+    ( &amp;   \; &amp;             &amp; \; -  \; &amp; ∂_t ∂_y R^z &amp; \; + \; &amp; ∂_t ∂_z R^y &amp; ) &amp; \; &amp; dt ∧ dx \\
+    ( &amp; + \; &amp; ∂_t ∂_x R^z &amp; \;    \; &amp;             &amp; \; - \; &amp; ∂_t ∂_z R^x &amp; ) &amp; \; &amp; dt ∧ dy \\
+    ( &amp; - \; &amp; ∂_t ∂_x R^y &amp; \; +  \; &amp; ∂_t ∂_y R^x &amp; \;   \; &amp;             &amp; ) &amp; \; &amp; dt ∧ dz \\
+\end{alignedat} \right] \\[2mm]
+&amp;+ \left[ \begin{alignedat}{4}
+    ( &amp;   \; &amp;             &amp; \; + \; &amp; ∂_y ∂_t Q^z &amp; \; - \; &amp; ∂_z ∂_t Q^y &amp; ) &amp; \; &amp; dy ∧ dz \\
+    ( &amp; - \; &amp; ∂_x ∂_t Q^z &amp; \;   \; &amp;             &amp; \; + \; &amp; ∂_z ∂_t Q^x &amp; ) &amp; \; &amp; dz ∧ dx \\
+    ( &amp; + \; &amp; ∂_x ∂_t Q^y &amp; \; - \; &amp; ∂_y ∂_t Q^x &amp; \;   \; &amp;             &amp; ) &amp; \; &amp; dx ∧ dy \\
+\end{alignedat} \right] \\[2mm]
+&amp;+ \left[ \begin{alignedat}{4}
+    ( &amp;   \; &amp;           &amp; \; + \; &amp; ∂_y^2 R^x &amp; \; + \; &amp; ∂_z^2 R^x &amp; ) &amp; \; &amp; dy ∧ dz \\
+    ( &amp; + \; &amp; ∂_x^2 R^y &amp; \;   \; &amp;           &amp; \; + \; &amp; ∂_z^2 R^y &amp; ) &amp; \; &amp; dz ∧ dx \\
+    ( &amp; + \; &amp; ∂_x^2 R^z &amp; \; + \; &amp; ∂_y^2 R^z &amp; \;   \; &amp;           &amp; ) &amp; \; &amp; dx ∧ dy \\
+\end{alignedat} \right] \\[2mm]
+&amp;+ \left[ \begin{alignedat}{4}
+    ( &amp;   \; &amp;             &amp; \; - \; &amp; ∂_y ∂_x R^y &amp; \; - \; &amp; ∂_z ∂_x R^z &amp; ) &amp; \; &amp; dy ∧ dz \\
+    ( &amp; - \; &amp; ∂_x ∂_y R^x &amp; \;   \; &amp;             &amp; \; - \; &amp; ∂_z ∂_y R^z &amp; ) &amp; \; &amp; dz ∧ dx \\
+    ( &amp; - \; &amp; ∂_x ∂_z R^x &amp; \; - \; &amp; ∂_y ∂_z R^y &amp; \;   \; &amp;             &amp; ) &amp; \; &amp; dx ∧ dy \\
+\end{alignedat} \right]\end{split}\]</div>
+<p class="rubric">Rearange</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}d⋆d⋆ R^{♭♭}
+&amp;= \left[ \begin{alignedat}{4}
+    &amp; ( + ∂_t^2 Q^x &amp; - ∂_x^2 Q^x &amp;             &amp;             &amp; ) \; dt ∧ dx \\
+    &amp; ( + ∂_t^2 Q^y &amp;             &amp; - ∂_y^2 Q^y &amp;             &amp; ) \; dt ∧ dy \\
+    &amp; ( + ∂_t^2 Q^z &amp;             &amp;             &amp; - ∂_z^2 Q^z &amp; ) \; dt ∧ dx \\
+\end{alignedat} \right] \\[2mm]
+&amp;+ \left[ \begin{alignedat}{4}
+    &amp; (               &amp; + ∂_y^2 R^x   &amp; + ∂_z^2 R^x   &amp; ) \; dy ∧ dz \\
+    &amp; ( + ∂_x^2 R^y   &amp;               &amp; + ∂_z^2 R^y   &amp; ) \; dz ∧ dx \\
+    &amp; ( + ∂_x^2 R^z   &amp; + ∂_y^2 R^z   &amp;               &amp; ) \; dx ∧ dy \\
+\end{alignedat} \right] \\[2mm]
+&amp;+ \left[ \begin{alignedat}{4}
+    &amp; (               &amp; - ∂_x ∂_y Q^y &amp; - ∂_z ∂_x Q^z &amp; ) \; dt ∧ dx \\
+    &amp; ( - ∂_x ∂_y Q^x &amp;               &amp; - ∂_y ∂_z Q^z &amp; ) \; dt ∧ dy \\
+    &amp; ( - ∂_z ∂_x Q^x &amp; - ∂_z ∂_y Q^y &amp; -             &amp; ) \; dt ∧ dx \\
+\end{alignedat} \right] \\[2mm]
+&amp;+ \left[ \begin{alignedat}{4}
+    &amp; (               &amp; + ∂_t ∂_y Q^z &amp; - ∂_t ∂_z Q^y &amp; ) \; dy ∧ dz \\
+    &amp; ( - ∂_t ∂_x Q^z &amp;               &amp; + ∂_t ∂_z Q^x &amp; ) \; dz ∧ dx \\
+    &amp; ( + ∂_t ∂_x Q^y &amp; - ∂_t ∂_y Q^x &amp;               &amp; ) \; dx ∧ dy \\
+\end{alignedat} \right] \\[2mm]
+&amp;+ \left[ \begin{alignedat}{4}
+    &amp; (               &amp; - ∂_t ∂_y R^z &amp; + ∂_t ∂_z R^y &amp; ) \; dt ∧ dx \\
+    &amp; ( + ∂_t ∂_x R^z &amp;               &amp; - ∂_t ∂_z R^x &amp; ) \; dt ∧ dy \\
+    &amp; ( - ∂_t ∂_x R^y &amp; + ∂_t ∂_y R^x &amp;               &amp; ) \; dt ∧ dz \\
+\end{alignedat} \right] \\[2mm]
+&amp;+ \left[ \begin{alignedat}{4}
+    &amp; (               &amp; - ∂_x ∂_y R^y &amp; - ∂_x ∂_z R^z &amp; ) \; dy ∧ dz \\
+    &amp; ( - ∂_y ∂_x R^x &amp;               &amp; - ∂_y ∂_z R^z &amp; ) \; dz ∧ dx \\
+    &amp; ( - ∂_z ∂_x R^x &amp; - ∂_z ∂_y R^y &amp;               &amp; ) \; dx ∧ dy \\
+\end{alignedat} \right]\end{split}\]</div>
+</div>
+</section>
+<section id="dd-r">
+<h2><span class="math notranslate nohighlight">\(⋆d⋆d R^{♭♭}\)</span><a class="headerlink" href="#dd-r" title="Link to this heading">#</a></h2>
+<div class="math notranslate nohighlight">
+\[\begin{split}⋆d⋆d R^{♭♭}
+&amp;= \left[ \begin{alignedat}{4}
+    &amp; ( + ∂_t^2 R^x &amp; - ∂_x^2 R^x &amp;             &amp;             &amp; ) \; dy ∧ dz \\
+    &amp; ( + ∂_t^2 R^y &amp;             &amp; - ∂_y^2 R^y &amp;             &amp; ) \; dy ∧ dx \\
+    &amp; ( + ∂_t^2 R^z &amp;             &amp;             &amp; - ∂_z^2 R^z &amp; ) \; dy ∧ dy \\
+\end{alignedat} \right] \\[2mm]
+&amp;+ \left[ \begin{alignedat}{4}
+    &amp; (               &amp; + ∂_y^2 Q^x &amp; + ∂_z^2 Q^x &amp; ) \; dt ∧ dx \\
+    &amp; ( + ∂_x^2 Q^y   &amp;             &amp; + ∂_z^2 Q^y &amp; ) \; dt ∧ dy \\
+    &amp; ( + ∂_x^2 Q^z   &amp; + ∂_y^2 Q^z &amp;             &amp; ) \; dt ∧ dz \\
+\end{alignedat} \right] \\[2mm]
+&amp;+ \left[ \begin{alignedat}{4}
+    &amp; (               &amp; - ∂_x ∂_y Q^y &amp; - ∂_z ∂_x Q^z &amp; ) \; dt ∧ dx \\
+    &amp; ( - ∂_x ∂_y Q^x &amp;               &amp; - ∂_y ∂_z Q^z &amp; ) \; dt ∧ dy \\
+    &amp; ( - ∂_z ∂_x Q^x &amp; - ∂_y ∂_z Q^y &amp;               &amp; ) \; dt ∧ dz \\
+\end{alignedat} \right] \\[2mm]
+&amp;+ \left[ \begin{alignedat}{4}
+    &amp; (               &amp; + ∂_t ∂_y Q^z &amp; - ∂_t ∂_z Q^y &amp; ) \; dy ∧ dz \\
+    &amp; ( - ∂_t ∂_x Q^z &amp;               &amp; + ∂_t ∂_z Q^x &amp; ) \; dy ∧ dx \\
+    &amp; ( + ∂_t ∂_x Q^y &amp; - ∂_t ∂_y Q^x &amp;               &amp; ) \; dy ∧ dy \\
+\end{alignedat} \right] \\[2mm]
+&amp;+ \left[ \begin{alignedat}{4}
+    &amp; (               &amp; - ∂_t ∂_y R^z &amp; + ∂_t ∂_z R^y &amp; ) \; dt ∧ dx \\
+    &amp; ( + ∂_t ∂_x R^z &amp;               &amp; - ∂_t ∂_z R^x &amp; ) \; dt ∧ dy \\
+    &amp; ( - ∂_t ∂_x R^y &amp; + ∂_t ∂_y R^x &amp;               &amp; ) \; dt ∧ dz \\
+\end{alignedat} \right] \\[2mm]
+&amp;+ \left[ \begin{alignedat}{4}
+    &amp; (               &amp; - ∂_x ∂_y R^y &amp; - ∂_x ∂_z R^z &amp; ) \; dy ∧ dz \\
+    &amp; ( - ∂_y ∂_x R^x &amp;               &amp; - ∂_y ∂_z R^z &amp; ) \; dz ∧ dx \\
+    &amp; ( - ∂_z ∂_x R^x &amp; - ∂_z ∂_y R^y &amp;               &amp; ) \; dx ∧ dy \\
+\end{alignedat} \right]\end{split}\]</div>
+<div class="dropdown admonition">
+<p class="admonition-title">Calculations</p>
+<p class="rubric">References</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../../the_cartan_hodge_formalism/index.html#hodge-dual-tables"><span class="std std-ref">Hodge dual of k–forms in Minkowski space</span></a></p></li>
+</ul>
+<p class="rubric">Take the Hodge star</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}⋆d⋆d R^{♭♭} &amp;= ⋆ \left[ \begin{alignedat}{4}
+    ( &amp; - ∂_t^2 R^x &amp; ∂_x ∂_x &amp; \; R^x &amp; \, + \, &amp; ∂_y ∂_x &amp; \; R^y &amp; \, + \, &amp; ∂_x ∂_z &amp; \; R^z &amp; \; ) &amp; \; dt ∧ dx \\
+    ( &amp; - ∂_t^2 R^y &amp; ∂_x ∂_y &amp; \; R^x &amp; \, + \, &amp; ∂_y ∂_y &amp; \; R^y &amp; \, + \, &amp; ∂_y ∂_z &amp; \; R^z &amp; \; ) &amp; \; dt ∧ dy \\
+    ( &amp; - ∂_t^2 R^z &amp; ∂_x ∂_z &amp; \; R^x &amp; \, + \, &amp; ∂_y ∂_z &amp; \; R^y &amp; \, + \, &amp; ∂_z ∂_z &amp; \; R^z &amp; \; ) &amp; \; dt ∧ dz \\
+\end{alignedat} \right] \\[2mm]
+&amp;+ ⋆ \left[ \begin{alignedat}{4}
+    &amp; (               &amp; - ∂_t ∂_y Q^z &amp; + ∂_t ∂_z Q^y &amp; ) &amp; \; dt ∧ dx \\
+    &amp; ( + ∂_t ∂_x Q^z &amp;               &amp; - ∂_t ∂_z Q^x &amp; ) &amp; \; dt ∧ dy \\
+    &amp; ( - ∂_t ∂_x Q^y &amp; + ∂_t ∂_y Q^x &amp;               &amp; ) &amp; \; dt ∧ dz \\
+\end{alignedat} \right] \\[2mm]
+&amp;+ ⋆ \left[ \begin{alignedat}{4}
+    &amp; (               &amp; - ∂_t ∂_y R^z &amp; + ∂_t ∂_z R^y &amp; ) &amp; \; dy ∧ dz \\
+    &amp; ( + ∂_t ∂_x R^z &amp;               &amp; - ∂_t ∂_z R^x &amp; ) &amp; \; dz ∧ dx \\
+    &amp; ( - ∂_t ∂_x R^y &amp; + ∂_t ∂_y R^x &amp;               &amp; ) &amp; \; dx ∧ dy \\
+\end{alignedat} \right] \\[2mm]
+&amp;+ ⋆ \left[ \begin{alignedat}{4}
+    &amp; (            &amp; + ∂_y^2 Q^x &amp; + ∂_z^2 Q^x &amp; ) &amp; \; dy ∧ dz \\
+    &amp; (+ ∂_x^2 Q^y &amp;             &amp; + ∂_z^2 Q^y &amp; ) &amp; \; dz ∧ dx \\
+    &amp; (+ ∂_x^2 Q^z &amp; + ∂_y^2 Q^z &amp;             &amp; ) &amp; \; dx ∧ dy \\
+\end{alignedat} \right] \\[2mm]
+&amp;+ ⋆ \left[ \begin{alignedat}{4}
+    &amp; (               &amp; - ∂_z ∂_x Q^z &amp; - ∂_x ∂_y Q^y &amp; ) &amp; \; dy ∧ dz \\
+    &amp; ( - ∂_y ∂_z Q^z &amp;               &amp; - ∂_x ∂_y Q^x &amp; ) &amp; \; dz ∧ dx \\
+    &amp; ( - ∂_y ∂_z Q^y &amp; - ∂_z ∂_x Q^x &amp;               &amp; ) &amp; \; dx ∧ dy \\
+\end{alignedat} \right]\end{split}\]</div>
+<p class="rubric">Distribute the Hodge star</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}⋆d⋆d R^{♭♭} &amp;= \left[ \begin{alignedat}{4}
+    ( &amp; - ∂_t^2 R^x &amp; ∂_x ∂_x &amp; \; R^x &amp; \, + \, &amp; ∂_y ∂_x &amp; \; R^y &amp; \, + \, &amp; ∂_x ∂_z &amp; \; R^z &amp; \; ) &amp; \; ⋆ dt ∧ dx \\
+    ( &amp; - ∂_t^2 R^y &amp; ∂_x ∂_y &amp; \; R^x &amp; \, + \, &amp; ∂_y ∂_y &amp; \; R^y &amp; \, + \, &amp; ∂_y ∂_z &amp; \; R^z &amp; \; ) &amp; \; ⋆ dt ∧ dy \\
+    ( &amp; - ∂_t^2 R^z &amp; ∂_x ∂_z &amp; \; R^x &amp; \, + \, &amp; ∂_y ∂_z &amp; \; R^y &amp; \, + \, &amp; ∂_z ∂_z &amp; \; R^z &amp; \; ) &amp; \; ⋆ dt ∧ dz \\
+\end{alignedat} \right] \\[2mm]
+&amp;+ \left[ \begin{alignedat}{4}
+    &amp; (               &amp; - ∂_t ∂_y Q^z &amp; + ∂_t ∂_z Q^y &amp; ) &amp; \; ⋆ dt ∧ dx \\
+    &amp; ( + ∂_t ∂_x Q^z &amp;               &amp; - ∂_t ∂_z Q^x &amp; ) &amp; \; ⋆ dt ∧ dy \\
+    &amp; ( - ∂_t ∂_x Q^y &amp; + ∂_t ∂_y Q^x &amp;               &amp; ) &amp; \; ⋆ dt ∧ dz \\
+\end{alignedat} \right] \\[2mm]
+&amp;+ \left[ \begin{alignedat}{4}
+    &amp; (               &amp; - ∂_t ∂_y R^z &amp; + ∂_t ∂_z R^y &amp; ) &amp; \; ⋆ dy ∧ dz \\
+    &amp; ( + ∂_t ∂_x R^z &amp;               &amp; - ∂_t ∂_z R^x &amp; ) &amp; \; ⋆ dz ∧ dx \\
+    &amp; ( - ∂_t ∂_x R^y &amp; + ∂_t ∂_y R^x &amp;               &amp; ) &amp; \; ⋆ dx ∧ dy \\
+\end{alignedat} \right] \\[2mm]
+&amp;+ \left[ \begin{alignedat}{4}
+    &amp; (            &amp; + ∂_y^2 Q^x &amp; + ∂_z^2 Q^x &amp; ) &amp; \; ⋆ dy ∧ dz \\
+    &amp; (+ ∂_x^2 Q^y &amp;             &amp; + ∂_z^2 Q^y &amp; ) &amp; \; ⋆ dz ∧ dx \\
+    &amp; (+ ∂_x^2 Q^z &amp; + ∂_y^2 Q^z &amp;             &amp; ) &amp; \; ⋆ dx ∧ dy \\
+\end{alignedat} \right] \\[2mm]
+&amp;+ \left[ \begin{alignedat}{4}
+    &amp; (               &amp; - ∂_z ∂_x Q^z &amp; - ∂_x ∂_y Q^y &amp; ) &amp; \; ⋆ dy ∧ dz \\
+    &amp; ( - ∂_y ∂_z Q^z &amp;               &amp; - ∂_x ∂_y Q^x &amp; ) &amp; \; ⋆ dz ∧ dx \\
+    &amp; ( - ∂_y ∂_z Q^y &amp; - ∂_z ∂_x Q^x &amp;               &amp; ) &amp; \; ⋆ dx ∧ dy \\
+\end{alignedat} \right]\end{split}\]</div>
+<p class="rubric">Apply the Hodge star</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}⋆d⋆d R^{♭♭} &amp;= \left[ \begin{alignedat}{4}
+    ( &amp; + ∂_t^2 R^x &amp; - \, &amp; ∂_x ∂_x &amp; \; R^x &amp; \, - \, &amp; ∂_y ∂_x &amp; \; R^y &amp; \, - \, &amp; ∂_x ∂_z &amp; \; R^z &amp; \; ) &amp; \; dy ∧ dz \\
+    ( &amp; + ∂_t^2 R^y &amp; - \, &amp; ∂_x ∂_y &amp; \; R^x &amp; \, - \, &amp; ∂_y ∂_y &amp; \; R^y &amp; \, - \, &amp; ∂_y ∂_z &amp; \; R^z &amp; \; ) &amp; \; dy ∧ dx \\
+    ( &amp; + ∂_t^2 R^z &amp; - \, &amp; ∂_x ∂_z &amp; \; R^x &amp; \, - \, &amp; ∂_y ∂_z &amp; \; R^y &amp; \, - \, &amp; ∂_z ∂_z &amp; \; R^z &amp; \; ) &amp; \; dy ∧ dy \\
+\end{alignedat} \right] \\[2mm]
+&amp;+ \left[ \begin{alignedat}{4}
+    &amp; (               &amp; + ∂_t ∂_y Q^z &amp; - ∂_t ∂_z Q^y &amp; ) &amp; \; dy ∧ dz \\
+    &amp; ( - ∂_t ∂_x Q^z &amp;               &amp; + ∂_t ∂_z Q^x &amp; ) &amp; \; dy ∧ dx \\
+    &amp; ( + ∂_t ∂_x Q^y &amp; - ∂_t ∂_y Q^x &amp;               &amp; ) &amp; \; dy ∧ dy \\
+\end{alignedat} \right] \\[2mm]
+&amp;+ \left[ \begin{alignedat}{4}
+    &amp; (               &amp; - ∂_t ∂_y R^z &amp; + ∂_t ∂_z R^y &amp; ) &amp; \; dt ∧ dx \\
+    &amp; ( + ∂_t ∂_x R^z &amp;               &amp; - ∂_t ∂_z R^x &amp; ) &amp; \; dt ∧ dy \\
+    &amp; ( - ∂_t ∂_x R^y &amp; + ∂_t ∂_y R^x &amp;               &amp; ) &amp; \; dt ∧ dz \\
+\end{alignedat} \right] \\[2mm]
+&amp;+ \left[ \begin{alignedat}{4}
+    &amp; (            &amp; + ∂_y^2 Q^x &amp; + ∂_z^2 Q^x &amp; ) &amp; \; dt ∧ dx \\
+    &amp; (+ ∂_x^2 Q^y &amp;             &amp; + ∂_z^2 Q^y &amp; ) &amp; \; dt ∧ dy \\
+    &amp; (+ ∂_x^2 Q^z &amp; + ∂_y^2 Q^z &amp;             &amp; ) &amp; \; dt ∧ dz \\
+\end{alignedat} \right] \\[2mm]
+&amp;+ \left[ \begin{alignedat}{4}
+    &amp; (               &amp; - ∂_z ∂_x Q^z &amp; - ∂_x ∂_y Q^y &amp; ) &amp; \; dt ∧ dx \\
+    &amp; ( - ∂_y ∂_z Q^z &amp;               &amp; - ∂_x ∂_y Q^x &amp; ) &amp; \; dt ∧ dy \\
+    &amp; ( - ∂_y ∂_z Q^y &amp; - ∂_z ∂_x Q^x &amp;               &amp; ) &amp; \; dt ∧ dz \\
+\end{alignedat} \right]\end{split}\]</div>
+<p class="rubric">Rearange</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}⋆d⋆d R^{♭♭}
+&amp;= \left[ \begin{alignedat}{4}
+    &amp; ( + ∂_t^2 R^x &amp; - ∂_x^2 R^x &amp;             &amp;             &amp; ) \; dy ∧ dz \\
+    &amp; ( + ∂_t^2 R^y &amp;             &amp; - ∂_y^2 R^y &amp;             &amp; ) \; dy ∧ dx \\
+    &amp; ( + ∂_t^2 R^z &amp;             &amp;             &amp; - ∂_z^2 R^z &amp; ) \; dy ∧ dy \\
+\end{alignedat} \right] \\[2mm]
+&amp;+ \left[ \begin{alignedat}{4}
+    &amp; (               &amp; + ∂_y^2 Q^x &amp; + ∂_z^2 Q^x &amp; ) \; dt ∧ dx \\
+    &amp; ( + ∂_x^2 Q^y   &amp;             &amp; + ∂_z^2 Q^y &amp; ) \; dt ∧ dy \\
+    &amp; ( + ∂_x^2 Q^z   &amp; + ∂_y^2 Q^z &amp;             &amp; ) \; dt ∧ dz \\
+\end{alignedat} \right] \\[2mm]
+&amp;+ \left[ \begin{alignedat}{4}
+    &amp; (               &amp; - ∂_x ∂_y Q^y &amp; - ∂_z ∂_x Q^z &amp; ) \; dt ∧ dx \\
+    &amp; ( - ∂_x ∂_y Q^x &amp;               &amp; - ∂_y ∂_z Q^z &amp; ) \; dt ∧ dy \\
+    &amp; ( - ∂_z ∂_x Q^x &amp; - ∂_y ∂_z Q^y &amp;               &amp; ) \; dt ∧ dz \\
+\end{alignedat} \right] \\[2mm]
+&amp;+ \left[ \begin{alignedat}{4}
+    &amp; (               &amp; + ∂_t ∂_y Q^z &amp; - ∂_t ∂_z Q^y &amp; ) \; dy ∧ dz \\
+    &amp; ( - ∂_t ∂_x Q^z &amp;               &amp; + ∂_t ∂_z Q^x &amp; ) \; dy ∧ dx \\
+    &amp; ( + ∂_t ∂_x Q^y &amp; - ∂_t ∂_y Q^x &amp;               &amp; ) \; dy ∧ dy \\
+\end{alignedat} \right] \\[2mm]
+&amp;+ \left[ \begin{alignedat}{4}
+    &amp; (               &amp; - ∂_t ∂_y R^z &amp; + ∂_t ∂_z R^y &amp; ) \; dt ∧ dx \\
+    &amp; ( + ∂_t ∂_x R^z &amp;               &amp; - ∂_t ∂_z R^x &amp; ) \; dt ∧ dy \\
+    &amp; ( - ∂_t ∂_x R^y &amp; + ∂_t ∂_y R^x &amp;               &amp; ) \; dt ∧ dz \\
+\end{alignedat} \right] \\[2mm]
+&amp;+ \left[ \begin{alignedat}{4}
+    &amp; (               &amp; - ∂_x ∂_y R^y &amp; - ∂_x ∂_z R^z &amp; ) \; dy ∧ dz \\
+    &amp; ( - ∂_y ∂_x R^x &amp;               &amp; - ∂_y ∂_z R^z &amp; ) \; dz ∧ dx \\
+    &amp; ( - ∂_z ∂_x R^x &amp; - ∂_z ∂_y R^y &amp;               &amp; ) \; dx ∧ dy \\
+\end{alignedat} \right]\end{split}\]</div>
+</div>
+</section>
+<section id="dd-dd">
+<h2><span class="math notranslate nohighlight">\(d⋆d⋆ - ⋆d⋆d\)</span><a class="headerlink" href="#dd-dd" title="Link to this heading">#</a></h2>
+<div class="math notranslate nohighlight">
+\[\begin{split}(d⋆d⋆ - ⋆d⋆d) \left[ \begin{aligned}
+    - &amp; Q^x \; dt ∧ dx \\
+    - &amp; Q^y \; dt ∧ dy \\
+    - &amp; Q^z \; dt ∧ dz \\
+      &amp; R^x \; dy ∧ dz \\
+      &amp; R^y \; dz ∧ dx \\
+      &amp; R^z \; dx ∧ dy \\
+\end{aligned} \right]
+&amp;= \left[ \begin{alignedat}{5}
+    &amp; ( + ∂_t^2 Q^x &amp; - ∂_x^2 Q^x &amp; - ∂_y^2 Q^x &amp; - ∂_z^2 Q^x &amp; \: ) \; dt∧dx \\
+    &amp; ( + ∂_t^2 Q^y &amp; - ∂_x^2 Q^y &amp; - ∂_y^2 Q^y &amp; - ∂_z^2 Q^y &amp; \: ) \; dt∧dy \\
+    &amp; ( + ∂_t^2 Q^z &amp; - ∂_x^2 Q^z &amp; - ∂_y^2 Q^z &amp; - ∂_z^2 Q^z &amp; \: ) \; dt∧dz \\
+    &amp; ( - ∂_t^2 R^x &amp; + ∂_x^2 R^x &amp; + ∂_y^2 R^x &amp; + ∂_z^2 R^x &amp; \: ) \; dy∧dz \\
+    &amp; ( - ∂_t^2 R^y &amp; + ∂_x^2 R^y &amp; + ∂_y^2 R^y &amp; + ∂_z^2 R^y &amp; \: ) \; dz∧dx \\
+    &amp; ( - ∂_t^2 R^z &amp; + ∂_x^2 R^z &amp; + ∂_y^2 R^z &amp; + ∂_z^2 R^z &amp; \: ) \; dx∧dy \\
+\end{alignedat} \right]\end{split}\]</div>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="1-forms.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">1–forms (translations)</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="3-forms.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">3–forms (3D volumes)</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rotations">Rotations</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#r"><span class="math notranslate nohighlight">\(⋆R^{♭♭}\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dr"><span class="math notranslate nohighlight">\(dR^{♭♭}\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id2"><span class="math notranslate nohighlight">\(d⋆R^{♭♭}\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id7"><span class="math notranslate nohighlight">\(⋆dR^{♭♭}\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id12"><span class="math notranslate nohighlight">\(⋆d⋆R^{♭♭}\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#ddr"><span class="math notranslate nohighlight">\(d⋆dR^{♭♭}\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id13"><span class="math notranslate nohighlight">\(d⋆d⋆R^{♭♭}\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dd-r"><span class="math notranslate nohighlight">\(⋆d⋆d R^{♭♭}\)</span></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dd-dd"><span class="math notranslate nohighlight">\(d⋆d⋆ - ⋆d⋆d\)</span></a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Stéphane Haussler
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024, Stéphane Haussler.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
