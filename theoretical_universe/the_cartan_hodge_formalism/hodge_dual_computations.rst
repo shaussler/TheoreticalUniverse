@@ -16,57 +16,57 @@ Hodge dual computations
 .. warning:: Draft
 
 In this page, I present a straightforward algorithmic method to calculate the
-inner product between k--vectors (or k--forms). The dicussion in the article on
-:ref:`Hodge duality` provides geometric intuition. Here, I offer an alternative
-approach to compute the inner product of k--forms, as well as the Hodge dual of
-k--forms, with a simple algorithmic method using the interior product
-:math:`⌟`.
+inner product of k--vectors (respectively k--forms). While my article on
+:ref:`Hodge duality` provides geometric intuition, the discussion here provides
+an alternative approach to compute both the inner product of k--forms and the
+Hodge dual of k--forms, with a simple algorithmic method using the interior
+product :math:`⌟`.
 
-My use of the interior product might be non-standard, and I have not
-investigated whether what follows is established. It certainly works as I
-intuitively expect it should. You may also just find this method a usefull as
-an efficient trick to determine the inner product between k--forms, or the
-Hodge dual of k-forms.
+This method might be non-standard, and I have not investigated whether it is
+established. However it certainly works as I intuitively expect it should and
+provides fast and direct computations.
 
-In this page, I call the top-dimensional differential form the
-**pseudo-scalar**. Specifically, the pseudo-scalar is:
+The following assumes a solid understanding of the exterior product and Élie
+Cartan’s differential forms, as well as knowledge of how to apply the interior
+product :math:`⌟`.
+
+The top-dimensional differential form is called the **pseudo-scalar**.
+Specifically, the pseudo-scalar is:
 
 * :math:`dx ∧ dy ∧ dz` in 3D--Euclidean space, and
 * :math:`dt ∧ dx ∧ dy ∧ dz` in 4D--Minkowski space.
 
 The term **pseudo-scalar** is chosen because the Hodge dual of these
-top-dimensional differential forms results in scalar quantities. This naming
-convention highlights the relationship between these forms and scalar fields
-through the Hodge duality.
+top-dimensional differential forms are scalars. They are dual to scalar, but do
+not behave like scalars.
 
 Inner product on k--froms
 -------------------------
 
 .. {{{
 
-To establish a common foundation, recall that the inner product of k--vectors
-is equal to that of k--forms. For basis vectors and covectors, the inner
-product is the metric. In flat spacetime, this yields the Minkowski
+Let us first establish a common foundation. Recall that the inner product of
+k--vectors is equal to that of k--forms. For basis vectors and covectors, the
+inner product is the metric. In flat spacetime, this yields the Minkowski
 metric :math:`η`:
 
 .. math::
 
    ∂_μ · ∂_ν = dx^μ · dx^ν = η^{μν} = η_{μν}
 
-Considering basis vectors, dual covectors are defined as:
+Considering basis vectors :math:`∂_ν`, dual covectors :math:`dx^μ` are defined
+as:
 
 .. math::
 
    dx^μ \left( ∂_ν \right) = δ^μ_ν
 
-In this sense, 1--forms *measure* vectors, and the measure of a basis vector
-:math:`∂_ν` through it corresponding basis covector :math:`dx^μ` is one. The
-inner product, denoted with :math:`·` or :math:`\braket{|}`, measures the                                                                             shadow of one vector onto another.
+Where :math:`δ^μ_ν` is the kronecker delta.
 
-The standard interior product is an operation between a vector and a form. It
-consist of rearanging the form to bring the corresponding covector to the
-front, and applying the vector to that front slot. This operation transforms a
-k--form to a (k-1)--form. For example:
+The interior product is an operation between a vector and a form. It consist of
+rearanging the form to bring the corresponding covector to the front, and then
+apply the vector to that front slot. This operation transforms a k--form to a
+(k-1)--form. For example:
 
 .. math::
 
